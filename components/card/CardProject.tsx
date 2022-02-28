@@ -29,6 +29,7 @@ function CardProject({ project }: CardProjectProps) {
       p={6}
       w="full"
       h="full"
+      cursor="pointer"
       bg="gray.800"
       borderRadius="md"
       direction="column"
@@ -42,13 +43,17 @@ function CardProject({ project }: CardProjectProps) {
         {name}
       </Text>
       <HStack spacing={2}>
-        {tags.map((tag: Tag) => {
-          return (
-            <ChakraTag key={`project-${name}-tag-${tag.value}`}>
-              {tag.label}
-            </ChakraTag>
-          );
-        })}
+        {tags && tags.length > 0 ? (
+          tags.map((tag: Tag) => {
+            return (
+              <ChakraTag key={`project-${name}-tag-${tag.value}`}>
+                {tag.label}
+              </ChakraTag>
+            );
+          })
+        ) : (
+          <ChakraTag key={`project-${name}-tag-none`}>😕</ChakraTag>
+        )}
       </HStack>
     </Flex>
   );

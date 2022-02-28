@@ -52,11 +52,14 @@ const Home: NextPage = () => {
         >
           {projects.map((project: Project) => {
             return (
-              <Box py={4} px={4} minWidth="250px" h="full">
-                <CardProject
-                  key={`project-${project.name}`}
-                  project={project}
-                />
+              <Box
+                key={`project-${project.name}`}
+                py={4}
+                px={4}
+                minWidth="250px"
+                h="full"
+              >
+                <CardProject project={project} />
               </Box>
             );
           })}
