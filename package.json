@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@chakra-ui/color-mode": "^1.4.5",
     "@chakra-ui/layout": "^1.7.6",
     "@chakra-ui/react": "^1.8.5",
     "@emotion/cache": "^11.7.1",
