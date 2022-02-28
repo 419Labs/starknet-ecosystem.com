@@ -57,7 +57,7 @@ const Home: NextPage = () => {
                 py={4}
                 px={4}
                 minWidth="250px"
-                h="full"
+                h="250px"
               >
                 <CardProject project={project} />
               </Box>
