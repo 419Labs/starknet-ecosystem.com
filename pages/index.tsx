@@ -1,7 +1,10 @@
-import { Flex, Text } from "@chakra-ui/layout";
+import { Flex, Stack, Text } from "@chakra-ui/layout";
 import type { NextPage } from "next";
 
+import type { Project } from "../components/card/CardProject";
+import CardProject from "../components/card/CardProject";
 import TagMenu from "../components/layout/TagMenu";
+import ProjectItems from "../data/ecosystem.json";
 import TagItems from "../data/tags.json";
 
 const Home: NextPage = () => {
@@ -28,8 +31,19 @@ const Home: NextPage = () => {
         Explore all projects Building & Running on Starknet L2
       </Text>
       {/* Main part */}
-      <Flex direction="column" mt={8}>
+      <Flex w="full" direction="column" mt={8}>
         <TagMenu initialValue={TagItems[0]} tags={TagItems} />
+        <Stack
+          mt={4}
+          direction="row"
+          spacing={4}
+          wrap="wrap"
+          shouldWrapChildren
+        >
+          {ProjectItems.map((project: Project) => {
+            return <CardProject project={project} />;
+          })}
+        </Stack>
       </Flex>
     </Flex>
   );

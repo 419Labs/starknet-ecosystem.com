@@ -71,6 +71,7 @@ const ParticlesOptions: ISourceOptions = {
     },
   },
   detectRetina: true,
+  zLayers: 1,
 };
 
 export default ParticlesOptions;
