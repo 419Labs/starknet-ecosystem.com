@@ -1,8 +1,10 @@
 import { Flex } from "@chakra-ui/layout";
 import type { ReactNode } from "react";
+import Particles from "react-tsparticles";
 
 import Footer from "./Footer";
 import Header from "./Header";
+import ParticlesOptions from "./Particles";
 
 type LayoutProps = {
   children: ReactNode;
@@ -19,6 +21,7 @@ function Layout({ children }: LayoutProps) {
       w="full"
       transition="0.5s ease-out"
     >
+      <Particles id="tsparticles" options={{ ...ParticlesOptions }} />
       <Header />
       <Flex
         flex="1 1 auto"
