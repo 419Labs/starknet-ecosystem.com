@@ -1,11 +1,7 @@
 import { Stack } from "@chakra-ui/layout";
 import { Tag as ChakraTag } from "@chakra-ui/react";
 import { useState } from "react";
-
-export interface Tag {
-  value: string;
-  label: string;
-}
+import {Tag} from "../../data/tag";
 
 interface TagMenuProps {
   tags: Tag[];

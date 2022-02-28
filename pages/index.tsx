@@ -3,23 +3,21 @@ import tag from "@chakra-ui/theme/src/components/tag";
 import type { NextPage } from "next";
 import { useState } from "react";
 
-import type { Project } from "../components/card/CardProject";
 import CardProject from "../components/card/CardProject";
-import type { Tag } from "../components/layout/TagMenu";
 import TagMenu from "../components/layout/TagMenu";
-import ProjectItems from "../data/ecosystem.json";
-import TagItems from "../data/tags.json";
+import { allProjects, Project } from "../data/ecosystem"
+import { allTags, Tag } from "../data/tag"
 
 const Home: NextPage = () => {
-  const tagAll = TagItems[0];
+  const tagAll = allTags[0];
   const [filter, setFilter] = useState(tagAll);
-  const projects = ProjectItems.filter((project) => {
+  const projects = allProjects.filter((project) => {
     return filter === tagAll || project.tags.indexOf(filter.value) !== -1;
   }).map((project) => {
     const projectTags = project.tags;
     return {
       ...project,
-      tags: TagItems.filter((tagItem: Tag) => {
+      tags: allTags.filter((tagItem: Tag) => {
         return projectTags.includes(tagItem.value);
       }),
     };
@@ -34,7 +32,7 @@ const Home: NextPage = () => {
         fontWeight="bold"
         maxWidth="800px"
       >
-        The Way you Want to Follow to Scale Ethereum
+        Starknet Ecosystem
       </Text>
       {/* Sub intro text */}
       <Text
@@ -49,8 +47,8 @@ const Home: NextPage = () => {
       {/* Main part */}
       <Flex w="full" direction="column" mt={8}>
         <TagMenu
-          initialValue={TagItems[0]}
-          tags={TagItems}
+          initialValue={allTags[0]}
+          tags={allTags}
           onChange={setFilter}
         />
         <Stack
