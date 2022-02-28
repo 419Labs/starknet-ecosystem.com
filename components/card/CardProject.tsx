@@ -76,7 +76,7 @@ function CardProject({ project }: CardProjectProps) {
       </motion.div>
     );
   };
-  console.log(isFlipped);
+
   return (
     <Box
       cursor="pointer"

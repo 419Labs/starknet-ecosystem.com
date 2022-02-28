@@ -1,5 +1,7 @@
 import { Box, Flex, Stack, Text } from "@chakra-ui/layout";
+import tag from "@chakra-ui/theme/src/components/tag";
 import type { NextPage } from "next";
+import { useState } from "react";
 
 import type { Project } from "../components/card/CardProject";
 import CardProject from "../components/card/CardProject";
@@ -9,11 +11,16 @@ import ProjectItems from "../data/ecosystem.json";
 import TagItems from "../data/tags.json";
 
 const Home: NextPage = () => {
-  const projects = ProjectItems.map((project) => {
+  const tagAll = TagItems[0];
+  const [filter, setFilter] = useState(tagAll);
+  const projects = ProjectItems.filter((project) => {
+    return filter === tagAll || project.tags.indexOf(filter.value) !== -1;
+  }).map((project) => {
+    const projectTags = project.tags;
     return {
       ...project,
       tags: TagItems.filter((tagItem: Tag) => {
-        return project.tags.includes(tagItem.value);
+        return projectTags.includes(tagItem.value);
       }),
     };
   });
@@ -41,7 +48,11 @@ const Home: NextPage = () => {
       </Text>
       {/* Main part */}
       <Flex w="full" direction="column" mt={8}>
-        <TagMenu initialValue={TagItems[0]} tags={TagItems} />
+        <TagMenu
+          initialValue={TagItems[0]}
+          tags={TagItems}
+          onChange={setFilter}
+        />
         <Stack
           mt={10}
           direction="row"

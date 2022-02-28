@@ -10,12 +10,14 @@ export interface Tag {
 interface TagMenuProps {
   tags: Tag[];
   initialValue: Tag;
+  onChange: (tag: Tag) => void;
 }
-function TagMenu({ tags, initialValue }: TagMenuProps) {
+function TagMenu({ tags, initialValue, onChange }: TagMenuProps) {
   const [selectedValue, setSelectedValue] = useState<Tag>(initialValue);
 
   const tagClicked = (newTag: Tag) => {
     setSelectedValue(newTag);
+    onChange(newTag);
   };
 
   return (
