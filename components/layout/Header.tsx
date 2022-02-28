@@ -12,7 +12,7 @@ function Header() {
     >
       <Flex direction="row" align="center" justify="flex-start">
         <Box boxSize="48px">
-          <Image src="/starknet-logo.png" alt="Dan Abramov" />
+          <Image src="/starknet-logo.png" alt="Starknet Logo" />
         </Box>
         <Text ml={2} fontSize="lg" fontWeight="bold">
           Starknet ecosystem

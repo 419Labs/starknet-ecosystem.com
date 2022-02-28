@@ -3,22 +3,28 @@
     "name": "AlphaRoadFinance",
     "shot_name": "AlphaRoad",
     "description": "My alpha road description",
+    "tags": ["defi", "nft"],
     "website": "https://alpharoad.fi",
     "github": "",
     "twitter":  "https://twitter.com/alpharoad_fi",
     "medium": "https://alpharoad.medium.com/",
     "discord": "https://discord.gg/Bhfa3B2Gnq",
-    "telegram": "https://t.me/alpharoad_fi"
+    "telegram": "https://t.me/alpharoad_fi",
+    "isLive": false,
+    "isTestnetLive": false
   },
   {
     "name": "Your project",
     "shot_name": "You",
     "description": "Your future project description",
+    "tags": [],
     "website": "",
     "github": "",
     "twitter":  "",
     "medium": "",
     "discord": "",
-    "telegram": ""
+    "telegram": "",
+    "isLive": false,
+    "isTestnetLive": false
   }
 ]

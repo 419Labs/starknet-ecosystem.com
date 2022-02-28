@@ -2,7 +2,7 @@ import { Stack } from "@chakra-ui/layout";
 import { Tag as ChakraTag } from "@chakra-ui/react";
 import { useState } from "react";
 
-interface Tag {
+export interface Tag {
   value: string;
   label: string;
 }
@@ -19,7 +19,13 @@ function TagMenu({ tags, initialValue }: TagMenuProps) {
   };
 
   return (
-    <Stack direction="row" spacing={4} wrap="wrap" shouldWrapChildren>
+    <Stack
+      direction="row"
+      spacing={4}
+      wrap="wrap"
+      shouldWrapChildren
+      justify="center"
+    >
       {tags.map((tag: Tag) => (
         <ChakraTag
           mt={2}

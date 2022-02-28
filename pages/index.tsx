@@ -1,13 +1,22 @@
-import { Flex, Stack, Text } from "@chakra-ui/layout";
+import { Box, Flex, Stack, Text } from "@chakra-ui/layout";
 import type { NextPage } from "next";
 
 import type { Project } from "../components/card/CardProject";
 import CardProject from "../components/card/CardProject";
+import type { Tag } from "../components/layout/TagMenu";
 import TagMenu from "../components/layout/TagMenu";
 import ProjectItems from "../data/ecosystem.json";
 import TagItems from "../data/tags.json";
 
 const Home: NextPage = () => {
+  const projects = ProjectItems.map((project) => {
+    return {
+      ...project,
+      tags: TagItems.filter((tagItem: Tag) => {
+        return project.tags.includes(tagItem.value);
+      }),
+    };
+  });
   return (
     <Flex direction="column" justify="flex-start" align="center">
       {/* Big intro text */}
@@ -34,14 +43,22 @@ const Home: NextPage = () => {
       <Flex w="full" direction="column" mt={8}>
         <TagMenu initialValue={TagItems[0]} tags={TagItems} />
         <Stack
-          mt={4}
+          mt={10}
           direction="row"
-          spacing={4}
+          justify="center"
+          spacing={0}
           wrap="wrap"
           shouldWrapChildren
         >
-          {ProjectItems.map((project: Project) => {
-            return <CardProject project={project} />;
+          {projects.map((project: Project) => {
+            return (
+              <Box py={4} px={4} minWidth="250px" h="full">
+                <CardProject
+                  key={`project-${project.name}`}
+                  project={project}
+                />
+              </Box>
+            );
           })}
         </Stack>
       </Flex>
