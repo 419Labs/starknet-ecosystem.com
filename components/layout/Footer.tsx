@@ -8,6 +8,7 @@ function Footer() {
       direction="row"
       justify="space-between"
       align="center"
+      px={[4, 0]}
     >
       <HStack>
         <Text color="whiteAlpha.600">Made with</Text>

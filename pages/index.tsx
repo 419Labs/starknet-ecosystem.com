@@ -89,9 +89,14 @@ const Home: NextPage = () => {
               );
             })
           ) : (
-            <Text mt={8} fontSize="24px" opacity=".8">
-              😕 No projects in this category, maybe yours?
-            </Text>
+            <Flex my={8} direction="column" align="center" opacity=".8">
+              <Text fontSize="24px" opacity=".8">
+                😕 No projects in this category
+              </Text>
+              <Text mt={2} fontSize="18px">
+                Maybe yours?
+              </Text>
+            </Flex>
           )}
         </Stack>
       </Flex>
