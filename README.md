@@ -8,7 +8,7 @@ The ecosystem dashboard aims to give visibility to all projects in the StarkNet 
 ## Contribute
 
 Every contribution is welcome! Do you want to help us manage this repo and related Pull Request?
-Feel free to contact us on: [Twitter](https://twitter.com/alpharoad_fi)
+👉 Feel free to join our dedicated [Telegram](https://t.me/starknet_ecosystem) channel.
 
 ### Add a new project
 
@@ -28,7 +28,7 @@ create a dedicated Pull Request following this title: "🎨 Updating AwesomeProj
 ### Community driven
 
 We have created a dedicated Telegram channel to manage quickly Pull Request and the starknet-ecosystem.com project.
-By joining the Telegram channel you'll be informed immediately when a new Project is coming out of stealth mode.
+By joining the [Telegram channel](https://t.me/starknet_ecosystem) you'll be informed immediately when a new Project is coming out of stealth mode.
 
 ## Conclusion
 
