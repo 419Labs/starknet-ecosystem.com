@@ -10,11 +10,11 @@ function Footer() {
       align="center"
     >
       <HStack>
-        <Text color="whiteAlpha.600">Dev with</Text>
+        <Text color="whiteAlpha.600">Made with</Text>
         <Text>❤️</Text>
         <Text color="whiteAlpha.600">by</Text>
-        <Link isExternal href="https://alpharoad.fi">
-          AlphaRoadFinance
+        <Link isExternal href="https://twitter.com/alpharoad_fi">
+          Alpha Road
         </Link>
       </HStack>
     </Flex>
