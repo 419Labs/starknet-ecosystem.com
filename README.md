@@ -14,7 +14,7 @@ Feel free to contact us on: [Twitter](https://twitter.com/alpharoad_fi)
 
 To add a new project you have to:
 
-- Create your project on `data/ecosystem.ts` by reusign existing tag available on `data/tag.ts`
+- Create your project on `data/ecosystem.ts` by reusign existing tags available on `data/tag.ts`
 - Add your project logo into `public/logos/`
 - Create a Pull Request following the title: "✨ Introducing AwesomeProjectName"
 
@@ -28,10 +28,7 @@ create a dedicated Pull Request following this title: "🎨 Updating AwesomeProj
 ### Community driven
 
 We have created a dedicated Telegram channel to manage quickly Pull Request and the starknet-ecosystem.com project.
-Your participation
-
-In coming weeks we will create a dedicated Telegram channel with ppl having the rights to accept your Pull Request.
-By the way, you can be one of those!
+By joining the Telegram channel you'll be informed immediately when a new Project is coming out of stealth mode.
 
 ## Conclusion
 
