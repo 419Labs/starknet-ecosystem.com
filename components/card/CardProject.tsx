@@ -1,4 +1,4 @@
-import { Flex, HStack, Link, Text } from "@chakra-ui/layout";
+import { Box, Flex, HStack, Link, Text } from "@chakra-ui/layout";
 import { Image, Tag as ChakraTag } from "@chakra-ui/react";
 import {
   faDiscord,
@@ -32,8 +32,21 @@ function CardProject({ project, isFlipped, onClick }: CardProjectProps) {
     twitter,
     medium,
     website,
+    isLive,
+    isTestnetLive,
   } = project;
-  const renderBaseCard = (content: ReactElement) => {
+
+  const getIndicationText = () => {
+    if (isLive) {
+      return "Live";
+    }
+    if (isTestnetLive) {
+      return "Testnet";
+    }
+    return undefined;
+  };
+
+  const renderBaseCard = (content: ReactElement, indication?: ReactElement) => {
     return (
       <Flex
         cursor="pointer"
@@ -46,7 +59,15 @@ function CardProject({ project, isFlipped, onClick }: CardProjectProps) {
         align="center"
         minHeight="350px"
         height="full"
+        position="relative"
       >
+        {indication && (
+          <Box position="absolute" right={2} top={2}>
+            <ChakraTag color="green.100" background="green.500">
+              {indication}
+            </ChakraTag>
+          </Box>
+        )}
         {content}
       </Flex>
     );
@@ -85,7 +106,8 @@ function CardProject({ project, isFlipped, onClick }: CardProjectProps) {
                 <ChakraTag key={`project-${name}-tag-none`}>😕</ChakraTag>
               )}
             </HStack>
-          </>
+          </>,
+          getIndicationText()
         )}
       </FrontSide>
       <BackSide style={{ padding: 0 }}>
