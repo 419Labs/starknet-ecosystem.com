@@ -1,27 +1,33 @@
 import { Box, Flex, Stack, Text } from "@chakra-ui/layout";
-import tag from "@chakra-ui/theme/src/components/tag";
 import type { NextPage } from "next";
 import { useState } from "react";
 
 import CardProject from "../components/card/CardProject";
 import TagMenu from "../components/layout/TagMenu";
-import { allProjects, Project } from "../data/ecosystem"
-import { allTags, Tag } from "../data/tag"
+import type { Project, ProjectItf } from "../data/ecosystem";
+import { allProjects } from "../data/ecosystem";
+import type { Tag } from "../data/tag";
+import { allTags } from "../data/tag";
 
 const Home: NextPage = () => {
   const tagAll = allTags[0];
   const [filter, setFilter] = useState(tagAll);
-  const projects = allProjects.filter((project) => {
-    return filter === tagAll || project.tags.indexOf(filter.value) !== -1;
-  }).map((project) => {
-    const projectTags = project.tags;
-    return {
-      ...project,
-      tags: allTags.filter((tagItem: Tag) => {
-        return projectTags.includes(tagItem.value);
-      }),
-    };
-  });
+  const projects: ProjectItf[] = allProjects
+    .filter((project: Project) => {
+      return filter === tagAll || project.tags.indexOf(filter.value) !== -1;
+    })
+    .sort((project1, project2) =>
+      project1.name.toLowerCase().localeCompare(project2.name.toLowerCase())
+    )
+    .map((project) => {
+      const projectTags = project.tags;
+      return {
+        ...project,
+        tagsRef: allTags.filter((tagItem: Tag) => {
+          return projectTags.includes(tagItem.value);
+        }),
+      };
+    });
   return (
     <Flex direction="column" justify="flex-start" align="center">
       {/* Big intro text */}
@@ -59,7 +65,7 @@ const Home: NextPage = () => {
           wrap="wrap"
           shouldWrapChildren
         >
-          {projects.map((project: Project) => {
+          {projects.map((project: ProjectItf) => {
             return (
               <Box key={`project-${project.name}`} py={4} px={4} width="300px">
                 <CardProject project={project} />
