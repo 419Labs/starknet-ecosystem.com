@@ -8,6 +8,7 @@ The ecosystem dashboard aims to give visibility to all projects in the StarkNet 
 ## Contribute
 
 Every contribution is welcome! Do you want to help us manage this repo and related Pull Request?
+
 👉 Feel free to join our dedicated [Telegram](https://t.me/starknet_ecosystem) channel.
 
 ### Add a new project

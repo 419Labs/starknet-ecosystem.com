@@ -277,7 +277,7 @@ export const allProjects: Array<Project> = [
     short_name: "Bitmap Box",
     description:
       "Bitmap Box is an on-chain block-building game. Assemble and disassemble your creations, create new games on top of its open protocol.",
-    tags: ["nft", "gamefi"],
+    tags: ["nft"],
     logo: "bitmapbox.jpeg",
     website: "https://www.bitmapbox.xyz/",
     github: "https://github.com/bitmap-box",
@@ -293,7 +293,7 @@ export const allProjects: Array<Project> = [
     short_name: "Briq",
     description:
       "NFT building and composition protocol. Get some briqs and build the dream.",
-    tags: ["nft", "gamefi"],
+    tags: ["nft"],
     logo: "briq.png",
     website: "https://briq.construction/",
     github: "",
