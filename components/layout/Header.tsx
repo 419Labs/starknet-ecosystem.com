@@ -20,19 +20,19 @@ function Header() {
       </Flex>
       <Box>
         <Link
-          _hover={{ textDecoration: "none" }}
-          href="https://voyager.online/"
-          isExternal
-        >
-          <Button>Explorer</Button>
-        </Link>
-        <Link
           ml={2}
           _hover={{ textDecoration: "none" }}
           href="https://github.com/419Labs/starknet-ecosystem.com"
           isExternal
         >
           <Button>Apply</Button>
+        </Link>
+        <Link
+            _hover={{ textDecoration: "none" }}
+            href="https://t.me/starknet_ecosystem"
+            isExternal
+        >
+          <Button>Community</Button>
         </Link>
       </Box>
     </Flex>
