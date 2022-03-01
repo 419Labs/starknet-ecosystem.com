@@ -46,6 +46,22 @@ function CardProject({ project, isFlipped, onClick }: CardProjectProps) {
     return undefined;
   };
 
+  const renderFallbackIcon = () => {
+    return (
+      <Flex
+        align="center"
+        justify="center"
+        boxSize="170px"
+        bg="gray.600"
+        borderRadius="50%"
+      >
+        <Text fontWeight="bold" fontSize="56px" color="gray.800">
+          {name.substring(0, 2).toUpperCase()}
+        </Text>
+      </Flex>
+    );
+  };
+
   const renderBaseCard = (content: ReactElement, indication?: string) => {
     return (
       <Flex
@@ -86,8 +102,9 @@ function CardProject({ project, isFlipped, onClick }: CardProjectProps) {
               <Image
                 width="170px"
                 maxHeight="170px"
-                src={logo === "" ? "/starknet-logo.png" : `/logos/${logo}`}
+                src={`/logos/${logo}`}
                 alt={`${name} logo`}
+                fallback={renderFallbackIcon()}
               />
             </Flex>
             <Text my={8} fontSize="xl" fontWeight="bold">

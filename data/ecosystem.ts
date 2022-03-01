@@ -24,17 +24,18 @@ export const allProjects: Array<Project> = [
   {
     name: "Alpha Road",
     short_name: "Alpha Road",
-    description: "Pioneer in DeFi L2 solution — Alpha Road aim at maximizing user investment returns by providing next gen DeFi experience and bespoke financial products.\n",
+    description:
+      "Pioneer in DeFi L2 solution — Alpha Road aim at maximizing user investment returns by providing next gen DeFi experience and bespoke financial products.\n",
     tags: ["defi", "nft"],
     logo: "alpharoad.png",
     website: "https://alpharoad.fi",
     github: "",
-    twitter:  "https://twitter.com/alpharoad_fi",
+    twitter: "https://twitter.com/alpharoad_fi",
     medium: "https://alpharoad.medium.com/",
     discord: "https://discord.gg/Bhfa3B2Gnq",
     telegram: "https://t.me/alpharoad_fi",
     isLive: false,
-    isTestnetLive: true
+    isTestnetLive: true,
   },
   {
     name: "Banxa",
@@ -275,7 +276,7 @@ export const allProjects: Array<Project> = [
     name: "Bitmap Box",
     short_name: "Bitmap Box",
     description:
-        "Bitmap Box is an on-chain block-building game. Assemble and disassemble your creations, create new games on top of its open protocol.",
+      "Bitmap Box is an on-chain block-building game. Assemble and disassemble your creations, create new games on top of its open protocol.",
     tags: ["nft", "gamefi"],
     logo: "bitmapbox.jpeg",
     website: "https://www.bitmapbox.xyz/",
@@ -291,7 +292,7 @@ export const allProjects: Array<Project> = [
     name: "Briq",
     short_name: "Briq",
     description:
-        "NFT building and composition protocol. Get some briqs and build the dream.",
+      "NFT building and composition protocol. Get some briqs and build the dream.",
     tags: ["nft", "gamefi"],
     logo: "briq.png",
     website: "https://briq.construction/",
@@ -307,7 +308,7 @@ export const allProjects: Array<Project> = [
     name: "Dope Wars",
     short_name: "Dope Wars",
     description:
-        "Modular and extendable game system inspired by calculator game nostalgia.",
+      "Modular and extendable game system inspired by calculator game nostalgia.",
     tags: ["nft", "gamefi", "dao"],
     logo: "dopewars.jpeg",
     website: "https://dopewars.gg/",
@@ -323,7 +324,7 @@ export const allProjects: Array<Project> = [
     name: "Eykar",
     short_name: "Eykar",
     description:
-        "A decentralized game of conquest powered by StarkNet. An almost infinite territory that can be conquered through alliances and wars",
+      "A decentralized game of conquest powered by StarkNet. An almost infinite territory that can be conquered through alliances and wars",
     tags: ["nft", "gamefi"],
     logo: "eykar.png",
     website: "https://eykar.org/",
@@ -339,7 +340,7 @@ export const allProjects: Array<Project> = [
     name: "GoL2",
     short_name: "GoL2",
     description:
-        "Conway's Game of Life on StarkNet! Come and progress to a new generation, or create your own life.",
+      "Conway's Game of Life on StarkNet! Come and progress to a new generation, or create your own life.",
     tags: ["gamefi"],
     logo: "",
     website: "https://github.com/perama-v/GoL2",
@@ -355,7 +356,7 @@ export const allProjects: Array<Project> = [
     name: "IBetYou",
     short_name: "IBetYou",
     description:
-        "IBY is a permissionless blockchain protocol that allows you to bet any amount of tokens with anyone on anything. It uses the basic principles of betting and kicks it up a notch with crypto wizardry.",
+      "IBY is a permissionless blockchain protocol that allows you to bet any amount of tokens with anyone on anything. It uses the basic principles of betting and kicks it up a notch with crypto wizardry.",
     tags: ["gamefi"],
     logo: "ibetyou.svg",
     website: "https://starknet.ibetyou.xyz/",
@@ -371,7 +372,7 @@ export const allProjects: Array<Project> = [
     name: "ImmutableX",
     short_name: "ImmutableX",
     description:
-        "Immutable X is a decentralized liquidity layer for NFTs on StarkNet.",
+      "Immutable X is a decentralized liquidity layer for NFTs on StarkNet.",
     tags: ["defi", "nft"],
     logo: "immutablex.png",
     website: "https://www.immutable.com/",
@@ -387,7 +388,7 @@ export const allProjects: Array<Project> = [
     name: "Influence",
     short_name: "Influence",
     description:
-        "Influence is a crypto-native space strategy game set in a realistic asteroid belt with real-time orbital dynamics.",
+      "Influence is a crypto-native space strategy game set in a realistic asteroid belt with real-time orbital dynamics.",
     tags: ["gamefi", "nft"],
     logo: "influence.svg",
     website: "https://www.influenceth.io/",
@@ -402,8 +403,7 @@ export const allProjects: Array<Project> = [
   {
     name: "Kubri",
     short_name: "Kubri",
-    description:
-        "L2 -> L1 Bridge for the ERC1155",
+    description: "L2 -> L1 Bridge for the ERC1155",
     tags: ["bridge", "defi"],
     logo: "",
     website: "https://kubribridge.vercel.app/",
@@ -419,7 +419,7 @@ export const allProjects: Array<Project> = [
     name: "Loot Realms",
     short_name: "Loot Realms",
     description:
-        "open source MMOCCG (Massively Multiplayer On-Chain Composable Game) of economics and Chivalry",
+      "open source MMOCCG (Massively Multiplayer On-Chain Composable Game) of economics and Chivalry",
     tags: ["gamefi", "nft"],
     logo: "loot.jpeg",
     website: "https://bibliothecadao.xyz/",
@@ -434,8 +434,7 @@ export const allProjects: Array<Project> = [
   {
     name: "Mint Square",
     short_name: "Mint Square",
-    description:
-        "NFT Platform on Ethereum Layer 2 ZK Rollup",
+    description: "NFT Platform on Ethereum Layer 2 ZK Rollup",
     tags: ["nft"],
     logo: "mintsquare.png",
     website: "https://mintsquare.io/",
@@ -451,7 +450,7 @@ export const allProjects: Array<Project> = [
     name: "The Ninth",
     short_name: "The Ninth",
     description:
-        "The Ninth is a metaverse world built with Starkware technology. The world is truly owned by users, and land owners can generate various in-game elements and have various gameplay. Various elements such as multi-epoch iterations, trading markets, DAOs, game guilds, and virtual buildings constitute this metaverse with a grand worldview",
+      "The Ninth is a metaverse world built with Starkware technology. The world is truly owned by users, and land owners can generate various in-game elements and have various gameplay. Various elements such as multi-epoch iterations, trading markets, DAOs, game guilds, and virtual buildings constitute this metaverse with a grand worldview",
     tags: ["gamefi"],
     logo: "theninth.png",
     website: "https://ninth.gg/",
@@ -467,10 +466,11 @@ export const allProjects: Array<Project> = [
     name: "Phi",
     short_name: "Phi",
     description:
-        "Phi（Φ） is a decentralized metaverse on Starknet, with lands generated from ENS and buildings from On-Chain Activity Data.",
+      "Phi（Φ） is a decentralized metaverse on Starknet, with lands generated from ENS and buildings from On-Chain Activity Data.",
     tags: ["gamefi"],
     logo: "phi.jpeg",
-    website: "https://phi-xyz.notion.site/phi-xyz/532af6de66e64c7c883d552d301b8020",
+    website:
+      "https://phi-xyz.notion.site/phi-xyz/532af6de66e64c7c883d552d301b8020",
     github: "",
     twitter: "https://twitter.com/phi_xyz",
     medium: "",
@@ -483,7 +483,7 @@ export const allProjects: Array<Project> = [
     name: "Oasis",
     short_name: "Oasis",
     description:
-        "Oasis is an NFT marketplace powered by StarkNet, a ZK rollup L2 on ETH. Buy, Sell, and Create in the meta economy.",
+      "Oasis is an NFT marketplace powered by StarkNet, a ZK rollup L2 on ETH. Buy, Sell, and Create in the meta economy.",
     tags: ["nft"],
     logo: "oasis.png",
     website: "https://testnet.playoasis.xyz/",
@@ -499,7 +499,7 @@ export const allProjects: Array<Project> = [
     name: "StarkNet Fractals",
     short_name: "StarkNet Fractals",
     description:
-        "Generating the Mandelbrot Set on Starknet and storing the data to required to reconstruct the plot on-chain. Was created as a proof of concept for leveraging L2s to create fully on chain NFTs.",
+      "Generating the Mandelbrot Set on Starknet and storing the data to required to reconstruct the plot on-chain. Was created as a proof of concept for leveraging L2s to create fully on chain NFTs.",
     tags: ["nft"],
     logo: "",
     website: "",
@@ -514,8 +514,7 @@ export const allProjects: Array<Project> = [
   {
     name: "Snapshot X",
     short_name: "Snapshot X",
-    description:
-        "Decentralized Trusted voting",
+    description: "Decentralized Trusted voting",
     tags: ["dao", "governance"],
     logo: "snapshotx.jpeg",
     website: "https://snapshot.org/#/",
@@ -530,12 +529,12 @@ export const allProjects: Array<Project> = [
   {
     name: "Storage Proofs",
     short_name: "Storage Proofs",
-    description:
-        "Verifying Storage Proofs from Ethereum",
+    description: "Verifying Storage Proofs from Ethereum",
     tags: ["infrastructure"],
     logo: "",
     website: "",
-    github: "https://github.com/OilerNetwork/fossil/tree/master/contracts/starknet",
+    github:
+      "https://github.com/OilerNetwork/fossil/tree/master/contracts/starknet",
     twitter: "",
     medium: "",
     discord: "",
@@ -547,11 +546,12 @@ export const allProjects: Array<Project> = [
     name: "Yagi Finance",
     short_name: "Yagi Finance",
     description:
-        "Yagi is a network of keepers on StarkNet L2 that automate protocol actions.",
+      "Yagi is a network of keepers on StarkNet L2 that automate protocol actions.",
     tags: ["infrastructure", "defi"],
     logo: "yagi.svg",
     website: "https://yagi.fi/",
-    github: "https://github.com/OilerNetwork/fossil/tree/master/contracts/starknet",
+    github:
+      "https://github.com/OilerNetwork/fossil/tree/master/contracts/starknet",
     twitter: "https://twitter.com/yagi_fi",
     medium: "",
     discord: "",
@@ -563,7 +563,7 @@ export const allProjects: Array<Project> = [
     name: "Zorro",
     short_name: "Zorro",
     description:
-        "Proof of personhood protocol for democratic DAO voting, quadratic funding, etc. Runs on the Ethereum L2 StarkNet.",
+      "Proof of personhood protocol for democratic DAO voting, quadratic funding, etc. Runs on the Ethereum L2 StarkNet.",
     tags: ["dao", "governance"],
     logo: "zorro.svg",
     website: "https://zorro.xyz/",
@@ -578,8 +578,7 @@ export const allProjects: Array<Project> = [
   {
     name: "Argent X",
     short_name: "Argent X",
-    description:
-        "StarkNet wallet to interact with tokens and dApps",
+    description: "StarkNet wallet to interact with tokens and dApps",
     tags: ["wallet"],
     logo: "argent-x.svg",
     website: "https://www.argent.xyz/argent-x/",
@@ -594,8 +593,7 @@ export const allProjects: Array<Project> = [
   {
     name: "Hardhat Plugin",
     short_name: "Hardhat Plugin",
-    description:
-        "Hardhat Plugin",
+    description: "Hardhat Plugin",
     tags: ["tools"],
     logo: "",
     website: "",
@@ -610,8 +608,7 @@ export const allProjects: Array<Project> = [
   {
     name: "Nile",
     short_name: "Nile",
-    description:
-        "CLI tool to develop StarkNet projects written in Cairo",
+    description: "CLI tool to develop StarkNet projects written in Cairo",
     tags: ["tools"],
     logo: "",
     website: "",
@@ -627,7 +624,7 @@ export const allProjects: Array<Project> = [
     name: "Starknet Devnet",
     short_name: "Starknet Devnet",
     description:
-        "A Flask wrapper of Starknet state. Similar in purpose to Ganache. Aims to mimic Starknet's Alpha testnet, but with simplified functionality.",
+      "A Flask wrapper of Starknet state. Similar in purpose to Ganache. Aims to mimic Starknet's Alpha testnet, but with simplified functionality.",
     tags: ["tools"],
     logo: "",
     website: "",
@@ -642,8 +639,7 @@ export const allProjects: Array<Project> = [
   {
     name: "StarkNet.js",
     short_name: "StarkNet.js",
-    description:
-        "Javascript library for StarkNet",
+    description: "Javascript library for StarkNet",
     tags: ["tools"],
     logo: "",
     website: "https://www.starknetjs.com/",
@@ -658,8 +654,7 @@ export const allProjects: Array<Project> = [
   {
     name: "StarkNet.py",
     short_name: "StarkNet.py",
-    description:
-        "Python SDK for StarkNet",
+    description: "Python SDK for StarkNet",
     tags: ["tools"],
     logo: "",
     website: "https://starknetpy.readthedocs.io/en/latest/",
@@ -674,8 +669,7 @@ export const allProjects: Array<Project> = [
   {
     name: "StarkNet.php",
     short_name: "StarkNet.php",
-    description:
-        "A PHP package for interacting with StarkNet",
+    description: "A PHP package for interacting with StarkNet",
     tags: ["tools"],
     logo: "",
     website: "",
@@ -690,8 +684,7 @@ export const allProjects: Array<Project> = [
   {
     name: "StarkNet-rs",
     short_name: "StarkNet-rs",
-    description:
-        "StarkNet client library in Rust",
+    description: "StarkNet client library in Rust",
     tags: ["tools"],
     logo: "",
     website: "https://crates.io/crates/starknet",
@@ -706,8 +699,7 @@ export const allProjects: Array<Project> = [
   {
     name: "Warp",
     short_name: "Warp",
-    description:
-        "Warp is a Solidity to Cairo transpiler.",
+    description: "Warp is a Solidity to Cairo transpiler.",
     tags: ["tools"],
     logo: "",
     website: "https://github.com/NethermindEth/warp",
@@ -722,8 +714,7 @@ export const allProjects: Array<Project> = [
   {
     name: "Pathfinder",
     short_name: "Pathfinder",
-    description:
-        "Starknet full state node written in Rust",
+    description: "Starknet full state node written in Rust",
     tags: ["tools", "infrastructure"],
     logo: "",
     website: "",
@@ -738,8 +729,7 @@ export const allProjects: Array<Project> = [
   {
     name: "StarkTx",
     short_name: "StarkTx",
-    description:
-        "StarkNet transactions analysis tool",
+    description: "StarkNet transactions analysis tool",
     tags: ["tools"],
     logo: "",
     website: "https://starktx.info/",
@@ -755,14 +745,15 @@ export const allProjects: Array<Project> = [
     name: "Voyager",
     short_name: "Voyager",
     description:
-        "Voyager is a block explorer for StarkNet ecosystem, providing all the capabilities needed in navigating through this ecosystem. It includes not only read-only data but also supports interaction with Starknet contracts.",
+      "Voyager is a block explorer for StarkNet ecosystem, providing all the capabilities needed in navigating through this ecosystem. It includes not only read-only data but also supports interaction with Starknet contracts.",
     tags: ["tools"],
     logo: "voyager.svg",
     website: "https://voyager.online/",
     github: "",
     twitter: "https://twitter.com/nethermindeth",
     medium: "",
-    discord: "https://discord.com/channels/793094838509764618/912410047236149298",
+    discord:
+      "https://discord.com/channels/793094838509764618/912410047236149298",
     telegram: "",
     isLive: true,
     isTestnetLive: true,
