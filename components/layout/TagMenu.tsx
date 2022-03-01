@@ -38,6 +38,12 @@ function TagMenu({ tags, initialValue, onChange }: TagMenuProps) {
           borderColor={
             selectedValue.value === tag.value ? "transparent" : "whiteAlpha.300"
           }
+          _hover={{
+            background:
+              selectedValue.value === tag.value
+                ? "brand.900"
+                : "whiteAlpha.100",
+          }}
         >
           {tag.label}
         </ChakraTag>

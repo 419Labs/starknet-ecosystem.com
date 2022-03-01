@@ -90,9 +90,7 @@ const Home: NextPage = () => {
             })
           ) : (
             <Flex my={8} direction="column" align="center" opacity=".8">
-              <Text fontSize="24px" opacity=".8">
-                😕 No projects in this category
-              </Text>
+              <Text fontSize="24px">😕 No projects in this category</Text>
               <Text mt={2} fontSize="18px">
                 Maybe yours?
               </Text>
