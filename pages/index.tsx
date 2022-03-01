@@ -40,7 +40,8 @@ const Home: NextPage = () => {
         fontWeight="bold"
         maxWidth="800px"
       >
-        Starknet Ecosystem
+          The <u>Right</u> Solution
+          for Scaling Ethereum
       </Text>
       {/* Sub intro text */}
       <Text
@@ -50,7 +51,7 @@ const Home: NextPage = () => {
         fontSize="24px"
         maxWidth="400px"
       >
-        Explore all projects Building & Running on Starknet L2
+        Explore all projects Building & Running on StarkNet L2
       </Text>
       {/* Main part */}
       <Flex w="full" direction="column" mt={8}>
