@@ -3,15 +3,15 @@ import { Image, Tag as ChakraTag } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-import {Project} from "../../data/ecosystem";
-import {Tag} from "../../data/tag"
+import type { ProjectItf } from "../../data/ecosystem";
+import type { Tag } from "../../data/tag";
 
 interface CardProjectProps {
-  project: Project;
+  project: ProjectItf;
 }
 function CardProject({ project }: CardProjectProps) {
   const [isFlipped, setIsFlipped] = useState(false);
-  const { name, description, tags, logo } = project;
+  const { name, description, tagsRef: tags, logo } = project;
 
   const leftToRight = {
     visible: { transform: "rotateY(180deg)" },
@@ -86,7 +86,10 @@ function CardProject({ project }: CardProjectProps) {
         {renderBaseCard(
           <>
             <Box boxSize="170px">
-              <Image src={logo === '' ? '/starknet-logo.png' : `/logos/${logo}`} alt={`${name} logo`} />
+              <Image
+                src={logo === "" ? "/starknet-logo.png" : `/logos/${logo}`}
+                alt={`${name} logo`}
+              />
             </Box>
             <Text my={8} fontSize="xl" fontWeight="bold">
               {name}
