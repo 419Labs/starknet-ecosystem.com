@@ -41,7 +41,7 @@ const Home: NextPage = () => {
         fontWeight="bold"
         maxWidth="850px"
       >
-        The Way you Want to Follow to Scale Ethereum
+        StarkNet revolution is coming out of the woods
       </Text>
       {/* Sub intro text */}
       <Text
