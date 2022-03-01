@@ -65,8 +65,13 @@ function CardProject({ project, isFlipped, onClick }: CardProjectProps) {
   const renderBaseCard = (content: ReactElement, indication?: string) => {
     return (
       <Flex
+        border="1px solid"
+        borderColor="gray.800"
+        _hover={{
+          // boxShadow: "0px 0px 1px #1a202c, 0 0px 20px #46526a",
+          borderColor: "gray.600",
+        }}
         cursor="pointer"
-        boxShadow="0 0px 0px 50 rgb(255 255 255 / 20%)"
         p={6}
         bg="gray.800"
         borderRadius="md"

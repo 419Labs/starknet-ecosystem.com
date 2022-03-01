@@ -51,7 +51,7 @@ const Home: NextPage = () => {
         fontSize="24px"
         maxWidth="400px"
       >
-        Explore all projects Building & Running on StarkNet L2
+        Explore all projects building & running on StarkNet L2
       </Text>
       {/* Main part */}
       <Flex w="full" direction="column" mt={8}>
