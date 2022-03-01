@@ -33,12 +33,14 @@ function CardProject({ project }: CardProjectProps) {
       <FrontSide style={{ padding: 0 }}>
         {renderBaseCard(
           <>
-            <Box boxSize="170px">
+            <Flex align="center" justify="center" flex={1}>
               <Image
+                width="170px"
+                maxHeight="170px"
                 src={logo === "" ? "/starknet-logo.png" : `/logos/${logo}`}
                 alt={`${name} logo`}
               />
-            </Box>
+            </Flex>
             <Text my={8} fontSize="xl" fontWeight="bold">
               {name}
             </Text>
