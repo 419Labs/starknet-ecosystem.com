@@ -56,7 +56,10 @@ const Home: NextPage = () => {
         <TagMenu
           initialValue={allTags[0]}
           tags={allTags}
-          onChange={setFilter}
+          onChange={(newFilter) => {
+            setFilter(newFilter);
+            setFlippedIndex(-1);
+          }}
         />
         <Stack
           mt={10}
@@ -66,17 +69,28 @@ const Home: NextPage = () => {
           wrap="wrap"
           shouldWrapChildren
         >
-          {projects.map((project: ProjectItf, index: number) => {
-            return (
-              <Box key={`project-${project.name}`} py={4} px={4} width="300px">
-                <CardProject
-                  project={project}
-                  isFlipped={flippedIndex === index}
-                  onClick={() => setFlippedIndex(index)}
-                />
-              </Box>
-            );
-          })}
+          {projects && projects.length > 0 ? (
+            projects.map((project: ProjectItf, index: number) => {
+              return (
+                <Box
+                  key={`project-${project.name}`}
+                  py={4}
+                  px={4}
+                  width="300px"
+                >
+                  <CardProject
+                    project={project}
+                    isFlipped={flippedIndex === index}
+                    onClick={() => setFlippedIndex(index)}
+                  />
+                </Box>
+              );
+            })
+          ) : (
+            <Text mt={8} fontSize="24px" opacity=".8">
+              😕 No projects in this category, maybe yours?
+            </Text>
+          )}
         </Stack>
       </Flex>
     </Flex>

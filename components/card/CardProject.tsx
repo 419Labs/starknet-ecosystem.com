@@ -107,7 +107,12 @@ function CardProject({ project, isFlipped, onClick }: CardProjectProps) {
             >
               {description}
             </Text>
-            <HStack align="flex-start" spacing={4} fontSize="20px">
+            <HStack
+              align="flex-start"
+              spacing={4}
+              fontSize="20px"
+              onClick={(e) => e.stopPropagation()}
+            >
               {website && (
                 <Link isExternal href={website}>
                   <FontAwesomeIcon icon={faGlobe} />
