@@ -1,6 +1,6 @@
 import { Box, Flex, Stack, Text } from "@chakra-ui/layout";
 import type { NextPage } from "next";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import CardProject from "../components/card/CardProject";
 import TagMenu from "../components/layout/TagMenu";
@@ -31,21 +31,21 @@ const Home: NextPage = () => {
       };
     });
   return (
-    <Flex direction="column" justify="flex-start" align="center">
+    <Flex direction="column" justify="flex-start" align="center" px={[4, 0]}>
       {/* Big intro text */}
       <Text
+        mt={12}
         textAlign="center"
         lineHeight={1.2}
-        fontSize="64px"
+        fontSize={["48px", "68px"]}
         fontWeight="bold"
-        maxWidth="800px"
+        maxWidth="850px"
       >
-          The <u>Right</u> Solution
-          for Scaling Ethereum
+        The Way you Want to Follow to Scale Ethereum
       </Text>
       {/* Sub intro text */}
       <Text
-        mt={4}
+        mt={8}
         textAlign="center"
         color="whiteAlpha.600"
         fontSize="24px"
