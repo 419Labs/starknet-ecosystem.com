@@ -1,18 +1,26 @@
-import {Flex, HStack, Link, Text} from "@chakra-ui/layout";
+import { Flex, HStack, Link, Text } from "@chakra-ui/layout";
 import { Image, Tag as ChakraTag } from "@chakra-ui/react";
+import {
+  faDiscord,
+  faGithub,
+  faMedium,
+  faTelegram,
+  faTwitter,
+} from "@fortawesome/free-brands-svg-icons";
+import { faGlobe } from "@fortawesome/pro-regular-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import type { ReactElement } from "react";
 import Flippy, { FrontSide, BackSide } from "react-flippy";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import type { ProjectItf } from "../../data/ecosystem";
 import type { Tag } from "../../data/tag";
-import {faDiscord, faGithub, faMedium, faTelegram, faTwitter} from "@fortawesome/free-brands-svg-icons";
-import {faGlobe} from "@fortawesome/pro-regular-svg-icons";
 
 interface CardProjectProps {
   project: ProjectItf;
+  isFlipped: boolean;
+  onClick: () => void;
 }
-function CardProject({ project }: CardProjectProps) {
+function CardProject({ project, isFlipped, onClick }: CardProjectProps) {
   const {
     name,
     description,
@@ -44,7 +52,12 @@ function CardProject({ project }: CardProjectProps) {
     );
   };
   return (
-    <Flippy height="100%" flipOnClick flipDirection="horizontal">
+    <Flippy
+      isFlipped={isFlipped}
+      height="100%"
+      flipDirection="horizontal"
+      onClick={onClick}
+    >
       <FrontSide style={{ padding: 0 }}>
         {renderBaseCard(
           <>
@@ -75,17 +88,56 @@ function CardProject({ project }: CardProjectProps) {
           </>
         )}
       </FrontSide>
-      <BackSide style={{ padding: 0}}>
+      <BackSide style={{ padding: 0 }}>
         {renderBaseCard(
-          <Flex position="relative" direction="column" justify="space-between" align="flex-start" h="full" w="full">
-            <Text fontSize="md" fontWeight="500" opacity=".8" px={0} noOfLines={10} >{description}</Text>
+          <Flex
+            position="relative"
+            direction="column"
+            justify="space-between"
+            align="flex-start"
+            h="full"
+            w="full"
+          >
+            <Text
+              fontSize="md"
+              fontWeight="500"
+              opacity=".8"
+              px={0}
+              noOfLines={10}
+            >
+              {description}
+            </Text>
             <HStack align="flex-start" spacing={4} fontSize="20px">
-              {website && <Link isExternal href={website}><FontAwesomeIcon icon={faGlobe}/></Link>}
-              {twitter && <Link isExternal href={twitter}><FontAwesomeIcon icon={faTwitter}/></Link>}
-              {telegram && <Link isExternal href={telegram}><FontAwesomeIcon icon={faTelegram}/></Link>}
-              {discord && <Link isExternal href={discord}><FontAwesomeIcon icon={faDiscord}/></Link>}
-              {medium && <Link isExternal href={medium}><FontAwesomeIcon icon={faMedium}/></Link>}
-              {github && <Link isExternal href={github}><FontAwesomeIcon icon={faGithub}/></Link>}
+              {website && (
+                <Link isExternal href={website}>
+                  <FontAwesomeIcon icon={faGlobe} />
+                </Link>
+              )}
+              {twitter && (
+                <Link isExternal href={twitter}>
+                  <FontAwesomeIcon icon={faTwitter} />
+                </Link>
+              )}
+              {telegram && (
+                <Link isExternal href={telegram}>
+                  <FontAwesomeIcon icon={faTelegram} />
+                </Link>
+              )}
+              {discord && (
+                <Link isExternal href={discord}>
+                  <FontAwesomeIcon icon={faDiscord} />
+                </Link>
+              )}
+              {medium && (
+                <Link isExternal href={medium}>
+                  <FontAwesomeIcon icon={faMedium} />
+                </Link>
+              )}
+              {github && (
+                <Link isExternal href={github}>
+                  <FontAwesomeIcon icon={faGithub} />
+                </Link>
+              )}
             </HStack>
           </Flex>
         )}

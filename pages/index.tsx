@@ -11,6 +11,7 @@ import { allTags } from "../data/tag";
 
 const Home: NextPage = () => {
   const tagAll = allTags[0];
+  const [flippedIndex, setFlippedIndex] = useState(-1);
   const [filter, setFilter] = useState(tagAll);
   const projects: ProjectItf[] = allProjects
     .filter((project: Project) => {
@@ -65,10 +66,14 @@ const Home: NextPage = () => {
           wrap="wrap"
           shouldWrapChildren
         >
-          {projects.map((project: ProjectItf) => {
+          {projects.map((project: ProjectItf, index: number) => {
             return (
               <Box key={`project-${project.name}`} py={4} px={4} width="300px">
-                <CardProject project={project} />
+                <CardProject
+                  project={project}
+                  isFlipped={flippedIndex === index}
+                  onClick={() => setFlippedIndex(index)}
+                />
               </Box>
             );
           })}
