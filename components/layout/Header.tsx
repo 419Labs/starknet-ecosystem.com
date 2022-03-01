@@ -1,5 +1,5 @@
-import { Box, Flex, Text } from "@chakra-ui/layout";
-import { Image } from "@chakra-ui/react";
+import { Box, Flex, Link, Text } from "@chakra-ui/layout";
+import { Button, Image } from "@chakra-ui/react";
 
 function Header() {
   return (
@@ -18,8 +18,23 @@ function Header() {
           Starknet ecosystem
         </Text>
       </Flex>
-      <Text>Menu</Text>
-      <Text>Actions</Text>
+      <Box>
+        <Link
+          _hover={{ textDecoration: "none" }}
+          href="https://voyager.online/"
+          isExternal
+        >
+          <Button>Explorer</Button>
+        </Link>
+        <Link
+          ml={2}
+          _hover={{ textDecoration: "none" }}
+          href="https://github.com/419Labs/starknet-ecosystem.com"
+          isExternal
+        >
+          <Button>Apply</Button>
+        </Link>
+      </Box>
     </Flex>
   );
 }

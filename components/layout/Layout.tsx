@@ -1,5 +1,6 @@
-import { Flex } from "@chakra-ui/layout";
+import { Box, Flex } from "@chakra-ui/layout";
 import type { ReactNode } from "react";
+import { useEffect, useState } from "react";
 import Particles from "react-tsparticles";
 
 import Footer from "./Footer";
@@ -11,6 +12,16 @@ type LayoutProps = {
 };
 
 function Layout({ children }: LayoutProps) {
+  const [isHeaderVisible, setHeaderVisible] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      const newValue = window.scrollY !== 0;
+      if (newValue !== isHeaderVisible) {
+        setHeaderVisible(newValue);
+      }
+    });
+  }, []);
   return (
     <>
       <Flex
@@ -24,7 +35,25 @@ function Layout({ children }: LayoutProps) {
         w="full"
         transition="0.5s ease-out"
       >
-        <Header />
+        <Box
+          width="full"
+          position="fixed"
+          left={0}
+          right={0}
+          paddingLeft={{ sm: 0, md: "10%" }}
+          px={{ sm: 4, md: 0 }}
+          transition="background-color .2s ease-in"
+          bgColor={isHeaderVisible ? "black" : "transparent"}
+          zIndex={2}
+        >
+          <Box
+            w="full"
+            paddingLeft={{ sm: 0, md: "10%" }}
+            paddingRight={{ sm: 0, md: "10%" }}
+          >
+            <Header />
+          </Box>
+        </Box>
         <Flex
           flex="1 1 auto"
           as="main"

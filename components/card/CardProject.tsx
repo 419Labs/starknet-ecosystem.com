@@ -36,7 +36,7 @@ function CardProject({ project, isFlipped, onClick }: CardProjectProps) {
     isTestnetLive,
   } = project;
 
-  const getIndicationText = () => {
+  const getIndicationText = (): string | undefined => {
     if (isLive) {
       return "Live";
     }
@@ -46,7 +46,7 @@ function CardProject({ project, isFlipped, onClick }: CardProjectProps) {
     return undefined;
   };
 
-  const renderBaseCard = (content: ReactElement, indication?: ReactElement) => {
+  const renderBaseCard = (content: ReactElement, indication?: string) => {
     return (
       <Flex
         cursor="pointer"

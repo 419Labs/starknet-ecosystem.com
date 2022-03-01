@@ -1,6 +1,6 @@
 import { Box, Flex, Stack, Text } from "@chakra-ui/layout";
 import type { NextPage } from "next";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import CardProject from "../components/card/CardProject";
 import TagMenu from "../components/layout/TagMenu";
@@ -13,6 +13,7 @@ const Home: NextPage = () => {
   const tagAll = allTags[0];
   const [flippedIndex, setFlippedIndex] = useState(-1);
   const [filter, setFilter] = useState(tagAll);
+
   const projects: ProjectItf[] = allProjects
     .filter((project: Project) => {
       return filter === tagAll || project.tags.indexOf(filter.value) !== -1;
