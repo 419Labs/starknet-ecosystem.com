@@ -63,13 +63,7 @@ const Home: NextPage = () => {
         >
           {projects.map((project: Project) => {
             return (
-              <Box
-                key={`project-${project.name}`}
-                py={4}
-                px={4}
-                minWidth="250px"
-                h="250px"
-              >
+              <Box key={`project-${project.name}`} py={4} px={4} width="300px">
                 <CardProject project={project} />
               </Box>
             );
