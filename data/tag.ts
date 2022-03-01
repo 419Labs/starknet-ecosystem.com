@@ -53,6 +53,10 @@ export const allTags: Tag[] = [
     label: "Social",
   },
   {
+    value: "tools",
+    label: "Tools",
+  },
+  {
     value: "wallet",
     label: "Wallet",
   },
