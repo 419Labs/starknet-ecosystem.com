@@ -29,6 +29,8 @@ function CardProject({ project }: CardProjectProps) {
   const renderBaseCard = (content: ReactElement) => {
     return (
       <Flex
+        cursor="pointer"
+        boxShadow="0 0px 0px 50 rgb(255 255 255 / 20%)"
         p={6}
         bg="gray.800"
         borderRadius="md"
