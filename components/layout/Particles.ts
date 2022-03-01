@@ -5,7 +5,7 @@ const ParticlesOptions: ISourceOptions = {
   interactivity: {
     events: {
       onClick: {
-        enable: true,
+        enable: false,
         mode: "push",
       },
       onHover: {
@@ -49,7 +49,7 @@ const ParticlesOptions: ISourceOptions = {
       enable: true,
       outMode: "bounce",
       random: false,
-      speed: 1,
+      speed: 0.4,
       straight: false,
     },
     number: {
