@@ -11,7 +11,7 @@ const defaultSEOConfig = {
     description: "Explore all projects building & running on StarkNet L2",
     images: [
       {
-        url: "https://alpharoad.fi/starknet-banner.jpg",
+        url: "https://starknet-ecosystem.com/starknet-banner.jpg",
         alt: "StarkNet Ecosystem logo",
       },
     ],
