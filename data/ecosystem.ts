@@ -701,7 +701,7 @@ export const allProjects: Array<Project> = [
     short_name: "StarkNet-rs",
     description: "StarkNet client library in Rust",
     tags: ["tools"],
-    logo: "",
+    logo: "starknet-rs.png",
     website: "https://crates.io/crates/starknet",
     github: "https://github.com/xJonathanLEI/starknet-rs",
     twitter: "",
