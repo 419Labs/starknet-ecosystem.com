@@ -27,7 +27,7 @@ As soon as your PR is merged an automatic deployment will be started.
 to update your project you have to do the same thing than for adding. Edit the `data/ecosystem.ts` file and
 create a dedicated Pull Request following this title: "🎨 Updating AwesomeProjectName"
 
-### Community driven
+### Community-driven
 
 We have created a dedicated Telegram channel to manage quickly Pull Request and the starknet-ecosystem.com project.
 By joining the [Telegram channel](https://t.me/starknet_ecosystem) you'll be informed immediately when a new Project is coming out of stealth mode.
