@@ -11,12 +11,16 @@ const defaultSEOConfig = {
     description: "Explore all projects building & running on StarkNet L2",
     images: [
       {
-        url: "https://alpharoad.fi/starknet-logo.png",
+        url: "https://alpharoad.fi/starknet-banner.jpg",
         alt: "StarkNet Ecosystem logo",
       },
     ],
     site_name: "StarkNet Ecosystem",
   },
+  twitter: {
+    cardType: "summary_large_image",
+    site: "@alpharoad_fi",
+  }
 };
 
 export default defaultSEOConfig;
