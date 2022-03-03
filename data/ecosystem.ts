@@ -22,9 +22,9 @@ export interface ProjectItf extends Project {
 
 export const allProjects: Array<Project> = [
   {
-    name: "Orbiter",
+    name: "Orbiter Finance",
     short_name: "Oribter",
-    description: "Orbiter Finance is a decentralized cross-rollup Layer 2 bridge with a contract only on the destination side and is Ethereum's future multi-rollup infrastructure, the cost is low, and the process is instant.",
+    description: "A decentralized optimistic cross-rollup bridge for transferring the Ethereumnative assets, which is the infrastructure of Layer 2.",
     tags: ["bridge","infrastructure"],
     logo: "orbiter.svg",
     website: "https://www.orbiter.finance/",
@@ -33,7 +33,7 @@ export const allProjects: Array<Project> = [
     medium: "https://orbiter-finance.medium.com/",
     discord: "https://discord.gg/orbiter-finance",
     telegram: "",
-    isLive: false,
+    isLive: true,
     isTestnetLive: true,
   },
   {
