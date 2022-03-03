@@ -22,6 +22,21 @@ export interface ProjectItf extends Project {
 
 export const allProjects: Array<Project> = [
   {
+    name: "Topology",
+    short_name: "Topology",
+    description: "Building Fountain engine, solve2mint framework, svg/html/midi libraries and other infrastructure for onchain gaming, art, and decentralized innovation protocol",
+    tags: ["infrastructure"],
+    logo: "",
+    website: "https://www.topology.gg/",
+    github: "https://github.com/topology-gg",
+    twitter: "https://twitter.com/topology_gg",
+    medium: "",
+    discord: "",
+    telegram: "",
+    isLive: false,
+    isTestnetLive: true,
+  },
+  {
     name: "Orbiter Finance",
     short_name: "Oribter",
     description: "A decentralized optimistic cross-rollup bridge for transferring the Ethereumnative assets, which is the infrastructure of Layer 2.",
