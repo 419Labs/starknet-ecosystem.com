@@ -2,13 +2,11 @@
 Ecosystem TODO list - Feel free to update
 
 ### For developers
-- [ ] Project cards lazy-loading
-- [ ] Filter by all-testnet-live
-- [ ] SortBy functionnality
+- [ ] Add filter on dashboard permitting to filter by project status: all | live (mainnet) | testnet
 - [ ] Add i18n
 
 ### For UI developers
-- [ ] Responsive dropdown menu
+- [ ] Responsive dropdown menu of project categories
 
 ### For non-developers
 - [ ] Discord server
@@ -18,3 +16,4 @@ Ecosystem TODO list - Feel free to update
 
 ### Completed ✓
 - [x] Launch 
+- [x] Project cards lazy-loading
