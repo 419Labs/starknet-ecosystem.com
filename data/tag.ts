@@ -40,18 +40,18 @@ export const allTags: Tag[] = [
     value: "nft",
     label: "NFT",
   },
-  {
-    value: "cefi",
-    label: "CeFi",
-  },
+  // {
+  //   value: "cefi",
+  //   label: "CeFi",
+  // },
   {
     value: "payments",
     label: "Payments",
   },
-  {
-    value: "social",
-    label: "Social",
-  },
+  // {
+  //   value: "social",
+  //   label: "Social",
+  // },
   {
     value: "tools",
     label: "Tools",
