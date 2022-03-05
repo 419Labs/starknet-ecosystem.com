@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 
 import en from "../../assets/locales/en";
 import fr from "../../assets/locales/fr";
+import tr from "../../assets/locales/tr";
 
 import { TranslateContext } from "./context";
 import type { TranslateState } from "./model";
@@ -22,6 +23,8 @@ export function TranslateProvider({
         return en;
       case "fr":
         return fr;
+      case "tr":
+        return tr;
       default:
         return en;
     }

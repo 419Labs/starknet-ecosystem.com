@@ -79,6 +79,20 @@ function Header() {
                     </NextLink>
                   ),
                 },
+                {
+                  href: "",
+                  children: (
+                    <NextLink href="/" passHref locale="tr">
+                      <Link
+                        _hover={{ textDecoration: "none" }}
+                        href="/"
+                        w="full"
+                      >
+                        Türk
+                      </Link>
+                    </NextLink>
+                  ),
+                },
               ]}
               icon={faChevronDown}
               text={locale ? locale.toUpperCase() : " - "}
