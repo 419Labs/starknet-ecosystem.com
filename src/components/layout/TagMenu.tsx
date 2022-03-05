@@ -2,7 +2,8 @@ import { Stack } from "@chakra-ui/layout";
 import { Tag as ChakraTag } from "@chakra-ui/react";
 import { useState } from "react";
 
-import type { Tag } from "../../data/tag";
+import type { Tag } from "../../../data/tag";
+import { useTranslate } from "../../context/TranslateProvider";
 
 interface TagMenuProps {
   tags: Tag[];
@@ -10,6 +11,7 @@ interface TagMenuProps {
   onChange: (tag: Tag) => void;
 }
 function TagMenu({ tags, initialValue, onChange }: TagMenuProps) {
+  const { t } = useTranslate();
   const [selectedValue, setSelectedValue] = useState<Tag>(initialValue);
 
   const tagClicked = (newTag: Tag) => {
@@ -45,7 +47,7 @@ function TagMenu({ tags, initialValue, onChange }: TagMenuProps) {
                 : "whiteAlpha.100",
           }}
         >
-          {tag.label}
+          {t.tags[tag.value]}
         </ChakraTag>
       ))}
     </Stack>

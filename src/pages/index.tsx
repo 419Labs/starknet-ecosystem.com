@@ -3,14 +3,16 @@ import type { NextPage } from "next";
 import { useEffect, useState } from "react";
 import useInView from "react-cool-inview";
 
+import type { Project, ProjectItf } from "../../data/ecosystem";
+import { allProjects } from "../../data/ecosystem";
+import type { Tag } from "../../data/tag";
+import { allTags } from "../../data/tag";
 import CardProject from "../components/card/CardProject";
 import TagMenu from "../components/layout/TagMenu";
-import type { Project, ProjectItf } from "../data/ecosystem";
-import { allProjects } from "../data/ecosystem";
-import type { Tag } from "../data/tag";
-import { allTags } from "../data/tag";
+import { useTranslate } from "../context/TranslateProvider";
 
 const Home: NextPage = () => {
+  const { t } = useTranslate();
   const LOADED_STEPS = 10;
   const tagAll = allTags[0];
   const [flippedIndex, setFlippedIndex] = useState(-1);
@@ -66,7 +68,7 @@ const Home: NextPage = () => {
         fontWeight="bold"
         maxWidth="850px"
       >
-        StarkNet revolution is coming out of the woods
+        {t.common.title_main}
       </Text>
       {/* Sub intro text */}
       <Text
@@ -76,7 +78,7 @@ const Home: NextPage = () => {
         fontSize="24px"
         maxWidth="400px"
       >
-        Explore all projects building & running on StarkNet L2
+        {t.common.subtitle_main}
       </Text>
       <Text
         mt={4}
@@ -85,7 +87,7 @@ const Home: NextPage = () => {
         fontSize="18px"
         maxWidth="400px"
       >
-        ✨ A community-driven initiative
+        {t.common.community_driven}
       </Text>
       {/* Main part */}
       <Flex w="full" direction="column" mt={8}>
@@ -128,9 +130,9 @@ const Home: NextPage = () => {
             })
           ) : (
             <Flex my={8} direction="column" align="center" opacity=".8">
-              <Text fontSize="24px">😕 No projects in this category</Text>
+              <Text fontSize="24px">{t.common.no_project}</Text>
               <Text mt={2} fontSize="18px">
-                Maybe yours?
+                {t.common.maybe_yours}
               </Text>
             </Flex>
           )}

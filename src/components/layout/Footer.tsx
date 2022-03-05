@@ -1,6 +1,10 @@
 import { Flex, HStack, Link, Text } from "@chakra-ui/layout";
 
+import { useTranslate } from "../../context/TranslateProvider";
+
 function Footer() {
+  const { t } = useTranslate();
+
   return (
     <Flex
       w="full"
@@ -11,15 +15,15 @@ function Footer() {
       px={[4, 0]}
     >
       <HStack>
-        <Text color="whiteAlpha.600">Made with</Text>
+        <Text color="whiteAlpha.600">{t.common.made_with}</Text>
         <Text>❤️</Text>
-        <Text color="whiteAlpha.600">by</Text>
+        <Text color="whiteAlpha.600">{t.common.by}</Text>
         <Link
           _hover={{ textDecoration: "none" }}
           isExternal
           href="https://twitter.com/alpharoad_fi"
         >
-          Alpha Road Team
+          {t.common.alpha_road_team}
         </Link>
       </HStack>
     </Flex>

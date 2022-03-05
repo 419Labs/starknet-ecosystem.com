@@ -12,7 +12,7 @@ Ecosystem TODO list - Feel free to update
 - [ ] Discord server
 - [ ] Twitter account
 - [ ] Spread to the world
-- [ ] Translations
+- [ ] Translations - Check more [here](../blob/main/src/assets/locales/README)
 
 ### Completed ✓
 - [x] Launch 

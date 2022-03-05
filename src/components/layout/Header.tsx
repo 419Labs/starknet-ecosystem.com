@@ -1,9 +1,17 @@
 import { Box, Flex, Link, Text } from "@chakra-ui/layout";
 import { Button, Image, Hide } from "@chakra-ui/react";
 import { faGithub, faTelegram } from "@fortawesome/free-brands-svg-icons";
+import { faChevronDown } from "@fortawesome/pro-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import NextLink from "next/link";
+
+import { useTranslate } from "../../context/TranslateProvider";
+
+import MenuButton from "./MenuButton";
 
 function Header() {
+  const { locale, t } = useTranslate();
+
   const githubLink = "https://github.com/419Labs/starknet-ecosystem.com";
   const telegramLink = "https://t.me/starknet_ecosystem";
   return (
@@ -24,13 +32,13 @@ function Header() {
         </Text>
       </Flex>
       <Hide below="sm">
-        <Box>
+        <Flex direction="row">
           <Link
             _hover={{ textDecoration: "none" }}
             href={githubLink}
             isExternal
           >
-            <Button>Apply</Button>
+            <Button>{t.common.apply}</Button>
           </Link>
           <Link
             ml={2}
@@ -38,9 +46,45 @@ function Header() {
             href={telegramLink}
             isExternal
           >
-            <Button>Community</Button>
+            <Button>{t.common.community}</Button>
           </Link>
-        </Box>
+          <Box ml={2}>
+            <MenuButton
+              menus={[
+                {
+                  href: "",
+                  children: (
+                    <NextLink href="/" passHref locale="fr">
+                      <Link
+                        _hover={{ textDecoration: "none" }}
+                        href="/"
+                        w="full"
+                      >
+                        Français
+                      </Link>
+                    </NextLink>
+                  ),
+                },
+                {
+                  href: "",
+                  children: (
+                    <NextLink href="/" passHref locale="en">
+                      <Link
+                        _hover={{ textDecoration: "none" }}
+                        href="/"
+                        w="full"
+                      >
+                        English
+                      </Link>
+                    </NextLink>
+                  ),
+                },
+              ]}
+              icon={faChevronDown}
+              text={locale ? locale.toUpperCase() : " - "}
+            />
+          </Box>
+        </Flex>
       </Hide>
       <Hide above="sm">
         <Flex justify="flex-end">

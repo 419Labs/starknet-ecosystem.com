@@ -12,8 +12,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import type { ReactElement } from "react";
 import Flippy, { FrontSide, BackSide } from "react-flippy";
 
-import type { ProjectItf } from "../../data/ecosystem";
-import type { Tag } from "../../data/tag";
+import type { ProjectItf } from "../../../data/ecosystem";
+import type { Tag } from "../../../data/tag";
 
 interface CardProjectProps {
   project: ProjectItf;
