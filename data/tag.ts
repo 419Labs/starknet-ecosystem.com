@@ -60,4 +60,8 @@ export const allTags: Tag[] = [
     value: "wallet",
     label: "Wallet",
   },
+  {
+    value: "starkex",
+    label: "StarkEx",
+  },
 ];

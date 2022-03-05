@@ -29,6 +29,7 @@ const enTranslate: TranslateState = {
     social: "Social",
     tools: "Tools",
     wallet: "Wallet",
+    starkex: "StarkEx",
   },
 };
 

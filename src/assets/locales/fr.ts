@@ -29,6 +29,7 @@ const frTranslate: TranslateState = {
     social: "Social",
     tools: "Outils",
     wallet: "Portefeuilles",
+    starkex: "StarkEx",
   },
 };
 

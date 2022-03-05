@@ -29,6 +29,7 @@ const trTranslate: TranslateState = {
     social: "Sosyal",
     tools: "Araçlar",
     wallet: "Cüzdan",
+    starkex: "StarkEx",
   },
 };
 
