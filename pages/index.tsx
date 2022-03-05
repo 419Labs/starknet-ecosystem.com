@@ -1,6 +1,7 @@
 import { Box, Flex, Stack, Text } from "@chakra-ui/layout";
 import type { NextPage } from "next";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import useInView from "react-cool-inview";
 
 import CardProject from "../components/card/CardProject";
 import TagMenu from "../components/layout/TagMenu";
@@ -10,26 +11,44 @@ import type { Tag } from "../data/tag";
 import { allTags } from "../data/tag";
 
 const Home: NextPage = () => {
+  const LOADED_STEPS = 10;
   const tagAll = allTags[0];
   const [flippedIndex, setFlippedIndex] = useState(-1);
   const [filter, setFilter] = useState(tagAll);
+  const [projects, setProjects] = useState<ProjectItf[]>([]);
+  const [lastIndexLoaded, setLastIndexLoaded] = useState<number>(LOADED_STEPS);
 
-  const projects: ProjectItf[] = allProjects
-    .filter((project: Project) => {
-      return filter === tagAll || project.tags.indexOf(filter.value) !== -1;
-    })
-    .sort((project1, project2) =>
-      project1.name.toLowerCase().localeCompare(project2.name.toLowerCase())
-    )
-    .map((project) => {
-      const projectTags = project.tags;
-      return {
-        ...project,
-        tagsRef: allTags.filter((tagItem: Tag) => {
-          return projectTags.includes(tagItem.value);
-        }),
-      };
-    });
+  useEffect(() => {
+    const newProjects = allProjects
+      .filter((project: Project) => {
+        return filter === tagAll || project.tags.indexOf(filter.value) !== -1;
+      })
+      .sort((project1, project2) =>
+        project1.name.toLowerCase().localeCompare(project2.name.toLowerCase())
+      )
+      .slice(0, lastIndexLoaded)
+      .map((project) => {
+        const projectTags = project.tags;
+        return {
+          ...project,
+          tagsRef: allTags.filter((tagItem: Tag) => {
+            return projectTags.includes(tagItem.value);
+          }),
+        };
+      });
+    setProjects(newProjects);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [filter, lastIndexLoaded]);
+
+  const { observe } = useInView({
+    // When the last item comes to the viewport
+    onEnter: ({ unobserve }) => {
+      // Pause observe when loading data
+      unobserve();
+      setLastIndexLoaded(lastIndexLoaded + LOADED_STEPS);
+    },
+  });
+
   return (
     <Flex
       direction="column"
@@ -75,6 +94,9 @@ const Home: NextPage = () => {
           tags={allTags}
           onChange={(newFilter) => {
             setFilter(newFilter);
+            // Reset lazy loading index
+            setLastIndexLoaded(LOADED_STEPS);
+            // Reset flipped cards to none
             setFlippedIndex(-1);
           }}
         />
@@ -90,6 +112,7 @@ const Home: NextPage = () => {
             projects.map((project: ProjectItf, index: number) => {
               return (
                 <Box
+                  ref={index === projects.length - 1 ? observe : null}
                   key={`project-${project.name}`}
                   py={4}
                   px={4}
