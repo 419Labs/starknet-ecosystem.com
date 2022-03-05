@@ -12,7 +12,7 @@ Ecosystem TODO list - Feel free to update
 - [ ] Discord server
 - [ ] Twitter account
 - [ ] Spread to the world
-- [ ] Translations - Check more [here](../blob/main/src/assets/locales/README)
+- [ ] Translations - Check more [here](https://github.com/419Labs/starknet-ecosystem.com/tree/main/src/assets/locales)
 
 ### Completed ✓
 - [x] Launch 
