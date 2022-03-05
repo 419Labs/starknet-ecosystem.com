@@ -14,6 +14,7 @@ import Flippy, { FrontSide, BackSide } from "react-flippy";
 
 import type { ProjectItf } from "../../../data/ecosystem";
 import type { Tag } from "../../../data/tag";
+import { useTranslate } from "../../context/TranslateProvider";
 
 interface CardProjectProps {
   project: ProjectItf;
@@ -21,6 +22,8 @@ interface CardProjectProps {
   onClick: () => void;
 }
 function CardProject({ project, isFlipped, onClick }: CardProjectProps) {
+  const { t } = useTranslate();
+
   const {
     name,
     description,
@@ -120,7 +123,7 @@ function CardProject({ project, isFlipped, onClick }: CardProjectProps) {
                 tags.map((tag: Tag) => {
                   return (
                     <ChakraTag key={`project-${name}-tag-${tag.value}`}>
-                      {tag.label}
+                      {t.tags[tag.value]}
                     </ChakraTag>
                   );
                 })
