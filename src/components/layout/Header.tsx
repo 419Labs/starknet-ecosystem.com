@@ -93,6 +93,20 @@ function Header() {
                     </NextLink>
                   ),
                 },
+                {
+                  href: "",
+                  children: (
+                    <NextLink href="/" passHref locale="it">
+                      <Link
+                        _hover={{ textDecoration: "none" }}
+                        href="/"
+                        w="full"
+                      >
+                        Italiano
+                      </Link>
+                    </NextLink>
+                  ),
+                },
               ]}
               icon={faChevronDown}
               text={locale ? locale.toUpperCase() : " - "}
