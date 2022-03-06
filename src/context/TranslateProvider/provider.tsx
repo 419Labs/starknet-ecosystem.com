@@ -6,6 +6,8 @@ import en from "../../assets/locales/en";
 import fr from "../../assets/locales/fr";
 import tr from "../../assets/locales/tr";
 import it from "../../assets/locales/it";
+import zh_CN from "../../assets/locales/zh_CN";
+import zh_TW from "../../assets/locales/zh_TW";
 
 import { TranslateContext } from "./context";
 import type { TranslateState } from "./model";
@@ -28,6 +30,10 @@ export function TranslateProvider({
         return tr;
       case "it":
         return it;
+      case "zh_CN":
+        return zh_CN;
+      case "zh_TW":
+        return zh_TW;
       default:
         return en;
     }
