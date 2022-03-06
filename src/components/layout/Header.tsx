@@ -107,6 +107,34 @@ function Header() {
                     </NextLink>
                   ),
                 },
+                {
+                  href: "",
+                  children: (
+                    <NextLink href="/" passHref locale="zh_CN">
+                      <Link
+                        _hover={{ textDecoration: "none" }}
+                        href="/"
+                        w="full"
+                      >
+                        简体中文
+                      </Link>
+                    </NextLink>
+                  ),
+                },
+                {
+                  href: "",
+                  children: (
+                    <NextLink href="/" passHref locale="zh_TW">
+                      <Link
+                        _hover={{ textDecoration: "none" }}
+                        href="/"
+                        w="full"
+                      >
+                        繁體中文
+                      </Link>
+                    </NextLink>
+                  ),
+                },
               ]}
               icon={faChevronDown}
               text={locale ? locale.toUpperCase() : " - "}
