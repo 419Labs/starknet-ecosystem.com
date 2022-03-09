@@ -75,7 +75,7 @@ function CardProject({ project, isFlipped, onClick }: CardProjectProps) {
           borderColor: "gray.600",
         }}
         cursor="pointer"
-        p={6}
+        p={5}
         bg="gray.800"
         borderRadius="md"
         direction="column"
@@ -118,7 +118,7 @@ function CardProject({ project, isFlipped, onClick }: CardProjectProps) {
             <Text my={8} fontSize="xl" fontWeight="bold">
               {name}
             </Text>
-            <Flex direction="row" wrap="wrap">
+            <Flex direction={"row"} wrap={"wrap"}>
               {tags && tags.length > 0 ? (
                 tags.map((tag: Tag) => {
                   return (
