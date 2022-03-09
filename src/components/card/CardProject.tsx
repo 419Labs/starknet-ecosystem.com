@@ -118,11 +118,12 @@ function CardProject({ project, isFlipped, onClick }: CardProjectProps) {
             <Text my={8} fontSize="xl" fontWeight="bold">
               {name}
             </Text>
-            <HStack spacing={2}>
+            <Flex w="full"  direction="row" flexWrap={"wrap"}>
               {tags && tags.length > 0 ? (
                 tags.map((tag: Tag) => {
                   return (
-                    <ChakraTag key={`project-${name}-tag-${tag.value}`}>
+                      // Maybe show only 3-4 firsts ? but keep all for sort/filters
+                    <ChakraTag m={0.5} key={`project-${name}-tag-${tag.value}`}>
                       {t.tags[tag.value]}
                     </ChakraTag>
                   );
@@ -130,7 +131,7 @@ function CardProject({ project, isFlipped, onClick }: CardProjectProps) {
               ) : (
                 <ChakraTag key={`project-${name}-tag-none`}>😕</ChakraTag>
               )}
-            </HStack>
+            </Flex>
           </>,
           getIndicationText()
         )}
