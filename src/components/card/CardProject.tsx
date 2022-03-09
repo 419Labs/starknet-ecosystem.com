@@ -118,7 +118,7 @@ function CardProject({ project, isFlipped, onClick }: CardProjectProps) {
             <Text my={8} fontSize="xl" fontWeight="bold">
               {name}
             </Text>
-            <Flex direction={"row"} wrap={"wrap"}>
+            <Flex direction="row" wrap="wrap">
               {tags && tags.length > 0 ? (
                 tags.map((tag: Tag) => {
                   return (
