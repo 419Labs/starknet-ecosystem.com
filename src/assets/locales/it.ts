@@ -1,6 +1,6 @@
 import type { TranslateState } from "../../context/TranslateProvider/model";
 
-const enTranslate: TranslateState = {
+const itTranslate: TranslateState = {
   common: {
     title_main: "La rivoluzione di StarkNet sta venendo alla luce del giorno",
     subtitle_main: "Esplora tutti i progetti realizzati e in esecuzione su StarkNet L2",
@@ -33,4 +33,4 @@ const enTranslate: TranslateState = {
   },
 };
 
-export default enTranslate;
+export default itTranslate;

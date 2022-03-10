@@ -28,7 +28,7 @@ function Header() {
           <Image src="/starknet-logo.png" alt="Starknet Logo" />
         </Box>
         <Text ml={3} fontSize="lg" fontWeight="bold">
-          Starknet ecosystem
+          Starknet Ecosystem
         </Text>
       </Flex>
       <Hide below="sm">
@@ -131,6 +131,34 @@ function Header() {
                         w="full"
                       >
                         繁體中文
+                      </Link>
+                    </NextLink>
+                  ),
+                },
+                {
+                  href: "",
+                  children: (
+                    <NextLink href="/" passHref locale="pl">
+                      <Link
+                        _hover={{ textDecoration: "none" }}
+                        href="/"
+                        w="full"
+                      >
+                        Polski
+                      </Link>
+                    </NextLink>
+                  ),
+                },
+                {
+                  href: "",
+                  children: (
+                    <NextLink href="/" passHref locale="pt">
+                      <Link
+                        _hover={{ textDecoration: "none" }}
+                        href="/"
+                        w="full"
+                      >
+                        Português
                       </Link>
                     </NextLink>
                   ),
