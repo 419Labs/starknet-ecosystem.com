@@ -352,7 +352,7 @@ export const allProjects: Array<Project> = [
     short_name: "ZKX",
     description:
       "ZKX is a permissionless protocol for derivatives built on Starknet, with a decentralized order book and a unique way to offer complex financial instruments as swaps.",
-    tags: ["dao", "defi", "governance", "infrastructure", "tools"],
+    tags: ["defi", "dao"],
     logo: "ZKX.png",
     website: "http://zkx.fi/",
     github: "https://github.com/zkxteam",
