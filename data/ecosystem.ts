@@ -22,6 +22,21 @@ export interface ProjectItf extends Project {
 
 export const allProjects: Array<Project> = [
   {
+    name: "Stark Defi",
+    short_name: "StarkDefi",
+    description: "StarkDefi is a permissionless and trustless hub of comprehensive Defi solutions built to leverage the Decentralized ZK-Rollup on StarkNet's L2 Network over Ethereum. Starting with a highly intuitive Automated Market Maker (AMM), StarkDefi will strategically release other planned defi solutions to cement its position as the ultimate one-stop platform for all defi solutions on StarkNet.",
+    tags: ["starkex", "defi"],
+    logo: "starkdefi.png",
+    website: "https://starkdefi.com/",
+    github: "https://github.com/Starkdefi",
+    twitter: "https://twitter.com/StarkDefi",
+    medium: "https://starkdefi.medium.com/",
+    discord: "",
+    telegram: "https://t.me/starkdefi_ann",
+    isLive: false,
+    isTestnetLive: false,
+  },
+  {
     name: "DeversiFi",
     short_name: "DeversiFi",
     description: "Our decentralised exchange is the easiest way to access DeFi opportunities on Ethereum: invest, trade, and send tokens without paying gas fees. What’s not to love?",
