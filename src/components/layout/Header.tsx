@@ -8,9 +8,14 @@ import NextLink from "next/link";
 import { useTranslate } from "../../context/TranslateProvider";
 
 import MenuButton from "./MenuButton";
+import {useState} from "react";
+import Drawer from "./Drawer";
+import {faBars} from "@fortawesome/pro-regular-svg-icons";
+import Logo from "./Logo";
 
 function Header() {
   const { locale, t } = useTranslate();
+  const [isDrawerOpen, setDrawerOpen] = useState(false);
 
   const githubLink = "https://github.com/419Labs/starknet-ecosystem.com";
   const telegramLink = "https://t.me/starknet_ecosystem";
@@ -23,15 +28,8 @@ function Header() {
       align="center"
       px={[4, 0]}
     >
-      <Flex direction="row" align="center" justify="flex-start">
-        <Box boxSize="36px">
-          <Image src="/starknet-logo.png" alt="Starknet Logo" />
-        </Box>
-        <Text ml={3} fontSize="lg" fontWeight="bold">
-          Starknet ecosystem
-        </Text>
-      </Flex>
-      <Hide below="sm">
+      <Logo/>
+      <Hide below="md">
         <Flex direction="row">
           <Link
             _hover={{ textDecoration: "none" }}
@@ -142,14 +140,12 @@ function Header() {
           </Box>
         </Flex>
       </Hide>
-      <Hide above="sm">
+      <Hide above="md">
         <Flex justify="flex-end">
-          <Link isExternal href={githubLink}>
-            <FontAwesomeIcon fontSize="24px" icon={faGithub} />
-          </Link>
-          <Link ml={4} isExternal href={telegramLink}>
-            <FontAwesomeIcon fontSize="24px" icon={faTelegram} />
-          </Link>
+            <Button onClick={() => setDrawerOpen(true)}>
+                <FontAwesomeIcon fontSize="24px" icon={faBars} />
+            </Button>
+            <Drawer links={[{href: githubLink, label: t.common.apply}, {href: telegramLink, label: t.common.community}]} isOpen={isDrawerOpen} onClose={() => setDrawerOpen(false)}/>
         </Flex>
       </Hide>
     </Flex>
