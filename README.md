@@ -12,6 +12,12 @@ Every contribution is welcome! Do you want to help us manage this repo and relat
 
 👉 Feel free to join our dedicated [Telegram](https://t.me/starknet_ecosystem) channel.
 
+### Translations
+
+Our audience is GLOBAL.
+
+Help us to have a maximum reach with [translations](https://github.com/419Labs/starknet-ecosystem.com/tree/main/src/assets/locales)
+
 ### Add a new project
 
 To add a new project you have to:
@@ -26,6 +32,10 @@ As soon as your PR is merged an automatic deployment will be started.
 
 to update your project you have to do the same thing than for adding. Edit the `data/ecosystem.ts` file and
 create a dedicated Pull Request following this title: "🎨 Updating AwesomeProjectName"
+
+### Others
+
+There is always a way to help our initiative. Please feel free to have imagination or look at our [todo-list](https://github.com/419Labs/starknet-ecosystem.com/blob/main/TODO.md).
 
 ### Community-driven
 

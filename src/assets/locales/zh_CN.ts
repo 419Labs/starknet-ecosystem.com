@@ -1,6 +1,6 @@
 import type { TranslateState } from "../../context/TranslateProvider/model";
 
-const enTranslate: TranslateState = {
+const zhCNTranslation: TranslateState = {
   common: {
     title_main: "StarkNet 革命即将到来",
     subtitle_main: "探索所有在 StarkNet L2 上建立和运行的项目",
@@ -33,4 +33,4 @@ const enTranslate: TranslateState = {
   },
 };
 
-export default enTranslate;
+export default zhCNTranslation;

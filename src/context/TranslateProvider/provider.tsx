@@ -4,8 +4,10 @@ import { useEffect, useState } from "react";
 
 import en from "../../assets/locales/en";
 import fr from "../../assets/locales/fr";
-import tr from "../../assets/locales/tr";
 import it from "../../assets/locales/it";
+import pl from "../../assets/locales/pl";
+import pt from "../../assets/locales/pt";
+import tr from "../../assets/locales/tr";
 import zh_CN from "../../assets/locales/zh_CN";
 import zh_TW from "../../assets/locales/zh_TW";
 
@@ -34,6 +36,10 @@ export function TranslateProvider({
         return zh_CN;
       case "zh_TW":
         return zh_TW;
+      case "pl":
+        return pl;
+      case "pt":
+        return pt;
       default:
         return en;
     }

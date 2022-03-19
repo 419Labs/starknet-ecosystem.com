@@ -133,6 +133,34 @@ function Header() {
                     </NextLink>
                   ),
                 },
+                {
+                  href: "",
+                  children: (
+                    <NextLink href="/" passHref locale="pl">
+                      <Link
+                        _hover={{ textDecoration: "none" }}
+                        href="/"
+                        w="full"
+                      >
+                        Polski
+                      </Link>
+                    </NextLink>
+                  ),
+                },
+                {
+                  href: "",
+                  children: (
+                    <NextLink href="/" passHref locale="pt">
+                      <Link
+                        _hover={{ textDecoration: "none" }}
+                        href="/"
+                        w="full"
+                      >
+                        Português
+                      </Link>
+                    </NextLink>
+                  ),
+                },
               ]}
               icon={faChevronDown}
               text={locale ? locale.toUpperCase() : " - "}

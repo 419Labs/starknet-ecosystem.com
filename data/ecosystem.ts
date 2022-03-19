@@ -192,6 +192,22 @@ export const allProjects: Array<Project> = [
     isTestnetLive: true,
   },
   {
+    name: "StarkGuild",
+    short_name: "StarkGuild",
+    description:
+      "StarkGuild provides you with the best toolbox to build the perfect gaming guild on Starknet. Create your team and manage your assets with your own DAO. \n",
+    tags: ["dao", "gamefi", "nft", "tools", "governance"],
+    logo: "",
+    website: "",
+    github: "https://github.com/StarkGuild/",
+    twitter: "",
+    medium: "",
+    discord: "",
+    telegram: "",
+    isLive: false,
+    isTestnetLive: true,
+  },
+  {
     name: "Maker",
     short_name: "Maker",
     description: "Import Maker protocol",
@@ -352,7 +368,7 @@ export const allProjects: Array<Project> = [
     short_name: "ZKX",
     description:
       "ZKX is a permissionless protocol for derivatives built on Starknet, with a decentralized order book and a unique way to offer complex financial instruments as swaps.",
-    tags: ["dao", "defi", "governance", "infrastructure", "tools"],
+    tags: ["defi", "dao"],
     logo: "ZKX.png",
     website: "http://zkx.fi/",
     github: "https://github.com/zkxteam",
