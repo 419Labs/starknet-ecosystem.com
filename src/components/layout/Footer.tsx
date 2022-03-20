@@ -13,6 +13,7 @@ function Footer() {
       justify="space-between"
       align="center"
       px={[4, 0]}
+      pb={[12, 8]}
     >
       <HStack>
         <Text color="whiteAlpha.600">{t.common.made_with}</Text>
