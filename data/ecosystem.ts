@@ -910,4 +910,21 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: true,
   },
+  {
+    name: "Venus investment protocol",
+    short_name: "vip",
+    description:
+      "vip is an automatic investment tool of StarkNet ecosystem, providing decentralized automatic swap token plan for most non professional financial users, .ie. you want to buy eth token via usdt periodically， you can schedule a plan for it then unattended execution!",
+    tags: ["defi"],
+    logo: "vip.png",
+    website: "http://www.venus.town/",
+    github: "https://github.com/VenusOrg",
+    twitter: "https://twitter.com/ProtocolVenus",
+    medium: "",
+    discord:
+      "https://discord.com/channels/892753619424796724/929023725293174855",
+    telegram: "",
+    isLive: false,
+    isTestnetLive: false,
+  },
 ];
