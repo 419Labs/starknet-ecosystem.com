@@ -141,7 +141,7 @@ export const allProjects: Array<Project> = [
     discord: "https://discord.gg/Bhfa3B2Gnq",
     telegram: "https://t.me/alpharoad_fi",
     isLive: false,
-    isTestnetLive: false,
+    isTestnetLive: true,
   },
   {
     name: "Banxa",
