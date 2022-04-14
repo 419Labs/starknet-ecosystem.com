@@ -137,6 +137,11 @@ function Header() {
           >
             <Button>{t.common.community}</Button>
           </Link>
+          <Box ml={2}>
+            <NextLink href={`/${locale}/jobs`}>
+              <Button>{t.common.job || "Job"}</Button>
+            </NextLink>
+          </Box>
           <Box ml={2}>{renderLanguagesOptions()}</Box>
         </Flex>
       </Hide>
@@ -149,6 +154,7 @@ function Header() {
             links={[
               { href: githubLink, label: t.common.apply },
               { href: telegramLink, label: t.common.community },
+              { href: `/${locale}/jobs`, label: t.common.job || "Job" },
             ]}
             headerAction={renderLanguagesOptions()}
             isOpen={isDrawerOpen}

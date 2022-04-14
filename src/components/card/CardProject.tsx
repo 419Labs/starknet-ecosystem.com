@@ -1,20 +1,12 @@
-import { Box, Flex, HStack, Link, Text } from "@chakra-ui/layout";
+import { Box, Flex, Text } from "@chakra-ui/layout";
 import { Image, Tag as ChakraTag } from "@chakra-ui/react";
-import {
-  faDiscord,
-  faGithub,
-  faMedium,
-  faTelegram,
-  faTwitter,
-} from "@fortawesome/free-brands-svg-icons";
-import { faGlobe } from "@fortawesome/pro-regular-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import type { ReactElement } from "react";
-import Flippy, { FrontSide, BackSide } from "react-flippy";
+import Flippy, { BackSide, FrontSide } from "react-flippy";
 
 import type { ProjectItf } from "../../../data/ecosystem";
 import type { Tag } from "../../../data/tag";
 import { useTranslate } from "../../context/TranslateProvider";
+import NetworkLogos from "../layout/NetworkLogos";
 
 interface CardProjectProps {
   project: ProjectItf;
@@ -29,12 +21,6 @@ function CardProject({ project, isFlipped, onClick }: CardProjectProps) {
     description,
     tagsRef: tags,
     logo,
-    discord,
-    github,
-    telegram,
-    twitter,
-    medium,
-    website,
     isLive,
     isTestnetLive,
   } = project;
@@ -155,43 +141,7 @@ function CardProject({ project, isFlipped, onClick }: CardProjectProps) {
             >
               {description}
             </Text>
-            <HStack
-              align="flex-start"
-              spacing={4}
-              fontSize="20px"
-              onClick={(e) => e.stopPropagation()}
-            >
-              {website && (
-                <Link isExternal href={website}>
-                  <FontAwesomeIcon icon={faGlobe} />
-                </Link>
-              )}
-              {twitter && (
-                <Link isExternal href={twitter}>
-                  <FontAwesomeIcon icon={faTwitter} />
-                </Link>
-              )}
-              {telegram && (
-                <Link isExternal href={telegram}>
-                  <FontAwesomeIcon icon={faTelegram} />
-                </Link>
-              )}
-              {discord && (
-                <Link isExternal href={discord}>
-                  <FontAwesomeIcon icon={faDiscord} />
-                </Link>
-              )}
-              {medium && (
-                <Link isExternal href={medium}>
-                  <FontAwesomeIcon icon={faMedium} />
-                </Link>
-              )}
-              {github && (
-                <Link isExternal href={github}>
-                  <FontAwesomeIcon icon={faGithub} />
-                </Link>
-              )}
-            </HStack>
+            <NetworkLogos network={project.network} />
           </Flex>
         )}
       </BackSide>

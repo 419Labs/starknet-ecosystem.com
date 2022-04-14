@@ -13,6 +13,10 @@ const enTranslate: TranslateState = {
     alpha_road_team: "Alpha Road Team",
     apply: "Apply",
     community: "Community",
+
+    job_title_main: "StarkNet Jobs",
+    job: "Job",
+    no_job: "😕 No job",
   },
   tags: {
     all: "All",

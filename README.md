@@ -33,6 +33,17 @@ As soon as your PR is merged an automatic deployment will be started.
 to update your project you have to do the same thing than for adding. Edit the `data/ecosystem.ts` file and
 create a dedicated Pull Request following this title: "🎨 Updating AwesomeProjectName"
 
+### Add a new job
+
+To add a new job you have to:
+
+- Create your company on `data/company.ts` if it does not already exists.
+- Add your compay logo into `public/logos/`
+- Create your job on `data/job.ts`. The description is a string containing html.
+- Create a Pull Request following the title: "✨ Introducing <CompanyName> <JobName>"
+
+As soon as your PR is merged an automatic deployment will be started.
+
 ### Others
 
 There is always a way to help our initiative. Please feel free to have imagination or look at our [todo-list](https://github.com/419Labs/starknet-ecosystem.com/blob/main/TODO.md).

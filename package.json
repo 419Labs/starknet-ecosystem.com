@@ -16,11 +16,14 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "jest --watch",
+    "test:ci": "jest --ci"
   },
   "dependencies": {
     "@chakra-ui/color-mode": "^1.4.5",
     "@chakra-ui/layout": "^1.7.6",
+    "@chakra-ui/input": "^1.4.6",
     "@chakra-ui/modal": "^1.10.10",
     "@chakra-ui/react": "^1.8.5",
     "@emotion/cache": "^11.7.1",
@@ -41,6 +44,8 @@
     "@typescript-eslint/eslint-plugin": "^5.12.1",
     "@typescript-eslint/parser": "^5.12.1",
     "add": "^2.0.6",
+    "dayjs": "1.11.0",
+    "dompurify": "2.3.6",
     "eslint-config-sznm": "^0.2.1",
     "framer-motion": "^6.2.8",
     "next": "12.1.0",
@@ -54,10 +59,16 @@
     "yarn": "^1.22.17"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "5.16.4",
+    "@testing-library/react": "12.1.4",
+    "@testing-library/user-event": "13.5.0",
+    "@types/dompurify": "^2.3.3",
     "@types/node": "17.0.21",
     "@types/react": "17.0.39",
+    "babel-jest": "27.5.1",
     "eslint": "7.32.0",
     "eslint-config-next": "12.0.7",
+    "jest": "27.5.1",
     "typescript": "4.5.5"
   }
 }
