@@ -137,6 +137,9 @@ function Header() {
           >
             <Button>{t.common.community}</Button>
           </Link>
+          <NextLink href={`/${locale}/learn`}>
+            <Button>{t.common.learn || "Learn"}</Button>
+          </NextLink>
           <Box ml={2}>{renderLanguagesOptions()}</Box>
         </Flex>
       </Hide>
