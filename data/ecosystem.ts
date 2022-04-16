@@ -207,6 +207,22 @@ export const allProjects: Array<Project> = [
     isTestnetLive: true,
   },
   {
+    name: "Magnety",
+    short_name: "Magnety",
+    description:
+      "Magnety is an asset management protocol allowing anyone to build, scale and monetize investment strategies using DeFi protocols included in the platform",
+    tags: ["defi"],
+    logo: "magnety.png",
+    website: "https://magnety.finance",
+    github: "",
+    twitter: "https://twitter.com/magnetyfi",
+    medium: "https://medium.com/@magnety.finance",
+    discord: "http://discord.gg/magnety",
+    telegram: "",
+    isLive: false,
+    isTestnetLive: false,
+  },
+  {
     name: "StarkGuild",
     short_name: "StarkGuild",
     description:
