@@ -37,6 +37,10 @@ create a dedicated Pull Request following this title: "🎨 Updating AwesomeProj
 
 There is always a way to help our initiative. Please feel free to have imagination or look at our [todo-list](https://github.com/419Labs/starknet-ecosystem.com/blob/main/TODO.md).
 
+### Design
+
+You can find our Figma [here](https://www.figma.com/file/yfHUanUHr46MdEmCcQ29fa/Starknet-ecosystem-V1?node-id=0%3A1), feel free to ask for edit permission([0xlenny](https://twitter.com/0xlenny_eth), [Mentor](https://twitter.com/MentorNotPseudo))
+
 ### Community-driven
 
 We have created a dedicated Telegram channel to manage quickly Pull Request and the starknet-ecosystem.com project.
