@@ -8,9 +8,13 @@ Ecosystem TODO list - Feel free to update
 
 ### For developers
 - [ ] Add filter on dashboard permitting to filter by project status: all | live (mainnet) | testnet
+- [ ] Jobs board
+- [ ] Education board
+- [ ] Analytics board
 
 ### For UI developers
 - [ ] Responsive dropdown menu of project categories
+- [ ] Refactor correctly the [Figma](https://www.figma.com/file/yfHUanUHr46MdEmCcQ29fa/Starknet-ecosystem-V1?node-id=0%3A1)
 
 ### Completed ✓
 - [x] Launch 
