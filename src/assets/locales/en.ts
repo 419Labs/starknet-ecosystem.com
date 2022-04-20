@@ -13,6 +13,9 @@ const enTranslate: TranslateState = {
     alpha_road_team: "Alpha Road Team",
     apply: "Apply",
     community: "Community",
+
+    education_title: "Getting Started",
+    education: "Learn",
   },
   tags: {
     all: "All",
