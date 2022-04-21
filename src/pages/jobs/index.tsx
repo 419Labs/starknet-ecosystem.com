@@ -1,4 +1,4 @@
-import { Box, Text } from "@chakra-ui/layout";
+import { Box, Flex, Text } from "@chakra-ui/layout";
 import type { NextPage } from "next";
 import { useEffect, useState } from "react";
 import useInView from "react-cool-inview";
@@ -44,7 +44,7 @@ const JobsPage: NextPage = () => {
   });
 
   return (
-    <Box w="full">
+    <Flex direction="column" w="full" h="full">
       <Text
         textAlign="center"
         lineHeight={1.2}
@@ -53,13 +53,16 @@ const JobsPage: NextPage = () => {
       >
         {t.common.job_title_main || "StarkNet Jobs"}
       </Text>
-      <JobFilters filters={filters} tags={tags} onChange={setFilters} />
+      {/* <JobFilters filters={filters} tags={tags} onChange={setFilters} /> */}
       {jobs.length === 0 ? (
         <Text textAlign="center">{t.common.no_job || "No job found"}</Text>
       ) : (
-        <JobTable jobs={jobs} companies={companies} observe={observe} />
+        // Fill free place on screen & hide overflow
+        <Flex flex={1} overflow="hidden">
+          <JobTable jobs={jobs} companies={companies} observe={observe} />
+        </Flex>
       )}
-    </Box>
+    </Flex>
   );
 };
 

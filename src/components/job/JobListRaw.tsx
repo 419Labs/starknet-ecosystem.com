@@ -1,14 +1,5 @@
-import { Flex, Text } from "@chakra-ui/layout";
-import {
-  Button,
-  Image,
-  Link,
-  Show,
-  Td,
-  Tr,
-  useMediaQuery,
-  useQuery,
-} from "@chakra-ui/react";
+import { Flex, HStack, Text } from "@chakra-ui/layout";
+import { Image } from "@chakra-ui/react";
 import dayjs from "dayjs";
 import NextLink from "next/link";
 import type { FC } from "react";
@@ -21,8 +12,6 @@ import StyledTag from "../layout/StyledTag";
 
 import JobCreatedFrom from "./JobCreatedFrom";
 
-const breakpoint = "md";
-
 interface Props {
   company: Company | undefined;
   job: Job;
@@ -30,16 +19,45 @@ interface Props {
   observe?: (element?: HTMLElement | null | undefined) => void;
 }
 
-const JobTableRaw: FC<Props> = ({ company, job, last, observe }) => {
+const JobListRaw: FC<Props> = ({ company, job, last, observe }) => {
   const { locale } = useTranslate();
-  const query = useQuery({ above: breakpoint });
-  const [showAll] = useMediaQuery(query);
-
-  if (!company) return null;
+  if (!company || !job) return null;
 
   return (
-    <NextLink href={`/${locale}/jobs/${getJobKey(job, company)}`}>
-      <Tr
+    <Flex
+      w="full"
+      h="88px"
+      direction="row"
+      cursor="pointer"
+      borderBottom="1px solid"
+      borderColor="gray.600"
+      transition="background .2s linear"
+      _hover={{
+        backgroundColor: "gray.600",
+      }}
+    >
+      <NextLink href={`/${locale}/jobs/${getJobKey(job, company)}`}>
+        <Flex direction="row" align="center">
+          <Image
+            height="56px"
+            src={`/logos/${company.logo}`}
+            alt={`${company.name} logo`}
+            mr={1}
+          />
+          <Flex direction="column" justify="space-between">
+            <Text fontSize="md" fontWeight="bold">
+              {job.title}
+            </Text>
+            <Text fontSize="xs">{company.name}</Text>
+            <HStack mt={2}>
+              {job.tags.map((tag) => (
+                <Text fontSize="xs">#{tag}</Text>
+              ))}
+            </HStack>
+          </Flex>
+        </Flex>
+
+        {/* <Tr
         _hover={{ backgroundColor: "gray.900" }}
         cursor="pointer"
         ref={observe && last ? observe : null}
@@ -88,9 +106,10 @@ const JobTableRaw: FC<Props> = ({ company, job, last, observe }) => {
             </Link>
           </Td>
         </Show>
-      </Tr>
-    </NextLink>
+      </Tr> */}
+      </NextLink>
+    </Flex>
   );
 };
 
-export default JobTableRaw;
+export default JobListRaw;
