@@ -1,4 +1,5 @@
 export interface Job {
+  key: string;
   title: string;
   companyId: number;
   compensation?: {

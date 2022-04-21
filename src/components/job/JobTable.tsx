@@ -1,6 +1,8 @@
 import { Box, Flex } from "@chakra-ui/layout";
 import { Tag as ChakraTag } from "@chakra-ui/tag/dist/declarations/src/tag";
+import { useRouter } from "next/router";
 import type { FC, ReactElement } from "react";
+import { useEffect, useState } from "react";
 
 import type { Company } from "../../models/company";
 import type { Job } from "../../models/job";
@@ -15,6 +17,24 @@ interface Props {
 }
 
 const JobTable: FC<Props> = ({ companies, jobs, observe }) => {
+  const [currentJob, setCurrentJob] = useState<Job | undefined>(undefined);
+
+  const router = useRouter();
+  const { query } = router;
+
+  useEffect(() => {
+    const { key } = query;
+    console.log(jobs);
+    if (key) {
+      const idx = jobs.findIndex((job) => job.key === key);
+      if (idx > -1) {
+        setCurrentJob(jobs[idx]);
+        return;
+      }
+    }
+    setCurrentJob(undefined);
+  }, [query]);
+
   const renderBaseCard = (content: ReactElement) => {
     return (
       <Flex

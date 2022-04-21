@@ -58,7 +58,9 @@ const JobListRaw: FC<Props> = ({ company, job, last, observe }) => {
             <Text fontSize="xs">{company.name}</Text>
             <HStack mt={2}>
               {job.tags.map((tag) => (
-                <Text fontSize="xs">#{tag}</Text>
+                <Text key={`job-${job.companyId}-tag-${tag}`} fontSize="xs">
+                  #{tag}
+                </Text>
               ))}
             </HStack>
           </Flex>

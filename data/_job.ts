@@ -6,6 +6,7 @@ import type { Job } from "../src/models/job";
 
 const allJobs: Array<Job> = [
   {
+    key: "1",
     title: "Senior / backend - developer",
     companyId: 1,
     compensation: {
@@ -30,6 +31,7 @@ const allJobs: Array<Job> = [
     createdOn: new Date("2022-04-11"),
   },
   {
+    key: "2",
     title: "Senior backend developer Hong Kong",
     companyId: 1,
     compensation: {
@@ -53,6 +55,7 @@ const allJobs: Array<Job> = [
     createdOn: new Date("2022-04-11"),
   },
   {
+    key: "3",
     title: "Senior backend developer 2",
     companyId: 1,
     tags: ["DeFi", "NFT", "Starknet", "dev"],
@@ -72,6 +75,7 @@ const allJobs: Array<Job> = [
     createdOn: new Date("2022-04-11"),
   },
   {
+    key: "4",
     title: "Senior backend developer 3",
     companyId: 1,
     compensation: {
@@ -95,6 +99,7 @@ const allJobs: Array<Job> = [
     createdOn: new Date("2022-04-11"),
   },
   {
+    key: "5",
     title: "Web3 Blockchain / Full Stack developer",
     companyId: 1,
     compensation: {
@@ -118,6 +123,7 @@ const allJobs: Array<Job> = [
     createdOn: new Date("2022-04-09"),
   },
   {
+    key: "6",
     title: "Senior backend developer 4",
     companyId: 1,
     compensation: {
@@ -141,6 +147,7 @@ const allJobs: Array<Job> = [
     createdOn: new Date("2022-04-05"),
   },
   {
+    key: "7",
     title: "Senior backend developer 5",
     companyId: 1,
     compensation: {

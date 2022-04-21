@@ -2,6 +2,7 @@ import type { Company } from "./company";
 import type { Job } from "./job";
 
 export const aJob = (): Job => ({
+  key: "1",
   title: "Senior / backend - developer",
   companyId: 1,
   compensation: {
