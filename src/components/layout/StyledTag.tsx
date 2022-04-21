@@ -7,7 +7,7 @@ interface Props {
   value: string;
   selected?: boolean;
   onClick?: () => void;
-  size?: "sm" | "lg";
+  size?: "sm" | "md" | "lg";
 }
 
 const StyledTag: FC<Props> = ({ value, selected, size = "lg", onClick }) => {

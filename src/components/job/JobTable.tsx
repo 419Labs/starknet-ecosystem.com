@@ -1,5 +1,5 @@
-import { Box, Flex } from "@chakra-ui/layout";
-import { Tag as ChakraTag } from "@chakra-ui/tag/dist/declarations/src/tag";
+import { Box, Flex, HStack, Stack, Text } from "@chakra-ui/layout";
+import { Tag as ChakraTag } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import type { FC, ReactElement } from "react";
 import { useEffect, useState } from "react";
@@ -7,6 +7,9 @@ import { useEffect, useState } from "react";
 import type { Company } from "../../models/company";
 import type { Job } from "../../models/job";
 import { findCompanyById } from "../../services/company.service";
+import { findJobFromJobKey } from "../../services/job.service";
+import NetworkLogos from "../layout/NetworkLogos";
+import StyledTag from "../layout/StyledTag";
 
 import JobListRaw from "./JobListRaw";
 
@@ -18,22 +21,23 @@ interface Props {
 
 const JobTable: FC<Props> = ({ companies, jobs, observe }) => {
   const [currentJob, setCurrentJob] = useState<Job | undefined>(undefined);
+  const [currentCompany, setCurrentCompany] = useState<Company | undefined>(
+    undefined
+  );
 
   const router = useRouter();
   const { query } = router;
 
   useEffect(() => {
     const { key } = query;
-    console.log(jobs);
-    if (key) {
-      const idx = jobs.findIndex((job) => job.key === key);
-      if (idx > -1) {
-        setCurrentJob(jobs[idx]);
-        return;
-      }
+    if (key && typeof key === "string") {
+      const newJob = findJobFromJobKey(key, jobs, companies);
+      setCurrentJob(newJob);
+      setCurrentCompany(
+        newJob ? findCompanyById(companies, newJob.companyId) : undefined
+      );
     }
-    setCurrentJob(undefined);
-  }, [query]);
+  }, [companies, jobs, query]);
 
   const renderBaseCard = (content: ReactElement) => {
     return (
@@ -52,6 +56,7 @@ const JobTable: FC<Props> = ({ companies, jobs, observe }) => {
       </Flex>
     );
   };
+
   return (
     <Flex w="full" direction="row">
       <Flex minW="300px" h="full" flex={2} pr={2}>
@@ -71,7 +76,56 @@ const JobTable: FC<Props> = ({ companies, jobs, observe }) => {
         )}
       </Flex>
       <Flex h="full" flex={10} pl={2}>
-        {renderBaseCard(<span>coucou</span>)}
+        {renderBaseCard(
+          currentJob && currentCompany ? (
+            <Flex p={4} direction="column" maxH="0px">
+              <Flex direction="row" align="center">
+                <Text fontSize="2xl" fontWeight="black">
+                  {currentJob.title}
+                </Text>
+                <Box h="80%" w="1px" bg="gray.600" mx={4} />
+                <Text fontSize="md" fontWeight="normal">
+                  {currentCompany?.name}
+                </Text>
+              </Flex>
+              <Text fontSize="md" fontWeight="normal">
+                {currentJob.compensation?.currency}
+                {currentJob.compensation?.from} -{" "}
+                {currentJob.compensation?.currency}
+                {currentJob.compensation?.to}
+              </Text>
+              <NetworkLogos network={currentCompany.network} />
+              <Stack
+                direction="row"
+                spacing={2}
+                wrap="wrap"
+                shouldWrapChildren
+                justify="flex-start"
+              >
+                {currentJob.remote && (
+                  <StyledTag key="remote" selected value="Remote" size="md" />
+                )}
+                {currentJob.tags.map((tag) => (
+                  <StyledTag key={tag} value={tag} size="md" />
+                ))}
+              </Stack>
+              <Text fontSize="xl" fontWeight="extrabold">
+                Description
+              </Text>
+              <Text fontSize="md" fontWeight="normal">
+                {currentJob.description}
+              </Text>
+              <Text fontSize="xl" fontWeight="extrabold">
+                Requirements
+              </Text>
+              <Text fontSize="md" fontWeight="normal">
+                {currentJob.description}
+              </Text>
+            </Flex>
+          ) : (
+            <span>No job selected</span>
+          )
+        )}
       </Flex>
     </Flex>
   );

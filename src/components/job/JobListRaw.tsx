@@ -36,7 +36,7 @@ const JobListRaw: FC<Props> = ({ company, job, last, observe }) => {
         backgroundColor: "gray.600",
       }}
     >
-      <NextLink href={`/${locale}/jobs/${getJobKey(job, company)}`}>
+      <NextLink href={`/${locale}/jobs/?key=${getJobKey(job, company)}`}>
         <Flex direction="row" align="center">
           <Image
             height="56px"
