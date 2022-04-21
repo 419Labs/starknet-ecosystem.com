@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import useInView from "react-cool-inview";
 
 import allCompanies from "../../../data/company";
-import allJobs from "../../../data/job";
+import allJobs from "../../../data/_job";
 import JobFilters from "../../components/job/JobFilters";
 import JobTable from "../../components/job/JobTable";
 import { useTranslate } from "../../context/TranslateProvider";

@@ -45,7 +45,14 @@ const JobListRaw: FC<Props> = ({ company, job, last, observe }) => {
             mr={1}
           />
           <Flex direction="column" justify="space-between">
-            <Text fontSize="md" fontWeight="bold">
+            <Text
+              fontSize="md"
+              fontWeight="bold"
+              whiteSpace="nowrap"
+              overflow="hidden"
+              textOverflow="ellipsis"
+              width="200px"
+            >
               {job.title}
             </Text>
             <Text fontSize="xs">{company.name}</Text>
