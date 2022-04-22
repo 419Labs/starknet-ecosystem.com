@@ -22,7 +22,27 @@ const fetchNpmDownloads = (name: string): Promise<NpmDownloads> =>
     }
   );
 
+const fetchTransactionCount = (testnet?: boolean): Promise<number> =>
+  fetch(`https://${testnet ? "goerli." : ""}voyager.online/api/txns?ps=10&p=1`)
+    .then((response: Response) => {
+      if (!response.ok) throw new Error(response.statusText);
+      return response.json();
+    })
+    .then((response) => response.lastPage * 10);
+
+const fetchContractCount = (testnet?: boolean): Promise<number> =>
+  fetch(
+    `https://${testnet ? "goerli." : ""}voyager.online/api/contracts?ps=10&p=1`
+  )
+    .then((response: Response) => {
+      if (!response.ok) throw new Error(response.statusText);
+      return response.json();
+    })
+    .then((response) => response.lastPage * 10);
+
 export const MetricsApi = {
   fetchGithubRepo,
   fetchNpmDownloads,
+  fetchTransactionCount,
+  fetchContractCount,
 };

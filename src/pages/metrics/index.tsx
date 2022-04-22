@@ -2,6 +2,7 @@ import { Box, SimpleGrid, Text } from "@chakra-ui/layout";
 import type { GetServerSideProps } from "next";
 import type { FC } from "react";
 
+import CountPaper from "../../components/metrics/count-paper";
 import GithubReposPaper from "../../components/metrics/github-repos-paper";
 import NpmDownloadsPaper from "../../components/metrics/npm-downloads-paper";
 import type { GithubRepo } from "../../models/github-repo";
@@ -11,10 +12,39 @@ import { MetricsApi } from "../../services/metrics-api.service";
 interface Props {
   npmDownloads: NpmDownloads;
   githubRepos: GithubRepo[];
+  mainnetTransactionCount: number;
+  mainnetContractCount: number;
+  testnetTransactionCount: number;
+  testnetContractCount: number;
 }
 
-const MetricsPage: FC<Props> = ({ githubRepos, npmDownloads }) => (
+const MetricsPage: FC<Props> = ({
+  githubRepos,
+  npmDownloads,
+  mainnetTransactionCount,
+  mainnetContractCount,
+  testnetTransactionCount,
+  testnetContractCount,
+}) => (
   <Box w="full">
+    <SimpleGrid columns={{ sm: 1, md: 2, lg: 4 }} spacing={4} mb={8}>
+      <CountPaper
+        count={mainnetTransactionCount}
+        label="transactions (ETH Mainnet)"
+      />
+      <CountPaper
+        count={mainnetContractCount}
+        label="contracts (ETH Mainnet)"
+      />
+      <CountPaper
+        count={testnetTransactionCount}
+        label="transactions (Goerli Testnet)"
+      />
+      <CountPaper
+        count={testnetContractCount}
+        label="contracts (Goerli Testnet)"
+      />
+    </SimpleGrid>
     <Text as="h2" mb={4} fontSize={["25px"]} fontWeight="bold" w="full">
       Developer tools
     </Text>
@@ -45,10 +75,18 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
     )
   );
   const npmDownloads = await MetricsApi.fetchNpmDownloads(npmRepoToFollow);
+  const mainnetTransactionCount = await MetricsApi.fetchTransactionCount();
+  const mainnetContractCount = await MetricsApi.fetchContractCount();
+  const testnetTransactionCount = await MetricsApi.fetchTransactionCount(true);
+  const testnetContractCount = await MetricsApi.fetchContractCount(true);
   return {
     props: {
       githubRepos,
       npmDownloads,
+      mainnetTransactionCount,
+      mainnetContractCount,
+      testnetTransactionCount,
+      testnetContractCount,
     },
   };
 };
