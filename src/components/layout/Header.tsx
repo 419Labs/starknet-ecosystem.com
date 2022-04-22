@@ -137,6 +137,9 @@ function Header() {
           >
             <Button>{t.common.community}</Button>
           </Link>
+          <NextLink href={`/${locale}/metrics`}>
+            <Button ml={2}>{t.common.metrics || "Metrics"}</Button>
+          </NextLink>
           <Box ml={2}>{renderLanguagesOptions()}</Box>
         </Flex>
       </Hide>
@@ -149,6 +152,10 @@ function Header() {
             links={[
               { href: githubLink, label: t.common.apply },
               { href: telegramLink, label: t.common.community },
+              {
+                href: `/${locale}/metrics`,
+                label: t.common.metrics || "Metrics",
+              },
             ]}
             headerAction={renderLanguagesOptions()}
             isOpen={isDrawerOpen}

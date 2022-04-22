@@ -13,6 +13,10 @@ const enTranslate: TranslateState = {
     alpha_road_team: "Alpha Road Team",
     apply: "Apply",
     community: "Community",
+
+    metrics: "Metrics",
+    github_repo: "Tools & Libraries",
+    npm_last_downloads: "downloads last 7 days",
   },
   tags: {
     all: "All",
