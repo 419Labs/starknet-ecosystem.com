@@ -1,8 +1,21 @@
 import { Input } from "@chakra-ui/input";
-import { Box, Flex, Stack, Text } from "@chakra-ui/layout";
-import { Hide } from "@chakra-ui/react";
-import { faArrowLeft } from "@fortawesome/pro-regular-svg-icons";
+import {
+  Box,
+  Flex,
+  HStack,
+  Link,
+  Stack,
+  Text,
+  VStack,
+} from "@chakra-ui/layout";
+import { Button, Hide } from "@chakra-ui/react";
+import {
+  faLocationDot,
+  faDollarSign,
+  faArrowLeft,
+} from "@fortawesome/pro-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import dayjs from "dayjs";
 import { useRouter } from "next/router";
 import type { FC, ReactElement, ChangeEvent } from "react";
 import { useEffect, useState } from "react";
@@ -15,6 +28,7 @@ import { findJobFromJobKey } from "../../services/job.service";
 import NetworkLogos from "../layout/NetworkLogos";
 import StyledTag from "../layout/StyledTag";
 
+import JobCreatedFrom from "./JobCreatedFrom";
 import JobListRaw from "./JobListRaw";
 
 interface Props {
@@ -77,7 +91,6 @@ const JobTable: FC<Props> = ({ companies, jobs, observe, onFilterChanged }) => {
           variant="unstyled"
           placeholder="Search..."
           onChange={handleChangeSearch}
-          focusBorderColor="brand.900"
         />
         {renderBaseCard(
           <Box w="full" maxH="0px">
@@ -124,17 +137,46 @@ const JobTable: FC<Props> = ({ companies, jobs, observe, onFilterChanged }) => {
                 </Text>
               </Flex>
               {/* Compensation */}
-              <Text
+              <Box
                 mt={1}
                 fontSize="md"
-                fontWeight="normal"
+                fontWeight="light"
                 color="whiteAlpha.600"
               >
-                {currentJob.compensation?.currency || "$"}
-                {currentJob.compensation?.from}k -{" "}
-                {currentJob.compensation?.currency || "$"}
-                {currentJob.compensation?.to}k
-              </Text>
+                <Flex direction="row" justify="space-between">
+                  <VStack align="flex-start" spacing={1}>
+                    <HStack>
+                      <Box minW="24px">
+                        <FontAwesomeIcon fontSize="18px" icon={faDollarSign} />
+                      </Box>
+                      <Text>
+                        {currentJob.compensation?.currency || "$"}
+                        {currentJob.compensation?.from}k -{" "}
+                        {currentJob.compensation?.currency || "$"}
+                        {currentJob.compensation?.to}k
+                      </Text>
+                    </HStack>
+                    <HStack>
+                      <Box minW="24px">
+                        <FontAwesomeIcon fontSize="18px" icon={faLocationDot} />
+                      </Box>
+                      <Text>{currentJob.location}</Text>
+                    </HStack>
+                  </VStack>
+                  <Link
+                    isExternal
+                    href={currentJob.applyLink}
+                    _hover={{ textDecoration: "none" }}
+                  >
+                    <Button
+                      variant="outline"
+                      onClick={(event) => event.stopPropagation()}
+                    >
+                      Apply
+                    </Button>
+                  </Link>
+                </Flex>
+              </Box>
               {/* Networks */}
               <Box mt={6} mb={2}>
                 <NetworkLogos network={currentCompany.network} />
@@ -175,7 +217,7 @@ const JobTable: FC<Props> = ({ companies, jobs, observe, onFilterChanged }) => {
                 />
               </Box>
               {/* Job Requirements */}
-              <Box my={4} pb={4}>
+              <Box my={4}>
                 <Text
                   borderBottom="1px solid"
                   borderColor="whiteAlpha.200"
@@ -193,6 +235,20 @@ const JobTable: FC<Props> = ({ companies, jobs, observe, onFilterChanged }) => {
                   dangerouslySetInnerHTML={{ __html: currentJob.description }}
                 />
               </Box>
+              <HStack
+                spacing={1}
+                my={4}
+                pb={4}
+                fontSize="sm"
+                fontWeight="light"
+                color="whiteAlpha.600"
+              >
+                <Text>Published</Text>
+                <b>
+                  <JobCreatedFrom createdAt={dayjs(currentJob.createdOn)} />
+                </b>
+                <Text>Ago</Text>
+              </HStack>
             </Flex>
           ) : (
             // No jobs to show

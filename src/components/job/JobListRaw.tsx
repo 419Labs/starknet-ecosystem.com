@@ -65,24 +65,6 @@ const JobListRaw: FC<Props> = ({ company, job, last, observe }) => {
             </HStack>
           </Flex>
         </Flex>
-
-        {/*
-        <Td padding={2}>
-          <Text fontSize="xs">{job.remote ? "Remote" : job.location}</Text>
-        </Td>
-        <Td padding={2}>
-          <JobCreatedFrom createdAt={dayjs(job.createdOn)} />
-        </Td>
-        <Show above={breakpoint}>
-          <Td padding={2}>
-            <Link isExternal href={job.applyLink}>
-              <Button onClick={(event) => event.stopPropagation()}>
-                Apply
-              </Button>
-            </Link>
-          </Td>
-        </Show>
-      </Tr> */}
       </NextLink>
     </Flex>
   );

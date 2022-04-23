@@ -22,6 +22,22 @@ const Button: DeepPartial<Theme["components"]["Button"]> = {
       },
     },
   },
+  variants: {
+    outline: {
+      _dark: {
+        bg: "gray.800",
+        borderColor: "brand.900",
+        _hover: {
+          bg: "brand.900",
+          borderColor: "brand.900",
+        },
+        _active: {
+          bg: "brand.900",
+          opacity: 0.7,
+        },
+      },
+    },
+  },
 };
 
 export default Button;

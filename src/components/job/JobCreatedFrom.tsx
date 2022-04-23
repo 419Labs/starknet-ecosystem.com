@@ -25,11 +25,7 @@ const JobCreatedFrom: FC<Props> = ({ createdAt }: Props) => {
     setCreatedForm(dayjs.duration(dayjs().diff(createdAt)));
   }, [createdAt]);
 
-  return (
-    <Text fontWeight="bold" size="sm">
-      {formatDuration(createdForm)}
-    </Text>
-  );
+  return <Text>{formatDuration(createdForm)}</Text>;
 };
 
 export default JobCreatedFrom;

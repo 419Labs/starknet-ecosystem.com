@@ -10,6 +10,9 @@ const Input: DeepPartial<Theme["components"]["Input"]> = {
         border: "2px solid",
         borderColor: "gray.800",
         bg: "black",
+        _focus: {
+          borderColor: "brand.900",
+        },
       },
     },
   },
