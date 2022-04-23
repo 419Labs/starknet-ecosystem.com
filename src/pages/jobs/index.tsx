@@ -3,8 +3,8 @@ import type { NextPage } from "next";
 import { useEffect, useState } from "react";
 import useInView from "react-cool-inview";
 
-import allCompanies from "../../../data/company";
 import allJobs from "../../../data/_job";
+import allCompanies from "../../../data/company";
 import JobFilters from "../../components/job/JobFilters";
 import JobTable from "../../components/job/JobTable";
 import { useTranslate } from "../../context/TranslateProvider";
@@ -45,7 +45,9 @@ const JobsPage: NextPage = () => {
 
   return (
     <Flex direction="column" w="full" h="full">
+      {/* Big intro text */}
       <Text
+        mt={12}
         textAlign="center"
         lineHeight={1.2}
         fontSize={["48px", "68px"]}

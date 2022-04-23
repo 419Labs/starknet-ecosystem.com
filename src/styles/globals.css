@@ -9,6 +9,7 @@ body {
 
 *{
   -ms-overflow-style: none;
+  scrollbar-width: none;  /* Firefox */
 }
 ::-webkit-scrollbar {
   display: none;
