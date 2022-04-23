@@ -40,7 +40,8 @@ const JobTable: FC<Props> = ({ companies, jobs, observe, onFilterChanged }) => {
         newJob ? findCompanyById(companies, newJob.companyId) : undefined
       );
     }
-  }, [companies, jobs, query]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [query]);
 
   const handleChangeSearch = (event: ChangeEvent<HTMLInputElement>) =>
     onFilterChanged({ search: event.target.value });
