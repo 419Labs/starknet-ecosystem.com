@@ -1,5 +1,8 @@
 import { Input } from "@chakra-ui/input";
 import { Box, Flex, Stack, Text } from "@chakra-ui/layout";
+import { Hide } from "@chakra-ui/react";
+import { faArrowLeft } from "@fortawesome/pro-regular-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useRouter } from "next/router";
 import type { FC, ReactElement, ChangeEvent } from "react";
 import { useEffect, useState } from "react";
@@ -7,7 +10,7 @@ import { useEffect, useState } from "react";
 import type { Company } from "../../models/company";
 import type { Job } from "../../models/job";
 import { findCompanyById } from "../../services/company.service";
-import { filterJobs, findJobFromJobKey } from "../../services/job.service";
+import { findJobFromJobKey } from "../../services/job.service";
 import NetworkLogos from "../layout/NetworkLogos";
 import StyledTag from "../layout/StyledTag";
 
@@ -61,10 +64,9 @@ const JobTable: FC<Props> = ({ companies, jobs, observe, onFilterChanged }) => {
     );
   };
 
-  return (
-    <Flex w="full" direction="row">
-      {/* Left pane */}
-      <Flex direction="column" minW="300px" h="full" flex={2} pr={2}>
+  const renderJobsList = () => {
+    return (
+      <Flex direction="column" minW="300px" h="full" flex={2} px={2}>
         <Input
           px={4}
           py={2}
@@ -89,8 +91,16 @@ const JobTable: FC<Props> = ({ companies, jobs, observe, onFilterChanged }) => {
           </Box>
         )}
       </Flex>
-      {/* Right pane */}
-      <Flex h="full" flex={10} pl={2}>
+    );
+  };
+  const renderJobDetails = () => {
+    return (
+      <Flex direction="column" align="flex-start" h="full" flex={10} px={2}>
+        <Hide above="lg">
+          <Box p={2} onClick={() => setCurrentJob(undefined)}>
+            <FontAwesomeIcon fontSize="24px" icon={faArrowLeft} />
+          </Box>
+        </Hide>
         {renderBaseCard(
           currentJob && currentCompany ? (
             <Flex p={4} direction="column" maxH="0px">
@@ -181,6 +191,25 @@ const JobTable: FC<Props> = ({ companies, jobs, observe, onFilterChanged }) => {
           )
         )}
       </Flex>
+    );
+  };
+
+  return (
+    <Flex w="full" direction="row">
+      {/* Left pane */}
+      {/* If current job render above LG breakpoint, else render it */}
+      {currentJob ? (
+        <Hide below="lg">{renderJobsList()}</Hide>
+      ) : (
+        renderJobsList()
+      )}
+      {/* Right pane */}
+      {/* If current job render it, else hide it under LG breakpoint */}
+      {currentJob ? (
+        renderJobDetails()
+      ) : (
+        <Hide below="lg">{renderJobDetails()}</Hide>
+      )}
     </Flex>
   );
 };
