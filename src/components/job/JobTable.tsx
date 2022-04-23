@@ -172,7 +172,7 @@ const JobTable: FC<Props> = ({ companies, jobs, observe, onFilterChanged }) => {
                       variant="outline"
                       onClick={(event) => event.stopPropagation()}
                     >
-                      Apply
+                      {t.jobs.apply || "Apply"}
                     </Button>
                   </Link>
                 </Flex>
@@ -206,7 +206,7 @@ const JobTable: FC<Props> = ({ companies, jobs, observe, onFilterChanged }) => {
                   fontWeight="extrabold"
                   mb={4}
                 >
-                  Description
+                  {t.jobs.description || "Description"}
                 </Text>
                 <Text
                   fontSize="sm"
@@ -225,7 +225,7 @@ const JobTable: FC<Props> = ({ companies, jobs, observe, onFilterChanged }) => {
                   fontWeight="extrabold"
                   mb={4}
                 >
-                  Requirements
+                  {t.jobs.requirements || "Requirements"}
                 </Text>
                 <Text
                   fontSize="sm"
@@ -243,16 +243,16 @@ const JobTable: FC<Props> = ({ companies, jobs, observe, onFilterChanged }) => {
                 fontWeight="light"
                 color="whiteAlpha.600"
               >
-                <Text>Published</Text>
+                <Text>{t.jobs.published || "Published"}</Text>
                 <b>
                   <JobCreatedFrom createdAt={dayjs(currentJob.createdOn)} />
                 </b>
-                <Text>Ago</Text>
+                <Text>{t.jobs.ago || "Ago"}</Text>
               </HStack>
             </Flex>
           ) : (
             // No jobs to show
-            <span>No job selected</span>
+            <span>{t.jobs.no_selected || "No job selected"}</span>
           )
         )}
       </Flex>

@@ -11,7 +11,7 @@ function Logo({ justify = "flex-start" }: LogoProps) {
         <Image src="/starknet-logo.png" alt="Starknet Logo" />
       </Box>
       <Text ml={3} fontSize="lg" fontWeight="bold">
-        Starknet ecosystem
+        StarkNet Ecosystem
       </Text>
     </Flex>
   );

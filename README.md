@@ -38,7 +38,7 @@ create a dedicated Pull Request following this title: "🎨 Updating AwesomeProj
 To add a new job you have to:
 
 - Create your company on `data/company.ts` if it does not already exists.
-- Add your compay logo into `public/logos/`
+- Add your company logo into `public/logos/`
 - Create your job on `data/job.ts`. The description is a string containing html.
 - Create a Pull Request following the title: "✨ Introducing <CompanyName> <JobName>"
 

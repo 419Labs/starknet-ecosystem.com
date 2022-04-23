@@ -31,6 +31,9 @@ const trTranslate: TranslateState = {
     wallet: "Cüzdan",
     starkex: "StarkEx",
   },
+  jobs: {
+    apply: "Apply now",
+  },
 };
 
 export default trTranslate;

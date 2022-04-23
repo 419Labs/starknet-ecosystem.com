@@ -31,6 +31,9 @@ const zhTWTranslate: TranslateState = {
     wallet: "錢包",
     starkex: "StarkEx",
   },
+  jobs: {
+    apply: "Apply now",
+  },
 };
 
 export default zhTWTranslate;

@@ -3,6 +3,7 @@ import { Button, Image, Link } from "@chakra-ui/react";
 import dayjs from "dayjs";
 import type { FC } from "react";
 
+import { useTranslate } from "../../context/TranslateProvider";
 import type { Company } from "../../models/company";
 import type { Job } from "../../models/job";
 import InnerHtml from "../layout/InnerHtml";
@@ -17,6 +18,7 @@ interface Props {
 }
 
 const JobDetails: FC<Props> = ({ company, job }) => {
+  const { t } = useTranslate();
   return (
     <Box
       borderRadius={10}
@@ -41,7 +43,7 @@ const JobDetails: FC<Props> = ({ company, job }) => {
           lineHeight={["25px", "35px"]}
           mt={3}
         >
-          {company.name} is hiring a
+          {company.name} {t.jobs.is_hiring | " is hiring a"}
         </Text>
         <Text
           as="h1"
@@ -62,7 +64,7 @@ const JobDetails: FC<Props> = ({ company, job }) => {
         )}
         <Text mb={3}>{job.remote ? "Remote" : job.location}</Text>
         <Link isExternal href={job.applyLink}>
-          <Button>Apply now</Button>
+          <Button>{t.jobs.apply}</Button>
         </Link>
       </Box>
       <Box mb={4}>

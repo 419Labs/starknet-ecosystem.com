@@ -53,7 +53,7 @@ const JobsPage: NextPage = () => {
         fontSize={["48px", "68px"]}
         fontWeight="bold"
       >
-        {t.common.job_title_main || "StarkNet Jobs"}
+        {t.common.job_title_main || "Jobs"}
       </Text>
       {/* Fill free place on screen & hide overflow */}
       <Flex flex={1} overflow="hidden">
