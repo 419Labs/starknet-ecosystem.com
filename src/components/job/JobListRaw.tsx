@@ -26,7 +26,7 @@ const JobListRaw: FC<Props> = ({ company, job, last, observe }) => {
   return (
     <Flex
       w="full"
-      h="88px"
+      minH="88px"
       direction="row"
       cursor="pointer"
       borderBottom="1px solid"
@@ -35,23 +35,23 @@ const JobListRaw: FC<Props> = ({ company, job, last, observe }) => {
       _hover={{
         backgroundColor: "whiteAlpha.200",
       }}
+      ref={observe && last ? observe : null}
     >
       <NextLink href={`/${locale}/jobs/?key=${getJobKey(job, company)}`}>
-        <Flex direction="row" align="center">
+        <Flex direction="row" align="center" overflow="hidden" pr={2}>
           <Image
             height="56px"
             src={`/logos/${company.logo}`}
             alt={`${company.name} logo`}
             mr={1}
           />
-          <Flex direction="column" justify="space-between">
+          <Flex direction="column" justify="space-between" overflow="hidden">
             <Text
               fontSize="md"
               fontWeight="bold"
               whiteSpace="nowrap"
               overflow="hidden"
               textOverflow="ellipsis"
-              width="200px"
             >
               {job.title}
             </Text>
@@ -66,43 +66,10 @@ const JobListRaw: FC<Props> = ({ company, job, last, observe }) => {
           </Flex>
         </Flex>
 
-        {/* <Tr
-        _hover={{ backgroundColor: "gray.900" }}
-        cursor="pointer"
-        ref={observe && last ? observe : null}
-      >
-        <Td padding={2}>
-          <Flex>
-            <Image
-              width={showAll ? "50px" : "35px"}
-              maxHeight={showAll ? "50px" : "35px"}
-              src={`/logos/${company.logo}`}
-              alt={`${company.name} logo`}
-              mr={1}
-            />
-            <div>
-              <Text fontWeight="bold">{job.title}</Text>
-              <Text fontSize="sm">{company.name}</Text>
-              {job.compensation && (
-                <Text fontSize="xs">
-                  {job.compensation.currency || "$"}
-                  {job.compensation.from}k - {job.compensation.currency || "$"}
-                  {job.compensation.to}k{" "}
-                </Text>
-              )}
-            </div>
-          </Flex>
-        </Td>
+        {/*
         <Td padding={2}>
           <Text fontSize="xs">{job.remote ? "Remote" : job.location}</Text>
         </Td>
-        <Show above={breakpoint}>
-          <Td padding={2}>
-            {job.tags.map((tag) => (
-              <StyledTag key={tag} value={tag} size="sm" />
-            ))}
-          </Td>
-        </Show>
         <Td padding={2}>
           <JobCreatedFrom createdAt={dayjs(job.createdOn)} />
         </Td>

@@ -7,6 +7,7 @@ import { useRouter } from "next/router";
 import type { FC, ReactElement, ChangeEvent } from "react";
 import { useEffect, useState } from "react";
 
+import { useTranslate } from "../../context/TranslateProvider";
 import type { Company } from "../../models/company";
 import type { Job } from "../../models/job";
 import { findCompanyById } from "../../services/company.service";
@@ -24,6 +25,7 @@ interface Props {
 }
 
 const JobTable: FC<Props> = ({ companies, jobs, observe, onFilterChanged }) => {
+  const { t } = useTranslate();
   const [currentJob, setCurrentJob] = useState<Job | undefined>(undefined);
   const [currentCompany, setCurrentCompany] = useState<Company | undefined>(
     undefined
@@ -80,15 +82,21 @@ const JobTable: FC<Props> = ({ companies, jobs, observe, onFilterChanged }) => {
         {renderBaseCard(
           <Box w="full" maxH="0px">
             {/* Wrapped in screen */}
-            {jobs.map((job, key) => (
-              <JobListRaw
-                key={`${job.title}-${job.companyId}`}
-                company={findCompanyById(companies, job.companyId)}
-                job={job}
-                last={key === jobs.length - 1}
-                observe={observe}
-              />
-            ))}
+            {jobs && jobs.length > 0 ? (
+              jobs.map((job, key) => (
+                <JobListRaw
+                  key={`${job.title}-${job.companyId}`}
+                  company={findCompanyById(companies, job.companyId)}
+                  job={job}
+                  last={key === jobs.length - 1}
+                  observe={observe}
+                />
+              ))
+            ) : (
+              <Flex justify="center" mt={4}>
+                <Text fontSize="xl">{t.common.no_job}</Text>
+              </Flex>
+            )}
           </Box>
         )}
       </Flex>
@@ -198,7 +206,7 @@ const JobTable: FC<Props> = ({ companies, jobs, observe, onFilterChanged }) => {
   return (
     <Flex w="full" direction="row">
       {/* Left pane */}
-      {/* If current job render above LG breakpoint, else render it */}
+      {/* If current job hide it below LG breakpoint, else render it */}
       {currentJob ? (
         <Hide below="lg">{renderJobsList()}</Hide>
       ) : (
@@ -206,11 +214,7 @@ const JobTable: FC<Props> = ({ companies, jobs, observe, onFilterChanged }) => {
       )}
       {/* Right pane */}
       {/* If current job render it, else hide it under LG breakpoint */}
-      {currentJob ? (
-        renderJobDetails()
-      ) : (
-        <Hide below="lg">{renderJobDetails()}</Hide>
-      )}
+      {currentJob && renderJobDetails()}
     </Flex>
   );
 };
