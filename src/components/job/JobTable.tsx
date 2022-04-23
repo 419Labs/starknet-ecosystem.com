@@ -1,13 +1,13 @@
-import { Box, Flex, HStack, Stack, Text } from "@chakra-ui/layout";
-import { Tag as ChakraTag } from "@chakra-ui/react";
+import { Input } from "@chakra-ui/input";
+import { Box, Flex, Stack, Text } from "@chakra-ui/layout";
 import { useRouter } from "next/router";
-import type { FC, ReactElement } from "react";
+import type { FC, ReactElement, ChangeEvent } from "react";
 import { useEffect, useState } from "react";
 
 import type { Company } from "../../models/company";
 import type { Job } from "../../models/job";
 import { findCompanyById } from "../../services/company.service";
-import { findJobFromJobKey } from "../../services/job.service";
+import { filterJobs, findJobFromJobKey } from "../../services/job.service";
 import NetworkLogos from "../layout/NetworkLogos";
 import StyledTag from "../layout/StyledTag";
 
@@ -17,14 +17,14 @@ interface Props {
   companies: Company[];
   jobs: Job[];
   observe?: (element?: HTMLElement | null | undefined) => void;
+  onFilterChanged: (value: any) => void;
 }
 
-const JobTable: FC<Props> = ({ companies, jobs, observe }) => {
+const JobTable: FC<Props> = ({ companies, jobs, observe, onFilterChanged }) => {
   const [currentJob, setCurrentJob] = useState<Job | undefined>(undefined);
   const [currentCompany, setCurrentCompany] = useState<Company | undefined>(
     undefined
   );
-
   const router = useRouter();
   const { query } = router;
 
@@ -39,11 +39,15 @@ const JobTable: FC<Props> = ({ companies, jobs, observe }) => {
     }
   }, [companies, jobs, query]);
 
+  const handleChangeSearch = (event: ChangeEvent<HTMLInputElement>) =>
+    onFilterChanged({ search: event.target.value });
+
   const renderBaseCard = (content: ReactElement) => {
     return (
       <Flex
         overflow="scroll"
         w="full"
+        h="full"
         border="1px solid"
         borderColor="gray.800"
         bg="gray.800"
@@ -60,7 +64,16 @@ const JobTable: FC<Props> = ({ companies, jobs, observe }) => {
   return (
     <Flex w="full" direction="row">
       {/* Left pane */}
-      <Flex minW="300px" h="full" flex={2} pr={2}>
+      <Flex direction="column" minW="300px" h="full" flex={2} pr={2}>
+        <Input
+          px={4}
+          py={2}
+          mb={2}
+          variant="unstyled"
+          placeholder="Search..."
+          onChange={handleChangeSearch}
+          focusBorderColor="brand.900"
+        />
         {renderBaseCard(
           <Box w="full" maxH="0px">
             {/* Wrapped in screen */}
@@ -92,7 +105,12 @@ const JobTable: FC<Props> = ({ companies, jobs, observe }) => {
                 </Text>
               </Flex>
               {/* Compensation */}
-              <Text mt={1} fontSize="md" fontWeight="normal" color="whiteAlpha.600">
+              <Text
+                mt={1}
+                fontSize="md"
+                fontWeight="normal"
+                color="whiteAlpha.600"
+              >
                 {currentJob.compensation?.currency || "$"}
                 {currentJob.compensation?.from}k -{" "}
                 {currentJob.compensation?.currency || "$"}

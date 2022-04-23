@@ -55,15 +55,17 @@ const JobsPage: NextPage = () => {
       >
         {t.common.job_title_main || "StarkNet Jobs"}
       </Text>
-      {/* <JobFilters filters={filters} tags={tags} onChange={setFilters} /> */}
-      {jobs.length === 0 ? (
-        <Text textAlign="center">{t.common.no_job || "No job found"}</Text>
-      ) : (
-        // Fill free place on screen & hide overflow
-        <Flex flex={1} overflow="hidden">
-          <JobTable jobs={jobs} companies={companies} observe={observe} />
-        </Flex>
-      )}
+      {/* Fill free place on screen & hide overflow */}
+      <Flex flex={1} overflow="hidden">
+        <JobTable
+          jobs={jobs}
+          companies={companies}
+          observe={observe}
+          onFilterChanged={(updatedFilter) =>
+            setFilters({ ...filters, ...updatedFilter })
+          }
+        />
+      </Flex>
     </Flex>
   );
 };
