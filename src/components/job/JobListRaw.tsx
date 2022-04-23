@@ -30,10 +30,10 @@ const JobListRaw: FC<Props> = ({ company, job, last, observe }) => {
       direction="row"
       cursor="pointer"
       borderBottom="1px solid"
-      borderColor="gray.600"
+      borderColor="whiteAlpha.200"
       transition="background .2s linear"
       _hover={{
-        backgroundColor: "gray.600",
+        backgroundColor: "whiteAlpha.200",
       }}
     >
       <NextLink href={`/${locale}/jobs/?key=${getJobKey(job, company)}`}>
@@ -56,7 +56,7 @@ const JobListRaw: FC<Props> = ({ company, job, last, observe }) => {
               {job.title}
             </Text>
             <Text fontSize="xs">{company.name}</Text>
-            <HStack mt={2}>
+            <HStack mt={2} color="whiteAlpha.600">
               {job.tags.map((tag) => (
                 <Text key={`job-${job.companyId}-tag-${tag}`} fontSize="xs">
                   #{tag}

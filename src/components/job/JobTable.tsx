@@ -59,6 +59,7 @@ const JobTable: FC<Props> = ({ companies, jobs, observe }) => {
 
   return (
     <Flex w="full" direction="row">
+      {/* Left pane */}
       <Flex minW="300px" h="full" flex={2} pr={2}>
         {renderBaseCard(
           <Box w="full" maxH="0px">
@@ -75,10 +76,12 @@ const JobTable: FC<Props> = ({ companies, jobs, observe }) => {
           </Box>
         )}
       </Flex>
+      {/* Right pane */}
       <Flex h="full" flex={10} pl={2}>
         {renderBaseCard(
           currentJob && currentCompany ? (
             <Flex p={4} direction="column" maxH="0px">
+              {/* Wrapped in screen */}
               <Flex direction="row" align="center">
                 <Text fontSize="2xl" fontWeight="black">
                   {currentJob.title}
@@ -88,14 +91,20 @@ const JobTable: FC<Props> = ({ companies, jobs, observe }) => {
                   {currentCompany?.name}
                 </Text>
               </Flex>
-              <Text fontSize="md" fontWeight="normal">
-                {currentJob.compensation?.currency}
-                {currentJob.compensation?.from} -{" "}
-                {currentJob.compensation?.currency}
-                {currentJob.compensation?.to}
+              {/* Compensation */}
+              <Text mt={1} fontSize="md" fontWeight="normal" color="whiteAlpha.600">
+                {currentJob.compensation?.currency || "$"}
+                {currentJob.compensation?.from}k -{" "}
+                {currentJob.compensation?.currency || "$"}
+                {currentJob.compensation?.to}k
               </Text>
-              <NetworkLogos network={currentCompany.network} />
+              {/* Networks */}
+              <Box mt={6} mb={2}>
+                <NetworkLogos network={currentCompany.network} />
+              </Box>
+              {/* Tags */}
               <Stack
+                my={2}
                 direction="row"
                 spacing={2}
                 wrap="wrap"
@@ -109,20 +118,47 @@ const JobTable: FC<Props> = ({ companies, jobs, observe }) => {
                   <StyledTag key={tag} value={tag} size="md" />
                 ))}
               </Stack>
-              <Text fontSize="xl" fontWeight="extrabold">
-                Description
-              </Text>
-              <Text fontSize="md" fontWeight="normal">
-                {currentJob.description}
-              </Text>
-              <Text fontSize="xl" fontWeight="extrabold">
-                Requirements
-              </Text>
-              <Text fontSize="md" fontWeight="normal">
-                {currentJob.description}
-              </Text>
+              {/* Job description */}
+              <Box my={4}>
+                <Text
+                  borderBottom="1px solid"
+                  borderColor="whiteAlpha.200"
+                  fontSize="xl"
+                  fontWeight="extrabold"
+                  mb={4}
+                >
+                  Description
+                </Text>
+                <Text
+                  fontSize="sm"
+                  fontWeight="normal"
+                  listStylePosition="inside"
+                  lineHeight="24px"
+                  dangerouslySetInnerHTML={{ __html: currentJob.description }}
+                />
+              </Box>
+              {/* Job Requirements */}
+              <Box my={4} pb={4}>
+                <Text
+                  borderBottom="1px solid"
+                  borderColor="whiteAlpha.200"
+                  fontSize="xl"
+                  fontWeight="extrabold"
+                  mb={4}
+                >
+                  Requirements
+                </Text>
+                <Text
+                  fontSize="sm"
+                  fontWeight="normal"
+                  listStylePosition="inside"
+                  lineHeight="24px"
+                  dangerouslySetInnerHTML={{ __html: currentJob.description }}
+                />
+              </Box>
             </Flex>
           ) : (
+            // No jobs to show
             <span>No job selected</span>
           )
         )}
