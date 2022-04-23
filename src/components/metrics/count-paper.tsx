@@ -9,13 +9,13 @@ interface Props {
 }
 
 const CountPaper: FC<Props> = ({ count, label }) => (
-  <Box backgroundColor="gray.800" borderRadius={10} p={4} textAlign="center">
-    <Text fontSize={["40px"]} fontWeight="bold">
+  <Box backgroundColor="gray.800" borderRadius="md" p={5} textAlign="center">
+    <Text fontSize="3xl" fontWeight="bold">
       {formatCompactNumber(count)}
     </Text>
-    <Text mb={4} fontSize={["18px"]}>
-      {label}
-    </Text>
+      <Text mt={2} fontSize="md" color="whiteAlpha.600">
+          {label}
+      </Text>
   </Box>
 );
 

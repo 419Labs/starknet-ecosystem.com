@@ -1,4 +1,4 @@
-import { Box, Link, SimpleGrid, Text } from "@chakra-ui/layout";
+import { Box, Flex, HStack, Link, SimpleGrid, Text } from "@chakra-ui/layout";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faEye, faStar } from "@fortawesome/free-regular-svg-icons";
 import { faCodeFork } from "@fortawesome/free-solid-svg-icons";
@@ -15,31 +15,34 @@ interface Props {
 const GithubReposPaper: FC<Props> = ({ githubRepos }) => {
   const { t } = useTranslate();
   return (
-    <Box borderRadius={10} backgroundColor="gray.800" p={4}>
-      <Text as="h3" mb={4} fontSize={["20px"]} fontWeight="bold">
-        <FontAwesomeIcon icon={faGithub} />{" "}
-        {t.common.github_repo || "Tools & Libraries"}
-      </Text>
+    <Box borderRadius="md" backgroundColor="gray.800" p={5}>
+      <HStack as="h3" mb={4} fontSize="lg" fontWeight="bold">
+        <FontAwesomeIcon icon={faGithub} />
+        <Text ml={1}>{t.common.github_repo || "Tools & Libraries"}</Text>
+      </HStack>
       <SimpleGrid columns={2} spacing={4}>
         {githubRepos.map((repo) => (
           <Link
             key={repo.id}
-            _hover={{ textDecoration: "none" }}
+            _hover={{ textDecoration: "none", opacity: .5}}
             href={repo.html_url}
             isExternal
           >
-            <Text fontWeight="bold">{repo.name}</Text>
-            <Box display="flex" justifyContent="left">
-              <Text mr={4}>
-                <FontAwesomeIcon icon={faEye} /> {repo.subscribers_count}
-              </Text>
-              <Text mr={4}>
-                <FontAwesomeIcon icon={faCodeFork} /> {repo.forks_count}
-              </Text>
-              <Text>
-                <FontAwesomeIcon icon={faStar} /> {repo.stargazers_count}
-              </Text>
-            </Box>
+            <Text fontSize="md">{repo.name}</Text>
+            <HStack spacing={3} mt={1} color="whiteAlpha.600">
+              <HStack fontSize="sm" spacing={1}>
+                <FontAwesomeIcon icon={faEye} />
+                <Text>{repo.subscribers_count}</Text>
+              </HStack>
+              <HStack fontSize="sm" spacing={1}>
+                <FontAwesomeIcon icon={faCodeFork} />
+                <Text>{repo.forks_count}</Text>
+              </HStack>
+              <HStack fontSize="sm" spacing={1}>
+                <FontAwesomeIcon icon={faStar} />
+                <Text>{repo.stargazers_count}</Text>
+              </HStack>
+            </HStack>
           </Link>
         ))}
       </SimpleGrid>

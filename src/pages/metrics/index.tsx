@@ -27,6 +27,9 @@ const MetricsPage: FC<Props> = ({
   testnetContractCount,
 }) => (
   <Box w="full">
+    <Text as="h2" mb={4} mt={8} fontSize="2xl" fontWeight="bold" w="full">
+      Ecosystem metrics
+    </Text>
     <SimpleGrid columns={{ sm: 1, md: 2, lg: 4 }} spacing={4} mb={8}>
       <CountPaper
         count={mainnetTransactionCount}
@@ -45,7 +48,7 @@ const MetricsPage: FC<Props> = ({
         label="contracts (Goerli Testnet)"
       />
     </SimpleGrid>
-    <Text as="h2" mb={4} fontSize={["25px"]} fontWeight="bold" w="full">
+    <Text as="h2" mb={4} fontSize="2xl" fontWeight="bold" w="full">
       Developer tools
     </Text>
     <SimpleGrid columns={{ sm: 1, md: 1, lg: 3 }} spacing={4}>
