@@ -28,7 +28,11 @@ const fetchTransactionCount = (testnet?: boolean): Promise<number> =>
       if (!response.ok) throw new Error(response.statusText);
       return response.json();
     })
-    .then((response) => response.lastPage * 10);
+    .then((response) => response.lastPage * 10)
+    .catch((error) => {
+      console.log(error);
+      return 0;
+    });
 
 const fetchContractCount = (testnet?: boolean): Promise<number> =>
   fetch(
@@ -38,7 +42,11 @@ const fetchContractCount = (testnet?: boolean): Promise<number> =>
       if (!response.ok) throw new Error(response.statusText);
       return response.json();
     })
-    .then((response) => response.lastPage * 10);
+    .then((response) => response.lastPage * 10)
+    .catch((error) => {
+      console.log(error);
+      return 0;
+    });
 
 export const MetricsApi = {
   fetchGithubRepo,

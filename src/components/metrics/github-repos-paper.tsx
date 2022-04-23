@@ -1,4 +1,4 @@
-import { Box, Flex, HStack, Link, SimpleGrid, Text } from "@chakra-ui/layout";
+import { Box, HStack, Link, SimpleGrid, Text } from "@chakra-ui/layout";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faEye, faStar } from "@fortawesome/free-regular-svg-icons";
 import { faCodeFork } from "@fortawesome/free-solid-svg-icons";
@@ -24,7 +24,7 @@ const GithubReposPaper: FC<Props> = ({ githubRepos }) => {
         {githubRepos.map((repo) => (
           <Link
             key={repo.id}
-            _hover={{ textDecoration: "none", opacity: .5}}
+            _hover={{ textDecoration: "none", opacity: 0.5}}
             href={repo.html_url}
             isExternal
           >
