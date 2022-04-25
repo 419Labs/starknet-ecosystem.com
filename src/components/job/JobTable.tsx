@@ -29,6 +29,7 @@ import NetworkLogos from "../layout/NetworkLogos";
 import StyledTag from "../layout/StyledTag";
 
 import JobCreatedFrom from "./JobCreatedFrom";
+import JobDetailSection from "./JobDetailSection";
 import JobListRaw from "./JobListRaw";
 
 interface Props {
@@ -145,17 +146,22 @@ const JobTable: FC<Props> = ({ companies, jobs, observe, onFilterChanged }) => {
               >
                 <Flex direction="row" justify="space-between">
                   <VStack align="flex-start" spacing={1}>
-                    <HStack>
-                      <Box minW="24px">
-                        <FontAwesomeIcon fontSize="18px" icon={faDollarSign} />
-                      </Box>
-                      <Text>
-                        {currentJob.compensation?.currency || "$"}
-                        {currentJob.compensation?.from}k -{" "}
-                        {currentJob.compensation?.currency || "$"}
-                        {currentJob.compensation?.to}k
-                      </Text>
-                    </HStack>
+                    {currentJob.compensation && (
+                      <HStack>
+                        <Box minW="24px">
+                          <FontAwesomeIcon
+                            fontSize="18px"
+                            icon={faDollarSign}
+                          />
+                        </Box>
+                        <Text>
+                          {currentJob.compensation?.currency || "$"}
+                          {currentJob.compensation?.from}k -{" "}
+                          {currentJob.compensation?.currency || "$"}
+                          {currentJob.compensation?.to}k
+                        </Text>
+                      </HStack>
+                    )}
                     <HStack>
                       <Box minW="24px">
                         <FontAwesomeIcon fontSize="18px" icon={faLocationDot} />
@@ -163,18 +169,20 @@ const JobTable: FC<Props> = ({ companies, jobs, observe, onFilterChanged }) => {
                       <Text>{currentJob.location}</Text>
                     </HStack>
                   </VStack>
-                  <Link
-                    isExternal
-                    href={currentJob.applyLink}
-                    _hover={{ textDecoration: "none" }}
-                  >
-                    <Button
-                      variant="outline"
-                      onClick={(event) => event.stopPropagation()}
+                  {currentJob.applyLink && (
+                    <Link
+                      isExternal
+                      href={currentJob.applyLink}
+                      _hover={{ textDecoration: "none" }}
                     >
-                      {t.jobs.apply || "Apply"}
-                    </Button>
-                  </Link>
+                      <Button
+                        variant="outline"
+                        onClick={(event) => event.stopPropagation()}
+                      >
+                        {t.jobs.apply || "Apply"}
+                      </Button>
+                    </Link>
+                  )}
                 </Flex>
               </Box>
               {/* Networks */}
@@ -197,44 +205,22 @@ const JobTable: FC<Props> = ({ companies, jobs, observe, onFilterChanged }) => {
                   <StyledTag key={tag} value={tag} size="md" />
                 ))}
               </Stack>
-              {/* Job description */}
-              <Box my={4}>
-                <Text
-                  borderBottom="1px solid"
-                  borderColor="whiteAlpha.200"
-                  fontSize="xl"
-                  fontWeight="extrabold"
-                  mb={4}
-                >
-                  {t.jobs.description || "Description"}
-                </Text>
-                <Text
-                  fontSize="sm"
-                  fontWeight="normal"
-                  listStylePosition="inside"
-                  lineHeight="24px"
-                  dangerouslySetInnerHTML={{ __html: currentJob.description }}
-                />
-              </Box>
-              {/* Job Requirements */}
-              <Box my={4}>
-                <Text
-                  borderBottom="1px solid"
-                  borderColor="whiteAlpha.200"
-                  fontSize="xl"
-                  fontWeight="extrabold"
-                  mb={4}
-                >
-                  {t.jobs.requirements || "Requirements"}
-                </Text>
-                <Text
-                  fontSize="sm"
-                  fontWeight="normal"
-                  listStylePosition="inside"
-                  lineHeight="24px"
-                  dangerouslySetInnerHTML={{ __html: currentJob.description }}
-                />
-              </Box>
+              <JobDetailSection
+                label={t.jobs.aboutUs || "About us"}
+                value={currentJob.aboutUs}
+              />
+              <JobDetailSection
+                label={t.jobs.description || "Description"}
+                value={currentJob.description}
+              />
+              <JobDetailSection
+                label={t.jobs.requirements || "Requirements"}
+                value={currentJob.requirements}
+              />
+              <JobDetailSection
+                label={t.jobs.offer || "We offer"}
+                value={currentJob.offer}
+              />
               <HStack
                 spacing={1}
                 my={4}

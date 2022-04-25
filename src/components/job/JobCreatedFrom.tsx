@@ -6,6 +6,7 @@ import type { FC } from "react";
 import { useEffect, useState } from "react";
 
 const formatDuration = (duration: Duration): string => {
+  if (duration.months() > 0) return `${duration.months()} month(s)`;
   if (duration.days() > 0) return `${duration.days()}d`;
   if (duration.hours() > 0) return `${duration.hours()}h`;
   if (duration.minutes() > 0) return `${duration.minutes()}min`;

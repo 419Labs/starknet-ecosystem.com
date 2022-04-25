@@ -3,8 +3,8 @@ import type { NextPage } from "next";
 import { useEffect, useState } from "react";
 import useInView from "react-cool-inview";
 
-import allJobs from "../../../data/_job";
 import allCompanies from "../../../data/company";
+import allJobs from "../../../data/job";
 import JobTable from "../../components/job/JobTable";
 import { useTranslate } from "../../context/TranslateProvider";
 import type { Company } from "../../models/company";

@@ -11,7 +11,10 @@ export interface Job {
   tags: string[];
   location: string; // "City, State"
   remote?: boolean;
+  aboutUs?: string;
   description: string;
-  applyLink: string;
+  requirements?: string;
+  offer?: string;
+  applyLink?: string;
   createdOn: Date;
 }
