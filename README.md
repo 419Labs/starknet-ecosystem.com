@@ -4,7 +4,7 @@
 > Building on StarkNet is a financial advice.
 > Louis G.
 
-The ecosystem dashboard aims to give visibility to all projects in the StarkNet ecosystem in a simple and elegant way.
+Explore projects, teams, jobs, metrics and everything around StarkNet.
 
 ## Contribute
 
