@@ -1,4 +1,4 @@
-import { Flex, HStack, Text } from "@chakra-ui/layout";
+import { Box, Flex, HStack, Text } from "@chakra-ui/layout";
 import { Image } from "@chakra-ui/react";
 import NextLink from "next/link";
 import type { FC } from "react";
@@ -13,9 +13,16 @@ interface Props {
   job: Job;
   last: boolean;
   observe?: (element?: HTMLElement | null | undefined) => void;
+  selected?: boolean;
 }
 
-const JobListRaw: FC<Props> = ({ company, job, last, observe }) => {
+const JobListRaw: FC<Props> = ({
+  company,
+  job,
+  last,
+  observe,
+  selected = false,
+}) => {
   const { locale } = useTranslate();
   if (!company || !job) return null;
 
@@ -26,22 +33,26 @@ const JobListRaw: FC<Props> = ({ company, job, last, observe }) => {
       direction="row"
       cursor="pointer"
       borderBottom="1px solid"
-      borderColor="whiteAlpha.200"
+      borderRight="2px solid"
+      borderBottomColor="whiteAlpha.200"
+      borderRightColor={selected ? "brand.900" : "transparent"}
       transition="background .2s linear"
       _hover={{
         backgroundColor: "whiteAlpha.200",
+      }}
+      _active={{
+        backgroundColor: "whiteAlpha.300",
       }}
       ref={observe && last ? observe : null}
     >
       <NextLink href={`/${locale}/jobs/?key=${getJobKey(job, company)}`}>
         <Flex direction="row" align="center" overflow="hidden" pr={2}>
-          <Image
-            maxHeight="56px"
-            maxWidth="56px"
-            src={`/logos/${company.logo}`}
-            alt={`${company.name} logo`}
-            mr={1}
-          />
+          <Box maxHeight="56px" maxWidth="88px" px={5} mr={1}>
+            <Image
+              src={`/logos/${company.logo}`}
+              alt={`${company.name} logo`}
+            />
+          </Box>
           <Flex direction="column" justify="space-between" overflow="hidden">
             <Text
               fontSize="md"

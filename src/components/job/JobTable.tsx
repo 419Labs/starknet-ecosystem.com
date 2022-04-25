@@ -104,6 +104,7 @@ const JobTable: FC<Props> = ({ companies, jobs, observe, onFilterChanged }) => {
                   job={job}
                   last={key === jobs.length - 1}
                   observe={observe}
+                  selected={job === currentJob}
                 />
               ))
             ) : (
@@ -133,7 +134,7 @@ const JobTable: FC<Props> = ({ companies, jobs, observe, onFilterChanged }) => {
                   {currentJob.title}
                 </Text>
                 <Box h="80%" w="1px" bg="gray.600" mx={4} />
-                <Text fontSize="md" fontWeight="normal">
+                <Text flex={1} fontSize="md" fontWeight="normal">
                   {currentCompany?.name}
                 </Text>
               </Flex>
