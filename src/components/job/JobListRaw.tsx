@@ -1,6 +1,5 @@
 import { Flex, HStack, Text } from "@chakra-ui/layout";
 import { Image } from "@chakra-ui/react";
-import dayjs from "dayjs";
 import NextLink from "next/link";
 import type { FC } from "react";
 
@@ -8,9 +7,6 @@ import { useTranslate } from "../../context/TranslateProvider";
 import type { Company } from "../../models/company";
 import type { Job } from "../../models/job";
 import { getJobKey } from "../../services/job.service";
-import StyledTag from "../layout/StyledTag";
-
-import JobCreatedFrom from "./JobCreatedFrom";
 
 interface Props {
   company: Company | undefined;

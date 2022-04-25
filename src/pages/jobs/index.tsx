@@ -1,17 +1,16 @@
-import { Box, Flex, Text } from "@chakra-ui/layout";
+import { Flex, Text } from "@chakra-ui/layout";
 import type { NextPage } from "next";
 import { useEffect, useState } from "react";
 import useInView from "react-cool-inview";
 
 import allJobs from "../../../data/_job";
 import allCompanies from "../../../data/company";
-import JobFilters from "../../components/job/JobFilters";
 import JobTable from "../../components/job/JobTable";
 import { useTranslate } from "../../context/TranslateProvider";
 import type { Company } from "../../models/company";
 import type { Job } from "../../models/job";
 import type { JobFilter } from "../../models/job-filter";
-import { filterJobs, getAllTags } from "../../services/job.service";
+import { filterJobs } from "../../services/job.service";
 
 const LOADED_STEPS = 25;
 
@@ -19,7 +18,6 @@ const JobsPage: NextPage = () => {
   const { t } = useTranslate();
   const [lastIndexLoaded, setLastIndexLoaded] = useState<number>(LOADED_STEPS);
   const [companies] = useState<Company[]>(allCompanies);
-  const [tags] = useState(getAllTags(allJobs));
   const [jobs, setJobs] = useState<Job[]>([]);
   const [filters, setFilters] = useState<JobFilter>({
     remote: false,

@@ -35,7 +35,7 @@ interface Props {
   companies: Company[];
   jobs: Job[];
   observe?: (element?: HTMLElement | null | undefined) => void;
-  onFilterChanged: (value: any) => void;
+  onFilterChanged: (value: { search: string }) => void;
 }
 
 const JobTable: FC<Props> = ({ companies, jobs, observe, onFilterChanged }) => {
