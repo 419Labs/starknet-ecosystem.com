@@ -54,7 +54,7 @@ const JobsPage: NextPage = () => {
         {t.common.job_title_main || "Jobs"}
       </Text>
       {/* Fill free place on screen & hide overflow */}
-      <Flex flex={1} overflow="hidden">
+      <Flex flex={1} mt={8} overflow="hidden">
         <JobTable
           jobs={jobs}
           companies={companies}

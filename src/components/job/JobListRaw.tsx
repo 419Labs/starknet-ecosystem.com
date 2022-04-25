@@ -27,25 +27,25 @@ const JobListRaw: FC<Props> = ({
   if (!company || !job) return null;
 
   return (
-    <Flex
-      w="full"
-      minH="88px"
-      direction="row"
-      cursor="pointer"
-      borderBottom="1px solid"
-      borderRight="2px solid"
-      borderBottomColor="whiteAlpha.200"
-      borderRightColor={selected ? "brand.900" : "transparent"}
-      transition="background .2s linear"
-      _hover={{
-        backgroundColor: "whiteAlpha.200",
-      }}
-      _active={{
-        backgroundColor: "whiteAlpha.300",
-      }}
-      ref={observe && last ? observe : null}
-    >
-      <NextLink href={`/${locale}/jobs/?key=${getJobKey(job, company)}`}>
+    <NextLink href={`/${locale}/jobs/?key=${getJobKey(job, company)}`}>
+      <Flex
+        w="full"
+        minH="88px"
+        direction="row"
+        cursor="pointer"
+        borderBottom="1px solid"
+        borderRight="2px solid"
+        borderBottomColor="whiteAlpha.200"
+        borderRightColor={selected ? "brand.900" : "transparent"}
+        transition="background .2s linear"
+        _hover={{
+          backgroundColor: "whiteAlpha.200",
+        }}
+        _active={{
+          backgroundColor: "whiteAlpha.300",
+        }}
+        ref={observe && last ? observe : null}
+      >
         <Flex direction="row" align="center" overflow="hidden" pr={2}>
           <Box maxHeight="56px" maxWidth="88px" px={5} mr={1}>
             <Image
@@ -73,8 +73,8 @@ const JobListRaw: FC<Props> = ({
             </HStack>
           </Flex>
         </Flex>
-      </NextLink>
-    </Flex>
+      </Flex>
+    </NextLink>
   );
 };
 

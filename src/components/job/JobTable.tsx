@@ -56,6 +56,10 @@ const JobTable: FC<Props> = ({ companies, jobs, observe, onFilterChanged }) => {
       setCurrentCompany(
         newJob ? findCompanyById(companies, newJob.companyId) : undefined
       );
+    } else {
+      // Reset view
+      setCurrentJob(undefined);
+      setCurrentCompany(undefined);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [query]);
