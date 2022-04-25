@@ -13,6 +13,7 @@ export interface Job {
   remote?: boolean;
   aboutUs?: string;
   description: string;
+  responsibilities?: string;
   requirements?: string;
   offer?: string;
   applyLink?: string;

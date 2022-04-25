@@ -29,7 +29,7 @@ import NetworkLogos from "../layout/NetworkLogos";
 import StyledTag from "../layout/StyledTag";
 
 import JobCreatedFrom from "./JobCreatedFrom";
-import JobDetailSection from "./JobDetailSection";
+import JobDetailSections from "./JobDetailSections";
 import JobListRaw from "./JobListRaw";
 
 interface Props {
@@ -210,22 +210,7 @@ const JobTable: FC<Props> = ({ companies, jobs, observe, onFilterChanged }) => {
                   <StyledTag key={tag} value={tag} size="md" />
                 ))}
               </Stack>
-              <JobDetailSection
-                label={t.jobs.aboutUs || "About us"}
-                value={currentJob.aboutUs}
-              />
-              <JobDetailSection
-                label={t.jobs.description || "Description"}
-                value={currentJob.description}
-              />
-              <JobDetailSection
-                label={t.jobs.requirements || "Requirements"}
-                value={currentJob.requirements}
-              />
-              <JobDetailSection
-                label={t.jobs.offer || "We offer"}
-                value={currentJob.offer}
-              />
+              <JobDetailSections currentJob={currentJob} />
               <HStack
                 spacing={1}
                 my={4}

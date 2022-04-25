@@ -77,6 +77,59 @@ const allCompanies: Company[] = [
     },
     logo: "oasis.png",
   },
+  {
+    id: 7,
+    name: "StarkWare",
+    network: {
+      website: "https://starkware.co/",
+      github: "https://github.com/starkware-libs/",
+      twitter: "https://twitter.com/StarkWareLtd/",
+      medium: "",
+      discord: "https://medium.com/starkware",
+      telegram: "",
+    },
+    logo: "starkware.png",
+  },
+  {
+    id: 8,
+    name: "Immutable",
+    logo: "immutablex.png",
+    network: {
+      website: "https://www.immutable.com/",
+      github: "",
+      twitter: "https://twitter.com/Immutable",
+      medium: "",
+      discord: "https://discord.com/invite/6GjgPkp464",
+      telegram: "",
+    },
+  },
+  {
+    id: 9,
+    name: "Phi",
+    logo: "phi.jpeg",
+    network: {
+      website:
+        "https://phi-xyz.notion.site/phi-xyz/532af6de66e64c7c883d552d301b8020",
+      github: "",
+      twitter: "https://twitter.com/phi_xyz",
+      medium: "",
+      discord: "",
+      telegram: "",
+    },
+  },
+  {
+    id: 10,
+    name: "Argent X",
+    logo: "argent-x.svg",
+    network: {
+      website: "https://www.argent.xyz/argent-x/",
+      github: "https://github.com/argentlabs/argent-x",
+      twitter: "https://twitter.com/argentHQ",
+      medium: "",
+      discord: "",
+      telegram: "",
+    },
+  },
 ];
 
 export default allCompanies;
