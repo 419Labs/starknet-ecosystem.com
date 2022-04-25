@@ -6,3 +6,11 @@ body {
 #__next {
   height: 100%;
 }
+
+*{
+  -ms-overflow-style: none;
+  scrollbar-width: none;  /* Firefox */
+}
+::-webkit-scrollbar {
+  display: none;
+}

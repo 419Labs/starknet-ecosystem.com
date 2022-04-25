@@ -32,6 +32,9 @@ const translate: TranslateState = {
     wallet: "Portfel",
     starkex: "StarkEx",
   },
+  jobs: {
+    apply: "Apply now",
+  },
 };
 
 export default translate;

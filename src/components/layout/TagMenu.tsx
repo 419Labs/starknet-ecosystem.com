@@ -1,9 +1,9 @@
 import { Stack } from "@chakra-ui/layout";
-import { Tag as ChakraTag } from "@chakra-ui/react";
 import { useState } from "react";
 
 import type { Tag } from "../../../data/tag";
-import { useTranslate } from "../../context/TranslateProvider";
+
+import StyledTag from "./StyledTag";
 
 interface TagMenuProps {
   tags: Tag[];
@@ -11,7 +11,6 @@ interface TagMenuProps {
   onChange: (tag: Tag) => void;
 }
 function TagMenu({ tags, initialValue, onChange }: TagMenuProps) {
-  const { t } = useTranslate();
   const [selectedValue, setSelectedValue] = useState<Tag>(initialValue);
 
   const tagClicked = (newTag: Tag) => {
@@ -28,27 +27,12 @@ function TagMenu({ tags, initialValue, onChange }: TagMenuProps) {
       justify="center"
     >
       {tags.map((tag: Tag) => (
-        <ChakraTag
-          mt={2}
-          size="lg"
+        <StyledTag
           key={tag.value}
-          variant="solid"
-          cursor="pointer"
+          value={tag.value}
           onClick={() => tagClicked(tag)}
-          bg={selectedValue.value === tag.value ? "brand.900" : "whiteAlpha"}
-          border="1px solid"
-          borderColor={
-            selectedValue.value === tag.value ? "transparent" : "whiteAlpha.300"
-          }
-          _hover={{
-            background:
-              selectedValue.value === tag.value
-                ? "brand.900"
-                : "whiteAlpha.100",
-          }}
-        >
-          {t.tags[tag.value]}
-        </ChakraTag>
+          selected={selectedValue.value === tag.value}
+        />
       ))}
     </Stack>
   );

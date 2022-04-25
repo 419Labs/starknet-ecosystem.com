@@ -3,6 +3,7 @@ import { Styles } from "@chakra-ui/theme-tools";
 
 import colors from "./colors";
 import Button from "./components/button";
+import Input from "./components/input";
 import fonts from "./fonts";
 
 const globalStyles: Styles = {
@@ -27,6 +28,7 @@ const customTheme = extendTheme({
   styles: globalStyles,
   components: {
     Button,
+    Input,
   },
 });
 
