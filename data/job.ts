@@ -195,7 +195,7 @@ const allJobs: Array<Job> = [
       "https://zkpad.notion.site/UI-UX-Designer-55ce7ece2d944b42abf6abda9633f454",
   },
   {
-    key: "6",
+    key: "7",
     title: "StarkNet Developer Advocate",
     companyId: 7,
     tags: [],
@@ -227,7 +227,7 @@ const allJobs: Array<Job> = [
     applyLink: "mailto:jobs@starkware.co",
   },
   {
-    key: "7",
+    key: "8",
     title: "Protocol Engineer",
     companyId: 8,
     tags: [],
@@ -241,7 +241,7 @@ const allJobs: Array<Job> = [
     applyLink: "mailto:ignatius.widjaja@immutable.com",
   },
   {
-    key: "8",
+    key: "9",
     title: "Front-End Dev",
     companyId: 9,
     tags: ["frontend"],
@@ -271,7 +271,7 @@ const allJobs: Array<Job> = [
       "https://phi-xyz.notion.site/FrontEnd-Dev-dfd92611212f4c1fb232d489eaf657ee",
   },
   {
-    key: "9",
+    key: "10",
     title: "Back-End Dev",
     companyId: 9,
     tags: ["backend"],
@@ -300,7 +300,7 @@ const allJobs: Array<Job> = [
       "https://phi-xyz.notion.site/BackEnd-Dev-ffe6b8b7ae4c401bb4d1be1fd0520765",
   },
   {
-    key: "10",
+    key: "11",
     title: "JavaScript/Typescript Engineer",
     companyId: 10,
     tags: ["javascript"],
@@ -338,7 +338,7 @@ const allJobs: Array<Job> = [
     applyLink: "https://apply.workable.com/argenthq/j/E6F396D02C/apply/",
   },
   {
-    key: "11",
+    key: "12",
     title: "JavaScript/Typescript Developer",
     companyId: 11,
     tags: ["javascript", "typescript", "web3.js", "ether.js"],
