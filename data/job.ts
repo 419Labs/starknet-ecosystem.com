@@ -3,6 +3,46 @@ import type { Job } from "../src/models/job";
 const allJobs: Array<Job> = [
   {
     key: "1",
+    title: "Product Lead - Argent X",
+    companyId: 10,
+    tags: ["Product", "Argent X"],
+    location: "Remote (Europe)",
+    remote: true,
+    description:
+      "Own Argent X’s development and redefine what’s possible in crypto, pushing the boundaries of security and ease of use.\n" +
+      "\n" +
+      "Argent X is an open source browser wallet. It's the first wallet for StarkNet, a breakthrough network that offers unlimited scale without compromising on security.\n" +
+      "\n" +
+      "The aim is to move the needle for the adoption of self-custody. Argent X is in alpha, and StarkNet is still on testnet, but it already has 60,000 users. Transaction volume is also exploding.\n" +
+      "\n" +
+      "So join us on Day 1 and shape the future of money and the internet.",
+    responsibilities:
+      "What you’ll be doing\n\n" +
+      "- Oversee Argent X’s development from ideation to execution. With a constant focus on delighting users.\n" +
+      "- Collaborate extensively with StarkWare, the team behind StarkNet, as well as some of the world’s most exciting Dapp developers and founders.\n" +
+      "- Work alongside Argent’s founders, giving clear product requirements and roadmaps to our engineers and designers.\n" +
+      "- Define product goals, track performance and remove roadblocks.\n" +
+      "If you’re successful in the role you’ll have played a pivotal part in bringing the benefits of crypto to tens of millions more people.",
+    requirements:
+      "- 3 years experience shipping world class products\n" +
+      "- Deeply passionate about user experience.\n" +
+      "- Professional crypto experience is NOT needed, but you do need to be a Dapp user that's familiar with browser, hardware and mobile wallets. Ideally you'd also be heavily immersed in the ecosystem, following developments on scaling and trying new projects.\n" +
+      "- Strong expertise with analytics to understand user journeys and usage\n" +
+      "- Experience managing sprints, prioritising development and coordinating releases\n" +
+      "- Entrepreneurial, spotting opportunities for our growth",
+    offer:
+      "- Work remotely anywhere in Europe (but Europe only). No commute. Lots of flexibility. Plenty of time to care for your kids or cats.\n" +
+      "- Equity in a high growth startup backed by the investors of Spotify and Slack.\n" +
+      "- Autonomy: you decide how to achieve your best work.\n" +
+      "- Trips across Europe: for one week every three months we collaborate in person, explore new solutions and have fun. So far we’ve stayed in Nice, Toulouse, Brussels, Lisbon and Barcelona. We'll resume these when safe following COVID.\n" +
+      "- Equipment: pick the tech setup of your choice.\n" +
+      "- Parental leave: generous package for new parents.\n" +
+      "- Build a new industry: help define the future of the web.",
+    createdOn: new Date("2022-04-20"),
+    applyLink: "https://apply.workable.com/argenthq/j/56600045EE/",
+  },
+  {
+    key: "2",
     title: "Head of Growth",
     companyId: 2,
     tags: [],
@@ -28,10 +68,10 @@ const allJobs: Array<Job> = [
     createdOn: new Date("2022-04-25"),
   },
   {
-    key: "2",
-    title: "Senior Smart Contract Engineer for Starknet",
+    key: "3",
+    title: "Senior Smart Contract Engineer for StarkNet",
     companyId: 5,
-    tags: ["Cairo", "Solidity", "Web3"],
+    tags: ["Cairo", "Solidity", "Web3", "StarkNet"],
     location: "Remote",
     remote: true,
     aboutUs:
@@ -75,7 +115,7 @@ const allJobs: Array<Job> = [
     createdOn: new Date("2022-01-25"),
   },
   {
-    key: "3",
+    key: "4",
     title: "Blockchain/Full Stack Devs",
     companyId: 6,
     tags: [],
@@ -88,7 +128,74 @@ const allJobs: Array<Job> = [
     applyLink: "mailto:jobs@playoasis.xyz",
   },
   {
-    key: "4",
+    key: "5",
+    title: "Senior Software Engineer",
+    companyId: 3,
+    tags: ["typescript", "docker", "serverless"],
+    location: "Remote",
+    remote: true,
+    description:
+      "We are looking for a full-stack developer to join our team and help build out the project’s infrastructure. At its core, you will be responsible for building some of the key components of the protocol including front-end as well as back-end smart contract development. The position will report into our Tech Lead and will work closely with other Software Engineers, the Product Manager, as well as the Business team.",
+    requirements:
+      "- 0-5 years of work experience as a developer (fresh grads welcome!)\n" +
+      "- Interest in blockchain, DeFi and Web 3, prior knowledge preferred but not required\n" +
+      "Languages\n" +
+      "- Must: TypeScript (with Node.js) \t\n" +
+      "- Bonus: Solidity, Go\n" +
+      "Tools & Frameworks:\n" +
+      "- Must: Docker, Serverless Computing (Cloudflare Workers in particular)\n" +
+      "- Bonus: CI/CD\n" +
+      "- Flexible to work +8 GMT timezone\n",
+    offer:
+      "- Flexible working arrangements (must reside in HK most of the time)\n" +
+      "- Team of young, energetic, and international people\n" +
+      "- Spacious office located at the heart of Tsim Sha Tsui\n" +
+      "- Competitive salary + team tokens\n",
+    createdOn: new Date("2022-04-01"),
+    applyLink:
+      "https://docs.google.com/document/d/1HC_9pH7YoQZ0lc6KIJ0TRXvs4yA010Qt_Hn-H-0DUEw/edit",
+  },
+  {
+    key: "6",
+    title: "UI/UX Designer",
+    companyId: 12,
+    tags: ["ui", "ux", "design"],
+    location: "Remote",
+    remote: true,
+    description:
+      "- Collaborate with key product stakeholders regularly to define requirements and prioritize key product features.\n" +
+      "- Collaborate with developers, PMs, and marketing to define and design the best possible experience for the user.\n" +
+      "- Communicate design ideas to stakeholders, developers, and PMs through task flow diagrams, user journeys/scenarios, as well as low and high-fidelity wireframes and mockups on figma.\n" +
+      "- Present and defend designs and key milestone deliverables to appropriate teams.\n" +
+      "- Working with development teams to execute best design solutions within technology constraints.\n" +
+      "- Conduct user research and evaluate feedback.\n" +
+      "- Determine user needs by conducting user interviews with real users.\n" +
+      "- Create and run ideation workshops in support of new product explorations.\n" +
+      "- Create rapid and iterative wireframes for prototyping for various ideas and concepts.\n" +
+      "- Facilitate usability testing and evaluate user feedback to improve the concept or existing products further.\n" +
+      "- Evaluate the user experience design of existing design concepts and on-device prototypes, and communicate design enhancements.\n" +
+      "- Research interaction design trends.\n" +
+      "- Research technology trends.\n" +
+      "- Operating prototyping, wireframing as well as designing the whole process end-to-end.",
+    requirements:
+      "- Proficiency with User Experience (UX) processes, interaction and User Interface Design (UI).\n" +
+      "- Strong Visual Design skills. Understanding of Front-end development is a plus.\n" +
+      "- Understanding of digital platform usability principles with a portfolio of projects to demonstrate it.\n" +
+      "- Solid written and verbal communication skills with the ability to present a strong rationale for design decisions.\n" +
+      "- Excellent time management and organizational skills.\n" +
+      "- Accuracy and attention to detail. An understanding of the latest design trends.\n" +
+      "- Experience working in an Agile Team (preferably SCRUM) will be advantageous.\n" +
+      "- Previous experience working in web3 is a plus.",
+    offer:
+      "- Fully remote\n" +
+      "- Competitive salary\n" +
+      "- Sharpen your skillsets from other senior high-performing individuals",
+    createdOn: new Date("2022-03-01"),
+    applyLink:
+      "https://zkpad.notion.site/UI-UX-Designer-55ce7ece2d944b42abf6abda9633f454",
+  },
+  {
+    key: "6",
     title: "StarkNet Developer Advocate",
     companyId: 7,
     tags: [],
@@ -120,7 +227,7 @@ const allJobs: Array<Job> = [
     applyLink: "mailto:jobs@starkware.co",
   },
   {
-    key: "5",
+    key: "7",
     title: "Protocol Engineer",
     companyId: 8,
     tags: [],
@@ -134,7 +241,7 @@ const allJobs: Array<Job> = [
     applyLink: "mailto:ignatius.widjaja@immutable.com",
   },
   {
-    key: "6",
+    key: "8",
     title: "Front-End Dev",
     companyId: 9,
     tags: ["frontend"],
@@ -164,7 +271,7 @@ const allJobs: Array<Job> = [
       "https://phi-xyz.notion.site/FrontEnd-Dev-dfd92611212f4c1fb232d489eaf657ee",
   },
   {
-    key: "7",
+    key: "9",
     title: "Back-End Dev",
     companyId: 9,
     tags: ["backend"],
@@ -193,7 +300,7 @@ const allJobs: Array<Job> = [
       "https://phi-xyz.notion.site/BackEnd-Dev-ffe6b8b7ae4c401bb4d1be1fd0520765",
   },
   {
-    key: "8",
+    key: "10",
     title: "JavaScript/Typescript Engineer",
     companyId: 10,
     tags: ["javascript"],
@@ -229,6 +336,33 @@ const allJobs: Array<Job> = [
       "– Node.js",
     createdOn: new Date("2022-01-26"),
     applyLink: "https://apply.workable.com/argenthq/j/E6F396D02C/apply/",
+  },
+  {
+    key: "11",
+    title: "JavaScript/Typescript Developer",
+    companyId: 11,
+    tags: ["javascript", "typescript", "web3.js", "ether.js"],
+    location: "Remote",
+    remote: true,
+    description:
+      "You will be a developer within the StarkNet team, so some of the responsibilities on this project include: \n" +
+      "\n" +
+      "- Analyzing, designing, and developing software features and enhancements\n" +
+      "- Participating in software design meetings and analyzing user needs to determine technical requirements\n" +
+      "- Providing solid technical solutions to complex issues whilst helping us deliver the best user experience and improve our product\n" +
+      "- Resolving the challenging technical and application problems of the project",
+    requirements:
+      "To qualify for the role, you should have:\n" +
+      "- 2+ years of professional experience working with JavaScript/TypeScript\n" +
+      "- Strong organizational skills\n" +
+      "- Excellent verbal communication skills\n" +
+      "\n" +
+      "Added bonus if you have:\n" +
+      "\n" +
+      "- Familiarity with Blockchain JavaScript libraries (web3.js or ether.js)\n" +
+      "- Experience in developing npm packages and JS tools",
+    createdOn: new Date("2022-03-26"),
+    applyLink: "https://shardlabs.bamboohr.com/jobs/view.php?id=31",
   },
 ];
 
