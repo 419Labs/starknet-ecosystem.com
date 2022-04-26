@@ -130,6 +130,32 @@ const allCompanies: Company[] = [
       telegram: "",
     },
   },
+  {
+    id: 11,
+    name: "Shard Labs",
+    logo: "shardlabs.svg",
+    network: {
+      website: "https://shardlabs.io/",
+      github: "https://github.com/Shard-Labs",
+      twitter: "https://twitter.com/shard_labs",
+      medium: "",
+      discord: "https://discord.com/invite/WJrb5CqftT",
+      telegram: "",
+    },
+  },
+  {
+    id: 12,
+    name: "ZkPad",
+    logo: "zkpad.png",
+    network: {
+      website: "https://zkpad.io/",
+      github: "",
+      twitter: "https://twitter.com/ZKPadfi",
+      medium: "",
+      discord: "https://discord.com/invite/zkpad",
+      telegram: "https://t.me/zkpad",
+    },
+  },
 ];
 
 export default allCompanies;
