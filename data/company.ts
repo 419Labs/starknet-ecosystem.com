@@ -156,6 +156,14 @@ const allCompanies: Company[] = [
       telegram: "https://t.me/zkpad",
     },
   },
+  {
+    id: 13,
+    name: "Briq",
+    logo: "briq.png",
+    network: {
+      website: "https://briq.construction/"
+    }
+  }
 ];
 
 export default allCompanies;
