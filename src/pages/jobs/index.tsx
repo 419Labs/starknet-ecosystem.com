@@ -45,6 +45,7 @@ const JobsPage: NextPage = () => {
     <Flex direction="column" w="full" h="full">
       {/* Big intro text */}
       <Text
+        as="h1"
         textAlign="center"
         lineHeight={1.2}
         fontSize={["48px", "68px"]}

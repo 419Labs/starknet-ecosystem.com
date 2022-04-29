@@ -134,7 +134,7 @@ const JobTable: FC<Props> = ({ companies, jobs, observe, onFilterChanged }) => {
             <Flex p={4} direction="column" maxH="0px">
               {/* Wrapped in screen */}
               <Flex direction="row" align="center">
-                <Text fontSize="2xl" fontWeight="black">
+                <Text as="h2" fontSize="2xl" fontWeight="black">
                   {currentJob.title}
                 </Text>
                 <Box h="80%" w="1px" bg="gray.600" mx={4} />
