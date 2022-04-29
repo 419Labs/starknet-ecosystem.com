@@ -821,6 +821,23 @@ export const allProjects: Array<Project> = [
     isTestnetLive: true,
   },
   {
+    name: "Braavos",
+    short_name: "Braavos",
+    description: "All in one assets management - DeFi and NFTs",
+    tags: ["wallet", "defi", "nft"],
+    logo: "braavos.svg",
+    network: {
+      website: "https://braavos.app/",
+      github: "https://github.com/myBraavos",
+      twitter: "https://twitter.com/myBraavos",
+      medium: "",
+      discord: "https://discord.gg/ZrtCHK3t",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: true,
+  },
+  {
     name: "Hardhat Plugin",
     short_name: "Hardhat Plugin",
     description: "Hardhat Plugin",
