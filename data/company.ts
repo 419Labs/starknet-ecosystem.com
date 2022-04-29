@@ -156,6 +156,20 @@ const allCompanies: Company[] = [
       telegram: "https://t.me/zkpad",
     },
   },
+  {
+    id: 13,
+    name: "Braavos",
+    logo: "braavos.svg",
+    network: {
+      website: "https://braavos.app/",
+      github: "https://github.com/myBraavos",
+      twitter: "https://twitter.com/myBraavos",
+      medium: "",
+      discord: "https://discord.gg/ZrtCHK3t",
+      telegram: "",
+    },
+  },
+
 ];
 
 export default allCompanies;
