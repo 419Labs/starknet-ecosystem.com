@@ -11,6 +11,7 @@ const JobDetailSection: FC<Props> = ({ label, value }) => {
   return (
     <Box my={4}>
       <Text
+        as="h3"
         borderBottom="1px solid"
         borderColor="whiteAlpha.200"
         fontSize="xl"

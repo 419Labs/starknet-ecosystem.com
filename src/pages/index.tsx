@@ -61,6 +61,7 @@ const Home: NextPage = () => {
     >
       {/* Big intro text */}
       <Text
+        as="h1"
         mt={12}
         textAlign="center"
         lineHeight={1.2}

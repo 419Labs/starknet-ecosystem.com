@@ -101,7 +101,7 @@ function CardProject({ project, isFlipped, onClick }: CardProjectProps) {
                 fallback={renderFallbackIcon()}
               />
             </Flex>
-            <Text my={8} fontSize="xl" fontWeight="bold">
+            <Text as="h2" my={8} fontSize="xl" fontWeight="bold">
               {name}
             </Text>
             <Flex direction="row" wrap="wrap">
