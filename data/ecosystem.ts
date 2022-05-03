@@ -1080,4 +1080,23 @@ export const allProjects: Array<Project> = [
     isLive: false,
     isTestnetLive: false,
   },
+  {
+    name: "Bravoos",
+    short_name: "bravos",
+    description:
+      "iuhjob",
+    tags: ["defi", "GameFi"],
+    logo: "vip.png",
+    network: {
+      website: "http://www.venus.town/",
+      github: "https://github.com/VenusOrg",
+      twitter: "https://twitter.com/ProtocolVenus",
+      medium: "",
+      discord:
+        "https://discord.com/channels/892753619424796724/929023725293174855",
+      telegram: "",
+    },
+    isLive: false,
+    isTestnetLive: false,
+  },
 ];
