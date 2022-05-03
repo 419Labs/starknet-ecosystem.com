@@ -364,6 +364,66 @@ const allJobs: Array<Job> = [
     createdOn: new Date("2022-03-26"),
     applyLink: "https://shardlabs.bamboohr.com/jobs/view.php?id=31",
   },
+  {
+    key: "13",
+    title: "Cairo Developer",
+    companyId: 14,
+    tags: ["Cairo", "Solidity", "Vyper"],
+    location: "Remote",
+    remote: true,
+    description:
+      "Everyone knows that solving scaling is one of the most critical topics in Ethereum today.\n" +
+      "To that end, the Nubia team at Nethermind has been working with StarkWare on Warp, a Solidity/Vyper -> Cairo transpiler.\n" +
+      "Cairo is a great language, but many existing protocols cannot switch to a new language due to time/money/talent constraints.\n" +
+      "To help solve the lack of talent, we are hiring for software engineers interested in Cairo.\n" +
+      "\n" +
+      "At the Nubia team, you'll get to work with some of the most talented people in the Ethereum ecosystem (StarkWare), work at the bleeding edge of L2 technology, help solve one of Ethereum's most significant problems (scaling)\n" +
+      "All while learning things you probably wouldn't discover anywhere else.",
+    requirements:
+      "Essential:\n" +
+      "- Experience writing production in any low-level programming language\n" +
+      "- Interest in Ethereum or blockchain in general, either on a commercial or personal basis is a must\n" +
+      "- Experience deploying and interacting with smart contacts on Ethereum, either on a commercial or personal basis is a must\n" +
+      "\n" +
+      "Nice to have:\n" +
+      "\n" +
+      "- Knowledge of the EVM\n" +
+      "- Understanding of how the Ethereum protocol works\n" +
+      "- Knowledge of Solidity/Vyper and their related tools\n" +
+      "- High-level understanding of ZK-SNARKS & STARKS",
+    createdOn: new Date("2022-05-02"),
+    applyLink: "https://boards.eu.greenhouse.io/nethermind/jobs/4010880101",
+  },
+  {
+    key: "14",
+    title: "Cairo Auditor",
+    companyId: 14,
+    tags: ["Cairo", "Solidity", "JavaScript", "TypeScript", "Python"],
+    location: "Remote",
+    remote: true,
+    description:
+      "We’re looking for developers with smart contract auditing experience/knowledge to join our newly fledged Cairo smart contract Auditing team.\n" +
+      "You’ll get the opportunity to work at the bleeding edge of blockchain technology by auditing StarkNet protocols and building cutting-edge security-related tooling for Cairo, StarkNet’s native smart contract language.\n" +
+      "Cairo is a great language, but many existing protocols cannot switch to a new language due to time/money/talent constraints.\n" +
+      "\n" +
+      "Responsibilities\n" +
+      "- Work directly with the leading protocols in the StarkNet ecosystem to review their code and help secure their protocols\n" +
+      "- Design and implement solutions & tooling for difficult engineering and security analysis problems\n" +
+      "- Collaborate with teammates to maintain and continually improve our existing Cairo security tools using modern software engineering practices\n" +
+      "- Develop new Cairo/StarkNet security tools",
+    requirements:
+      "- 1+ year of experience in Solidity security analysis\n" +
+      "- Solid understanding of the Ethereum Virtual Machine and Yellow Paper\n" +
+      "- Fluency in Solidity development and the deployment of smart contracts\n" +
+      "- High-level understanding of common smart contract vulnerabilities\n" +
+      "Strong debugging skills and/or experience in reverse engineering\n" +
+      "\n" +
+      "Nice to have:\n" +
+      "- Multiple years of prior experience in traditional cybersecurity (before transitioning to the blockchain space)\n" +
+      "- Experience in Python, JavaScript, and TypeScript.",
+    createdOn: new Date("2022-05-02"),
+    applyLink: "https://boards.eu.greenhouse.io/nethermind/jobs/4026450101",
+  },
 ];
 
 export default allJobs;
