@@ -1080,4 +1080,22 @@ export const allProjects: Array<Project> = [
     isLive: false,
     isTestnetLive: false,
   },
+  {
+    name: "Stork Oracle Network",
+    short_name: "Stork",
+    description:
+      "Stork is an oracle network for StarkEx and StarkNet, providing low latency off-chain price quotes from multiple trusted",
+    tags: ["defi"],
+    logo: "stork.png",
+    network: {
+      website: "https://stork.network",
+      github: "",
+      twitter: ""
+      medium: "",
+      discord: ""
+      telegram: "",
+    },
+    isLive: false,
+    isTestnetLive: false,
+  },
 ];
