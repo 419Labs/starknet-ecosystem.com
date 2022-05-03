@@ -1090,9 +1090,9 @@ export const allProjects: Array<Project> = [
     network: {
       website: "https://stork.network",
       github: "",
-      twitter: ""
+      twitter: "",
       medium: "https://medium.com/@stork-oracle",
-      discord: ""
+      discord: "",
       telegram: "",
     },
     isLive: false,
