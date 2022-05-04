@@ -172,6 +172,7 @@ const allCompanies: Company[] = [
   {
     id: 14,
     name: "Nethermind",
+    logo: "nethermind.png",
     network: {
       website: "https://nethermind.io/",
       github: "https://github.com/NethermindEth",
