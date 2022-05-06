@@ -424,6 +424,139 @@ const allJobs: Array<Job> = [
     createdOn: new Date("2022-05-02"),
     applyLink: "https://boards.eu.greenhouse.io/nethermind/jobs/4026450101",
   },
+  {
+    key: "15",
+    title: "Senior Software Developer - Solidity / Cairo",
+    companyId: 2,
+    tags: ["Cairo", "Solidity", "AWS", "Node.js"],
+    location: "Remote",
+    remote: true,
+    description:
+      "ZKX is developing a decentralized derivatives protocol on Starknet, the upcoming ZK-rollup by Starkware.\n" +
+      "Offering an innovative permissionless protocol for perpetual swaps, ZKX will bring unique complex trading strategies to a simplified and fun trading environment.\n" +
+      "This is a remote position with travel opportunities and the chance to work on an innovative DeFi project. Join us on the journey to Web3!\n" +
+      "\n" +
+      "Responsibilities\n" +
+      "- Design and development of Solidity and Cairo Smart contracts (Ethereum Layer-1, StarkWare Layer-2)\n" +
+      "- Architecture and design of smart-contracts ecosystem\n" +
+      "- Integration with internal and 3rd-party services",
+    requirements:
+      "- Commercial experience in Blockchain development (including Ethereum)\n" +
+      "- Commercial experience in developing complex applications (before you became a blockchain engineer)\n" +
+      "- Commercial experience in developing decentralized applications (would be a plus)\n" +
+      "- Experience in agile/scrum methodology\n" +
+      "- Strong debugging skills and/or experience in reverse engineering\n" +
+      "\n" +
+      "Nice to have:\n" +
+      "- Multiple years of prior experience in traditional cybersecurity (before transitioning to the blockchain space)\n" +
+      "- Understanding of the engineering principles of developing robust applications, practical application of methodologies, algorithms\n" +
+      "- Understanding of financial markets and derivatives will be valued.",
+    createdOn: new Date("2022-04-22"),
+    applyLink: "https://apply.workable.com/zkx/j/FF60C0DB6C/",
+   },
+   {
+    key: "16",
+    title: "UI-UX Lead Designer / UI-UX Senior Engineer / Senior Web-designer",
+    companyId: 2,
+    tags: ["UI/UX",],
+    location: "Remote",
+    remote: true,
+    description:
+      "ZKX is developing a decentralized derivatives protocol on Starknet, the upcoming ZK-rollup by Starkware.\n" +
+      "Offering an innovative permissionless protocol for perpetual swaps, ZKX will bring unique complex trading strategies to a simplified and fun trading environment.\n" +
+      "This is a remote position with travel opportunities and the chance to work on an innovative DeFi project. Join us on the journey to Web3!\n" +
+      "\n" +
+      "Responsibilities\n" +
+      "- Lead the design and user-experience of a new product in financial services\n" +
+      "- Design beautiful and functional graphical interfaces for applications and websites - B2B and B2C web applications, mobile applications\n" +
+      "- Development of design concepts for web and mobile applications and interfaces driver by personas, user-stories and user experience\n" +
+      "- Developing user scripts, design layouts, development of user-first interfaces and widgets\n" +
+      "- Work in a friendly team in close collaboration with developers, PM, PO, QA\n" +
+      "- Participation in the planning and discussion of projects\n" +
+      "- Interaction with the development team for the implementation and development of the prepared design concept",
+    requirements:
+      "- 3+ years of work experience and professional knowledge of Figma, Sketch, Adobe Creative Suite (Photoshop, Illustrator, InDesign) and related tools\n" +
+      "- 2+ years of experience in creating UI / UX for SaaS, interface development, web and mobile application development\n" +
+      "- Good understanding of the technical possibilities and limitations of the design and its applicability\n" +
+      "- Ability to analyse and develop data-driven layout / UI user scenarios\n" +
+      "- Understanding the principles of UX, understanding the effective flow from the touch-point to the target action\n" +
+      "- Experience in using analytical tools – you design and develop using data\n" +
+      "- Creativity, responsibility and accuracy\n" +
+      "- Having a portfolio on Behance or similar – is a must\n" +
+      "\n" +
+      "We offer:\n" +
+      "- The ability to work remotely ALWAYS, not just now (we are remote-first company)\n" +
+      "- Professional growth opportunities and career prospects\n" +
+      "- Salary plus incentives package to align the team with the project's success",
+    createdOn: new Date("2022-04-22"),
+    applyLink: "https://apply.workable.com/zkx/j/0E3AABE10C/",
+  },
+  {
+    key: "17",
+    title: "Manual QA Engineer - Manual Testing / Quality Assurance / Quality Control",
+    companyId: 2,
+    tags: ["node.js", "Typescript", "React", "Redux", "Next.js"],
+    location: "Remote",
+    remote: true,
+    description:
+      "ZKX is developing high-load decentralized software systems for financial analytics and synthetic assets. We are looking for talented developers and engineers (in European and Asian time zones only) to work on the further development of our products. This is a remote position with travel opportunities and the chance to work for an innovative project in the blockchain space.\n" +
+      "\n" +
+      "Responsibilities\n" +
+      "- Lead the manual acceptance and regression testing of API, Web, Back-End applications\n" +
+      "- Work in an agile product team with a designer, PO, QA, BE developers\n" +
+      "- Run automated tests, analyze test run results on different environments\n" +
+      "- Create and maintain test documentation: detailed checklists and test cases\n" +
+      "- Work according to well-defined requirements (Jira), work in a result-oriented team.",
+    requirements:
+      "- Commercial experience as a Quality Control Engineer (3+ years)\n" +
+      "- Understanding QA and QC concepts\n" +
+      "- Experience in test design – development of software testing processes, development of test cases, definition of quality criteria and testing goals\n" +
+      "\n" +
+      "Nice to have:\n" +
+      "- Knowledge of Java or another programming language sufficient to write simple automated tests\n" +
+      "- Knowledge of the HTTP protocol and the REST concept, experience in testing API and HTTP services\n" +
+      "- Experience with Selenium, Selenide, TestNG/JUnit, Xpath and CSS",
+    createdOn: new Date("2022-04-22"),
+    applyLink: "https://apply.workable.com/zkx/j/8347B933EA/",
+  },
+  {
+    key: "18",
+    title: "VP of Engineering (Hands on)",
+    companyId: 2,
+    tags: ["node.js", "Typescript", "Go", "MongoDB"],
+    location: "Remote",
+    remote: true,
+    description:
+      "ZKX is developing a decentralized derivatives protocol on Starknet, the upcoming ZK-rollup by Starkware.\n" +
+      "Offering an innovative permissionless protocol for perpetual swaps, ZKX will bring unique complex trading strategies to a simplified and fun trading environment.\n" +
+      "This is a remote position with travel opportunities and the chance to work on an innovative DeFi project. Join us on the journey to Web3!\n" +
+      "\n" +
+      "Responsibilities\n" +
+      "- Develop high-load decentralized services architecture and its ecosystem\n" +
+      "- Maintain and optimize existing codebase\n" +
+      "- Test coverage\n" +
+      "- Architecture design\n" +
+      "- API design\n" +
+      "- Participate in solving problems and incidents in high-load systems\n" +
+      "- Integration with external services",
+    requirements:
+      "- Commercial experience in the development of Backend services and microservices\n" +
+      "- (high load and decentralised) is a MUST\n" +
+      "- Commercial Node.js/GO lang development experience (5+ years)\n" +
+      "- Commercial experience in high-load applications design and development\n" +
+      "- Commercial experience in developing decentralized applications\n" +
+      "- Excellent knowledge of object-oriented development\n" +
+      "- Good understanding of Service Oriented Architecture, Microservice Architecture\n" +
+      "- Experience in building complex RESTful APIs\n" +
+      "- Test Driven Development - TDD, CI / CD\n" +
+      "- Experience in agile/scrum methodology\n" +
+      "- Understanding of the engineering principles of developing robust applications\n" +
+      "- Practical application of methodologies, algorithms\n" +
+      "- Experience of blockchain technology\n" +
+      "- Background in a high growth start-up or scale-up",
+    createdOn: new Date("2022-04-22"),
+    applyLink: "https://apply.workable.com/zkx/j/6DEA9DB4E5/",
+  },
 ];
 
 export default allJobs;
