@@ -182,6 +182,19 @@ const allCompanies: Company[] = [
       telegram: "",
     },
   },
+  {
+    id: 15,
+    name: "Stork Oracle Network",
+    logo: "stork.png",
+    network: {
+      website: "https://stork.network",
+      github: "",
+      twitter: "",
+      medium: "https://medium.com/@stork-oracle",
+      discord: "",
+      telegram: "",
+    },
+  },
 
 
 ];

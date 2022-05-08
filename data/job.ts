@@ -557,6 +557,37 @@ const allJobs: Array<Job> = [
     createdOn: new Date("2022-04-22"),
     applyLink: "https://apply.workable.com/zkx/j/6DEA9DB4E5/",
   },
+  {
+    key: "19",
+    title: "Generalist Software Engineer",
+    companyId: 15,
+    tags: ["Cairo", "Solidity", "StarkNet"],
+    location: "San Francisco or Remote",
+    remote: true,
+    description:
+    "This is a perfect role for someone looking to solve new problems on the blockchain, get early production exposure to StarkNet ZK-rollups, and work with a closed-knit group of engineers and entrepreneurs." +
+    "A successful candidate will have a strong bias for “getting things done” (send us links to past projects if you have it!). There is no single “stack” experience required for this role, however, familiarity with the blockchain is required, and a strong academic or technical background will go a long way.\n" +
+    "If you’re on the fence about your fit for the role, take the risk and drop us a line. Worst case, you’ll make some new friends.\n"+
+    "\n" +
+    "Responsibilities\n" +
+    "- Building full-stack blockchain applications on StarkNet\n" +
+    "- Integrating with exchanges, data providers, and other APIs\n" +
+    "- Contributing to whitepapers and solving complex challenges related to decentralization, security, data reliability, and more\n" +
+    "\n" +
+    "We Offer\n" +
+    "- We’ve built successful startups before – you’ll get to work with smart, modest people\n" +
+    "- Competitive Compensation (base pay + team tokens)\n" +
+    "- If you’re in SF – an office, happy hours, team events, and more\n" +
+    "- Travel to conferences",
+    
+    requirements:
+    "- Strong technical and/or academic understanding of concepts of general computing, blockchain, Ethereum, and EVM\n" +
+    "- Experience with common languages used in the Web3 and DeFi stacks, such as Python, JavaScript, Go, Rust, Solidity, including associated libraries and tools (Web3.js, ether.js, Alchemy)\n" +
+    "- Examples of shipped “full-stack” Web3 applications, Solidity Contracts, Cairo projects, etc\n" +
+    "- Amazing: experience with Cairo",
+    createdOn: new Date("2022-05-08"),
+    applyLink: "info@stork.network",
+  },
 ];
 
 export default allJobs;
