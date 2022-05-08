@@ -169,6 +169,20 @@ const allCompanies: Company[] = [
       telegram: "",
     },
   },
+  {
+    id: 14,
+    name: "Nethermind",
+    logo: "nethermind.png",
+    network: {
+      website: "https://nethermind.io/",
+      github: "https://github.com/NethermindEth",
+      twitter: "https://twitter.com/nethermindeth",
+      medium: "https://medium.com/nethermind-eth",
+      discord: "https://discord.com/invite/PaCMRFdvWT",
+      telegram: "",
+    },
+  },
+
 
 ];
 
