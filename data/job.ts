@@ -386,7 +386,6 @@ const allJobs: Array<Job> = [
       "- Experience deploying and interacting with smart contacts on Ethereum, either on a commercial or personal basis is a must\n" +
       "\n" +
       "Nice to have:\n" +
-      "\n" +
       "- Knowledge of the EVM\n" +
       "- Understanding of how the Ethereum protocol works\n" +
       "- Knowledge of Solidity/Vyper and their related tools\n" +
@@ -556,6 +555,64 @@ const allJobs: Array<Job> = [
       "- Background in a high growth start-up or scale-up",
     createdOn: new Date("2022-04-22"),
     applyLink: "https://apply.workable.com/zkx/j/6DEA9DB4E5/",
+  },
+  {
+    key: "19",
+    title: "Head of Product Lead",
+    companyId: 15,
+    tags: ["gaming"],
+    location: "Remote",
+    remote: true,
+    description:
+      "The Technical and Product Lead will have an understanding of blockchain technology, specifically Layer 2s and zkRollups. They will lead technical projects that solve challenging technical problems. This includes writing design specifications, creating demonstrations, and managing teams of developers. They will have a high degree of autonomy to pursue their interests and build their own schedule, all while receiving competitive compensation and equity in Matchbox DAO.\n" +
+      "\n" +
+      "Responsibilities\n" +
+      "- Write technical specifications of blockchain gaming primitives\n" +
+      "- Lead dev teams building gaming utilities and components\n" +
+      "- Onboard and mentor research fellows to design and write about gaming primitives\n" +
+      "- Maintain and document repositories of primitives\n" +
+      "- Report directly to Matchbox lead (Yoni Ben Shimon)",
+    requirements:
+      "- You are a technical product manager with 2+ years of experience\n" +
+      "- You have experience managing and coordinating programmers\n" +
+      "- You have a comprehension of blockchain technology\n" +
+      "- You are passionate about gaming and the future of online games\n" +
+      "\n" +
+      "Nice to have:\n" +
+      "- Introductory knowledge to zkRollups and StarkNet\n" +
+      "- Experience with Cairo (StarkNet’s native programming language)",
+    createdOn: new Date(""),
+    applyLink: "https://www.notion.so/Hiring-Matchbox-DAO-head-of-Product-Lead-59c6cecf35624d6c87a422482496ba4a",
+  },
+  {
+    key: "20",
+    title: "Program Manager",
+    companyId: 15,
+    tags: ["gaming"],
+    location: "Remote",
+    remote: true,
+    description:
+      "Matchbox DAO envisions itself as the primary ecosystem for web3 game builders. Currently, we are a thriving community of developers and content creators who are passionate about on-chain gaming. We are looking for a technical product manager to lead a variety of Matchbox’s technical projects. \n" +
+      "\n" +
+      "The accelerator Lead will have an understanding of blockchain technology, specifically Layer 2s and zkRollups. They will accept teams that solve challenging technical problems.\n" +
+      "\n" +
+      "This includes interviewing the new candidates and evaluating their technical and product acumen.  They will have a high degree of autonomy to pursue their interests and build their own schedule, all while receiving competitive compensation and equity in Matchbox DAO.\n" +
+      "\n" +
+      "Responsibilities\n" +
+      "- Evaluate and judge teams that get into the accelerator\n" +
+      "- Help build the launch strategy to matchbox and its projects\n" +
+      "- Creating flows for them\n" +
+      "- Onboard and mentor research fellows to design and write about gaming primitives",
+    requirements:
+      "- You have a comprehension of blockchain technology\n" +
+      "- You have experience working with teams\n" +
+      "- You are passionate about gaming and the future of online games\n" +
+      "\n" +
+      "Nice to have:\n" +
+      "- Introductory knowledge to zkRollups and StarkNet\n" +
+      "- Experience with Cairo (StarkNet’s native programming language)",
+    createdOn: new Date(""),
+    applyLink: "https://www.notion.so/Hiring-Matchbox-program-manager-28440dab9f4142818ccb8f4db8484f21",
   },
 ];
 
