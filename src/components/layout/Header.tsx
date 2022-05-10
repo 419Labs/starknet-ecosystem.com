@@ -1,7 +1,6 @@
 import { Box, Flex, Link } from "@chakra-ui/layout";
 import { Button, Hide } from "@chakra-ui/react";
-import { faBars } from "@fortawesome/pro-regular-svg-icons";
-import { faChevronDown } from "@fortawesome/pro-solid-svg-icons";
+import { faBars, faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import NextLink from "next/link";
 import { useState } from "react";

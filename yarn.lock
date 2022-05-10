@@ -1111,41 +1111,6 @@
   dependencies:
     "@fortawesome/fontawesome-common-types" "^0.3.0"
 
-"@fortawesome/pro-duotone-svg-icons@^6.0.0":
-  version "6.0.0"
-  resolved "https://npm.fontawesome.com/@fortawesome/pro-duotone-svg-icons/-/6.0.0/pro-duotone-svg-icons-6.0.0.tgz#e59b7fe1272119ae318f67e6f114916bc452d57a"
-  integrity sha512-gq/psAzWxv+Vuu50HYcj2VuBa9PGWljmEPih7PwPWbgSEPBO07wvhXcNXDLU+qZe7m1oNKAY5ke9gN7+qpYsjA==
-  dependencies:
-    "@fortawesome/fontawesome-common-types" "^0.3.0"
-
-"@fortawesome/pro-light-svg-icons@^6.0.0":
-  version "6.0.0"
-  resolved "https://npm.fontawesome.com/@fortawesome/pro-light-svg-icons/-/6.0.0/pro-light-svg-icons-6.0.0.tgz#a1ab920613bb8008444e1130a67beb4fd5a8ee40"
-  integrity sha512-8xeNlCHnMi1+fJu15jTQ2/xpa1Q9DMYDZ+j7yYOQj342Dqzi5PEP24InhuZUNGS7z2Cc1fvbO9lL2cDgNamndg==
-  dependencies:
-    "@fortawesome/fontawesome-common-types" "^0.3.0"
-
-"@fortawesome/pro-regular-svg-icons@^6.0.0":
-  version "6.0.0"
-  resolved "https://npm.fontawesome.com/@fortawesome/pro-regular-svg-icons/-/6.0.0/pro-regular-svg-icons-6.0.0.tgz#af0e5f59550d296721a71016dfcffd9b94d9cd38"
-  integrity sha512-4ox5iig6bb5Yl2YsJdcD7JnsCeMkZaQjx7SIPoFTy13QPkCCjvkhyNDM1o8j+Rg9PHkloNK//Jm53mGS6Qf9Ww==
-  dependencies:
-    "@fortawesome/fontawesome-common-types" "^0.3.0"
-
-"@fortawesome/pro-solid-svg-icons@^6.0.0":
-  version "6.0.0"
-  resolved "https://npm.fontawesome.com/@fortawesome/pro-solid-svg-icons/-/6.0.0/pro-solid-svg-icons-6.0.0.tgz#ef4d702cf257df7da987338cc68fe7dadf405c41"
-  integrity sha512-bDrTCWEDocxdVff2dyKS+AwZhPvcW8z82M/ucXBTvMnf0EVATuxqFMN7NsxngMAxcrKHqrf6BwdonAYOz1geYQ==
-  dependencies:
-    "@fortawesome/fontawesome-common-types" "^0.3.0"
-
-"@fortawesome/pro-thin-svg-icons@^6.0.0":
-  version "6.0.0"
-  resolved "https://npm.fontawesome.com/@fortawesome/pro-thin-svg-icons/-/6.0.0/pro-thin-svg-icons-6.0.0.tgz#ed530451feda38005c7159885a4d544040d9c0a8"
-  integrity sha512-1wN9ZVJYqtiJ5FOa7mLG1zAkyQPSXnecG3mz3BlD4gxE5sv0Bd0znHcffiY6kmK/DJZ2/DhXIrA3OQ05/LWBrA==
-  dependencies:
-    "@fortawesome/fontawesome-common-types" "^0.3.0"
-
 "@fortawesome/react-fontawesome@^0.1.17":
   version "0.1.17"
   resolved "https://npm.fontawesome.com/@fortawesome/react-fontawesome/-/0.1.17/react-fontawesome-0.1.17.tgz#06fc06cb1a721e38e5b50b4a1cb851e9b9c77d7a"
