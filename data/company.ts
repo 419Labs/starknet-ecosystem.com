@@ -184,7 +184,7 @@ const allCompanies: Company[] = [
   },
   {
     id: 15,
-    name: "Stork Oracle Network",
+    name: "Stork Oracle",
     logo: "stork.png",
     network: {
       website: "https://stork.network",
