@@ -1,12 +1,5 @@
 import { HStack, Link } from "@chakra-ui/layout";
-import {
-  faDiscord,
-  faGithub,
-  faMedium,
-  faTelegram,
-  faTwitter,
-} from "@fortawesome/free-brands-svg-icons";
-import { faGlobe } from "@fortawesome/free-solid-svg-icons";
+import { solid, brands } from "@fortawesome/fontawesome-svg-core/import.macro";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import type { FC } from "react";
 
@@ -30,32 +23,32 @@ const NetworkLogos: FC<Props> = ({
     >
       {website && (
         <Link isExternal href={website}>
-          <FontAwesomeIcon icon={faGlobe} />
+          <FontAwesomeIcon icon={solid("globe")} />
         </Link>
       )}
       {twitter && (
         <Link isExternal href={twitter}>
-          <FontAwesomeIcon icon={faTwitter} />
+          <FontAwesomeIcon icon={brands("twitter")} />
         </Link>
       )}
       {telegram && (
         <Link isExternal href={telegram}>
-          <FontAwesomeIcon icon={faTelegram} />
+          <FontAwesomeIcon icon={brands("telegram")} />
         </Link>
       )}
       {discord && (
         <Link isExternal href={discord}>
-          <FontAwesomeIcon icon={faDiscord} />
+          <FontAwesomeIcon icon={brands("discord")} />
         </Link>
       )}
       {medium && (
         <Link isExternal href={medium}>
-          <FontAwesomeIcon icon={faMedium} />
+          <FontAwesomeIcon icon={brands("medium")} />
         </Link>
       )}
       {github && (
         <Link isExternal href={github}>
-          <FontAwesomeIcon icon={faGithub} />
+          <FontAwesomeIcon icon={brands("github")} />
         </Link>
       )}
     </HStack>
