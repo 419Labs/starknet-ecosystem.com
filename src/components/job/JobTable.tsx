@@ -9,11 +9,7 @@ import {
   VStack,
 } from "@chakra-ui/layout";
 import { Button, Hide } from "@chakra-ui/react";
-import {
-  faLocationDot,
-  faDollarSign,
-  faArrowLeft,
-} from "@fortawesome/pro-regular-svg-icons";
+import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import dayjs from "dayjs";
 import { useRouter } from "next/router";
@@ -126,7 +122,7 @@ const JobTable: FC<Props> = ({ companies, jobs, observe, onFilterChanged }) => {
       <Flex direction="column" align="flex-start" h="full" flex={10} px={2}>
         <Hide above="lg">
           <Box p={2} onClick={() => setCurrentJob(undefined)}>
-            <FontAwesomeIcon fontSize="24px" icon={faArrowLeft} />
+            <FontAwesomeIcon fontSize="24px" icon={solid("arrow-left")} />
           </Box>
         </Hide>
         {renderBaseCard(
@@ -156,7 +152,7 @@ const JobTable: FC<Props> = ({ companies, jobs, observe, onFilterChanged }) => {
                         <Box minW="24px">
                           <FontAwesomeIcon
                             fontSize="18px"
-                            icon={faDollarSign}
+                            icon={solid("dollar-sign")}
                           />
                         </Box>
                         <Text>
@@ -169,7 +165,10 @@ const JobTable: FC<Props> = ({ companies, jobs, observe, onFilterChanged }) => {
                     )}
                     <HStack>
                       <Box minW="24px">
-                        <FontAwesomeIcon fontSize="18px" icon={faLocationDot} />
+                        <FontAwesomeIcon
+                          fontSize="18px"
+                          icon={solid("location-dot")}
+                        />
                       </Box>
                       <Text>{currentJob.location}</Text>
                     </HStack>
