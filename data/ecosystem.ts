@@ -1116,13 +1116,13 @@ export const allProjects: Array<Project> = [
     isLive: false,
     isTestnetLive: false,
   },
-   {
+  {
     name: "Redline",
     short_name: "Redline",
     description:
       "Giant robot NFT racing and engineering on StarkNet and UE5.Deep Strategy and Drama Game.",
     tags: ["gamefi"],
-    logo: "",
+    logo: "redline.jpeg",
     network: {
       website: "http://redline.game/",
       github: "",
