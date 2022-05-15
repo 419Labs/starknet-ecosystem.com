@@ -558,8 +558,39 @@ const allJobs: Array<Job> = [
   },
   {
     key: "19",
-    title: "Head of Product Lead",
+    title: "Generalist Developer",
     companyId: 15,
+    tags: ["Cairo", "Solidity", "StarkNet"],
+    location: "San Francisco or Remote",
+    remote: true,
+    description:
+    "Stork Oracle is a new oracle in the StarkNet ecosystem. We are a small, San Francisco based team. "+
+    "Stork is supported by Dexterity Capital, one of the most successful and experienced algorithmic trading firms in the crypto world.\n\n"+
+    "If you’re on the fence about your fit for the role, take the risk and drop us a line. Worst case, you’ll make some new friends.\n"+
+    "\n" +
+    "Responsibilities\n" +
+    "- Building full-stack blockchain applications on StarkNet\n" +
+    "- Integrating with exchanges, data providers, and other APIs\n" +
+    "- Contributing to whitepapers and solving complex challenges related to decentralization, security, data reliability, and more\n",
+    
+    requirements:
+    "A successful candidate will have a strong bias for “getting things done” (send us links to past projects!). . There is no single “stack” experience required for this role, however, familiarity with the blockchain is required, and a strong academic or technical background will go a long way.\n\n" +
+    "- Strong technical and/or academic understanding of concepts of general computing, blockchain, Ethereum, and EVM\n" +
+    "- Experience with common languages used in the Web3 and DeFi stacks\n" +
+    "- Examples of shipped “full-stack” Web3 applications, Solidity Contracts, Cairo projects, etc\n" +
+    "- Amazing: experience with Cairo\n\n"+
+    "We Offer\n" +
+    "- You’ll get to work with other smart, growth-minded individuals who’ve built successful startups before\n" +
+    "- Competitive Compensation (base pay + team tokens)\n" +
+    "- If you’re in SF – an office, happy hours, and team events. For remote folks, we’ll make it fun.\n" +
+    "- Education stipend and conference travel",
+    createdOn: new Date("2022-05-08"),
+    applyLink: "info@stork.network",
+  },
+  {
+    key: "20",
+    title: "Head of Product Lead",
+    companyId: 16,
     tags: ["gaming"],
     location: "Remote",
     remote: true,
@@ -585,9 +616,9 @@ const allJobs: Array<Job> = [
     applyLink: "https://www.notion.so/Hiring-Matchbox-DAO-head-of-Product-Lead-59c6cecf35624d6c87a422482496ba4a",
   },
   {
-    key: "20",
+    key: "21",
     title: "Program Manager",
-    companyId: 15,
+    companyId: 16,
     tags: ["gaming"],
     location: "Remote",
     remote: true,
@@ -613,7 +644,7 @@ const allJobs: Array<Job> = [
       "- Experience with Cairo (StarkNet’s native programming language)",
     createdOn: new Date(""),
     applyLink: "https://www.notion.so/Hiring-Matchbox-program-manager-28440dab9f4142818ccb8f4db8484f21",
-  },
+  }
 ];
 
 export default allJobs;
