@@ -184,6 +184,19 @@ const allCompanies: Company[] = [
   },
   {
     id: 15,
+    name: "Stork Oracle",
+    logo: "stork.png",
+    network: {
+      website: "https://stork.network",
+      github: "",
+      twitter: "",
+      medium: "https://medium.com/@stork-oracle",
+      discord: "",
+      telegram: "",
+    },
+  },
+  {
+    id: 16,
     name: "Matchbox DAO",
     logo: "Matchbox.jpeg",
     network: {
@@ -194,7 +207,7 @@ const allCompanies: Company[] = [
       discord: "https://discord.gg/jkgbSngcHV",
       telegram: "",
     },
-  },
+  }
 ];
 
 export default allCompanies;

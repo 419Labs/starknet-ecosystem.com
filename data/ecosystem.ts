@@ -19,6 +19,24 @@ export interface ProjectItf extends Project {
 
 export const allProjects: Array<Project> = [
   {
+    name: "Giza",
+    short_name: "giza",
+    description:
+      "Giza is a Machine Learning platform built on StarkNet focused on fully on-chain model deployment scaling.",
+    tags: ["infrastructure"],
+    logo: "giza.png",
+    network: {
+      website: "https://gizatech.xyz/",
+      github: "",
+      twitter: "https://twitter.com/gizatechxyz",
+      medium: "https://mirror.xyz/gizatech.eth",
+      discord: "",
+      telegram: "",
+    },
+    isLive: false,
+    isTestnetLive: false,
+  },
+  {
     name: "Stark Defi",
     short_name: "StarkDefi",
     description:
@@ -1084,7 +1102,7 @@ export const allProjects: Array<Project> = [
     name: "Stork Oracle Network",
     short_name: "Stork",
     description:
-      "Stork is an oracle network for StarkEx and StarkNet, providing low latency off-chain price quotes from trusted sources.",
+      "Stork is an oracle network for StarkEx and StarkNet, optimized for DeFi and providing low latency off-chain price quotes from trusted sources.",
     tags: ["defi"],
     logo: "stork.png",
     network: {

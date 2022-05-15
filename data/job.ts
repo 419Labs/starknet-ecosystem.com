@@ -557,6 +557,37 @@ const allJobs: Array<Job> = [
     createdOn: new Date("2022-04-22"),
     applyLink: "https://apply.workable.com/zkx/j/6DEA9DB4E5/",
   },
+  {
+    key: "19",
+    title: "Generalist Developer",
+    companyId: 15,
+    tags: ["Cairo", "Solidity", "StarkNet"],
+    location: "San Francisco or Remote",
+    remote: true,
+    description:
+    "Stork Oracle is a new oracle in the StarkNet ecosystem. We are a small, San Francisco based team. "+
+    "Stork is supported by Dexterity Capital, one of the most successful and experienced algorithmic trading firms in the crypto world.\n\n"+
+    "If you’re on the fence about your fit for the role, take the risk and drop us a line. Worst case, you’ll make some new friends.\n"+
+    "\n" +
+    "Responsibilities\n" +
+    "- Building full-stack blockchain applications on StarkNet\n" +
+    "- Integrating with exchanges, data providers, and other APIs\n" +
+    "- Contributing to whitepapers and solving complex challenges related to decentralization, security, data reliability, and more\n",
+    
+    requirements:
+    "A successful candidate will have a strong bias for “getting things done” (send us links to past projects!). . There is no single “stack” experience required for this role, however, familiarity with the blockchain is required, and a strong academic or technical background will go a long way.\n\n" +
+    "- Strong technical and/or academic understanding of concepts of general computing, blockchain, Ethereum, and EVM\n" +
+    "- Experience with common languages used in the Web3 and DeFi stacks\n" +
+    "- Examples of shipped “full-stack” Web3 applications, Solidity Contracts, Cairo projects, etc\n" +
+    "- Amazing: experience with Cairo\n\n"+
+    "We Offer\n" +
+    "- You’ll get to work with other smart, growth-minded individuals who’ve built successful startups before\n" +
+    "- Competitive Compensation (base pay + team tokens)\n" +
+    "- If you’re in SF – an office, happy hours, and team events. For remote folks, we’ll make it fun.\n" +
+    "- Education stipend and conference travel",
+    createdOn: new Date("2022-05-08"),
+    applyLink: "info@stork.network",
+  },
 ];
 
 export default allJobs;
