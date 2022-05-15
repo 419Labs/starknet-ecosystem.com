@@ -198,16 +198,17 @@ const allCompanies: Company[] = [
   {
     id: 16,
     name: "Matchbox DAO",
-    logo: "Matchbox.jpeg",
+    logo: "matchbox.jpeg",
     network: {
-      website: "https://www.notion.so/Matchbox-Mission-and-Core-Activities-0612f3903f4d48fbb69de05a20b9489c",
+      website:
+        "https://www.notion.so/Matchbox-Mission-and-Core-Activities-0612f3903f4d48fbb69de05a20b9489c",
       github: "",
       twitter: "https://twitter.com/matchbox_dao",
       medium: "",
       discord: "https://discord.gg/jkgbSngcHV",
       telegram: "",
     },
-  }
+  },
 ];
 
 export default allCompanies;
