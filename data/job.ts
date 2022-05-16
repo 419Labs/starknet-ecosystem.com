@@ -648,6 +648,41 @@ const allJobs: Array<Job> = [
     applyLink:
       "https://www.notion.so/Hiring-Matchbox-program-manager-28440dab9f4142818ccb8f4db8484f21",
   },
+  {
+    key: "22",
+    title: "Cairo Developer",
+    companyId: 17,
+    tags: ["Cairo", "Solidity", "StarkNet", "AMM"],
+    location: "Remote",
+    remote: true,
+    description:
+        "SithSwap is developing an advanced stableswap AMM on StarkNet, a permissionless decentralized ZK-Rollup operating as an L2 network over Ethereum, enabling dApps to achieve unlimited scale for its computation – without compromising Ethereum's composability and security.\n" +
+        "\n" +
+        "For this endeavour, SithSwap is looking to onboard a talented Cairo developer, remotely and in any capacity (ranging from task-based to full-time).\n" +
+        "\n" +
+        "TODO:\n" +
+        "As a Cairo Developer, you will play a leading role in porting over an existing reference Solidity implementation of the SithSwap protocol (Core + Rewards contracts) over to StarkNet in native Cairo language.\n\n" +
+        "More specifically, in coordination with the team, you will be responsible for designing and implementing the Cairo counterparts of any provided Solidity smart contracts, suggesting modifications and adaptations as needed for successfully porting over the codebase to the latest Cairo release, starting with the Core AMM smart contracts.\n\n" +
+        "To do the above, you will be relying on the most advanced tooling for StarkNet yet released, using either TypeScript or Python to write your off-chain backend code.",
+    requirements:
+        "- 2+ years experience developing top-tier smart contracts in an EVM mainnet environment\n" +
+        "- Great understanding and daily use of Cairo (up to the latest release/features)\n" +
+        "- Good understanding of Solidity/Yul and the EVM\n" +
+        "- Strong working knowledge of at least 1 advanced StarkNet development framework (e.g. Ape, Protostar, Nile, Hardhat)\n" +
+        "- A GitHub profile (doesn't need to be public, as long as we can inspect it)" +
+        "\n" +
+        "Nice to have:\n" +
+        "- Experience with Uniswap V2 and Curve Finance contracts architectures and APIs\n" +
+        "- Experience with common smart contracts patterns such as upgradability, proxy wallets, meta-transactions, and counterfactual deployments\n" +
+        "- Strong knowledge of StarkNet as-a-platform, its underlying architecture and tech stack\n" +
+        "- Strong working knowledge of both Python and TypeScript\n" +
+        "- Good knowledge of historical smart contract exploits and vulnerabilities (across all chains)\n" +
+        "- Ability to write code that is clean, easy to audit, yet efficient in terms of deployment, execution and maintenance\n" +
+        "- Good knowledge of the L2 ecosystem at-large, with a particular emphasis on Validium Rollups\n" +
+        "- CET/CEST working hours",
+        createdOn: new Date("2022-05-16"),
+    applyLink: "https://apply.workable.com/sithswap/j/C20203825C/",
+  },
 ];
 
 export default allJobs;

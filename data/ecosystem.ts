@@ -19,6 +19,24 @@ export interface ProjectItf extends Project {
 
 export const allProjects: Array<Project> = [
   {
+    name: "SithSwap",
+    short_name: "SithSwap",
+    description:
+        "SithSwap is a next-gen AMM on StarkNet featuring stable + volatile swaps, ultra-low fees & slippage, gauged (3,3) rewards & bribes governed by veNFTs",
+    tags: ["defi"],
+    logo: "sithswap.png",
+    network: {
+      website: "https://sithswap.com/",
+      github: "https://github.com/SithSwap",
+      twitter: "https://twitter.com/SithSwap",
+      medium: "https://mirror.xyz/sithswap.eth",
+      discord: "https://discord.gg/gAD2wuzeNf",
+      telegram: "https://t.me/SithWars",
+    },
+    isLive: false,
+    isTestnetLive: false,
+  },
+  {
     name: "Giza",
     short_name: "giza",
     description:

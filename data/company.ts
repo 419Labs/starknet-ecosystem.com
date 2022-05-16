@@ -209,6 +209,19 @@ const allCompanies: Company[] = [
       telegram: "",
     },
   },
+  {
+    id: 17,
+    name: "SithSwap",
+    logo: "sithswap.png",
+    network: {
+      website: "https://sithswap.com/",
+      github: "https://github.com/SithSwap",
+      twitter: "https://twitter.com/SithSwap",
+      medium: "https://mirror.xyz/sithswap.eth",
+      discord: "https://discord.gg/gAD2wuzeNf",
+      telegram: "https://t.me/SithWars",
+    },
+  },
 ];
 
 export default allCompanies;
