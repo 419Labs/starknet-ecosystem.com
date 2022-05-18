@@ -22,7 +22,7 @@ export const allProjects: Array<Project> = [
     name: "SithSwap",
     short_name: "SithSwap",
     description:
-        "SithSwap is a next-gen AMM on StarkNet featuring stable + volatile swaps, ultra-low fees & slippage, gauged (3,3) rewards & bribes governed by veNFTs",
+      "SithSwap is a next-gen AMM on StarkNet featuring stable + volatile swaps, ultra-low fees & slippage, gauged (3,3) rewards & bribes governed by veNFTs",
     tags: ["defi"],
     logo: "sithswap.png",
     network: {
@@ -893,7 +893,8 @@ export const allProjects: Array<Project> = [
   {
     name: "hardhat-starknet-compile",
     short_name: "hardhat-starknet-compile",
-    description: "Hardhat Plugin for intelligently compiling StarkNet contracts in a Hardhat project.",
+    description:
+      "Hardhat Plugin for intelligently compiling StarkNet contracts in a Hardhat project.",
     tags: ["tools"],
     logo: "hardhat-starknet-compile.png",
     network: {
@@ -1175,7 +1176,7 @@ export const allProjects: Array<Project> = [
     description:
       "Decentralized Launchpad shaping the future for projects on StarkNet.",
     tags: ["defi"],
-    logo: "",
+    logo: "zkstarter.jpg",
     network: {
       website: "http://www.zkstarter.io/",
       github: "",
@@ -1187,13 +1188,13 @@ export const allProjects: Array<Project> = [
     isLive: false,
     isTestnetLive: false,
   },
-{
+  {
     name: "Starcombo",
     short_name: "Starcombo",
     description:
       "Starcombo is a tool allowing users to build their DeFi strategy on Starknet simply by drag&drop.",
     tags: ["defi"],
-    logo: "",
+    logo: "starcombo.jpg",
     network: {
       website: "https://testnet.starcombo.xyz/",
       github: "",
@@ -1205,13 +1206,13 @@ export const allProjects: Array<Project> = [
     isLive: false,
     isTestnetLive: true,
   },
-{
+  {
     name: "Arcticium",
     short_name: "Arcticium",
     description:
       "We are building ecosystem and community for NFTs on StarkNet by StarkWareLtd.",
     tags: ["nft"],
-    logo: "",
+    logo: "arcticium.jpg",
     network: {
       website: "http://arcticium.com/",
       github: "",
@@ -1223,18 +1224,19 @@ export const allProjects: Array<Project> = [
     isLive: false,
     isTestnetLive: false,
   },
-{
+  {
     name: "MetaMaterial",
     short_name: "MetaMaterial",
     description:
       "The first protocol for resource sharing across all blockchain games.",
     tags: ["nft"],
-    logo: "",
+    logo: "metamaterial.webp",
     network: {
       website: "https://goerli.metamaterial.app/",
       github: "",
       twitter: "https://twitter.com/material_meta",
-      medium: "https://mirror.xyz/starknet-metamaterial.eth/G8TLixABSyEL_tZ40iS4hAsOy_fxHdDA-Bw6x1aYCbs",
+      medium:
+        "https://mirror.xyz/starknet-metamaterial.eth/G8TLixABSyEL_tZ40iS4hAsOy_fxHdDA-Bw6x1aYCbs",
       discord: "",
       telegram: "",
     },
