@@ -909,6 +909,23 @@ export const allProjects: Array<Project> = [
     isTestnetLive: true,
   },
   {
+    name: "hardhat-starknetjs",
+    short_name: "hardhat-starknetjs",
+    description: "Hardhat Plugin integrating StarkNet.js.",
+    tags: ["tools"],
+    logo: "hardhat-starknetjs.png",
+    network: {
+      website: "",
+      github: "https://github.com/playmint/hardhat-starknetjs",
+      twitter: "https://twitter.com/playmint",
+      medium: "",
+      discord: "",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: true,
+  },
+  {
     name: "Nile",
     short_name: "Nile",
     description: "CLI tool to develop StarkNet projects written in Cairo",
