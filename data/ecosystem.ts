@@ -1266,7 +1266,7 @@ export const allProjects: Array<Project> = [
     description:
       "zKasino is a decentralized casino built on Layer 2 ZK-Rollups technology.",
     tags: ["gamefi"],
-    logo: "",
+    logo: "zkasino.png",
     network: {
       website: "https://zkasino.io/",
       github: "",
