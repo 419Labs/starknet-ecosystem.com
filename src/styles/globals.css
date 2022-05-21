@@ -3,6 +3,25 @@ body {
   height: 100%;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
 #__next {
   height: 100%;
+}
+
+*{
+  -ms-overflow-style: none;
+  scrollbar-width: none;  /* Firefox */
+}
+::-webkit-scrollbar {
+  display: none;
 }

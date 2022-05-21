@@ -4,7 +4,8 @@ const enTranslate: TranslateState = {
   common: {
     title_main: "StarkNet revolution is coming out of the woods",
     subtitle_main: "Explore all projects building & running on StarkNet L2",
-    community_driven: "✨ A community-driven initiative",
+    community_driven:
+      "✨ This project is managed by the awesome StarkNet community",
 
     no_project: "😕 No projects in this category",
     maybe_yours: "Maybe yours?",
@@ -13,10 +14,12 @@ const enTranslate: TranslateState = {
     alpha_road_team: "Alpha Road Team",
     apply: "Apply",
     community: "Community",
-
     metrics: "Metrics",
     github_repo: "Tools & Libraries",
     npm_last_downloads: "downloads last 7 days",
+    job_title_main: "Jobs",
+    job: "Jobs",
+    no_job: "😕 No jobs",
   },
   tags: {
     all: "All",
@@ -34,6 +37,15 @@ const enTranslate: TranslateState = {
     tools: "Tools",
     wallet: "Wallet",
     starkex: "StarkEx",
+  },
+  jobs: {
+    apply: "Apply now",
+    is_hiring: " is hiring a",
+    description: "Description",
+    requirements: "Requirements",
+    published: "Published",
+    ago: "ago",
+    no_selected: "No job selected",
   },
 };
 

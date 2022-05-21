@@ -1,7 +1,6 @@
 import { Box, Flex, Link } from "@chakra-ui/layout";
 import { Button, Hide } from "@chakra-ui/react";
-import { faBars } from "@fortawesome/pro-regular-svg-icons";
-import { faChevronDown } from "@fortawesome/pro-solid-svg-icons";
+import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import NextLink from "next/link";
 import { useState } from "react";
@@ -104,7 +103,7 @@ function Header() {
             ),
           },
         ]}
-        icon={faChevronDown}
+        icon={solid("chevron-down")}
         text={locale ? locale.toUpperCase() : " - "}
       />
     );
@@ -137,16 +136,23 @@ function Header() {
           >
             <Button>{t.common.community}</Button>
           </Link>
-          <NextLink href={`/${locale}/metrics`}>
-            <Button ml={2}>{t.common.metrics || "Metrics"}</Button>
-          </NextLink>
+          <Box ml={2}>
+            <NextLink href={`/${locale}/metrics`}>
+              <Button>{t.common.metrics || "Metrics"}</Button>
+            </NextLink>
+          </Box>
+          <Box ml={2}>
+            <NextLink href={`/${locale}/jobs`}>
+              <Button>{t.common.job || "Jobs"}</Button>
+            </NextLink>
+          </Box>
           <Box ml={2}>{renderLanguagesOptions()}</Box>
         </Flex>
       </Hide>
       <Hide above="md">
         <Flex justify="flex-end">
           <Button onClick={() => setDrawerOpen(true)}>
-            <FontAwesomeIcon fontSize="24px" icon={faBars} />
+            <FontAwesomeIcon fontSize="24px" icon={solid("bars")} />
           </Button>
           <Drawer
             links={[
@@ -156,6 +162,7 @@ function Header() {
                 href: `/${locale}/metrics`,
                 label: t.common.metrics || "Metrics",
               },
+              { href: `/${locale}/jobs`, label: t.common.job || "Jobs" },
             ]}
             headerAction={renderLanguagesOptions()}
             isOpen={isDrawerOpen}

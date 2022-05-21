@@ -1,6 +1,7 @@
 export interface TranslateState {
   common: any;
   tags: any;
+  jobs: any;
 }
 
 export interface TranslateManagerState {
@@ -12,6 +13,7 @@ export const TRANSLATE_STATE_INITIAL_STATE: TranslateManagerState = {
   t: {
     common: {},
     tags: {},
+    jobs: {},
   },
   locale: undefined,
 };

@@ -31,6 +31,9 @@ const itTranslate: TranslateState = {
     wallet: "Wallet",
     starkex: "StarkEx",
   },
+  jobs: {
+    apply: "Apply now",
+  },
 };
 
 export default itTranslate;

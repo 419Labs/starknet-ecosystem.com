@@ -4,7 +4,7 @@
 > Building on StarkNet is a financial advice.
 > Louis G.
 
-The ecosystem dashboard aims to give visibility to all projects in the StarkNet ecosystem in a simple and elegant way.
+Explore projects, teams, jobs, metrics and everything around StarkNet.
 
 ## Contribute
 
@@ -32,6 +32,17 @@ As soon as your PR is merged an automatic deployment will be started.
 
 to update your project you have to do the same thing than for adding. Edit the `data/ecosystem.ts` file and
 create a dedicated Pull Request following this title: "🎨 Updating AwesomeProjectName"
+
+### Add a new job
+
+To add a new job you have to:
+
+- Create your company on `data/company.ts` if it doesn't already exists.
+- Add your company logo into `public/logos/`
+- Create your job on `data/job.ts`. 
+- Create a Pull Request following the title: "✨ CompanyName is hiring a JobTitle"
+
+As soon as your PR is merged an automatic deployment will be started.
 
 ### Others
 
