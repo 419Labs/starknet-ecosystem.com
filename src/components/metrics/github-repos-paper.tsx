@@ -1,7 +1,5 @@
-import { Box, HStack, Link, SimpleGrid, Text } from "@chakra-ui/layout";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faEye, faStar } from "@fortawesome/free-regular-svg-icons";
-import { faCodeFork } from "@fortawesome/free-solid-svg-icons";
+import { Box, Flex, HStack, Link, SimpleGrid, Text } from "@chakra-ui/layout";
+import { solid, brands } from "@fortawesome/fontawesome-svg-core/import.macro";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import type { FC } from "react";
 
@@ -16,30 +14,37 @@ const GithubReposPaper: FC<Props> = ({ githubRepos }) => {
   const { t } = useTranslate();
   return (
     <Box borderRadius="md" backgroundColor="gray.800" p={5}>
-      <HStack as="h3" mb={4} fontSize="lg" fontWeight="bold">
-        <FontAwesomeIcon icon={faGithub} />
-        <Text ml={1}>{t.common.github_repo || "Tools & Libraries"}</Text>
-      </HStack>
+      <Flex justify="space-between" alignItems="center" mb={4}>
+        <HStack as="h3" mb={4} fontSize="lg" fontWeight="bold">
+          <FontAwesomeIcon icon={brands("github")} />
+          <Text ml={1}>{t.common.github_repo || "Tools & Libraries"}</Text>
+        </HStack>
+        <HStack fontSize="sm" color="whiteAlpha.600" spacing={1}>
+          <Link isExternal href="https://github.com/gakonst/awesome-starknet">
+            <Text fontWeight="bold">{t.common.more || "more"}</Text>
+          </Link>
+        </HStack>
+      </Flex>
       <SimpleGrid columns={2} spacing={4}>
         {githubRepos.map((repo) => (
           <Link
             key={repo.id}
-            _hover={{ textDecoration: "none", opacity: 0.5}}
+            _hover={{ textDecoration: "none", opacity: 0.5 }}
             href={repo.html_url}
             isExternal
           >
             <Text fontSize="md">{repo.name}</Text>
             <HStack spacing={3} mt={1} color="whiteAlpha.600">
               <HStack fontSize="sm" spacing={1}>
-                <FontAwesomeIcon icon={faEye} />
+                <FontAwesomeIcon icon={solid("eye")} />
                 <Text>{repo.subscribers_count}</Text>
               </HStack>
               <HStack fontSize="sm" spacing={1}>
-                <FontAwesomeIcon icon={faCodeFork} />
+                <FontAwesomeIcon icon={solid("code-fork")} />
                 <Text>{repo.forks_count}</Text>
               </HStack>
               <HStack fontSize="sm" spacing={1}>
-                <FontAwesomeIcon icon={faStar} />
+                <FontAwesomeIcon icon={solid("star")} />
                 <Text>{repo.stargazers_count}</Text>
               </HStack>
             </HStack>

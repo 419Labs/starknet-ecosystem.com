@@ -51,7 +51,7 @@ const MetricsPage: FC<Props> = ({
     <Text as="h2" mb={4} fontSize="2xl" fontWeight="bold" w="full">
       Developer tools
     </Text>
-    <SimpleGrid columns={{ sm: 1, md: 1, lg: 3 }} spacing={4}>
+    <SimpleGrid columns={{ sm: 1, md: 2, lg: 2, xl: 3 }} spacing={4}>
       <GithubReposPaper githubRepos={githubRepos} />
       <NpmDownloadsPaper npmDownloads={npmDownloads} />
     </SimpleGrid>

@@ -13,9 +13,9 @@ const CountPaper: FC<Props> = ({ count, label }) => (
     <Text fontSize="3xl" fontWeight="bold">
       {formatCompactNumber(count)}
     </Text>
-      <Text mt={2} fontSize="md" color="whiteAlpha.600">
-          {label}
-      </Text>
+    <Text mt={2} fontSize="md" color="whiteAlpha.600">
+      {label}
+    </Text>
   </Box>
 );
 

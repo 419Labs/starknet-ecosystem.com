@@ -1,6 +1,6 @@
 import { Box, Flex, HStack, Text } from "@chakra-ui/layout";
 import { useTheme } from "@emotion/react";
-import { faNpm } from "@fortawesome/free-brands-svg-icons";
+import { brands } from "@fortawesome/fontawesome-svg-core/import.macro";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   CategoryScale,
@@ -80,7 +80,7 @@ const NpmDownloadsPaper: FC<Props> = ({ npmDownloads }) => {
     <Box borderRadius="md" backgroundColor="gray.800" p={5}>
       <Flex justify="space-between" alignItems="center" mb={4}>
         <HStack as="h3" fontSize="lg" fontWeight="bold">
-          <FontAwesomeIcon size="2x" icon={faNpm} />
+          <FontAwesomeIcon size="2x" icon={brands("npm")} />
           <Text ml={1}>{values.package}</Text>
         </HStack>
         <HStack fontSize="xs" color="whiteAlpha.600" spacing={1}>
