@@ -1,6 +1,6 @@
-import { Box, Flex, Link } from "@chakra-ui/layout";
+import { Box, Flex, HStack, Link } from "@chakra-ui/layout";
 import { Button, Hide } from "@chakra-ui/react";
-import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
+import { brands, solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import NextLink from "next/link";
 import { useState } from "react";
@@ -121,29 +121,18 @@ function Header() {
       <Logo />
       <Hide below="md">
         <Flex direction="row">
-          <Link
-            _hover={{ textDecoration: "none" }}
-            href={githubLink}
-            isExternal
-          >
-            <Button>{t.common.apply}</Button>
-          </Link>
-          <Link
-            ml={2}
-            _hover={{ textDecoration: "none" }}
-            href={telegramLink}
-            isExternal
-          >
-            <Button>{t.common.community}</Button>
-          </Link>
-          <Box ml={2}>
-            <NextLink href={`/${locale}/metrics`}>
-              <Button>{t.common.metrics || "Metrics"}</Button>
-            </NextLink>
-          </Box>
+          <HStack spacing={4} mr={2}>
+            <FontAwesomeIcon fontSize="24px" icon={brands("telegram")} />
+            <FontAwesomeIcon fontSize="24px" icon={brands("github")} />
+          </HStack>
           <Box ml={2}>
             <NextLink href={`/${locale}/jobs`}>
               <Button>{t.common.job || "Jobs"}</Button>
+            </NextLink>
+          </Box>
+          <Box ml={2}>
+            <NextLink href={`/${locale}/metrics`}>
+              <Button>{t.common.metrics || "Metrics"}</Button>
             </NextLink>
           </Box>
           <Box ml={2}>{renderLanguagesOptions()}</Box>
@@ -156,13 +145,26 @@ function Header() {
           </Button>
           <Drawer
             links={[
-              { href: githubLink, label: t.common.apply },
-              { href: telegramLink, label: t.common.community },
+              {
+                href: githubLink,
+                icon: brands("github"),
+                label: t.common.apply,
+                isExternal: true,
+              },
+              {
+                href: telegramLink,
+                icon: brands("telegram"),
+                label: t.common.community,
+                isExternal: true,
+              },
+              {
+                href: `/${locale}/jobs`,
+                label: t.common.job || "Jobs",
+              },
               {
                 href: `/${locale}/metrics`,
                 label: t.common.metrics || "Metrics",
               },
-              { href: `/${locale}/jobs`, label: t.common.job || "Jobs" },
             ]}
             headerAction={renderLanguagesOptions()}
             isOpen={isDrawerOpen}
