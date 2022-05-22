@@ -20,6 +20,7 @@ const enTranslate: TranslateState = {
     job_title_main: "Jobs",
     job: "Jobs",
     no_job: "😕 No jobs",
+    more: "view more",
   },
   tags: {
     all: "All",

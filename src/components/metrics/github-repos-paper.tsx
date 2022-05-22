@@ -21,7 +21,7 @@ const GithubReposPaper: FC<Props> = ({ githubRepos }) => {
         </HStack>
         <HStack fontSize="sm" color="whiteAlpha.600" spacing={1}>
           <Link isExternal href="https://github.com/gakonst/awesome-starknet">
-            <Text>{t.common.more || "more"}</Text>
+            <Text>{t.common.more || "view more"}</Text>
           </Link>
         </HStack>
       </Flex>

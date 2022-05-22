@@ -18,6 +18,10 @@ const frTranslate: TranslateState = {
     metrics: "Métriques",
     github_repo: "Outils & Librairies",
     npm_last_downloads: "téléchargement les 7 days",
+    job_title_main: "Jobs",
+    job: "Jobs",
+    no_job: "😕 Aucun jobs",
+    more: "voir plus",
   },
   tags: {
     all: "Tous",
