@@ -1,6 +1,6 @@
-import { Box, Flex, Link } from "@chakra-ui/layout";
+import { Box, Flex, HStack, Link } from "@chakra-ui/layout";
 import { Button, Hide } from "@chakra-ui/react";
-import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
+import { brands, solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import NextLink from "next/link";
 import { useState } from "react";
@@ -17,6 +17,7 @@ function Header() {
 
   const githubLink = "https://github.com/419Labs/starknet-ecosystem.com";
   const telegramLink = "https://t.me/starknet_ecosystem";
+  const twitterLink = "https://twitter.com/StarkNetEco";
 
   const renderLanguagesOptions = () => {
     return (
@@ -25,7 +26,7 @@ function Header() {
           {
             href: "",
             children: (
-              <NextLink href="/" passHref locale="fr">
+              <NextLink href="" passHref locale="fr">
                 <Link _hover={{ textDecoration: "none" }} href="/" w="full">
                   Français
                 </Link>
@@ -35,7 +36,7 @@ function Header() {
           {
             href: "",
             children: (
-              <NextLink href="/" passHref locale="en">
+              <NextLink href="" passHref locale="en">
                 <Link _hover={{ textDecoration: "none" }} href="/" w="full">
                   English
                 </Link>
@@ -45,7 +46,7 @@ function Header() {
           {
             href: "",
             children: (
-              <NextLink href="/" passHref locale="tr">
+              <NextLink href="" passHref locale="tr">
                 <Link _hover={{ textDecoration: "none" }} href="/" w="full">
                   Türk
                 </Link>
@@ -55,7 +56,7 @@ function Header() {
           {
             href: "",
             children: (
-              <NextLink href="/" passHref locale="it">
+              <NextLink href="" passHref locale="it">
                 <Link _hover={{ textDecoration: "none" }} href="/" w="full">
                   Italiano
                 </Link>
@@ -65,7 +66,7 @@ function Header() {
           {
             href: "",
             children: (
-              <NextLink href="/" passHref locale="zh_CN">
+              <NextLink href="" passHref locale="zh_CN">
                 <Link _hover={{ textDecoration: "none" }} href="/" w="full">
                   简体中文
                 </Link>
@@ -75,7 +76,7 @@ function Header() {
           {
             href: "",
             children: (
-              <NextLink href="/" passHref locale="zh_TW">
+              <NextLink href="" passHref locale="zh_TW">
                 <Link _hover={{ textDecoration: "none" }} href="/" w="full">
                   繁體中文
                 </Link>
@@ -85,7 +86,7 @@ function Header() {
           {
             href: "",
             children: (
-              <NextLink href="/" passHref locale="pl">
+              <NextLink href="" passHref locale="pl">
                 <Link _hover={{ textDecoration: "none" }} href="/" w="full">
                   Polski
                 </Link>
@@ -95,7 +96,7 @@ function Header() {
           {
             href: "",
             children: (
-              <NextLink href="/" passHref locale="pt">
+              <NextLink href="" passHref locale="pt">
                 <Link _hover={{ textDecoration: "none" }} href="/" w="full">
                   Português
                 </Link>
@@ -121,24 +122,25 @@ function Header() {
       <Logo />
       <Hide below="md">
         <Flex direction="row">
-          <Link
-            _hover={{ textDecoration: "none" }}
-            href={githubLink}
-            isExternal
-          >
-            <Button>{t.common.apply}</Button>
-          </Link>
-          <Link
-            ml={2}
-            _hover={{ textDecoration: "none" }}
-            href={telegramLink}
-            isExternal
-          >
-            <Button>{t.common.community}</Button>
-          </Link>
+          <HStack spacing={4} mr={2}>
+            <Link isExternal href={twitterLink}>
+              <FontAwesomeIcon fontSize="24px" icon={brands("twitter")} />
+            </Link>
+            <Link isExternal href={telegramLink}>
+              <FontAwesomeIcon fontSize="24px" icon={brands("telegram")} />
+            </Link>
+            <Link isExternal href={githubLink}>
+              <FontAwesomeIcon fontSize="24px" icon={brands("github")} />
+            </Link>
+          </HStack>
           <Box ml={2}>
             <NextLink href={`/${locale}/jobs`}>
               <Button>{t.common.job || "Jobs"}</Button>
+            </NextLink>
+          </Box>
+          <Box ml={2}>
+            <NextLink href={`/${locale}/metrics`}>
+              <Button>{t.common.metrics || "Metrics"}</Button>
             </NextLink>
           </Box>
           <Box ml={2}>{renderLanguagesOptions()}</Box>
@@ -151,9 +153,32 @@ function Header() {
           </Button>
           <Drawer
             links={[
-              { href: githubLink, label: t.common.apply },
-              { href: telegramLink, label: t.common.community },
-              { href: `/${locale}/jobs`, label: t.common.job || "Jobs" },
+              {
+                href: twitterLink,
+                icon: brands("twitter"),
+                label: "Twitter",
+                isExternal: true,
+              },
+              {
+                href: telegramLink,
+                icon: brands("telegram"),
+                label: t.common.community,
+                isExternal: true,
+              },
+              {
+                href: githubLink,
+                icon: brands("github"),
+                label: t.common.apply,
+                isExternal: true,
+              },
+              {
+                href: `/${locale}/jobs`,
+                label: t.common.job || "Jobs",
+              },
+              {
+                href: `/${locale}/metrics`,
+                label: t.common.metrics || "Metrics",
+              },
             ]}
             headerAction={renderLanguagesOptions()}
             isOpen={isDrawerOpen}

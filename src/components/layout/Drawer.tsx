@@ -1,4 +1,4 @@
-import { Flex, Link } from "@chakra-ui/layout";
+import { Flex, HStack, Link, Text } from "@chakra-ui/layout";
 import {
   Drawer as ChakraDrawer,
   DrawerBody,
@@ -6,12 +6,13 @@ import {
   DrawerHeader,
   DrawerOverlay,
 } from "@chakra-ui/modal";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import type { ReactElement } from "react";
 
 import Logo from "./Logo";
 
 interface DrawerProps {
-  links: { href: string; label: string }[];
+  links: { href: string; label: string; icon?: any; isExternal?: boolean }[];
   headerAction: ReactElement;
   isOpen: boolean;
   onClose: () => void;
@@ -33,17 +34,21 @@ function Drawer({ links, headerAction, isOpen, onClose }: DrawerProps) {
           </Flex>
         </DrawerHeader>
         <DrawerBody>
-          <Flex direction="column" justify="center" align="center">
-            {links.map(({ href, label }) => {
+          <Flex direction="column" justify="center" align="flex-start">
+            {links.map(({ href, label, icon, isExternal }) => {
               return (
                 <Link
+                  w="full"
                   key={`drawer-item-${label}`}
                   py={2}
                   style={{ textDecoration: "none" }}
-                  isExternal
+                  isExternal={isExternal}
                   href={href}
                 >
-                  {label}
+                  <HStack justifyContent="space-between">
+                    <Text>{label}</Text>
+                    {icon && <FontAwesomeIcon fontSize="24px" icon={icon} />}
+                  </HStack>
                 </Link>
               );
             })}
