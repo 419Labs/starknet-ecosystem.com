@@ -17,6 +17,7 @@ function Header() {
 
   const githubLink = "https://github.com/419Labs/starknet-ecosystem.com";
   const telegramLink = "https://t.me/starknet_ecosystem";
+  const twitterLink = "https://twitter.com/StarkNetEco";
 
   const renderLanguagesOptions = () => {
     return (
@@ -122,8 +123,15 @@ function Header() {
       <Hide below="md">
         <Flex direction="row">
           <HStack spacing={4} mr={2}>
-            <FontAwesomeIcon fontSize="24px" icon={brands("telegram")} />
-            <FontAwesomeIcon fontSize="24px" icon={brands("github")} />
+            <Link isExternal href={twitterLink}>
+              <FontAwesomeIcon fontSize="24px" icon={brands("twitter")} />
+            </Link>
+            <Link isExternal href={telegramLink}>
+              <FontAwesomeIcon fontSize="24px" icon={brands("telegram")} />
+            </Link>
+            <Link isExternal href={githubLink}>
+              <FontAwesomeIcon fontSize="24px" icon={brands("github")} />
+            </Link>
           </HStack>
           <Box ml={2}>
             <NextLink href={`/${locale}/jobs`}>
@@ -146,15 +154,21 @@ function Header() {
           <Drawer
             links={[
               {
-                href: githubLink,
-                icon: brands("github"),
-                label: t.common.apply,
+                href: twitterLink,
+                icon: brands("twitter"),
+                label: "Twitter",
                 isExternal: true,
               },
               {
                 href: telegramLink,
                 icon: brands("telegram"),
                 label: t.common.community,
+                isExternal: true,
+              },
+              {
+                href: githubLink,
+                icon: brands("github"),
+                label: t.common.apply,
                 isExternal: true,
               },
               {
