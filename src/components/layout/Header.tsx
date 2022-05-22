@@ -26,7 +26,7 @@ function Header() {
           {
             href: "",
             children: (
-              <NextLink href="/" passHref locale="fr">
+              <NextLink href="" passHref locale="fr">
                 <Link _hover={{ textDecoration: "none" }} href="/" w="full">
                   Français
                 </Link>
@@ -36,7 +36,7 @@ function Header() {
           {
             href: "",
             children: (
-              <NextLink href="/" passHref locale="en">
+              <NextLink href="" passHref locale="en">
                 <Link _hover={{ textDecoration: "none" }} href="/" w="full">
                   English
                 </Link>
@@ -46,7 +46,7 @@ function Header() {
           {
             href: "",
             children: (
-              <NextLink href="/" passHref locale="tr">
+              <NextLink href="" passHref locale="tr">
                 <Link _hover={{ textDecoration: "none" }} href="/" w="full">
                   Türk
                 </Link>
@@ -56,7 +56,7 @@ function Header() {
           {
             href: "",
             children: (
-              <NextLink href="/" passHref locale="it">
+              <NextLink href="" passHref locale="it">
                 <Link _hover={{ textDecoration: "none" }} href="/" w="full">
                   Italiano
                 </Link>
@@ -66,7 +66,7 @@ function Header() {
           {
             href: "",
             children: (
-              <NextLink href="/" passHref locale="zh_CN">
+              <NextLink href="" passHref locale="zh_CN">
                 <Link _hover={{ textDecoration: "none" }} href="/" w="full">
                   简体中文
                 </Link>
@@ -76,7 +76,7 @@ function Header() {
           {
             href: "",
             children: (
-              <NextLink href="/" passHref locale="zh_TW">
+              <NextLink href="" passHref locale="zh_TW">
                 <Link _hover={{ textDecoration: "none" }} href="/" w="full">
                   繁體中文
                 </Link>
@@ -86,7 +86,7 @@ function Header() {
           {
             href: "",
             children: (
-              <NextLink href="/" passHref locale="pl">
+              <NextLink href="" passHref locale="pl">
                 <Link _hover={{ textDecoration: "none" }} href="/" w="full">
                   Polski
                 </Link>
@@ -96,7 +96,7 @@ function Header() {
           {
             href: "",
             children: (
-              <NextLink href="/" passHref locale="pt">
+              <NextLink href="" passHref locale="pt">
                 <Link _hover={{ textDecoration: "none" }} href="/" w="full">
                   Português
                 </Link>
