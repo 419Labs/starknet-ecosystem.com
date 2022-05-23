@@ -6,7 +6,6 @@ const enTranslate: TranslateState = {
     subtitle_main: "Explore all projects building & running on StarkNet L2",
     community_driven:
       "✨ This project is managed by the awesome StarkNet community",
-
     no_project: "😕 No projects in this category",
     maybe_yours: "Maybe yours?",
     made_with: "Made with",
@@ -18,6 +17,7 @@ const enTranslate: TranslateState = {
     job: "Jobs",
     no_job: "😕 No jobs",
     more: "view more",
+    data_error: "Error while loading data, please try again later",
   },
   tags: {
     all: "All",

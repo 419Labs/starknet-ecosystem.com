@@ -92,7 +92,7 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
     githubReposToFollow.map((repo) =>
       MetricsApi.fetchGithubRepo(repo.organization, repo.name)
     )
-  );
+  ).catch(() => null);
   const npmDownloads = await MetricsApi.fetchNpmDownloads(
     npmRepoToFollow.name
   ).then((result) => ({ ...result, label: npmRepoToFollow.label }));

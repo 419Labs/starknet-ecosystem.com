@@ -6,7 +6,6 @@ const frTranslate: TranslateState = {
     subtitle_main:
       "Explorez les projets construits et lancés sur la solution L2 StarkNet",
     community_driven: "✨ Une initiative guidée par la communauté",
-
     no_project: "😕 Aucun projet dans cette catégorie",
     maybe_yours: "Peut-être le vôtre ?",
     made_with: "Fait avec",
@@ -18,6 +17,8 @@ const frTranslate: TranslateState = {
     job: "Jobs",
     no_job: "😕 Aucun jobs",
     more: "voir plus",
+    data_error:
+      "Erreur lors du chargement des données, veuillez réessayer plus tard",
   },
   tags: {
     all: "Tous",
