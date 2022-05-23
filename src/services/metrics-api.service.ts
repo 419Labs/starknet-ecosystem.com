@@ -1,5 +1,5 @@
 import type { GithubRepo } from "../models/github-repo";
-import type { NpmDownloads } from "../models/npm-downloads";
+import type { NpmDownloadsDto } from "../models/npm-downloads";
 
 const fetchGithubRepo = (
   organization: string,
@@ -14,7 +14,8 @@ const fetchGithubRepo = (
     }
   );
 
-const fetchNpmDownloads = (name: string): Promise<NpmDownloads> =>
+
+  const fetchNpmDownloads = (name: string): Promise<NpmDownloadsDto> =>
   fetch(`https://api.npmjs.org/downloads/range/last-year/${name}`).then(
     (response: Response) => {
       if (!response.ok) throw new Error(response.statusText);

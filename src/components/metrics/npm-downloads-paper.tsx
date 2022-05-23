@@ -1,4 +1,4 @@
-import { Box, Flex, HStack, Text } from "@chakra-ui/layout";
+import { Box, Flex, HStack, Link, Text } from "@chakra-ui/layout";
 import { useTheme } from "@emotion/react";
 import { brands } from "@fortawesome/fontawesome-svg-core/import.macro";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -79,10 +79,16 @@ const NpmDownloadsPaper: FC<Props> = ({ npmDownloads }) => {
   return (
     <Box borderRadius="md" backgroundColor="gray.800" p={5}>
       <Flex justify="space-between" alignItems="center" mb={4}>
-        <HStack as="h3" fontSize="lg" fontWeight="bold">
-          <FontAwesomeIcon size="2x" icon={brands("npm")} />
-          <Text ml={1}>{values.package}</Text>
-        </HStack>
+        <Link
+          _hover={{ textDecoration: "none", opacity: 0.5 }}
+          href={`https://www.npmjs.com/package/${values.package}`}
+          isExternal
+        >
+          <HStack as="h3" fontSize="lg" fontWeight="bold">
+            <FontAwesomeIcon size="2x" icon={brands("npm")} />
+            <Text ml={1}>{values.label}</Text>
+          </HStack>
+        </Link>
         <HStack fontSize="xs" color="whiteAlpha.600" spacing={1}>
           <Text fontWeight="bold">
             {values.downloads[values.downloads.length - 1].downloads}

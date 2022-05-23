@@ -1,4 +1,4 @@
-import { Box, SimpleGrid, Text } from "@chakra-ui/layout";
+import { Box, Link, SimpleGrid, Text } from "@chakra-ui/layout";
 import type { GetServerSideProps } from "next";
 import type { FC } from "react";
 
@@ -27,9 +27,18 @@ const MetricsPage: FC<Props> = ({
   testnetContractCount,
 }) => (
   <Box w="full">
-    <Text as="h2" mb={4} mt={8} fontSize="2xl" fontWeight="bold" w="full">
+    <Text as="h2" mt={8} fontSize="2xl" fontWeight="bold" w="full">
       Ecosystem metrics
     </Text>
+    <Link
+      isExternal
+      href="https://goerli.voyager.online"
+      _hover={{ textDecoration: "none", opacity: 0.5 }}
+    >
+      <Text mb={4} w="full">
+        Data sources: Voyager
+      </Text>
+    </Link>
     <SimpleGrid columns={{ sm: 1, md: 2, lg: 4 }} spacing={4} mb={8}>
       <CountPaper
         count={mainnetTransactionCount}
@@ -68,28 +77,35 @@ const githubReposToFollow = [
   { organization: "OpenZeppelin", name: "nile" },
   { organization: "Shard-Labs", name: "starknet-devnet" },
 ];
-const npmRepoToFollow = "starknet";
+const npmRepoToFollow = { name: "starknet", label: "starknet.js" };
 
 export const getServerSideProps: GetServerSideProps = async ({ res }) => {
-  res.setHeader("Cache-Control", "public, s-maxage=3600"); // Cache this for an hour
+  res.setHeader(
+    "Cache-Control",
+    "public, s-maxage=3600, stale-while-revalidate=7200"
+  ); // Cache this for an hour
   const githubRepos = await Promise.all(
     githubReposToFollow.map((repo) =>
       MetricsApi.fetchGithubRepo(repo.organization, repo.name)
     )
   );
-  const npmDownloads = await MetricsApi.fetchNpmDownloads(npmRepoToFollow);
-  const mainnetTransactionCount = await MetricsApi.fetchTransactionCount();
-  const mainnetContractCount = await MetricsApi.fetchContractCount();
-  const testnetTransactionCount = await MetricsApi.fetchTransactionCount(true);
-  const testnetContractCount = await MetricsApi.fetchContractCount(true);
+  const npmDownloads = await MetricsApi.fetchNpmDownloads(
+    npmRepoToFollow.name
+  ).then((result) => ({ ...result, label: npmRepoToFollow.label }));
+  const counts = await Promise.all([
+    MetricsApi.fetchTransactionCount(),
+    MetricsApi.fetchContractCount(),
+    MetricsApi.fetchTransactionCount(true),
+    MetricsApi.fetchContractCount(true),
+  ]);
   return {
     props: {
       githubRepos,
       npmDownloads,
-      mainnetTransactionCount,
-      mainnetContractCount,
-      testnetTransactionCount,
-      testnetContractCount,
-    },
+      mainnetTransactionCount: counts[0],
+      mainnetContractCount: counts[1],
+      testnetTransactionCount: counts[2],
+      testnetContractCount: counts[3],
+    } as Props,
   };
 };
