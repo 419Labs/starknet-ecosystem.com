@@ -17,6 +17,7 @@ export const toNpmDownloadsChart = (
   });
   return {
     package: npmDownloads.package,
+    label: npmDownloads.label,
     downloads: weeks.map((week) => ({
       start: week[0].day,
       end: week[week.length - 1].day,

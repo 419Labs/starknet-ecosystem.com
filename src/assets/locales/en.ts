@@ -6,7 +6,6 @@ const enTranslate: TranslateState = {
     subtitle_main: "Explore all projects building & running on StarkNet L2",
     community_driven:
       "✨ This project is managed by the awesome StarkNet community",
-
     no_project: "😕 No projects in this category",
     maybe_yours: "Maybe yours?",
     made_with: "Made with",
@@ -14,13 +13,11 @@ const enTranslate: TranslateState = {
     alpha_road_team: "Alpha Road Team",
     apply: "Apply",
     community: "Community",
-    metrics: "Metrics",
-    github_repo: "Tools & Libraries",
-    npm_last_downloads: "downloads last 7 days",
     job_title_main: "Jobs",
     job: "Jobs",
     no_job: "😕 No jobs",
     more: "view more",
+    data_error: "Error while loading data, please try again later",
   },
   tags: {
     all: "All",
@@ -47,6 +44,16 @@ const enTranslate: TranslateState = {
     published: "Published",
     ago: "ago",
     no_selected: "No job selected",
+  },
+  metrics: {
+    title: "Ecosystem metrics",
+    data_sources: "Data sources",
+    transactions: "transactions",
+    contracts: "contracts",
+    developer_tools: "Developer tools",
+    metrics: "Metrics",
+    github_repo: "Tools & Libraries",
+    npm_last_downloads: "downloads last 7 days",
   },
 };
 

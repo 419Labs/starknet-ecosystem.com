@@ -3,7 +3,8 @@ import type { TranslateState } from "../../context/TranslateProvider/model";
 const itTranslate: TranslateState = {
   common: {
     title_main: "La rivoluzione di StarkNet sta venendo alla luce del giorno",
-    subtitle_main: "Esplora tutti i progetti realizzati e in esecuzione su StarkNet L2",
+    subtitle_main:
+      "Esplora tutti i progetti realizzati e in esecuzione su StarkNet L2",
     community_driven: "✨ Un'iniziativa guidata dalla comunità",
 
     no_project: "😕 Nessun progetto in questa categoria",
@@ -34,6 +35,7 @@ const itTranslate: TranslateState = {
   jobs: {
     apply: "Apply now",
   },
+  metrics: {},
 };
 
 export default itTranslate;

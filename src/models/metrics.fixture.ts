@@ -18,6 +18,7 @@ export const aNpmDownloads = (): NpmDownloads => ({
   start: "2022-04-06",
   end: "2022-04-20",
   package: "starknet",
+  label: "starknet.js",
   downloads: [
     {
       downloads: 342,
@@ -84,6 +85,7 @@ export const aNpmDownloads = (): NpmDownloads => ({
 
 export const aNpmDownloadsChart = (): NpmDownloadsChart => ({
   package: "starknet",
+  label: "starknet.js",
   downloads: [
     {
       start: "2022-04-07",

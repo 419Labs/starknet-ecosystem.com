@@ -1,5 +1,5 @@
 import type { GithubRepo } from "../models/github-repo";
-import type { NpmDownloads } from "../models/npm-downloads";
+import type { NpmDownloadsDto } from "../models/npm-downloads";
 
 const fetchGithubRepo = (
   organization: string,
@@ -14,13 +14,16 @@ const fetchGithubRepo = (
     }
   );
 
-const fetchNpmDownloads = (name: string): Promise<NpmDownloads> =>
-  fetch(`https://api.npmjs.org/downloads/range/last-year/${name}`).then(
-    (response: Response) => {
+const fetchNpmDownloads = (name: string): Promise<NpmDownloadsDto> =>
+  fetch(`https://api.npmjs.org/downloads/range/last-year/${name}`)
+    .then((response: Response) => {
       if (!response.ok) throw new Error(response.statusText);
       return response.json();
-    }
-  );
+    })
+    .catch((error) => {
+      console.log(error);
+      return 0;
+    });
 
 const fetchTransactionCount = (testnet?: boolean): Promise<number> =>
   fetch(`https://${testnet ? "goerli." : ""}voyager.online/api/txns?ps=10&p=1`)

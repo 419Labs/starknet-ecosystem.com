@@ -1,6 +1,6 @@
-import { Box, Flex, HStack, Text } from "@chakra-ui/layout";
+import { Box, Flex, HStack, Link, Text, VStack } from "@chakra-ui/layout";
 import { useTheme } from "@emotion/react";
-import { brands } from "@fortawesome/fontawesome-svg-core/import.macro";
+import { brands, solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   CategoryScale,
@@ -78,18 +78,32 @@ const NpmDownloadsPaper: FC<Props> = ({ npmDownloads }) => {
 
   return (
     <Box borderRadius="md" backgroundColor="gray.800" p={5}>
-      <Flex justify="space-between" alignItems="center" mb={4}>
-        <HStack as="h3" fontSize="lg" fontWeight="bold">
-          <FontAwesomeIcon size="2x" icon={brands("npm")} />
-          <Text ml={1}>{values.package}</Text>
-        </HStack>
-        <HStack fontSize="xs" color="whiteAlpha.600" spacing={1}>
+      <VStack alignItems="flex-start" spacing={0} mb={4}>
+        <Flex w="full" justify="space-between" alignItems="flex-start" mb={1}>
+          <HStack as="h3" fontSize="lg" fontWeight="bold">
+            <FontAwesomeIcon fontSize="24px" icon={brands("npm")} />
+            <Text ml={1}>{values.label}</Text>
+          </HStack>
+          <Box fontSize="sm" color="whiteAlpha.600">
+            <Link
+              isExternal
+              href={`https://www.npmjs.com/package/${values.package}`}
+              _hover={{ textDecoration: "none", color: "whiteAlpha.500" }}
+            >
+              <HStack alignItems="center">
+                <Text>{t.metrics.more || "view more"}</Text>
+                <FontAwesomeIcon icon={solid("up-right-from-square")} />
+              </HStack>
+            </Link>
+          </Box>
+        </Flex>
+        <HStack fontSize="xs" color="whiteAlpha.600">
           <Text fontWeight="bold">
             {values.downloads[values.downloads.length - 1].downloads}
           </Text>
-          <Text>{t.common.npm_last_downloads || "downloads last 7 days"}</Text>
+          <Text>{t.metrics.npm_last_downloads || "downloads last 7 days"}</Text>
         </HStack>
-      </Flex>
+      </VStack>
       <Line
         options={{
           responsive: true,
