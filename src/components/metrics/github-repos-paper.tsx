@@ -17,11 +17,11 @@ const GithubReposPaper: FC<Props> = ({ githubRepos }) => {
       <Flex justify="space-between" alignItems="center" mb={4}>
         <HStack as="h3" mb={4} fontSize="lg" fontWeight="bold">
           <FontAwesomeIcon icon={brands("github")} />
-          <Text ml={1}>{t.common.github_repo || "Tools & Libraries"}</Text>
+          <Text ml={1}>{t.metrics.github_repo || "Tools & Libraries"}</Text>
         </HStack>
         <HStack fontSize="sm" color="whiteAlpha.600" spacing={1}>
           <Link isExternal href="https://github.com/gakonst/awesome-starknet">
-            <Text>{t.common.more || "view more"}</Text>
+            <Text>{t.metrics.more || "view more"}</Text>
           </Link>
         </HStack>
       </Flex>

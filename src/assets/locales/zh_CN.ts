@@ -34,6 +34,7 @@ const zhCNTranslation: TranslateState = {
   jobs: {
     apply: "Apply now",
   },
+  metrics: {},
 };
 
 export default zhCNTranslation;

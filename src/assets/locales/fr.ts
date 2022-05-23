@@ -14,10 +14,6 @@ const frTranslate: TranslateState = {
     alpha_road_team: "L'équipe Alpha Road",
     apply: "Appliquer",
     community: "Communauté",
-
-    metrics: "Métriques",
-    github_repo: "Outils & Librairies",
-    npm_last_downloads: "téléchargement les 7 days",
     job_title_main: "Jobs",
     job: "Jobs",
     no_job: "😕 Aucun jobs",
@@ -42,6 +38,16 @@ const frTranslate: TranslateState = {
   },
   jobs: {
     apply: "Postuler",
+  },
+  metrics: {
+    title: "Métriques de l'écosystem",
+    data_sources: "Source des données",
+    transactions: "transactions",
+    contracts: "contracts",
+    developer_tools: "Outils Dévelopeurs",
+    metrics: "Métriques",
+    github_repo: "Outils & Librairies",
+    npm_last_downloads: "téléchargements les 7 derniers jours",
   },
 };
 

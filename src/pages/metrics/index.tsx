@@ -5,6 +5,7 @@ import type { FC } from "react";
 import CountPaper from "../../components/metrics/count-paper";
 import GithubReposPaper from "../../components/metrics/github-repos-paper";
 import NpmDownloadsPaper from "../../components/metrics/npm-downloads-paper";
+import { useTranslate } from "../../context/TranslateProvider";
 import type { GithubRepo } from "../../models/github-repo";
 import type { NpmDownloads } from "../../models/npm-downloads";
 import { MetricsApi } from "../../services/metrics-api.service";
@@ -25,47 +26,50 @@ const MetricsPage: FC<Props> = ({
   mainnetContractCount,
   testnetTransactionCount,
   testnetContractCount,
-}) => (
-  <Box w="full">
-    <Text as="h2" mt={8} fontSize="2xl" fontWeight="bold" w="full">
-      Ecosystem metrics
-    </Text>
-    <Link
-      isExternal
-      href="https://goerli.voyager.online"
-      _hover={{ textDecoration: "none", opacity: 0.5 }}
-    >
-      <Text mb={4} w="full">
-        Data sources: Voyager
+}) => {
+  const { t } = useTranslate();
+  return (
+    <Box w="full">
+      <Text as="h2" mt={8} fontSize="2xl" fontWeight="bold" w="full">
+        {t.metrics.title || "Ecosystem metrics"}
       </Text>
-    </Link>
-    <SimpleGrid columns={{ sm: 1, md: 2, lg: 4 }} spacing={4} mb={8}>
-      <CountPaper
-        count={mainnetTransactionCount}
-        label="transactions (ETH Mainnet)"
-      />
-      <CountPaper
-        count={mainnetContractCount}
-        label="contracts (ETH Mainnet)"
-      />
-      <CountPaper
-        count={testnetTransactionCount}
-        label="transactions (Goerli Testnet)"
-      />
-      <CountPaper
-        count={testnetContractCount}
-        label="contracts (Goerli Testnet)"
-      />
-    </SimpleGrid>
-    <Text as="h2" mb={4} fontSize="2xl" fontWeight="bold" w="full">
-      Developer tools
-    </Text>
-    <SimpleGrid columns={{ sm: 1, md: 2, lg: 2, xl: 3 }} spacing={4}>
-      <GithubReposPaper githubRepos={githubRepos} />
-      <NpmDownloadsPaper npmDownloads={npmDownloads} />
-    </SimpleGrid>
-  </Box>
-);
+      <Link
+        isExternal
+        href="https://goerli.voyager.online"
+        _hover={{ textDecoration: "none", opacity: 0.5 }}
+      >
+        <Text mb={4} w="full">
+          {t.metrics.data_sources || "Data sources"}: Voyager
+        </Text>
+      </Link>
+      <SimpleGrid columns={{ sm: 1, md: 2, lg: 4 }} spacing={4} mb={8}>
+        <CountPaper
+          count={mainnetTransactionCount}
+          label={`${t.metrics.transactions || "transactions"} (ETH Mainnet)`}
+        />
+        <CountPaper
+          count={mainnetContractCount}
+          label={`${t.metrics.contracts || "contracts"} (ETH Mainnet)`}
+        />
+        <CountPaper
+          count={testnetTransactionCount}
+          label={`${t.metrics.transactions || "transactions"} (Goerli Testnet)`}
+        />
+        <CountPaper
+          count={testnetContractCount}
+          label={`${t.metrics.contracts || "contracts"} (Goerli Testnet)`}
+        />
+      </SimpleGrid>
+      <Text as="h2" mb={4} fontSize="2xl" fontWeight="bold" w="full">
+        {t.metrics.developer_tools || "Developer tools"}
+      </Text>
+      <SimpleGrid columns={{ sm: 1, md: 2, lg: 2, xl: 3 }} spacing={4}>
+        <GithubReposPaper githubRepos={githubRepos} />
+        <NpmDownloadsPaper npmDownloads={npmDownloads} />
+      </SimpleGrid>
+    </Box>
+  );
+};
 
 export default MetricsPage;
 

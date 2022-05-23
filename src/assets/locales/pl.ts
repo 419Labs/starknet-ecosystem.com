@@ -35,6 +35,7 @@ const translate: TranslateState = {
   jobs: {
     apply: "Apply now",
   },
+  metrics: {},
 };
 
 export default translate;

@@ -14,9 +14,6 @@ const enTranslate: TranslateState = {
     alpha_road_team: "Alpha Road Team",
     apply: "Apply",
     community: "Community",
-    metrics: "Metrics",
-    github_repo: "Tools & Libraries",
-    npm_last_downloads: "downloads last 7 days",
     job_title_main: "Jobs",
     job: "Jobs",
     no_job: "😕 No jobs",
@@ -47,6 +44,16 @@ const enTranslate: TranslateState = {
     published: "Published",
     ago: "ago",
     no_selected: "No job selected",
+  },
+  metrics: {
+    title: "Ecosystem metrics",
+    data_sources: "Data sources",
+    transactions: "transactions",
+    contracts: "contracts",
+    developer_tools: "Developer tools",
+    metrics: "Metrics",
+    github_repo: "Tools & Libraries",
+    npm_last_downloads: "downloads last 7 days",
   },
 };
 

@@ -34,6 +34,7 @@ const zhTWTranslate: TranslateState = {
   jobs: {
     apply: "Apply now",
   },
+  metrics: {},
 };
 
 export default zhTWTranslate;

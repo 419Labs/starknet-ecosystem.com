@@ -93,7 +93,7 @@ const NpmDownloadsPaper: FC<Props> = ({ npmDownloads }) => {
           <Text fontWeight="bold">
             {values.downloads[values.downloads.length - 1].downloads}
           </Text>
-          <Text>{t.common.npm_last_downloads || "downloads last 7 days"}</Text>
+          <Text>{t.metrics.npm_last_downloads || "downloads last 7 days"}</Text>
         </HStack>
       </Flex>
       <Line
