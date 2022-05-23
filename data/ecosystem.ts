@@ -926,6 +926,23 @@ export const allProjects: Array<Project> = [
     isTestnetLive: true,
   },
   {
+    name: "Zem",
+    short_name: "zem",
+    description: "Deployment system for Hardhat supporting EVM and StarkNet contracts.",
+    tags: ["tools"],
+    logo: "zem.png",
+    network: {
+      website: "",
+      github: "https://github.com/anders-torbjornsen/zem",
+      twitter: "https://twitter.com/0x80_eth",
+      medium: "",
+      discord: "",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: true,
+  },
+  {
     name: "Nile",
     short_name: "Nile",
     description: "CLI tool to develop StarkNet projects written in Cairo",
