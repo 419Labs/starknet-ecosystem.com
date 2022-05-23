@@ -1,4 +1,4 @@
-import { Box, Flex, HStack, Link, Text } from "@chakra-ui/layout";
+import { Box, Flex, HStack, Link, Text, VStack } from "@chakra-ui/layout";
 import { useTheme } from "@emotion/react";
 import { brands } from "@fortawesome/fontawesome-svg-core/import.macro";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -78,23 +78,29 @@ const NpmDownloadsPaper: FC<Props> = ({ npmDownloads }) => {
 
   return (
     <Box borderRadius="md" backgroundColor="gray.800" p={5}>
-      <Flex justify="space-between" alignItems="center" mb={4}>
-        <Link
-          _hover={{ textDecoration: "none", opacity: 0.5 }}
-          href={`https://www.npmjs.com/package/${values.package}`}
-          isExternal
-        >
+      <Flex justify="space-between" alignItems="flex-start" mb={4}>
+        <VStack alignItems="flex-start">
           <HStack as="h3" fontSize="lg" fontWeight="bold">
-            <FontAwesomeIcon size="2x" icon={brands("npm")} />
+            <FontAwesomeIcon fontSize="24px" icon={brands("npm")} />
             <Text ml={1}>{values.label}</Text>
           </HStack>
-        </Link>
-        <HStack fontSize="xs" color="whiteAlpha.600" spacing={1}>
-          <Text fontWeight="bold">
-            {values.downloads[values.downloads.length - 1].downloads}
-          </Text>
-          <Text>{t.metrics.npm_last_downloads || "downloads last 7 days"}</Text>
-        </HStack>
+          <HStack fontSize="xs" color="whiteAlpha.600">
+            <Text fontWeight="bold">
+              {values.downloads[values.downloads.length - 1].downloads}
+            </Text>
+            <Text>
+              {t.metrics.npm_last_downloads || "downloads last 7 days"}
+            </Text>
+          </HStack>
+        </VStack>
+        <Box fontSize="sm" color="whiteAlpha.600">
+          <Link
+            isExternal
+            href={`https://www.npmjs.com/package/${values.package}`}
+          >
+            <Text>{t.metrics.more || "view more"}</Text>
+          </Link>
+        </Box>
       </Flex>
       <Line
         options={{

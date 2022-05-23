@@ -14,16 +14,16 @@ const GithubReposPaper: FC<Props> = ({ githubRepos }) => {
   const { t } = useTranslate();
   return (
     <Box borderRadius="md" backgroundColor="gray.800" p={5}>
-      <Flex justify="space-between" alignItems="center" mb={4}>
+      <Flex justify="space-between" alignItems="flex-start" mb={4}>
         <HStack as="h3" mb={4} fontSize="lg" fontWeight="bold">
           <FontAwesomeIcon icon={brands("github")} />
           <Text ml={1}>{t.metrics.github_repo || "Tools & Libraries"}</Text>
         </HStack>
-        <HStack fontSize="sm" color="whiteAlpha.600" spacing={1}>
+        <Box fontSize="sm" color="whiteAlpha.600">
           <Link isExternal href="https://github.com/gakonst/awesome-starknet">
             <Text>{t.metrics.more || "view more"}</Text>
           </Link>
-        </HStack>
+        </Box>
       </Flex>
       <SimpleGrid columns={2} spacing={4}>
         {githubRepos.map((repo) => (
