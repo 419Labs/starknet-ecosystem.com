@@ -1,4 +1,6 @@
-import { Box, Link, SimpleGrid, Text } from "@chakra-ui/layout";
+import { Box, HStack, Link, SimpleGrid, Text } from "@chakra-ui/layout";
+import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import type { GetServerSideProps } from "next";
 import type { FC } from "react";
 
@@ -30,18 +32,22 @@ const MetricsPage: FC<Props> = ({
   const { t } = useTranslate();
   return (
     <Box w="full">
-      <Text as="h2" mt={8} fontSize="2xl" fontWeight="bold" w="full">
-        {t.metrics.title || "Ecosystem metrics"}
-      </Text>
-      <Link
-        isExternal
-        href="https://goerli.voyager.online"
-        _hover={{ textDecoration: "none", opacity: 0.5 }}
-      >
-        <Text mb={4} w="full">
-          {t.metrics.data_sources || "Data sources"}: Voyager
+      <Box mb={4}>
+        <Text as="h2" mt={8} fontSize="2xl" fontWeight="bold" w="full">
+          {t.metrics.title || "Ecosystem metrics"}
         </Text>
-      </Link>
+        <Link
+          isExternal
+          color="whiteAlpha.600"
+          href="https://goerli.voyager.online"
+          _hover={{ textDecoration: "none", color: "whiteAlpha.500" }}
+        >
+          <HStack alignItems="center">
+            <Text>{t.metrics.data_sources || "Data sources"}: Voyager</Text>
+            <FontAwesomeIcon icon={solid("up-right-from-square")} />
+          </HStack>
+        </Link>
+      </Box>
       <SimpleGrid columns={{ sm: 1, md: 2, lg: 4 }} spacing={4} mb={8}>
         <CountPaper
           count={mainnetTransactionCount}

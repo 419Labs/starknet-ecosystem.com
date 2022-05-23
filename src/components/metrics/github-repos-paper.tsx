@@ -22,8 +22,15 @@ const GithubReposPaper: FC<Props> = ({ githubRepos }) => {
           <Text ml={1}>{t.metrics.github_repo || "Tools & Libraries"}</Text>
         </HStack>
         <Box fontSize="sm" color="whiteAlpha.600">
-          <Link isExternal href="https://github.com/gakonst/awesome-starknet">
-            <Text>{t.metrics.more || "view more"}</Text>
+          <Link
+            isExternal
+            href="https://github.com/gakonst/awesome-starknet"
+            _hover={{ textDecoration: "none", color: "whiteAlpha.500" }}
+          >
+            <HStack alignItems="center">
+              <Text>{t.metrics.more || "view more"}</Text>
+              <FontAwesomeIcon icon={solid("up-right-from-square")} />
+            </HStack>
           </Link>
         </Box>
       </Flex>
