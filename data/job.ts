@@ -683,6 +683,68 @@ const allJobs: Array<Job> = [
         createdOn: new Date("2022-05-16"),
     applyLink: "https://apply.workable.com/sithswap/j/C20203825C/",
   },
+  {
+    key: "23",
+    title: "Senior frontend engineer",
+    companyId: 18,
+    tags: ["UI", "React", "TypeScript"],
+    location: "Remote",
+    remote: true,
+    description:
+        "Yuki works with the best engineering teams in the Ethereum and Layer 2 ecosystem. We help them to design and build outstanding Web3 user experiences – positioning their technology and products for success.\n" +
+        "\n" +
+        "We’re looking for an enthusiastic, self-motivated frontend engineer to help us support even more teams and projects. You’ll be joining a small but close knit team known for shipping quality design and frontend.\n" +
+        "\n" +
+        "Crypto and Web3 can be complex – experience is a plus but not required – you will have a strong support system in the Yuki team to help navigate new concepts and technologies.\n" +
+        "\n" +
+        "What you'll do:\n" +
+        "Work closely with Yuki’s product designers and crypto teams to understand the problems they are solving and implement beautiful and usable interfaces that make their technology accessible to users\n" +
+        "Rapidly implement functional UI elements from design mocks, with an eye toward performance and accessibility\n" +
+        "Know when to create abstractions vs. one-off features\n" +
+        "Ensure that components are functional, elegant, accessible, performant, and mobile-friendly\n" +
+        "Understand when and how to run UI tests",
+    requirements:
+        "- At least 3 years of React experience\n" +
+        "- A deep understanding of the architecture of modern client-side React applications\n" +
+        "- Prior experience working with component libraries or design teams in user-facing applications\n" +
+        "- A desire to keep up with modern best practices in web development\n" +
+        "\n" +
+        "Nice to have:\n" +
+        "- Prior experience creating a design system or component library\n" +
+        "- Familiarity with the web3 frontend stack (ethers.js/web3.js, EIP-1193, client-side private key management, etc.)\n" +
+        "- Familiarity with React Hooks\n" +
+        "- Experience with TypeScript in React",
+        createdOn: new Date("2022-04-16"),
+    applyLink: "https://yuki-labs.notion.site/yuki-labs/Senior-frontend-engineer-contract-to-hire-22162a6fa8e54c9c98926df688917195",
+  },
+  {
+    key: "24",
+    title: "Product designer",
+    companyId: 18,
+    tags: ["Figma"],
+    location: "Remote",
+    remote: true,
+    description:
+        "Yuki works with the best engineering teams in the Ethereum and Layer 2 ecosystem. We help them to design and build outstanding Web3 user experiences – positioning their technology and products for success.\n" +
+        "\n" +
+        "We’re looking for an enthusiastic, self-motivated frontend engineer to help us support even more teams and projects. You’ll be joining a small but close knit team known for shipping quality design and frontend.\n" +
+        "\n" +
+        "Crypto and Web3 can be complex – experience is a plus but not required – you will have a strong support system in the Yuki team to help navigate new concepts and technologies.\n" +
+        "\n" +
+        "What you'll do:\n" +
+        "Work closely with crypto teams to understand the problems they are solving and design beautiful and usable interfaces that make their technology accessible to users\n" +
+        "Help crypto teams that need guidance on how to turn their idea into a tangible product.\n" +
+        "Guide teams through the design process, from problem definition through to beautifully polished visual designs",
+    requirements:
+        "- 3 years of product design experience including research, prototyping and visual design\n" +
+        "- Prior experience shipping web / mobile apps\n" +
+        "- Comfortable guiding and managing projects with clients\n" +
+        "- Prior experience working with component libraries or design systems\n" +
+        "- A desire to design within the context of web3/crypto.\n" +
+        "- Experience designing with Figma",
+        createdOn: new Date("2022-04-16"),
+    applyLink: "https://yuki-labs.notion.site/yuki-labs/Product-designer-contract-to-hire-bc55db9c1c0d4d81952334ed648f587f",
+  },
 ];
 
 export default allJobs;
