@@ -222,6 +222,19 @@ const allCompanies: Company[] = [
       telegram: "https://t.me/SithWars",
     },
   },
+  {
+    id: 18,
+    name: "Yūki",
+    logo: "",
+    network: {
+      website: "https://www.yuki.wtf",
+      github: "",
+      twitter: "",
+      medium: "",
+      discord: "",
+      telegram: "",
+    },
+  },
 ];
 
 export default allCompanies;
