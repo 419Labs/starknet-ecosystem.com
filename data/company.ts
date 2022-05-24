@@ -225,7 +225,7 @@ const allCompanies: Company[] = [
   {
     id: 18,
     name: "Yūki",
-    logo: "",
+    logo: "yuki.png",
     network: {
       website: "https://www.yuki.wtf",
       github: "",

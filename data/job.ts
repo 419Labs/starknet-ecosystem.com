@@ -714,7 +714,7 @@ const allJobs: Array<Job> = [
         "- Familiarity with the web3 frontend stack (ethers.js/web3.js, EIP-1193, client-side private key management, etc.)\n" +
         "- Familiarity with React Hooks\n" +
         "- Experience with TypeScript in React",
-        createdOn: new Date("2022-04-16"),
+        createdOn: new Date("2022-05-24"),
     applyLink: "https://yuki-labs.notion.site/yuki-labs/Senior-frontend-engineer-contract-to-hire-22162a6fa8e54c9c98926df688917195",
   },
   {
@@ -742,7 +742,7 @@ const allJobs: Array<Job> = [
         "- Prior experience working with component libraries or design systems\n" +
         "- A desire to design within the context of web3/crypto.\n" +
         "- Experience designing with Figma",
-        createdOn: new Date("2022-04-16"),
+        createdOn: new Date("2022-05-24"),
     applyLink: "https://yuki-labs.notion.site/yuki-labs/Product-designer-contract-to-hire-bc55db9c1c0d4d81952334ed648f587f",
   },
 ];
