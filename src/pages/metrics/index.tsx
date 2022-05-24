@@ -81,7 +81,7 @@ export default MetricsPage;
 
 const githubReposToFollow = [
   { organization: "starkware-libs", name: "cairo-lang" },
-  { organization: "argentlabs", name: "argent-x" },
+  { organization: "starknet-community-libs", name: "get-starknet" },
   { organization: "0xs34n", name: "starknet.js" },
   { organization: "software-mansion", name: "starknet.py" },
   { organization: "OpenZeppelin", name: "nile" },
