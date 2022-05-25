@@ -55,6 +55,24 @@ export const allProjects: Array<Project> = [
     isTestnetLive: false,
   },
   {
+    name: "Chainstack",
+    short_name: "chainstack",
+    description:
+      "Chainstack is a managed node provider for the StarkNet mainnet and testnet.",
+    tags: ["infrastructure"],
+    logo: "chainstack.png",
+    network: {
+      website: "https://chainstack.com/build-better-with-starknet/",
+      github: "https://github.com/chainstack/",
+      twitter: "https://twitter.com/chainstackhq",
+      medium: "https://chainstack.com/blog",
+      discord: "https://discord.gg/Cymtg2f7pX",
+      telegram: "https://t.me/chainstack",
+    },
+    isLive: false,
+    isTestnetLive: false,
+  },
+  {
     name: "Stark Defi",
     short_name: "StarkDefi",
     description:
