@@ -66,16 +66,16 @@ const allCompanies: Company[] = [
   },
   {
     id: 6,
-    name: "Oasis",
+    name: "Aspect",
     network: {
-      website: "https://testnet.playoasis.xyz/",
+      website: "https://testnet.aspect.co/",
       github: "https://github.com/playoasis",
-      twitter: "https://twitter.com/playoasisXYZ",
+      twitter: "https://twitter.com/aspectdotco",
       medium: "",
       discord: "https://discord.com/invite/aR2U7KtbgD",
-      telegram: "https://t.me/playoasis",
+      telegram: "https://t.me/aspectco",
     },
-    logo: "oasis.png",
+    logo: "aspect.png",
   },
   {
     id: 7,
