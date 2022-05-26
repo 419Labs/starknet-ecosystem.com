@@ -45,6 +45,7 @@ const frTranslate: TranslateState = {
     data_sources: "Source des données",
     transactions: "transactions",
     contracts: "contracts",
+    echanges: "echanges",
     developer_tools: "Outils Dévelopeurs",
     metrics: "Métriques",
     github_repo: "Outils & Librairies",

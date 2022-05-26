@@ -50,6 +50,7 @@ const enTranslate: TranslateState = {
     data_sources: "Data sources",
     transactions: "transactions",
     contracts: "contracts",
+    swaps: "swaps",
     developer_tools: "Developer tools",
     metrics: "Metrics",
     github_repo: "Tools & Libraries",

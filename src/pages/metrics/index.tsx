@@ -19,6 +19,7 @@ interface Props {
   mainnetContractCount: number;
   testnetTransactionCount: number;
   testnetContractCount: number;
+  testnetSwapsCount: number;
 }
 
 const MetricsPage: FC<Props> = ({
@@ -28,6 +29,7 @@ const MetricsPage: FC<Props> = ({
   mainnetContractCount,
   testnetTransactionCount,
   testnetContractCount,
+  testnetSwapsCount,
 }) => {
   const { t } = useTranslate();
   return (
@@ -36,17 +38,31 @@ const MetricsPage: FC<Props> = ({
         <Text as="h2" mt={8} fontSize="2xl" fontWeight="bold" w="full">
           {t.metrics.title || "Ecosystem metrics"}
         </Text>
-        <Link
-          isExternal
-          color="whiteAlpha.600"
-          href="https://goerli.voyager.online"
-          _hover={{ textDecoration: "none", color: "whiteAlpha.500" }}
-        >
-          <HStack alignItems="center">
-            <Text>{t.metrics.data_sources || "Data sources"}: Voyager</Text>
-            <FontAwesomeIcon icon={solid("up-right-from-square")} />
-          </HStack>
-        </Link>
+        <HStack alignItems="center">
+          <Text>{t.metrics.data_sources || "Data sources"}:</Text>
+          <Link
+            isExternal
+            color="whiteAlpha.600"
+            href="https://goerli.voyager.online"
+            _hover={{ textDecoration: "none", color: "whiteAlpha.500" }}
+          >
+            <HStack alignItems="center">
+              <Text>Voyager</Text>
+              <FontAwesomeIcon icon={solid("up-right-from-square")} />
+            </HStack>
+          </Link>
+          <Link
+            isExternal
+            color="whiteAlpha.600"
+            href="http://starknet.events/redoc"
+            _hover={{ textDecoration: "none", color: "whiteAlpha.500" }}
+          >
+            <HStack alignItems="center">
+              <Text>starknet.events</Text>
+              <FontAwesomeIcon icon={solid("up-right-from-square")} />
+            </HStack>
+          </Link>
+        </HStack>
       </Box>
       <SimpleGrid columns={{ sm: 1, md: 2, lg: 4 }} spacing={4} mb={8}>
         <CountPaper
@@ -64,6 +80,10 @@ const MetricsPage: FC<Props> = ({
         <CountPaper
           count={testnetContractCount}
           label={`${t.metrics.contracts || "contracts"} (Goerli Testnet)`}
+        />
+        <CountPaper
+          count={testnetSwapsCount}
+          label={`${t.metrics.swaps || "swaps"} (Goerli Testnet)`}
         />
       </SimpleGrid>
       <Text as="h2" mb={4} fontSize="2xl" fontWeight="bold" w="full">
@@ -89,6 +109,18 @@ const githubReposToFollow = [
 ];
 const npmRepoToFollow = { name: "starknet", label: "starknet.js" };
 
+// AlphaRoad, JediSwap, MySwap
+const swapContracts = [
+  "0x4aec73f0611a9be0524e7ef21ab1679bdf9c97dc7d72614f15373d431226b6a",
+  "0x682bde101e0fa17bb61d867a14db62ddd192d35cc4ad2109e91429e2e4fca17",
+  "0x71faa7d6c3ddb081395574c5a6904f4458ff648b66e2123b877555d9ae0260e",
+];
+
+const eventNames = ["Swap"];
+
+// const fetchDate = new Date();
+// fetchDate.setDate(fetchDate.getDate() - 7);
+
 export const getServerSideProps: GetServerSideProps = async ({ res }) => {
   res.setHeader(
     "Cache-Control",
@@ -107,6 +139,7 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
     MetricsApi.fetchContractCount(),
     MetricsApi.fetchTransactionCount(true),
     MetricsApi.fetchContractCount(true),
+    MetricsApi.fetchCountEvents(true, 1, undefined, swapContracts, eventNames),
   ]);
   return {
     props: {
@@ -116,6 +149,7 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
       mainnetContractCount: counts[1],
       testnetTransactionCount: counts[2],
       testnetContractCount: counts[3],
+      testnetSwapsCount: counts[4],
     } as Props,
   };
 };
