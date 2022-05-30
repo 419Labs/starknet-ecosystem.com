@@ -1313,4 +1313,22 @@ export const allProjects: Array<Project> = [
     isLive: false,
     isTestnetLive: false,
   },
+  {
+    name: "Testnet Node",
+    short_name: "testnetnode",
+    description:
+      "A French tutorial about installation of testnet node with docker",
+    tags: ["tools", "infrastructure"],
+    logo: "starkdefi.png",
+    network: {
+      website: "https://batisseurdunumerique.fr/blog/fr/blog/deployer-un-noeud-sur-une-blockchain",
+      github: "",
+      twitter: "",
+      medium: "",
+      discord: "",
+      telegram: "",
+    },
+    isLive: false,
+    isTestnetLive: false,
+  },
 ];
