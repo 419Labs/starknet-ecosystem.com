@@ -1,3 +1,4 @@
+/* eslint-disable sonarjs/no-duplicate-string */
 import type { Network } from "../src/models/company";
 
 import type { Tag } from "./tag";
@@ -18,7 +19,7 @@ export interface ProjectItf extends Project {
 }
 
 export const allProjects: Array<Project> = [
-    {
+  {
     name: "Verilog Solutions",
     short_name: "Verilog",
     description:
@@ -878,8 +879,9 @@ export const allProjects: Array<Project> = [
   {
     name: "Argent X",
     short_name: "Argent X",
-    description: "StarkNet wallet to interact with tokens and dApps",
-    tags: ["wallet"],
+    description:
+      'First StarkNet wallet to interact with tokens and NFTs. Manage your identities with "Sign in with StarkNet" (very soon ™️), and enjoy the best of defi. Made with ❤️ by the Argent team.',
+    tags: ["wallet", "digital_id", "defi", "nft", "gamefi"],
     logo: "argent-x.svg",
     network: {
       website: "https://www.argent.xyz/argent-x/",
@@ -964,7 +966,8 @@ export const allProjects: Array<Project> = [
   {
     name: "Zem",
     short_name: "zem",
-    description: "Deployment system for Hardhat supporting EVM and StarkNet contracts.",
+    description:
+      "Deployment system for Hardhat supporting EVM and StarkNet contracts.",
     tags: ["tools"],
     logo: "zem.png",
     network: {
@@ -1016,9 +1019,10 @@ export const allProjects: Array<Project> = [
   {
     name: "StarkNet.js",
     short_name: "StarkNet.js",
-    description: "Javascript library for StarkNet",
+    description:
+      "Javascript library for StarkNet. Build your dapp or any other StarkNet web project today.",
     tags: ["tools"],
-    logo: "",
+    logo: "starknet-js.svg",
     network: {
       website: "https://www.starknetjs.com/",
       github: "https://github.com/0xs34n/starknet.js",
