@@ -145,15 +145,15 @@ const allCompanies: Company[] = [
   },
   {
     id: 12,
-    name: "ZkPad",
+    name: "Astraly",
     logo: "zkpad.png",
     network: {
-      website: "https://zkpad.io/",
-      github: "",
-      twitter: "https://twitter.com/ZKPadfi",
-      medium: "",
-      discord: "https://discord.com/invite/zkpad",
-      telegram: "https://t.me/zkpad",
+      website: "https://astraly.xyz/",
+      github: "https://github.com/ZkPad-Labs",
+      twitter: "https://twitter.com/AstralyXYZ",
+      medium: "https://astraly.mirror.xyz/",
+      discord: "https://discord.gg/astralyxyz",
+      telegram: "https://t.me/astralyy",
     },
   },
   {
