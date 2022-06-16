@@ -4,9 +4,12 @@ import type { ReactElement } from "react";
 import Flippy, { BackSide, FrontSide } from "react-flippy";
 
 import type { ProjectItf } from "../../../data/ecosystem";
-import type { Tag } from "../../../data/tag";
 import { useTranslate } from "../../context/TranslateProvider";
 import NetworkLogos from "../layout/NetworkLogos";
+
+function pick(amount: number) {
+  return (_: unknown, index: number) => index < amount;
+}
 
 interface CardProjectProps {
   project: ProjectItf;
@@ -104,11 +107,11 @@ function CardProject({ project, isFlipped, onClick }: CardProjectProps) {
             <Text as="h2" my={8} fontSize="xl" fontWeight="bold">
               {name}
             </Text>
-            <Flex direction="row" wrap="wrap">
+            <Flex direction="row" wrap="wrap" justifyContent="center">
               {tags && tags.length > 0 ? (
-                tags.map((tag: Tag) => {
+                tags.filter(pick(5)).map((tag) => {
+                  // limit to 5 tags, as this looks nice and limits tags to 2 lines max
                   return (
-                    // Maybe show only 3-4 firsts ? but keep all for sort/filters
                     <ChakraTag m={0.5} key={`project-${name}-tag-${tag.value}`}>
                       {t.tags[tag.value]}
                     </ChakraTag>
