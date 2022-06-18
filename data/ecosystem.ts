@@ -1353,4 +1353,22 @@ export const allProjects: Array<Project> = [
     isLive: false,
     isTestnetLive: true,
   },
+    {
+    name: "MES Protocol",
+    short_name: "MES Protocol",
+    description:
+      "MES Protocol is an orderbook-based DEX built on zkRollups. Hybrid liquidity mechanism is adopted to guarantee the best trading experience and LPs' rewards.",
+    tags: ["defi"],
+    logo: "mesprotocol.png",
+    network: {
+      website: "https://mesprotocol.com",
+      github: "",
+      twitter: "https://twitter.com/mesprotocol",
+      medium: "https://medium.com/@mesprotocol",
+      discord: "",
+      telegram: "",
+    },
+    isLive: false,
+    isTestnetLive: false,
+  },
 ];
