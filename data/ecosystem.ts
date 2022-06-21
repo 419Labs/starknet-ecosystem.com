@@ -224,7 +224,7 @@ export const allProjects: Array<Project> = [
     tags: ["defi", "nft"],
     logo: "alpharoad.png",
     network: {
-      website: "https://alpharoad.fi",
+      website: "https://testnet.app.alpharoad.fi",
       github: "",
       twitter: "https://twitter.com/alpharoad_fi",
       medium: "https://alpharoad.medium.com/",
@@ -232,7 +232,7 @@ export const allProjects: Array<Project> = [
       telegram: "https://t.me/alpharoad_fi",
     },
     isLive: false,
-    isTestnetLive: false,
+    isTestnetLive: true,
   },
   {
     name: "Banxa",
@@ -507,7 +507,7 @@ export const allProjects: Array<Project> = [
     tags: ["defi"],
     logo: "zkpad.png",
     network: {
-      website: "https://astraly.xyz/",
+      website: "https://testnet.astraly.xyz/",
       github: "https://github.com/ZkPad-Labs",
       twitter: "https://twitter.com/AstralyXYZ",
       medium: "https://astraly.mirror.xyz/",
@@ -515,7 +515,7 @@ export const allProjects: Array<Project> = [
       telegram: "https://t.me/astralyy",
     },
     isLive: false,
-    isTestnetLive: false,
+    isTestnetLive: true,
   },
   {
     name: "ZKX",
