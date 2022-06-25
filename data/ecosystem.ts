@@ -1353,7 +1353,7 @@ export const allProjects: Array<Project> = [
     isLive: false,
     isTestnetLive: true,
   },
-    {
+  {
     name: "MES Protocol",
     short_name: "MES Protocol",
     description:
@@ -1366,6 +1366,24 @@ export const allProjects: Array<Project> = [
       twitter: "https://twitter.com/mesprotocol",
       medium: "https://medium.com/@mesprotocol",
       discord: "",
+      telegram: "",
+    },
+    isLive: false,
+    isTestnetLive: false,
+  },
+  {
+    name: "Imperium Wars",
+    short_name: "Imperium",
+    description:
+      "A Conquer to Earn NFT game where five empires from all over the globe will ally, betray and fight in order to reach Glory and Fortune.",
+    tags: ["nft", "gamefi"],
+    logo: "ImperiumWars.png",
+    network: {
+      website: "https://imperiumwars.xyz/",
+      github: "",
+      twitter: "https://twitter.com/imperiumwars",
+      medium: "",
+      discord: "https://discord.gg/VqXSJaeFK4",
       telegram: "",
     },
     isLive: false,
