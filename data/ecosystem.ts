@@ -1353,4 +1353,22 @@ export const allProjects: Array<Project> = [
     isLive: false,
     isTestnetLive: true,
   },
+  {
+    name: "Starksheet",
+    short_name: "Starksheet",
+    description:
+      "A spreadsheet built on StarkNet: each cell is a dynamic NFT and each sheet is a collection. Cell as a NFT brings granular cell ownership and unlimited data.",
+    tags: ["nft", "defi", "tools"],
+    logo: "starksheet.png",
+    network: {
+      website: "https://www.starksheet.xyz",
+      github: "",
+      twitter: "https://twitter.com/starksheet",
+      medium: "",
+      discord: "https://discord.gg/Aab6qdWb5k",
+      telegram: "",
+    },
+    isLive: false,
+    isTestnetLive: false,
+  },
 ];
