@@ -20,6 +20,24 @@ export interface ProjectItf extends Project {
 
 export const allProjects: Array<Project> = [
   {
+    name: "ZKEX",
+    short_name: "ZKEX",
+    description:
+      "ZKEX is a bridgeless multi-chain order book DEX, secured with zero-knowledge proofs, powered by zkLink, StarkNet, and zkSync.",
+    tags: ["defi"],
+    logo: "zkex-black-square.png",
+    network: {
+      website: "https://zkex.com",
+      github: "",
+      twitter: "https://twitter.com/ZKEX_Official",
+      medium: "https://medium.com/@zkex",
+      discord: "https://discord.gg/ctDAYrrNTH",
+      telegram: "https://t.me/ZKEX_Official",
+    },
+    isLive: false,
+    isTestnetLive: false,
+  },
+  {
     name: "Verilog Solutions",
     short_name: "Verilog",
     description:
