@@ -20,12 +20,12 @@ export interface ProjectItf extends Project {
 
 export const allProjects: Array<Project> = [
   {
-    name: "ZKEX",
+    name: "ZKEX: Multi-Chain DEX",
     short_name: "ZKEX",
     description:
       "ZKEX is a bridgeless multi-chain order book DEX, secured with zero-knowledge proofs, powered by zkLink, StarkNet, and zkSync.",
     tags: ["defi"],
-    logo: "zkex-black-square.png",
+    logo: "zkex-logo-rounded.png",
     network: {
       website: "https://zkex.com",
       github: "",
