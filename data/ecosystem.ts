@@ -1407,4 +1407,21 @@ export const allProjects: Array<Project> = [
     isLive: false,
     isTestnetLive: false,
   },
+  {
+    name: "Triality",
+    short_name: "Triality",
+    description: "A decentralized knowledge sharing platform for web3 developers. Ask questions and find answers for the Cairo programming language, StarkNet, and more.",
+    tags: ["tools"],
+    logo: "triality.png",
+    network: {
+      website: "https://triality.org",
+      github: "",
+      twitter: "https://twitter.com/trialityorg",
+      medium: "",
+      discord: "",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
 ];
