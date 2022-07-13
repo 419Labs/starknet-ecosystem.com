@@ -1402,7 +1402,12 @@ export const allProjects: Array<Project> = [
       twitter: "https://twitter.com/starksheet",
       medium: "",
       discord: "https://discord.gg/Aab6qdWb5k",
+      telegram: "",
     },
+    isLive: false,
+    isTestnetLive: false,
+  },
+  {
     name: "MES Protocol",
     short_name: "MES Protocol",
     description:
