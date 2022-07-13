@@ -74,6 +74,24 @@ export const allProjects: Array<Project> = [
     isTestnetLive: false,
   },
   {
+    name: "Dolven Labs",
+    short_name: "DolvenLabs",
+    description:
+      "Dolven Labs is a DAO Based Ecosystem Catalyst for projects built on the StarkNet Network, Dolven Labs aims to be the future of investing, deal flow, and value creation in the StarkNet Ecosystem.",
+    tags: ["defi", "dao", "governance"],
+    logo: "dolven-logo.png",
+    network: {
+      website: "https://dolvenlabs.com/",
+      github: "https://github.com/dolven-labs-catalyst",
+      twitter: "https://twitter.com/dolvenlabs",
+      medium: "https://medium.com/@dolvenlabs",
+      discord: "https://discord.gg/UG5tkPa3xn",
+      telegram: "https://t.me/dolven_global",
+    },
+    isLive: false,
+    isTestnetLive: false,
+  },
+  {
     name: "Giza",
     short_name: "giza",
     description:
