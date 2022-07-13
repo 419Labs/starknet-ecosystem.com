@@ -20,6 +20,24 @@ export interface ProjectItf extends Project {
 
 export const allProjects: Array<Project> = [
   {
+    name: "ZKEX: Multi-Chain DEX",
+    short_name: "ZKEX",
+    description:
+      "ZKEX is a bridgeless multi-chain order book DEX, secured with zero-knowledge proofs, powered by zkLink, StarkNet, and zkSync.",
+    tags: ["defi"],
+    logo: "zkex-logo-rounded.png",
+    network: {
+      website: "https://zkex.com",
+      github: "",
+      twitter: "https://twitter.com/ZKEX_Official",
+      medium: "https://medium.com/@zkex",
+      discord: "https://discord.gg/ctDAYrrNTH",
+      telegram: "https://t.me/ZKEX_Official",
+    },
+    isLive: false,
+    isTestnetLive: false,
+  },
+  {
     name: "Verilog Solutions",
     short_name: "Verilog",
     description:
@@ -51,6 +69,24 @@ export const allProjects: Array<Project> = [
       medium: "https://mirror.xyz/sithswap.eth",
       discord: "https://discord.gg/gAD2wuzeNf",
       telegram: "https://t.me/SithWars",
+    },
+    isLive: false,
+    isTestnetLive: false,
+  },
+  {
+    name: "Dolven Labs",
+    short_name: "DolvenLabs",
+    description:
+      "Dolven Labs is a DAO Based Ecosystem Catalyst for projects built on the StarkNet Network, Dolven Labs aims to be the future of investing, deal flow, and value creation in the StarkNet Ecosystem.",
+    tags: ["defi", "dao", "governance"],
+    logo: "dolven-logo.png",
+    network: {
+      website: "https://dolvenlabs.com/",
+      github: "https://github.com/dolven-labs-catalyst",
+      twitter: "https://twitter.com/dolvenlabs",
+      medium: "https://medium.com/@dolvenlabs",
+      discord: "https://discord.gg/UG5tkPa3xn",
+      telegram: "https://t.me/dolven_global",
     },
     isLive: false,
     isTestnetLive: false,
@@ -224,7 +260,7 @@ export const allProjects: Array<Project> = [
     tags: ["defi", "nft"],
     logo: "alpharoad.png",
     network: {
-      website: "https://alpharoad.fi",
+      website: "https://testnet.app.alpharoad.fi",
       github: "",
       twitter: "https://twitter.com/alpharoad_fi",
       medium: "https://alpharoad.medium.com/",
@@ -232,7 +268,7 @@ export const allProjects: Array<Project> = [
       telegram: "https://t.me/alpharoad_fi",
     },
     isLive: false,
-    isTestnetLive: false,
+    isTestnetLive: true,
   },
   {
     name: "Banxa",
@@ -507,7 +543,7 @@ export const allProjects: Array<Project> = [
     tags: ["defi"],
     logo: "zkpad.png",
     network: {
-      website: "https://astraly.xyz/",
+      website: "https://testnet.astraly.xyz/",
       github: "https://github.com/ZkPad-Labs",
       twitter: "https://twitter.com/AstralyXYZ",
       medium: "https://astraly.mirror.xyz/",
@@ -515,7 +551,7 @@ export const allProjects: Array<Project> = [
       telegram: "https://t.me/astralyy",
     },
     isLive: false,
-    isTestnetLive: false,
+    isTestnetLive: true,
   },
   {
     name: "ZKX",
@@ -1366,9 +1402,57 @@ export const allProjects: Array<Project> = [
       twitter: "https://twitter.com/starksheet",
       medium: "",
       discord: "https://discord.gg/Aab6qdWb5k",
+    },
+    name: "MES Protocol",
+    short_name: "MES Protocol",
+    description:
+      "MES Protocol is an orderbook-based DEX built on zkRollups. Hybrid liquidity mechanism is adopted to guarantee the best trading experience and LPs' rewards.",
+    tags: ["defi"],
+    logo: "mesprotocol.png",
+    network: {
+      website: "https://mesprotocol.com",
+      github: "",
+      twitter: "https://twitter.com/mesprotocol",
+      medium: "https://medium.com/@mesprotocol",
+      discord: "",
       telegram: "",
     },
     isLive: false,
+    isTestnetLive: false,
+  },
+  {
+    name: "Imperium Wars",
+    short_name: "Imperium",
+    description:
+      "A Conquer to Earn NFT game where five empires from all over the globe will ally, betray and fight in order to reach Glory and Fortune.",
+    tags: ["nft", "gamefi"],
+    logo: "ImperiumWars.png",
+    network: {
+      website: "https://imperiumwars.xyz/",
+      github: "",
+      twitter: "https://twitter.com/imperiumwars",
+      medium: "",
+      discord: "https://discord.gg/VqXSJaeFK4",
+      telegram: "",
+    },
+    isLive: false,
+    isTestnetLive: false,
+  },
+  {
+    name: "Triality",
+    short_name: "Triality",
+    description: "A decentralized knowledge sharing platform for web3 developers. Ask questions and find answers for the Cairo programming language, StarkNet, and more.",
+    tags: ["tools"],
+    logo: "triality.png",
+    network: {
+      website: "https://triality.org",
+      github: "",
+      twitter: "https://twitter.com/trialityorg",
+      medium: "",
+      discord: "",
+      telegram: "",
+    },
+    isLive: true,
     isTestnetLive: false,
   },
 ];
