@@ -1460,4 +1460,21 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: false,
   },
+  {
+    name: "Exothium",
+    short_name: "Exothium",
+    description: "Exothium is a community driven by blockchain technology that collaborates, incubates and produces open-source games.",
+    tags: ["gamefi"],
+    logo: "exothium.png",
+    network: {
+      website: "https://exothium.com/",
+      github: "https://github.com/exothium",
+      twitter: "https://twitter.com/Exothium",
+      medium: "",
+      discord: "https://discord.com/invite/yhNrcBmBgA",
+      telegram: "",
+    },
+    isLive: false,
+    isTestnetLive: false,
+  },
 ];
