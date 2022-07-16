@@ -235,6 +235,19 @@ const allCompanies: Company[] = [
       telegram: "",
     },
   },
+  {
+    id: 19,
+    name: "Empiric Network",
+    logo: "empiric.svg",
+    network: {
+      website: "https://www.empiric.network",
+      github: "https://github.com/42labs/Empiric",
+      twitter: "https://twitter.com/EmpiricNetwork",
+      medium: "https://medium.com/@EmpiricNetwork",
+      discord: "",
+      telegram: "",
+    },
+  },
 ];
 
 export default allCompanies;
