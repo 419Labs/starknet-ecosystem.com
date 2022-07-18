@@ -585,6 +585,57 @@ const allJobs: Array<Job> = [
         createdOn: new Date("2022-05-24"),
     applyLink: "https://yuki-labs.notion.site/yuki-labs/Product-designer-contract-to-hire-bc55db9c1c0d4d81952334ed648f587f",
   },
+  {
+    key: "20",
+    title: "Senior Full Stack Engineer",
+    companyId: 19,
+    tags: ["React", "Typescript", "Python", "Docker", "Cairo"],
+    location: "New York City or Remote",
+    remote: true,
+    description:
+      "Empiric Network is the zk-native oracle, bringing the principles of DeFi to data infrastructure: decentralization, transparency and composability.\n" +
+      "Empiric is the leading oracle on Starknet, powered by high-quality data from the biggest market makers and exchanges, such as Alameda, CMT, Flow Traders, FTX, Gemini and Jane Street.\n" +
+      "Our offer:\n" +
+      "- Be at the cutting edge of web3 and help build critical infrastructure for the future of Ethereum\n" +
+      "- Learn together with a world-class team, and our friends at Starkware and within the Starknet ecosystem\n" +
+      "- A fast-paced, no bullshit work environment that has high expectations and helps you achieve them\n" +
+      "- Work on a project that is growing extremely quickly and has clear product-market fit in an existing market — while also pursuing moonshot opportunities to re-define trustless data fetching\n" +
+      "- Above-market compensation and meaningful equity",
+    requirements:
+        "We don't think in terms of hard requirements. Rather, here is what you'd be helping us do - if you think you're up for it, we'd love to hear from you!\n" +
+        "- Build out our technology infrastructure, from our core smart contracts (Cairo) to our SDKs (Python, Docker)\n" +
+        "- Help define the overall architecture of our solution and set up development processes that enable us to continue to iterate rapidly\n" +
+        "- Think from first principles to tackle challenges at the cutting edge of cryptography, smart contracts and data - prioritizing safety and robustness\n" +
+        "- Hire the brightest and most ambitious technical talent to come work with you",
+        createdOn: new Date("2022-07-16"),
+    applyLink: "mailto:hello@42labs.xyz?body=Hi%20Empiric%20Team%2C%0A%0AI%27d%20like%20to%20join%20your%20team%21",
+  },
+  {
+    key: "21",
+    title: "Smart Contract Engineer",
+    companyId: 19,
+    tags: ["Solidity", "Cairo"],
+    location: "New York City or Remote",
+    remote: true,
+    description:
+      "Empiric Network is the zk-native oracle, bringing the principles of DeFi to data infrastructure: decentralization, transparency and composability.\n" +
+      "Empiric is the leading oracle on Starknet, powered by high-quality data from the biggest market makers and exchanges, such as Alameda, CMT, Flow Traders, FTX, Gemini and Jane Street.\n" +
+      "Our offer:\n" +
+      "- Be at the cutting edge of web3 and help build critical infrastructure for the future of Ethereum\n" +
+      "- Learn together with a world-class team, and our friends at Starkware and within the Starknet ecosystem\n" +
+      "- A fast-paced, no bullshit work environment that has high expectations and helps you achieve them\n" +
+      "- Work on a project that is growing extremely quickly and has clear product-market fit in an existing market — while also pursuing moonshot opportunities to re-define trustless data fetching\n" +
+      "- Above-market compensation and meaningful equity",
+    requirements:
+        "We don't think in terms of hard requirements. Rather, here is what you'd be helping us do - if you think you're up for it, we'd love to hear from you!\n" +
+        "- Develop secure contracts that make up our entirely on-chain architecture (Cairo)\n" +
+        "- Create both internal and public tooling that will help us and the ecosystem move faster\n" +
+        "- Create smart contracts on the Ethereum L1 that bridge over critical data, such as Uniswap TWAP rates or Aave overnight rates (Solidity)\n" +
+        "- Think from first principles to tackle challenges at the cutting edge of cryptography, smart contracts and data - prioritizing safety and robustness\n" +
+        "- Hire the brightest and most ambitious technical talent to come work with you",
+        createdOn: new Date("2022-07-16"),
+    applyLink: "mailto:hello@42labs.xyz?body=Hi%20Empiric%20Team%2C%0A%0AI%27d%20like%20to%20join%20your%20team%21",
+  },
 ];
 
 export default allJobs;

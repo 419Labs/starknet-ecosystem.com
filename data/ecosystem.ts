@@ -1477,4 +1477,21 @@ export const allProjects: Array<Project> = [
     isLive: false,
     isTestnetLive: false,
   },
+  {
+    name: "Empiric Network",
+    short_name: "Empiric",
+    description: "Exothium is a community driven by blockchain technology that collaborates, incubates and produces open-source games.",
+    tags: ["defi", "infrastructure"],
+    logo: "empiric.svg",
+    network: {
+      website: "https://www.empiric.network",
+      github: "https://github.com/42labs/Empiric",
+      twitter: "https://twitter.com/EmpiricNetwork",
+      medium: "https://medium.com/@EmpiricNetwork",
+      discord: "",
+      telegram: "",
+    },
+    isLive: false,
+    isTestnetLive: true,
+  },
 ];
