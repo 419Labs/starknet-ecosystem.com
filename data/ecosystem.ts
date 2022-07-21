@@ -1500,7 +1500,7 @@ export const allProjects: Array<Project> = [
     description:
       "Zohal is a veNomics boosted DEX allowing you to build your own experience with customizable UI",
     tags: ["defi"],
-    logo: "zohal.png",
+    logo: "Zohal.png",
     network: {
       website: "",
       github: "",
