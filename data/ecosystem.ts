@@ -1494,4 +1494,22 @@ export const allProjects: Array<Project> = [
     isLive: false,
     isTestnetLive: true,
   },
+  {
+    name: "Zohal",
+    short_name: "ZOHAL",
+    description:
+      "Zohal is a veNomics boosted DEX allowing you to build your own experience with customizable UI",
+    tags: ["defi"],
+    logo: "zohal.png",
+    network: {
+      website: "",
+      github: "",
+      twitter: "https://twitter.com/zohal_starknet",
+      medium: "https://medium.com/@zohal.starknet",
+      discord: "",
+      telegram: "",
+    },
+    isLive: false,
+    isTestnetLive: false,
+  },
 ];
