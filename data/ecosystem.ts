@@ -1028,7 +1028,7 @@ export const allProjects: Array<Project> = [
       github: "https://github.com/software-mansion/protostar",
       twitter: "",
       medium: "",
-      discord: "",
+      discord: "https://discord.com/channels/793094838509764618/964116575387021413",
       telegram: "",
     },
     isLive: true,
