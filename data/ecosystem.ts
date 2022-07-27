@@ -1018,6 +1018,23 @@ export const allProjects: Array<Project> = [
     isTestnetLive: true,
   },
   {
+    name: "Protostar",
+    short_name: "Protostar",
+    description: "StarkNet smart contract development toolchain",
+    tags: ["tools"],
+    logo: "protostar.svg",
+    network: {
+      website: "https://docs.swmansion.com/protostar/",
+      github: "https://github.com/software-mansion/protostar",
+      twitter: "",
+      medium: "",
+      discord: "https://discord.com/channels/793094838509764618/964116575387021413",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: true,
+  },
+  {
     name: "Nile",
     short_name: "Nile",
     description: "CLI tool to develop StarkNet projects written in Cairo",
