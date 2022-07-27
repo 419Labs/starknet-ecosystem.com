@@ -1028,7 +1028,8 @@ export const allProjects: Array<Project> = [
       github: "https://github.com/software-mansion/protostar",
       twitter: "",
       medium: "",
-      discord: "https://discord.com/channels/793094838509764618/964116575387021413",
+      discord:
+        "https://discord.com/channels/793094838509764618/964116575387021413",
       telegram: "",
     },
     isLive: true,
@@ -1463,7 +1464,8 @@ export const allProjects: Array<Project> = [
   {
     name: "Triality",
     short_name: "Triality",
-    description: "A decentralized knowledge sharing platform for web3 developers. Ask questions and find answers for the Cairo programming language, StarkNet, and more.",
+    description:
+      "A decentralized knowledge sharing platform for web3 developers. Ask questions and find answers for the Cairo programming language, StarkNet, and more.",
     tags: ["tools"],
     logo: "triality.png",
     network: {
@@ -1480,7 +1482,8 @@ export const allProjects: Array<Project> = [
   {
     name: "Exothium",
     short_name: "Exothium",
-    description: "Exothium is a community driven by blockchain technology that collaborates, incubates and produces open-source games.",
+    description:
+      "Exothium is a community driven by blockchain technology that collaborates, incubates and produces open-source games.",
     tags: ["gamefi"],
     logo: "exothium.png",
     network: {
@@ -1497,7 +1500,8 @@ export const allProjects: Array<Project> = [
   {
     name: "Empiric Network",
     short_name: "Empiric",
-    description: "Empiric Network is the leading oracle on Starknet, making data decentralized, transparent and composable. Powered by high-quality data from Alameda, Jane Street, Gemini, FTX, and more.",
+    description:
+      "Empiric Network is the leading oracle on Starknet, making data decentralized, transparent and composable. Powered by high-quality data from Alameda, Jane Street, Gemini, FTX, and more.",
     tags: ["defi", "infrastructure"],
     logo: "empiric.svg",
     network: {
@@ -1516,7 +1520,7 @@ export const allProjects: Array<Project> = [
     short_name: "Zohal",
     description: "Swap becomes easy with next generation AMM on Starknet.",
     tags: ["defi"],
-    logo: "",
+    logo: "zohal.png",
     network: {
       website: "",
       github: "",
@@ -1531,9 +1535,10 @@ export const allProjects: Array<Project> = [
   {
     name: "ZKGraph",
     short_name: "ZKGraph",
-    description: "Your social graph, with limitless possibilities and uncompromised privacy, secured by StarkNet.",
+    description:
+      "Your social graph, with limitless possibilities and uncompromised privacy, secured by StarkNet.",
     tags: ["defi", "infrastructure"],
-    logo: "",
+    logo: "zk_graph.jpeg",
     network: {
       website: "https://www.zkgraph.xyz/",
       github: "",
@@ -1548,9 +1553,10 @@ export const allProjects: Array<Project> = [
   {
     name: "TradeFlows",
     short_name: "TradeFlows",
-    description: "Focused on decentralised commerce and the tools that power that future. Building on StarkWare.",
+    description:
+      "Focused on decentralised commerce and the tools that power that future. Building on StarkWare.",
     tags: ["defi"],
-    logo: "",
+    logo: "tradeflows.png",
     network: {
       website: "https://www.tradeflows.io/",
       github: "",
