@@ -51,9 +51,43 @@ const fetchContractCount = (testnet?: boolean): Promise<number> =>
       return 0;
     });
 
+const fetchCountEvents = (
+  testnet?: boolean,
+  fromBlock?: number,
+  fromTimestamp?: Date,
+  contracts?: string[],
+  names?: string[]
+): Promise<number> => {
+  const params = {
+    chain_id: testnet ? "testnet" : "mainnet",
+    ...(fromBlock ? { from_block: fromBlock.toString() } : {}),
+    ...(fromTimestamp
+      ? { from_timestamp: fromTimestamp.toISOString().split("T")[0] }
+      : {}),
+  };
+  const urlParams = new URLSearchParams(params);
+  contracts?.map((c) => urlParams.append("contract", c));
+  names?.map((n) => urlParams.append("name", n));
+
+  const fetchUrl = `http://starknet.events/api/v1/get_events?${urlParams}`;
+  // console.log(fetchUrl);
+
+  return fetch(fetchUrl)
+    .then((response: Response) => {
+      if (!response.ok) throw new Error(response.statusText);
+      return response.json();
+    })
+    .then((response) => response.total)
+    .catch((error) => {
+      console.log(error);
+      return 0;
+    });
+};
+
 export const MetricsApi = {
   fetchGithubRepo,
   fetchNpmDownloads,
   fetchTransactionCount,
   fetchContractCount,
+  fetchCountEvents,
 };
