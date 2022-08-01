@@ -49,6 +49,7 @@ const JobListRaw: FC<Props> = ({
         <Flex direction="row" align="center" overflow="hidden" pr={2}>
           <Box maxHeight="56px" maxWidth="88px" px={5} mr={1}>
             <Image
+              w="full"
               src={`/logos/${company.logo}`}
               alt={`${company.name} logo`}
             />
