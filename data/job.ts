@@ -496,31 +496,31 @@ const allJobs: Array<Job> = [
     location: "Remote",
     remote: true,
     description:
-        "SithSwap is developing an advanced stableswap AMM on StarkNet, a permissionless decentralized ZK-Rollup operating as an L2 network over Ethereum, enabling dApps to achieve unlimited scale for its computation – without compromising Ethereum's composability and security.\n" +
-        "\n" +
-        "For this endeavour, SithSwap is looking to onboard a talented Cairo developer, remotely and in any capacity (ranging from task-based to full-time).\n" +
-        "\n" +
-        "TODO:\n" +
-        "As a Cairo Developer, you will play a leading role in porting over an existing reference Solidity implementation of the SithSwap protocol (Core + Rewards contracts) over to StarkNet in native Cairo language.\n\n" +
-        "More specifically, in coordination with the team, you will be responsible for designing and implementing the Cairo counterparts of any provided Solidity smart contracts, suggesting modifications and adaptations as needed for successfully porting over the codebase to the latest Cairo release, starting with the Core AMM smart contracts.\n\n" +
-        "To do the above, you will be relying on the most advanced tooling for StarkNet yet released, using either TypeScript or Python to write your off-chain backend code.",
+      "SithSwap is developing an advanced stableswap AMM on StarkNet, a permissionless decentralized ZK-Rollup operating as an L2 network over Ethereum, enabling dApps to achieve unlimited scale for its computation – without compromising Ethereum's composability and security.\n" +
+      "\n" +
+      "For this endeavour, SithSwap is looking to onboard a talented Cairo developer, remotely and in any capacity (ranging from task-based to full-time).\n" +
+      "\n" +
+      "TODO:\n" +
+      "As a Cairo Developer, you will play a leading role in porting over an existing reference Solidity implementation of the SithSwap protocol (Core + Rewards contracts) over to StarkNet in native Cairo language.\n\n" +
+      "More specifically, in coordination with the team, you will be responsible for designing and implementing the Cairo counterparts of any provided Solidity smart contracts, suggesting modifications and adaptations as needed for successfully porting over the codebase to the latest Cairo release, starting with the Core AMM smart contracts.\n\n" +
+      "To do the above, you will be relying on the most advanced tooling for StarkNet yet released, using either TypeScript or Python to write your off-chain backend code.",
     requirements:
-        "- 2+ years experience developing top-tier smart contracts in an EVM mainnet environment\n" +
-        "- Great understanding and daily use of Cairo (up to the latest release/features)\n" +
-        "- Good understanding of Solidity/Yul and the EVM\n" +
-        "- Strong working knowledge of at least 1 advanced StarkNet development framework (e.g. Ape, Protostar, Nile, Hardhat)\n" +
-        "- A GitHub profile (doesn't need to be public, as long as we can inspect it)" +
-        "\n" +
-        "Nice to have:\n" +
-        "- Experience with Uniswap V2 and Curve Finance contracts architectures and APIs\n" +
-        "- Experience with common smart contracts patterns such as upgradability, proxy wallets, meta-transactions, and counterfactual deployments\n" +
-        "- Strong knowledge of StarkNet as-a-platform, its underlying architecture and tech stack\n" +
-        "- Strong working knowledge of both Python and TypeScript\n" +
-        "- Good knowledge of historical smart contract exploits and vulnerabilities (across all chains)\n" +
-        "- Ability to write code that is clean, easy to audit, yet efficient in terms of deployment, execution and maintenance\n" +
-        "- Good knowledge of the L2 ecosystem at-large, with a particular emphasis on Validium Rollups\n" +
-        "- CET/CEST working hours",
-        createdOn: new Date("2022-05-16"),
+      "- 2+ years experience developing top-tier smart contracts in an EVM mainnet environment\n" +
+      "- Great understanding and daily use of Cairo (up to the latest release/features)\n" +
+      "- Good understanding of Solidity/Yul and the EVM\n" +
+      "- Strong working knowledge of at least 1 advanced StarkNet development framework (e.g. Ape, Protostar, Nile, Hardhat)\n" +
+      "- A GitHub profile (doesn't need to be public, as long as we can inspect it)" +
+      "\n" +
+      "Nice to have:\n" +
+      "- Experience with Uniswap V2 and Curve Finance contracts architectures and APIs\n" +
+      "- Experience with common smart contracts patterns such as upgradability, proxy wallets, meta-transactions, and counterfactual deployments\n" +
+      "- Strong knowledge of StarkNet as-a-platform, its underlying architecture and tech stack\n" +
+      "- Strong working knowledge of both Python and TypeScript\n" +
+      "- Good knowledge of historical smart contract exploits and vulnerabilities (across all chains)\n" +
+      "- Ability to write code that is clean, easy to audit, yet efficient in terms of deployment, execution and maintenance\n" +
+      "- Good knowledge of the L2 ecosystem at-large, with a particular emphasis on Validium Rollups\n" +
+      "- CET/CEST working hours",
+    createdOn: new Date("2022-05-16"),
     applyLink: "https://apply.workable.com/sithswap/j/C20203825C/",
   },
   {
@@ -531,31 +531,32 @@ const allJobs: Array<Job> = [
     location: "Remote",
     remote: true,
     description:
-        "Yuki works with the best engineering teams in the Ethereum and Layer 2 ecosystem. We help them to design and build outstanding Web3 user experiences – positioning their technology and products for success.\n" +
-        "\n" +
-        "We’re looking for an enthusiastic, self-motivated frontend engineer to help us support even more teams and projects. You’ll be joining a small but close knit team known for shipping quality design and frontend.\n" +
-        "\n" +
-        "Crypto and Web3 can be complex – experience is a plus but not required – you will have a strong support system in the Yuki team to help navigate new concepts and technologies.\n" +
-        "\n" +
-        "What you'll do:\n" +
-        "Work closely with Yuki’s product designers and crypto teams to understand the problems they are solving and implement beautiful and usable interfaces that make their technology accessible to users\n" +
-        "Rapidly implement functional UI elements from design mocks, with an eye toward performance and accessibility\n" +
-        "Know when to create abstractions vs. one-off features\n" +
-        "Ensure that components are functional, elegant, accessible, performant, and mobile-friendly\n" +
-        "Understand when and how to run UI tests",
+      "Yuki works with the best engineering teams in the Ethereum and Layer 2 ecosystem. We help them to design and build outstanding Web3 user experiences – positioning their technology and products for success.\n" +
+      "\n" +
+      "We’re looking for an enthusiastic, self-motivated frontend engineer to help us support even more teams and projects. You’ll be joining a small but close knit team known for shipping quality design and frontend.\n" +
+      "\n" +
+      "Crypto and Web3 can be complex – experience is a plus but not required – you will have a strong support system in the Yuki team to help navigate new concepts and technologies.\n" +
+      "\n" +
+      "What you'll do:\n" +
+      "Work closely with Yuki’s product designers and crypto teams to understand the problems they are solving and implement beautiful and usable interfaces that make their technology accessible to users\n" +
+      "Rapidly implement functional UI elements from design mocks, with an eye toward performance and accessibility\n" +
+      "Know when to create abstractions vs. one-off features\n" +
+      "Ensure that components are functional, elegant, accessible, performant, and mobile-friendly\n" +
+      "Understand when and how to run UI tests",
     requirements:
-        "- At least 3 years of React experience\n" +
-        "- A deep understanding of the architecture of modern client-side React applications\n" +
-        "- Prior experience working with component libraries or design teams in user-facing applications\n" +
-        "- A desire to keep up with modern best practices in web development\n" +
-        "\n" +
-        "Nice to have:\n" +
-        "- Prior experience creating a design system or component library\n" +
-        "- Familiarity with the web3 frontend stack (ethers.js/web3.js, EIP-1193, client-side private key management, etc.)\n" +
-        "- Familiarity with React Hooks\n" +
-        "- Experience with TypeScript in React",
-        createdOn: new Date("2022-05-24"),
-    applyLink: "https://yuki-labs.notion.site/yuki-labs/Senior-frontend-engineer-contract-to-hire-22162a6fa8e54c9c98926df688917195",
+      "- At least 3 years of React experience\n" +
+      "- A deep understanding of the architecture of modern client-side React applications\n" +
+      "- Prior experience working with component libraries or design teams in user-facing applications\n" +
+      "- A desire to keep up with modern best practices in web development\n" +
+      "\n" +
+      "Nice to have:\n" +
+      "- Prior experience creating a design system or component library\n" +
+      "- Familiarity with the web3 frontend stack (ethers.js/web3.js, EIP-1193, client-side private key management, etc.)\n" +
+      "- Familiarity with React Hooks\n" +
+      "- Experience with TypeScript in React",
+    createdOn: new Date("2022-05-24"),
+    applyLink:
+      "https://yuki-labs.notion.site/yuki-labs/Senior-frontend-engineer-contract-to-hire-22162a6fa8e54c9c98926df688917195",
   },
   {
     key: "19",
@@ -565,25 +566,26 @@ const allJobs: Array<Job> = [
     location: "Remote",
     remote: true,
     description:
-        "Yuki works with the best engineering teams in the Ethereum and Layer 2 ecosystem. We help them to design and build outstanding Web3 user experiences – positioning their technology and products for success.\n" +
-        "\n" +
-        "We’re looking for an enthusiastic, self-motivated frontend engineer to help us support even more teams and projects. You’ll be joining a small but close knit team known for shipping quality design and frontend.\n" +
-        "\n" +
-        "Crypto and Web3 can be complex – experience is a plus but not required – you will have a strong support system in the Yuki team to help navigate new concepts and technologies.\n" +
-        "\n" +
-        "What you'll do:\n" +
-        "Work closely with crypto teams to understand the problems they are solving and design beautiful and usable interfaces that make their technology accessible to users\n" +
-        "Help crypto teams that need guidance on how to turn their idea into a tangible product.\n" +
-        "Guide teams through the design process, from problem definition through to beautifully polished visual designs",
+      "Yuki works with the best engineering teams in the Ethereum and Layer 2 ecosystem. We help them to design and build outstanding Web3 user experiences – positioning their technology and products for success.\n" +
+      "\n" +
+      "We’re looking for an enthusiastic, self-motivated frontend engineer to help us support even more teams and projects. You’ll be joining a small but close knit team known for shipping quality design and frontend.\n" +
+      "\n" +
+      "Crypto and Web3 can be complex – experience is a plus but not required – you will have a strong support system in the Yuki team to help navigate new concepts and technologies.\n" +
+      "\n" +
+      "What you'll do:\n" +
+      "Work closely with crypto teams to understand the problems they are solving and design beautiful and usable interfaces that make their technology accessible to users\n" +
+      "Help crypto teams that need guidance on how to turn their idea into a tangible product.\n" +
+      "Guide teams through the design process, from problem definition through to beautifully polished visual designs",
     requirements:
-        "- 3 years of product design experience including research, prototyping and visual design\n" +
-        "- Prior experience shipping web / mobile apps\n" +
-        "- Comfortable guiding and managing projects with clients\n" +
-        "- Prior experience working with component libraries or design systems\n" +
-        "- A desire to design within the context of web3/crypto.\n" +
-        "- Experience designing with Figma",
-        createdOn: new Date("2022-05-24"),
-    applyLink: "https://yuki-labs.notion.site/yuki-labs/Product-designer-contract-to-hire-bc55db9c1c0d4d81952334ed648f587f",
+      "- 3 years of product design experience including research, prototyping and visual design\n" +
+      "- Prior experience shipping web / mobile apps\n" +
+      "- Comfortable guiding and managing projects with clients\n" +
+      "- Prior experience working with component libraries or design systems\n" +
+      "- A desire to design within the context of web3/crypto.\n" +
+      "- Experience designing with Figma",
+    createdOn: new Date("2022-05-24"),
+    applyLink:
+      "https://yuki-labs.notion.site/yuki-labs/Product-designer-contract-to-hire-bc55db9c1c0d4d81952334ed648f587f",
   },
   {
     key: "20",
@@ -602,13 +604,14 @@ const allJobs: Array<Job> = [
       "- Work on a project that is growing extremely quickly and has clear product-market fit in an existing market — while also pursuing moonshot opportunities to re-define trustless data fetching\n" +
       "- Above-market compensation and meaningful equity",
     requirements:
-        "We don't think in terms of hard requirements. Rather, here is what you'd be helping us do - if you think you're up for it, we'd love to hear from you!\n" +
-        "- Build out our technology infrastructure, from our core smart contracts (Cairo) to our SDKs (Python, Docker)\n" +
-        "- Help define the overall architecture of our solution and set up development processes that enable us to continue to iterate rapidly\n" +
-        "- Think from first principles to tackle challenges at the cutting edge of cryptography, smart contracts and data - prioritizing safety and robustness\n" +
-        "- Hire the brightest and most ambitious technical talent to come work with you",
-        createdOn: new Date("2022-07-16"),
-    applyLink: "mailto:hello@42labs.xyz?body=Hi%20Empiric%20Team%2C%0A%0AI%27d%20like%20to%20join%20your%20team%21",
+      "We don't think in terms of hard requirements. Rather, here is what you'd be helping us do - if you think you're up for it, we'd love to hear from you!\n" +
+      "- Build out our technology infrastructure, from our core smart contracts (Cairo) to our SDKs (Python, Docker)\n" +
+      "- Help define the overall architecture of our solution and set up development processes that enable us to continue to iterate rapidly\n" +
+      "- Think from first principles to tackle challenges at the cutting edge of cryptography, smart contracts and data - prioritizing safety and robustness\n" +
+      "- Hire the brightest and most ambitious technical talent to come work with you",
+    createdOn: new Date("2022-07-16"),
+    applyLink:
+      "mailto:hello@42labs.xyz?body=Hi%20Empiric%20Team%2C%0A%0AI%27d%20like%20to%20join%20your%20team%21",
   },
   {
     key: "21",
@@ -627,16 +630,17 @@ const allJobs: Array<Job> = [
       "- Work on a project that is growing extremely quickly and has clear product-market fit in an existing market — while also pursuing moonshot opportunities to re-define trustless data fetching\n" +
       "- Above-market compensation and meaningful equity",
     requirements:
-        "We don't think in terms of hard requirements. Rather, here is what you'd be helping us do - if you think you're up for it, we'd love to hear from you!\n" +
-        "- Develop secure contracts that make up our entirely on-chain architecture (Cairo)\n" +
-        "- Create both internal and public tooling that will help us and the ecosystem move faster\n" +
-        "- Create smart contracts on the Ethereum L1 that bridge over critical data, such as Uniswap TWAP rates or Aave overnight rates (Solidity)\n" +
-        "- Think from first principles to tackle challenges at the cutting edge of cryptography, smart contracts and data - prioritizing safety and robustness\n" +
-        "- Hire the brightest and most ambitious technical talent to come work with you",
-        createdOn: new Date("2022-07-16"),
-    applyLink: "mailto:hello@42labs.xyz?body=Hi%20Empiric%20Team%2C%0A%0AI%27d%20like%20to%20join%20your%20team%21",
+      "We don't think in terms of hard requirements. Rather, here is what you'd be helping us do - if you think you're up for it, we'd love to hear from you!\n" +
+      "- Develop secure contracts that make up our entirely on-chain architecture (Cairo)\n" +
+      "- Create both internal and public tooling that will help us and the ecosystem move faster\n" +
+      "- Create smart contracts on the Ethereum L1 that bridge over critical data, such as Uniswap TWAP rates or Aave overnight rates (Solidity)\n" +
+      "- Think from first principles to tackle challenges at the cutting edge of cryptography, smart contracts and data - prioritizing safety and robustness\n" +
+      "- Hire the brightest and most ambitious technical talent to come work with you",
+    createdOn: new Date("2022-07-16"),
+    applyLink:
+      "mailto:hello@42labs.xyz?body=Hi%20Empiric%20Team%2C%0A%0AI%27d%20like%20to%20join%20your%20team%21",
   },
-    {
+  {
     key: "22",
     title: "Graphic Designer / Visual Artist",
     companyId: 2,
@@ -660,14 +664,14 @@ const allJobs: Array<Job> = [
       "- Work with the team to create templates for different types of creative assets, and maintain the design language consistency at all times.\n" +
       "- To make sure every creative asset meets its functional (readability, brand visibility, visual appeal, etc) and performance objectives (Engagement, Reach, Conversion, etc).",
     requirements:
-        "- 3+ years of visual design experience, having led brand creation and development across multiple mediums (animations, social media, branding etc.).\n" +
-        "- Relevant experience as a visual, brand, and/or motion designer at a creative media agency, or startups or in either crypto, DeFi, web3 or a demonstrated portfolio of diverse projects is preferred.\n" +
-        "- Proficiency in design tools such as Figma, Sketch, Illustrator, Photoshop, etc.\n" +
-        "- Ability to thrive working in a fast paced environment, with experience of managing and delivering to multiple project deadlines.\n" +
-        "- An interest to harness the power of our community to drive visual and design output for the project\n" +
-        "- Proficiency in English language and Excellent communication skills.\n" +
-        "- Bonus: Experience creating and having your own NFTs.",
-        createdOn: new Date("2022-07-27"),
+      "- 3+ years of visual design experience, having led brand creation and development across multiple mediums (animations, social media, branding etc.).\n" +
+      "- Relevant experience as a visual, brand, and/or motion designer at a creative media agency, or startups or in either crypto, DeFi, web3 or a demonstrated portfolio of diverse projects is preferred.\n" +
+      "- Proficiency in design tools such as Figma, Sketch, Illustrator, Photoshop, etc.\n" +
+      "- Ability to thrive working in a fast paced environment, with experience of managing and delivering to multiple project deadlines.\n" +
+      "- An interest to harness the power of our community to drive visual and design output for the project\n" +
+      "- Proficiency in English language and Excellent communication skills.\n" +
+      "- Bonus: Experience creating and having your own NFTs.",
+    createdOn: new Date("2022-07-27"),
     applyLink: "https://apply.workable.com/zkx/j/4A24407CC4/",
   },
 ];
