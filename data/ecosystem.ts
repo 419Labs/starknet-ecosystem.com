@@ -490,7 +490,7 @@ export const allProjects: Array<Project> = [
     logo: "zkpad.png",
     network: {
       website: "https://testnet.astraly.xyz/",
-      github: "https://github.com/ZkPad-Labs",
+      github: "https://github.com/Astraly-Labs/",
       twitter: "https://twitter.com/AstralyXYZ",
       medium: "https://astraly.mirror.xyz/",
       discord: "https://discord.gg/astralyxyz",
