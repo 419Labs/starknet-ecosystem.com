@@ -146,60 +146,6 @@ export const allProjects: Array<Project> = [
     isTestnetLive: false,
   },
   {
-    name: "DeversiFi",
-    short_name: "DeversiFi",
-    description:
-      "Our decentralised exchange is the easiest way to access DeFi opportunities on Ethereum: invest, trade, and send tokens without paying gas fees. What’s not to love?",
-    tags: ["starkex"],
-    logo: "deversifi.png",
-    network: {
-      website: "https://deversifi.com/",
-      github: "",
-      twitter: "https://twitter.com/deversifi",
-      medium: "",
-      discord: "",
-      telegram: "",
-    },
-    isLive: true,
-    isTestnetLive: true,
-  },
-  {
-    name: "Sorare",
-    short_name: "Sorare",
-    description:
-      "Show your passion and collect limited edition digital cards on the football NFT platform.",
-    tags: ["starkex"],
-    logo: "sorare.png",
-    network: {
-      website: "https://sorare.com/",
-      github: "",
-      twitter: "https://twitter.com/Sorare",
-      medium: "",
-      discord: "",
-      telegram: "",
-    },
-    isLive: true,
-    isTestnetLive: true,
-  },
-  {
-    name: "dYdX",
-    short_name: "dYdX",
-    description:
-      "Perpetuals, decentralized. Trade Perpetual Contracts with low fees, deep liquidity, and up to 20× more Buying Power.",
-    tags: ["starkex"],
-    logo: "dydx.svg",
-    network: {
-      website: "https://dydx.exchange/",
-      github: "https://github.com/dydxprotocol",
-      twitter: "https://twitter.com/dydx",
-      medium: "",
-      discord: "https://discord.com/invite/Tuze6tY",
-      telegram: "",
-    },
-    isLive: true,
-    isTestnetLive: true,
-  },
-  {
     name: "Topology",
     short_name: "Topology",
     description:
@@ -677,24 +623,6 @@ export const allProjects: Array<Project> = [
       telegram: "",
     },
     isLive: false,
-    isTestnetLive: true,
-  },
-  {
-    name: "ImmutableX",
-    short_name: "ImmutableX",
-    description:
-      "Immutable X is a decentralized liquidity layer for NFTs on StarkNet.",
-    tags: ["starkex"],
-    logo: "immutablex.png",
-    network: {
-      website: "https://www.immutable.com/",
-      github: "",
-      twitter: "https://twitter.com/Immutable",
-      medium: "",
-      discord: "https://discord.com/invite/6GjgPkp464",
-      telegram: "",
-    },
-    isLive: true,
     isTestnetLive: true,
   },
   {
