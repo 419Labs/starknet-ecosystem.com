@@ -636,6 +636,40 @@ const allJobs: Array<Job> = [
         createdOn: new Date("2022-07-16"),
     applyLink: "mailto:hello@42labs.xyz?body=Hi%20Empiric%20Team%2C%0A%0AI%27d%20like%20to%20join%20your%20team%21",
   },
+    {
+    key: "22",
+    title: "Graphic Designer / Visual Artist",
+    companyId: 2,
+    tags: ["Photoshop", "Illustrator"],
+    location: "Remote",
+    remote: true,
+    description:
+      "ZKX is the first permissionless protocol for derivatives built on StarkNet. We’re building a decentralized exchange that lets users trade derivatives using reward mechanisms, liquidity provisioning, and simplified access to complex trading strategies.\n" +
+      "\n" +
+      "The role: \n" +
+      "The mission for the Visual Artist is to lead the protocol’s visual identity and be the leading creative mind to structure its visual experience for users. You’ll take ownership of all design needs and will help manage external partners or coordinate with community members for additional resources. Ideally, you’re someone who’s excited about branding, memes, NFTs and more. You probably know about DeFi and crypto, and are looking to learn more about it.\n" +
+      "\n" +
+      "Responsibilities: \n" +
+      "- Deliver creative visual assets, static and motion design that brings the brand to life.\n" +
+      "- Conceptualize and develop all brand marketing assets, including social campaigns, email, paid ad campaigns, web graphics, animated videos per brand guidelines, etc.\n" +
+      "- Own and lead creative projects from ideation through to production.\n" +
+      "- Translate brand voice into graphics, including illustrations, logos, marketing materials, and animations across platforms.\n" +
+      "- Follow established brand guidelines and deliver creative projects on time across multiple stakeholders.\n" +
+      "- Managing multiple projects while ensuring deliverables in a set timeline.\n" +
+      "- Constantly bring new ideas to the table that will help achieve brand & performance objectives with evolution of visual identity.\n" +
+      "- Work with the team to create templates for different types of creative assets, and maintain the design language consistency at all times.\n" +
+      "- To make sure every creative asset meets its functional (readability, brand visibility, visual appeal, etc) and performance objectives (Engagement, Reach, Conversion, etc).",
+    requirements:
+        "- 3+ years of visual design experience, having led brand creation and development across multiple mediums (animations, social media, branding etc.).\n" +
+        "- Relevant experience as a visual, brand, and/or motion designer at a creative media agency, or startups or in either crypto, DeFi, web3 or a demonstrated portfolio of diverse projects is preferred.\n" +
+        "- Proficiency in design tools such as Figma, Sketch, Illustrator, Photoshop, etc.\n" +
+        "- Ability to thrive working in a fast paced environment, with experience of managing and delivering to multiple project deadlines.\n" +
+        "- An interest to harness the power of our community to drive visual and design output for the project\n" +
+        "- Proficiency in English language and Excellent communication skills.\n" +
+        "- Bonus: Experience creating and having your own NFTs.",
+        createdOn: new Date("2022-07-27"),
+    applyLink: "https://apply.workable.com/zkx/j/4A24407CC4/",
+  },
 ];
 
 export default allJobs;
