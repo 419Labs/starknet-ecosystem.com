@@ -248,6 +248,19 @@ const allCompanies: Company[] = [
       telegram: "",
     },
   },
+  {
+    id: 20,
+    name: "Brine Finance",
+    logo: "brine.png",
+    network: {
+      website: "https://www.brine.finance/",
+      github: "",
+      twitter: "https://twitter.com/BrineFinance",
+      medium: "https://medium.com/@brine.finance",
+      discord: "https://discord.gg/wuPHBr9e9y",
+      telegram: "",
+    },
+  },
 ];
 
 export default allCompanies;

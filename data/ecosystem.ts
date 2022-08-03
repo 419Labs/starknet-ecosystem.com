@@ -1496,4 +1496,22 @@ export const allProjects: Array<Project> = [
     isLive: false,
     isTestnetLive: false,
   },
+  {
+    name: "Brine Finance",
+    short_name: "Brine",
+    description:
+      "The decentralized order-book exchange for traders crafted by traders 🚀 Gasless | Instant | Multi-Chain | Secure | Trustless.",
+    tags: ["defi", "infrastructure"],
+    logo: "brine.png",
+    network: {
+      website: "https://www.brine.finance/",
+      github: "",
+      twitter: "https://twitter.com/BrineFinance",
+      medium: "https://medium.com/@brine.finance",
+      discord: "https://discord.gg/wuPHBr9e9y",
+      telegram: "",
+    },
+    isLive: false,
+    isTestnetLive: true,
+  },
 ];
