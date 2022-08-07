@@ -1514,4 +1514,22 @@ export const allProjects: Array<Project> = [
     isLive: false,
     isTestnetLive: true,
   },
+  {
+    name: "StarkBoard",
+    short_name: "StarkBoard",
+    description:
+      "Find all the latest Starknet data that you are looking for.",
+    tags: ["tools"],
+    logo: "",
+    network: {
+      website: "hhttps://www.starkboard.io/",
+      github: "",
+      twitter: "https://twitter.com/starkboard",
+      medium: "https://medium.com/@starkboard",
+      discord: "https://discord.com/invite/starkboard",
+      telegram: "",
+    },
+    isLive: false,
+    isTestnetLive: true,
+  },
 ];
