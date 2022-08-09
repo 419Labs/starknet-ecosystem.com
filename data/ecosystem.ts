@@ -1514,4 +1514,22 @@ export const allProjects: Array<Project> = [
     isLive: false,
     isTestnetLive: true,
   },
+  {
+    name: "Frens Lands",
+    short_name: "Frens Lands",
+    description:
+      "On-chain world builder RTS built on StarkNet where you harvest resources and build to create your dream community.",
+    tags: ["nft", "gamefi"],
+    logo: "FrensLands.png",
+    network: {
+      website: "https://frenslands.xyz",
+      github: "",
+      twitter: "https://twitter.com/FrensLands",
+      medium: "",
+      discord: "https://discord.gg/gehYZU9Trf",
+      telegram: "",
+    },
+    isLive: false,
+    isTestnetLive: false,
+  },
 ];
