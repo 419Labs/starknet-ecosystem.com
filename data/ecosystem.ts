@@ -1068,6 +1068,23 @@ export const allProjects: Array<Project> = [
     isTestnetLive: true,
   },
   {
+    name: "starknet-jvm",
+    short_name: "starknet-jvm",
+    description: "StarkNet SDK for java and other JVM languages",
+    tags: ["tools"],
+    logo: "",
+    network: {
+      website: "https://docs.swmansion.com/starknet-jvm/",
+      github: "https://github.com/software-mansion/starknet-jvm",
+      twitter: "",
+      medium: "",
+      discord: "",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: true,
+  },
+  {
     name: "StarkNet-rs",
     short_name: "StarkNet-rs",
     description: "StarkNet client library in Rust",
