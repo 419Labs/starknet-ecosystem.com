@@ -1514,4 +1514,22 @@ export const allProjects: Array<Project> = [
     isLive: false,
     isTestnetLive: true,
   },
+  {
+    name: "Fibrous Finance",
+    short_name: "Fibrous",
+    description:
+      "Gathers all AMMs of StarkNet at one place.",
+    tags: ["defi", "infrastructure"],
+    logo: "fibrousfinance.png",
+    network: {
+      website: "https://fibrous.finance/",
+      github: "",
+      twitter: "https://twitter.com/FibrousFinance",
+      medium: "https://medium.com/@fibrous",
+      discord: "",
+      telegram: "",
+    },
+    isLive: false,
+    isTestnetLive: false,
+  },
 ];
