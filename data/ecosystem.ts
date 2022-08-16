@@ -859,10 +859,11 @@ export const allProjects: Array<Project> = [
     isTestnetLive: true,
   },
   {
-    name: "Braavos",
+    name: " Braavos ",
     short_name: "Braavos",
-    description: "All in one assets management - DeFi and NFTs",
-    tags: ["wallet", "defi", "nft"],
+    description:
+      "First and only StarkNet wallet on mobile, Android & iOS. Use all your favorite StarkNet dApps on the go! Also available for chrome, Firefox and Edge. All in one assets management - DeFi and NFTs",
+    tags: ["wallet", "mobile", "defi", "nft", "gamefi"],
     logo: "braavos.svg",
     network: {
       website: "https://braavos.app/",
@@ -870,7 +871,7 @@ export const allProjects: Array<Project> = [
       twitter: "https://twitter.com/myBraavos",
       medium: "",
       discord: "https://discord.gg/ZrtCHK3t",
-      telegram: "",
+      telegram: "https://t.me/mybraavos",
     },
     isLive: true,
     isTestnetLive: true,
@@ -1534,8 +1535,7 @@ export const allProjects: Array<Project> = [
   {
     name: "StarkBoard",
     short_name: "StarkBoard",
-    description:
-      "Find all the latest Starknet data that you are looking for.",
+    description: "Find all the latest Starknet data that you are looking for.",
     tags: ["tools"],
     logo: "",
     network: {
@@ -1552,8 +1552,7 @@ export const allProjects: Array<Project> = [
   {
     name: "Fibrous Finance",
     short_name: "Fibrous",
-    description:
-      "Gathers all AMMs of StarkNet at one place.",
+    description: "Gathers all AMMs of StarkNet at one place.",
     tags: ["defi", "infrastructure"],
     logo: "fibrousfinance.png",
     network: {

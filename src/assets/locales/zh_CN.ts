@@ -23,6 +23,7 @@ const zhCNTranslation: TranslateState = {
     gamefi: "GameFi",
     governance: "Governance",
     infrastructure: "基础设施",
+    mobile: "Mobile",
     nft: "NFT",
     cefi: "CeFi",
     payments: "支付",
