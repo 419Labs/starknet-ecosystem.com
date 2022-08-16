@@ -1539,7 +1539,7 @@ export const allProjects: Array<Project> = [
     tags: ["tools"],
     logo: "",
     network: {
-      website: "hhttps://www.starkboard.io/",
+      website: "https://www.starkboard.io/",
       github: "",
       twitter: "https://twitter.com/starkboard",
       medium: "https://medium.com/@starkboard",
@@ -1562,6 +1562,24 @@ export const allProjects: Array<Project> = [
       twitter: "https://twitter.com/FibrousFinance",
       medium: "https://medium.com/@fibrous",
       discord: "",
+      telegram: "",
+    },
+    isLive: false,
+    isTestnetLive: false,
+  },
+  {
+    name: "Frens Lands",
+    short_name: "Frens Lands",
+    description:
+      "On-chain world builder RTS built on StarkNet where you harvest resources and build to create your dream community.",
+    tags: ["nft", "gamefi"],
+    logo: "FrensLands.png",
+    network: {
+      website: "https://frenslands.xyz",
+      github: "",
+      twitter: "https://twitter.com/FrensLands",
+      medium: "",
+      discord: "https://discord.gg/gehYZU9Trf",
       telegram: "",
     },
     isLive: false,
