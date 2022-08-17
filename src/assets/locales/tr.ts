@@ -3,7 +3,8 @@ import type { TranslateState } from "../../context/TranslateProvider/model";
 const trTranslate: TranslateState = {
   common: {
     title_main: "StarkNet devrimi hayata geçiyor",
-    subtitle_main: "StarkNet L2'de şu ana kadar yapılmış ve yapılacak olan bütün projeleri keşfedin",
+    subtitle_main:
+      "StarkNet L2'de şu ana kadar yapılmış ve yapılacak olan bütün projeleri keşfedin",
     community_driven: "✨ Topluluk odaklı bir girişim",
 
     no_project: "😕 Bu kategoride bir proje yok",
