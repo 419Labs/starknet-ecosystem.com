@@ -859,7 +859,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: true,
   },
   {
-    name: " Braavos ",
+    name: "Braavos",
     short_name: "Braavos",
     description:
       "First and only StarkNet wallet on mobile, Android & iOS. Use all your favorite StarkNet dApps on the go! Also available for chrome, Firefox and Edge. All in one assets management - DeFi and NFTs",
