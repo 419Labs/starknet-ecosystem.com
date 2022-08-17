@@ -1584,4 +1584,22 @@ export const allProjects: Array<Project> = [
     isLive: false,
     isTestnetLive: false,
   },
+  {
+    name: "Carmine Options AMM",
+    short_name: "Carmine",
+    description:
+      "Options AMM to allow users not only to buy, but also to sell options. To hedge or insure not only crypto pairs but also NFTs and game commodities.",
+    tags: ["defi"],
+    logo: "carmine_round.png",
+    network: {
+      website: "https://carmine.finance",
+      github: "https://github.com/CarmineOptions",
+      twitter: "https://twitter.com/CarmineOptions",
+      medium: "",
+      discord: "https://discord.gg/uRs7j8w3bX",
+      telegram: "",
+    },
+    isLive: false,
+    isTestnetLive: false,
+  },
 ];

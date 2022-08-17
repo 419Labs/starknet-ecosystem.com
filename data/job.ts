@@ -674,6 +674,38 @@ const allJobs: Array<Job> = [
     createdOn: new Date("2022-07-27"),
     applyLink: "https://apply.workable.com/zkx/j/4A24407CC4/",
   },
+  {
+    key: "23",
+    title: "Cairo developer",
+    companyId: 21,
+    tags: ["Cairo", "Solidity", "AMM", "options"],
+    location: "Remote",
+    remote: true,
+    description:
+      "We are building options AMM on StarkNet with several cool innovations and we are looking for senior smart contract developer to help us build it." +
+      "\n\n" +
+      "What you can expect\n" +
+      "- Fast paced environment with no bullshit and internal politics\n" +
+      "- Work on a cutting edge project that will change options and hedging in defi\n" +
+      "- Almost all of your code will be open sourced\n" +
+      "- Most of the code is in Cairo part (simulations and few tests) is in Python",
+    responsibilities:
+      "- Being part of designing and developing the AMM\n" +
+      "- Coordinating with the rest of the developers\n" +
+      "- As in any startup, pushing the product to the moon",
+    requirements:
+      "- 2+ years of experience as a smart contract developer\n" +
+      "- Proactivity\n" +
+      "- General understanding of AMMs\n" +
+      "- Nice to have: understanding/experience with Cairo/StarkNet",
+    offer:
+      "- Competitive salary\n" +
+      "- Equity & token compensation\n" +
+      "- Home office\n" +
+      "- Conferences",
+    createdOn: new Date("2022-08-16"),
+    applyLink: "mailto:carminefinanceinfo@gmail.com",
+  },
 ];
 
 export default allJobs;
