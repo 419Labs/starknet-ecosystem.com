@@ -23,6 +23,7 @@ const zhTWTranslate: TranslateState = {
     gamefi: "GameFi",
     governance: "Governance",
     infrastructure: "基礎設施",
+    mobile: "Mobile",
     nft: "NFT",
     cefi: "CeFi",
     payments: "支付",

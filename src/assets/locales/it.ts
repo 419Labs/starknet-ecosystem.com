@@ -24,6 +24,7 @@ const itTranslate: TranslateState = {
     gamefi: "GameFi",
     governance: "Governance",
     infrastructure: "Infrastruttura",
+    mobile: "Mobile",
     nft: "NFT",
     cefi: "CeFi",
     payments: "Pagamenti",

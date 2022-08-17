@@ -1,6 +1,7 @@
 import React from "react";
 
-import { TRANSLATE_STATE_INITIAL_STATE, TranslateManagerState } from "./model";
+import type { TranslateManagerState } from "./model";
+import { TRANSLATE_STATE_INITIAL_STATE } from "./model";
 
 export const TranslateContext = React.createContext<TranslateManagerState>({
   ...TRANSLATE_STATE_INITIAL_STATE,

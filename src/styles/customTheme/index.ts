@@ -1,5 +1,5 @@
 import { extendTheme } from "@chakra-ui/react";
-import { Styles } from "@chakra-ui/theme-tools";
+import type { Styles } from "@chakra-ui/theme-tools";
 
 import colors from "./colors";
 import Button from "./components/button";

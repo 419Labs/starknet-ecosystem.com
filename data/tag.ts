@@ -37,6 +37,10 @@ export const allTags: Tag[] = [
     label: "Infrastructure",
   },
   {
+    value: "mobile",
+    label: "Mobile App",
+  },
+  {
     value: "nft",
     label: "NFT",
   },
