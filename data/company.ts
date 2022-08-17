@@ -261,6 +261,19 @@ const allCompanies: Company[] = [
       telegram: "",
     },
   },
+  {
+    id: 21,
+    name: "Carmine Options AMM",
+    logo: "carmine_round.png",
+    network: {
+      website: "https://carmine.finance",
+      github: "https://github.com/CarmineOptions",
+      twitter: "https://twitter.com/CarmineOptions",
+      medium: "",
+      discord: "https://discord.gg/uRs7j8w3bX",
+      telegram: "",
+    },
+  },
 ];
 
 export default allCompanies;

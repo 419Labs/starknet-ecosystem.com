@@ -677,7 +677,7 @@ const allJobs: Array<Job> = [
   {
     key: "23",
     title: "Cairo developer",
-    companyId: 88,
+    companyId: 21,
     tags: ["Cairo", "Solidity", "AMM", "options"],
     location: "Remote",
     remote: true,
