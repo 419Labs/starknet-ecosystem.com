@@ -341,6 +341,23 @@ export const allProjects: Array<Project> = [
     isTestnetLive: false,
   },
   {
+    name: "Hashstack",
+    short_name: "Hashstack",
+    description: "A non-custodial Zk-native money market protocol enabling secure under-collateralized loans.",
+    tags: ["defi"],
+    logo: "hashstack.png",
+    network: {
+      website: "https://hashstack.finance",
+      github: "https://github.com/0xHashstack/zkOpen",
+      twitter: "https://twitter.com/0xHashstack",
+      medium: "https://hashstack.medium.com",
+      discord: "http://hashstack.community",
+      telegram: "",
+    },
+    isLive: false,
+    isTestnetLive: false,
+  },
+  {
     name: "Myswap",
     short_name: "Myswap",
     description: "AMM",
@@ -1603,3 +1620,4 @@ export const allProjects: Array<Project> = [
     isTestnetLive: false,
   },
 ];
+
