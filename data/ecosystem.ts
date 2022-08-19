@@ -1602,4 +1602,21 @@ export const allProjects: Array<Project> = [
     isLive: false,
     isTestnetLive: false,
   },
+  {
+    name: "Early Starkers",
+    short_name: "Early Starkers",
+    description: "Early Starkers project aims to gather the early adaptors and pioneers of StarkNet community.",
+    tags: ["nft"],
+    logo: "early_starkers.png",
+    network: {
+      website: "https://earlystarkers.io",
+      github: "",
+      twitter: "https://twitter.com/earlystarkers",
+      medium: "",
+      discord: "",
+      telegram: ""
+    },
+    isLive: true,
+    isTestnetLive: false,
+  }
 ];
