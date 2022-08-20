@@ -1353,22 +1353,22 @@ export const allProjects: Array<Project> = [
     isTestnetLive: false,
   },
   {
-    name: "Almanac NFT",
+    name: "AlmanacNFT",
     short_name: "almanac",
     description:
-      "AlmanacNFT is a collection of 10.000 customizable unique days in crypto markets.",
+      "AlmanacNFT is a collection of 10.000 unique crypto trading days. Just pick a market, pick a date, and mint a day in crypto.",
     tags: ["nft"],
     logo: "almanac.png",
     network: {
       website: "https://almanacNFT.xyz/",
-      github: "",
+      github: "https://github.com/grillolepic/almanacNFT_cairo",
       twitter: "https://twitter.com/almanacNFT",
       medium: "",
       discord: "",
       telegram: "",
     },
-    isLive: false,
-    isTestnetLive: true,
+    isLive: true,
+    isTestnetLive: false,
   },
   {
     name: "Starksheet",
