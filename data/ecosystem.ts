@@ -535,7 +535,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: false,
   },
   {
-    name: "Nostra Finance",
+    name: "Nostra",
     short_name: "Nostra",
     description:
       `Nostra is the most versatile liquidity protocol for lending and borrowing.
