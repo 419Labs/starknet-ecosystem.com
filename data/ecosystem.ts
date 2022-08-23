@@ -1635,6 +1635,23 @@ export const allProjects: Array<Project> = [
     },
     isLive: true,
     isTestnetLive: false,
+  },
+  {
+    name: "Carbonable",
+    short_name: "Carbonable",
+    description: "With Carbonable you can finance nature’s regeneration and get high, sustainable and real-world backed revenue, while fighting climate change.",
+    tags: [ "defi", "nft" , "green finance"] ,
+    logo: "carbonable.png",
+    network: {
+      website: "https://carbonable.io",
+      github: "https://github.com/Carbonable",
+      twitter: "https://twitter.com/earlystarkers",
+      medium: "https://carbonable.medium.com/",
+      discord: "https://discord.gg/zUy9UvB7cd",
+      telegram: "https://t.me/+BNy-m0XWB4YyNWI0"
+    },
+    isLive: true,
+    isTestnetLive: true,
   }
 ];
 
