@@ -535,6 +535,28 @@ export const allProjects: Array<Project> = [
     isTestnetLive: false,
   },
   {
+    name: "Nostra",
+    short_name: "Nostra",
+    description:
+      `Nostra is the most versatile liquidity protocol for lending and borrowing.
+
+      StarkNet’s fast finality times and low gas fees offer Nostra the ideal conditions to make lending and borrowing more user-friendly and financially accessible than ever before.
+      
+      You can deposit your crypto in Nostra to earn income, and borrow crypto using your deposits as collateral.`,
+    tags: ["defi"],
+    logo: "nostra.svg",
+    network: {
+      website: "http://nostra.finance/",
+      github: "",
+      twitter: "https://twitter.com/nostrafinance",
+      medium: "https://mirror.xyz/0x845605C411132BAA06024a521a85B653F3C802dF",
+      discord: "https://discord.gg/Eqp53YafYP",
+      telegram: "https://www.t.me/nostrafinance",
+    },
+    isLive: false,
+    isTestnetLive: false,
+  },
+  {
     name: "Bitmap Box",
     short_name: "Bitmap Box",
     description:
