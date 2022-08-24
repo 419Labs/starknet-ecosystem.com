@@ -1663,7 +1663,7 @@ export const allProjects: Array<Project> = [
     network: {
       website: "https://carbonable.io",
       github: "https://github.com/Carbonable",
-      twitter: "https://twitter.com/earlystarkers",
+      twitter: "https://twitter.com/Carbonable_io",
       medium: "https://carbonable.medium.com/",
       discord: "https://discord.gg/zUy9UvB7cd",
       telegram: "https://t.me/+BNy-m0XWB4YyNWI0"
