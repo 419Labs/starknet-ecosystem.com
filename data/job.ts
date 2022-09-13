@@ -706,6 +706,37 @@ const allJobs: Array<Job> = [
     createdOn: new Date("2022-08-16"),
     applyLink: "mailto:carminefinanceinfo@gmail.com",
   },
+  {
+    key: "24",
+    title: "Senior Full Stack Engineer",
+    companyId: 13,
+    tags: ["React", "TypeScript", "Wallet", "Mobile", "Braavos"],
+    location: "Tel-Aviv/Remote",
+    remote: true,
+    description:
+      "We are looking for a sharp engineer with a real passion for building things, an internal sense of urgency and a getting things done mentality." +
+      "\n" +
+      "We are looking for someone who wants to make a big impact and is not afraid to take big responsibility on their shoulders." +
+      "\n" +
+      "We develop a product that handles people’s real money – you must be respectful of that, and be very aware of the risks while coding and testing your code." +
+      "\n" +
+      "Passionate to learn new things and constantly improve.",
+    responsibilities:
+      "- Perform the software design of web3 product features on top of StarkNet\n" +
+      "- Build web3 applications and browser extensions through appealing visual design\n" +
+      "- Write tests to ensure your code is working, responsive and efficient\n" +
+      "- Troubleshoot, debug and upgrade software\n" +
+      "- Write technical documentation",
+    requirements:
+      "- Vast experience as a Full Stack Developer\n" +
+      "- Experience developing mobile applications – a plus\n" +
+      "- Experience with applicable software including HTML, CSS, and React\n" +
+      "- Familiarity with databases (e.g. MySQL, MongoDB), web servers (e.g. Apache) and UI/UX design\n" +
+      "- Ability to read specs and derive the proper requirements and design from it\n" +
+      "- BSc in Computer Science",
+    createdOn: new Date("2022-09-13"),
+    applyLink: "mailto:jobs@braavos.app",
+  },
 ];
 
 export default allJobs;
