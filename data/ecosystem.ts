@@ -343,7 +343,8 @@ export const allProjects: Array<Project> = [
   {
     name: "Hashstack",
     short_name: "Hashstack",
-    description: "A non-custodial Zk-native money market protocol enabling secure under-collateralized loans.",
+    description:
+      "A non-custodial Zk-native money market protocol enabling secure under-collateralized loans.",
     tags: ["defi"],
     logo: "hashstack.png",
     network: {
@@ -1640,7 +1641,8 @@ export const allProjects: Array<Project> = [
   {
     name: "Early Starkers",
     short_name: "Early Starkers",
-    description: "Early Starkers project aims to gather the early adaptors and pioneers of StarkNet community.",
+    description:
+      "Early Starkers project aims to gather the early adaptors and pioneers of StarkNet community.",
     tags: ["nft"],
     logo: "early_starkers.png",
     network: {
@@ -1649,7 +1651,7 @@ export const allProjects: Array<Project> = [
       twitter: "https://twitter.com/earlystarkers",
       medium: "",
       discord: "",
-      telegram: ""
+      telegram: "",
     },
     isLive: true,
     isTestnetLive: false,
@@ -1657,8 +1659,9 @@ export const allProjects: Array<Project> = [
   {
     name: "Carbonable",
     short_name: "Carbonable",
-    description: "With Carbonable you can finance nature’s regeneration and get high, sustainable and real-world backed revenue, while fighting climate change.",
-    tags: [ "defi", "nft" , "green finance"] ,
+    description:
+      "With Carbonable you can finance nature’s regeneration and get high, sustainable and real-world backed revenue, while fighting climate change.",
+    tags: ["defi", "nft", "green finance"],
     logo: "carbonable.png",
     network: {
       website: "https://carbonable.io",
@@ -1666,10 +1669,23 @@ export const allProjects: Array<Project> = [
       twitter: "https://twitter.com/Carbonable_io",
       medium: "https://carbonable.medium.com/",
       discord: "https://discord.gg/zUy9UvB7cd",
-      telegram: "https://t.me/+BNy-m0XWB4YyNWI0"
+      telegram: "https://t.me/+BNy-m0XWB4YyNWI0",
     },
     isLive: true,
     isTestnetLive: true,
-  }
+  },
+  {
+    name: "Starknet.id",
+    short_name: "Starknet.id",
+    description: "Identity and naming service for starknet",
+    tags: ["digital_id", "nft", "tools"],
+    logo: "starknetid.png",
+    network: {
+      website: "https://starknet.id",
+      github: "https://github.com/starknet-id",
+      twitter: "https://twitter.com/starknet_id",
+    },
+    isLive: false,
+    isTestnetLive: true,
+  },
 ];
-
