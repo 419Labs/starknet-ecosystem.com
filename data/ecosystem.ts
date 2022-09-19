@@ -1688,4 +1688,22 @@ export const allProjects: Array<Project> = [
     isLive: false,
     isTestnetLive: true,
   },
+  {
+    name: "BlastApi",
+    short_name: "blastapi",
+    description:
+      "BlastApi offers high quality StarkNet mainnet and testnet APIs.",
+    tags: ["infrastructure"],
+    logo: "blastapi.png",
+    network: {
+      website: "https://blastapi.io/",
+      github: "https://github.com/bwarelabs",
+      twitter: "https://twitter.com/BlastAPI",
+      medium: "https://medium.com/bware-labs",
+      discord: "https://discord.gg/bwarelabs",
+      telegram: "https://t.me/bwareLabs",
+    },
+    isLive: false,
+    isTestnetLive: false,
+  },
 ];
