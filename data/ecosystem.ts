@@ -1707,3 +1707,18 @@ export const allProjects: Array<Project> = [
     isTestnetLive: false,
   },
 ];
+name: "10KSwap",
+short name: "10KSwap",
+description: "10KSwap is a Layer 2 AMM protocol building on StarkNet",
+tags: ["defi"],
+ website: "https://10kswap.com",
+ github: "https://github.com/10k-swap",
+  twitter: "https://twitter.com/10KSwap",
+  medium: "",
+  discord: "https://t.co/Qp15Fo8194",
+      telegram: "https://t.me/Elena10KSwap",
+ },
+    isLive: true,
+    isTestnetLive: true,
+   },
+];    
