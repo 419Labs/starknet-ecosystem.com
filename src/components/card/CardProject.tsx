@@ -69,7 +69,13 @@ function CardProject({ project }: CardProjectProps) {
           />
         </Flex>
         <Box position="relative" zIndex={0}>
-          <Image src="/arf_banner.png" borderRadius="md" position="relative" />
+          <Image
+            src="/arf_banner.png"
+            height="200px"
+            borderRadius="lg"
+            position="relative"
+            objectFit="cover"
+          />
           <Box position="absolute" zIndex={3} bottom={0} p={2}>
             {indication && (
               <ChakraTag
