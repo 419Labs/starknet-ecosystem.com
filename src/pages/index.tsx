@@ -8,6 +8,7 @@ import { allProjects } from "../../data/ecosystem";
 import type { Tag } from "../../data/tag";
 import { allTags } from "../../data/tag";
 import CardProject from "../components/card/CardProject";
+import HighlightedText from "../components/layout/HighlightedText";
 import TagMenu from "../components/layout/TagMenu";
 import { useTranslate } from "../context/TranslateProvider";
 
@@ -55,54 +56,24 @@ const Home: NextPage = () => {
     <Flex
       direction="column"
       justify="flex-start"
-      align="center"
+      align="flex-start"
       px={[4, 0]}
       transform="translateZ(0)"
     >
       {/* Big intro text */}
-      <Text
-        as="h1"
-        mt={12}
-        textAlign="center"
-        lineHeight={1.2}
-        fontSize={["48px", "68px"]}
-        fontWeight="bold"
-        maxWidth="850px"
-      >
-        {t.common.title_main}
-      </Text>
+      <HighlightedText text={t.common.title_main_dapps} highlighted="1234" />
       {/* Sub intro text */}
       <Text
         mt={8}
-        textAlign="center"
+        textAlign="start"
         color="whiteAlpha.600"
-        fontSize="24px"
-        maxWidth="400px"
+        fontSize="20px"
+        maxWidth="600px"
       >
         {t.common.subtitle_main}
       </Text>
-      <Text
-        mt={4}
-        textAlign="center"
-        color="whiteAlpha.600"
-        fontSize="18px"
-        maxWidth="400px"
-      >
-        {t.common.community_driven}
-      </Text>
       {/* Main part */}
       <Flex w="full" direction="column" mt={8}>
-        <TagMenu
-          initialValue={allTags[0]}
-          tags={allTags}
-          onChange={(newFilter) => {
-            setFilter(newFilter);
-            // Reset lazy loading index
-            setLastIndexLoaded(LOADED_STEPS);
-            // Reset flipped cards to none
-            setFlippedIndex(-1);
-          }}
-        />
         <Stack
           mt={10}
           direction="row"

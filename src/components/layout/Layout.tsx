@@ -32,7 +32,7 @@ function Layout({ children }: LayoutProps) {
           paddingLeft={{ sm: 0, md: "10%" }}
           px={{ sm: 4, md: 0 }}
           transition="background-color .2s ease-in"
-          bgColor="black"
+          bgColor="primary.900"
           zIndex={2000}
         >
           <Box
@@ -54,7 +54,7 @@ function Layout({ children }: LayoutProps) {
         </Flex>
         <Footer />
       </Flex>
-      <Particles id="tsparticles" options={{ ...ParticlesOptions }} />
+      {/*<Particles id="tsparticles" options={{ ...ParticlesOptions }} />*/}
     </>
   );
 }

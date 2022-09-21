@@ -1,4 +1,4 @@
-import { Box, Flex, HStack, Link } from "@chakra-ui/layout";
+import { Box, Flex, Link } from "@chakra-ui/layout";
 import { Button, Hide } from "@chakra-ui/react";
 import { brands, solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -9,106 +9,10 @@ import { useTranslate } from "../../context/TranslateProvider";
 
 import Drawer from "./Drawer";
 import Logo from "./Logo";
-import MenuButton from "./MenuButton";
 
 function Header() {
   const { locale, t } = useTranslate();
   const [isDrawerOpen, setDrawerOpen] = useState(false);
-
-  const githubLink = "https://github.com/419Labs/starknet-ecosystem.com";
-  const telegramLink = "https://t.me/starknet_ecosystem";
-  const twitterLink = "https://twitter.com/StarkNetEco";
-
-  const renderLanguagesOptions = () => {
-    return (
-      <MenuButton
-        menus={[
-          {
-            href: "",
-            children: (
-              <NextLink href="" passHref locale="fr">
-                <Link _hover={{ textDecoration: "none" }} href="/" w="full">
-                  Français
-                </Link>
-              </NextLink>
-            ),
-          },
-          {
-            href: "",
-            children: (
-              <NextLink href="" passHref locale="en">
-                <Link _hover={{ textDecoration: "none" }} href="/" w="full">
-                  English
-                </Link>
-              </NextLink>
-            ),
-          },
-          {
-            href: "",
-            children: (
-              <NextLink href="" passHref locale="tr">
-                <Link _hover={{ textDecoration: "none" }} href="/" w="full">
-                  Türk
-                </Link>
-              </NextLink>
-            ),
-          },
-          {
-            href: "",
-            children: (
-              <NextLink href="" passHref locale="it">
-                <Link _hover={{ textDecoration: "none" }} href="/" w="full">
-                  Italiano
-                </Link>
-              </NextLink>
-            ),
-          },
-          {
-            href: "",
-            children: (
-              <NextLink href="" passHref locale="zh_CN">
-                <Link _hover={{ textDecoration: "none" }} href="/" w="full">
-                  简体中文
-                </Link>
-              </NextLink>
-            ),
-          },
-          {
-            href: "",
-            children: (
-              <NextLink href="" passHref locale="zh_TW">
-                <Link _hover={{ textDecoration: "none" }} href="/" w="full">
-                  繁體中文
-                </Link>
-              </NextLink>
-            ),
-          },
-          {
-            href: "",
-            children: (
-              <NextLink href="" passHref locale="pl">
-                <Link _hover={{ textDecoration: "none" }} href="/" w="full">
-                  Polski
-                </Link>
-              </NextLink>
-            ),
-          },
-          {
-            href: "",
-            children: (
-              <NextLink href="" passHref locale="pt">
-                <Link _hover={{ textDecoration: "none" }} href="/" w="full">
-                  Português
-                </Link>
-              </NextLink>
-            ),
-          },
-        ]}
-        icon={solid("chevron-down")}
-        text={locale ? locale.toUpperCase() : " - "}
-      />
-    );
-  };
 
   return (
     <Flex
@@ -122,28 +26,34 @@ function Header() {
       <Logo />
       <Hide below="md">
         <Flex direction="row">
-          <HStack spacing={4} mr={2}>
-            <Link isExternal href={twitterLink}>
-              <FontAwesomeIcon fontSize="24px" icon={brands("twitter")} />
-            </Link>
-            <Link isExternal href={telegramLink}>
-              <FontAwesomeIcon fontSize="24px" icon={brands("telegram")} />
-            </Link>
-            <Link isExternal href={githubLink}>
-              <FontAwesomeIcon fontSize="24px" icon={brands("github")} />
-            </Link>
-          </HStack>
-          <Box ml={2}>
+          <Box ml={6}>
+            <NextLink href={`/${locale}`}>
+              <Link _hover={{ textDecoration: "none", opacity: ".5" }}>
+                {t.common.ecosystem || "Ecosystem"}
+              </Link>
+            </NextLink>
+          </Box>
+          <Box ml={6}>
+            <NextLink href={`/${locale}/learn`}>
+              <Link _hover={{ textDecoration: "none", opacity: ".5" }}>
+                {t.common.learn || "Learn"}
+              </Link>
+            </NextLink>
+          </Box>
+          <Box ml={6}>
             <NextLink href={`/${locale}/jobs`}>
-              <Button>{t.common.job || "Jobs"}</Button>
+              <Link _hover={{ textDecoration: "none", opacity: ".5" }}>
+                {t.common.job || "Jobs"}
+              </Link>
             </NextLink>
           </Box>
-          <Box ml={2}>
+          <Box ml={6}>
             <NextLink href={`/${locale}/metrics`}>
-              <Button>{t.common.metrics || "Metrics"}</Button>
+              <Link _hover={{ textDecoration: "none", opacity: ".5" }}>
+                {t.common.metrics || "Metrics"}
+              </Link>
             </NextLink>
           </Box>
-          <Box ml={2}>{renderLanguagesOptions()}</Box>
         </Flex>
       </Hide>
       <Hide above="md">
@@ -154,22 +64,12 @@ function Header() {
           <Drawer
             links={[
               {
-                href: twitterLink,
-                icon: brands("twitter"),
-                label: "Twitter",
-                isExternal: true,
+                href: `/${locale}`,
+                label: t.common.ecosystem || "Ecosystem",
               },
               {
-                href: telegramLink,
-                icon: brands("telegram"),
-                label: t.common.community,
-                isExternal: true,
-              },
-              {
-                href: githubLink,
-                icon: brands("github"),
-                label: t.common.apply,
-                isExternal: true,
+                href: `/${locale}/learn`,
+                label: t.common.learn || "Learn",
               },
               {
                 href: `/${locale}/jobs`,
@@ -180,7 +80,6 @@ function Header() {
                 label: t.common.metrics || "Metrics",
               },
             ]}
-            headerAction={renderLanguagesOptions()}
             isOpen={isDrawerOpen}
             onClose={() => setDrawerOpen(false)}
           />

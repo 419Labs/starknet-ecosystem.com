@@ -13,7 +13,7 @@ import Logo from "./Logo";
 
 interface DrawerProps {
   links: { href: string; label: string; icon?: any; isExternal?: boolean }[];
-  headerAction: ReactElement;
+  headerAction?: ReactElement;
   isOpen: boolean;
   onClose: () => void;
 }

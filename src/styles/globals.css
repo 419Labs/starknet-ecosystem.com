@@ -25,3 +25,8 @@ main {
 ::-webkit-scrollbar {
   display: none;
 }
+
+@font-face {
+  font-family: 'syne';
+  src: url('/fonts/Syne-VariableFont_wght.ttf');
+}

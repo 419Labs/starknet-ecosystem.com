@@ -3,8 +3,9 @@ import type { TranslateState } from "../../context/TranslateProvider/model";
 const frTranslate: TranslateState = {
   common: {
     title_main: "La révolution StarkNet est en route",
+    title_main_dapps: "dApps, Services & Portefeuilles",
     subtitle_main:
-      "Explorez les projets construits et lancés sur la solution L2 StarkNet",
+      "Discover a wide variety of apps, blockchains, wallets and explorers, built in the Starknet ecosystem by developers and contributors from across the globe.",
     community_driven: "✨ Une initiative guidée par la communauté",
     no_project: "😕 Aucun projet dans cette catégorie",
     maybe_yours: "Peut-être le vôtre ?",
