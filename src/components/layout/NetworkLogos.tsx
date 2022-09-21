@@ -18,7 +18,8 @@ const NetworkLogos: FC<Props> = ({
     <HStack
       justifyContent={justifyContent}
       spacing={4}
-      fontSize="20px"
+      fontSize="16px"
+      color="whiteAlpha.600"
       onClick={(e) => e.stopPropagation()}
     >
       {website && (

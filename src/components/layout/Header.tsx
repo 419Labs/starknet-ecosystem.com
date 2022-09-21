@@ -1,6 +1,6 @@
 import { Box, Flex, Link } from "@chakra-ui/layout";
 import { Button, Hide } from "@chakra-ui/react";
-import { brands, solid } from "@fortawesome/fontawesome-svg-core/import.macro";
+import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import NextLink from "next/link";
 import { useState } from "react";

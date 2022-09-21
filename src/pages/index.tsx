@@ -1,4 +1,13 @@
-import { Box, Flex, Stack, Text } from "@chakra-ui/layout";
+import {
+  Box,
+  Flex,
+  Grid,
+  GridItem,
+  SimpleGrid,
+  Stack,
+  Text,
+} from "@chakra-ui/layout";
+import { Hide, Image } from "@chakra-ui/react";
 import type { NextPage } from "next";
 import { useEffect, useState } from "react";
 import useInView from "react-cool-inview";
@@ -54,16 +63,34 @@ const Home: NextPage = () => {
 
   return (
     <Flex
+      w="full"
       direction="column"
       justify="flex-start"
       align="flex-start"
       px={[4, 0]}
       transform="translateZ(0)"
     >
-      {/* Big intro text */}
-      <HighlightedText text={t.common.title_main_dapps} highlighted="1234" />
+      <Flex
+        direction="row"
+        w="full"
+        justify="space-between"
+        position="relative"
+      >
+        {/* Big intro text */}
+        <HighlightedText text={t.common.title_main_dapps} highlighted="1234" />
+        <Box
+          boxSize="600px"
+          position="absolute"
+          right="-200px"
+          top="-100px"
+          zIndex={0}
+        >
+          <Image src="/astro.png" alt="Starknet Astro" />
+        </Box>
+      </Flex>
       {/* Sub intro text */}
       <Text
+        zIndex={1}
         mt={8}
         textAlign="start"
         color="whiteAlpha.600"
@@ -73,24 +100,23 @@ const Home: NextPage = () => {
         {t.common.subtitle_main}
       </Text>
       {/* Main part */}
-      <Flex w="full" direction="column" mt={8}>
-        <Stack
-          mt={10}
-          direction="row"
-          justify="center"
-          spacing={0}
-          wrap="wrap"
-          shouldWrapChildren
-        >
+      <Flex w="full" direction="row" mt={8}>
+        <Hide below="md">
+          <Flex direction="column" w="300px" bg="red.100" >
+            <Text fontSize="3xl">
+              Category
+            </Text>
+
+          </Flex>
+        </Hide>
+        <SimpleGrid minChildWidth="300px" spacing="20px" w="full">
           {projects && projects.length > 0 ? (
             projects.map((project: ProjectItf, index: number) => {
               return (
                 <Box
                   ref={index === projects.length - 1 ? observe : null}
                   key={`project-${project.name}`}
-                  py={4}
-                  px={4}
-                  width="300px"
+                  flex={1}
                 >
                   <CardProject
                     project={project}
@@ -108,7 +134,7 @@ const Home: NextPage = () => {
               </Text>
             </Flex>
           )}
-        </Stack>
+        </SimpleGrid>
       </Flex>
     </Flex>
   );

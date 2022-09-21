@@ -7,6 +7,7 @@ interface HighlightedTextProps {
 function HighlightedText({ text, highlighted }: HighlightedTextProps) {
   return (
     <Text
+        zIndex={1}
       as="h1"
       align="start"
       lineHeight={1.2}

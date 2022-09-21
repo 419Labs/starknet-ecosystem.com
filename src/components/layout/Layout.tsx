@@ -26,22 +26,14 @@ function Layout({ children }: LayoutProps) {
       >
         <Box
           width="full"
-          position="fixed"
           left={0}
           right={0}
           paddingLeft={{ sm: 0, md: "10%" }}
           px={{ sm: 4, md: 0 }}
           transition="background-color .2s ease-in"
-          bgColor="primary.900"
           zIndex={2000}
         >
-          <Box
-            w="full"
-            paddingLeft={{ sm: 0, md: "10%" }}
-            paddingRight={{ sm: 0, md: "10%" }}
-          >
-            <Header />
-          </Box>
+          <Header />
         </Box>
         <Flex
           flex="1 1 auto"
