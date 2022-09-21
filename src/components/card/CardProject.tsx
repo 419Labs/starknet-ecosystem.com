@@ -96,7 +96,7 @@ function CardProject({ project }: CardProjectProps) {
                 return (
                   <ChakraTag
                     fontSize="xs"
-                    fontWeight="bold"
+                    fontWeight="medium"
                     borderRadius="xl"
                     background="primary.900"
                     border="0.7px solid white"

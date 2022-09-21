@@ -39,8 +39,8 @@ function Menu({ tags, initialValue, onChange }: MenuProps) {
   };
 
   return (
-    <Flex direction="column" w="300px" pr={12}>
-      <Text fontSize="3xl">Category</Text>
+    <Flex direction="column" w="300px" pr={12} position="sticky" top={0} alignSelf="flex-start">
+      <Text fontSize="3xl" mb={8}>Category</Text>
       {tags.map((tag) => {
         return (
           <Flex
@@ -58,12 +58,12 @@ function Menu({ tags, initialValue, onChange }: MenuProps) {
             _hover={{ cursor: "pointer" }}
           >
             <Flex direction="row" justify="flex-start" align="center">
-              {/* see https://fontawesome.com/versions#add-individual-icons-explicitly */}
-              <Box minW="24px">
+              <Flex minW="24px" justify="center" align="center">
+                {/* see https://fontawesome.com/versions#add-individual-icons-explicitly */}
                 {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
                 {/* @ts-ignore */}
                 <FontAwesomeIcon fontSize="18px" icon={icons[tag.icon]} />
-              </Box>
+              </Flex>
               <Text ml={4} fontWeight="bold" fontSize="16px">
                 {t.tags[tag.value] || tag.value}
               </Text>

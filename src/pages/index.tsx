@@ -91,7 +91,7 @@ const Home: NextPage = () => {
         {t.common.subtitle_main}
       </Text>
       {/* Main part */}
-      <Flex w="full" direction="row" mt={8}>
+      <Flex w="full" direction="row" mt={24}>
         <Hide below="md">
           <Menu
             tags={allTags}
@@ -100,7 +100,7 @@ const Home: NextPage = () => {
           />
         </Hide>
         <SimpleGrid
-            columns={{sm: 1, md: 1, lg: 2, xl: 3}}
+          columns={{ sm: 1, md: 1, lg: 2, xl: 3 }}
           spacing="20px"
           w="full"
         >
