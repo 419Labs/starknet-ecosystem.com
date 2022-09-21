@@ -1,4 +1,4 @@
-import { Box, Flex, Text } from "@chakra-ui/layout";
+import { Flex, Text } from "@chakra-ui/layout";
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
@@ -39,8 +39,17 @@ function Menu({ tags, initialValue, onChange }: MenuProps) {
   };
 
   return (
-    <Flex direction="column" w="300px" pr={12} position="sticky" top={0} alignSelf="flex-start">
-      <Text fontSize="3xl" mb={8}>Category</Text>
+    <Flex
+      direction="column"
+      w="300px"
+      pr={12}
+      position="sticky"
+      top={0}
+      alignSelf="flex-start"
+    >
+      <Text fontSize="3xl" mb={8}>
+        Category
+      </Text>
       {tags.map((tag) => {
         return (
           <Flex
