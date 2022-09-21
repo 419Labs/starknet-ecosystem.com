@@ -6,6 +6,23 @@ import { useState } from "react";
 import type { Tag } from "../../../data/tag";
 import { useTranslate } from "../../context/TranslateProvider";
 
+const icons = {
+  home: solid("home"),
+  bridge: solid("bridge"),
+  "people-group": solid("people-group"),
+  rocket: solid("rocket"),
+  "id-card": solid("id-card"),
+  gamepad: solid("gamepad"),
+  "magnifying-glass": solid("magnifying-glass"),
+  road: solid("road"),
+  mobile: solid("mobile"),
+  "file-image": solid("file-image"),
+  "credit-card": solid("credit-card"),
+  "screwdriver-wrench": solid("screwdriver-wrench"),
+  wallet: solid("wallet"),
+  "ellipsis-vertical": solid("ellipsis-vertical"),
+};
+
 interface MenuProps {
   tags: Tag[];
   initialValue: Tag;
@@ -35,11 +52,17 @@ function Menu({ tags, initialValue, onChange }: MenuProps) {
             align="center"
             onClick={() => onSelected(tag)}
             borderRadius="md"
-            bg={selectedValue.value === tag.value ? "primary.700" : "transparent"}
+            bg={
+              selectedValue.value === tag.value ? "primary.700" : "transparent"
+            }
             _hover={{ cursor: "pointer" }}
           >
             <Flex direction="row" justify="flex-start" align="center">
-              <FontAwesomeIcon fontSize="18px" icon={solid("home")} />
+              {/* see https://fontawesome.com/versions#add-individual-icons-explicitly */}
+              <Box minW="24px">
+                {/* @ts-ignore */}
+                <FontAwesomeIcon fontSize="18px" icon={icons[tag.icon]} />
+              </Box>
               <Text ml={4} fontWeight="bold" fontSize="16px">
                 {t.tags[tag.value] || tag.value}
               </Text>

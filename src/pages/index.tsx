@@ -108,7 +108,12 @@ const Home: NextPage = () => {
             onChange={(newValue) => setFilter(newValue)}
           />
         </Hide>
-        <SimpleGrid minChildWidth="300px" spacing="20px" w="full">
+        <SimpleGrid
+          minChildWidth="300px"
+          spacing="20px"
+          w="full"
+          maxHeight="0px"
+        >
           {projects && projects.length > 0 ? (
             projects.map((project: ProjectItf, index: number) => {
               return (
