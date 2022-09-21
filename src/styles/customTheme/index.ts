@@ -3,6 +3,7 @@ import type { Styles } from "@chakra-ui/theme-tools";
 
 import colors from "./colors";
 import Button from "./components/button";
+import Menu from "./components/menu";
 import Input from "./components/input";
 import fonts from "./fonts";
 
@@ -29,6 +30,7 @@ const customTheme = extendTheme({
   components: {
     Button,
     Input,
+    Menu
   },
 });
 

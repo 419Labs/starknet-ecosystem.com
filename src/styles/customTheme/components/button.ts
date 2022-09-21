@@ -10,15 +10,15 @@ const Button: DeepPartial<Theme["components"]["Button"]> = {
     _dark: {
       color: "whiteAlpha.900",
       border: "1px solid",
-      borderColor: "whiteAlpha.300",
+      borderColor: "primary.700",
       bg: "transparent",
       _hover: {
-        bg: "gray.800",
-        borderColor: "gray.800",
+        bg: "primary.700",
+        borderColor: "primary.700",
       },
       _active: {
-        bg: "gray.700",
-        borderColor: "gray.700",
+        bg: "primary.700",
+        borderColor: "primary.700",
       },
     },
   },

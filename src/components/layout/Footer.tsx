@@ -135,7 +135,7 @@ function Footer() {
           {t.common.alpha_road_team}
         </Link>
       </HStack>
-      <Divider my={4} bg="white" />
+      <Divider my={4} bg="whiteAlpha.900" />
       <SimpleGrid
         columns={{ sm: 2, md: 2, lg: 3, xl: 5 }}
         spacing="20px"
