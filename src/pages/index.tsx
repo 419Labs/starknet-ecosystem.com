@@ -70,10 +70,10 @@ const Home: NextPage = () => {
         {/* Big intro text */}
         <HighlightedText text={t.common.title_main_dapps} highlighted="1234" />
         <Box
-          boxSize="600px"
+          boxSize="500px"
           position="absolute"
-          right="-200px"
-          top="-100px"
+          right="0"
+          top="-200px"
           zIndex={0}
         >
           <Image src="/astro.png" alt="Starknet Astro" />

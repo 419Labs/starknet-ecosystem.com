@@ -47,7 +47,7 @@ function CardProject({ project }: CardProjectProps) {
 
   const indication = getIndicationText();
   return (
-    <Flex direction="column" ml="20px" mt="20px">
+    <Flex direction="column" ml="20px" mt="20px" maxW="600px">
       <Box position="relative">
         <Flex
           borderRadius="50%"
