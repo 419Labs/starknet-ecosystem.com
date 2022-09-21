@@ -18,7 +18,7 @@ import type { Tag } from "../../data/tag";
 import { allTags } from "../../data/tag";
 import CardProject from "../components/card/CardProject";
 import HighlightedText from "../components/layout/HighlightedText";
-import TagMenu from "../components/layout/TagMenu";
+import Menu from "../components/layout/Menu";
 import { useTranslate } from "../context/TranslateProvider";
 
 const Home: NextPage = () => {
@@ -102,12 +102,11 @@ const Home: NextPage = () => {
       {/* Main part */}
       <Flex w="full" direction="row" mt={8}>
         <Hide below="md">
-          <Flex direction="column" w="300px" bg="red.100" >
-            <Text fontSize="3xl">
-              Category
-            </Text>
-
-          </Flex>
+          <Menu
+            tags={allTags}
+            initialValue={tagAll}
+            onChange={(newValue) => setFilter(newValue)}
+          />
         </Hide>
         <SimpleGrid minChildWidth="300px" spacing="20px" w="full">
           {projects && projects.length > 0 ? (

@@ -18,6 +18,7 @@ const extendedColors: DeepPartial<
   primary: {
     300: "rgba(0,71,255,0.56)",
     500: "#7166F4",
+    700: "#22244D",
     900: "#121232",
   },
   warning: {

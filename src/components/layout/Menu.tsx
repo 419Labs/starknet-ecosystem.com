@@ -1,39 +1,54 @@
 import { Box, Flex, Text } from "@chakra-ui/layout";
+import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useState } from "react";
+
+import type { Tag } from "../../../data/tag";
+import { useTranslate } from "../../context/TranslateProvider";
 
 interface MenuProps {
-  text: string;
-  highlighted: string;
+  tags: Tag[];
+  initialValue: Tag;
+  onChange: (tag: Tag) => void;
 }
-function Menu({ text, highlighted }: MenuProps) {
+
+function Menu({ tags, initialValue, onChange }: MenuProps) {
+  const { t } = useTranslate();
+  const [selectedValue, setSelectedValue] = useState<Tag>(initialValue);
+
+  const onSelected = (newTag: Tag) => {
+    setSelectedValue(newTag);
+    onChange(newTag);
+  };
+
   return (
-    <Text
-        zIndex={1}
-      as="h1"
-      align="start"
-      lineHeight={1.2}
-      fontSize={["48px", "68px"]}
-      fontWeight="bold"
-      maxWidth="600px"
-    >
-      <Box position="relative" display="inline">
-        <Text as="span" position="relative" zIndex={1}>
-          {highlighted}
-        </Text>
-        <Box
-          zIndex={0}
-          bgGradient="linear(to-l, primary.300, primary.500)"
-          position="absolute"
-          display="inline"
-          h="30px"
-          w="110%"
-          left="-5%"
-          bottom={0}
-        />
-      </Box>
-      <Text ml={4} as="span">
-        {text}
-      </Text>
-    </Text>
+    <Flex direction="column" w="300px" pr={12}>
+      <Text fontSize="3xl">Category</Text>
+      {tags.map((tag) => {
+        return (
+          <Flex
+            mb={2}
+            px={1}
+            py={0.5}
+            direction="row"
+            justify="space-between"
+            align="center"
+            onClick={() => onSelected(tag)}
+            borderRadius="md"
+            bg={selectedValue.value === tag.value ? "primary.700" : "transparent"}
+            _hover={{ cursor: "pointer" }}
+          >
+            <Flex direction="row" justify="flex-start" align="center">
+              <FontAwesomeIcon fontSize="18px" icon={solid("home")} />
+              <Text ml={4} fontWeight="bold" fontSize="16px">
+                {t.tags[tag.value] || tag.value}
+              </Text>
+            </Flex>
+            {selectedValue.value === tag.value && <Text>100+</Text>}
+          </Flex>
+        );
+      })}
+    </Flex>
   );
 }
 
