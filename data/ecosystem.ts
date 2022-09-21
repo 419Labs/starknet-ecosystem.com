@@ -1710,7 +1710,7 @@ export const allProjects: Array<Project> = [
     name: "10KSwap",
     short_name: "10KSwap",
     description:
-      "An AMM protocol that advances with Ethereum, deployed on StarkNet Mainnet.",
+      "10KSwap is a Layer 2 AMM protocol building on StarkNet",
     tags: ["defi", "infrastructure"],
     logo: "10kswap.png",
     network: {
