@@ -1,4 +1,4 @@
-import { Box, Flex, Text } from "@chakra-ui/layout";
+import { Box, Text } from "@chakra-ui/layout";
 
 interface HighlightedTextProps {
   text: string;
@@ -7,7 +7,7 @@ interface HighlightedTextProps {
 function HighlightedText({ text, highlighted }: HighlightedTextProps) {
   return (
     <Text
-        zIndex={1}
+      zIndex={1}
       as="h1"
       align="start"
       lineHeight={1.2}

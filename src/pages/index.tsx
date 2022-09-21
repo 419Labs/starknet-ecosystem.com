@@ -1,12 +1,4 @@
-import {
-  Box,
-  Flex,
-  Grid,
-  GridItem,
-  SimpleGrid,
-  Stack,
-  Text,
-} from "@chakra-ui/layout";
+import { Box, Flex, SimpleGrid, Text } from "@chakra-ui/layout";
 import { Hide, Image } from "@chakra-ui/react";
 import type { NextPage } from "next";
 import { useEffect, useState } from "react";
@@ -25,7 +17,6 @@ const Home: NextPage = () => {
   const { t } = useTranslate();
   const LOADED_STEPS = 10;
   const tagAll = allTags[0];
-  const [flippedIndex, setFlippedIndex] = useState(-1);
   const [filter, setFilter] = useState(tagAll);
   const [projects, setProjects] = useState<ProjectItf[]>([]);
   const [lastIndexLoaded, setLastIndexLoaded] = useState<number>(LOADED_STEPS);
@@ -122,11 +113,7 @@ const Home: NextPage = () => {
                   key={`project-${project.name}`}
                   flex={1}
                 >
-                  <CardProject
-                    project={project}
-                    isFlipped={flippedIndex === index}
-                    onClick={() => setFlippedIndex(index)}
-                  />
+                  <CardProject project={project} />
                 </Box>
               );
             })

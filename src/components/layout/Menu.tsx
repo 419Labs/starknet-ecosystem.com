@@ -60,6 +60,7 @@ function Menu({ tags, initialValue, onChange }: MenuProps) {
             <Flex direction="row" justify="flex-start" align="center">
               {/* see https://fontawesome.com/versions#add-individual-icons-explicitly */}
               <Box minW="24px">
+                {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
                 {/* @ts-ignore */}
                 <FontAwesomeIcon fontSize="18px" icon={icons[tag.icon]} />
               </Box>
