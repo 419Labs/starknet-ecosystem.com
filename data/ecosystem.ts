@@ -359,20 +359,23 @@ export const allProjects: Array<Project> = [
     isTestnetLive: false,
   },
   {
-    name: "Myswap",
-    short_name: "Myswap",
-    description: "AMM",
-    tags: ["defi"],
+    name: "mySwap",
+    short_name: "mySwap",
+    description:
+      "mySwap is the first AMM built on StarkNet.\n" +
+      "You can swap ETH with USDC and DAI, and deposit your cryptos in liquidity pools.\n" +
+      "Check our website and follow us on Twitter for future announcements.",
+    tags: ["defi", "mobile"],
     logo: "myswap.png",
     network: {
       website: "https://www.myswap.xyz/#/",
       github: "",
-      twitter: "",
+      twitter: "https://twitter.com/mySwapxyz",
       medium: "",
-      discord: "",
-      telegram: "",
+      discord: "https://discord.gg/tZgJnydyZr",
+      telegram: "https://t.me/mySwapxyz",
     },
-    isLive: false,
+    isLive: true,
     isTestnetLive: true,
   },
   {
@@ -1709,8 +1712,7 @@ export const allProjects: Array<Project> = [
   {
     name: "10KSwap",
     short_name: "10KSwap",
-    description:
-      "10KSwap is a Layer 2 AMM protocol building on StarkNet",
+    description: "10KSwap is a Layer 2 AMM protocol building on StarkNet",
     tags: ["defi", "infrastructure"],
     logo: "10kswap.png",
     network: {
