@@ -13,6 +13,7 @@ function Layout({ children }: LayoutProps) {
     <Flex
       zIndex={1}
       position="relative"
+      maxW="2100px"
       width={{ sm: "100%", md: "80%" }}
       px={{ sm: 4, md: 0 }}
       direction="column"
@@ -25,8 +26,8 @@ function Layout({ children }: LayoutProps) {
         width="full"
         left={0}
         right={0}
-        paddingLeft={{ sm: 0, md: "10%" }}
-        px={{ sm: 4, md: 0 }}
+        paddingLeft={0}
+        px={0}
         transition="background-color .2s ease-in"
         zIndex={2000}
       >

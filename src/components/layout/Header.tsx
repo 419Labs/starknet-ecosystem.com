@@ -21,7 +21,7 @@ function Header() {
       direction="row"
       justify="space-between"
       align="center"
-      px={[4, 0]}
+      px={0}
     >
       <Logo />
       <Hide below="md">
