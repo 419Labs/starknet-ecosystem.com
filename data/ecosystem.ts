@@ -629,19 +629,20 @@ export const allProjects: Array<Project> = [
     name: "GoL2",
     short_name: "GoL2",
     description:
-      "Conway's Game of Life on StarkNet! Come and progress to a new generation, or create your own life.",
+      "GoL2 on StarkNet – an on-chain iteration of the classic Game of Play by John Conway. ",
     tags: ["gamefi"],
-    logo: "",
+    logo: "GoL2-icon.png",
     network: {
-      website: "https://github.com/perama-v/GoL2",
-      github: "",
-      twitter: "",
-      medium: "",
+      website: "https://gol2.io",
+      github: "https://github.com/yuki-wtf/GoL2-Contract",
+      twitter: "https://twitter.com/GoL2io",
+      medium:
+        "https://medium.com/@yuki_labs/gol2-an-experiment-in-layer-2-gaming-9c537b7d009c",
       discord: "",
       telegram: "",
     },
-    isLive: false,
-    isTestnetLive: false,
+    isLive: true,
+    isTestnetLive: true,
   },
   {
     name: "IBetYou",
