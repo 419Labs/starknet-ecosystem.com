@@ -102,7 +102,6 @@ const Home: NextPage = () => {
         <SimpleGrid
           columns={{ sm: 1, md: 1, lg: 2, xl: 3 }}
           spacing="20px"
-          w="full"
         >
           {projects && projects.length > 0 ? (
             projects.map((project: ProjectItf, index: number) => {

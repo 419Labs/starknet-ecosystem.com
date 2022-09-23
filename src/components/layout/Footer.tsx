@@ -39,7 +39,7 @@ function Footer() {
       </HStack>
       <Divider my={4} bg="whiteAlpha.900" />
       <SimpleGrid
-        columns={{ sm: 2, md: 2, lg: 3, xl: 5 }}
+        columns={[ 2, 2, 3, 5 ]}
         spacing="20px"
         w="full"
       >

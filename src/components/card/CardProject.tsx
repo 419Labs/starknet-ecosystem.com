@@ -49,9 +49,9 @@ function CardProject({ project }: CardProjectProps) {
   return (
     <Flex
       direction="column"
-      ml="20px"
+      pl="20px"
       mt="20px"
-      maxW="600px"
+      w="full"
       transition=".4s ease all"
       _hover={{
         marginTop: "16px",
@@ -87,10 +87,11 @@ function CardProject({ project }: CardProjectProps) {
           <Image
             transition=".4s ease all"
             src="/arf_banner.png"
-            height="200px"
+            width="full"
             borderRadius="lg"
             position="relative"
             objectFit="cover"
+            height="200px"
             _hover={{
               transform: "scale(1.1)",
             }}

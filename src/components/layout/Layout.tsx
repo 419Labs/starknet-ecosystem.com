@@ -27,7 +27,7 @@ function Layout({ children }: LayoutProps) {
         left={0}
         right={0}
         paddingLeft={0}
-        px={0}
+        px={[4, 0]}
         transition="background-color .2s ease-in"
         zIndex={2000}
       >
