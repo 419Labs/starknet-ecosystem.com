@@ -1,17 +1,19 @@
-import { Box, Flex, Link } from "@chakra-ui/layout";
+import { Box, Flex } from "@chakra-ui/layout";
 import { Button, Hide } from "@chakra-ui/react";
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import NextLink from "next/link";
+import { useRouter } from "next/router";
 import { useState } from "react";
 
 import { useTranslate } from "../../context/TranslateProvider";
 
 import Drawer from "./Drawer";
+import Link from "./Link";
 import Logo from "./Logo";
 
 function Header() {
   const { locale, t } = useTranslate();
+  const { pathname } = useRouter();
   const [isDrawerOpen, setDrawerOpen] = useState(false);
 
   return (
@@ -27,32 +29,24 @@ function Header() {
       <Hide below="md">
         <Flex direction="row">
           <Box ml={6}>
-            <NextLink href={`/${locale}`}>
-              <Link _hover={{ textDecoration: "none", opacity: ".5" }}>
-                {t.common.ecosystem || "Ecosystem"}
-              </Link>
-            </NextLink>
+            <Link href={`/${locale}`} active={pathname === "/"}>
+              {t.common.ecosystem || "Ecosystem"}
+            </Link>
           </Box>
           <Box ml={6}>
-            <NextLink href={`/${locale}/learn`}>
-              <Link _hover={{ textDecoration: "none", opacity: ".5" }}>
-                {t.common.learn || "Learn"}
-              </Link>
-            </NextLink>
+            <Link href={`/${locale}/learn`} active={pathname === "/learn"}>
+              {t.common.learn || "Learn"}
+            </Link>
           </Box>
           <Box ml={6}>
-            <NextLink href={`/${locale}/jobs`}>
-              <Link _hover={{ textDecoration: "none", opacity: ".5" }}>
-                {t.common.job || "Jobs"}
-              </Link>
-            </NextLink>
+            <Link href={`/${locale}/jobs`} active={pathname === "/jobs"}>
+              {t.common.job || "Jobs"}
+            </Link>
           </Box>
           <Box ml={6}>
-            <NextLink href={`/${locale}/metrics`}>
-              <Link _hover={{ textDecoration: "none", opacity: ".5" }}>
-                {t.common.metrics || "Metrics"}
-              </Link>
-            </NextLink>
+            <Link href={`/${locale}/metrics`} active={pathname === "/metrics"}>
+              {t.common.metrics || "Metrics"}
+            </Link>
           </Box>
         </Flex>
       </Hide>

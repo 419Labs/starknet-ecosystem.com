@@ -2,17 +2,15 @@ import {
   Divider,
   Flex,
   HStack,
-  Link,
   SimpleGrid,
   Text,
   VStack,
 } from "@chakra-ui/layout";
-import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
-import NextLink from "next/link";
 
 import { useTranslate } from "../../context/TranslateProvider";
 
-import MenuButton from "./MenuButton";
+import LanguageChooser from "./LanguageChooser";
+import Link from "./Link";
 import NetworkLogos from "./NetworkLogos";
 
 const githubLink = "https://github.com/419Labs/starknet-ecosystem.com";
@@ -20,99 +18,7 @@ const telegramLink = "https://t.me/starknet_ecosystem";
 const twitterLink = "https://twitter.com/StarkNetEco";
 
 function Footer() {
-  const { locale, t } = useTranslate();
-
-  const renderLanguagesOptions = () => {
-    return (
-      <MenuButton
-        menus={[
-          {
-            href: "",
-            children: (
-              <NextLink href="" passHref locale="fr">
-                <Link _hover={{ textDecoration: "none" }} href="/" w="full">
-                  Français
-                </Link>
-              </NextLink>
-            ),
-          },
-          {
-            href: "",
-            children: (
-              <NextLink href="" passHref locale="en">
-                <Link _hover={{ textDecoration: "none" }} href="/" w="full">
-                  English
-                </Link>
-              </NextLink>
-            ),
-          },
-          {
-            href: "",
-            children: (
-              <NextLink href="" passHref locale="tr">
-                <Link _hover={{ textDecoration: "none" }} href="/" w="full">
-                  Türk
-                </Link>
-              </NextLink>
-            ),
-          },
-          {
-            href: "",
-            children: (
-              <NextLink href="" passHref locale="it">
-                <Link _hover={{ textDecoration: "none" }} href="/" w="full">
-                  Italiano
-                </Link>
-              </NextLink>
-            ),
-          },
-          {
-            href: "",
-            children: (
-              <NextLink href="" passHref locale="zh_CN">
-                <Link _hover={{ textDecoration: "none" }} href="/" w="full">
-                  简体中文
-                </Link>
-              </NextLink>
-            ),
-          },
-          {
-            href: "",
-            children: (
-              <NextLink href="" passHref locale="zh_TW">
-                <Link _hover={{ textDecoration: "none" }} href="/" w="full">
-                  繁體中文
-                </Link>
-              </NextLink>
-            ),
-          },
-          {
-            href: "",
-            children: (
-              <NextLink href="" passHref locale="pl">
-                <Link _hover={{ textDecoration: "none" }} href="/" w="full">
-                  Polski
-                </Link>
-              </NextLink>
-            ),
-          },
-          {
-            href: "",
-            children: (
-              <NextLink href="" passHref locale="pt">
-                <Link _hover={{ textDecoration: "none" }} href="/" w="full">
-                  Português
-                </Link>
-              </NextLink>
-            ),
-          },
-        ]}
-        icon={solid("chevron-down")}
-        text={locale ? locale.toUpperCase() : " - "}
-      />
-    );
-  };
-
+  const { t } = useTranslate();
   return (
     <Flex
       w="full"
@@ -127,11 +33,7 @@ function Footer() {
         <Text color="whiteAlpha.600">{t.common.made_with}</Text>
         <Text>❤️</Text>
         <Text color="whiteAlpha.600">{t.common.by}</Text>
-        <Link
-          _hover={{ textDecoration: "none" }}
-          isExternal
-          href="https://twitter.com/alpharoad_fi"
-        >
+        <Link active href="https://twitter.com/alpharoad_fi">
           {t.common.alpha_road_team}
         </Link>
       </HStack>
@@ -143,25 +45,25 @@ function Footer() {
       >
         <VStack align="flex-start">
           <Text fontSize="lg">Company</Text>
-          <VStack align="flex-start" fontSize="sm" color="whiteAlpha.600">
-            <Text>API</Text>
-            <Text>About</Text>
-            <Text>Linktree</Text>
+          <VStack align="flex-start" fontSize="sm">
+            <Link href="/">API</Link>
+            <Link href="/">About</Link>
+            <Link href="/">Linktree</Link>
           </VStack>
         </VStack>
         <VStack align="flex-start">
           <Text fontSize="lg">Support</Text>
-          <VStack align="flex-start" fontSize="sm" color="whiteAlpha.600">
-            <Text>List a project</Text>
-            <Text>List a job</Text>
-            <Text>Contact us</Text>
+          <VStack align="flex-start" fontSize="sm">
+            <Link href="/">List a project</Link>
+            <Link href="/">List a job</Link>
+            <Link href="/">Contact us</Link>
           </VStack>
         </VStack>
         <VStack align="flex-start">
           <Text fontSize="lg">About</Text>
-          <VStack align="flex-start" fontSize="sm" color="whiteAlpha.600">
-            <Text>Terms of service</Text>
-            <Text>Privacy policy</Text>
+          <VStack align="flex-start" fontSize="sm">
+            <Link href="/">Terms of service</Link>
+            <Link href="/">Privacy policy</Link>
           </VStack>
         </VStack>
         <VStack align="flex-start">
@@ -176,7 +78,7 @@ function Footer() {
         </VStack>
         <VStack align="flex-start">
           <Text fontSize="lg">Language</Text>
-          {renderLanguagesOptions()}
+          <LanguageChooser />
         </VStack>
       </SimpleGrid>
     </Flex>
