@@ -58,7 +58,6 @@ const Home: NextPage = () => {
       direction="column"
       justify="flex-start"
       align="flex-start"
-      px={[4, 0]}
       transform="translateZ(0)"
     >
       <Flex

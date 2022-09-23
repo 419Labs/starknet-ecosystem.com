@@ -16,6 +16,7 @@ const extendedColors: DeepPartial<
     900: "#ff5007",
   },
   primary: {
+    200: "#2E5CFF",
     300: "rgba(0,71,255,0.56)",
     500: "#7166F4",
     700: "#22244D",

@@ -1,17 +1,26 @@
 import { Box, Text } from "@chakra-ui/layout";
 
 interface HighlightedTextProps {
-  text: string;
+  fontSize?: string | string[];
+  maxHighlightWidth?: string;
+  highlightOffset?: string;
+  text?: string;
   highlighted: string;
 }
-function HighlightedText({ text, highlighted }: HighlightedTextProps) {
+function HighlightedText({
+  fontSize = ["48px", "68px"],
+  maxHighlightWidth = "110%",
+  highlightOffset = "10px",
+  text,
+  highlighted,
+}: HighlightedTextProps) {
   return (
     <Text
       zIndex={1}
       as="h1"
       align="start"
       lineHeight={1.2}
-      fontSize={["48px", "68px"]}
+      fontSize={fontSize}
       fontWeight="bold"
       maxWidth="600px"
     >
@@ -24,15 +33,18 @@ function HighlightedText({ text, highlighted }: HighlightedTextProps) {
           bgGradient="linear(to-l, primary.300, primary.500)"
           position="absolute"
           display="inline"
-          h="30px"
+          h="40%"
           w="110%"
-          left="-5%"
+          maxWidth={maxHighlightWidth}
+          left={`-${highlightOffset}`}
           bottom={0}
         />
       </Box>
-      <Text ml={4} as="span">
-        {text}
-      </Text>
+      {text && (
+        <Text ml={4} as="span">
+          {text}
+        </Text>
+      )}
     </Text>
   );
 }

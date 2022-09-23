@@ -4,14 +4,33 @@ import NextLink from "next/link";
 interface LinkProps {
   children: string;
   active?: boolean;
+  color?: string;
+  hoverOpacity?: string;
   href: string;
+  fontWeight?: string;
+  fontSize?: string;
 }
-function Link({ children, active, href }: LinkProps) {
+function Link({
+  children,
+  active,
+  href,
+  color,
+  hoverOpacity = "1",
+  fontWeight,
+  fontSize,
+}: LinkProps) {
   return (
     <NextLink href={href}>
       <ChakraLink
-        opacity={active ? "1" : "0.5"}
-        _hover={{ textDecoration: "none", opacity: "1" }}
+        fontSize={fontSize}
+        fontWeight={fontWeight}
+        color={color}
+        opacity={color || active ? "1" : "0.5"}
+        transition=".4s all ease"
+        _hover={{
+          textDecoration: "none",
+          opacity: hoverOpacity,
+        }}
       >
         {children}
       </ChakraLink>

@@ -3,7 +3,7 @@ import type { FC } from "react";
 import { useTranslate } from "../../context/TranslateProvider";
 import type { Job } from "../../models/job";
 
-import JobDetailSection from "./JobDetailSection";
+import ProjectsInfos from "../project/ProjectsInfos";
 
 interface Props {
   currentJob: Job;
@@ -13,23 +13,23 @@ const JobDetailSections: FC<Props> = ({ currentJob }) => {
   const { t } = useTranslate();
   return (
     <>
-      <JobDetailSection
+      <ProjectsInfos
         label={t.jobs.aboutUs || "About us"}
         value={currentJob.aboutUs}
       />
-      <JobDetailSection
+      <ProjectsInfos
         label={t.jobs.description || "Description"}
         value={currentJob.description}
       />
-      <JobDetailSection
+      <ProjectsInfos
         label={t.jobs.responsibilities || "Responsibilities"}
         value={currentJob.responsibilities}
       />
-      <JobDetailSection
+      <ProjectsInfos
         label={t.jobs.requirements || "Requirements"}
         value={currentJob.requirements}
       />
-      <JobDetailSection
+      <ProjectsInfos
         label={t.jobs.offer || "We offer"}
         value={currentJob.offer}
       />

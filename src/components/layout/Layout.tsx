@@ -39,6 +39,7 @@ function Layout({ children }: LayoutProps) {
         align="flex-start"
         justify="center"
         mt={24}
+        px={[4, 0]}
       >
         {children}
       </Flex>

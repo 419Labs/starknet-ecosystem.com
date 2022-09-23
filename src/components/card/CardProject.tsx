@@ -1,5 +1,6 @@
 import { Box, Flex, Text } from "@chakra-ui/layout";
 import { Image, Tag as ChakraTag } from "@chakra-ui/react";
+import { useRouter } from "next/router";
 
 import type { ProjectItf } from "../../../data/ecosystem";
 import { useTranslate } from "../../context/TranslateProvider";
@@ -14,6 +15,7 @@ interface CardProjectProps {
 }
 function CardProject({ project }: CardProjectProps) {
   const { t } = useTranslate();
+  const router = useRouter();
 
   const { name, tagsRef: tags, logo, isLive, isTestnetLive } = project;
 
@@ -56,6 +58,13 @@ function CardProject({ project }: CardProjectProps) {
       _hover={{
         marginTop: "16px",
       }}
+      onClick={() =>
+        router.push({
+          pathname: "/projects",
+          // TODO when API available, fetch data from getSeverSideProps in project page
+          // query: {uuid: project.uuid},
+        })
+      }
     >
       <Box position="relative">
         <Flex
