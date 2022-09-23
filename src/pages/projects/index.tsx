@@ -8,7 +8,7 @@ import ProjectsInfos from "../../components/project/ProjectsInfos";
 import TeamInfos from "../../components/project/TeamInfos";
 import { useTranslate } from "../../context/TranslateProvider";
 
-const ProjectPage: FC = ({}) => {
+const ProjectPage: FC = () => {
   const { t } = useTranslate();
   // TODO Fetch correct project by UUID in service side props
   const project = allProjects[0];

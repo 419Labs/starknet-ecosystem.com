@@ -1,7 +1,6 @@
 import { Box } from "@chakra-ui/layout";
 import { Tooltip } from "@chakra-ui/react";
 import type { FC } from "react";
-import React from "react";
 
 interface Props {
   img: any;

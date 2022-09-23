@@ -1,21 +1,13 @@
-import {
-  Box,
-  Flex,
-  GridItem,
-  HStack,
-  SimpleGrid,
-  Text,
-  VStack,
-} from "@chakra-ui/layout";
+import { Flex, GridItem, SimpleGrid, Text } from "@chakra-ui/layout";
 import type { FC } from "react";
 
 import TeamMember from "./TeamMember";
 
-interface Props {
-  // team: Team[];
-}
+// interface Props {
+// team: Team[];
+// }
 
-const TeamInfos: FC<Props> = () => {
+const TeamInfos: FC = () => {
   return (
     <Flex direction="column">
       <Text fontSize="3xl" mb={4}>

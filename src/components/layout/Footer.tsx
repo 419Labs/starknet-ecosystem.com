@@ -38,11 +38,7 @@ function Footer() {
         </Link>
       </HStack>
       <Divider my={4} bg="whiteAlpha.900" />
-      <SimpleGrid
-        columns={[ 2, 2, 3, 5 ]}
-        spacing="20px"
-        w="full"
-      >
+      <SimpleGrid columns={[2, 2, 3, 5]} spacing="20px" w="full">
         <VStack align="flex-start">
           <Text fontSize="lg">Company</Text>
           <VStack align="flex-start" fontSize="sm">

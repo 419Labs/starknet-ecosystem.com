@@ -1,4 +1,4 @@
-import { Divider, Flex, HStack, Text, VStack } from "@chakra-ui/layout";
+import { Flex, HStack, Text, VStack } from "@chakra-ui/layout";
 import { Image } from "@chakra-ui/react";
 import type { FC } from "react";
 
