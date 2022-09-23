@@ -47,7 +47,16 @@ function CardProject({ project }: CardProjectProps) {
 
   const indication = getIndicationText();
   return (
-    <Flex direction="column" ml="20px" mt="20px" maxW="600px">
+    <Flex
+      direction="column"
+      ml="20px"
+      mt="20px"
+      maxW="600px"
+      transition=".4s ease all"
+      _hover={{
+        marginTop: "16px",
+      }}
+    >
       <Box position="relative">
         <Flex
           borderRadius="50%"
@@ -68,13 +77,23 @@ function CardProject({ project }: CardProjectProps) {
             fallback={renderFallbackIcon()}
           />
         </Flex>
-        <Box position="relative" zIndex={0}>
+        <Box
+          position="relative"
+          zIndex={0}
+          _hover={{ cursor: "pointer" }}
+          maxHeight="200px"
+          overflow="hidden"
+        >
           <Image
+            transition=".4s ease all"
             src="/arf_banner.png"
             height="200px"
             borderRadius="lg"
             position="relative"
             objectFit="cover"
+            _hover={{
+              transform: "scale(1.1)",
+            }}
           />
           <Box position="absolute" zIndex={3} bottom={0} p={2}>
             {indication && (
