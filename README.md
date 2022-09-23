@@ -23,6 +23,7 @@ Help us to have a maximum reach with [translations](https://github.com/419Labs/s
 To add a new project you have to:
 
 - Create your project on `data/ecosystem.ts` by reusign existing tags available on `data/tag.ts`
+- Your project must have a unique UUID. To easily generate a v4 UUID you can use: https://www.uuidgenerator.net/version4
 - Add your project logo into `public/logos/`
 - Create a Pull Request following the title: "✨ Introducing AwesomeProjectName"
 
