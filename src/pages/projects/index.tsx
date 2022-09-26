@@ -1,7 +1,6 @@
 import { GridItem, SimpleGrid, Text } from "@chakra-ui/layout";
 import { Image } from "@chakra-ui/react";
 import type { FC } from "react";
-
 import { allProjects } from "../../../data/ecosystem";
 import HighlightedText from "../../components/layout/HighlightedText";
 import ProjectsInfos from "../../components/project/ProjectsInfos";
