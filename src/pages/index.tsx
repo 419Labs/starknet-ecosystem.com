@@ -16,7 +16,8 @@ import Menu from "../components/layout/Menu";
 import { useTranslate } from "../context/TranslateProvider";
 import { EcosystemApi } from "../services/ecosystem-api.service";
 
-const fetcher = (): Promise<Project[]> => EcosystemApi.fetchEcosystemProjects();
+const fetcher = (pageIndex: number): Promise<Project[]> =>
+  EcosystemApi.fetchEcosystemProjects(pageIndex);
 interface Props {
   fallback: {
     allProjects: Project[];
@@ -28,12 +29,13 @@ const Home: FC<Props> = ({ fallback }: Props) => {
   const tagAll = allTags[0];
   const [filter, setFilter] = useState(tagAll);
   const [filteredProjects, setFilteredProjects] = useState<ProjectItf[]>([]);
-  const [pageCount, setPageCount] = useState(1);
 
   const getKey = (pageIndex, previousPageData) => {
+    console.log(pageIndex);
     if (previousPageData && !previousPageData.length) return null; // reached the end
-    return `/users?page=${pageIndex}&limit=10`; // SWR key
+    return `${pageIndex}`; // SWR key
   };
+  const { data, size, setSize } = useSWRInfinite(getKey, fetcher);
 
   const { observe } = useInView({
     // When the last item comes to the viewport
@@ -41,26 +43,9 @@ const Home: FC<Props> = ({ fallback }: Props) => {
       // Pause observe when loading data
       unobserve();
       // setLastIndexLoaded(lastIndexLoaded + LOADED_STEPS);
-      setPageCount(pageCount + 1);
+      setSize(size + 1);
     },
   });
-
-  const Page = ({ index }) => {
-    const { data, error } = useSWR(`allProjects[${index}]`, fetcher);
-    console.log(data);
-    // ... handle loading and error states
-
-    return data && ;
-  };
-
-  const [pages, setPages] = useState([]);
-  useEffect(() => {
-    const tempPages = [];
-    for (let i = 0; i < pageCount; i += 1) {
-      tempPages.push(<Page index={i} key={i} />);
-    }
-    setPages(tempPages);
-  }, [pageCount]);
 
   /* useEffect(() => {
     if (!allProjects) return;
@@ -86,8 +71,7 @@ const Home: FC<Props> = ({ fallback }: Props) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [filter, lastIndexLoaded, allProjects]); */
 
-  const { data, size, setSize } = useSWRInfinite(getKey, fetcher);
-  if (!data) return 'loading'
+  if (!data) return "loading";
   return (
     <SWRConfig value={{ fallback }}>
       <Flex
@@ -139,26 +123,28 @@ const Home: FC<Props> = ({ fallback }: Props) => {
             />
           </Hide>
           <SimpleGrid columns={{ sm: 1, md: 1, lg: 2, xl: 3 }} spacing="20px">
-            {data.length > 0 ? (
-                data.map((project: ProjectItf, index: number) => {
+            {data.map((projects) => {
+              return projects.length > 0 ? (
+                projects.map((project: ProjectItf, projectIdx: number) => {
                   return (
-                      <Box
-                          ref={index === data.length - 1 ? observe : null}
-                          key={`project-${project.name}`}
-                          flex={1}
-                      >
-                        <CardProject project={project} />
-                      </Box>
+                    <Box
+                      ref={projectIdx === projects.length - 1 ? observe : null}
+                      key={`project-${project.name}`}
+                      flex={1}
+                    >
+                      <CardProject project={project} />
+                    </Box>
                   );
                 })
-            ) : (
+              ) : (
                 <Flex my={8} direction="column" align="center" opacity=".8">
                   <Text fontSize="24px">{t.common.no_project}</Text>
                   <Text mt={2} fontSize="18px">
                     {t.common.maybe_yours}
                   </Text>
                 </Flex>
-            )}
+              );
+            })}
           </SimpleGrid>
         </Flex>
       </Flex>
@@ -166,6 +152,7 @@ const Home: FC<Props> = ({ fallback }: Props) => {
   );
 };
 
+/*
 export const getServerSideProps: GetServerSideProps = async ({ res }) => {
   res.setHeader(
     "Cache-Control",
@@ -180,5 +167,6 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
     } as Props,
   };
 };
+*/
 
 export default Home;

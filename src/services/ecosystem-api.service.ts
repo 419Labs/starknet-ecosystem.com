@@ -1,7 +1,7 @@
 import type { Project } from "../../data/ecosystem";
 
-const fetchEcosystemProjects = (): Promise<Project[]> =>
-  fetch(`http://api.starknet-db.com/projects`)
+const fetchEcosystemProjects = (pageIndex: number): Promise<Project[]> =>
+  fetch(`http://api.starknet-db.com/projects?page=${pageIndex}`)
     .then((response: Response) => {
       if (!response.ok) {
         throw new Error(`${response.statusText} while fetching projects`);
