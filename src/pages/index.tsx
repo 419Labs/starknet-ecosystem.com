@@ -23,16 +23,19 @@ const Home = ({ allProjects }: Props) => {
   const tagAll = allTags[0];
   const [filter, setFilter] = useState(tagAll);
   const [projects, setProjects] = useState<ProjectItf[]>([]);
+  const [filteredProjectsCount, setFilteredProjectsCount] =
+    useState<number>(-1);
   const [lastIndexLoaded, setLastIndexLoaded] = useState<number>(LOADED_STEPS);
 
   useEffect(() => {
-    const newProjects = allProjects
+    const filteredProjects = allProjects
       .filter((project: Project) => {
         return filter === tagAll || project.tags.indexOf(filter.value) !== -1;
       })
       .sort((project1, project2) =>
         project1.name.toLowerCase().localeCompare(project2.name.toLowerCase())
-      )
+      );
+    const newProjects = filteredProjects
       .slice(0, lastIndexLoaded)
       .map((project) => {
         const projectTags = project.tags;
@@ -44,6 +47,7 @@ const Home = ({ allProjects }: Props) => {
         };
       });
     setProjects(newProjects);
+    setFilteredProjectsCount(filteredProjects.length);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [filter, lastIndexLoaded]);
 
@@ -99,7 +103,11 @@ const Home = ({ allProjects }: Props) => {
           <Menu
             tags={allTags}
             initialValue={tagAll}
-            onChange={(newValue) => setFilter(newValue)}
+            childCount={filteredProjectsCount}
+            onChange={(newValue) => {
+              setFilter(newValue);
+              setFilteredProjectsCount(-1);
+            }}
           />
         </Hide>
         <SimpleGrid columns={{ sm: 1, md: 1, lg: 2, xl: 3 }} spacing="20px">

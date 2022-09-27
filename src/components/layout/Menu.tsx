@@ -26,10 +26,11 @@ const icons = {
 interface MenuProps {
   tags: Tag[];
   initialValue: Tag;
+  childCount?: number;
   onChange: (tag: Tag) => void;
 }
 
-function Menu({ tags, initialValue, onChange }: MenuProps) {
+function Menu({ tags, initialValue, childCount = 0, onChange }: MenuProps) {
   const { t } = useTranslate();
   const [selectedValue, setSelectedValue] = useState<Tag>(initialValue);
 
@@ -38,10 +39,20 @@ function Menu({ tags, initialValue, onChange }: MenuProps) {
     onChange(newTag);
   };
 
+  const getIndicationText = () => {
+    if (childCount < 0) {
+      return "";
+    }
+    if (childCount > 100) {
+      return "100+";
+    }
+    return childCount;
+  };
+
   return (
     <Flex
       direction="column"
-      w="300px"
+      w="350px"
       pr={12}
       position="sticky"
       top={0}
@@ -55,7 +66,7 @@ function Menu({ tags, initialValue, onChange }: MenuProps) {
           <Flex
             mb={2}
             px={1}
-            py={0.5}
+            py={1}
             direction="row"
             justify="space-between"
             align="center"
@@ -77,7 +88,9 @@ function Menu({ tags, initialValue, onChange }: MenuProps) {
                 {t.tags[tag.value] || tag.value}
               </Text>
             </Flex>
-            {selectedValue.value === tag.value && <Text>100+</Text>}
+            {selectedValue.value === tag.value && (
+              <Text>{getIndicationText()}</Text>
+            )}
           </Flex>
         );
       })}
