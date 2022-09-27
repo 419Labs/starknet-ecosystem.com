@@ -119,7 +119,7 @@ const Home = ({ allProjects }: Props) => {
                   key={`project-${project.name}`}
                   flex={1}
                 >
-                  <CardProject project={project} />
+                  <CardProject index={index} project={project} />
                 </Box>
               );
             })

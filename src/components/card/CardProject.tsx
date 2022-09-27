@@ -11,13 +11,18 @@ function pick(amount: number) {
 }
 
 interface CardProjectProps {
+  index: number;
   project: ProjectItf;
 }
-function CardProject({ project }: CardProjectProps) {
+function CardProject({ index, project }: CardProjectProps) {
   const { t } = useTranslate();
   const router = useRouter();
 
-  const { name, tagsRef: tags, logo, isLive, isTestnetLive } = project;
+  const { name, tagsRef: tags, network, isLive, isTestnetLive } = project;
+
+  const getFallbackColor = () => {
+    return `flat.${(index % 10) * 100}`;
+  };
 
   const getIndicationText = (): string | undefined => {
     if (isLive) {
@@ -81,7 +86,7 @@ function CardProject({ project }: CardProjectProps) {
         >
           <Image
             borderRadius="full"
-            src={`/logos/${logo}`}
+            src={network.twitterImage}
             alt={`${name} logo`}
             fallback={renderFallbackIcon()}
           />
@@ -92,12 +97,12 @@ function CardProject({ project }: CardProjectProps) {
           _hover={{ cursor: "pointer" }}
           maxHeight="200px"
           overflow="hidden"
+          borderRadius="lg"
+          bg={network.twitterBanner ? "transparent" : getFallbackColor()}
         >
           <Image
             transition=".4s ease all"
-            src="/arf_banner.png"
-            width="full"
-            borderRadius="lg"
+            src={network.twitterBanner}
             position="relative"
             objectFit="cover"
             height="200px"
@@ -146,7 +151,7 @@ function CardProject({ project }: CardProjectProps) {
         <Text as="h6" fontWeight="bold">
           {name}
         </Text>
-        <NetworkLogos network={project.network} />
+        <NetworkLogos network={network} />
       </Flex>
     </Flex>
   );

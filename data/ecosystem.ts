@@ -4,11 +4,12 @@ import type { Network } from "../src/models/company";
 import type { Tag } from "./tag";
 
 export interface Project {
+  id?: string;
   name: string;
-  short_name: string;
+  shortName: string;
   description: string;
   tags: string[];
-  logo: string;
+  image: string;
   network: Network;
   isLive: boolean;
   isTestnetLive: boolean;
@@ -21,11 +22,11 @@ export interface ProjectItf extends Project {
 export const allProjects: Array<Project> = [
   {
     name: "ZKEX: Multi-Chain DEX",
-    short_name: "ZKEX",
+    shortName: "ZKEX",
     description:
       "ZKEX is a bridgeless multi-chain order book DEX, secured with zero-knowledge proofs, powered by zkLink, StarkNet, and zkSync.",
     tags: ["defi"],
-    logo: "zkex-logo-rounded.png",
+    image: "zkex-logo-rounded.png",
     network: {
       website: "https://zkex.com",
       github: "",
@@ -39,11 +40,11 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "Verilog Solutions",
-    short_name: "Verilog",
+    shortName: "Verilog",
     description:
       "Founded by a group of cryptography researchers and smart contract engineers in North America, Verilog Solutions elevates the security standard for Web3 ecosystems by being a full-stack Web3 security firm covering smart contract security, consensus security, and operational security for Web3 projects. Verilog Solutions team works closely with major ecosystems and Web3 projects and applies a quality above quantity approach with a continuous security model. Verilog Solutions onboards the best and most innovative projects and provides the best-in-class advisory service on security needs, including on-chain and off-chain components.",
     tags: ["infrastructure"],
-    logo: "verilog.png",
+    image: "verilog.png",
     network: {
       website: "https://www.verilog.solutions/",
       github: "",
@@ -57,11 +58,11 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "SithSwap",
-    short_name: "SithSwap",
+    shortName: "SithSwap",
     description:
       "SithSwap is a next-gen AMM on StarkNet featuring stable + volatile swaps, ultra-low fees & slippage, gauged (3,3) rewards & bribes governed by veNFTs",
     tags: ["defi"],
-    logo: "sithswap.png",
+    image: "sithswap.png",
     network: {
       website: "https://sithswap.com/",
       github: "https://github.com/SithSwap",
@@ -75,11 +76,11 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "Dolven Labs",
-    short_name: "DolvenLabs",
+    shortName: "DolvenLabs",
     description:
       "Dolven Labs is a DAO Based Ecosystem Catalyst for projects built on the StarkNet Network, Dolven Labs aims to be the future of investing, deal flow, and value creation in the StarkNet Ecosystem.",
     tags: ["defi", "dao", "governance"],
-    logo: "dolven-logo.png",
+    image: "dolven-logo.png",
     network: {
       website: "https://dolvenlabs.com/",
       github: "https://github.com/dolven-labs-catalyst",
@@ -93,11 +94,11 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "Giza",
-    short_name: "giza",
+    shortName: "giza",
     description:
       "Giza is a Machine Learning platform built on StarkNet focused on fully on-chain model deployment scaling.",
     tags: ["infrastructure"],
-    logo: "giza.png",
+    image: "giza.png",
     network: {
       website: "https://gizatech.xyz/",
       github: "",
@@ -111,11 +112,11 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "Chainstack",
-    short_name: "chainstack",
+    shortName: "chainstack",
     description:
       "Chainstack is a managed node provider for the StarkNet mainnet and testnet.",
     tags: ["infrastructure"],
-    logo: "chainstack.png",
+    image: "chainstack.png",
     network: {
       website: "https://chainstack.com/build-better-with-starknet/",
       github: "https://github.com/chainstack/",
@@ -129,11 +130,11 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "Stark Defi",
-    short_name: "StarkDefi",
+    shortName: "StarkDefi",
     description:
       "StarkDefi is a permissionless and trustless hub of comprehensive Defi solutions built to leverage the Decentralized ZK-Rollup on StarkNet's L2 Network over Ethereum. Starting with a highly intuitive Automated Market Maker (AMM), StarkDefi will strategically release other planned defi solutions to cement its position as the ultimate one-stop platform for all defi solutions on StarkNet.",
     tags: ["starkex", "defi"],
-    logo: "starkdefi.png",
+    image: "starkdefi.png",
     network: {
       website: "https://starkdefi.com/",
       github: "https://github.com/Starkdefi",
@@ -147,11 +148,11 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "Topology",
-    short_name: "Topology",
+    shortName: "Topology",
     description:
       "Building Fountain engine, solve2mint framework, svg/html/midi libraries and other infrastructure for onchain gaming, art, and decentralized innovation protocol",
     tags: ["infrastructure"],
-    logo: "",
+    image: "",
     network: {
       website: "https://www.topology.gg/",
       github: "https://github.com/topology-gg",
@@ -165,11 +166,11 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "Orbiter Finance",
-    short_name: "Oribter",
+    shortName: "Oribter",
     description:
       "A decentralized optimistic cross-rollup bridge for transferring the Ethereumnative assets, which is the infrastructure of Layer 2.",
     tags: ["bridge", "infrastructure"],
-    logo: "orbiter.svg",
+    image: "orbiter.svg",
     network: {
       website: "https://www.orbiter.finance/",
       github: "https://github.com/OrbiterCross",
@@ -183,10 +184,10 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "Musicvers",
-    short_name: "Musicvers",
+    shortName: "Musicvers",
     description: "Musicvers brings the future of music on Starknet.\n",
     tags: ["nft"],
-    logo: "musicvers.png",
+    image: "musicvers.png",
     network: {
       website: "https://www.musicvers.com",
       github: "https://www.github.com/Musicvers",
@@ -200,11 +201,11 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "Alpha Road",
-    short_name: "Alpha Road",
+    shortName: "Alpha Road",
     description:
       "Pioneer in DeFi L2 solution — Alpha Road aim at maximizing user investment returns by providing next gen DeFi experience and bespoke financial products.\n",
     tags: ["defi", "nft"],
-    logo: "alpharoad.png",
+    image: "alpharoad.png",
     network: {
       website: "https://testnet.app.alpharoad.fi",
       github: "",
@@ -218,10 +219,10 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "Banxa",
-    short_name: "Banxa",
+    shortName: "Banxa",
     description: "Payments",
     tags: ["defi", "payments"],
-    logo: "banxa.svg",
+    image: "banxa.svg",
     network: {
       website: "https://banxa.com/",
       github: "",
@@ -235,11 +236,11 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "CurveZero",
-    short_name: "CurveZero",
+    shortName: "CurveZero",
     description:
       "CurveZero is a protocol for Fixed rate USD loans. It does this by solving for the USD term structure i.e. what are rates for 6/12/24 months etc.",
     tags: ["defi", "payments"],
-    logo: "",
+    image: "",
     network: {
       website:
         "https://docs.google.com/document/d/1rrYC32w63FzzV61rJWqqYomEMgfZ3cRR1jOlJmnnxeY/edit",
@@ -254,10 +255,10 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "FujiDAO",
-    short_name: "FujiDAO",
+    shortName: "FujiDAO",
     description: "A cross-chain borrowing aggregator.",
     tags: ["defi"],
-    logo: "fujidao.svg",
+    image: "fujidao.svg",
     network: {
       website: "https://www.fujidao.org/#/",
       github: "https://github.com/Fujicracy/fuji-protocol",
@@ -271,11 +272,11 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "JediSwap",
-    short_name: "JediSwap",
+    shortName: "JediSwap",
     description:
       "JediSwap is a fully permissionless and composable AMM on StarkNet. Users can swap assets instantaneously with 0 gas fees while relying on Ethereum security. Anyone can add a pair on Jediswap, and builders can build more advanced applications using JediSwap open sourced contracts",
     tags: ["defi"],
-    logo: "jediswap.svg",
+    image: "jediswap.svg",
     network: {
       website: "https://jediswap.xyz/",
       github: "",
@@ -289,11 +290,11 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "Magnety",
-    short_name: "Magnety",
+    shortName: "Magnety",
     description:
       "Magnety is an asset management protocol allowing anyone to build, scale and monetize investment strategies using DeFi protocols included in the platform",
     tags: ["defi"],
-    logo: "magnety.png",
+    image: "magnety.png",
     network: {
       website: "https://magnety.finance",
       github: "",
@@ -307,11 +308,11 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "StarkGuild",
-    short_name: "StarkGuild",
+    shortName: "StarkGuild",
     description:
       "StarkGuild provides you with the best toolbox to build the perfect gaming guild on Starknet. Create your team and manage your assets with your own DAO. \n",
     tags: ["dao", "gamefi", "nft", "tools", "governance"],
-    logo: "",
+    image: "",
     network: {
       website: "",
       github: "https://github.com/StarkGuild/",
@@ -325,10 +326,10 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "Maker",
-    short_name: "Maker",
+    shortName: "Maker",
     description: "Import Maker protocol",
     tags: ["defi"],
-    logo: "makerdao.png",
+    image: "makerdao.png",
     network: {
       website: "https://makerdao.com/en/",
       github: "https://github.com/makerdao/starknet-dai-bridge",
@@ -342,11 +343,11 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "Hashstack",
-    short_name: "Hashstack",
+    shortName: "Hashstack",
     description:
       "A non-custodial Zk-native money market protocol enabling secure under-collateralized loans.",
     tags: ["defi"],
-    logo: "hashstack.png",
+    image: "hashstack.png",
     network: {
       website: "https://hashstack.finance",
       github: "https://github.com/0xHashstack/zkOpen",
@@ -360,10 +361,10 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "Myswap",
-    short_name: "Myswap",
+    shortName: "Myswap",
     description: "AMM",
     tags: ["defi"],
-    logo: "myswap.png",
+    image: "myswap.png",
     network: {
       website: "https://www.myswap.xyz/#/",
       github: "",
@@ -377,11 +378,11 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "Sandclock",
-    short_name: "Sandclock",
+    shortName: "Sandclock",
     description:
       "Unlocking the programmability of principal and yield with automation.",
     tags: ["dao", "defi", "digital_id", "payments"],
-    logo: "sandclock.png",
+    image: "sandclock.png",
     network: {
       website: "https://www.sandclock.org/",
       github: "https://github.com/lindy-labs",
@@ -395,11 +396,11 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "Serity",
-    short_name: "Serity",
+    shortName: "Serity",
     description:
       "Serity is a PCV-based protocol for the minting and trading of yield-backed synthetic assets.",
     tags: ["defi"],
-    logo: "serity.png",
+    image: "serity.png",
     network: {
       website: "https://serity.finance/",
       github: "https://github.com/Serity-Finance",
@@ -413,10 +414,10 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "Suez",
-    short_name: "Suez",
+    shortName: "Suez",
     description: "Bridge and DeFi pooling",
     tags: ["defi", "bridge"],
-    logo: "",
+    image: "",
     network: {
       website: "https://suez.dev/",
       github: "https://github.com/agolajko/suez",
@@ -430,11 +431,11 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "StarkSwap",
-    short_name: "StarkSwap",
+    shortName: "StarkSwap",
     description:
       "Building the next generation of DeFi on StarkNet. First offering is an AMM, with other DeFi products to follow.",
     tags: ["defi"],
-    logo: "starkswap.png",
+    image: "starkswap.png",
     network: {
       website: "https://www.starkswap.co/",
       github: "https://github.com/Starkswap",
@@ -448,11 +449,11 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "xBank",
-    short_name: "xBank",
+    shortName: "xBank",
     description:
       "xBank is a decentralized non-custodial liquidity market protocol. xBank manages deposits for the lenders and facilitates lending of the deposited asset for the borrowers while performing appropriate risk management to protect the lenders from risks of illiquidity and insolvency.",
     tags: ["defi"],
-    logo: "xbank.jpeg",
+    image: "xbank.jpeg",
     network: {
       website: "https://www.xbank.finance/",
       github: "https://github.com/xbank-lab",
@@ -466,10 +467,10 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "ZigZag",
-    short_name: "ZigZag",
+    shortName: "ZigZag",
     description: "Order-book based exchange",
     tags: ["defi"],
-    logo: "zigzag.png",
+    image: "zigzag.png",
     network: {
       website: "https://trade.zigzag.exchange/",
       github: "https://github.com/ZigZagExchange/",
@@ -483,11 +484,11 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "zkLend",
-    short_name: "zkLend",
+    shortName: "zkLend",
     description:
       "zkLend is an L2 money-market protocol built on StarkNet, combining zk-rollup scalability, superior transaction speed, and cost-savings with Ethereum’s security. The protocol offers a dual solution: a permissioned and compliance-focused solution for institutional clients, and a permissionless service for DeFi users - all without sacrificing decentralisation.",
     tags: ["defi"],
-    logo: "zklend.svg",
+    image: "zklend.svg",
     network: {
       website: "https://zklend.com/",
       github: "",
@@ -501,11 +502,11 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "Astraly",
-    short_name: "Astraly",
+    shortName: "Astraly",
     description:
       "Astraly is a fundraising and community building platform. We're building the infrastructure for communities on Starknet.",
     tags: ["defi"],
-    logo: "zkpad.png",
+    image: "zkpad.png",
     network: {
       website: "https://testnet.astraly.xyz/",
       github: "https://github.com/Astraly-Labs/",
@@ -519,11 +520,11 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "ZKX",
-    short_name: "ZKX",
+    shortName: "ZKX",
     description:
       "ZKX is a permissionless protocol for derivatives built on Starknet, with a decentralized order book and a unique way to offer complex financial instruments as swaps.",
     tags: ["defi", "dao"],
-    logo: "ZKX.png",
+    image: "ZKX.png",
     network: {
       website: "http://zkx.fi/",
       github: "https://github.com/zkxteam",
@@ -537,11 +538,11 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "Nostra",
-    short_name: "Nostra",
+    shortName: "Nostra",
     description:
       "Nostra is the most versatile liquidity protocol for lending and borrowing. Deposit your crypto in Nostra to earn income, and borrow crypto using your deposits as collateral while taking advantage of the protocol's unique features.",
     tags: ["defi"],
-    logo: "nostra.svg",
+    image: "nostra.svg",
     network: {
       website: "http://nostra.finance/",
       github: "",
@@ -555,11 +556,11 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "Bitmap Box",
-    short_name: "Bitmap Box",
+    shortName: "Bitmap Box",
     description:
       "Bitmap Box is an on-chain block-building game. Assemble and disassemble your creations, create new games on top of its open protocol.",
     tags: ["nft"],
-    logo: "bitmapbox.jpeg",
+    image: "bitmapbox.jpeg",
     network: {
       website: "https://www.bitmapbox.xyz/",
       github: "https://github.com/bitmap-box",
@@ -573,11 +574,11 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "Briq",
-    short_name: "Briq",
+    shortName: "Briq",
     description:
       "NFT building and composition protocol. Get some briqs and build the dream.",
     tags: ["nft"],
-    logo: "briq.png",
+    image: "briq.png",
     network: {
       website: "https://briq.construction/",
       github: "",
@@ -591,11 +592,11 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "Dope Wars",
-    short_name: "Dope Wars",
+    shortName: "Dope Wars",
     description:
       "Modular and extendable game system inspired by calculator game nostalgia.",
     tags: ["nft", "gamefi", "dao"],
-    logo: "dopewars.jpeg",
+    image: "dopewars.jpeg",
     network: {
       website: "https://dopewars.gg/",
       github: "",
@@ -609,11 +610,11 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "Eykar",
-    short_name: "Eykar",
+    shortName: "Eykar",
     description:
       "A decentralized game of conquest powered by StarkNet. An almost infinite territory that can be conquered through alliances and wars",
     tags: ["nft", "gamefi"],
-    logo: "eykar.png",
+    image: "eykar.png",
     network: {
       website: "https://eykar.org/",
       github: "",
@@ -627,11 +628,11 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "GoL2",
-    short_name: "GoL2",
+    shortName: "GoL2",
     description:
       "Conway's Game of Life on StarkNet! Come and progress to a new generation, or create your own life.",
     tags: ["gamefi"],
-    logo: "",
+    image: "",
     network: {
       website: "https://github.com/perama-v/GoL2",
       github: "",
@@ -645,11 +646,11 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "IBetYou",
-    short_name: "IBetYou",
+    shortName: "IBetYou",
     description:
       "IBY is a permissionless blockchain protocol that allows you to bet any amount of tokens with anyone on anything. It uses the basic principles of betting and kicks it up a notch with crypto wizardry.",
     tags: ["gamefi"],
-    logo: "ibetyou.svg",
+    image: "ibetyou.svg",
     network: {
       website: "https://starknet.ibetyou.xyz/",
       github: "",
@@ -663,11 +664,11 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "Influence",
-    short_name: "Influence",
+    shortName: "Influence",
     description:
       "Influence is a crypto-native space strategy game set in a realistic asteroid belt with real-time orbital dynamics.",
     tags: ["gamefi", "nft"],
-    logo: "influence.svg",
+    image: "influence.svg",
     network: {
       website: "https://www.influenceth.io/",
       github: "",
@@ -681,10 +682,10 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "Kubri",
-    short_name: "Kubri",
+    shortName: "Kubri",
     description: "L2 -> L1 Bridge for the ERC1155",
     tags: ["bridge", "defi"],
-    logo: "",
+    image: "",
     network: {
       website: "https://kubribridge.vercel.app/",
       github: "",
@@ -698,11 +699,11 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "Loot Realms",
-    short_name: "Loot Realms",
+    shortName: "Loot Realms",
     description:
       "open source MMOCCG (Massively Multiplayer On-Chain Composable Game) of economics and Chivalry",
     tags: ["gamefi", "nft"],
-    logo: "loot.jpeg",
+    image: "loot.jpeg",
     network: {
       website: "https://bibliothecadao.xyz/",
       github: "",
@@ -716,10 +717,10 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "Mint Square",
-    short_name: "Mint Square",
+    shortName: "Mint Square",
     description: "NFT Platform on Ethereum Layer 2 ZK Rollup",
     tags: ["nft"],
-    logo: "mintsquare.png",
+    image: "mintsquare.png",
     network: {
       website: "https://mintsquare.io/",
       github: "",
@@ -733,11 +734,11 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "The Ninth",
-    short_name: "The Ninth",
+    shortName: "The Ninth",
     description:
       "The Ninth is a metaverse world built with Starkware technology. The world is truly owned by users, and land owners can generate various in-game elements and have various gameplay. Various elements such as multi-epoch iterations, trading markets, DAOs, game guilds, and virtual buildings constitute this metaverse with a grand worldview",
     tags: ["gamefi"],
-    logo: "theninth.png",
+    image: "theninth.png",
     network: {
       website: "https://ninth.gg/",
       github: "",
@@ -751,11 +752,11 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "Phi",
-    short_name: "Phi",
+    shortName: "Phi",
     description:
       "Phi（Φ） is a decentralized metaverse on Starknet, with lands generated from ENS and buildings from On-Chain Activity Data.",
     tags: ["gamefi"],
-    logo: "phi.jpeg",
+    image: "phi.jpeg",
     network: {
       website:
         "https://phi-xyz.notion.site/phi-xyz/532af6de66e64c7c883d552d301b8020",
@@ -770,11 +771,11 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "Aspect",
-    short_name: "aspect",
+    shortName: "aspect",
     description:
       "Aspect is an NFT marketplace powered by StarkNet, a ZK rollup L2 on ETH. Buy, Sell, and Create in the meta economy.",
     tags: ["nft"],
-    logo: "aspect.png",
+    image: "aspect.png",
     network: {
       website: "https://testnet.aspect.co/",
       github: "https://github.com/playoasis",
@@ -788,11 +789,11 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "StarkNet Fractals",
-    short_name: "StarkNet Fractals",
+    shortName: "StarkNet Fractals",
     description:
       "Generating the Mandelbrot Set on Starknet and storing the data to required to reconstruct the plot on-chain. Was created as a proof of concept for leveraging L2s to create fully on chain NFTs.",
     tags: ["nft"],
-    logo: "",
+    image: "",
     network: {
       website: "",
       github: "https://github.com/Orland0x/StarknetFractals",
@@ -806,10 +807,10 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "Snapshot X",
-    short_name: "Snapshot X",
+    shortName: "Snapshot X",
     description: "Decentralized Trusted voting",
     tags: ["dao", "governance"],
-    logo: "snapshotx.jpeg",
+    image: "snapshotx.jpeg",
     network: {
       website: "https://snapshot.org/#/",
       github: "",
@@ -823,10 +824,10 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "Storage Proofs",
-    short_name: "Storage Proofs",
+    shortName: "Storage Proofs",
     description: "Verifying Storage Proofs from Ethereum",
     tags: ["infrastructure"],
-    logo: "",
+    image: "",
     network: {
       website: "",
       github:
@@ -841,11 +842,11 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "Yagi Finance",
-    short_name: "Yagi Finance",
+    shortName: "Yagi Finance",
     description:
       "Yagi is a network of keepers on StarkNet L2 that automate protocol actions.",
     tags: ["infrastructure", "defi"],
-    logo: "yagi.svg",
+    image: "yagi.svg",
     network: {
       website: "https://yagi.fi/",
       github:
@@ -860,11 +861,11 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "Zorro",
-    short_name: "Zorro",
+    shortName: "Zorro",
     description:
       "Proof of personhood protocol for democratic DAO voting, quadratic funding, etc. Runs on the Ethereum L2 StarkNet.",
     tags: ["dao", "governance"],
-    logo: "zorro.svg",
+    image: "zorro.svg",
     network: {
       website: "https://zorro.xyz/",
       github: "",
@@ -878,11 +879,11 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "Argent X",
-    short_name: "Argent X",
+    shortName: "Argent X",
     description:
       'First StarkNet wallet to interact with tokens and NFTs. Manage your identities with "Sign in with StarkNet" (very soon ™️), and enjoy the best of defi. Made with ❤️ by the Argent team.',
     tags: ["wallet", "digital_id", "defi", "nft", "gamefi"],
-    logo: "argent-x.svg",
+    image: "argent-x.svg",
     network: {
       website: "https://www.argent.xyz/argent-x/",
       github: "https://github.com/argentlabs/argent-x",
@@ -896,11 +897,11 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "Braavos",
-    short_name: "Braavos",
+    shortName: "Braavos",
     description:
       "First and only StarkNet wallet on mobile, Android & iOS. Use all your favorite StarkNet dApps on the go! Also available for chrome, Firefox and Edge. All in one assets management - DeFi and NFTs",
     tags: ["wallet", "mobile", "defi", "nft", "gamefi"],
-    logo: "braavos.svg",
+    image: "braavos.svg",
     network: {
       website: "https://braavos.app/",
       github: "https://github.com/myBraavos",
@@ -914,10 +915,10 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "Hardhat Plugin",
-    short_name: "Hardhat Plugin",
+    shortName: "Hardhat Plugin",
     description: "Hardhat Plugin",
     tags: ["tools"],
-    logo: "",
+    image: "",
     network: {
       website: "",
       github: "https://github.com/Shard-Labs/starknet-hardhat-plugin",
@@ -931,11 +932,11 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "hardhat-starknet-compile",
-    short_name: "hardhat-starknet-compile",
+    shortName: "hardhat-starknet-compile",
     description:
       "Hardhat Plugin for intelligently compiling StarkNet contracts in a Hardhat project.",
     tags: ["tools"],
-    logo: "hardhat-starknet-compile.png",
+    image: "hardhat-starknet-compile.png",
     network: {
       website: "",
       github: "https://github.com/playmint/hardhat-starknet-compile",
@@ -949,10 +950,10 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "hardhat-starknetjs",
-    short_name: "hardhat-starknetjs",
+    shortName: "hardhat-starknetjs",
     description: "Hardhat Plugin integrating StarkNet.js.",
     tags: ["tools"],
-    logo: "hardhat-starknetjs.png",
+    image: "hardhat-starknetjs.png",
     network: {
       website: "",
       github: "https://github.com/playmint/hardhat-starknetjs",
@@ -966,11 +967,11 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "Zem",
-    short_name: "zem",
+    shortName: "zem",
     description:
       "Deployment system for Hardhat supporting EVM and StarkNet contracts.",
     tags: ["tools"],
-    logo: "zem.png",
+    image: "zem.png",
     network: {
       website: "",
       github: "https://github.com/anders-torbjornsen/zem",
@@ -984,10 +985,10 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "Protostar",
-    short_name: "Protostar",
+    shortName: "Protostar",
     description: "StarkNet smart contract development toolchain",
     tags: ["tools"],
-    logo: "protostar.svg",
+    image: "protostar.svg",
     network: {
       website: "https://docs.swmansion.com/protostar/",
       github: "https://github.com/software-mansion/protostar",
@@ -1002,10 +1003,10 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "Nile",
-    short_name: "Nile",
+    shortName: "Nile",
     description: "CLI tool to develop StarkNet projects written in Cairo",
     tags: ["tools"],
-    logo: "",
+    image: "",
     network: {
       website: "",
       github: "https://github.com/OpenZeppelin/nile",
@@ -1019,11 +1020,11 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "Starknet Devnet",
-    short_name: "Starknet Devnet",
+    shortName: "Starknet Devnet",
     description:
       "A Flask wrapper of Starknet state. Similar in purpose to Ganache. Aims to mimic Starknet's Alpha testnet, but with simplified functionality.",
     tags: ["tools"],
-    logo: "",
+    image: "",
     network: {
       website: "",
       github: "https://github.com/Shard-Labs/starknet-devnet",
@@ -1037,11 +1038,11 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "StarkNet.js",
-    short_name: "StarkNet.js",
+    shortName: "StarkNet.js",
     description:
       "Javascript library for StarkNet. Build your dapp or any other StarkNet web project today.",
     tags: ["tools"],
-    logo: "starknet-js.svg",
+    image: "starknet-js.svg",
     network: {
       website: "https://www.starknetjs.com/",
       github: "https://github.com/0xs34n/starknet.js",
@@ -1055,10 +1056,10 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "StarkNet React",
-    short_name: "StarkNet React",
+    shortName: "StarkNet React",
     description: "A collection of React hooks for StarkNet",
     tags: ["tools"],
-    logo: "",
+    image: "",
     network: {
       website: "https://github.com/auclantis/starknet-react/",
       github: "https://github.com/auclantis/starknet-react/",
@@ -1072,10 +1073,10 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "StarkNet.py",
-    short_name: "StarkNet.py",
+    shortName: "StarkNet.py",
     description: "Python SDK for StarkNet",
     tags: ["tools"],
-    logo: "",
+    image: "",
     network: {
       website: "https://starknetpy.readthedocs.io/en/latest/",
       github: "https://github.com/software-mansion/starknet.py",
@@ -1089,10 +1090,10 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "StarkNet.php",
-    short_name: "StarkNet.php",
+    shortName: "StarkNet.php",
     description: "A PHP package for interacting with StarkNet",
     tags: ["tools"],
-    logo: "",
+    image: "",
     network: {
       website: "",
       github: "https://github.com/Starknet-php/starknet.php",
@@ -1106,10 +1107,10 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "starknet-jvm",
-    short_name: "starknet-jvm",
+    shortName: "starknet-jvm",
     description: "StarkNet SDK for java and other JVM languages",
     tags: ["tools"],
-    logo: "",
+    image: "",
     network: {
       website: "https://docs.swmansion.com/starknet-jvm/",
       github: "https://github.com/software-mansion/starknet-jvm",
@@ -1123,10 +1124,10 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "StarkNet-rs",
-    short_name: "StarkNet-rs",
+    shortName: "StarkNet-rs",
     description: "StarkNet client library in Rust",
     tags: ["tools"],
-    logo: "starknet-rs.png",
+    image: "starknet-rs.png",
     network: {
       website: "https://crates.io/crates/starknet",
       github: "https://github.com/xJonathanLEI/starknet-rs",
@@ -1140,10 +1141,10 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "Warp",
-    short_name: "Warp",
+    shortName: "Warp",
     description: "Warp is a Solidity to Cairo transpiler.",
     tags: ["tools"],
-    logo: "",
+    image: "",
     network: {
       website: "https://github.com/NethermindEth/warp",
       github: "https://github.com/NethermindEth/warp",
@@ -1157,10 +1158,10 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "Pathfinder",
-    short_name: "Pathfinder",
+    shortName: "Pathfinder",
     description: "Starknet full state node written in Rust",
     tags: ["tools", "infrastructure"],
-    logo: "",
+    image: "",
     network: {
       website: "",
       github: "https://github.com/eqlabs/pathfinder",
@@ -1174,10 +1175,10 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "Multisig",
-    short_name: "Multisig",
+    shortName: "Multisig",
     description: "Multi-signature functionality for Starknet",
     tags: ["infrastructure", "governance"],
-    logo: "",
+    image: "",
     network: {
       website: "",
       github: "https://github.com/eqlabs/starknet-multisig",
@@ -1191,10 +1192,10 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "StarkTx",
-    short_name: "StarkTx",
+    shortName: "StarkTx",
     description: "StarkNet transactions analysis tool",
     tags: ["tools"],
-    logo: "",
+    image: "",
     network: {
       website: "https://starktx.info/",
       github: "",
@@ -1208,11 +1209,11 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "Voyager",
-    short_name: "Voyager",
+    shortName: "Voyager",
     description:
       "Voyager is a block explorer for StarkNet ecosystem, providing all the capabilities needed in navigating through this ecosystem. It includes not only read-only data but also supports interaction with Starknet contracts.",
     tags: ["tools"],
-    logo: "voyager.svg",
+    image: "voyager.svg",
     network: {
       website: "https://voyager.online/",
       github: "",
@@ -1227,11 +1228,11 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "Venus investment protocol",
-    short_name: "vip",
+    shortName: "vip",
     description:
       "vip is an automatic investment tool of StarkNet ecosystem, providing decentralized automatic swap token plan for most non professional financial users, .ie. you want to buy eth token via usdt periodically， you can schedule a plan for it then unattended execution!",
     tags: ["defi"],
-    logo: "vip.png",
+    image: "vip.png",
     network: {
       website: "http://www.venus.town/",
       github: "https://github.com/VenusOrg",
@@ -1246,11 +1247,11 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "Stork Oracle Network",
-    short_name: "Stork",
+    shortName: "Stork",
     description:
       "Stork is an oracle network for StarkEx and StarkNet, optimized for DeFi and providing low latency off-chain price quotes from trusted sources.",
     tags: ["defi"],
-    logo: "stork.png",
+    image: "stork.png",
     network: {
       website: "https://stork.network",
       github: "",
@@ -1264,11 +1265,11 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "Redline",
-    short_name: "Redline",
+    shortName: "Redline",
     description:
       "Giant robot NFT racing and engineering on StarkNet and UE5.Deep Strategy and Drama Game.",
     tags: ["gamefi"],
-    logo: "redline.jpeg",
+    image: "redline.jpeg",
     network: {
       website: "http://redline.game/",
       github: "",
@@ -1282,11 +1283,11 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "ZKStarter",
-    short_name: "ZKStarter",
+    shortName: "ZKStarter",
     description:
       "Decentralized Launchpad shaping the future for projects on StarkNet.",
     tags: ["defi"],
-    logo: "zkstarter.jpg",
+    image: "zkstarter.jpg",
     network: {
       website: "http://www.zkstarter.io/",
       github: "",
@@ -1300,11 +1301,11 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "Starcombo",
-    short_name: "Starcombo",
+    shortName: "Starcombo",
     description:
       "Starcombo is a tool allowing users to build their DeFi strategy on Starknet simply by drag&drop.",
     tags: ["defi"],
-    logo: "starcombo.jpg",
+    image: "starcombo.jpg",
     network: {
       website: "https://testnet.starcombo.xyz/",
       github: "",
@@ -1318,11 +1319,11 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "Arcticium",
-    short_name: "Arcticium",
+    shortName: "Arcticium",
     description:
       "We are building ecosystem and community for NFTs on StarkNet by StarkWareLtd.",
     tags: ["nft"],
-    logo: "arcticium.jpg",
+    image: "arcticium.jpg",
     network: {
       website: "http://arcticium.com/",
       github: "",
@@ -1336,11 +1337,11 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "MetaMaterial",
-    short_name: "MetaMaterial",
+    shortName: "MetaMaterial",
     description:
       "The first protocol for resource sharing across all blockchain games.",
     tags: ["nft"],
-    logo: "metamaterial.webp",
+    image: "metamaterial.webp",
     network: {
       website: "https://goerli.metamaterial.app/",
       github: "",
@@ -1355,11 +1356,11 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "ZKasino",
-    short_name: "zKasino",
+    shortName: "zKasino",
     description:
       "zKasino is a decentralized casino built on Layer 2 ZK-Rollups technology.",
     tags: ["gamefi"],
-    logo: "zkasino.png",
+    image: "zkasino.png",
     network: {
       website: "https://zkasino.io/",
       github: "",
@@ -1373,11 +1374,11 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "AlmanacNFT",
-    short_name: "almanac",
+    shortName: "almanac",
     description:
       "AlmanacNFT is a collection of 10.000 unique crypto trading days. Just pick a market, pick a date, and mint a day in crypto.",
     tags: ["nft"],
-    logo: "almanac.png",
+    image: "almanac.png",
     network: {
       website: "https://almanacNFT.xyz/",
       github: "https://github.com/grillolepic/almanacNFT_cairo",
@@ -1391,11 +1392,11 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "Starksheet",
-    short_name: "Starksheet",
+    shortName: "Starksheet",
     description:
       "A spreadsheet built on StarkNet: each cell is a dynamic NFT and each sheet is a collection. Cell as a NFT brings granular cell ownership and unlimited data.",
     tags: ["nft", "defi", "tools"],
-    logo: "starksheet.png",
+    image: "starksheet.png",
     network: {
       website: "https://www.starksheet.xyz",
       github: "",
@@ -1409,11 +1410,11 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "MES Protocol",
-    short_name: "MES Protocol",
+    shortName: "MES Protocol",
     description:
       "MES Protocol is an orderbook-based DEX built on zkRollups. Hybrid liquidity mechanism is adopted to guarantee the best trading experience and LPs' rewards.",
     tags: ["defi"],
-    logo: "mesprotocol.png",
+    image: "mesprotocol.png",
     network: {
       website: "https://mesprotocol.com",
       github: "",
@@ -1427,11 +1428,11 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "Imperium Wars",
-    short_name: "Imperium",
+    shortName: "Imperium",
     description:
       "A Conquer to Earn NFT game where five empires from all over the globe will ally, betray and fight in order to reach Glory and Fortune.",
     tags: ["nft", "gamefi"],
-    logo: "ImperiumWars.png",
+    image: "ImperiumWars.png",
     network: {
       website: "https://imperiumwars.xyz/",
       github: "",
@@ -1445,11 +1446,11 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "Triality",
-    short_name: "Triality",
+    shortName: "Triality",
     description:
       "A decentralized knowledge sharing platform for web3 developers. Ask questions and find answers for the Cairo programming language, StarkNet, and more.",
     tags: ["tools"],
-    logo: "triality.png",
+    image: "triality.png",
     network: {
       website: "https://triality.org",
       github: "",
@@ -1463,11 +1464,11 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "Exothium",
-    short_name: "Exothium",
+    shortName: "Exothium",
     description:
       "Exothium is a community driven by blockchain technology that collaborates, incubates and produces open-source games.",
     tags: ["gamefi"],
-    logo: "exothium.png",
+    image: "exothium.png",
     network: {
       website: "https://exothium.com/",
       github: "https://github.com/exothium",
@@ -1481,11 +1482,11 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "Empiric Network",
-    short_name: "Empiric",
+    shortName: "Empiric",
     description:
       "Empiric Network is the leading oracle on Starknet, making data decentralized, transparent and composable. Powered by high-quality data from Alameda, Jane Street, Gemini, FTX, and more.",
     tags: ["defi", "infrastructure"],
-    logo: "empiric.svg",
+    image: "empiric.svg",
     network: {
       website: "https://www.empiric.network",
       github: "https://github.com/42labs/Empiric",
@@ -1499,10 +1500,10 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "Zohal",
-    short_name: "Zohal",
+    shortName: "Zohal",
     description: "Swap becomes easy with next generation AMM on Starknet.",
     tags: ["defi"],
-    logo: "zohal.png",
+    image: "zohal.png",
     network: {
       website: "",
       github: "",
@@ -1516,11 +1517,11 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "ZKGraph",
-    short_name: "ZKGraph",
+    shortName: "ZKGraph",
     description:
       "Your social graph, with limitless possibilities and uncompromised privacy, secured by StarkNet.",
     tags: ["defi", "infrastructure"],
-    logo: "zk_graph.jpeg",
+    image: "zk_graph.jpeg",
     network: {
       website: "https://www.zkgraph.xyz/",
       github: "",
@@ -1534,11 +1535,11 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "TradeFlows",
-    short_name: "TradeFlows",
+    shortName: "TradeFlows",
     description:
       "Focused on decentralised commerce and the tools that power that future. Building on StarkWare.",
     tags: ["defi"],
-    logo: "tradeflows.png",
+    image: "tradeflows.png",
     network: {
       website: "https://www.tradeflows.io/",
       github: "",
@@ -1552,11 +1553,11 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "Brine Finance",
-    short_name: "Brine",
+    shortName: "Brine",
     description:
       "The decentralized order-book exchange for traders crafted by traders 🚀 Gasless | Instant | Multi-Chain | Secure | Trustless.",
     tags: ["defi", "infrastructure"],
-    logo: "brine.png",
+    image: "brine.png",
     network: {
       website: "https://www.brine.finance/",
       github: "",
@@ -1570,10 +1571,10 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "StarkBoard",
-    short_name: "StarkBoard",
+    shortName: "StarkBoard",
     description: "Find all the latest Starknet data that you are looking for.",
     tags: ["tools"],
-    logo: "",
+    image: "",
     network: {
       website: "https://www.starkboard.io/",
       github: "",
@@ -1587,10 +1588,10 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "Fibrous Finance",
-    short_name: "Fibrous",
+    shortName: "Fibrous",
     description: "Gathers all AMMs of StarkNet at one place.",
     tags: ["defi", "infrastructure"],
-    logo: "fibrousfinance.png",
+    image: "fibrousfinance.png",
     network: {
       website: "https://fibrous.finance/",
       github: "",
@@ -1604,11 +1605,11 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "Frens Lands",
-    short_name: "Frens Lands",
+    shortName: "Frens Lands",
     description:
       "On-chain world builder RTS built on StarkNet where you harvest resources and build to create your dream community.",
     tags: ["nft", "gamefi"],
-    logo: "FrensLands.png",
+    image: "FrensLands.png",
     network: {
       website: "https://frenslands.xyz",
       github: "",
@@ -1622,11 +1623,11 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "Carmine Options AMM",
-    short_name: "Carmine",
+    shortName: "Carmine",
     description:
       "Options AMM to allow users not only to buy, but also to sell options. To hedge or insure not only crypto pairs but also NFTs and game commodities.",
     tags: ["defi"],
-    logo: "carmine_round.png",
+    image: "carmine_round.png",
     network: {
       website: "https://carmine.finance",
       github: "https://github.com/CarmineOptions",
@@ -1640,11 +1641,11 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "Early Starkers",
-    short_name: "Early Starkers",
+    shortName: "Early Starkers",
     description:
       "Early Starkers project aims to gather the early adaptors and pioneers of StarkNet community.",
     tags: ["nft"],
-    logo: "early_starkers.png",
+    image: "early_starkers.png",
     network: {
       website: "https://earlystarkers.io",
       github: "",
@@ -1658,11 +1659,11 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "Carbonable",
-    short_name: "Carbonable",
+    shortName: "Carbonable",
     description:
       "With Carbonable you can finance nature’s regeneration and get high, sustainable and real-world backed revenue, while fighting climate change.",
     tags: ["defi", "nft", "green finance"],
-    logo: "carbonable.png",
+    image: "carbonable.png",
     network: {
       website: "https://carbonable.io",
       github: "https://github.com/Carbonable",
@@ -1676,10 +1677,10 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "Starknet.id",
-    short_name: "Starknet.id",
+    shortName: "Starknet.id",
     description: "Identity and naming service for starknet",
     tags: ["digital_id", "nft", "tools"],
-    logo: "starknetid.png",
+    image: "starknetid.png",
     network: {
       website: "https://starknet.id",
       github: "https://github.com/starknet-id",
@@ -1690,11 +1691,11 @@ export const allProjects: Array<Project> = [
   },
   {
     name: "BlastApi",
-    short_name: "blastapi",
+    shortName: "blastapi",
     description:
       "BlastApi offers high quality StarkNet mainnet and testnet APIs.",
     tags: ["infrastructure"],
-    logo: "blastapi.png",
+    image: "blastapi.png",
     network: {
       website: "https://blastapi.io/",
       github: "https://github.com/bwarelabs",
