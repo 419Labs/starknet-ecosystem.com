@@ -20,8 +20,14 @@ function CardProject({ index, project }: CardProjectProps) {
 
   const { name, tagsRef: tags, network, isLive, isTestnetLive } = project;
 
+  const getFallbackText = (text: string) => {
+    return <Text fontWeight="bold" fontSize="24px">
+      {text}
+    </Text>;
+  };
+
   const getFallbackColor = () => {
-    return `flat.${(index % 10) * 100}`;
+    return `flat.${((index % 9) + 1) * 100}`;
   };
 
   const getIndicationText = (): string | undefined => {
@@ -34,6 +40,13 @@ function CardProject({ index, project }: CardProjectProps) {
     return undefined;
   };
 
+  const renderFallbackImage = () => {
+    return (
+      <Flex h="full" align="center" justify="center" bg={getFallbackColor()}>
+        {getFallbackText(name.toUpperCase())}
+      </Flex>
+    );
+  };
   const renderFallbackIcon = () => {
     return (
       <Flex
@@ -45,9 +58,7 @@ function CardProject({ index, project }: CardProjectProps) {
         bg="gray.600"
         borderRadius="full"
       >
-        <Text fontWeight="bold" fontSize="24px">
-          {name.substring(0, 2).toUpperCase()}
-        </Text>
+        {getFallbackText(name.substring(0, 2).toUpperCase())}
       </Flex>
     );
   };
@@ -95,12 +106,12 @@ function CardProject({ index, project }: CardProjectProps) {
           position="relative"
           zIndex={0}
           _hover={{ cursor: "pointer" }}
-          maxHeight="200px"
+          h="200px"
           overflow="hidden"
           borderRadius="lg"
-          bg={network.twitterBanner ? "transparent" : getFallbackColor()}
         >
           <Image
+            fallback={renderFallbackImage()}
             transition=".4s ease all"
             src={network.twitterBanner}
             position="relative"
