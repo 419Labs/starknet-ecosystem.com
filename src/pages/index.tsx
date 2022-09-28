@@ -1,5 +1,5 @@
 import { Box, Flex, SimpleGrid, Text } from "@chakra-ui/layout";
-import { Hide, Image } from "@chakra-ui/react";
+import { Image } from "@chakra-ui/react";
 import type { GetServerSideProps } from "next";
 import { useEffect, useState } from "react";
 import useInView from "react-cool-inview";
@@ -98,18 +98,16 @@ const Home = ({ allProjects }: Props) => {
         {t.common.subtitle_main}
       </Text>
       {/* Main part */}
-      <Flex w="full" direction="row" mt={24}>
-        <Hide below="md">
-          <Menu
-            tags={allTags}
-            initialValue={tagAll}
-            childCount={filteredProjectsCount}
-            onChange={(newValue) => {
-              setFilter(newValue);
-              setFilteredProjectsCount(-1);
-            }}
-          />
-        </Hide>
+      <Flex direction={{ base: "column", md: "row" }} mt={24}>
+        <Menu
+          tags={allTags}
+          initialValue={tagAll}
+          childCount={filteredProjectsCount}
+          onChange={(newValue) => {
+            setFilter(newValue);
+            setFilteredProjectsCount(-1);
+          }}
+        />
         <SimpleGrid columns={{ sm: 1, md: 1, lg: 2, xl: 3 }} spacing="20px">
           {projects && projects.length > 0 ? (
             projects.map((project: ProjectItf, index: number) => {

@@ -1,10 +1,14 @@
-import { Flex, Text } from "@chakra-ui/layout";
+import {Box, Flex, Link, Text} from "@chakra-ui/layout";
+import { Hide } from "@chakra-ui/react";
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import NextLink from "next/link";
 import { useState } from "react";
 
 import type { Tag } from "../../../data/tag";
 import { useTranslate } from "../../context/TranslateProvider";
+
+import MenuButton from "./MenuButton";
 
 const icons = {
   home: solid("home"),
@@ -49,52 +53,81 @@ function Menu({ tags, initialValue, childCount = 0, onChange }: MenuProps) {
     return childCount;
   };
 
-  return (
-    <Flex
-      direction="column"
-      w="350px"
-      pr={12}
-      position="sticky"
-      top={0}
-      alignSelf="flex-start"
-    >
-      <Text fontSize="3xl" mb={8}>
-        Category
-      </Text>
-      {tags.map((tag) => {
-        return (
-          <Flex
-            mb={2}
-            px={1}
-            py={1}
-            direction="row"
-            justify="space-between"
-            align="center"
-            onClick={() => onSelected(tag)}
-            borderRadius="md"
-            bg={
-              selectedValue.value === tag.value ? "primary.700" : "transparent"
-            }
-            _hover={{ cursor: "pointer" }}
-          >
-            <Flex direction="row" justify="flex-start" align="center">
-              <Flex minW="24px" justify="center" align="center">
-                {/* see https://fontawesome.com/versions#add-individual-icons-explicitly */}
-                {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
-                {/* @ts-ignore */}
-                <FontAwesomeIcon fontSize="18px" icon={icons[tag.icon]} />
+  const renderMobileMenu = () => {
+    return (
+      <Flex w="full" align="center" justify="flex-end" mb={8}>
+        <MenuButton
+          menus={tags.map((tag) => {
+            return {
+              href: "",
+              children: <Text>{t.tags[tag.value] || tag.value}</Text>,
+            };
+          })}
+          icon={solid("chevron-down")}
+          text="Category"
+        />
+      </Flex>
+    );
+  };
+
+  const renderDefaultMenu = () => {
+    return (
+      <Flex
+        direction="column"
+        w="300px"
+        pr={12}
+        position="sticky"
+        top={0}
+        alignSelf="flex-start"
+      >
+        <Text fontSize="3xl" mb={8}>
+          Category
+        </Text>
+        {tags.map((tag) => {
+          return (
+            <Flex
+              key={`tag-menu-${tag.value}`}
+              mb={2}
+              px={1}
+              py={1}
+              direction="row"
+              justify="space-between"
+              align="center"
+              onClick={() => onSelected(tag)}
+              borderRadius="md"
+              bg={
+                selectedValue.value === tag.value
+                  ? "primary.700"
+                  : "transparent"
+              }
+              _hover={{ cursor: "pointer" }}
+            >
+              <Flex direction="row" justify="flex-start" align="center">
+                <Flex minW="24px" justify="center" align="center">
+                  {/* see https://fontawesome.com/versions#add-individual-icons-explicitly */}
+                  {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+                  {/* @ts-ignore */}
+                  <FontAwesomeIcon fontSize="18px" icon={icons[tag.icon]} />
+                </Flex>
+                <Text ml={4} fontWeight="bold" fontSize="16px">
+                  {t.tags[tag.value] || tag.value}
+                </Text>
               </Flex>
-              <Text ml={4} fontWeight="bold" fontSize="16px">
-                {t.tags[tag.value] || tag.value}
-              </Text>
+              {selectedValue.value === tag.value && (
+                <Text>{getIndicationText()}</Text>
+              )}
             </Flex>
-            {selectedValue.value === tag.value && (
-              <Text>{getIndicationText()}</Text>
-            )}
-          </Flex>
-        );
-      })}
-    </Flex>
+          );
+        })}
+      </Flex>
+    );
+  };
+
+  return (
+    <Box>
+      <Hide above="md">{renderMobileMenu()}</Hide>
+      <Hide below="md">{renderDefaultMenu()}</Hide>
+    </Box>
   );
 }
 

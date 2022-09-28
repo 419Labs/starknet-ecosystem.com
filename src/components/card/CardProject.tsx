@@ -21,9 +21,11 @@ function CardProject({ index, project }: CardProjectProps) {
   const { name, tagsRef: tags, network, isLive, isTestnetLive } = project;
 
   const getFallbackText = (text: string) => {
-    return <Text fontWeight="bold" fontSize="24px">
-      {text}
-    </Text>;
+    return (
+      <Text fontWeight="bold" fontSize="24px">
+        {text}
+      </Text>
+    );
   };
 
   const getFallbackColor = () => {
@@ -112,7 +114,7 @@ function CardProject({ index, project }: CardProjectProps) {
         >
           <Image
             fallback={renderFallbackImage()}
-            transition=".4s ease all"
+            transition="all .4s ease"
             src={network.twitterBanner}
             position="relative"
             objectFit="cover"

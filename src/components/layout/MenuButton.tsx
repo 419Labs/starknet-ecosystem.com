@@ -62,11 +62,12 @@ const MenuButton = ({ menus, text, mainGroupTitle, icon }: MenuButtonProps) => {
 
   return (
     <ChakraMenu
-      strategy="fixed"
+      strategy="absolute"
       autoSelect={false}
       isLazy
       id="more-menu-id"
       matchWidth
+      placement="bottom-end"
     >
       <ChakraMenuButton as={Button}>
         <Flex direction="row" align="center" justify="center">
@@ -78,7 +79,7 @@ const MenuButton = ({ menus, text, mainGroupTitle, icon }: MenuButtonProps) => {
           <FontAwesomeIcon icon={icon} fontSize={text ? "10px" : "16px"} />
         </Flex>
       </ChakraMenuButton>
-      <MenuList>
+      <MenuList zIndex={2}>
         <MenuGroup title={mainGroupTitle}>{renderMenus(menus)}</MenuGroup>
       </MenuList>
     </ChakraMenu>
