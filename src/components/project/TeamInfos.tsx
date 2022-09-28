@@ -9,11 +9,11 @@ import TeamMember from "./TeamMember";
 
 const TeamInfos: FC = () => {
   return (
-    <Flex direction="column">
-      <Text fontSize="3xl" mb={4}>
+    <Flex direction="column" align="flex-start">
+      <Text fontWeight="bold" fontSize="3xl" mb={8}>
         Team
       </Text>
-      <SimpleGrid columns={[2, 2, 4]} gap={6} w="full">
+      <SimpleGrid columns={[2, 4, 4]} gap={6} w="full">
         <GridItem w="full">
           <TeamMember name="Mentor Reka" position="Co-founder & CEO" />
         </GridItem>

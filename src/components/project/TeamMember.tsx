@@ -8,7 +8,7 @@ interface Props {
 
 const TeamInfos: FC<Props> = ({ name, position }) => {
   return (
-    <VStack fontSize="sm" spacing={0}>
+    <VStack fontSize="sm" spacing={0} align="flex-start">
       <Box borderRadius="full" bg="gray.600" h="56px" w="56px" />
       <Text pt={4}>{name}</Text>
       <Text color="whiteAlpha.600">{position}</Text>

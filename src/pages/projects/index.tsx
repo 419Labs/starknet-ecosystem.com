@@ -1,6 +1,7 @@
 import { GridItem, SimpleGrid, Text } from "@chakra-ui/layout";
 import { Image } from "@chakra-ui/react";
 import type { FC } from "react";
+
 import { allProjects } from "../../../data/ecosystem";
 import HighlightedText from "../../components/layout/HighlightedText";
 import ProjectsInfos from "../../components/project/ProjectsInfos";
@@ -23,8 +24,20 @@ const ProjectPage: FC = () => {
   };
 
   return (
-    <SimpleGrid columns={{ lg: 1, xl: 2 }} gap={6} w="full">
-      <GridItem w="full">
+    <SimpleGrid
+      columns={{ lg: 1, xl: 2 }}
+      gap={6}
+      w="full"
+      templateAreas={{
+        base: `"banner"
+                  "title"
+                  "infos"
+                  "team"`,
+        xl: `"banner infos"
+                  "title team"`,
+      }}
+    >
+      <GridItem w="full" area="banner">
         <Image
           src="/arf_banner.png"
           width="full"
@@ -34,10 +47,10 @@ const ProjectPage: FC = () => {
           height="200px"
         />
       </GridItem>
-      <GridItem w="100%">
+      <GridItem w="100%" area="infos">
         <ProjectsInfos project={project} />
       </GridItem>
-      <GridItem w="full">
+      <GridItem w="full" area="title">
         <HighlightedText
           fontSize="5xl"
           highlighted={getHighlighted()}
@@ -47,7 +60,7 @@ const ProjectPage: FC = () => {
           {t.common.subtitle_main}
         </Text>
       </GridItem>
-      <GridItem w="full">
+      <GridItem w="full" area="team">
         <TeamInfos />
       </GridItem>
     </SimpleGrid>

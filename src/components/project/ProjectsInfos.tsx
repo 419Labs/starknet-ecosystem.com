@@ -1,5 +1,5 @@
 import { Flex, HStack, Text, VStack } from "@chakra-ui/layout";
-import { Image } from "@chakra-ui/react";
+import { Hide, Image } from "@chakra-ui/react";
 import type { FC } from "react";
 
 import type { Project } from "../../../data/ecosystem";
@@ -14,17 +14,67 @@ interface Props {
 }
 
 const ProjectsInfos: FC<Props> = ({ project }) => {
+  const renderTechStack = () => {
+    return (
+      <Flex direction="column">
+        <ProjectsInfosDetails
+          title="Tech stack"
+          value={
+            <HStack wrap="wrap" spacing={0}>
+              <ImageTooltip
+                img={
+                  <Image
+                    mr={1}
+                    src="/tech-logos/next-logo.png"
+                    objectFit="fill"
+                    height="24px"
+                  />
+                }
+                tooltipText="Nextjs"
+              />
+              <ImageTooltip
+                img={
+                  <Image
+                    mr={1}
+                    src="/tech-logos/spring-logo.png"
+                    objectFit="fill"
+                    height="24px"
+                  />
+                }
+                tooltipText="Spring"
+              />
+              <ImageTooltip
+                img={
+                  <Image
+                    mr={1}
+                    src="/tech-logos/cairo-logo.png"
+                    objectFit="fill"
+                    height="24px"
+                  />
+                }
+                tooltipText="Cairo"
+              />
+            </HStack>
+          }
+        />
+      </Flex>
+    );
+  };
   if (!project) return null;
   return (
-    <Flex direction="column">
-      <Text fontSize="3xl" mb={4}>
+    <Flex direction="column" align="flex-start">
+      <Text fontSize="3xl" mb={8} fontWeight="bold">
         Infos
       </Text>
-      <Flex direction="row" w="full">
+      <Flex
+        direction={{ base: "column", md: "row" }}
+        w="full"
+        justify={{ base: "flex-start", lg: "flex-start" }}
+      >
         <Flex
           direction="column"
           borderRight="1px solid"
-          borderColor="whiteAlpha.300"
+          borderColor={{ base: "transparent", md: "whiteAlpha.300" }}
           pr={12}
           mr={12}
         >
@@ -53,7 +103,16 @@ const ProjectsInfos: FC<Props> = ({ project }) => {
             value={<Text color="whiteAlpha.600">2021</Text>}
           />
         </Flex>
-        <Flex direction="column">
+        <Flex
+          direction="column"
+          borderRight="1px solid"
+          borderColor={{
+            base: "transparent",
+            md: "whiteAlpha.300",
+            xl: "transparent",
+          }}
+          mr={12}
+        >
           <ProjectsInfosDetails
             title="Contracts"
             value={
@@ -97,44 +156,9 @@ const ProjectsInfos: FC<Props> = ({ project }) => {
               </HStack>
             }
           />
-          <ProjectsInfosDetails
-            title="Tech stack"
-            value={
-              <HStack>
-                <ImageTooltip
-                  img={
-                    <Image
-                      src="/tech-logos/next-logo.png"
-                      objectFit="fill"
-                      height="24px"
-                    />
-                  }
-                  tooltipText="Nextjs"
-                />
-                <ImageTooltip
-                  img={
-                    <Image
-                      src="/tech-logos/spring-logo.png"
-                      objectFit="fill"
-                      height="24px"
-                    />
-                  }
-                  tooltipText="Spring"
-                />
-                <ImageTooltip
-                  img={
-                    <Image
-                      src="/tech-logos/cairo-logo.png"
-                      objectFit="fill"
-                      height="24px"
-                    />
-                  }
-                  tooltipText="Cairo"
-                />
-              </HStack>
-            }
-          />
+          <Hide below="xl">{renderTechStack()}</Hide>
         </Flex>
+        <Hide above="xl">{renderTechStack()}</Hide>
       </Flex>
     </Flex>
   );

@@ -22,7 +22,7 @@ function Footer() {
   return (
     <Flex
       w="full"
-      py={8}
+      pt={24}
       direction="column"
       justify="flex-start"
       align="flex-start"
