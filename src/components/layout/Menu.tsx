@@ -1,8 +1,7 @@
-import {Box, Flex, Link, Text} from "@chakra-ui/layout";
+import { Box, Flex, Text } from "@chakra-ui/layout";
 import { Hide } from "@chakra-ui/react";
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import NextLink from "next/link";
 import { useState } from "react";
 
 import type { Tag } from "../../../data/tag";
@@ -55,16 +54,18 @@ function Menu({ tags, initialValue, childCount = 0, onChange }: MenuProps) {
 
   const renderMobileMenu = () => {
     return (
-      <Flex w="full" align="center" justify="flex-end" mb={8}>
+      <Flex w="full" align="center" justify="space-between" mb={8}>
+        <Text>{getIndicationText()} Projects</Text>
         <MenuButton
           menus={tags.map((tag) => {
             return {
               href: "",
               children: <Text>{t.tags[tag.value] || tag.value}</Text>,
+              onSelect: () => onSelected(tag),
             };
           })}
           icon={solid("chevron-down")}
-          text="Category"
+          text={t.tags[selectedValue.value] || selectedValue.value}
         />
       </Flex>
     );

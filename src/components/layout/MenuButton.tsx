@@ -15,6 +15,7 @@ export interface MenuItf {
   children: any;
   href: string;
   icon?: any;
+  onSelect?: () => void;
 }
 interface MenuButtonProps {
   menus: MenuItf[];
@@ -25,7 +26,7 @@ interface MenuButtonProps {
 const MenuButton = ({ menus, text, mainGroupTitle, icon }: MenuButtonProps) => {
   const renderMenus = (menusToRender: MenuItf[]) => {
     return menusToRender.map((menu, index: number) => {
-      const { children, icon: menuItemIcon, href } = menu;
+      const { children, icon: menuItemIcon, href, onSelect } = menu;
       return typeof children === "string" ? (
         <MenuItem
           as={Link}
@@ -47,6 +48,11 @@ const MenuButton = ({ menus, text, mainGroupTitle, icon }: MenuButtonProps) => {
       ) : (
         // eslint-disable-next-line react/no-array-index-key
         <MenuItem
+          onClick={() => {
+            if (onSelect) {
+              onSelect();
+            }
+          }}
           cursor="pointer"
           fontSize="14px"
           // eslint-disable-next-line react/no-array-index-key
