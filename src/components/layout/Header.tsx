@@ -34,8 +34,8 @@ function Header() {
             </Link>
           </Box>
           <Box ml={6}>
-            <Link href={`/${locale}/learn`} active={pathname === "/learn"}>
-              {t.common.learn || "Learn"}
+            <Link href={`/${locale}/academy`} active={pathname === "/academy"}>
+              {t.common.academy || "Academy"}
             </Link>
           </Box>
           <Box ml={6}>
@@ -62,8 +62,8 @@ function Header() {
                 label: t.common.ecosystem || "Ecosystem",
               },
               {
-                href: `/${locale}/learn`,
-                label: t.common.learn || "Learn",
+                href: `/${locale}/academy`,
+                label: t.common.academy || "Academy",
               },
               {
                 href: `/${locale}/jobs`,

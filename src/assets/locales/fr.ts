@@ -20,6 +20,7 @@ const frTranslate: TranslateState = {
     more: "voir plus",
     data_error:
       "Erreur lors du chargement des données, veuillez réessayer plus tard",
+    academy: "Academy",
   },
   tags: {
     all: "Tous",

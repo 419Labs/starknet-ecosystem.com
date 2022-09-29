@@ -33,7 +33,7 @@ interface MenuProps {
   onChange: (tag: Tag) => void;
 }
 
-function Menu({ tags, initialValue, childCount = 0, onChange }: MenuProps) {
+function Menu({ tags, initialValue, childCount = -1, onChange }: MenuProps) {
   const { t } = useTranslate();
   const [selectedValue, setSelectedValue] = useState<Tag>(initialValue);
 

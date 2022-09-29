@@ -98,7 +98,7 @@ const Home = ({ allProjects }: Props) => {
         {t.common.subtitle_main}
       </Text>
       {/* Main part */}
-      <Flex direction={{ base: "column", md: "row" }} mt={24}>
+      <Flex w="full" direction={{ base: "column", md: "row" }} mt={24}>
         <Menu
           tags={allTags}
           initialValue={tagAll}
@@ -108,9 +108,9 @@ const Home = ({ allProjects }: Props) => {
             setFilteredProjectsCount(-1);
           }}
         />
-        <SimpleGrid columns={{ sm: 1, md: 1, lg: 2, xl: 3 }} spacing="20px">
-          {projects && projects.length > 0 ? (
-            projects.map((project: ProjectItf, index: number) => {
+        {projects && projects.length > 0 ? (
+          <SimpleGrid columns={{ sm: 1, md: 1, lg: 2, xl: 3 }} spacing="20px">
+            {projects.map((project: ProjectItf, index: number) => {
               return (
                 <Box
                   ref={index === projects.length - 1 ? observe : null}
@@ -120,16 +120,16 @@ const Home = ({ allProjects }: Props) => {
                   <CardProject index={index} project={project} />
                 </Box>
               );
-            })
-          ) : (
-            <Flex my={8} direction="column" align="center" opacity=".8">
-              <Text fontSize="24px">{t.common.no_project}</Text>
-              <Text mt={2} fontSize="18px">
-                {t.common.maybe_yours}
-              </Text>
-            </Flex>
-          )}
-        </SimpleGrid>
+            })}
+          </SimpleGrid>
+        ) : (
+          <Flex w="full" direction="column" align="center" opacity=".8">
+            <Text fontSize="24px">{t.common.no_project}</Text>
+            <Text mt={2} fontSize="18px">
+              {t.common.maybe_yours}
+            </Text>
+          </Flex>
+        )}
       </Flex>
     </Flex>
   );
