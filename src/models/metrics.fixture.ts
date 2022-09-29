@@ -4,14 +4,14 @@ import type { NpmDownloads, NpmDownloadsChart } from "./npm-downloads";
 export const aGitHubRepo = (): GithubRepo => ({
   id: "418545583",
   name: "starknet.js",
-  full_name: "0xs34n/starknet.js",
-  html_url: "https://github.com/0xs34n/starknet.js",
+  fullName: "0xs34n/starknet.js",
+  url: "https://github.com/0xs34n/starknet.js",
   description: "JavaScript library for StarkNet",
   homepage: "https://www.starknetjs.com",
-  open_issues_count: 16,
-  forks_count: 39,
-  stargazers_count: 152,
-  subscribers_count: 11,
+  openIssuesCount: 16,
+  forksCount: 39,
+  stargazersCount: 152,
+  subscribersCount: 11,
 });
 
 export const aNpmDownloads = (): NpmDownloads => ({
@@ -96,6 +96,23 @@ export const aNpmDownloadsChart = (): NpmDownloadsChart => ({
       start: "2022-04-14",
       end: "2022-04-20",
       downloads: 1460,
+    },
+  ],
+});
+
+export const aCumulativeNpmDownloadsChart = (): NpmDownloadsChart => ({
+  package: "starknet",
+  label: "starknet.js",
+  downloads: [
+    {
+      start: "2022-04-07",
+      end: "2022-04-13",
+      downloads: 1656,
+    },
+    {
+      start: "2022-04-14",
+      end: "2022-04-20",
+      downloads: 3116,
     },
   ],
 });

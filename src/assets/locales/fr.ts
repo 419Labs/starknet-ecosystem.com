@@ -19,6 +19,8 @@ const frTranslate: TranslateState = {
     more: "voir plus",
     data_error:
       "Erreur lors du chargement des données, veuillez réessayer plus tard",
+    cumulative_chart: "Cumulatif",
+    non_cumulative_chart: "Non cumulatif",
   },
   tags: {
     all: "Tous",
@@ -50,6 +52,7 @@ const frTranslate: TranslateState = {
     metrics: "Métriques",
     github_repo: "Outils & Librairies",
     npm_last_downloads: "téléchargements les 7 derniers jours",
+    npm_total_downloads: "téléchargements",
   },
 };
 

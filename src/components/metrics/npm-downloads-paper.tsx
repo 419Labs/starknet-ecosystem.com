@@ -1,4 +1,5 @@
 import { Box, Flex, HStack, Link, Text, VStack } from "@chakra-ui/layout";
+import { Button } from "@chakra-ui/react";
 import { useTheme } from "@emotion/react";
 import { brands, solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -25,7 +26,7 @@ import type {
 import { toNpmDownloadsChart } from "../../services/metrics.service";
 
 interface Props {
-  npmDownloads: NpmDownloads;
+  npmDownloads: NpmDownloads | undefined;
 }
 
 ChartJS.register(
@@ -43,16 +44,20 @@ const NpmDownloadsPaper: FC<Props> = ({ npmDownloads }) => {
   const theme = useTheme();
   const { t } = useTranslate();
   const [values, setValues] = useState<NpmDownloadsChart>();
+  const [cumulative, setCumulative] = useState(true);
 
   useEffect(() => {
-    setValues(toNpmDownloadsChart(npmDownloads));
-  }, [npmDownloads]);
+    if (npmDownloads !== undefined) {
+      setValues(toNpmDownloadsChart(npmDownloads, cumulative));
+    }
+  }, [npmDownloads, cumulative]);
 
   if (!values) return null;
 
   let height: number;
   let width: number;
   let gradient: CanvasGradient;
+
   function getGradient(ctx: CanvasFillStrokeStyles, chartArea: any) {
     const chartWidth = chartArea.right - chartArea.left;
     const chartHeight = chartArea.bottom - chartArea.top;
@@ -101,7 +106,11 @@ const NpmDownloadsPaper: FC<Props> = ({ npmDownloads }) => {
           <Text fontWeight="bold">
             {values.downloads[values.downloads.length - 1].downloads}
           </Text>
-          <Text>{t.metrics.npm_last_downloads || "downloads last 7 days"}</Text>
+          <Text>
+            {cumulative
+              ? t.metrics.npm_total_downloads ?? "downloads"
+              : t.metrics.npm_last_downloads ?? "downloads last 7 days"}
+          </Text>
         </HStack>
       </VStack>
       <Line
@@ -135,8 +144,8 @@ const NpmDownloadsPaper: FC<Props> = ({ npmDownloads }) => {
           },
         }}
         data={{
-          labels: values.downloads.map(
-            (week) => `${week.start} to ${week.end}`
+          labels: values.downloads.map((week) =>
+            cumulative ? week.end : `${week.start} to ${week.end}`
           ),
           datasets: [
             {
@@ -163,6 +172,18 @@ const NpmDownloadsPaper: FC<Props> = ({ npmDownloads }) => {
           ],
         }}
       />
+      <HStack
+        fontSize="xs"
+        color="whiteAlpha.600"
+        mt={3}
+        justifyContent="center"
+      >
+        <Button size="xs" onClick={() => setCumulative(!cumulative)}>
+          {cumulative
+            ? t.common.cumulative_chart ?? "Cumulative chart"
+            : t.common.non_cumulative_chart ?? "Non cumulative chart"}
+        </Button>
+      </HStack>
     </Box>
   );
 };
