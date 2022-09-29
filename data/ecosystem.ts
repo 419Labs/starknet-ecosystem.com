@@ -1824,4 +1824,22 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: true,
   },
+  {
+    id: "697fa0df-a433-44db-b9f7-532ed70b3d42",
+    name: "Starky",
+    short_name: "Starky",
+    description: "Token-gate your Discord channels with Starknet assets",
+    tags: ["tools", "infrastructure"],
+    logo: "starky.jpeg",
+    network: {
+      website: "https://starky.wtf/",
+      github: "https://github.com/nmalzieu/starky",
+      twitter: "https://twitter.com/starky_wtf",
+      medium: "https://starkywtf.notion.site/Starky-wtf-f2f918be668b4e96863e82c0791e317c",
+      discord: "",
+      telegram: "https://t.me/+Mi34Im1Uafc1Y2Q8",
+    },
+    isLive: true,
+    isTestnetLive: true,
+  },
 ];
