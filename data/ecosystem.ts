@@ -4,6 +4,7 @@ import type { Network } from "../src/models/company";
 import type { Tag } from "./tag";
 
 export interface Project {
+  id: string;
   name: string;
   short_name: string;
   description: string;
@@ -12,6 +13,8 @@ export interface Project {
   network: Network;
   isLive: boolean;
   isTestnetLive: boolean;
+  token?: string;
+  technologies?: any;
 }
 
 export interface ProjectItf extends Project {
@@ -20,6 +23,7 @@ export interface ProjectItf extends Project {
 
 export const allProjects: Array<Project> = [
   {
+    id: "e207d9e6-d1ca-422b-a50c-415e8748be21",
     name: "ZKEX: Multi-Chain DEX",
     short_name: "ZKEX",
     description:
@@ -38,6 +42,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: false,
   },
   {
+    id: "77100b12-29cf-4434-b3ae-ea89f669b600",
     name: "Verilog Solutions",
     short_name: "Verilog",
     description:
@@ -56,6 +61,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: true,
   },
   {
+    id: "b19c74a5-6434-42dc-9329-98ca1ead255d",
     name: "SithSwap",
     short_name: "SithSwap",
     description:
@@ -74,6 +80,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: false,
   },
   {
+    id: "a340056c-cfd0-43fd-b79a-45d03919479a",
     name: "Dolven Labs",
     short_name: "DolvenLabs",
     description:
@@ -92,6 +99,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: false,
   },
   {
+    id: "94f06227-b22e-4815-af07-5bf0934d3c66",
     name: "Giza",
     short_name: "giza",
     description:
@@ -110,6 +118,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: false,
   },
   {
+    id: "c3b640d1-a808-4c48-9b9b-7ecc78548a89",
     name: "Chainstack",
     short_name: "chainstack",
     description:
@@ -128,6 +137,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: false,
   },
   {
+    id: "e4d3955e-815e-4765-9dd7-8bcfc86e9bd1",
     name: "Stark Defi",
     short_name: "StarkDefi",
     description:
@@ -146,6 +156,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: false,
   },
   {
+    id: "1410afcb-a1ec-4f41-bc66-f9680b1e6241",
     name: "Topology",
     short_name: "Topology",
     description:
@@ -164,6 +175,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: true,
   },
   {
+    id: "09f0b163-c62a-4fde-b30e-758915aefd51",
     name: "Orbiter Finance",
     short_name: "Oribter",
     description:
@@ -182,6 +194,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: true,
   },
   {
+    id: "37f554a8-abb2-4839-831c-8065eef7c01c",
     name: "Musicvers",
     short_name: "Musicvers",
     description: "Musicvers brings the future of music on Starknet.\n",
@@ -199,6 +212,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: false,
   },
   {
+    id: "502b0dbc-5169-4db6-8796-36a968a798fd",
     name: "Alpha Road",
     short_name: "Alpha Road",
     description:
@@ -217,6 +231,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: true,
   },
   {
+    id: "03f6f911-c24f-411f-9b31-1bc113ec7a0c",
     name: "Banxa",
     short_name: "Banxa",
     description: "Payments",
@@ -234,6 +249,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: false,
   },
   {
+    id: "95776acb-fedd-463b-b139-84894e6a1475",
     name: "CurveZero",
     short_name: "CurveZero",
     description:
@@ -253,6 +269,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: false,
   },
   {
+    id: "8529056c-2383-48b5-b174-9950b6624ad9",
     name: "FujiDAO",
     short_name: "FujiDAO",
     description: "A cross-chain borrowing aggregator.",
@@ -270,6 +287,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: false,
   },
   {
+    id: "030a7fa5-d6cf-4cb5-99e7-492b548c5530",
     name: "JediSwap",
     short_name: "JediSwap",
     description:
@@ -288,6 +306,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: true,
   },
   {
+    id: "3ba90396-de91-4580-a700-6f44d202838a",
     name: "Magnety",
     short_name: "Magnety",
     description:
@@ -306,6 +325,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: false,
   },
   {
+    id: "79bd1dc2-a627-4f09-a85b-8757b6406b8e",
     name: "StarkGuild",
     short_name: "StarkGuild",
     description:
@@ -324,6 +344,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: true,
   },
   {
+    id: "dce4260c-807e-48d0-b57c-d8488dbe8889",
     name: "Maker",
     short_name: "Maker",
     description: "Import Maker protocol",
@@ -341,6 +362,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: false,
   },
   {
+    id: "9eb00557-7718-48e0-8efb-bdc2ab494413",
     name: "Hashstack",
     short_name: "Hashstack",
     description:
@@ -359,12 +381,11 @@ export const allProjects: Array<Project> = [
     isTestnetLive: false,
   },
   {
+    id: "d95046cb-7ce0-4f3f-9d1c-7214acc30bc7",
     name: "mySwap",
     short_name: "mySwap",
     description:
-      "mySwap is the first AMM built on StarkNet.\n" +
-      "You can swap ETH with USDC and DAI, and deposit your cryptos in liquidity pools.\n" +
-      "Check our website and follow us on Twitter for future announcements.",
+      "mySwap is the first AMM built on StarkNet.\nYou can swap ETH with USDC and DAI, and deposit your cryptos in liquidity pools.\nCheck our website and follow us on Twitter for future announcements.",
     tags: ["defi", "mobile"],
     logo: "myswap.png",
     network: {
@@ -379,6 +400,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: true,
   },
   {
+    id: "4b8593f2-5c40-48b4-93a8-1cfd1df9dd5e",
     name: "Sandclock",
     short_name: "Sandclock",
     description:
@@ -397,6 +419,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: false,
   },
   {
+    id: "b886ae1a-6658-4861-a1b4-fa073667dfc5",
     name: "Serity",
     short_name: "Serity",
     description:
@@ -415,6 +438,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: false,
   },
   {
+    id: "e6a5311b-ebfa-41a2-83d1-5eee5e10bf91",
     name: "Suez",
     short_name: "Suez",
     description: "Bridge and DeFi pooling",
@@ -432,6 +456,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: true,
   },
   {
+    id: "55f5c20e-064d-4709-ba1e-6c77d4b3d867",
     name: "StarkSwap",
     short_name: "StarkSwap",
     description:
@@ -450,6 +475,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: false,
   },
   {
+    id: "f7000ef2-499a-4f5d-9a93-324072123898",
     name: "xBank",
     short_name: "xBank",
     description:
@@ -468,6 +494,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: false,
   },
   {
+    id: "ff111cd4-a3b7-46b2-838e-41316152cca0",
     name: "ZigZag",
     short_name: "ZigZag",
     description: "Order-book based exchange",
@@ -485,6 +512,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: false,
   },
   {
+    id: "efde17bc-1077-4d74-a2d3-77d8cdc7ac8a",
     name: "zkLend",
     short_name: "zkLend",
     description:
@@ -503,6 +531,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: false,
   },
   {
+    id: "5368a3f6-b8f0-44e3-ba88-9b1d64adee23",
     name: "Astraly",
     short_name: "Astraly",
     description:
@@ -521,6 +550,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: true,
   },
   {
+    id: "bcb424ed-5f3d-4bb8-8474-fb7bb11ed484",
     name: "ZKX",
     short_name: "ZKX",
     description:
@@ -539,6 +569,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: false,
   },
   {
+    id: "eb131b7d-3ab9-44d4-b3f0-ef02d08b8379",
     name: "Nostra",
     short_name: "Nostra",
     description:
@@ -557,6 +588,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: false,
   },
   {
+    id: "51e93ecb-ed7c-4c71-8317-fe3d13506ee3",
     name: "Bitmap Box",
     short_name: "Bitmap Box",
     description:
@@ -575,6 +607,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: true,
   },
   {
+    id: "2cf7259e-055f-4888-91da-12a0fc555d1e",
     name: "Briq",
     short_name: "Briq",
     description:
@@ -593,6 +626,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: true,
   },
   {
+    id: "fdcf3176-e196-45b2-940a-ba20485591dd",
     name: "Dope Wars",
     short_name: "Dope Wars",
     description:
@@ -611,6 +645,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: true,
   },
   {
+    id: "728d3b1e-9eb9-44f2-8aa5-66c0165a4d19",
     name: "Eykar",
     short_name: "Eykar",
     description:
@@ -629,6 +664,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: false,
   },
   {
+    id: "b3efb216-76bb-4772-b60f-8573022de81e",
     name: "GoL2",
     short_name: "GoL2",
     description:
@@ -648,6 +684,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: true,
   },
   {
+    id: "457be33d-66bb-4fa7-a93e-72a93781c452",
     name: "IBetYou",
     short_name: "IBetYou",
     description:
@@ -666,6 +703,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: true,
   },
   {
+    id: "47b08857-89fe-4016-8cfe-e057c2857449",
     name: "Influence",
     short_name: "Influence",
     description:
@@ -684,6 +722,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: true,
   },
   {
+    id: "2865ad6b-2a5d-4ed1-8d13-7da0584cb8d6",
     name: "Kubri",
     short_name: "Kubri",
     description: "L2 -> L1 Bridge for the ERC1155",
@@ -701,6 +740,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: true,
   },
   {
+    id: "e370a23e-8fdf-47d6-a53c-19503eeb09ba",
     name: "Loot Realms",
     short_name: "Loot Realms",
     description:
@@ -719,6 +759,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: true,
   },
   {
+    id: "e31ff45c-721f-437c-955c-5f68138eba12",
     name: "Mint Square",
     short_name: "Mint Square",
     description: "NFT Platform on Ethereum Layer 2 ZK Rollup",
@@ -736,6 +777,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: true,
   },
   {
+    id: "cd012ba9-e855-4178-8b3d-97dbb9b71f21",
     name: "The Ninth",
     short_name: "The Ninth",
     description:
@@ -754,6 +796,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: true,
   },
   {
+    id: "74b82528-dea9-44fe-824b-220825334699",
     name: "Phi",
     short_name: "Phi",
     description:
@@ -773,6 +816,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: false,
   },
   {
+    id: "5299693a-a684-4332-a3cc-8b8fca48b4ce",
     name: "Aspect",
     short_name: "aspect",
     description:
@@ -791,6 +835,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: true,
   },
   {
+    id: "67551838-5d7b-47ba-96d4-c4d61fd3a795",
     name: "StarkNet Fractals",
     short_name: "StarkNet Fractals",
     description:
@@ -809,6 +854,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: false,
   },
   {
+    id: "6b4b74bb-3880-47a8-a0fd-f4b96f1a7509",
     name: "Snapshot X",
     short_name: "Snapshot X",
     description: "Decentralized Trusted voting",
@@ -826,6 +872,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: true,
   },
   {
+    id: "f1c20199-8765-4b28-a84f-17933d0f58c1",
     name: "Storage Proofs",
     short_name: "Storage Proofs",
     description: "Verifying Storage Proofs from Ethereum",
@@ -844,6 +891,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: false,
   },
   {
+    id: "bd34ab0a-ceaa-4618-ab49-c83bb42cbc26",
     name: "Yagi Finance",
     short_name: "Yagi Finance",
     description:
@@ -863,6 +911,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: true,
   },
   {
+    id: "e9e03af2-1817-42af-bc90-bc8d85a143e6",
     name: "Zorro",
     short_name: "Zorro",
     description:
@@ -881,6 +930,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: false,
   },
   {
+    id: "8df27359-f05d-439b-8592-ca1b61cf049c",
     name: "Argent X",
     short_name: "Argent X",
     description:
@@ -899,6 +949,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: true,
   },
   {
+    id: "f22a3d11-9c55-4d6f-98c3-b56230589def",
     name: "Braavos",
     short_name: "Braavos",
     description:
@@ -917,6 +968,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: true,
   },
   {
+    id: "8d1d3c38-0abb-4fd3-8333-2b3eae34c5b2",
     name: "Hardhat Plugin",
     short_name: "Hardhat Plugin",
     description: "Hardhat Plugin",
@@ -934,6 +986,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: true,
   },
   {
+    id: "396a3663-7466-41cc-a5ef-118e042f13e6",
     name: "hardhat-starknet-compile",
     short_name: "hardhat-starknet-compile",
     description:
@@ -952,6 +1005,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: true,
   },
   {
+    id: "48b43f8b-c067-46e4-9f2b-d8b0d58fbbc3",
     name: "hardhat-starknetjs",
     short_name: "hardhat-starknetjs",
     description: "Hardhat Plugin integrating StarkNet.js.",
@@ -969,6 +1023,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: true,
   },
   {
+    id: "59425c28-b470-455f-b433-06c488b4dbf7",
     name: "Zem",
     short_name: "zem",
     description:
@@ -987,6 +1042,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: true,
   },
   {
+    id: "6f3d1ddf-f402-49d2-8bed-62b141df4000",
     name: "Protostar",
     short_name: "Protostar",
     description: "StarkNet smart contract development toolchain",
@@ -1005,6 +1061,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: true,
   },
   {
+    id: "2cd4ddcb-335f-4b29-abcd-f781ffd61557",
     name: "Nile",
     short_name: "Nile",
     description: "CLI tool to develop StarkNet projects written in Cairo",
@@ -1022,6 +1079,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: true,
   },
   {
+    id: "c14cf7d5-5b42-4313-9030-1ed52e82fbde",
     name: "Starknet Devnet",
     short_name: "Starknet Devnet",
     description:
@@ -1040,6 +1098,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: true,
   },
   {
+    id: "ca28ab0c-d96d-44eb-85d2-0d99e3d4c586",
     name: "StarkNet.js",
     short_name: "StarkNet.js",
     description:
@@ -1058,6 +1117,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: true,
   },
   {
+    id: "8b3bcdfb-b621-4d4b-b214-fad5d5e16514",
     name: "StarkNet React",
     short_name: "StarkNet React",
     description: "A collection of React hooks for StarkNet",
@@ -1075,6 +1135,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: true,
   },
   {
+    id: "d159858b-b0e1-4318-9c78-cf6a64466ad5",
     name: "StarkNet.py",
     short_name: "StarkNet.py",
     description: "Python SDK for StarkNet",
@@ -1092,6 +1153,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: true,
   },
   {
+    id: "6274fab2-be65-4c58-b868-788c0397b29b",
     name: "StarkNet.php",
     short_name: "StarkNet.php",
     description: "A PHP package for interacting with StarkNet",
@@ -1109,6 +1171,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: true,
   },
   {
+    id: "a3c1cb27-8fec-49b4-89ef-abd0acdc15c3",
     name: "starknet-jvm",
     short_name: "starknet-jvm",
     description: "StarkNet SDK for java and other JVM languages",
@@ -1126,6 +1189,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: true,
   },
   {
+    id: "a8b84c0c-379f-4b94-b09a-1b5588497630",
     name: "StarkNet-rs",
     short_name: "StarkNet-rs",
     description: "StarkNet client library in Rust",
@@ -1143,6 +1207,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: true,
   },
   {
+    id: "cfe632a1-18f1-49d0-af4b-f6a08c4620c6",
     name: "Warp",
     short_name: "Warp",
     description: "Warp is a Solidity to Cairo transpiler.",
@@ -1160,6 +1225,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: true,
   },
   {
+    id: "14deafd0-2392-4608-8c38-bf1741c0e4b6",
     name: "Pathfinder",
     short_name: "Pathfinder",
     description: "Starknet full state node written in Rust",
@@ -1177,6 +1243,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: true,
   },
   {
+    id: "7d74b67f-5782-48e3-8bc6-0937f3bbd4ea",
     name: "Multisig",
     short_name: "Multisig",
     description: "Multi-signature functionality for Starknet",
@@ -1194,6 +1261,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: false,
   },
   {
+    id: "b3f862ea-064a-49ba-91a3-2491e8f8a190",
     name: "StarkTx",
     short_name: "StarkTx",
     description: "StarkNet transactions analysis tool",
@@ -1211,6 +1279,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: true,
   },
   {
+    id: "5cec890e-fc90-48d0-b7eb-011b6a0dc13b",
     name: "Voyager",
     short_name: "Voyager",
     description:
@@ -1230,6 +1299,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: true,
   },
   {
+    id: "f1b342f8-c058-40d2-a450-df43b368e9d1",
     name: "Venus investment protocol",
     short_name: "vip",
     description:
@@ -1249,6 +1319,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: false,
   },
   {
+    id: "19c738b6-2b7e-4826-bb5d-15f2c4330001",
     name: "Stork Oracle Network",
     short_name: "Stork",
     description:
@@ -1267,6 +1338,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: false,
   },
   {
+    id: "a093ea3a-ed11-4a41-935c-9cafb5368a6e",
     name: "Redline",
     short_name: "Redline",
     description:
@@ -1285,6 +1357,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: false,
   },
   {
+    id: "349d3549-025c-4571-a1c7-8c40639fc5b6",
     name: "ZKStarter",
     short_name: "ZKStarter",
     description:
@@ -1303,6 +1376,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: false,
   },
   {
+    id: "8dad20af-ae23-4ecd-9a90-32da6e270498",
     name: "Starcombo",
     short_name: "Starcombo",
     description:
@@ -1321,6 +1395,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: true,
   },
   {
+    id: "798bee63-b429-4802-917a-b47104871249",
     name: "Arcticium",
     short_name: "Arcticium",
     description:
@@ -1339,6 +1414,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: false,
   },
   {
+    id: "69d057c0-7343-4fc9-98aa-5a7432c9ca06",
     name: "MetaMaterial",
     short_name: "MetaMaterial",
     description:
@@ -1358,6 +1434,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: true,
   },
   {
+    id: "cc3d0bf3-67e8-408d-aa54-d72fb2fa1240",
     name: "ZKasino",
     short_name: "zKasino",
     description:
@@ -1376,6 +1453,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: false,
   },
   {
+    id: "9583c05f-480e-454d-9011-5c895709526c",
     name: "AlmanacNFT",
     short_name: "almanac",
     description:
@@ -1394,6 +1472,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: false,
   },
   {
+    id: "a64ba996-dde7-414a-be66-101fe3967865",
     name: "Starksheet",
     short_name: "Starksheet",
     description:
@@ -1412,6 +1491,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: false,
   },
   {
+    id: "7d9a42ae-cc81-4c0b-8b9b-90f7b76cb17c",
     name: "MES Protocol",
     short_name: "MES Protocol",
     description:
@@ -1430,6 +1510,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: false,
   },
   {
+    id: "762812fe-0a4c-4286-a84b-8a583f02c4b7",
     name: "Imperium Wars",
     short_name: "Imperium",
     description:
@@ -1448,6 +1529,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: false,
   },
   {
+    id: "47c66360-2769-4331-a679-1ff3b7efa916",
     name: "Triality",
     short_name: "Triality",
     description:
@@ -1466,6 +1548,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: false,
   },
   {
+    id: "ae5a2be2-c8ed-47cc-825b-9e2bab2a8a36",
     name: "Exothium",
     short_name: "Exothium",
     description:
@@ -1484,6 +1567,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: false,
   },
   {
+    id: "8d0d1cc3-af7e-48ab-aa22-bef4ede008df",
     name: "Empiric Network",
     short_name: "Empiric",
     description:
@@ -1502,6 +1586,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: true,
   },
   {
+    id: "c3e6617f-e5d8-44ae-ba63-a0e3cffee0cc",
     name: "Zohal",
     short_name: "Zohal",
     description: "Swap becomes easy with next generation AMM on Starknet.",
@@ -1519,6 +1604,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: false,
   },
   {
+    id: "4a18dc58-e75e-4aca-92dd-f7aae07782e4",
     name: "ZKGraph",
     short_name: "ZKGraph",
     description:
@@ -1537,6 +1623,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: false,
   },
   {
+    id: "d2979ad1-12c6-4080-9c1a-4e58d2271356",
     name: "TradeFlows",
     short_name: "TradeFlows",
     description:
@@ -1555,6 +1642,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: false,
   },
   {
+    id: "30c7c562-75de-404d-bc95-570118d00653",
     name: "Brine Finance",
     short_name: "Brine",
     description:
@@ -1573,6 +1661,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: true,
   },
   {
+    id: "3f60abee-d555-4280-9241-cdae0b4663cd",
     name: "StarkBoard",
     short_name: "StarkBoard",
     description: "Find all the latest Starknet data that you are looking for.",
@@ -1590,6 +1679,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: true,
   },
   {
+    id: "0f6c18c3-9b0a-4532-b1e6-8d26bcacb114",
     name: "Fibrous Finance",
     short_name: "Fibrous",
     description: "Gathers all AMMs of StarkNet at one place.",
@@ -1607,6 +1697,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: false,
   },
   {
+    id: "7f8de722-24c3-46a6-a4f9-91471d2ecfa9",
     name: "Frens Lands",
     short_name: "Frens Lands",
     description:
@@ -1625,6 +1716,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: false,
   },
   {
+    id: "3c2bdf31-7d16-4a0a-b27c-35fdd6ce0340",
     name: "Carmine Options AMM",
     short_name: "Carmine",
     description:
@@ -1643,6 +1735,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: false,
   },
   {
+    id: "febb8f10-9b81-46af-bc72-dd30b4f5a663",
     name: "Early Starkers",
     short_name: "Early Starkers",
     description:
@@ -1661,6 +1754,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: false,
   },
   {
+    id: "04baefd1-b3d9-4fc2-9742-d59b28b55b75",
     name: "Carbonable",
     short_name: "Carbonable",
     description:
@@ -1679,6 +1773,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: true,
   },
   {
+    id: "3c1f84eb-46e0-45d7-b52b-02c57b0e3eb9",
     name: "Starknet.id",
     short_name: "Starknet.id",
     description: "Identity and naming service for starknet",
@@ -1693,6 +1788,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: true,
   },
   {
+    id: "fd6c5ed5-8809-4619-93d6-a695d020d2b3",
     name: "BlastApi",
     short_name: "blastapi",
     description:
@@ -1711,6 +1807,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: false,
   },
   {
+    id: "a98adf16-f8d9-4694-bb55-654564cbd2e9",
     name: "10KSwap",
     short_name: "10KSwap",
     description: "10KSwap is a Layer 2 AMM protocol building on StarkNet",
