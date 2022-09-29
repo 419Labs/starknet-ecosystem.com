@@ -1,8 +1,6 @@
-import { Box, Flex, HStack, SimpleGrid, Text, VStack } from "@chakra-ui/layout";
-import { useRouter } from "next/router";
+import { Flex, SimpleGrid, Text, VStack } from "@chakra-ui/layout";
 
 import type { ResourceItf } from "../../../data/academy";
-import { useTranslate } from "../../context/TranslateProvider";
 import NetworkLogos from "../layout/NetworkLogos";
 
 interface CardResourceProps {
@@ -10,9 +8,7 @@ interface CardResourceProps {
   resource: ResourceItf;
 }
 function CardResource({ index, resource }: CardResourceProps) {
-  const { t } = useTranslate();
-
-  const { name, description, tagsRef: tags, network } = resource;
+  const { name, description, network } = resource;
 
   const getFallbackText = (text: string) => {
     return (
@@ -38,7 +34,14 @@ function CardResource({ index, resource }: CardResourceProps) {
       columns={2}
       gridTemplateColumns="min-content auto"
     >
-      <Flex bg={getFallbackColor()} h="112px" w="112px" borderRadius="md" align="center" justify="center">
+      <Flex
+        bg={getFallbackColor()}
+        h="112px"
+        w="112px"
+        borderRadius="md"
+        align="center"
+        justify="center"
+      >
         {getFallbackText(name)}
       </Flex>
       <Flex
