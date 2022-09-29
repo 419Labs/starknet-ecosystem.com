@@ -1,12 +1,12 @@
 export interface GithubRepo {
   id: string;
   name: string;
-  full_name: string;
-  description: string;
-  html_url: string;
+  fullName: string;
+  description: string | undefined;
+  url: string;
   homepage: string | undefined;
-  open_issues_count: number;
-  forks_count: number;
-  stargazers_count: number;
-  subscribers_count: number;
+  openIssuesCount: number;
+  forksCount: number;
+  stargazersCount: number;
+  subscribersCount: number;
 }

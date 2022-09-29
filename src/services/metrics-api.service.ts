@@ -1,11 +1,13 @@
 import type { GithubRepo } from "../models/github-repo";
 import type { NpmDownloadsDto } from "../models/npm-downloads";
 
+const STARKNET_DB_BASE_URL = "https://api.starknet-db.com";
+
 const fetchGithubRepo = (
   organization: string,
   name: string
 ): Promise<GithubRepo> =>
-  fetch(`https://api.github.com/repos/${organization}/${name}`).then(
+  fetch(`${STARKNET_DB_BASE_URL}/github-metrics/${organization}/${name}`).then(
     (response: Response) => {
       if (!response.ok) {
         throw new Error(`${response.statusText}${organization}/${name}`);
@@ -15,7 +17,7 @@ const fetchGithubRepo = (
   );
 
 const fetchNpmDownloads = (name: string): Promise<NpmDownloadsDto> =>
-  fetch(`https://api.npmjs.org/downloads/range/last-year/${name}`)
+  fetch(`${STARKNET_DB_BASE_URL}/npm-downloads/${name}`)
     .then((response: Response) => {
       if (!response.ok) throw new Error(response.statusText);
       return response.json();

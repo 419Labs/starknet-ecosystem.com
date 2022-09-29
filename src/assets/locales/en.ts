@@ -18,6 +18,8 @@ const enTranslate: TranslateState = {
     no_job: "😕 No jobs",
     more: "view more",
     data_error: "Error while loading data, please try again later",
+    cumulative_chart: "Cumulative chart",
+    non_cumulative_chart: "Non cumulative chart",
   },
   tags: {
     all: "All",
@@ -55,6 +57,7 @@ const enTranslate: TranslateState = {
     metrics: "Metrics",
     github_repo: "Tools & Libraries",
     npm_last_downloads: "downloads last 7 days",
+    npm_total_downloads: "downloads",
   },
 };
 

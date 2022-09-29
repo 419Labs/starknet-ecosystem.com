@@ -2,18 +2,37 @@ import { Box, Flex, HStack, Link, SimpleGrid, Text } from "@chakra-ui/layout";
 import { solid, brands } from "@fortawesome/fontawesome-svg-core/import.macro";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import type { FC } from "react";
+import { useEffect, useState } from "react";
 
 import { useTranslate } from "../../context/TranslateProvider";
 import type { GithubRepo } from "../../models/github-repo";
+import { MetricsApi } from "../../services/metrics-api.service";
 
 import ErrorData from "./error-data";
 
-interface Props {
-  githubRepos: GithubRepo[];
-}
+const githubReposToFollow = [
+  { organization: "starkware-libs", name: "cairo-lang" },
+  { organization: "starkware-libs", name: "starkgate-frontend" },
+  { organization: "starknet-community-libs", name: "get-starknet" },
+  { organization: "software-mansion", name: "protostar" },
+  { organization: "0xs34n", name: "starknet.js" },
+  { organization: "software-mansion", name: "starknet.py" },
+  { organization: "OpenZeppelin", name: "nile" },
+  { organization: "Shard-Labs", name: "starknet-devnet" },
+];
 
-const GithubReposPaper: FC<Props> = ({ githubRepos }) => {
+const GithubReposPaper: FC = () => {
   const { t } = useTranslate();
+  const [githubRepos, setGithubRepos] = useState<GithubRepo[]>([]);
+
+  useEffect(() => {
+    Promise.all(
+      githubReposToFollow.map((repo) =>
+        MetricsApi.fetchGithubRepo(repo.organization, repo.name)
+      )
+    ).then((repos) => setGithubRepos(repos));
+  }, []);
+
   return (
     <Flex direction="column" borderRadius="md" backgroundColor="gray.800" p={5}>
       <Flex justify="space-between" alignItems="flex-start" mb={4}>
@@ -40,22 +59,22 @@ const GithubReposPaper: FC<Props> = ({ githubRepos }) => {
             <Link
               key={repo.id}
               _hover={{ textDecoration: "none", opacity: 0.5 }}
-              href={repo.html_url}
+              href={repo.url}
               isExternal
             >
               <Text fontSize="md">{repo.name}</Text>
               <HStack spacing={3} mt={1} color="whiteAlpha.600">
                 <HStack fontSize="sm" spacing={1}>
                   <FontAwesomeIcon icon={solid("eye")} />
-                  <Text>{repo.subscribers_count}</Text>
+                  <Text>{repo.subscribersCount}</Text>
                 </HStack>
                 <HStack fontSize="sm" spacing={1}>
                   <FontAwesomeIcon icon={solid("code-fork")} />
-                  <Text>{repo.forks_count}</Text>
+                  <Text>{repo.forksCount}</Text>
                 </HStack>
                 <HStack fontSize="sm" spacing={1}>
                   <FontAwesomeIcon icon={solid("star")} />
-                  <Text>{repo.stargazers_count}</Text>
+                  <Text>{repo.stargazersCount}</Text>
                 </HStack>
               </HStack>
             </Link>
