@@ -1,5 +1,5 @@
 import { Box, Flex, Text } from "@chakra-ui/layout";
-import { Hide } from "@chakra-ui/react";
+import { Show } from "@chakra-ui/react";
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
@@ -126,8 +126,8 @@ function Menu({ tags, initialValue, childCount = 0, onChange }: MenuProps) {
 
   return (
     <Box>
-      <Hide above="md">{renderMobileMenu()}</Hide>
-      <Hide below="md">{renderDefaultMenu()}</Hide>
+      <Show below="md">{renderMobileMenu()}</Show>
+      <Show above="md">{renderDefaultMenu()}</Show>
     </Box>
   );
 }
