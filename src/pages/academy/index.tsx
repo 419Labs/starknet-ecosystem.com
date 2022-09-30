@@ -117,10 +117,31 @@ const AcademyPage: FC = () => {
         />
         <VStack justify="flex-start" align="flex-start">
           <Text fontSize="6xl" fontWeight="bold">
+            Highlights 🔥
+          </Text>
+          {/* Highlighted resources */}
+          {/* TODO Remove that & choose 3 resources that are hot / new / have interest ??? */}
+          <SimpleGrid columns={{ sm: 1, lg: 2, xl: 3 }} spacing="20px">
+            {resources
+              .slice(0, 3)
+              .map((resource: ResourceItf, index: number) => {
+                return (
+                  <Box
+                    ref={index === resources.length - 1 ? observe : null}
+                    key={`resource-${resource.name}`}
+                    flex={1}
+                  >
+                    <CardResource index={index} resource={resource} />
+                  </Box>
+                );
+              })}
+          </SimpleGrid>
+          <Text pt={20} fontSize="6xl" fontWeight="bold">
             Learn
           </Text>
           {resources && resources.length > 0 ? (
             <SimpleGrid columns={{ sm: 1, lg: 2, xl: 3 }} spacing="20px">
+              {/* eslint-disable-next-line sonarjs/no-identical-functions */}
               {resources.map((resource: ResourceItf, index: number) => {
                 return (
                   <Box
