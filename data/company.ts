@@ -164,9 +164,9 @@ const allCompanies: Company[] = [
       website: "https://braavos.app/",
       github: "https://github.com/myBraavos",
       twitter: "https://twitter.com/myBraavos",
-      medium: "",
-      discord: "https://discord.gg/ZrtCHK3t",
-      telegram: "",
+      medium: "https://medium.com/@braavos_starknet_wallet",
+      discord: "https://discord.gg/9Ks7V5DN9z",
+      telegram: "https://t.me/mybraavos",
     },
   },
   {

@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "declaration": true,
+    "target": "es5",
+    "lib": ["es2017"],
+    "experimentalDecorators": true,
+    "downlevelIteration": true,
+    "noImplicitReturns": true,
+    "pretty": true,
+    "skipLibCheck": true,
+    "strict": true,
+    // These settings are required for TypeScript project references
+    "sourceMap": true,
+    "outDir": "lib",
+    "rootDir": ".",
+    "strictPropertyInitialization": false,
+    "resolveJsonModule": true
+  },
+  "include": ["./src/**/*", "./test/**/*", "../../data"]
+}

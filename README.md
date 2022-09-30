@@ -4,53 +4,36 @@
 > Building on StarkNet is a financial advice.
 > Louis G.
 
-Explore projects, teams, jobs, metrics and everything around StarkNet.
+Your entrypoint in StarkNet. Explore projects, teams, jobs, metrics and everything around StarkNet.
+
+![StarkNet Ecosystem by https://twitter.com/Maz_eth](docs/img/Starknet_Ecosystem.png)
+
+👉 Feel free to join our dedicated [Telegram](https://t.me/starknet_ecosystem) channel.
 
 ## Contribute
 
 Every contribution is welcome! Do you want to help us manage this repo and related Pull Request?
 
-👉 Feel free to join our dedicated [Telegram](https://t.me/starknet_ecosystem) channel.
+Here are the guides helping you to contribute on the ecosystem dashboard and get you listed.
+
+### Projects
+
++ [List a project](docs/add-job.md)
++ [Update a project](docs/update-project.md)
+
+### Jobs
+
++ [List a Job](docs/add-job.md)
++ [Update a Job](docs/update-job.md)
 
 ### Translations
 
-Our audience is GLOBAL.
++ [Add/improve translations](docs/translations.md)
 
-Help us to have a maximum reach with [translations](https://github.com/419Labs/starknet-ecosystem.com/tree/main/src/assets/locales)
-
-### Add a new project
-
-To add a new project you have to:
-
-- Create your project on `data/ecosystem.ts` by reusign existing tags available on `data/tag.ts`
-- Add your project logo into `public/logos/`
-- Create a Pull Request following the title: "✨ Introducing AwesomeProjectName"
-
-As soon as your PR is merged an automatic deployment will be started.
-
-### Update a project
-
-to update your project you have to do the same thing than for adding. Edit the `data/ecosystem.ts` file and
-create a dedicated Pull Request following this title: "🎨 Updating AwesomeProjectName"
-
-### Add a new job
-
-To add a new job you have to:
-
-- Create your company on `data/company.ts` if it doesn't already exists.
-- Add your company logo into `public/logos/`
-- Create your job on `data/job.ts`. 
-- Create a Pull Request following the title: "✨ CompanyName is hiring a JobTitle"
-
-As soon as your PR is merged an automatic deployment will be started.
 
 ### Others
 
-There is always a way to help our initiative. Please feel free to have imagination or look at our [todo-list](https://github.com/419Labs/starknet-ecosystem.com/blob/main/TODO.md).
-
-### Design
-
-You can find our Figma [here](https://www.figma.com/file/yfHUanUHr46MdEmCcQ29fa/Starknet-ecosystem-V1?node-id=0%3A1), feel free to ask for edit permission([0xlenny](https://twitter.com/0xlenny_eth), [Mentor](https://twitter.com/MentorNotPseudo))
+If you want to contribute in anyway into this initiative please submit a PR. If you have ideas or want to share feedbacks feel free to open an issue.
 
 ### Community-driven
 

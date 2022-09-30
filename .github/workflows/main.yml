@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  frontend:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - name: Install
+        run: yarn install
+      - name: Lint
+        run: yarn lint
+      - name: Test
+        run: yarn test:ci
+      - name: Validate data
+        run: cd .github/script && yarn install && yarn validate-data
+      - name: Build
+        run: yarn build
+      - name: Sync data
+        env:
+          STARKNET_DB_URL: ${{ secrets.STARKNET_DB_URL }}
+          AUTH0_DOMAIN: ${{ secrets.AUTH0_DOMAIN }}
+          AUTH0_CLIENT_ID: ${{ secrets.AUTH0_CLIENT_ID }}
+          AUTH0_CLIENT_SECRET: ${{ secrets.AUTH0_CLIENT_SECRET }}
+          AUTH0_AUDIENCE: ${{ secrets.AUTH0_AUDIENCE }}
+        run: cd .github/script && yarn install && yarn sync-data
