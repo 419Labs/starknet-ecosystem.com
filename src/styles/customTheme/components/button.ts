@@ -25,14 +25,15 @@ const Button: DeepPartial<Theme["components"]["Button"]> = {
   variants: {
     outline: {
       _dark: {
-        bg: "gray.800",
-        borderColor: "brand.900",
+        outline: "none",
+        bg: "primary.200",
+        borderColor: "primary.200",
         _hover: {
-          bg: "brand.900",
-          borderColor: "brand.900",
+          bg: "primary.300",
+          borderColor: "primary.300",
         },
         _active: {
-          bg: "brand.900",
+          bg: "primary.300",
           opacity: 0.7,
         },
       },

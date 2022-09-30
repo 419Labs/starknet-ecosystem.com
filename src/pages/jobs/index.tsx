@@ -1,11 +1,18 @@
-import { Flex, Text } from "@chakra-ui/layout";
+import { Box, Flex, HStack, SimpleGrid, Text, VStack } from "@chakra-ui/layout";
+import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import type { NextPage } from "next";
 import { useEffect, useState } from "react";
 import useInView from "react-cool-inview";
 
+import { allAcademyCategory, ResourceItf } from "../../../data/academy";
 import allCompanies from "../../../data/company";
 import allJobs from "../../../data/job";
+import CardHighlight from "../../components/card/CardHighlight";
+import CardResource from "../../components/card/CardResource";
 import JobTable from "../../components/job/JobTable";
+import HighlightedText from "../../components/layout/HighlightedText";
+import Menu from "../../components/layout/Menu";
 import { useTranslate } from "../../context/TranslateProvider";
 import type { Company } from "../../models/company";
 import type { Job } from "../../models/job";
@@ -42,27 +49,46 @@ const JobsPage: NextPage = () => {
   });
 
   return (
-    <Flex direction="column" w="full" h="full">
-      {/* Big intro text */}
+    <Flex
+      w="full"
+      direction="column"
+      justify="flex-start"
+      align="flex-start"
+      transform="translateZ(0)"
+    >
+      <HighlightedText highlighted={t.common.job_title_main || "Jobs"} />
+      {/* Sub intro text */}
       <Text
-        as="h1"
-        textAlign="center"
-        lineHeight={1.2}
-        fontSize={["48px", "68px"]}
-        fontWeight="bold"
+        zIndex={1}
+        mt={8}
+        textAlign="start"
+        color="whiteAlpha.600"
+        fontSize="20px"
+        maxWidth="600px"
       >
-        {t.common.job_title_main || "Jobs"}
+        {t.common.subtitle_main}
       </Text>
-      {/* Fill free place on screen & hide overflow */}
-      <Flex flex={1} mt={8} overflow="hidden">
-        <JobTable
-          jobs={jobs}
-          companies={companies}
-          observe={observe}
-          onFilterChanged={(updatedFilter) =>
-            setFilters({ ...filters, ...updatedFilter })
-          }
+      <Flex w="full" direction={{ base: "column", md: "row" }} mt={24}>
+        <Menu
+          tags={allAcademyCategory}
+          initialValue={allAcademyCategory[0]}
+          onChange={(newValue) => {
+            console.log(newValue);
+          }}
         />
+        <VStack w="full" justify="flex-start" align="flex-start">
+          <Text fontSize="6xl" fontWeight="bold">
+            Featured
+          </Text>
+          <JobTable
+            jobs={jobs}
+            companies={companies}
+            observe={observe}
+            onFilterChanged={(updatedFilter) =>
+              setFilters({ ...filters, ...updatedFilter })
+            }
+          />
+        </VStack>
       </Flex>
     </Flex>
   );
