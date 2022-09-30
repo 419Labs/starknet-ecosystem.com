@@ -21,7 +21,7 @@ const StyledTag: FC<Props> = ({ value, selected, size = "lg", onClick }) => {
       bg={selected ? "primary.200" : "whiteAlpha"}
       border="1px solid"
       borderColor={selected ? "transparent" : "whiteAlpha.300"}
-      _hover={{ background: selected ? "brand.900" : "whiteAlpha.100" }}
+      _hover={{ background: selected ? "primary.200" : "whiteAlpha.100" }}
     >
       {t.tags[value] || value}
     </Tag>

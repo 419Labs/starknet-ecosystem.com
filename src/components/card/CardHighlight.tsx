@@ -36,7 +36,7 @@ function CardHighlight({
           <Text fontSize="xl" fontWeight="bold" color={color || "inherit"}>
             {title}
           </Text>
-          <Text>{content}</Text>
+          <Text lineHeight="18px">{content}</Text>
         </VStack>
       </HStack>
       <Box

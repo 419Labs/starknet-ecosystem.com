@@ -100,6 +100,7 @@ const Home = ({ allProjects }: Props) => {
       {/* Main part */}
       <Flex w="full" direction={{ base: "column", md: "row" }} mt={24}>
         <Menu
+          typeText="Projects"
           tags={allTags}
           initialValue={tagAll}
           childCount={filteredProjectsCount}

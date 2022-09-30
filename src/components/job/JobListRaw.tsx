@@ -49,7 +49,7 @@ const JobListRaw: FC<Props> = ({
         {job && company ? (
           <Flex direction="column">
             {/* Networks */}
-            <Box mt={6} mb={2}>
+            <Box mt={4}>
               <NetworkLogos network={company.network} />
             </Box>
             <JobDetailSections currentJob={job} />
@@ -166,7 +166,7 @@ const JobListRaw: FC<Props> = ({
               </Box>
             )}
             {job.tags.map((tag) => (
-              <Box mr={1} mb={2}>
+              <Box mr={1} mb={2} key={tag}>
                 <StyledTag key={tag} value={tag} size="md" />
               </Box>
             ))}

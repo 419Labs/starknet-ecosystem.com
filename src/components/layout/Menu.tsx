@@ -30,10 +30,17 @@ interface MenuProps {
   tags: Tag[];
   initialValue: Tag;
   childCount?: number;
+  typeText: string;
   onChange: (tag: Tag) => void;
 }
 
-function Menu({ tags, initialValue, childCount = -1, onChange }: MenuProps) {
+function Menu({
+  tags,
+  initialValue,
+  childCount = -1,
+  typeText,
+  onChange,
+}: MenuProps) {
   const { t } = useTranslate();
   const [selectedValue, setSelectedValue] = useState<Tag>(initialValue);
 
@@ -55,7 +62,9 @@ function Menu({ tags, initialValue, childCount = -1, onChange }: MenuProps) {
   const renderMobileMenu = () => {
     return (
       <Flex w="full" align="center" justify="space-between" mb={8}>
-        <Text>{getIndicationText()} Projects</Text>
+        <Text>
+          {getIndicationText()} {typeText}
+        </Text>
         <MenuButton
           menus={tags.map((tag) => {
             return {

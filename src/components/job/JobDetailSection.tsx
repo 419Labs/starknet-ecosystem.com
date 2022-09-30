@@ -10,14 +10,7 @@ const JobDetailSection: FC<Props> = ({ label, value }) => {
   if (!value) return null;
   return (
     <Box my={4}>
-      <Text
-        as="h3"
-        borderBottom="1px solid"
-        borderColor="whiteAlpha.200"
-        fontSize="xl"
-        fontWeight="extrabold"
-        mb={4}
-      >
+      <Text as="h3" fontSize="xl" fontWeight="bold" mb={4}>
         {label}
       </Text>
       <Text

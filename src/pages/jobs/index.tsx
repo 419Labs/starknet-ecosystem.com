@@ -66,6 +66,8 @@ const JobsPage: NextPage = () => {
       </Text>
       <Flex w="full" direction={{ base: "column", md: "row" }} mt={24}>
         <Menu
+          typeText="Jobs"
+          childCount={jobs.length}
           tags={allAcademyCategory}
           initialValue={allAcademyCategory[0]}
           onChange={(newValue) => {

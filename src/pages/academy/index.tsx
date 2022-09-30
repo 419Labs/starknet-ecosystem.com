@@ -108,6 +108,7 @@ const AcademyPage: FC = () => {
       </Text>
       <Flex w="full" direction={{ base: "column", md: "row" }} mt={24}>
         <Menu
+          typeText="Resources"
           tags={allAcademyCategory}
           initialValue={allAcademyCategory[0]}
           onChange={(newValue) => {

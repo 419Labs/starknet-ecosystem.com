@@ -44,9 +44,8 @@ const JobTable: FC<Props> = ({ companies, jobs, observe, onFilterChanged }) => {
     <Flex w="full" direction="column">
       {jobs && jobs.length > 0 ? (
         jobs.map((job, key) => (
-          <Box mb={4}>
+          <Box mb={4} key={`${job.title}-${job.companyId}`}>
             <JobListRaw
-              key={`${job.title}-${job.companyId}`}
               company={findCompanyById(companies, job.companyId)}
               job={job}
               last={key === jobs.length - 1}
