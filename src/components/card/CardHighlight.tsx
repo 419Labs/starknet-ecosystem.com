@@ -49,7 +49,8 @@ function CardHighlight({
         sx={{
           boxShadow: `inset 0 -46px 13px -10px ${
             bg
-              ? `var(--chakra-colors-${bg.replace(".", "-")})`
+              ? // eslint-disable-next-line sonarjs/no-nested-template-literals
+                `var(--chakra-colors-${bg.replace(".", "-")})`
               : "var(--chakra-colors-gray-600)"
           }`,
         }}

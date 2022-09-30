@@ -1,15 +1,11 @@
-import { Box, Flex, HStack, SimpleGrid, Text, VStack } from "@chakra-ui/layout";
-import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Flex, Text, VStack } from "@chakra-ui/layout";
 import type { NextPage } from "next";
 import { useEffect, useState } from "react";
 import useInView from "react-cool-inview";
 
-import { allAcademyCategory, ResourceItf } from "../../../data/academy";
+import { allAcademyCategory } from "../../../data/academy";
 import allCompanies from "../../../data/company";
 import allJobs from "../../../data/job";
-import CardHighlight from "../../components/card/CardHighlight";
-import CardResource from "../../components/card/CardResource";
 import JobTable from "../../components/job/JobTable";
 import HighlightedText from "../../components/layout/HighlightedText";
 import Menu from "../../components/layout/Menu";

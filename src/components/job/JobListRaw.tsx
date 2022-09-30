@@ -110,7 +110,13 @@ const JobListRaw: FC<Props> = ({
               alt={`${company.name} logo`}
             />
           </Flex>
-          <VStack flex={3} direction="column" justify="flex-start" align="flex-start" spacing={1}>
+          <VStack
+            flex={3}
+            direction="column"
+            justify="flex-start"
+            align="flex-start"
+            spacing={1}
+          >
             <Text
               fontSize="lg"
               fontWeight="bold"
