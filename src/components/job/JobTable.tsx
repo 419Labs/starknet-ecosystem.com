@@ -7,7 +7,7 @@ import { useTranslate } from "../../context/TranslateProvider";
 import type { Company } from "../../models/company";
 import type { Job } from "../../models/job";
 import { findCompanyById } from "../../services/company.service";
-import { findJobFromJobKey } from "../../services/job.service";
+import { findJobFromJobKey, getJobKey } from "../../services/job.service";
 
 import JobListRaw from "./JobListRaw";
 
@@ -43,17 +43,23 @@ const JobTable: FC<Props> = ({ companies, jobs, observe, onFilterChanged }) => {
   return (
     <Flex w="full" direction="column">
       {jobs && jobs.length > 0 ? (
-        jobs.map((job, key) => (
-          <Box mb={4} key={`${job.title}-${job.companyId}`}>
-            <JobListRaw
-              company={findCompanyById(companies, job.companyId)}
-              job={job}
-              last={key === jobs.length - 1}
-              observe={observe}
-              selected={job === currentJob}
-            />
-          </Box>
-        ))
+        jobs.map((job, key) => {
+          const company = findCompanyById(companies, job.companyId);
+          return (
+            company && (
+              <Box mb={4} key={`${job.title}-${job.companyId}`}>
+                <JobListRaw
+                  id={getJobKey(job, company)}
+                  company={company}
+                  job={job}
+                  last={key === jobs.length - 1}
+                  observe={observe}
+                  selected={job === currentJob}
+                />
+              </Box>
+            )
+          );
+        })
       ) : (
         <Flex justify="center" mt={4}>
           <Text fontSize="xl">{t.common.no_job}</Text>

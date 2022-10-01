@@ -13,7 +13,7 @@ const formatString = (value: string): string =>
 export const getJobKey = (job: Job, company: Company): string => {
   const companyName = formatString(company.name).replaceAll(" ", "_");
   const jobTitle = formatString(job.title).replaceAll(" ", "_");
-  return `${companyName}-${jobTitle}-${company.id}`;
+  return encodeURI(`${companyName}-${jobTitle}-${company.id}`);
 };
 
 export const findJobFromJobKey = (

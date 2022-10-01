@@ -25,6 +25,7 @@ import JobCreatedFrom from "./JobCreatedFrom";
 import JobDetailSections from "./JobDetailSections";
 
 interface Props {
+  id?: string;
   company: Company | undefined;
   job: Job;
   last: boolean;
@@ -33,6 +34,7 @@ interface Props {
 }
 
 const JobListRaw: FC<Props> = ({
+  id,
   company,
   job,
   last,
@@ -77,8 +79,12 @@ const JobListRaw: FC<Props> = ({
   };
 
   return (
-    <NextLink href={`/${locale}/jobs/?key=${getJobKey(job, company)}`}>
+    <NextLink
+      id={id}
+      href={`/${locale}/jobs/?key=${getJobKey(job, company)}#${id}`}
+    >
       <Flex
+        id={id}
         direction="column"
         w="full"
         minH="88px"
