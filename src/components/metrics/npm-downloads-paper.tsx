@@ -24,6 +24,7 @@ import type {
   NpmDownloadsChart,
 } from "../../models/npm-downloads";
 import { toNpmDownloadsChart } from "../../services/metrics.service";
+import Card from "../card/Card";
 
 interface Props {
   npmDownloads: NpmDownloads | undefined;
@@ -82,7 +83,7 @@ const NpmDownloadsPaper: FC<Props> = ({ npmDownloads }) => {
   }
 
   return (
-    <Box borderRadius="md" backgroundColor="gray.800" p={5}>
+    <Card>
       <VStack alignItems="flex-start" spacing={0} mb={4}>
         <Flex w="full" justify="space-between" alignItems="flex-start" mb={1}>
           <HStack as="h3" fontSize="lg" fontWeight="bold">
@@ -178,13 +179,13 @@ const NpmDownloadsPaper: FC<Props> = ({ npmDownloads }) => {
         mt={3}
         justifyContent="center"
       >
-        <Button size="xs" onClick={() => setCumulative(!cumulative)}>
+        <Button size="sm" onClick={() => setCumulative(!cumulative)}>
           {cumulative
             ? t.common.cumulative_chart ?? "Cumulative chart"
             : t.common.non_cumulative_chart ?? "Non cumulative chart"}
         </Button>
       </HStack>
-    </Box>
+    </Card>
   );
 };
 

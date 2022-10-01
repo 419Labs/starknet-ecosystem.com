@@ -3,8 +3,9 @@ import type { Styles } from "@chakra-ui/theme-tools";
 
 import colors from "./colors";
 import Button from "./components/button";
-import Menu from "./components/menu";
+import Card from "./components/card";
 import Input from "./components/input";
+import Menu from "./components/menu";
 import fonts from "./fonts";
 
 const globalStyles: Styles = {
@@ -30,7 +31,8 @@ const customTheme = extendTheme({
   components: {
     Button,
     Input,
-    Menu
+    Menu,
+    Card,
   },
 });
 

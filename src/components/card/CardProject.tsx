@@ -87,7 +87,6 @@ function CardProject({ index, project }: CardProjectProps) {
       <Box position="relative">
         <Flex
           borderRadius="50%"
-          border="1px solid white"
           h="50px"
           w="50px"
           position="absolute"

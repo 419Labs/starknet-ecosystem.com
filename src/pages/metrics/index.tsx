@@ -1,9 +1,10 @@
-import { Box, HStack, Link, SimpleGrid, Text } from "@chakra-ui/layout";
+import { Box, Flex, HStack, Link, SimpleGrid, Text } from "@chakra-ui/layout";
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import type { FC } from "react";
 import { useEffect, useState } from "react";
 
+import HighlightedText from "../../components/layout/HighlightedText";
 import CountPaper from "../../components/metrics/count-paper";
 import GithubReposPaper from "../../components/metrics/github-repos-paper";
 import NpmDownloadsPaper from "../../components/metrics/npm-downloads-paper";
@@ -42,11 +43,37 @@ const MetricsPage: FC = () => {
 
   const { t } = useTranslate();
   return (
-    <Box w="full">
-      <Box mb={4}>
-        <Text as="h2" mt={8} fontSize="2xl" fontWeight="bold" w="full">
-          {t.metrics.title || "Ecosystem metrics"}
-        </Text>
+    <Flex
+      w="full"
+      direction="column"
+      justify="flex-start"
+      align="flex-start"
+      transform="translateZ(0)"
+    >
+      <Box mb={8} w="full">
+        <HighlightedText highlighted={t.metrics.title || "Ecosystem metrics"} />
+      </Box>
+      <Box mb={8} w="full">
+        <SimpleGrid columns={{ sm: 1, md: 2, lg: 4 }} spacing={4} mb={4}>
+          <CountPaper
+            count={mainnetTransactionCount}
+            label={`${t.metrics.transactions || "transactions"} (ETH Mainnet)`}
+          />
+          <CountPaper
+            count={mainnetContractCount}
+            label={`${t.metrics.contracts || "contracts"} (ETH Mainnet)`}
+          />
+          <CountPaper
+            count={testnetTransactionCount}
+            label={`${
+              t.metrics.transactions || "transactions"
+            } (Goerli Testnet)`}
+          />
+          <CountPaper
+            count={testnetContractCount}
+            label={`${t.metrics.contracts || "contracts"} (Goerli Testnet)`}
+          />
+        </SimpleGrid>
         <Link
           isExternal
           color="whiteAlpha.600"
@@ -59,32 +86,16 @@ const MetricsPage: FC = () => {
           </HStack>
         </Link>
       </Box>
-      <SimpleGrid columns={{ sm: 1, md: 2, lg: 4 }} spacing={4} mb={8}>
-        <CountPaper
-          count={mainnetTransactionCount}
-          label={`${t.metrics.transactions || "transactions"} (ETH Mainnet)`}
-        />
-        <CountPaper
-          count={mainnetContractCount}
-          label={`${t.metrics.contracts || "contracts"} (ETH Mainnet)`}
-        />
-        <CountPaper
-          count={testnetTransactionCount}
-          label={`${t.metrics.transactions || "transactions"} (Goerli Testnet)`}
-        />
-        <CountPaper
-          count={testnetContractCount}
-          label={`${t.metrics.contracts || "contracts"} (Goerli Testnet)`}
-        />
-      </SimpleGrid>
-      <Text as="h2" mb={4} fontSize="2xl" fontWeight="bold" w="full">
-        {t.metrics.developer_tools || "Developer tools"}
-      </Text>
-      <SimpleGrid columns={{ sm: 1, md: 2, lg: 2, xl: 3 }} spacing={4}>
-        <GithubReposPaper />
-        <NpmDownloadsPaper npmDownloads={npmDownloads} />
-      </SimpleGrid>
-    </Box>
+      <Box mb={8} w="full">
+        <Text as="h2" mb={4} fontSize="2xl" fontWeight="bold" w="full">
+          {t.metrics.developer_tools || "Developer tools"}
+        </Text>
+        <SimpleGrid columns={{ sm: 1, md: 2, lg: 2, xl: 3 }} spacing={4}>
+          <GithubReposPaper />
+          <NpmDownloadsPaper npmDownloads={npmDownloads} />
+        </SimpleGrid>
+      </Box>
+    </Flex>
   );
 };
 
