@@ -4,7 +4,8 @@ const enTranslate: TranslateState = {
   common: {
     title_main: "StarkNet revolution is coming out of the woods",
     title_main_dapps: "dApps, Services & Wallets",
-    subtitle_main: "Discover a wide variety of apps, blockchains, wallets and explorers, built in the Starknet ecosystem by developers and contributors from across the globe.",
+    subtitle_main:
+      "Discover a wide variety of apps, blockchains, wallets and explorers, built in the Starknet ecosystem by developers and contributors from across the globe.",
     community_driven:
       "✨ This project is managed by the awesome StarkNet community",
     no_project: "😕 No projects in this category",
@@ -55,6 +56,7 @@ const enTranslate: TranslateState = {
     data_sources: "Data sources",
     transactions: "transactions",
     contracts: "contracts",
+    blocks: "blocks",
     developer_tools: "Developer tools",
     metrics: "Metrics",
     github_repo: "Tools & Libraries",

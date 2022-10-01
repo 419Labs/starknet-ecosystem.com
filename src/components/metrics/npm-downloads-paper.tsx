@@ -23,12 +23,9 @@ import type {
   NpmDownloads,
   NpmDownloadsChart,
 } from "../../models/npm-downloads";
+import { MetricsApi } from "../../services/metrics-api.service";
 import { toNpmDownloadsChart } from "../../services/metrics.service";
 import Card from "../card/Card";
-
-interface Props {
-  npmDownloads: NpmDownloads | undefined;
-}
 
 ChartJS.register(
   Filler,
@@ -41,11 +38,23 @@ ChartJS.register(
   Legend
 );
 
-const NpmDownloadsPaper: FC<Props> = ({ npmDownloads }) => {
+interface Props {
+  name: string;
+  label: string;
+}
+
+const NpmDownloadsPaper: FC<Props> = ({ name, label }) => {
   const theme = useTheme();
   const { t } = useTranslate();
   const [values, setValues] = useState<NpmDownloadsChart>();
+  const [npmDownloads, setNpmDownloads] = useState<NpmDownloads>();
   const [cumulative, setCumulative] = useState(true);
+
+  useEffect(() => {
+    MetricsApi.fetchNpmDownloads(name).then((result) =>
+      setNpmDownloads({ ...result, label })
+    );
+  }, [name, label]);
 
   useEffect(() => {
     if (npmDownloads !== undefined) {
