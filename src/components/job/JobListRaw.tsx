@@ -7,7 +7,7 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/layout";
-import { Button, Image } from "@chakra-ui/react";
+import { Button, Collapse, Image } from "@chakra-ui/react";
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import dayjs from "dayjs";
@@ -201,7 +201,7 @@ const JobListRaw: FC<Props> = ({ id, company, job, last, observe }) => {
           </Link>
         </Box>
       </Flex>
-      {opened && renderJobDetails()}
+      <Collapse in={opened}>{renderJobDetails()}</Collapse>
     </Flex>
   );
 };
