@@ -1,13 +1,11 @@
 import { Box, Flex, Text } from "@chakra-ui/layout";
-import { useRouter } from "next/router";
 import type { FC } from "react";
-import { useEffect, useState } from "react";
 
 import { useTranslate } from "../../context/TranslateProvider";
 import type { Company } from "../../models/company";
 import type { Job } from "../../models/job";
 import { findCompanyById } from "../../services/company.service";
-import { findJobFromJobKey, getJobKey } from "../../services/job.service";
+import { getJobKey } from "../../services/job.service";
 
 import JobListRaw from "./JobListRaw";
 
@@ -21,21 +19,6 @@ interface Props {
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const JobTable: FC<Props> = ({ companies, jobs, observe, onFilterChanged }) => {
   const { t } = useTranslate();
-  const [currentJob, setCurrentJob] = useState<Job | undefined>(undefined);
-  const router = useRouter();
-  const { query } = router;
-  useEffect(() => {
-    const { key } = query;
-    console.log(query);
-    if (key && typeof key === "string") {
-      const newJob = findJobFromJobKey(key, jobs, companies);
-      setCurrentJob(newJob);
-    } else {
-      // Reset view
-      setCurrentJob(undefined);
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [query]);
 
   /* const handleChangeSearch = (event: ChangeEvent<HTMLInputElement>) =>
     onFilterChanged({ search: event.target.value }); */
@@ -54,8 +37,6 @@ const JobTable: FC<Props> = ({ companies, jobs, observe, onFilterChanged }) => {
                   job={job}
                   last={key === jobs.length - 1}
                   observe={observe}
-                  selected={job === currentJob}
-                  onSelected={(newJob: Job) => setCurrentJob(newJob)}
                 />
               </Box>
             )

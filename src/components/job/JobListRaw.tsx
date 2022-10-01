@@ -11,12 +11,13 @@ import { Button, Image } from "@chakra-ui/react";
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import dayjs from "dayjs";
+import { useRouter } from "next/router";
 import type { FC } from "react";
+import { useEffect, useState } from "react";
 
 import { useTranslate } from "../../context/TranslateProvider";
 import type { Company } from "../../models/company";
 import type { Job } from "../../models/job";
-import { getJobKey } from "../../services/job.service";
 import NetworkLogos from "../layout/NetworkLogos";
 import StyledTag from "../layout/StyledTag";
 
@@ -24,26 +25,25 @@ import JobCreatedFrom from "./JobCreatedFrom";
 import JobDetailSections from "./JobDetailSections";
 
 interface Props {
-  id?: string;
+  id: string;
   company: Company | undefined;
   job: Job;
   last: boolean;
   observe?: (element?: HTMLElement | null | undefined) => void;
-  onSelected?: (job: Job) => void;
-  selected?: boolean;
 }
 
-const JobListRaw: FC<Props> = ({
-  id,
-  company,
-  job,
-  last,
-  observe,
-  onSelected,
-  selected = false,
-}) => {
+const JobListRaw: FC<Props> = ({ id, company, job, last, observe }) => {
   const { locale } = useTranslate();
   const { t } = useTranslate();
+  const [opened, setOpened] = useState(false);
+  const { query } = useRouter();
+  useEffect(() => {
+    const { key } = query;
+    if (key && typeof key === "string") {
+      setOpened(id === encodeURI(key));
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [query]);
   if (!company || !job) return null;
 
   const renderJobDetails = () => {
@@ -86,15 +86,8 @@ const JobListRaw: FC<Props> = ({
     > */
     <Flex
       onClick={() => {
-        if (onSelected) {
-          onSelected(job);
-        }
-        window.location.hash = `#${id}`;
-        window.history.pushState(
-          {},
-          "",
-          `/${locale}/jobs/?key=${getJobKey(job, company)}#${id}`
-        );
+        setOpened(!opened);
+        window.history.pushState({}, "", `/${locale}/jobs/?key=${id}#${id}`);
       }}
       id={id}
       direction="column"
@@ -208,7 +201,7 @@ const JobListRaw: FC<Props> = ({
           </Link>
         </Box>
       </Flex>
-      {selected && renderJobDetails()}
+      {opened && renderJobDetails()}
     </Flex>
   );
 };
