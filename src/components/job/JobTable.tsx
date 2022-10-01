@@ -24,9 +24,9 @@ const JobTable: FC<Props> = ({ companies, jobs, observe, onFilterChanged }) => {
   const [currentJob, setCurrentJob] = useState<Job | undefined>(undefined);
   const router = useRouter();
   const { query } = router;
-
   useEffect(() => {
     const { key } = query;
+    console.log(query);
     if (key && typeof key === "string") {
       const newJob = findJobFromJobKey(key, jobs, companies);
       setCurrentJob(newJob);
@@ -55,6 +55,7 @@ const JobTable: FC<Props> = ({ companies, jobs, observe, onFilterChanged }) => {
                   last={key === jobs.length - 1}
                   observe={observe}
                   selected={job === currentJob}
+                  onSelected={(newJob: Job) => setCurrentJob(newJob)}
                 />
               </Box>
             )

@@ -11,7 +11,6 @@ import { Button, Image } from "@chakra-ui/react";
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import dayjs from "dayjs";
-import NextLink from "next/link";
 import type { FC } from "react";
 
 import { useTranslate } from "../../context/TranslateProvider";
@@ -30,6 +29,7 @@ interface Props {
   job: Job;
   last: boolean;
   observe?: (element?: HTMLElement | null | undefined) => void;
+  onSelected?: (job: Job) => void;
   selected?: boolean;
 }
 
@@ -39,6 +39,7 @@ const JobListRaw: FC<Props> = ({
   job,
   last,
   observe,
+  onSelected,
   selected = false,
 }) => {
   const { locale } = useTranslate();
@@ -79,129 +80,136 @@ const JobListRaw: FC<Props> = ({
   };
 
   return (
-    <NextLink
+    /* <NextLink
       id={id}
       href={`/${locale}/jobs/?key=${getJobKey(job, company)}#${id}`}
+    > */
+    <Flex
+      onClick={() => {
+        if (onSelected) {
+          onSelected(job);
+        }
+        window.location.hash = `#${id}`;
+        window.history.pushState(
+          {},
+          "",
+          `/${locale}/jobs/?key=${getJobKey(job, company)}#${id}`
+        );
+      }}
+      id={id}
+      direction="column"
+      w="full"
+      minH="88px"
+      cursor="pointer"
+      transition="background .2s linear"
+      bg="primary.700"
+      borderRadius="md"
+      py={4}
+      pr={4}
+      _hover={{
+        backgroundColor: "primary.700",
+        ".apply-btn": {
+          opacity: 1,
+        },
+      }}
+      ref={observe && last ? observe : null}
     >
       <Flex
-        id={id}
-        direction="column"
         w="full"
-        minH="88px"
-        cursor="pointer"
-        transition="background .2s linear"
-        bg="primary.700"
-        borderRadius="md"
-        py={4}
-        pr={4}
-        _hover={{
-          backgroundColor: "primary.700",
-          ".apply-btn": {
-            opacity: 1,
-          },
-        }}
-        ref={observe && last ? observe : null}
+        h="full"
+        direction="row"
+        justify="space-between"
+        align="center"
       >
-        <Flex
-          w="full"
-          h="full"
-          direction="row"
-          justify="space-between"
-          align="center"
+        <Flex justify="flex-start" align="center" h="full" w="88px" px={5}>
+          <Image
+            w="full"
+            src={`/logos/${company.logo}`}
+            alt={`${company.name} logo`}
+          />
+        </Flex>
+        <VStack
+          flex={3}
+          direction="column"
+          justify="flex-start"
+          align="flex-start"
+          spacing={1}
         >
-          <Flex justify="flex-start" align="center" h="full" w="88px" px={5}>
-            <Image
-              w="full"
-              src={`/logos/${company.logo}`}
-              alt={`${company.name} logo`}
-            />
-          </Flex>
+          <Text
+            fontSize="lg"
+            fontWeight="bold"
+            whiteSpace="nowrap"
+            overflow="hidden"
+            textOverflow="ellipsis"
+          >
+            {job.title}
+          </Text>
+          <Text fontSize="sm">{company.name}</Text>
           <VStack
-            flex={3}
-            direction="column"
-            justify="flex-start"
+            fontSize="xs"
             align="flex-start"
             spacing={1}
+            color="whiteAlpha.600"
           >
-            <Text
-              fontSize="lg"
-              fontWeight="bold"
-              whiteSpace="nowrap"
-              overflow="hidden"
-              textOverflow="ellipsis"
-            >
-              {job.title}
-            </Text>
-            <Text fontSize="sm">{company.name}</Text>
-            <VStack
-              fontSize="xs"
-              align="flex-start"
-              spacing={1}
-              color="whiteAlpha.600"
-            >
-              {job.compensation && (
-                <HStack>
-                  <FontAwesomeIcon
-                    fontSize="18px"
-                    icon={solid("dollar-sign")}
-                  />
-                  <Text>
-                    {job.compensation?.currency || "$"}
-                    {job.compensation?.from}k -{" "}
-                    {job.compensation?.currency || "$"}
-                    {job.compensation?.to}k
-                  </Text>
-                </HStack>
-              )}
-              <Text>{job.location}</Text>
-            </VStack>
-          </VStack>
-          {/* Tags */}
-          <Stack
-            flex={2}
-            my={2}
-            direction="row"
-            spacing={0}
-            wrap="wrap"
-            shouldWrapChildren
-            justify="flex-start"
-          >
-            {job.remote && (
-              <Box mr={1} mb={2}>
-                <StyledTag key="remote" selected value="Remote" size="md" />
-              </Box>
+            {job.compensation && (
+              <HStack>
+                <FontAwesomeIcon fontSize="18px" icon={solid("dollar-sign")} />
+                <Text>
+                  {job.compensation?.currency || "$"}
+                  {job.compensation?.from}k -{" "}
+                  {job.compensation?.currency || "$"}
+                  {job.compensation?.to}k
+                </Text>
+              </HStack>
             )}
-            {job.tags.map((tag) => (
-              <Box mr={1} mb={2} key={tag}>
-                <StyledTag key={tag} value={tag} size="md" />
-              </Box>
-            ))}
-          </Stack>
-          <Box
-            flex={1}
-            textAlign="end"
-            opacity={0}
-            className="apply-btn"
-            transition="all .2s linear"
+            <Text>{job.location}</Text>
+          </VStack>
+        </VStack>
+        {/* Tags */}
+        <Stack
+          flex={2}
+          my={2}
+          direction="row"
+          spacing={0}
+          wrap="wrap"
+          shouldWrapChildren
+          justify="flex-start"
+        >
+          {job.remote && (
+            <Box mr={1} mb={2}>
+              <StyledTag key="remote" selected value="Remote" size="md" />
+            </Box>
+          )}
+          {job.tags.map((tag) => (
+            <Box mr={1} mb={2} key={tag}>
+              <StyledTag key={tag} value={tag} size="md" />
+            </Box>
+          ))}
+        </Stack>
+        <Box
+          flex={1}
+          textAlign="end"
+          opacity={0}
+          className="apply-btn"
+          transition="all .2s linear"
+        >
+          <Link
+            isExternal
+            href={job.applyLink}
+            _hover={{ textDecoration: "none" }}
           >
-            <Link
-              isExternal
-              href={job.applyLink}
-              _hover={{ textDecoration: "none" }}
+            <Button
+              variant="outline"
+              bg="blue"
+              onClick={(event) => event.stopPropagation()}
             >
-              <Button
-                variant="outline"
-                bg="blue"
-                onClick={(event) => event.stopPropagation()}
-              >
-                {t.jobs.apply || "Apply"}
-              </Button>
-            </Link>
-          </Box>
-        </Flex>
-        {selected && renderJobDetails()}
+              {t.jobs.apply || "Apply"}
+            </Button>
+          </Link>
+        </Box>
       </Flex>
-    </NextLink>
+      {selected && renderJobDetails()}
+    </Flex>
   );
 };
 
