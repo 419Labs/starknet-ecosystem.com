@@ -18,12 +18,12 @@ export interface ResourceItf extends Resource {
 
 export const allAcademyCategory: Tag[] = [
   {
-    value: "learn",
+    value: "learning",
     label: "Learn",
     icon: "bridge",
   },
   {
-    value: "contribute",
+    value: "contributions",
     label: "Contribute",
     icon: "people-group",
   },
@@ -38,12 +38,11 @@ export const allAcademyCategory: Tag[] = [
     icon: "id-card",
   },
   {
-    value: "news",
+    value: "newsfeed",
     label: "News & Infos",
     icon: "gamepad",
   },
 ];
-
 
 // ======================================================================
 // Learning links
@@ -52,23 +51,24 @@ export const learning: Resource[] = [
   {
     name: "Hello, StarkNet",
     shortName: "hello-starknet-official-doc",
-    description: "This tutorial walks you through writing and deploying a StarkNet contract.",
+    description:
+      "This tutorial walks you through writing and deploying a StarkNet contract.",
     tags: ["starknet", "learn"],
     network: {
-      website: "https://www.cairo-lang.org/docs/hello_starknet/index.html"
-    }
+      website: "https://www.cairo-lang.org/docs/hello_starknet/index.html",
+    },
   },
   {
     name: "Hello, Cairo",
     shortName: "hello-cairo-official-doc",
-    description: "“Hello, Cairo describes Cairo for the programmer who wishes to understand what Cairo can do hands-on, and start writing programs in Cairo.",
+    description:
+      "“Hello, Cairo describes Cairo for the programmer who wishes to understand what Cairo can do hands-on, and start writing programs in Cairo.",
     tags: ["starknet", "cairo", "learn"],
     network: {
-      website: "https://www.cairo-lang.org/docs/hello_cairo/index.html"
-    }
-  }
+      website: "https://www.cairo-lang.org/docs/hello_cairo/index.html",
+    },
+  },
 ];
-
 
 // ======================================================================
 // Tooling links
@@ -80,8 +80,9 @@ export const tools: Resource[] = [
     description: "Cairo implementation of ERC1155",
     tags: ["EIP1155", "EIP", "tools"],
     network: {
-      github: "https://github.com/Astraly-Labs/astraly-contracts/tree/main/contracts/erc1155"
-    }
+      github:
+        "https://github.com/Astraly-Labs/astraly-contracts/tree/main/contracts/erc1155",
+    },
   },
   {
     name: "EIP-1155 Implementation (by The Ninth)",
@@ -89,8 +90,9 @@ export const tools: Resource[] = [
     description: "Cairo implementation of EIP 1155",
     tags: ["EIP1155", "EIP", "tools"],
     network: {
-      github: "https://github.com/the-ninth/cairo-contracts/tree/main/contracts/erc1155"
-    }
+      github:
+        "https://github.com/the-ninth/cairo-contracts/tree/main/contracts/erc1155",
+    },
   },
   {
     name: "ERC-4626 Implementation (by Milan Cermak)",
@@ -98,18 +100,19 @@ export const tools: Resource[] = [
     description: "Cairo implementation of EIP 4626",
     tags: ["EIP4626", "EIP", "tools"],
     network: {
-      github: "https://github.com/milancermak/cairo-4626"
+      github: "https://github.com/milancermak/cairo-4626",
     },
   },
   {
     name: "Cairo Goldmine",
     shortName: "cairo-goldmine",
-    description: "A comprehensive, annotated list of repositories of the starknet ecosystem.",
+    description:
+      "A comprehensive, annotated list of repositories of the starknet ecosystem.",
     tags: ["Cairo", "tools", "libraries"],
     network: {
-      github: "https://github.com/beautyisourbusiness/cairo-goldmine"
-    }
-  }
+      github: "https://github.com/beautyisourbusiness/cairo-goldmine",
+    },
+  },
 ];
 
 // ======================================================================
@@ -119,7 +122,8 @@ export const wallets: Resource[] = [
   {
     name: "Argent X",
     shortName: "argent-x",
-    description: "First StarkNet wallet to interact with tokens and NFTs. Manage your identities with \"Sign in with StarkNet\" (very soon ™️), and enjoy the best of defi. Made with ❤️ by the Argent team.",
+    description:
+      'First StarkNet wallet to interact with tokens and NFTs. Manage your identities with "Sign in with StarkNet" (very soon ™️), and enjoy the best of defi. Made with ❤️ by the Argent team.',
     tags: ["wallet"],
     image: "argent-x.svg",
     network: {
@@ -156,18 +160,27 @@ export const newsfeed: Resource[] = [
   {
     name: "Swagtimus - Newsletter (StarkNet Roundup)",
     shortName: "swagtimus-newsletter",
-    description: "Weekly summary of everything that is going on with the StarkNet protocol & ecosystem",
+    description:
+      "Weekly summary of everything that is going on with the StarkNet protocol & ecosystem",
     tags: ["newsletter"],
     network: {
-      website: "https://swagtimus.substack.com/"
-    }
-  }
-
+      website: "https://swagtimus.substack.com/",
+    },
+  },
 ];
 
-export const resources: Resource[] = [
-  ...learning, 
-  ...tools, 
-  ...wallets, 
-  ...newsfeed
-];
+export interface ResourceBundleItf {
+  learning: ResourceItf[];
+  contributions: ResourceItf[];
+  tools: ResourceItf[];
+  wallets: ResourceItf[];
+  newsfeed: ResourceItf[];
+}
+
+export const academyResourcesBundle: ResourceBundleItf = {
+  learning,
+  contributions: [],
+  tools,
+  wallets,
+  newsfeed,
+};

@@ -2,81 +2,35 @@ import { Box, Flex, HStack, SimpleGrid, Text, VStack } from "@chakra-ui/layout";
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import type { FC } from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import useInView from "react-cool-inview";
 
-import type { ResourceItf } from "../../../data/academy";
-import { allAcademyCategory } from "../../../data/academy";
+import type { ResourceBundleItf, ResourceItf } from "../../../data/academy";
+import {
+  allAcademyCategory,
+  academyResourcesBundle,
+} from "../../../data/academy";
 import CardHighlight from "../../components/card/CardHighlight";
 import CardResource from "../../components/card/CardResource";
 import HighlightedText from "../../components/layout/HighlightedText";
 import Menu from "../../components/layout/Menu";
 import { useTranslate } from "../../context/TranslateProvider";
 
-const resources: ResourceItf[] = [
-  {
-    name: "Nile",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
-    shortName: "Nile",
-    // eslint-disable-next-line sonarjs/no-duplicate-string
-    network: { twitter: "https://twitter.com/" },
-  },
-  {
-    name: "Nile",
-    // eslint-disable-next-line sonarjs/no-duplicate-string
-    description: "Lorem ipsum dolor sit amet",
-    shortName: "Nile",
-    network: { twitter: "https://twitter.com/" },
-  },
-  {
-    name: "Nile",
-    description: "Lorem ipsum dolor sit amet",
-    shortName: "Nile",
-    network: { twitter: "https://twitter.com/" },
-  },
-  {
-    name: "Nile",
-    description: "Lorem ipsum dolor sit amet",
-    shortName: "Nile",
-    network: { twitter: "https://twitter.com/" },
-  },
-  {
-    name: "Nile",
-    description: "Lorem ipsum dolor sit amet",
-    shortName: "Nile",
-    network: { twitter: "https://twitter.com/" },
-  },
-  {
-    name: "Nile",
-    description: "Lorem ipsum dolor sit amet",
-    shortName: "Nile",
-    network: { twitter: "https://twitter.com/" },
-  },
-  {
-    name: "Nile",
-    description: "Lorem ipsum dolor sit amet",
-    shortName: "Nile",
-    network: { twitter: "https://twitter.com/" },
-  },
-  {
-    name: "Nile",
-    description: "Lorem ipsum dolor sit amet",
-    shortName: "Nile",
-    network: { twitter: "https://twitter.com/" },
-  },
-  {
-    name: "Nile",
-    description: "Lorem ipsum dolor sit amet",
-    shortName: "Nile",
-    network: { twitter: "https://twitter.com/" },
-  },
-];
-
 const AcademyPage: FC = () => {
   const { t } = useTranslate();
+  const [currentCategory, setCurrentCategory] = useState(allAcademyCategory[0]);
+  const [currentResources, setCurrentResources] = useState<ResourceItf[]>(
+    // @ts-ignore
+    academyResourcesBundle[currentCategory.value]
+  );
   const LOADED_STEPS = 20;
   const [lastIndexLoaded, setLastIndexLoaded] = useState<number>(LOADED_STEPS);
+
+  useEffect(() => {
+    // @ts-ignore
+    setCurrentResources(academyResourcesBundle[currentCategory.value]);
+  }, [currentCategory]);
+
   const { observe } = useInView({
     // When the last item comes to the viewport
     onEnter: ({ unobserve }) => {
@@ -112,7 +66,7 @@ const AcademyPage: FC = () => {
           tags={allAcademyCategory}
           initialValue={allAcademyCategory[0]}
           onChange={(newValue) => {
-            console.log(newValue);
+            setCurrentCategory(newValue);
           }}
         />
         <VStack justify="flex-start" align="flex-start">
@@ -122,12 +76,16 @@ const AcademyPage: FC = () => {
           {/* Highlighted resources */}
           {/* TODO Remove that & choose 3 resources that are hot / new / have interest ??? */}
           <SimpleGrid columns={{ sm: 1, lg: 2, xl: 3 }} spacing="20px">
-            {resources
+            {academyResourcesBundle.learning
               .slice(0, 3)
               .map((resource: ResourceItf, index: number) => {
                 return (
                   <Box
-                    ref={index === resources.length - 1 ? observe : null}
+                    ref={
+                      index === academyResourcesBundle.learning.length - 1
+                        ? observe
+                        : null
+                    }
                     key={`resource-${resource.name}`}
                     flex={1}
                   >
@@ -137,15 +95,15 @@ const AcademyPage: FC = () => {
               })}
           </SimpleGrid>
           <Text pt={20} fontSize="6xl" fontWeight="bold">
-            Learn
+            {currentCategory.label}
           </Text>
-          {resources && resources.length > 0 ? (
+          {currentResources && currentResources.length > 0 ? (
             <SimpleGrid columns={{ sm: 1, lg: 2, xl: 3 }} spacing="20px">
               {/* eslint-disable-next-line sonarjs/no-identical-functions */}
-              {resources.map((resource: ResourceItf, index: number) => {
+              {currentResources.map((resource: ResourceItf, index: number) => {
                 return (
                   <Box
-                    ref={index === resources.length - 1 ? observe : null}
+                    ref={index === currentResources.length - 1 ? observe : null}
                     key={`resource-${resource.name}`}
                     flex={1}
                   >

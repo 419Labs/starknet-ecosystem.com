@@ -74,7 +74,7 @@ function Menu({
             };
           })}
           icon={solid("chevron-down")}
-          text={t.tags[selectedValue.value] || selectedValue.value}
+          text={t.tags[selectedValue.value] || selectedValue.label}
         />
       </Flex>
     );
@@ -120,7 +120,7 @@ function Menu({
                   <FontAwesomeIcon fontSize="18px" icon={icons[tag.icon]} />
                 </Flex>
                 <Text ml={4} fontWeight="bold" fontSize="16px">
-                  {t.tags[tag.value] || tag.value}
+                  {t.tags[tag.value] || tag.label}
                 </Text>
               </Flex>
               {selectedValue.value === tag.value && (
