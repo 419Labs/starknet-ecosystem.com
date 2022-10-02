@@ -54,6 +54,7 @@ const enTranslate: TranslateState = {
   metrics: {
     title: "Ecosystem metrics",
     data_sources: "Data sources",
+    data_coming_from: "Data coming from",
     transactions: "transactions",
     contracts: "contracts",
     blocks: "blocks",

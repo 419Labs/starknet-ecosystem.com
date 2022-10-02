@@ -12,7 +12,10 @@ import { formatCompactNumber } from "../../services/number.service";
 
 import CountPaper from "./count-paper";
 
-const EcosystemMetrics: FC = () => {
+interface Props {
+  isMainnet?: boolean;
+}
+const EcosystemMetrics: FC<Props> = ({ isMainnet = true }: Props) => {
   const { t } = useTranslate();
   const [mainnetTxCount, setMainnetTxCount] = useState<number>();
   const [mainnetContractCount, setMainnetContractCount] = useState<number>();
@@ -36,80 +39,65 @@ const EcosystemMetrics: FC = () => {
   }, []);
 
   return (
-    <Box mb={8} w="full">
-      <SimpleGrid columns={{ sm: 1, md: 2, lg: 2 }} spacing={4} mb={4}>
-        <CountPaper
-          big
-          count={bridgeMetrics && formatUnits(bridgeMetrics.balance)}
-          label="Ether in bride (Mainnet)"
-          subtitle={
-            bridgeMetrics && bridgeMetrics.ethValue
-              ? `Ether value: ${formatCompactNumber(
-                  parseFloat(formatUnits(bridgeMetrics.balance)) *
-                    bridgeMetrics.ethValue
-                )} $ ($${bridgeMetrics.ethValue}/ETH)`
-              : ""
-          }
-        />
-        <CountPaper
-          big
-          count={
-            testnetBridgeMetrics && formatUnits(testnetBridgeMetrics.balance)
-          }
-          label="Ether in bride (Testnet)"
-        />
+    <Box w="full">
+      <SimpleGrid columns={{ base: 1, xl: 2 }} spacing={4} mb={4}>
+        {isMainnet ? (
+          <CountPaper
+            big
+            count={bridgeMetrics && formatUnits(bridgeMetrics.balance)}
+            label="Ether in bridge"
+            subtitle={
+              bridgeMetrics && bridgeMetrics.ethValue
+                ? `Ether value: ${formatCompactNumber(
+                    parseFloat(formatUnits(bridgeMetrics.balance)) *
+                      bridgeMetrics.ethValue
+                  )} $ ($${bridgeMetrics.ethValue}/ETH)`
+                : ""
+            }
+          />
+        ) : (
+          <CountPaper
+            big
+            count={
+              testnetBridgeMetrics && formatUnits(testnetBridgeMetrics.balance)
+            }
+            label="Ether in bride"
+          />
+        )}
+        <SimpleGrid columns={{ base: 1, md: 3 }} spacing={4}>
+          {isMainnet ? (
+            <>
+              <CountPaper
+                count={mainnetTxCount}
+                label={`${t.metrics.transactions || "transactions"}`}
+              />
+              <CountPaper
+                count={mainnetContractCount}
+                label={`${t.metrics.contracts || "contracts"}`}
+              />
+              <CountPaper
+                count={mainnetBlockCount}
+                label={`${t.metrics.blocks || "blocks"}`}
+              />
+            </>
+          ) : (
+            <>
+              <CountPaper
+                count={testnetTxCount}
+                label={`${t.metrics.transactions || "transactions"}`}
+              />
+              <CountPaper
+                count={testnetContractCount}
+                label={`${t.metrics.contracts || "contracts"}`}
+              />
+              <CountPaper
+                count={testnetBlockCount}
+                label={`${t.metrics.blocks || "blocks"}`}
+              />
+            </>
+          )}
+        </SimpleGrid>
       </SimpleGrid>
-      <SimpleGrid columns={{ sm: 1, md: 3, lg: 6 }} spacing={4} mb={4}>
-        <CountPaper
-          count={mainnetTxCount}
-          label={`${t.metrics.transactions || "transactions"} (Mainnet)`}
-        />
-        <CountPaper
-          count={mainnetContractCount}
-          label={`${t.metrics.contracts || "contracts"} (Mainnet)`}
-        />
-        <CountPaper
-          count={mainnetBlockCount}
-          label={`${t.metrics.blocks || "blocks"} (Mainnet)`}
-        />
-        <CountPaper
-          count={testnetTxCount}
-          label={`${t.metrics.transactions || "transactions"} (Goerli)`}
-        />
-        <CountPaper
-          count={testnetContractCount}
-          label={`${t.metrics.contracts || "contracts"} (Goerli)`}
-        />
-        <CountPaper
-          count={testnetBlockCount}
-          label={`${t.metrics.blocks || "blocks"} (Goerli)`}
-        />
-      </SimpleGrid>
-
-      <Flex color="whiteAlpha.600">
-        <Text mr={2}>{t.metrics.data_sources || "Data sources"}: </Text>
-        <Link
-          isExternal
-          href="https://goerli.voyager.online"
-          _hover={{ textDecoration: "none", color: "whiteAlpha.500" }}
-          display="flex"
-          mr={2}
-        >
-          <Text mr={1}>Voyager</Text>
-          <FontAwesomeIcon icon={solid("up-right-from-square")} />
-        </Link>
-        <Text mr={2}>and</Text>
-        <Link
-          isExternal
-          href="https://etherscan.io/address/0xae0ee0a63a2ce6baeeffe56e7714fb4efe48d419"
-          _hover={{ textDecoration: "none", color: "whiteAlpha.500" }}
-          display="flex"
-          mr={2}
-        >
-          <Text mr={1}>Etherscan</Text>
-          <FontAwesomeIcon icon={solid("up-right-from-square")} />
-        </Link>
-      </Flex>
     </Box>
   );
 };
