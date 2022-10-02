@@ -5,7 +5,7 @@ import type { FC } from "react";
 import { useEffect, useState } from "react";
 import useInView from "react-cool-inview";
 
-import type { ResourceBundleItf, ResourceItf } from "../../../data/academy";
+import type { ResourceItf } from "../../../data/academy";
 import {
   allAcademyCategory,
   academyResourcesBundle,
@@ -20,6 +20,7 @@ const AcademyPage: FC = () => {
   const { t } = useTranslate();
   const [currentCategory, setCurrentCategory] = useState(allAcademyCategory[0]);
   const [currentResources, setCurrentResources] = useState<ResourceItf[]>(
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
     academyResourcesBundle[currentCategory.value]
   );
@@ -27,6 +28,7 @@ const AcademyPage: FC = () => {
   const [lastIndexLoaded, setLastIndexLoaded] = useState<number>(LOADED_STEPS);
 
   useEffect(() => {
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
     setCurrentResources(academyResourcesBundle[currentCategory.value]);
   }, [currentCategory]);

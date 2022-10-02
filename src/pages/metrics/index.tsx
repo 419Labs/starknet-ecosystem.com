@@ -1,4 +1,4 @@
-import { Box, Flex, HStack, Link, SimpleGrid, Text } from "@chakra-ui/layout";
+import { Box, Flex, Link, SimpleGrid, Text } from "@chakra-ui/layout";
 import { Switch } from "@chakra-ui/react";
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -36,12 +36,7 @@ const MetricsPage: FC = () => {
       >
         {t.common.subtitle_main}
       </Text>
-      <Flex
-        color="whiteAlpha.600"
-        fontSize="20px"
-        mb={4}
-        mt={2}
-      >
+      <Flex color="whiteAlpha.600" fontSize="20px" mb={4} mt={2}>
         <Text mr={2}>{t.metrics.data_coming_from || "Data coming from"} </Text>
         <Link
           isExternal

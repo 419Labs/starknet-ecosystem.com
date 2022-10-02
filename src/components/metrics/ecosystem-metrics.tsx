@@ -1,6 +1,4 @@
-import { Box, Flex, Link, SimpleGrid, Text } from "@chakra-ui/layout";
-import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Box, SimpleGrid } from "@chakra-ui/layout";
 import { formatUnits } from "ethers/lib/utils";
 import type { FC } from "react";
 import { useEffect, useState } from "react";
