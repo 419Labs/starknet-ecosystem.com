@@ -210,7 +210,12 @@ const JobListRaw: FC<Props> = ({ id, company, job, last, observe }) => {
         </Show>
       </Flex>
       <Collapse in={opened}>
-        <Flex direction="column" align="flex-start" h="full" px={{base: 0, xl: "88px"}}>
+        <Flex
+          direction="column"
+          align="flex-start"
+          h="full"
+          px={{ base: 0, xl: "88px" }}
+        >
           {renderJobDetails()}
           <Flex
             border="1px solid"

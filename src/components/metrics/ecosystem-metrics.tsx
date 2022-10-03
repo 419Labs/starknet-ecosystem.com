@@ -17,12 +17,24 @@ interface Props {
 }
 const EcosystemMetrics: FC<Props> = ({ isMainnet = true }: Props) => {
   const { t } = useTranslate();
-  const [mainnetTxCount, setMainnetTxCount] = useState<number>();
-  const [mainnetContractCount, setMainnetContractCount] = useState<number>();
-  const [mainnetBlockCount, setMainnetBlockCount] = useState<number>();
-  const [testnetTxCount, setTestnetTxCount] = useState<number>();
-  const [testnetContractCount, setTestnetContractCount] = useState<number>();
-  const [testnetBlockCount, setTestnetBlockCount] = useState<number>();
+  const [mainnetTxCount, setMainnetTxCount] = useState<number | undefined>(
+    undefined
+  );
+  const [mainnetContractCount, setMainnetContractCount] = useState<
+    number | undefined
+  >(undefined);
+  const [mainnetBlockCount, setMainnetBlockCount] = useState<
+    number | undefined
+  >(undefined);
+  const [testnetTxCount, setTestnetTxCount] = useState<number | undefined>(
+    undefined
+  );
+  const [testnetContractCount, setTestnetContractCount] = useState<
+    number | undefined
+  >(undefined);
+  const [testnetBlockCount, setTestnetBlockCount] = useState<
+    number | undefined
+  >(undefined);
   const [bridgeMetrics, setBridgeMetrics] = useState<BridgeMetrics>();
   const [testnetBridgeMetrics, setTestnetBridgeMetrics] =
     useState<BridgeMetrics>();
@@ -52,7 +64,7 @@ const EcosystemMetrics: FC<Props> = ({ isMainnet = true }: Props) => {
                     parseFloat(formatUnits(bridgeMetrics.balance)) *
                       bridgeMetrics.ethValue
                   )} $ ($${bridgeMetrics.ethValue}/ETH)`
-                : ""
+                : undefined
             }
           />
         ) : (
