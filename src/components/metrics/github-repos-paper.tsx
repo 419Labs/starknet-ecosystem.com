@@ -1,4 +1,13 @@
-import { Box, Flex, HStack, Link, SimpleGrid, Text } from "@chakra-ui/layout";
+import {
+  Box,
+  Flex,
+  HStack,
+  Link,
+  SimpleGrid,
+  Stack,
+  Text,
+} from "@chakra-ui/layout";
+import { Skeleton, SkeletonText } from "@chakra-ui/react";
 import { solid, brands } from "@fortawesome/fontawesome-svg-core/import.macro";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import type { FC } from "react";
@@ -34,8 +43,20 @@ const GithubReposPaper: FC = () => {
     ).then((repos) => setGithubRepos(repos));
   }, []);
 
+  const renderSkeleton = () => {
+    return githubReposToFollow.map(() => {
+      return (
+        <Stack pr={4}>
+          <Skeleton h={4} />;
+          <Skeleton h={4} w="80%" />;
+        </Stack>
+      );
+    });
+  };
+
   return (
     <Card>
+      {/* Because of static repos, we know that if there is 0 repos, fetching is in progress */}
       <Flex direction="column">
         <Flex justify="space-between" alignItems="flex-start" mb={4}>
           <HStack as="h3" mb={4} fontSize="lg" fontWeight="bold">
@@ -57,30 +78,32 @@ const GithubReposPaper: FC = () => {
         </Flex>
         {githubRepos ? (
           <SimpleGrid columns={2} spacing={4}>
-            {githubRepos.map((repo) => (
-              <Link
-                key={repo.id}
-                _hover={{ textDecoration: "none", opacity: 0.5 }}
-                href={repo.url}
-                isExternal
-              >
-                <Text fontSize="md">{repo.name}</Text>
-                <HStack spacing={3} mt={1} color="whiteAlpha.600">
-                  <HStack fontSize="sm" spacing={1}>
-                    <FontAwesomeIcon icon={solid("eye")} />
-                    <Text>{repo.subscribersCount}</Text>
-                  </HStack>
-                  <HStack fontSize="sm" spacing={1}>
-                    <FontAwesomeIcon icon={solid("code-fork")} />
-                    <Text>{repo.forksCount}</Text>
-                  </HStack>
-                  <HStack fontSize="sm" spacing={1}>
-                    <FontAwesomeIcon icon={solid("star")} />
-                    <Text>{repo.stargazersCount}</Text>
-                  </HStack>
-                </HStack>
-              </Link>
-            ))}
+            {githubRepos.length > 0
+              ? githubRepos.map((repo) => (
+                  <Link
+                    key={repo.id}
+                    _hover={{ textDecoration: "none", opacity: 0.5 }}
+                    href={repo.url}
+                    isExternal
+                  >
+                    <Text fontSize="md">{repo.name}</Text>
+                    <HStack spacing={3} mt={1} color="whiteAlpha.600">
+                      <HStack fontSize="sm" spacing={1}>
+                        <FontAwesomeIcon icon={solid("eye")} />
+                        <Text>{repo.subscribersCount}</Text>
+                      </HStack>
+                      <HStack fontSize="sm" spacing={1}>
+                        <FontAwesomeIcon icon={solid("code-fork")} />
+                        <Text>{repo.forksCount}</Text>
+                      </HStack>
+                      <HStack fontSize="sm" spacing={1}>
+                        <FontAwesomeIcon icon={solid("star")} />
+                        <Text>{repo.stargazersCount}</Text>
+                      </HStack>
+                    </HStack>
+                  </Link>
+                ))
+              : renderSkeleton()}
           </SimpleGrid>
         ) : (
           <ErrorData>
