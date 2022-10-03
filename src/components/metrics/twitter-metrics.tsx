@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import type { TweetCount } from "../../models/tweet-metric";
 import { MetricsApi } from "../../services/metrics-api.service";
 import Card from "../card/Card";
+import CardContentLoading from "../card/CardContentLoading";
 
 import TwitterTrend from "./twitter-trend";
 
@@ -20,6 +21,9 @@ const TwitterMetrics: FC = () => {
     MetricsApi.fetchTweetCounts("cairo").then(setCairoCounts);
   }, []);
 
+  const renderCard = (data: TweetCount[] | undefined) => {
+    return data ? <TwitterTrend values={data} /> : <CardContentLoading />;
+  };
   return (
     <SimpleGrid columns={{ sm: 1, md: 2, lg: 3 }} spacing={4}>
       <Card>
@@ -31,15 +35,9 @@ const TwitterMetrics: FC = () => {
           </TabList>
 
           <TabPanels>
-            <TabPanel p={0}>
-              <TwitterTrend values={starknetCounts} />
-            </TabPanel>
-            <TabPanel p={0}>
-              <TwitterTrend values={starkwareCounts} />
-            </TabPanel>
-            <TabPanel p={0}>
-              <TwitterTrend values={cairoCounts} />
-            </TabPanel>
+            <TabPanel p={0}>{renderCard(starknetCounts)}</TabPanel>
+            <TabPanel p={0}>{renderCard(starkwareCounts)}</TabPanel>
+            <TabPanel p={0}>{renderCard(cairoCounts)}</TabPanel>
           </TabPanels>
         </Tabs>
       </Card>

@@ -26,6 +26,7 @@ import type {
 import { MetricsApi } from "../../services/metrics-api.service";
 import { toNpmDownloadsChart } from "../../services/metrics.service";
 import Card from "../card/Card";
+import CardContentLoading from "../card/CardContentLoading";
 
 ChartJS.register(
   Filler,
@@ -90,7 +91,7 @@ const NpmDownloadsPaper: FC<Props> = ({ name, label }) => {
   }
 
   const renderLittleSkeleton = () => {
-    return <Skeleton h={2} w="30px"/>;
+    return <Skeleton h={2} w="30px" />;
   };
   return (
     <Card>
@@ -225,9 +226,7 @@ const NpmDownloadsPaper: FC<Props> = ({ name, label }) => {
           </HStack>
         </>
       ) : (
-        <Flex h="full" w="full" justify="center" align="center">
-          <Spinner h="48px" w="48px" />
-        </Flex>
+        <CardContentLoading />
       )}
     </Card>
   );

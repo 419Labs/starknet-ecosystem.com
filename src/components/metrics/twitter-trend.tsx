@@ -68,6 +68,9 @@ const TwitterTrend: FC<Props> = ({ values }) => {
     <Card p={0} pt={5}>
       <Line
         options={{
+          animation: {
+            duration: 0,
+          },
           responsive: true,
           elements: { point: { radius: 0 } },
           hover: { mode: "nearest", intersect: true },
