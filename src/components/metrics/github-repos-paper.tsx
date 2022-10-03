@@ -44,9 +44,9 @@ const GithubReposPaper: FC = () => {
   }, []);
 
   const renderSkeleton = () => {
-    return githubReposToFollow.map(() => {
+    return githubReposToFollow.map(({ name }) => {
       return (
-        <Stack pr={4}>
+        <Stack pr={4} key={`skeleton-github-${name}`}>
           <Skeleton h={4} />;
           <Skeleton h={4} w="80%" />;
         </Stack>
