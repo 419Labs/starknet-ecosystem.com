@@ -98,7 +98,7 @@ const EcosystemMetrics: FC<Props> = ({ isMainnet = true }: Props) => {
           )}
         </SimpleGrid>
       </SimpleGrid>
-      <Flex color="whiteAlpha.600" fontSize="20px" mb={4} mt={2}>
+      <Flex color="whiteAlpha.600" fontSize="sm" mt={2}>
         <Text mr={2}>{t.metrics.data_coming_from || "Data coming from"} </Text>
         <Link
           isExternal
