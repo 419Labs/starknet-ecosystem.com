@@ -44,6 +44,7 @@ const frTranslate: TranslateState = {
   },
   jobs: {
     apply: "Postuler",
+    apply_long: "Postuler pour ce job",
   },
   metrics: {
     title: "Métriques de l'écosystème",

@@ -44,6 +44,7 @@ const enTranslate: TranslateState = {
   },
   jobs: {
     apply: "Apply now",
+    apply_long: "Apply for this job",
     is_hiring: " is hiring a",
     description: "Description",
     requirements: "Requirements",

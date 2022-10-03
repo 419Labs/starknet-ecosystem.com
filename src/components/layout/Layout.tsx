@@ -14,8 +14,8 @@ function Layout({ children }: LayoutProps) {
       zIndex={1}
       position="relative"
       maxW="2100px"
-      width={{ sm: "100%", md: "80%" }}
-      px={{ sm: 4, md: 0 }}
+      width={{ base: "100%", lg: "80%" }}
+      px={{ sm: 4, lg: 0 }}
       direction="column"
       margin="0 auto"
       h="100%"

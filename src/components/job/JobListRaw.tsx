@@ -7,7 +7,7 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/layout";
-import { Button, Collapse, Image } from "@chakra-ui/react";
+import { Show, Button, Collapse, Image } from "@chakra-ui/react";
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import dayjs from "dayjs";
@@ -47,35 +47,51 @@ const JobListRaw: FC<Props> = ({ id, company, job, last, observe }) => {
   if (!company || !job) return null;
 
   const renderJobDetails = () => {
-    return (
-      <Flex direction="column" align="flex-start" h="full" pl="88px">
-        {job && company ? (
-          <Flex direction="column">
-            {/* Networks */}
-            <Box mt={4}>
-              <NetworkLogos network={company.network} />
-            </Box>
-            <JobDetailSections currentJob={job} />
-            <HStack
-              spacing={1}
-              my={4}
-              pb={4}
-              fontSize="sm"
-              fontWeight="light"
-              color="whiteAlpha.600"
-            >
-              <Text>{t.jobs.published || "Published"}</Text>
-              <b>
-                <JobCreatedFrom createdAt={dayjs(job.createdOn)} />
-              </b>
-              <Text>{t.jobs.ago || "Ago"}</Text>
-            </HStack>
-          </Flex>
-        ) : (
-          // No jobs to show
-          <span>{t.jobs.no_selected || "No job selected"}</span>
-        )}
+    return job && company ? (
+      <Flex direction="column">
+        {/* Networks */}
+        <Box mt={4}>
+          <NetworkLogos network={company.network} />
+        </Box>
+        <JobDetailSections currentJob={job} />
+        <HStack
+          spacing={1}
+          my={4}
+          pb={4}
+          fontSize="sm"
+          fontWeight="light"
+          color="whiteAlpha.600"
+        >
+          <Text>{t.jobs.published || "Published"}</Text>
+          <b>
+            <JobCreatedFrom createdAt={dayjs(job.createdOn)} />
+          </b>
+          <Text>{t.jobs.ago || "Ago"}</Text>
+        </HStack>
       </Flex>
+    ) : (
+      // No jobs to show
+      <span>{t.jobs.no_selected || "No job selected"}</span>
+    );
+  };
+
+  const renderApplyBtn = (label: string) => {
+    return (
+      <Link
+        w="full"
+        isExternal
+        href={job.applyLink}
+        _hover={{ textDecoration: "none" }}
+      >
+        <Button
+          w="full"
+          variant="outline"
+          bg="blue"
+          onClick={(event) => event.stopPropagation()}
+        >
+          {label || "Apply"}
+        </Button>
+      </Link>
     );
   };
 
@@ -98,7 +114,7 @@ const JobListRaw: FC<Props> = ({ id, company, job, last, observe }) => {
       bg="primary.700"
       borderRadius="md"
       py={4}
-      pr={4}
+      px={4}
       _hover={{
         backgroundColor: "primary.700",
         ".apply-btn": {
@@ -114,7 +130,7 @@ const JobListRaw: FC<Props> = ({ id, company, job, last, observe }) => {
         justify="space-between"
         align="center"
       >
-        <Flex justify="flex-start" align="center" h="full" w="88px" px={5}>
+        <Flex justify="flex-start" pl={0} pr={5} h="full" w="88px">
           <Image
             w="full"
             src={`/logos/${company.logo}`}
@@ -131,7 +147,7 @@ const JobListRaw: FC<Props> = ({ id, company, job, last, observe }) => {
           <Text
             fontSize="lg"
             fontWeight="bold"
-            whiteSpace="nowrap"
+            whiteSpace="normal"
             overflow="hidden"
             textOverflow="ellipsis"
           >
@@ -159,49 +175,62 @@ const JobListRaw: FC<Props> = ({ id, company, job, last, observe }) => {
           </VStack>
         </VStack>
         {/* Tags */}
-        <Stack
-          flex={2}
-          my={2}
-          direction="row"
-          spacing={0}
-          wrap="wrap"
-          shouldWrapChildren
-          justify="flex-start"
-        >
-          {job.remote && (
-            <Box mr={1} mb={2}>
-              <StyledTag key="remote" selected value="Remote" size="md" />
-            </Box>
-          )}
-          {job.tags.map((tag) => (
-            <Box mr={1} mb={2} key={tag}>
-              <StyledTag key={tag} value={tag} size="md" />
-            </Box>
-          ))}
-        </Stack>
-        <Box
-          flex={1}
-          textAlign="end"
-          opacity={0}
-          className="apply-btn"
-          transition="all .2s linear"
-        >
-          <Link
-            isExternal
-            href={job.applyLink}
-            _hover={{ textDecoration: "none" }}
+        <Show above="xl">
+          <Stack
+            flex={2}
+            my={2}
+            direction="row"
+            spacing={0}
+            wrap="wrap"
+            shouldWrapChildren
+            justify="flex-start"
           >
-            <Button
-              variant="outline"
-              bg="blue"
-              onClick={(event) => event.stopPropagation()}
-            >
-              {t.jobs.apply || "Apply"}
-            </Button>
-          </Link>
-        </Box>
+            {job.remote && (
+              <Box mr={1} mb={2}>
+                <StyledTag key="remote" selected value="Remote" size="md" />
+              </Box>
+            )}
+            {job.tags.map((tag) => (
+              <Box mr={1} mb={2} key={tag}>
+                <StyledTag key={tag} value={tag} size="md" />
+              </Box>
+            ))}
+          </Stack>
+        </Show>
+        <Show above="md">
+          <Box
+            flex={1}
+            textAlign="end"
+            opacity={0}
+            className="apply-btn"
+            transition="all .2s linear"
+          >
+            {renderApplyBtn(t.jobs.apply)}
+          </Box>
+        </Show>
       </Flex>
-      <Collapse in={opened}>{renderJobDetails()}</Collapse>
+      <Collapse in={opened}>
+        <Flex direction="column" align="flex-start" h="full" px={{base: 0, xl: "88px"}}>
+          {renderJobDetails()}
+          <Flex
+            border="1px solid"
+            borderColor="whiteAlpha.300"
+            direction="column"
+            w="full"
+            p={4}
+            borderRadius="xl"
+          >
+            {renderApplyBtn(t.jobs.apply_long)}
+            <HStack align="flex-start" mt={4}>
+              <Text>👉</Text>
+              <Text fontSize="sm" color="whiteAlpha.600">
+                Please reference you found the job on starknet-ecosystem.com,
+                this helps us get more companies to post here, thanks!
+              </Text>
+            </HStack>
+          </Flex>
+        </Flex>
+      </Collapse>
     </Flex>
   );
 };
