@@ -32,8 +32,10 @@ const Home = ({ allProjects }: Props) => {
       .filter((project: Project) => {
         return filter === tagAll || project.tags.indexOf(filter.value) !== -1;
       })
-      .sort((project1, project2) =>
-        project1.name.toLowerCase().localeCompare(project2.name.toLowerCase())
+      .sort(
+        (project1, project2) =>
+          (project2.socialMetrics?.twitterFollower || 0) -
+          (project1.socialMetrics?.twitterFollower || 0)
       );
     const newProjects = filteredProjects
       .slice(0, lastIndexLoaded)

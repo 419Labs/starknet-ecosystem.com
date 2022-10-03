@@ -3,6 +3,14 @@ import type { Network } from "../src/models/company";
 
 import type { Tag } from "./tag";
 
+export interface SocialMetrics {
+  date: number;
+  socialActivity: number;
+  tweetWithStarknet: number;
+  twitterCount: number;
+  twitterFollower: number;
+}
+
 export interface Project {
   id: string;
   name: string;
@@ -15,6 +23,7 @@ export interface Project {
   isTestnetLive: boolean;
   token?: string;
   technologies?: any;
+  socialMetrics?: SocialMetrics;
 }
 
 export interface ProjectItf extends Project {
