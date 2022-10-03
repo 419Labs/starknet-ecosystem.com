@@ -1,4 +1,4 @@
-import { SimpleGrid } from "@chakra-ui/layout";
+import {SimpleGrid, Text} from "@chakra-ui/layout";
 import type { FC } from "react";
 import { useEffect, useState } from "react";
 
@@ -7,6 +7,7 @@ import { MetricsApi } from "../../services/metrics-api.service";
 import Card from "../card/Card";
 
 import TwitterTrend from "./twitter-trend";
+import {Tab, TabList, TabPanel, TabPanels, Tabs} from "@chakra-ui/tabs";
 
 const TwitterMetrics: FC = () => {
   const [starknetCounts, setStarknetCounts] = useState<TweetCount[]>();
@@ -22,13 +23,25 @@ const TwitterMetrics: FC = () => {
   return (
     <SimpleGrid columns={{ sm: 1, md: 2, lg: 3 }} spacing={4}>
       <Card>
-        <TwitterTrend keyword="starknet" values={starknetCounts} />
-      </Card>
-      <Card>
-        <TwitterTrend keyword="starkware" values={starkwareCounts} />
-      </Card>
-      <Card>
-        <TwitterTrend keyword="cairo" values={cairoCounts} />
+        <Tabs variant="line" colorScheme="brand">
+          <TabList>
+            <Tab>#starknet</Tab>
+            <Tab>#starkware</Tab>
+            <Tab>#cairo</Tab>
+          </TabList>
+
+          <TabPanels>
+            <TabPanel p={0}>
+              <TwitterTrend values={starknetCounts} />
+            </TabPanel>
+            <TabPanel p={0}>
+              <TwitterTrend values={starkwareCounts} />
+            </TabPanel>
+            <TabPanel p={0}>
+              <TwitterTrend values={cairoCounts} />
+            </TabPanel>
+          </TabPanels>
+        </Tabs>
       </Card>
     </SimpleGrid>
   );

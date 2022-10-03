@@ -1,6 +1,6 @@
-import { Box, Flex, Link, SimpleGrid, Text } from "@chakra-ui/layout";
+import { Box, Flex, HStack, Link, SimpleGrid, Text } from "@chakra-ui/layout";
 import { Switch } from "@chakra-ui/react";
-import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
+import { brands, solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import type { FC } from "react";
 import { useState } from "react";
@@ -62,19 +62,28 @@ const MetricsPage: FC = () => {
       </Flex>
       <Flex w="full" direction="column" mt={24}>
         <Box mb={8} w="full">
-          <Flex direction="row" justify="flex-start" align="center" mb={4}>
+          <Flex direction={{ base: "column", md: "row" }} mb={4}>
             <Text as="h2" mr={8} fontSize="2xl" fontWeight="bold">
               {t.metrics.developer_tools || "Developer tools"}
             </Text>
-            <Switch
-              isChecked={isMainnet}
-              onChange={(event) => setIsMainnet(event.target.checked)}
-            />
-            <Text ml={2} fontSize="sm" fontWeight="bold">
-              {isMainnet ? "Mainnet" : "Testnet - Goerli"}
-            </Text>
+            <Flex
+              justify="flex-start"
+              align="center"
+              mb={{ base: 4, md: 0 }}
+              mt={{ base: 2, md: 0 }}
+            >
+              <Switch
+                isChecked={isMainnet}
+                onChange={(event) => setIsMainnet(event.target.checked)}
+              />
+              <Text ml={2} fontSize="sm" fontWeight="bold">
+                {isMainnet ? "Mainnet" : "Testnet - Goerli"}
+              </Text>
+            </Flex>
           </Flex>
           <EcosystemMetrics isMainnet={isMainnet} />
+        </Box>
+        <Box mb={8} w="full">
           <Text as="h2" mb={4} fontSize="2xl" fontWeight="bold" w="full">
             {t.metrics.developer_tools || "Developer tools"}
           </Text>
@@ -85,9 +94,14 @@ const MetricsPage: FC = () => {
           </SimpleGrid>
         </Box>
         <Box mb={8} w="full">
-          <Text as="h2" mb={4} fontSize="2xl" fontWeight="bold" w="full">
-            Twitter
-          </Text>
+          <HStack mb={4}>
+            <Text>
+              <FontAwesomeIcon fontSize="24px" icon={brands("twitter")} />
+            </Text>
+            <Text as="h2" fontSize="2xl" fontWeight="bold" w="full">
+              Twitter trends
+            </Text>
+          </HStack>
           <TwitterMetrics />
         </Box>
       </Flex>

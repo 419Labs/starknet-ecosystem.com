@@ -1,5 +1,4 @@
-import { Box, Flex, HStack, Link, Text, VStack } from "@chakra-ui/layout";
-import { Button } from "@chakra-ui/react";
+import { Box, Flex, HStack, Text, VStack, Link } from "@chakra-ui/layout";
 import { useTheme } from "@emotion/react";
 import { brands, solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -82,10 +81,10 @@ const NpmDownloadsPaper: FC<Props> = ({ name, label }) => {
       );
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
-      gradient.addColorStop(0, theme.colors.brand["900"]);
+      gradient.addColorStop(0, theme.colors.primary["500"]);
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
-      gradient.addColorStop(1, theme.colors.brand["400"]);
+      gradient.addColorStop(1, theme.colors.primary["300"]);
     }
 
     return gradient;
@@ -139,6 +138,19 @@ const NpmDownloadsPaper: FC<Props> = ({ name, label }) => {
             xAxis: {
               display: false,
             },
+            y: {
+              grid: {
+                display: false,
+              },
+              ticks: {
+                // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                // @ts-ignore
+                color: theme.colors.whiteAlpha["600"],
+                font: {
+                  size: 12,
+                },
+              },
+            },
           },
           plugins: {
             tooltip: {
@@ -183,16 +195,25 @@ const NpmDownloadsPaper: FC<Props> = ({ name, label }) => {
         }}
       />
       <HStack
-        fontSize="xs"
-        color="whiteAlpha.600"
+        fontSize="sm"
         mt={3}
         justifyContent="center"
+        onClick={() => setCumulative(!cumulative)}
+        opacity={0.5}
+        transition=".4s all ease"
+        _hover={{
+          opacity: 1,
+        }}
       >
-        <Button size="sm" onClick={() => setCumulative(!cumulative)}>
+        <Text as="button" size="sm">
           {cumulative
             ? t.common.cumulative_chart ?? "Cumulative chart"
             : t.common.non_cumulative_chart ?? "Non cumulative chart"}
-        </Button>
+        </Text>
+        <FontAwesomeIcon
+          fontSize="14px"
+          icon={solid("arrow-right-arrow-left")}
+        />
       </HStack>
     </Card>
   );

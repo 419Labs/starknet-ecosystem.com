@@ -59,7 +59,7 @@ const EcosystemMetrics: FC<Props> = ({ isMainnet = true }: Props) => {
             count={
               testnetBridgeMetrics && formatUnits(testnetBridgeMetrics.balance)
             }
-            label="Ether in bride"
+            label="Ether in bridge"
           />
         )}
         <SimpleGrid columns={{ base: 1, md: 3 }} spacing={4}>

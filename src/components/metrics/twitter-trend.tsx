@@ -1,7 +1,4 @@
-import { Flex, HStack, Text, VStack } from "@chakra-ui/layout";
 import { useTheme } from "@emotion/react";
-import { brands } from "@fortawesome/fontawesome-svg-core/import.macro";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   CategoryScale,
   Chart as ChartJS,
@@ -19,6 +16,7 @@ import { Line } from "react-chartjs-2";
 
 import type { TweetCount } from "../../models/tweet-metric";
 import Card from "../card/Card";
+import colors from "../../styles/customTheme/colors";
 
 ChartJS.register(
   Filler,
@@ -32,11 +30,10 @@ ChartJS.register(
 );
 
 interface Props {
-  keyword: string;
   values: TweetCount[] | undefined;
 }
 
-const TwitterTrend: FC<Props> = ({ keyword, values }) => {
+const TwitterTrend: FC<Props> = ({ values }) => {
   const theme = useTheme();
 
   if (!values) return null;
@@ -59,31 +56,40 @@ const TwitterTrend: FC<Props> = ({ keyword, values }) => {
       );
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
-      gradient.addColorStop(0, theme.colors.brand["900"]);
+      gradient.addColorStop(0, theme.colors.primary["500"]);
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
-      gradient.addColorStop(1, theme.colors.brand["400"]);
+      gradient.addColorStop(1, theme.colors.primary["300"]);
     }
 
     return gradient;
   }
 
   return (
-    <Card>
-      <VStack alignItems="flex-start" spacing={0} mb={4}>
-        <Flex w="full" justify="space-between" alignItems="flex-start" mb={1}>
-          <HStack as="h3" fontSize="lg" fontWeight="bold">
-            <FontAwesomeIcon fontSize="24px" icon={brands("twitter")} />
-            <Text ml={1}>{`Tweets with keyword "${keyword}"`}</Text>
-          </HStack>
-        </Flex>
-      </VStack>
+    <Card p={0} pt={5}>
       <Line
         options={{
           responsive: true,
           elements: { point: { radius: 0 } },
           hover: { mode: "nearest", intersect: true },
-          scales: {},
+          scales: {
+            y: {
+              grid: {
+                display: false,
+              },
+              ticks: {
+                // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                // @ts-ignore
+                color: theme.colors.whiteAlpha["600"],
+                font: {
+                  size: 12,
+                },
+              },
+            },
+            x: {
+              display: false,
+            },
+          },
           plugins: {
             tooltip: { mode: "index", intersect: false },
             filler: { propagate: true },
@@ -99,7 +105,6 @@ const TwitterTrend: FC<Props> = ({ keyword, values }) => {
               fill: true,
               borderWidth: 2,
               tension: 0.4,
-              label: keyword,
               data: values.map((count) => count.count),
               borderColor(context) {
                 const { chart } = context;

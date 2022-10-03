@@ -6,6 +6,7 @@ import Button from "./components/button";
 import Card from "./components/card";
 import Input from "./components/input";
 import Menu from "./components/menu";
+import Tabs from "./components/tabs";
 import fonts from "./fonts";
 
 const globalStyles: Styles = {
@@ -33,6 +34,7 @@ const customTheme = extendTheme({
     Input,
     Menu,
     Card,
+    Tabs,
   },
 });
 
