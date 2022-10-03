@@ -1,7 +1,7 @@
 export interface Job {
   key: string;
   title: string;
-  companyId: number;
+  projectId: string;
   compensation?: {
     from: number;
     to: number;

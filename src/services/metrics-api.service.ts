@@ -5,7 +5,6 @@ import type { GithubRepo } from "../models/github-repo";
 import type { NpmDownloadsDto } from "../models/npm-downloads";
 import type { TweetCount } from "../models/tweet-metric";
 
-// const STARKNET_DB_BASE_URL = "http://localhost:8080";
 const STARKNET_DB_BASE_URL = "https://api.starknet-db.com";
 
 const fetchGithubRepo = (

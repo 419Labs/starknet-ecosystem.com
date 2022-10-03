@@ -1,23 +1,37 @@
 import { GridItem, SimpleGrid, Text } from "@chakra-ui/layout";
 import { Image } from "@chakra-ui/react";
+import { useRouter } from "next/router";
 import type { FC } from "react";
+import { useEffect, useState } from "react";
 
-import { allProjects } from "../../../data/ecosystem";
+import type { Project } from "../../../data/ecosystem";
 import HighlightedText from "../../components/layout/HighlightedText";
 import ProjectsInfos from "../../components/project/ProjectsInfos";
-import TeamInfos from "../../components/project/TeamInfos";
-import { useTranslate } from "../../context/TranslateProvider";
+import { EcosystemApi } from "../../services/ecosystem-api.service";
 
 const ProjectPage: FC = () => {
-  const { t } = useTranslate();
+  const router = useRouter();
+  const { id } = router.query;
   // TODO Fetch correct project by UUID in service side props
-  const project = allProjects[0];
+  const [project, setProject] = useState<Project>();
+  const [error, setError] = useState<boolean>(false);
 
-  const getHighlighted = () => {
-    return project.name.split(" ")[0];
-  };
+  useEffect(() => {
+    if (typeof id === "string") {
+      EcosystemApi.fetchProjectById(id)
+        .then(setProject)
+        .catch(() => setError(true));
+    } else {
+      setError(true);
+    }
+  }, [id]);
 
-  const getText = () => {
+  if (!project && error) return <p>404</p>; // TODO 404 page
+  if (!project) return <p>Loading</p>; // TODO loading
+
+  const getHighlighted = (): string => project.name.split(" ")[0];
+
+  const getText = (): string => {
     const words = project.name.split(" ");
     if (words.length === 1) return "";
     return words.slice(1, words.length).join(" ");
@@ -39,7 +53,7 @@ const ProjectPage: FC = () => {
     >
       <GridItem w="full" area="banner">
         <Image
-          src="/arf_banner.png"
+          src={project.network.twitterBanner ?? project.image}
           width="full"
           borderRadius="lg"
           position="relative"
@@ -57,12 +71,12 @@ const ProjectPage: FC = () => {
           text={getText()}
         />
         <Text mt={8} textAlign="start" color="whiteAlpha.600" fontSize="md">
-          {t.common.subtitle_main}
+          {project.description}
         </Text>
       </GridItem>
-      <GridItem w="full" area="team">
-        <TeamInfos />
-      </GridItem>
+      {/* <GridItem w="full" area="team"> */}
+      {/*  <TeamInfos /> */}
+      {/* </GridItem> */}
     </SimpleGrid>
   );
 };

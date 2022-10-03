@@ -73,16 +73,8 @@ function CardProject({ index, project }: CardProjectProps) {
       mt="20px"
       w="full"
       transition=".4s ease all"
-      _hover={{
-        marginTop: "16px",
-      }}
-      onClick={() =>
-        router.push({
-          pathname: "/projects",
-          // TODO when API available, fetch data from getSeverSideProps in project page
-          // query: {uuid: project.uuid},
-        })
-      }
+      _hover={{ marginTop: "16px" }}
+      onClick={() => router.push({ pathname: `/projects/${project.id}` })}
     >
       <Box position="relative">
         <Flex

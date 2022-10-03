@@ -1,12 +1,12 @@
-import { Flex, HStack, Text, VStack } from "@chakra-ui/layout";
-import { Hide, Image } from "@chakra-ui/react";
+import { Flex, HStack, Text } from "@chakra-ui/layout";
 import type { FC } from "react";
+import { useEffect, useState } from "react";
 
 import type { Project } from "../../../data/ecosystem";
+import allJobs from "../../../data/job";
 import Link from "../layout/Link";
 import NetworkLogos from "../layout/NetworkLogos";
 
-import ImageTooltip from "./ImageTooltip";
 import ProjectsInfosDetails from "./ProjectsInfosDetails";
 
 interface Props {
@@ -14,52 +14,58 @@ interface Props {
 }
 
 const ProjectsInfos: FC<Props> = ({ project }) => {
-  const renderTechStack = () => {
-    return (
-      <Flex direction="column">
-        <ProjectsInfosDetails
-          title="Tech stack"
-          value={
-            <HStack wrap="wrap" spacing={0}>
-              <ImageTooltip
-                img={
-                  <Image
-                    mr={1}
-                    src="/tech-logos/next-logo.png"
-                    objectFit="fill"
-                    height="24px"
-                  />
-                }
-                tooltipText="Nextjs"
-              />
-              <ImageTooltip
-                img={
-                  <Image
-                    mr={1}
-                    src="/tech-logos/spring-logo.png"
-                    objectFit="fill"
-                    height="24px"
-                  />
-                }
-                tooltipText="Spring"
-              />
-              <ImageTooltip
-                img={
-                  <Image
-                    mr={1}
-                    src="/tech-logos/cairo-logo.png"
-                    objectFit="fill"
-                    height="24px"
-                  />
-                }
-                tooltipText="Cairo"
-              />
-            </HStack>
-          }
-        />
-      </Flex>
-    );
-  };
+  const [jobCount, setJobCount] = useState(0);
+
+  useEffect(() => {
+    setJobCount(allJobs.filter((job) => job.projectId === project?.id).length);
+  }, [project]);
+
+  // const renderTechStack = () => {
+  //   return (
+  //     <Flex direction="column">
+  //       <ProjectsInfosDetails
+  //         title="Tech stack"
+  //         value={
+  //           <HStack wrap="wrap" spacing={0}>
+  //             <ImageTooltip
+  //               img={
+  //                 <Image
+  //                   mr={1}
+  //                   src="/tech-logos/next-logo.png"
+  //                   objectFit="fill"
+  //                   height="24px"
+  //                 />
+  //               }
+  //               tooltipText="Nextjs"
+  //             />
+  //             <ImageTooltip
+  //               img={
+  //                 <Image
+  //                   mr={1}
+  //                   src="/tech-logos/spring-logo.png"
+  //                   objectFit="fill"
+  //                   height="24px"
+  //                 />
+  //               }
+  //               tooltipText="Spring"
+  //             />
+  //             <ImageTooltip
+  //               img={
+  //                 <Image
+  //                   mr={1}
+  //                   src="/tech-logos/cairo-logo.png"
+  //                   objectFit="fill"
+  //                   height="24px"
+  //                 />
+  //               }
+  //               tooltipText="Cairo"
+  //             />
+  //           </HStack>
+  //         }
+  //       />
+  //     </Flex>
+  //   );
+  // };
   if (!project) return null;
   return (
     <Flex direction="column" align="flex-start">
@@ -82,26 +88,28 @@ const ProjectsInfos: FC<Props> = ({ project }) => {
             title="Socials"
             value={<NetworkLogos network={project.network} />}
           />
-          <ProjectsInfosDetails
-            title="Token"
-            value={
-              <HStack>
-                <Text color="whiteAlpha.600">AVNU - </Text>
-                <Link
-                  href="/"
-                  color="primary.200"
-                  hoverOpacity=".5"
-                  fontWeight="bold"
-                >
-                  0x1234...5678
-                </Link>
-              </HStack>
-            }
-          />
-          <ProjectsInfosDetails
-            title="Founded"
-            value={<Text color="whiteAlpha.600">2021</Text>}
-          />
+          {project.token && (
+            <ProjectsInfosDetails
+              title="Token"
+              value={
+                <HStack>
+                  <Text color="whiteAlpha.600">{project.token}</Text>
+                  {/* <Link */}
+                  {/*  href="/" */}
+                  {/*  color="primary.200" */}
+                  {/*  hoverOpacity=".5" */}
+                  {/*  fontWeight="bold" */}
+                  {/* > */}
+                  {/*  0x1234...5678 */}
+                  {/* </Link> */}
+                </HStack>
+              }
+            />
+          )}
+          {/* <ProjectsInfosDetails */}
+          {/*  title="Founded" */}
+          {/*  value={<Text color="whiteAlpha.600">2021</Text>} */}
+          {/* /> */}
         </Flex>
         <Flex
           direction="column"
@@ -113,38 +121,42 @@ const ProjectsInfos: FC<Props> = ({ project }) => {
           }}
           mr={12}
         >
-          <ProjectsInfosDetails
-            title="Contracts"
-            value={
-              <VStack align="flex-start" spacing={0}>
-                <Link
-                  href="/"
-                  color="primary.200"
-                  hoverOpacity=".5"
-                  fontWeight="bold"
-                >
-                  0x1234...5678
-                </Link>
-                <Link
-                  href="/"
-                  color="primary.200"
-                  hoverOpacity=".5"
-                  fontWeight="bold"
-                >
-                  0x1234...5678
-                </Link>
-              </VStack>
-            }
-          />
-          <ProjectsInfosDetails
-            title="Audited"
-            value={<Text color="whiteAlpha.600">No</Text>}
-          />
+          {/* <ProjectsInfosDetails */}
+          {/*  title="Contracts" */}
+          {/*  value={ */}
+          {/*    <VStack align="flex-start" spacing={0}> */}
+          {/*      <Link */}
+          {/*        href="/" */}
+          {/*        color="primary.200" */}
+          {/*        hoverOpacity=".5" */}
+          {/*        fontWeight="bold" */}
+          {/*      > */}
+          {/*        0x1234...5678 */}
+          {/*      </Link> */}
+          {/*      <Link */}
+          {/*        href="/" */}
+          {/*        color="primary.200" */}
+          {/*        hoverOpacity=".5" */}
+          {/*        fontWeight="bold" */}
+          {/*      > */}
+          {/*        0x1234...5678 */}
+          {/*      </Link> */}
+          {/*    </VStack> */}
+          {/*  } */}
+          {/* /> */}
+          {/* <ProjectsInfosDetails */}
+          {/*  title="Audited" */}
+          {/*  value={<Text color="whiteAlpha.600">No</Text>} */}
+          {/* /> */}
           <ProjectsInfosDetails
             title="Jobs"
             value={
               <HStack>
-                <Text color="whiteAlpha.600">3 open positions</Text>
+                <Text color="whiteAlpha.600">
+                  {jobCount === 0
+                    ? "No open positon"
+                    : `${jobCount} open positions`}
+                </Text>
                 <Link
                   href="/"
                   color="primary.200"
@@ -156,9 +168,9 @@ const ProjectsInfos: FC<Props> = ({ project }) => {
               </HStack>
             }
           />
-          <Hide below="xl">{renderTechStack()}</Hide>
+          {/* <Hide below="xl">{renderTechStack()}</Hide> */}
         </Flex>
-        <Hide above="xl">{renderTechStack()}</Hide>
+        {/* <Hide above="xl">{renderTechStack()}</Hide> */}
       </Flex>
     </Flex>
   );
