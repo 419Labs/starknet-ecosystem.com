@@ -16,7 +16,6 @@ import { Line } from "react-chartjs-2";
 
 import type { TweetCount } from "../../models/tweet-metric";
 import Card from "../card/Card";
-import colors from "../../styles/customTheme/colors";
 
 ChartJS.register(
   Filler,

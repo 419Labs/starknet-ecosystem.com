@@ -1,4 +1,5 @@
-import {SimpleGrid, Text} from "@chakra-ui/layout";
+import { SimpleGrid } from "@chakra-ui/layout";
+import { Tab, TabList, TabPanel, TabPanels, Tabs } from "@chakra-ui/tabs";
 import type { FC } from "react";
 import { useEffect, useState } from "react";
 
@@ -7,7 +8,6 @@ import { MetricsApi } from "../../services/metrics-api.service";
 import Card from "../card/Card";
 
 import TwitterTrend from "./twitter-trend";
-import {Tab, TabList, TabPanel, TabPanels, Tabs} from "@chakra-ui/tabs";
 
 const TwitterMetrics: FC = () => {
   const [starknetCounts, setStarknetCounts] = useState<TweetCount[]>();
