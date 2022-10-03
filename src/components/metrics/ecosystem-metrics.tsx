@@ -1,4 +1,6 @@
-import { Box, SimpleGrid } from "@chakra-ui/layout";
+import { Box, Flex, Link, SimpleGrid, Text } from "@chakra-ui/layout";
+import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { formatUnits } from "ethers/lib/utils";
 import type { FC } from "react";
 import { useEffect, useState } from "react";
@@ -96,6 +98,30 @@ const EcosystemMetrics: FC<Props> = ({ isMainnet = true }: Props) => {
           )}
         </SimpleGrid>
       </SimpleGrid>
+      <Flex color="whiteAlpha.600" fontSize="20px" mb={4} mt={2}>
+        <Text mr={2}>{t.metrics.data_coming_from || "Data coming from"} </Text>
+        <Link
+          isExternal
+          href="https://goerli.voyager.online"
+          _hover={{ textDecoration: "none", color: "whiteAlpha.900" }}
+          display="flex"
+          mr={2}
+        >
+          <Text mr={1}>Voyager</Text>
+          <FontAwesomeIcon icon={solid("up-right-from-square")} />
+        </Link>
+        <Text mr={2}>and</Text>
+        <Link
+          isExternal
+          href="https://etherscan.io/address/0xae0ee0a63a2ce6baeeffe56e7714fb4efe48d419"
+          _hover={{ textDecoration: "none", color: "whiteAlpha.900" }}
+          display="flex"
+          mr={2}
+        >
+          <Text mr={1}>Etherscan</Text>
+          <FontAwesomeIcon icon={solid("up-right-from-square")} />
+        </Link>
+      </Flex>
     </Box>
   );
 };

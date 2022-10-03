@@ -1,9 +1,10 @@
 import type { GithubRepo } from "./github-repo";
 import type { NpmDownloads, NpmDownloadsChart } from "./npm-downloads";
 
+const starknetjs = "starknet.js";
 export const aGitHubRepo = (): GithubRepo => ({
   id: "418545583",
-  name: "starknet.js",
+  name: starknetjs,
   fullName: "0xs34n/starknet.js",
   url: "https://github.com/0xs34n/starknet.js",
   description: "JavaScript library for StarkNet",
@@ -16,9 +17,10 @@ export const aGitHubRepo = (): GithubRepo => ({
 
 export const aNpmDownloads = (): NpmDownloads => ({
   start: "2022-04-06",
+  // eslint-disable-next-line sonarjs/no-duplicate-string
   end: "2022-04-20",
   package: "starknet",
-  label: "starknet.js",
+  label: starknetjs,
   downloads: [
     {
       downloads: 342,
@@ -26,6 +28,7 @@ export const aNpmDownloads = (): NpmDownloads => ({
     },
     {
       downloads: 200,
+      // eslint-disable-next-line sonarjs/no-duplicate-string
       day: "2022-04-07",
     },
     {
@@ -50,10 +53,12 @@ export const aNpmDownloads = (): NpmDownloads => ({
     },
     {
       downloads: 277,
+      // eslint-disable-next-line sonarjs/no-duplicate-string
       day: "2022-04-13",
     },
     {
       downloads: 235,
+      // eslint-disable-next-line sonarjs/no-duplicate-string
       day: "2022-04-14",
     },
     {
@@ -85,7 +90,7 @@ export const aNpmDownloads = (): NpmDownloads => ({
 
 export const aNpmDownloadsChart = (): NpmDownloadsChart => ({
   package: "starknet",
-  label: "starknet.js",
+  label: starknetjs,
   downloads: [
     {
       start: "2022-04-07",
@@ -102,7 +107,7 @@ export const aNpmDownloadsChart = (): NpmDownloadsChart => ({
 
 export const aCumulativeNpmDownloadsChart = (): NpmDownloadsChart => ({
   package: "starknet",
-  label: "starknet.js",
+  label: starknetjs,
   downloads: [
     {
       start: "2022-04-07",

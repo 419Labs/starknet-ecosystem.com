@@ -2,6 +2,8 @@ import type { DeepPartial, Theme } from "@chakra-ui/react";
 
 const Button: DeepPartial<Theme["components"]["Button"]> = {
   baseStyle: {
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
     outline: "none",
     fontVariant: "none",
     textDecoration: "none !important",
@@ -10,6 +12,7 @@ const Button: DeepPartial<Theme["components"]["Button"]> = {
     _dark: {
       color: "whiteAlpha.900",
       border: "1px solid",
+      // eslint-disable-next-line sonarjs/no-duplicate-string
       borderColor: "primary.700",
       bg: "transparent",
       _hover: {
@@ -24,11 +27,14 @@ const Button: DeepPartial<Theme["components"]["Button"]> = {
   },
   variants: {
     outline: {
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
       _dark: {
         outline: "none",
         bg: "primary.200",
         borderColor: "primary.200",
         _hover: {
+          // eslint-disable-next-line sonarjs/no-duplicate-string
           bg: "primary.300",
           borderColor: "primary.300",
         },

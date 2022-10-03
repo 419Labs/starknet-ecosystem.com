@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import type React from "react";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 
 import en from "../../assets/locales/en";
 import fr from "../../assets/locales/fr";
@@ -46,12 +46,21 @@ export function TranslateProvider({
   };
   const [locale, setLocale] = useState<TranslateState>(getLocale());
 
+  const getLocalCallback = useCallback(() => {
+    return getLocale();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   useEffect(() => {
-    setLocale(getLocale);
-  }, [router.locale]);
+    setLocale(getLocalCallback);
+  }, [getLocalCallback, router.locale]);
+
+  const test = useMemo(() => {
+    return { t: locale, locale: router.locale };
+  }, [locale, router.locale]);
 
   return (
-    <TranslateContext.Provider value={{ t: locale, locale: router.locale }}>
+    <TranslateContext.Provider value={test}>
       {children}
     </TranslateContext.Provider>
   );

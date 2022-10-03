@@ -1,6 +1,6 @@
-import { Box, Flex, HStack, Link, SimpleGrid, Text } from "@chakra-ui/layout";
+import { Box, Flex, HStack, SimpleGrid, Text } from "@chakra-ui/layout";
 import { Switch } from "@chakra-ui/react";
-import { brands, solid } from "@fortawesome/fontawesome-svg-core/import.macro";
+import { brands } from "@fortawesome/fontawesome-svg-core/import.macro";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import type { FC } from "react";
 import { useState } from "react";
@@ -36,30 +36,6 @@ const MetricsPage: FC = () => {
       >
         {t.common.subtitle_main}
       </Text>
-      <Flex color="whiteAlpha.600" fontSize="20px" mb={4} mt={2}>
-        <Text mr={2}>{t.metrics.data_coming_from || "Data coming from"} </Text>
-        <Link
-          isExternal
-          href="https://goerli.voyager.online"
-          _hover={{ textDecoration: "none", color: "whiteAlpha.900" }}
-          display="flex"
-          mr={2}
-        >
-          <Text mr={1}>Voyager</Text>
-          <FontAwesomeIcon icon={solid("up-right-from-square")} />
-        </Link>
-        <Text mr={2}>and</Text>
-        <Link
-          isExternal
-          href="https://etherscan.io/address/0xae0ee0a63a2ce6baeeffe56e7714fb4efe48d419"
-          _hover={{ textDecoration: "none", color: "whiteAlpha.900" }}
-          display="flex"
-          mr={2}
-        >
-          <Text mr={1}>Etherscan</Text>
-          <FontAwesomeIcon icon={solid("up-right-from-square")} />
-        </Link>
-      </Flex>
       <Flex w="full" direction="column" mt={24}>
         <Box mb={8} w="full">
           <Flex direction={{ base: "column", md: "row" }} mb={4}>

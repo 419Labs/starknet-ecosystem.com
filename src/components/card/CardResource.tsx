@@ -61,7 +61,7 @@ function CardResource({ index, resource }: CardResourceProps) {
             overflow="hidden"
             textOverflow="ellipsis"
             display="-webkit-box"
-            sx={{ "-webkit-line-clamp": "3", "-webkit-box-orient": "vertical" }}
+            sx={{ WebkitLineClamp: "3", WebkitBoxOrient: "vertical" }}
           >
             {description}
           </Text>

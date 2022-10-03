@@ -72,8 +72,7 @@ const MenuButton = ({ menus, text, mainGroupTitle, icon }: MenuButtonProps) => {
       autoSelect={false}
       isLazy
       id="more-menu-id"
-      matchWidth
-      placement="bottom-end"
+      placement="auto"
     >
       <ChakraMenuButton as={Button}>
         <Flex direction="row" align="center" justify="center">
