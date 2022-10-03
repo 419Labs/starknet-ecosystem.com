@@ -1,5 +1,5 @@
-import { Flex, Stack, Text } from "@chakra-ui/layout";
-import { Skeleton, SkeletonText } from "@chakra-ui/react";
+import { Flex, Text } from "@chakra-ui/layout";
+import { Skeleton } from "@chakra-ui/react";
 import type { FC } from "react";
 
 import { formatCompactNumber } from "../../services/number.service";

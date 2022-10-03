@@ -7,7 +7,7 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/layout";
-import { Skeleton, SkeletonText } from "@chakra-ui/react";
+import { Skeleton } from "@chakra-ui/react";
 import { solid, brands } from "@fortawesome/fontawesome-svg-core/import.macro";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import type { FC } from "react";

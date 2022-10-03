@@ -1,5 +1,5 @@
 import { Box, Flex, HStack, Text, VStack, Link } from "@chakra-ui/layout";
-import { Skeleton, Spinner } from "@chakra-ui/react";
+import { Skeleton } from "@chakra-ui/react";
 import { useTheme } from "@emotion/react";
 import { brands, solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
