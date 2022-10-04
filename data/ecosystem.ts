@@ -26,7 +26,7 @@ export const allProjects: Array<Project> = [
     name: "STARKSCAN",
     short_name: "STARKSCAN",
     description: "Next-generaation StarkNet Block Explorer",
-    tags: ["block explorer"],
+    tags: ["tools", "infrastructure"],
     logo: "starkscan.png",
     network: {
       website: "https://starkscan.co",
