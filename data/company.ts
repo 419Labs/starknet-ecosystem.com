@@ -284,7 +284,7 @@ const allCompanies: Company[] = [
       twitter: "https://twitter.com/rabbitx_io",
       medium: "https://blog.rabbitx.io",
       discord: "https://discord.gg/rabbitx",
-      telegram: "",
+      telegram: "https://t.me/RabbitX_Official",
     },
   },
 ];
