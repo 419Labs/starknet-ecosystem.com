@@ -158,7 +158,7 @@ const ProjectsInfos: FC<Props> = ({ project }) => {
                     : `${jobCount} open positions`}
                 </Text>
                 <Link
-                  href="/"
+                  href="/jobs"
                   color="primary.200"
                   hoverOpacity=".5"
                   fontWeight="bold"
