@@ -1,16 +1,6 @@
-import {
-  aCompany,
-  aJob,
-  aListOfCompany,
-  aListOfJob,
-} from "../models/job.fixture";
+import { aJob, aListOfJob, aProject } from "../models/job.fixture";
 
-import {
-  filterJobs,
-  findJobFromJobKey,
-  getAllTags,
-  getJobKey,
-} from "./job.service";
+import { filterJobs, getAllTags, getJobKey } from "./job.service";
 
 describe("Job service", () => {
   describe("getAllTags", () => {
@@ -34,37 +24,15 @@ describe("Job service", () => {
     it("should format job key", () => {
       // Given
       const job = aJob();
-      const company = aCompany();
+      const project = aProject();
 
       // When
-      const result = getJobKey(job, company);
+      const result = getJobKey(job, project);
 
       // Then
-      expect(result).toStrictEqual("alpha_road-senior__backend__developer-1");
-    });
-  });
-
-  describe("findJobFromJobKey", () => {
-    it("should find job from a job key", () => {
-      // Given
-      const key = "alpha_road-senior__backend__developer-1";
-
-      // When
-      const result = findJobFromJobKey(key, aListOfJob(), aListOfCompany());
-
-      // Then
-      expect(result).toStrictEqual(aListOfJob()[0]);
-    });
-
-    it("should return undefined when nothing matches the job key", () => {
-      // Given
-      const key = "alpha_road-senior-wrong__backend__developer-1";
-
-      // When
-      const result = findJobFromJobKey(key, aListOfJob(), aListOfCompany());
-
-      // Then
-      expect(result).toBe(undefined);
+      expect(result).toStrictEqual(
+        "alpha_road-senior__backend__developer-502b0dbc-5169-4db6-8796-36a968a798fd"
+      );
     });
   });
 

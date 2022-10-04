@@ -1,7 +1,8 @@
 import { Box, Flex, HStack, SimpleGrid, Text, VStack } from "@chakra-ui/layout";
+import { Input } from "@chakra-ui/react";
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import type { FC } from "react";
+import type { FC, ChangeEvent } from "react";
 import { useEffect, useState } from "react";
 import useInView from "react-cool-inview";
 
@@ -24,14 +25,22 @@ const AcademyPage: FC = () => {
     // @ts-ignore
     academyResourcesBundle[currentCategory.value]
   );
+  const [keyword, setKeyword] = useState<string>("");
   const LOADED_STEPS = 20;
   const [lastIndexLoaded, setLastIndexLoaded] = useState<number>(LOADED_STEPS);
 
   useEffect(() => {
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
-    setCurrentResources(academyResourcesBundle[currentCategory.value]);
-  }, [currentCategory]);
+    const resources = academyResourcesBundle[currentCategory.value].filter(
+      (resource: ResourceItf) =>
+        keyword === "" ||
+        resource.name.toLowerCase().includes(keyword.toLowerCase()) ||
+        resource.description.toLowerCase().includes(keyword.toLowerCase())
+    );
+    console.log(resources, keyword);
+    setCurrentResources(resources);
+  }, [keyword, currentCategory]);
 
   const { observe } = useInView({
     // When the last item comes to the viewport
@@ -41,6 +50,9 @@ const AcademyPage: FC = () => {
       setLastIndexLoaded(lastIndexLoaded + LOADED_STEPS);
     },
   });
+
+  const handleChangeKeyword = (event: ChangeEvent<HTMLInputElement>) =>
+    setKeyword(event.target.value);
 
   return (
     <Flex
@@ -72,6 +84,12 @@ const AcademyPage: FC = () => {
           }}
         />
         <VStack justify="flex-start" align="flex-start">
+          <Input
+            value={keyword}
+            onChange={handleChangeKeyword}
+            placeholder="Search"
+            mb={5}
+          />
           <Text fontSize="6xl" fontWeight="bold">
             Highlights 🔥
           </Text>

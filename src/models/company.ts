@@ -8,10 +8,3 @@ export interface Network {
   discord?: string;
   telegram?: string;
 }
-
-export interface Company {
-  id: number;
-  name: string;
-  network: Network;
-  logo: string;
-}

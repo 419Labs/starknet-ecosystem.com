@@ -1,10 +1,14 @@
-import type { Company } from "./company";
+import type { Project } from "../../data/ecosystem";
+
 import type { Job } from "./job";
+
+const ALPHA_ROAD_ID = "502b0dbc-5169-4db6-8796-36a968a798fd";
+const ALPHA_ROAD_NAME = "Alpha Road";
 
 export const aJob = (): Job => ({
   key: "1",
   title: "Senior / backend - developer",
-  companyId: 1,
+  projectId: ALPHA_ROAD_ID,
   compensation: {
     from: 200,
     to: 600,
@@ -28,31 +32,46 @@ export const aJob = (): Job => ({
 });
 
 export const aListOfJob = (): Job[] => [
-  { ...aJob(), title: "Senior / backend - developer", companyId: 1 },
-  { ...aJob(), title: "Senior backend developer", companyId: 1, remote: false },
+  {
+    ...aJob(),
+    title: "Senior / backend - developer",
+    projectId: ALPHA_ROAD_ID,
+  },
+  {
+    ...aJob(),
+    title: "Senior backend developer",
+    projectId: ALPHA_ROAD_ID,
+    remote: false,
+  },
   {
     ...aJob(),
     title: "Backend developer",
-    companyId: 2,
+    projectId: "502b0dbc-5169-4db6-8796-36a968a798f1",
     tags: ["test"],
   },
 ];
 
-export const aCompany = (): Company => ({
-  id: 1,
-  name: "Alpha Road",
+export const aProject = (): Project => ({
+  id: "502b0dbc-5169-4db6-8796-36a968a798fd",
+  name: ALPHA_ROAD_NAME,
+  shortName: ALPHA_ROAD_NAME,
+  description:
+    "Pioneer in DeFi L2 solution — Alpha Road aim at maximizing user investment returns by providing next gen DeFi experience and bespoke financial products.\n",
+  tags: ["defi", "nft"],
+  image: "alpharoad.png",
   network: {
-    website: "https://alpharoad.fi",
+    website: "https://testnet.app.alpharoad.fi",
     github: "",
     twitter: "https://twitter.com/alpharoad_fi",
     medium: "https://alpharoad.medium.com/",
     discord: "https://discord.gg/Bhfa3B2Gnq",
     telegram: "https://t.me/alpharoad_fi",
   },
-  logo: "alpharoad.png",
+  isLive: false,
+  isTestnetLive: true,
 });
 
-export const aListOfCompany = (): Company[] => [
-  { ...aCompany(), name: "Alpha Road", id: 1 },
-  { ...aCompany(), name: "test", id: 2 },
+export const aListOfProject = (): Project[] => [
+  { ...aProject(), name: "Alpha Road", id: "1" },
+  { ...aProject(), name: "test", id: "2" },
 ];

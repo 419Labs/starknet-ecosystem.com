@@ -8,12 +8,9 @@ const Input: DeepPartial<Theme["components"]["Input"]> = {
       outline: "none",
       boxShadow: "none !important",
       _dark: {
-        color: "whiteAlpha.900",
-        border: "2px solid",
-        borderColor: "gray.800",
-        bg: "black",
+        bg: "primary.700",
         _focus: {
-          borderColor: "brand.900",
+          borderColor: "primary.500",
         },
       },
     },

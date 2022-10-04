@@ -15,8 +15,8 @@ import { useRouter } from "next/router";
 import type { FC } from "react";
 import { useEffect, useState } from "react";
 
+import type { Project } from "../../../data/ecosystem";
 import { useTranslate } from "../../context/TranslateProvider";
-import type { Company } from "../../models/company";
 import type { Job } from "../../models/job";
 import NetworkLogos from "../layout/NetworkLogos";
 import StyledTag from "../layout/StyledTag";
@@ -26,13 +26,13 @@ import JobDetailSections from "./JobDetailSections";
 
 interface Props {
   id: string;
-  company: Company | undefined;
+  project: Project | undefined;
   job: Job;
   last: boolean;
   observe?: (element?: HTMLElement | null | undefined) => void;
 }
 
-const JobListRaw: FC<Props> = ({ id, company, job, last, observe }) => {
+const JobListRaw: FC<Props> = ({ id, project, job, last, observe }) => {
   const { locale } = useTranslate();
   const { t } = useTranslate();
   const [opened, setOpened] = useState(false);
@@ -44,14 +44,14 @@ const JobListRaw: FC<Props> = ({ id, company, job, last, observe }) => {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [query]);
-  if (!company || !job) return null;
+  if (!project || !job) return null;
 
   const renderJobDetails = () => {
-    return job && company ? (
+    return job && project ? (
       <Flex direction="column">
         {/* Networks */}
         <Box mt={4}>
-          <NetworkLogos network={company.network} />
+          <NetworkLogos network={project.network} />
         </Box>
         <JobDetailSections currentJob={job} />
         <HStack
@@ -133,8 +133,8 @@ const JobListRaw: FC<Props> = ({ id, company, job, last, observe }) => {
         <Flex justify="flex-start" pl={0} pr={5} h="full" w="88px">
           <Image
             w="full"
-            src={`/logos/${company.logo}`}
-            alt={`${company.name} logo`}
+            src={`/logos/${project.image}`}
+            alt={`${project.name} logo`}
           />
         </Flex>
         <VStack
@@ -153,7 +153,7 @@ const JobListRaw: FC<Props> = ({ id, company, job, last, observe }) => {
           >
             {job.title}
           </Text>
-          <Text fontSize="sm">{company.name}</Text>
+          <Text fontSize="sm">{project.name}</Text>
           <VStack
             fontSize="xs"
             align="flex-start"

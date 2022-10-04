@@ -1,16 +1,17 @@
 import { Flex, Text, VStack } from "@chakra-ui/layout";
+import { Input } from "@chakra-ui/react";
 import type { NextPage } from "next";
+import type { ChangeEvent } from "react";
 import { useEffect, useState } from "react";
 import useInView from "react-cool-inview";
 
 import { allAcademyCategory } from "../../../data/academy";
-import allCompanies from "../../../data/company";
+import { allProjects } from "../../../data/ecosystem";
 import allJobs from "../../../data/job";
 import JobTable from "../../components/job/JobTable";
 import HighlightedText from "../../components/layout/HighlightedText";
 import Menu from "../../components/layout/Menu";
 import { useTranslate } from "../../context/TranslateProvider";
-import type { Company } from "../../models/company";
 import type { Job } from "../../models/job";
 import type { JobFilter } from "../../models/job-filter";
 import { filterJobs } from "../../services/job.service";
@@ -20,7 +21,6 @@ const LOADED_STEPS = 25;
 const JobsPage: NextPage = () => {
   const { t } = useTranslate();
   const [lastIndexLoaded, setLastIndexLoaded] = useState<number>(LOADED_STEPS);
-  const [companies] = useState<Company[]>(allCompanies);
   const [jobs, setJobs] = useState<Job[]>([]);
   const [filters, setFilters] = useState<JobFilter>({
     remote: false,
@@ -43,6 +43,9 @@ const JobsPage: NextPage = () => {
       setLastIndexLoaded(lastIndexLoaded + LOADED_STEPS);
     },
   });
+
+  const handleChangeKeyword = (event: ChangeEvent<HTMLInputElement>) =>
+    setFilters({ ...filters, search: event.target.value });
 
   return (
     <Flex
@@ -75,12 +78,18 @@ const JobsPage: NextPage = () => {
           }}
         />
         <VStack w="full" justify="flex-start" align="flex-start">
+          <Input
+            value={filters.search}
+            onChange={handleChangeKeyword}
+            placeholder="Search job"
+            mb={5}
+          />
           <Text fontSize="6xl" fontWeight="bold">
             Featured
           </Text>
           <JobTable
+            projects={allProjects}
             jobs={jobs}
-            companies={companies}
             observe={observe}
             onFilterChanged={(updatedFilter) =>
               setFilters({ ...filters, ...updatedFilter })

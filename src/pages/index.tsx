@@ -1,6 +1,7 @@
 import { Box, Flex, SimpleGrid, Text } from "@chakra-ui/layout";
-import { Image } from "@chakra-ui/react";
+import { Image, Input } from "@chakra-ui/react";
 import type { GetServerSideProps } from "next";
+import type { ChangeEvent } from "react";
 import { useEffect, useState } from "react";
 import useInView from "react-cool-inview";
 
@@ -12,6 +13,7 @@ import HighlightedText from "../components/layout/HighlightedText";
 import Menu from "../components/layout/Menu";
 import { useTranslate } from "../context/TranslateProvider";
 import { EcosystemApi } from "../services/ecosystem-api.service";
+import { projectIncludesKeyword } from "../services/project.service";
 
 interface Props {
   allProjects: ProjectItf[];
@@ -26,11 +28,15 @@ const Home = ({ allProjects }: Props) => {
   const [filteredProjectsCount, setFilteredProjectsCount] =
     useState<number>(-1);
   const [lastIndexLoaded, setLastIndexLoaded] = useState<number>(LOADED_STEPS);
+  const [keyword, setKeyword] = useState<string>("");
 
   useEffect(() => {
     const filteredProjects = allProjects
       .filter((project: Project) => {
-        return filter === tagAll || project.tags.indexOf(filter.value) !== -1;
+        return (
+          (filter === tagAll || project.tags.indexOf(filter.value) !== -1) &&
+          projectIncludesKeyword(project, keyword)
+        );
       })
       .sort(
         (project1, project2) =>
@@ -51,7 +57,7 @@ const Home = ({ allProjects }: Props) => {
     setProjects(newProjects);
     setFilteredProjectsCount(filteredProjects.length);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [filter, lastIndexLoaded]);
+  }, [filter, keyword, lastIndexLoaded]);
 
   const { observe } = useInView({
     // When the last item comes to the viewport
@@ -61,6 +67,9 @@ const Home = ({ allProjects }: Props) => {
       setLastIndexLoaded(lastIndexLoaded + LOADED_STEPS);
     },
   });
+
+  const handleChangeKeyword = (event: ChangeEvent<HTMLInputElement>) =>
+    setKeyword(event.target.value);
 
   return (
     <Flex
@@ -99,6 +108,7 @@ const Home = ({ allProjects }: Props) => {
       >
         {t.common.subtitle_main}
       </Text>
+
       {/* Main part */}
       <Flex w="full" direction={{ base: "column", md: "row" }} mt={24}>
         <Menu
@@ -111,22 +121,36 @@ const Home = ({ allProjects }: Props) => {
             setFilteredProjectsCount(-1);
           }}
         />
+
         {projects && projects.length > 0 ? (
-          <SimpleGrid columns={{ sm: 1, md: 1, lg: 2, xl: 3 }} spacing="20px">
-            {projects.map((project: ProjectItf, index: number) => {
-              return (
-                <Box
-                  ref={index === projects.length - 1 ? observe : null}
-                  key={`project-${project.name}`}
-                  flex={1}
-                >
-                  <CardProject index={index} project={project} />
-                </Box>
-              );
-            })}
-          </SimpleGrid>
+          <Box>
+            <Input
+              value={keyword}
+              onChange={handleChangeKeyword}
+              placeholder="Search project"
+              mb={5}
+            />
+            <SimpleGrid columns={{ sm: 1, md: 1, lg: 2, xl: 3 }} spacing="20px">
+              {projects.map((project: ProjectItf, index: number) => {
+                return (
+                  <Box
+                    ref={index === projects.length - 1 ? observe : null}
+                    key={`project-${project.name}`}
+                    flex={1}
+                  >
+                    <CardProject index={index} project={project} />
+                  </Box>
+                );
+              })}
+            </SimpleGrid>
+          </Box>
         ) : (
           <Flex w="full" direction="column" align="center" opacity=".8">
+            <Input
+              value={keyword}
+              onChange={handleChangeKeyword}
+              placeholder="Search project"
+            />
             <Text fontSize="24px">{t.common.no_project}</Text>
             <Text mt={2} fontSize="18px">
               {t.common.maybe_yours}
