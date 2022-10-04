@@ -23,6 +23,23 @@ export interface ProjectItf extends Project {
 
 export const allProjects: Array<Project> = [
   {
+    name: "STARKSCAN",
+    short_name: "STARKSCAN",
+    description: "Next-generaation StarkNet Block Explorer",
+    tags: ["block explorer"],
+    logo: "starkscan.png",
+    network: {
+      website: "https://starkscan.co",
+      github: "https://github.com/starkscan",
+      twitter: "https://twitter.com/StarkscanCo",
+      medium: "",
+      discord: "https://discord.gg/Pdt4Wr6gx7",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: true,
+  },
+  {
     id: "e207d9e6-d1ca-422b-a50c-415e8748be21",
     name: "ZKEX: Multi-Chain DEX",
     short_name: "ZKEX",
