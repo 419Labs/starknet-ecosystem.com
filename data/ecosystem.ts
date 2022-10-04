@@ -1864,11 +1864,11 @@ export const allProjects: Array<Project> = [
     id: "8ec4255a-1092-4c6c-ab94-01fb9eee5526",
     name: "RabbitX",
     short_name: "RabbitX",
-    description: "High performance perpetuals exchange on Starknet",
+    description: "Perpetuals. Order book liquidity. A full crypto derivatives suite. Built atop Ethereum ZK rollups. No fees. Maximum security. Maximum leverage. DeFi, evolved.",
     tags: ["defi"],
     logo: "rabbitx.png",
     network: {
-      website: "https://rabbitx.io",
+      website: "https://rabbitx.io/?utm_source=starknet&utm_medium=organic&utm_campaign=ecosystem",
       github: "https://github.com/rabbitx-docs/apidocs",
       twitter: "https://twitter.com/rabbitx_io",
       medium: "https://blog.rabbitx.io",
