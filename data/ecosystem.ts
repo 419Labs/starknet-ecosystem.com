@@ -1842,4 +1842,22 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: true,
   },
+  {
+    id: "8ec4255a-1092-4c6c-ab94-01fb9eee5526",
+    name: "RabbitX",
+    short_name: "RabbitX",
+    description: "High performance perpetuals exchange on Starknet",
+    tags: ["defi"],
+    logo: "rabbitx.png",
+    network: {
+      website: "https://rabbitx.io",
+      github: "https://github.com/rabbitx-docs/apidocs",
+      twitter: "https://twitter.com/rabbitx_io",
+      medium: "https://blog.rabbitx.io",
+      discord: "https://discord.gg/rabbitx",
+      telegram: "https://t.me/RabbitX_Official",
+    },
+    isLive: false,
+    isTestnetLive: false,
+  }
 ];
