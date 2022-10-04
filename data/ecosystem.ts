@@ -23,6 +23,7 @@ export interface ProjectItf extends Project {
 
 export const allProjects: Array<Project> = [
   {
+    id: "a0627f79-af7d-4398-8936-5957eee99783",
     name: "STARKSCAN",
     short_name: "STARKSCAN",
     description: "Next-generaation StarkNet Block Explorer",
