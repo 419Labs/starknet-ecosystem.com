@@ -274,6 +274,19 @@ const allCompanies: Company[] = [
       telegram: "",
     },
   },
+  {
+    id: 22,
+    name: "RabbitX",
+    logo: "rabbitx.png",
+    network: {
+      website: "https://rabbitx.io",
+      github: "https://github.com/rabbitx-docs/apidocs",
+      twitter: "https://twitter.com/rabbitx_io",
+      medium: "https://blog.rabbitx.io",
+      discord: "https://discord.gg/rabbitx",
+      telegram: "https://t.me/RabbitX_Official",
+    },
+  },
 ];
 
 export default allCompanies;
