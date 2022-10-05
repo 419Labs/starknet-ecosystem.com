@@ -90,11 +90,11 @@ const AcademyPage: FC = () => {
             placeholder="Search"
             mb={5}
           />
-          <Text fontSize="6xl" fontWeight="bold">
+          {/* <Text fontSize="6xl" fontWeight="bold">
             Highlights 🔥
           </Text>
-          {/* Highlighted resources */}
-          {/* TODO Remove that & choose 3 resources that are hot / new / have interest ??? */}
+           Highlighted resources
+           TODO Remove that & choose 3 resources that are hot / new / have interest ???
           <SimpleGrid columns={{ sm: 1, lg: 2, xl: 3 }} spacing="20px">
             {academyResourcesBundle.learning
               .slice(0, 3)
@@ -113,7 +113,7 @@ const AcademyPage: FC = () => {
                   </Box>
                 );
               })}
-          </SimpleGrid>
+          </SimpleGrid> */}
           <Text pt={20} fontSize="6xl" fontWeight="bold">
             {currentCategory.label}
           </Text>

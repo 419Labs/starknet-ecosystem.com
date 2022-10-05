@@ -54,14 +54,14 @@ function CardResource({ index, resource }: CardResourceProps) {
         <Text as="h6" fontWeight="bold">
           {name}
         </Text>
-        <VStack align="flex-start">
+        <VStack align="flex-start" justify="space-between" h="full">
           <Text
-            fontSize="xs"
+            fontSize="sm"
             color="whiteAlpha.600"
             overflow="hidden"
             textOverflow="ellipsis"
             display="-webkit-box"
-            sx={{ WebkitLineClamp: "3", WebkitBoxOrient: "vertical" }}
+            sx={{ WebkitLineClamp: "2", WebkitBoxOrient: "vertical" }}
           >
             {description}
           </Text>
