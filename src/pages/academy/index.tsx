@@ -33,8 +33,7 @@ const AcademyPage: FC = () => {
 
   useEffect(() => {
     if (currentCategory.value === "contributions") {
-      setCurrentResources([]);
-      EcosystemApi.fetchContributions().then((contributions) =>
+      EcosystemApi.fetchContributions(keyword).then((contributions) =>
         setCurrentResources(
           contributions.map((contribution) => ({
             id: contribution.id,
@@ -142,7 +141,8 @@ const AcademyPage: FC = () => {
                 return (
                   <Box
                     ref={index === currentResources.length - 1 ? observe : null}
-                    key={`resource-${resource.name}`}
+                    // eslint-disable-next-line react/no-array-index-key
+                    key={`resource-${resource.name}-${index}`}
                     flex={1}
                   >
                     <CardResource index={index} resource={resource} />

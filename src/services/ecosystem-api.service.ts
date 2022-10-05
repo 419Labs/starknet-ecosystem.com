@@ -21,8 +21,8 @@ const fetchProjectById = (id: string): Promise<Project> =>
     return response.json();
   });
 
-const fetchContributions = (): Promise<Contribution[]> =>
-  fetch(`${STARKNET_DB_BASE_URL}/contributions?size=200`)
+const fetchContributions = (keyword: string): Promise<Contribution[]> =>
+  fetch(`${STARKNET_DB_BASE_URL}/contributions?size=100&keyword=${keyword}`)
     .then((response: Response) => {
       if (!response.ok) {
         throw new Error(`${response.statusText} while fetching contributions`);
