@@ -1,6 +1,5 @@
 import { Box, Flex, SimpleGrid, Text } from "@chakra-ui/layout";
 import { Image, Input } from "@chakra-ui/react";
-import type { GetServerSideProps } from "next";
 import type { ChangeEvent } from "react";
 import { useEffect, useState } from "react";
 import useInView from "react-cool-inview";
@@ -19,7 +18,7 @@ const Home = () => {
   const { t } = useTranslate();
   const LOADED_STEPS = 10;
   const tagAll = allTags[0];
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
   const [filter, setFilter] = useState(tagAll);
   const [allProjects, setAllProjects] = useState<Project[]>([]);
   const [projects, setProjects] = useState<ProjectItf[]>([]);

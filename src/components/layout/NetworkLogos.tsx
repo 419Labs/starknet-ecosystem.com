@@ -14,6 +14,7 @@ const NetworkLogos: FC<Props> = ({
   network: { website, telegram, twitter, medium, github, discord },
   justifyContent = "flex-start",
 }) => {
+  const hoverColor = "whiteAlpha.900";
   return (
     <HStack
       justifyContent={justifyContent}
@@ -27,7 +28,7 @@ const NetworkLogos: FC<Props> = ({
           isExternal
           href={website}
           _hover={{
-            color: "whiteAlpha.900",
+            color: hoverColor,
           }}
         >
           <FontAwesomeIcon icon={solid("globe")} />
@@ -38,7 +39,7 @@ const NetworkLogos: FC<Props> = ({
           isExternal
           href={twitter}
           _hover={{
-            color: "whiteAlpha.900",
+            color: hoverColor,
           }}
         >
           <FontAwesomeIcon icon={brands("twitter")} />
@@ -49,7 +50,7 @@ const NetworkLogos: FC<Props> = ({
           isExternal
           href={telegram}
           _hover={{
-            color: "whiteAlpha.900",
+            color: hoverColor,
           }}
         >
           <FontAwesomeIcon icon={brands("telegram")} />
@@ -60,7 +61,7 @@ const NetworkLogos: FC<Props> = ({
           isExternal
           href={discord}
           _hover={{
-            color: "whiteAlpha.900",
+            color: hoverColor,
           }}
         >
           <FontAwesomeIcon icon={brands("discord")} />
@@ -71,7 +72,7 @@ const NetworkLogos: FC<Props> = ({
           isExternal
           href={medium}
           _hover={{
-            color: "whiteAlpha.900",
+            color: hoverColor,
           }}
         >
           <FontAwesomeIcon icon={brands("medium")} />
@@ -82,7 +83,7 @@ const NetworkLogos: FC<Props> = ({
           isExternal
           href={github}
           _hover={{
-            color: "whiteAlpha.900",
+            color: hoverColor,
           }}
         >
           <FontAwesomeIcon icon={brands("github")} />
