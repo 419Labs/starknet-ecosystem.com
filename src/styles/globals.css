@@ -30,3 +30,61 @@ main {
   font-family: 'syne';
   src: url('/fonts/Syne-VariableFont_wght.ttf');
 }
+
+.dialog {
+  width: 100%;
+  height: 100%;
+  z-index: 101;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  mask: url(#c11) luminance;
+}
+
+.dialog-container {
+  color: #999;
+  width: 600px;
+  background-color: #eee; 
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 30px;
+  position: absolute;
+  top: 100px;
+  z-index: 100;
+  border-radius: 15px;
+}
+
+.dialog-icon {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.icon-yk_yuanquan_fill {
+  width: 64px;
+  height: 64px;
+}
+
+.icon-warning-full {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: 13px;
+}
+
+
+.dialog-content {
+  margin: 20px 0;
+}
+
+.dialog-button {
+  width: 100%;
+  border: #999 solid 1px;
+  border-radius: 2px;
+  padding: 6px;
+  color: #333;
+  font-size: large;
+}
