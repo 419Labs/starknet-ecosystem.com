@@ -15,20 +15,22 @@ import { useTranslate } from "../context/TranslateProvider";
 import { EcosystemApi } from "../services/ecosystem-api.service";
 import { projectIncludesKeyword } from "../services/project.service";
 
-interface Props {
-  allProjects: ProjectItf[];
-}
-
-const Home = ({ allProjects }: Props) => {
+const Home = () => {
   const { t } = useTranslate();
   const LOADED_STEPS = 10;
   const tagAll = allTags[0];
+  const [loading, setLoading] = useState(true);
   const [filter, setFilter] = useState(tagAll);
+  const [allProjects, setAllProjects] = useState<Project[]>([]);
   const [projects, setProjects] = useState<ProjectItf[]>([]);
   const [filteredProjectsCount, setFilteredProjectsCount] =
     useState<number>(-1);
   const [lastIndexLoaded, setLastIndexLoaded] = useState<number>(LOADED_STEPS);
   const [keyword, setKeyword] = useState<string>("");
+
+  useEffect(() => {
+    EcosystemApi.fetchEcosystemProjects(1000).then(setAllProjects);
+  }, []);
 
   useEffect(() => {
     const filteredProjects = allProjects
@@ -57,7 +59,7 @@ const Home = ({ allProjects }: Props) => {
     setProjects(newProjects);
     setFilteredProjectsCount(filteredProjects.length);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [filter, keyword, lastIndexLoaded]);
+  }, [filter, keyword, lastIndexLoaded, allProjects]);
 
   const { observe } = useInView({
     // When the last item comes to the viewport
@@ -110,7 +112,7 @@ const Home = ({ allProjects }: Props) => {
       </Text>
 
       {/* Main part */}
-      <Flex w="full" direction={{ base: "column", md: "row" }} mt={24}>
+      <Flex w="full" h="full" direction={{ base: "column", md: "row" }} mt={24}>
         <Menu
           typeText="Projects"
           tags={allTags}
@@ -121,15 +123,16 @@ const Home = ({ allProjects }: Props) => {
             setFilteredProjectsCount(-1);
           }}
         />
-
-        {projects && projects.length > 0 ? (
-          <Box>
-            <Input
-              value={keyword}
-              onChange={handleChangeKeyword}
-              placeholder="Search project"
-              mb={5}
-            />
+        <Flex direction="column" w="full" align="flex-end">
+          <Input
+            my={2}
+            mb={8}
+            maxW={{base: "inherit", md: "250px"}}
+            value={keyword}
+            onChange={handleChangeKeyword}
+            placeholder="Search project"
+          />
+          {projects && projects.length > 0 ? (
             <SimpleGrid columns={{ sm: 1, md: 1, lg: 2, xl: 3 }} spacing="20px">
               {projects.map((project: ProjectItf, index: number) => {
                 return (
@@ -143,36 +146,25 @@ const Home = ({ allProjects }: Props) => {
                 );
               })}
             </SimpleGrid>
-          </Box>
-        ) : (
-          <Flex w="full" direction="column" align="center" opacity=".8">
-            <Input
-              value={keyword}
-              onChange={handleChangeKeyword}
-              placeholder="Search project"
-            />
-            <Text fontSize="24px">{t.common.no_project}</Text>
-            <Text mt={2} fontSize="18px">
-              {t.common.maybe_yours}
-            </Text>
-          </Flex>
-        )}
+          ) : (
+            <Flex
+              w="full"
+              h="full"
+              direction="column"
+              justify="center"
+              align="center"
+              mt={{ base: 24, md: 0 }}
+            >
+              <Text fontSize="24px">{t.common.no_project}</Text>
+              <Text mt={2} fontSize="18px">
+                {t.common.maybe_yours}
+              </Text>
+            </Flex>
+          )}
+        </Flex>
       </Flex>
     </Flex>
   );
-};
-
-export const getServerSideProps: GetServerSideProps = async ({ res }) => {
-  res.setHeader(
-    "Cache-Control",
-    "public, s-maxage=3600, stale-while-revalidate=7200"
-  ); // Cache this for an hour
-  const allProjects = await EcosystemApi.fetchEcosystemProjects(1000);
-  return {
-    props: {
-      allProjects,
-    } as Props,
-  };
 };
 
 export default Home;

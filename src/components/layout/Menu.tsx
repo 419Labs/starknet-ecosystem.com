@@ -61,7 +61,7 @@ function Menu({
 
   const renderMobileMenu = () => {
     return (
-      <Flex w="full" align="center" justify="space-between" mb={8}>
+      <Flex w="full" align="center" justify="space-between" mb={4}>
         <Text>
           {getIndicationText()} {typeText}
         </Text>
