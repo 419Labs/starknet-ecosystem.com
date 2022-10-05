@@ -18,37 +18,73 @@ const NetworkLogos: FC<Props> = ({
     <HStack
       justifyContent={justifyContent}
       spacing={4}
-      fontSize="16px"
+      fontSize="18px"
       color="whiteAlpha.600"
       onClick={(e) => e.stopPropagation()}
     >
       {website && (
-        <Link isExternal href={website}>
+        <Link
+          isExternal
+          href={website}
+          _hover={{
+            color: "whiteAlpha.900",
+          }}
+        >
           <FontAwesomeIcon icon={solid("globe")} />
         </Link>
       )}
       {twitter && (
-        <Link isExternal href={twitter}>
+        <Link
+          isExternal
+          href={twitter}
+          _hover={{
+            color: "whiteAlpha.900",
+          }}
+        >
           <FontAwesomeIcon icon={brands("twitter")} />
         </Link>
       )}
       {telegram && (
-        <Link isExternal href={telegram}>
+        <Link
+          isExternal
+          href={telegram}
+          _hover={{
+            color: "whiteAlpha.900",
+          }}
+        >
           <FontAwesomeIcon icon={brands("telegram")} />
         </Link>
       )}
       {discord && (
-        <Link isExternal href={discord}>
+        <Link
+          isExternal
+          href={discord}
+          _hover={{
+            color: "whiteAlpha.900",
+          }}
+        >
           <FontAwesomeIcon icon={brands("discord")} />
         </Link>
       )}
       {medium && (
-        <Link isExternal href={medium}>
+        <Link
+          isExternal
+          href={medium}
+          _hover={{
+            color: "whiteAlpha.900",
+          }}
+        >
           <FontAwesomeIcon icon={brands("medium")} />
         </Link>
       )}
       {github && (
-        <Link isExternal href={github}>
+        <Link
+          isExternal
+          href={github}
+          _hover={{
+            color: "whiteAlpha.900",
+          }}
+        >
           <FontAwesomeIcon icon={brands("github")} />
         </Link>
       )}

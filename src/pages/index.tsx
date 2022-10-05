@@ -127,7 +127,7 @@ const Home = () => {
           <Input
             my={2}
             mb={8}
-            maxW={{base: "inherit", md: "250px"}}
+            maxW={{ base: "inherit", md: "250px" }}
             value={keyword}
             onChange={handleChangeKeyword}
             placeholder="Search project"
