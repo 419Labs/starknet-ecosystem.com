@@ -22,6 +22,10 @@ function CardResource({ index, resource }: CardResourceProps) {
     return `flat.${((index % 9) + 1) * 100}`;
   };
 
+  const handleClick = () => {
+    if (resource.link) window.open(resource.link, "_blank");
+  };
+
   return (
     <SimpleGrid
       minW="250px"
@@ -30,7 +34,7 @@ function CardResource({ index, resource }: CardResourceProps) {
         cursor: "pointer",
         marginTop: "-8px",
       }}
-      onClick={() => console.log("coucou")}
+      onClick={handleClick}
       columns={2}
       gridTemplateColumns="min-content auto"
     >

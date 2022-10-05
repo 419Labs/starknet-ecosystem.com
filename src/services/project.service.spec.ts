@@ -1,7 +1,11 @@
 import type { Project } from "../../data/ecosystem";
 import { aListOfProject } from "../models/job.fixture";
 
-import { findProjectById, projectIncludesKeyword } from "./project.service";
+import {
+  findProjectById,
+  projectIncludesKeyword,
+  shortenText,
+} from "./project.service";
 
 describe("Project service", () => {
   describe("projectIncludesKeyword", () => {
@@ -72,5 +76,20 @@ describe("Project service", () => {
       // Then
       expect(result).toBe(undefined);
     });
+  });
+
+  describe("shortenText", () => {
+    [
+      { text: "", maxLength: 10, expected: "" },
+      { text: "this is a test", maxLength: 10, expected: "this is a..." },
+    ].forEach(({ text, maxLength, expected }) =>
+      it(`should return '${expected}' when maxLength is '${maxLength}'`, () => {
+        // When
+        const result = shortenText(text, maxLength);
+
+        // Then
+        expect(result).toStrictEqual(expected);
+      })
+    );
   });
 });

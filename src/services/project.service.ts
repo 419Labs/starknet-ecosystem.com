@@ -13,3 +13,8 @@ export const findProjectById = (
   projects: Project[],
   id: string
 ): Project | undefined => projects.find((project) => project.id === id);
+
+export const shortenText = (text: string, maxLength: number): string => {
+  if (text.length <= maxLength) return text;
+  return `${text.substr(0, text.lastIndexOf(" ", maxLength))}...`;
+};

@@ -16,6 +16,8 @@ import CardResource from "../../components/card/CardResource";
 import HighlightedText from "../../components/layout/HighlightedText";
 import Menu from "../../components/layout/Menu";
 import { useTranslate } from "../../context/TranslateProvider";
+import { EcosystemApi } from "../../services/ecosystem-api.service";
+import { shortenText } from "../../services/project.service";
 
 const AcademyPage: FC = () => {
   const { t } = useTranslate();
@@ -30,6 +32,22 @@ const AcademyPage: FC = () => {
   const [lastIndexLoaded, setLastIndexLoaded] = useState<number>(LOADED_STEPS);
 
   useEffect(() => {
+    if (currentCategory.value === "contributions") {
+      setCurrentResources([]);
+      EcosystemApi.fetchContributions().then((contributions) =>
+        setCurrentResources(
+          contributions.map((contribution) => ({
+            id: contribution.id,
+            name: shortenText(contribution.title, 50),
+            description: contribution.projectName,
+            network: {},
+            link: `https://app.onlydust.xyz/contributions/${contribution.id}`,
+          }))
+        )
+      );
+      return;
+    }
+
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
     const resources = academyResourcesBundle[currentCategory.value].filter(
