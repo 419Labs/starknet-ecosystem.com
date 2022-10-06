@@ -1,5 +1,4 @@
 import { Box, Flex, HStack, SimpleGrid, Text, VStack } from "@chakra-ui/layout";
-import { Input } from "@chakra-ui/react";
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import type { FC, ChangeEvent } from "react";
@@ -15,6 +14,7 @@ import CardHighlight from "../../components/card/CardHighlight";
 import CardResource from "../../components/card/CardResource";
 import CardResourceSkeleton from "../../components/card/CardResourceSkeleton";
 import HighlightedText from "../../components/layout/HighlightedText";
+import Input from "../../components/layout/Input";
 import Menu from "../../components/layout/Menu";
 import { useTranslate } from "../../context/TranslateProvider";
 import { EcosystemApi } from "../../services/ecosystem-api.service";
@@ -131,10 +131,10 @@ const AcademyPage: FC = () => {
         />
         <Flex direction="column" w="full" align="flex-end">
           <Input
+            debounce={200}
             my={2}
             mb={8}
             maxW={{ base: "inherit", md: "250px" }}
-            value={keyword}
             onChange={handleChangeKeyword}
             placeholder="Search"
           />

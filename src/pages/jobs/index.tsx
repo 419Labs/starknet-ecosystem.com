@@ -1,5 +1,4 @@
 import { Flex, Text, VStack } from "@chakra-ui/layout";
-import { Input } from "@chakra-ui/react";
 import type { NextPage } from "next";
 import type { ChangeEvent } from "react";
 import { useEffect, useState } from "react";
@@ -10,6 +9,7 @@ import { allProjects } from "../../../data/ecosystem";
 import allJobs from "../../../data/job";
 import JobTable from "../../components/job/JobTable";
 import HighlightedText from "../../components/layout/HighlightedText";
+import Input from "../../components/layout/Input";
 import Menu from "../../components/layout/Menu";
 import { useTranslate } from "../../context/TranslateProvider";
 import type { Job } from "../../models/job";
@@ -79,7 +79,7 @@ const JobsPage: NextPage = () => {
         />
         <VStack w="full" justify="flex-start" align="flex-start">
           <Input
-            value={filters.search}
+            debounce={200}
             onChange={handleChangeKeyword}
             placeholder="Search job"
             mb={5}

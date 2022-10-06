@@ -1,5 +1,5 @@
 import { Box, Flex, SimpleGrid, Text } from "@chakra-ui/layout";
-import { Image, Input } from "@chakra-ui/react";
+import { Image } from "@chakra-ui/react";
 import type { ChangeEvent } from "react";
 import { useEffect, useState } from "react";
 import useInView from "react-cool-inview";
@@ -10,6 +10,7 @@ import { allTags } from "../../data/tag";
 import CardProject from "../components/card/CardProject";
 import CardProjectSkeleton from "../components/card/CardProjectSkeleton";
 import HighlightedText from "../components/layout/HighlightedText";
+import Input from "../components/layout/Input";
 import Menu from "../components/layout/Menu";
 import { useTranslate } from "../context/TranslateProvider";
 import { EcosystemApi } from "../services/ecosystem-api.service";
@@ -116,13 +117,13 @@ const Home = () => {
         {/* Big intro text */}
         <HighlightedText text={t.common.title_main_dapps} highlighted="1234" />
         <Box
-          boxSize="500px"
+          boxSize="400px"
           position="absolute"
           right="0"
-          top="-200px"
+          top="-100px"
           zIndex={0}
         >
-          <Image src="/astro.png" alt="Starknet Astro" />
+          <Image src="/astro_2.png" alt="Starknet Astro" />
         </Box>
       </Flex>
       {/* Sub intro text */}
@@ -151,10 +152,10 @@ const Home = () => {
         />
         <Flex direction="column" w="full" align="flex-end">
           <Input
+            debounce={200}
             my={2}
             mb={8}
             maxW={{ base: "inherit", md: "250px" }}
-            value={keyword}
             onChange={handleChangeKeyword}
             placeholder="Search project"
           />
