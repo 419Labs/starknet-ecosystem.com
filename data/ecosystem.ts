@@ -31,7 +31,7 @@ export const allProjects: Array<Project> = [
     logo: "",
     network: {
       website: "",
-      github: "https://github.com/FuzzingLabs",
+      github: "https://github.com/FuzzingLabs/thoth",
       twitter: "",
       medium: "",
       discord: "",
