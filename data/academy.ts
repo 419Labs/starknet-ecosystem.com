@@ -18,34 +18,6 @@ export interface ResourceItf extends Resource {
   tagsRef?: Tag[];
 }
 
-export const allAcademyCategory: Tag[] = [
-  {
-    value: "learning",
-    label: "Learn",
-    icon: "bridge",
-  },
-  {
-    value: "contributions",
-    label: "Contribute",
-    icon: "people-group",
-  },
-  {
-    value: "tools",
-    label: "Tools",
-    icon: "rocket",
-  },
-  {
-    value: "wallets",
-    label: "Wallets",
-    icon: "id-card",
-  },
-  {
-    value: "newsfeed",
-    label: "News & Infos",
-    icon: "gamepad",
-  },
-];
-
 // ======================================================================
 // Learning links
 // ======================================================================

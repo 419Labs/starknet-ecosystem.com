@@ -6,7 +6,7 @@ import useInView from "react-cool-inview";
 
 import type { Project, ProjectItf } from "../../data/ecosystem";
 import type { Tag } from "../../data/tag";
-import { allTags } from "../../data/tag";
+import { allEcosystemTags } from "../../data/tag";
 import CardProject from "../components/card/CardProject";
 import CardProjectSkeleton from "../components/card/CardProjectSkeleton";
 import HighlightedText from "../components/layout/HighlightedText";
@@ -19,7 +19,7 @@ import { projectIncludesKeyword } from "../services/project.service";
 const Home = () => {
   const { t } = useTranslate();
   const LOADED_STEPS = 10;
-  const tagAll = allTags[0];
+  const tagAll = allEcosystemTags[0];
   const [loading, setLoading] = useState(true);
   const [filter, setFilter] = useState(tagAll);
   const [allProjects, setAllProjects] = useState<Project[]>([]);
@@ -54,7 +54,7 @@ const Home = () => {
         const projectTags = project.tags;
         return {
           ...project,
-          tagsRef: allTags.filter((tagItem: Tag) => {
+          tagsRef: allEcosystemTags.filter((tagItem: Tag) => {
             return projectTags.includes(tagItem.value);
           }),
         };
@@ -142,7 +142,7 @@ const Home = () => {
       <Flex w="full" h="full" direction={{ base: "column", md: "row" }} mt={24}>
         <Menu
           typeText="Projects"
-          tags={allTags}
+          tags={allEcosystemTags}
           initialValue={tagAll}
           childCount={filteredProjectsCount}
           onChange={(newValue) => {

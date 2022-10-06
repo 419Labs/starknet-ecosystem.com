@@ -6,10 +6,8 @@ import { useEffect, useState } from "react";
 import useInView from "react-cool-inview";
 
 import type { ResourceItf } from "../../../data/academy";
-import {
-  allAcademyCategory,
-  academyResourcesBundle,
-} from "../../../data/academy";
+import { academyResourcesBundle } from "../../../data/academy";
+import { allAcademyTags } from "../../../data/tag";
 import CardHighlight from "../../components/card/CardHighlight";
 import CardResource from "../../components/card/CardResource";
 import CardResourceSkeleton from "../../components/card/CardResourceSkeleton";
@@ -23,7 +21,7 @@ import { shortenText } from "../../services/project.service";
 const AcademyPage: FC = () => {
   const { t } = useTranslate();
   const [loading, setLoading] = useState(false);
-  const [currentCategory, setCurrentCategory] = useState(allAcademyCategory[0]);
+  const [currentCategory, setCurrentCategory] = useState(allAcademyTags[0]);
   const [currentResources, setCurrentResources] = useState<ResourceItf[]>(
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
@@ -123,8 +121,8 @@ const AcademyPage: FC = () => {
       <Flex w="full" direction={{ base: "column", md: "row" }} mt={24}>
         <Menu
           typeText="Resources"
-          tags={allAcademyCategory}
-          initialValue={allAcademyCategory[0]}
+          tags={allAcademyTags}
+          initialValue={allAcademyTags[0]}
           onChange={(newValue) => {
             setCurrentCategory(newValue);
           }}

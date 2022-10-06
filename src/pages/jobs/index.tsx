@@ -1,12 +1,12 @@
-import { Flex, Text, VStack } from "@chakra-ui/layout";
+import { Flex, Text } from "@chakra-ui/layout";
 import type { NextPage } from "next";
 import type { ChangeEvent } from "react";
 import { useEffect, useState } from "react";
 import useInView from "react-cool-inview";
 
-import { allAcademyCategory } from "../../../data/academy";
 import { allProjects } from "../../../data/ecosystem";
 import allJobs from "../../../data/job";
+import { allJobTags } from "../../../data/tag";
 import JobTable from "../../components/job/JobTable";
 import HighlightedText from "../../components/layout/HighlightedText";
 import Input from "../../components/layout/Input";
@@ -22,6 +22,7 @@ const JobsPage: NextPage = () => {
   const { t } = useTranslate();
   const [lastIndexLoaded, setLastIndexLoaded] = useState<number>(LOADED_STEPS);
   const [jobs, setJobs] = useState<Job[]>([]);
+  const [filteredJobsCount, setFilteredJobsCount] = useState<number>(-1);
   const [filters, setFilters] = useState<JobFilter>({
     remote: false,
     search: "",
@@ -33,6 +34,7 @@ const JobsPage: NextPage = () => {
       .sort((job1, job2) => (job1.createdOn > job2.createdOn ? -1 : 1))
       .slice(0, lastIndexLoaded);
     setJobs(newJobs);
+    setFilteredJobsCount(newJobs.length);
   }, [filters, lastIndexLoaded]);
 
   const { observe } = useInView({
@@ -70,21 +72,23 @@ const JobsPage: NextPage = () => {
       <Flex w="full" direction={{ base: "column", md: "row" }} mt={24}>
         <Menu
           typeText="Jobs"
-          childCount={jobs.length}
-          tags={allAcademyCategory}
-          initialValue={allAcademyCategory[0]}
+          childCount={filteredJobsCount}
+          tags={allJobTags}
+          initialValue={allJobTags[0]}
           onChange={(newValue) => {
-            console.log(newValue);
+            const {value} = newValue;
+            setFilters({ ...filters, tags: value === "all" ? [] : [newValue.value] });
+            setFilteredJobsCount(-1);
           }}
         />
         <Flex direction="column" w="full" align="flex-end">
           <Input
-              debounce={200}
-              my={2}
-              mb={8}
-              maxW={{ base: "inherit", md: "250px" }}
-              onChange={handleChangeKeyword}
-              placeholder="Search"
+            debounce={200}
+            my={2}
+            mb={8}
+            maxW={{ base: "inherit", md: "250px" }}
+            onChange={handleChangeKeyword}
+            placeholder="Search"
           />
           <JobTable
             projects={allProjects}
