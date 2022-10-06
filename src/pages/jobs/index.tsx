@@ -76,8 +76,11 @@ const JobsPage: NextPage = () => {
           tags={allJobTags}
           initialValue={allJobTags[0]}
           onChange={(newValue) => {
-            const {value} = newValue;
-            setFilters({ ...filters, tags: value === "all" ? [] : [newValue.value] });
+            const { value } = newValue;
+            setFilters({
+              ...filters,
+              tags: value === "all" ? [] : [newValue.value],
+            });
             setFilteredJobsCount(-1);
           }}
         />
