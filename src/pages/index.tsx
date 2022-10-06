@@ -29,7 +29,9 @@ const Home = () => {
   const [keyword, setKeyword] = useState<string>("");
 
   useEffect(() => {
-    EcosystemApi.fetchEcosystemProjects(1000).then(setAllProjects).then(() => setLoading(false));
+    EcosystemApi.fetchEcosystemProjects(1000)
+      .then(setAllProjects)
+      .then(() => setLoading(false));
   }, []);
 
   useEffect(() => {
@@ -57,7 +59,7 @@ const Home = () => {
         };
       });
     setProjects(newProjects);
-    setFilteredProjectsCount(filteredProjects.length);
+    setFilteredProjectsCount(loading ? -1 : filteredProjects.length);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [filter, keyword, lastIndexLoaded, allProjects]);
 
@@ -77,6 +79,7 @@ const Home = () => {
     return Array(20)
       .fill(0)
       .map((_, index) => (
+        // eslint-disable-next-line react/no-array-index-key
         <Box key={`project-skeleton-${index}`} flex={1}>
           <CardProjectSkeleton />
         </Box>
