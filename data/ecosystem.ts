@@ -1877,5 +1877,23 @@ export const allProjects: Array<Project> = [
     },
     isLive: false,
     isTestnetLive: false,
-  }
+  },
+  {
+    id: "454453dd-c8a0-43ef-bc0e-d57296d8969f",
+    name: "CygnusDAO",
+    short_name: "Cygnus",
+    description: "Stablecoin Lending and Margin Trading Protocol designed specifically for Liquidity Providers across EVMs and StarkNet.",
+    tags: ["defi", "dao", "governance"],
+    logo: "cygnusdao.png",
+    network: {
+      website: "https://cygnusdao.finance",
+      github: "https://github.com/cygnusdao",
+      twitter: "https://twitter.com/CygnusDAO",
+      medium: "https://cygnusdao.medium.com/",
+      discord: "",
+      telegram: "",
+    },
+    isLive: false,
+    isTestnetLive: false,
+  },
 ];
