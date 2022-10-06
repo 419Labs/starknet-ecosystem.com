@@ -77,16 +77,15 @@ const JobsPage: NextPage = () => {
             console.log(newValue);
           }}
         />
-        <VStack w="full" justify="flex-start" align="flex-start">
+        <Flex direction="column" w="full" align="flex-end">
           <Input
-            debounce={200}
-            onChange={handleChangeKeyword}
-            placeholder="Search job"
-            mb={5}
+              debounce={200}
+              my={2}
+              mb={8}
+              maxW={{ base: "inherit", md: "250px" }}
+              onChange={handleChangeKeyword}
+              placeholder="Search"
           />
-          <Text fontSize="6xl" fontWeight="bold">
-            Featured
-          </Text>
           <JobTable
             projects={allProjects}
             jobs={jobs}
@@ -95,7 +94,7 @@ const JobsPage: NextPage = () => {
               setFilters({ ...filters, ...updatedFilter })
             }
           />
-        </VStack>
+        </Flex>
       </Flex>
     </Flex>
   );

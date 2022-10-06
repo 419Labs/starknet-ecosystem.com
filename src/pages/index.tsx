@@ -123,7 +123,7 @@ const Home = () => {
           top="-100px"
           zIndex={0}
         >
-          <Image src="/astro_2.png" alt="Starknet Astro" />
+          <Image src="/astro_3.png" alt="Starknet Astro" />
         </Box>
       </Flex>
       {/* Sub intro text */}
