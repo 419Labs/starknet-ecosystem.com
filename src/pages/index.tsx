@@ -170,14 +170,13 @@ const Home = () => {
           ) : (
             <Flex
               w="full"
-              h="full"
               direction="column"
               justify="center"
               align="center"
-              mt={{ base: 24, md: 0 }}
+              mt={20}
             >
-              <Text fontSize="24px">{t.common.no_project}</Text>
-              <Text mt={2} fontSize="18px">
+              <Text fontSize="xl">{t.common.no_project}</Text>
+              <Text mt={2} fontSize="lg">
                 {t.common.maybe_yours}
               </Text>
             </Flex>

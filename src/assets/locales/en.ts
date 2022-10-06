@@ -18,6 +18,7 @@ const enTranslate: TranslateState = {
     job_title_main: "Jobs",
     job: "Jobs",
     no_job: "😕 No jobs",
+    no_resource: "😕 No resources",
     more: "view more",
     data_error: "Error while loading data, please try again later",
     academy: "Academy",

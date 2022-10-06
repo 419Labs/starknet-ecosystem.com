@@ -1,8 +1,7 @@
 import type { InputProps } from "@chakra-ui/react";
 import { useStyleConfig, Input as ChakraInput } from "@chakra-ui/react";
-import type { FC, ChangeEvent } from "react";
-
 import _ from "lodash";
+import type { FC, ChangeEvent } from "react";
 
 interface Props extends InputProps {
   debounce?: number;

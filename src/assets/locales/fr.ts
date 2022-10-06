@@ -16,6 +16,7 @@ const frTranslate: TranslateState = {
     community: "Communauté",
     job_title_main: "Jobs",
     job: "Jobs",
+    no_resource: "😕 Aucune ressource",
     no_job: "😕 Aucun jobs",
     more: "voir plus",
     data_error:

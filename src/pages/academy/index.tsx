@@ -171,11 +171,14 @@ const AcademyPage: FC = () => {
                 {loading ? renderLoadingState() : renderData()}
               </SimpleGrid>
             ) : (
-              <Flex w="full" direction="column" align="center" opacity=".8">
-                <Text fontSize="24px">{t.common.no_project}</Text>
-                <Text mt={2} fontSize="18px">
-                  {t.common.maybe_yours}
-                </Text>
+              <Flex
+                w="full"
+                direction="column"
+                justify="center"
+                align="center"
+                mt={20}
+              >
+                <Text fontSize="xl">{t.common.no_resource}</Text>
               </Flex>
             )}
             <Text pt={20} fontSize="6xl" fontWeight="bold">

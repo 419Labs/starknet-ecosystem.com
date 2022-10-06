@@ -43,7 +43,13 @@ const JobTable: FC<Props> = ({ projects, jobs, observe, onFilterChanged }) => {
           );
         })
       ) : (
-        <Flex justify="center" mt={4}>
+        <Flex
+          w="full"
+          direction="column"
+          justify="center"
+          align="center"
+          mt={20}
+        >
           <Text fontSize="xl">{t.common.no_job}</Text>
         </Flex>
       )}
