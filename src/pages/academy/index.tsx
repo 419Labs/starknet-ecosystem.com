@@ -14,9 +14,11 @@ import CardResourceSkeleton from "../../components/card/CardResourceSkeleton";
 import HighlightedText from "../../components/layout/HighlightedText";
 import Input from "../../components/layout/Input";
 import Menu from "../../components/layout/Menu";
+import NetworkLogos from "../../components/layout/NetworkLogos";
 import { useTranslate } from "../../context/TranslateProvider";
 import { EcosystemApi } from "../../services/ecosystem-api.service";
 import { shortenText } from "../../services/project.service";
+import DifficultyIcon from "../../components/layout/DifficultyIcon";
 
 const AcademyPage: FC = () => {
   const { t } = useTranslate();
@@ -42,6 +44,8 @@ const AcademyPage: FC = () => {
             description: contribution.projectName,
             network: {},
             link: `https://app.onlydust.xyz/contributions/${contribution.id}`,
+            sourceName: contribution.sourceName,
+            difficulty: contribution.difficulty,
           }))
         );
         setLoading(false);
@@ -85,6 +89,7 @@ const AcademyPage: FC = () => {
 
   const renderData = () => {
     return currentResources.map((resource: ResourceItf, index: number) => {
+      const { network, difficulty, sourceName } = resource;
       return (
         <Box
           ref={index === currentResources.length - 1 ? observe : null}
@@ -92,7 +97,18 @@ const AcademyPage: FC = () => {
           key={`resource-${resource.name}-${index}`}
           flex={1}
         >
-          <CardResource index={index} resource={resource} />
+          <CardResource
+            index={index}
+            resource={resource}
+            cardContent={sourceName}
+            indication={
+              difficulty ? (
+                <DifficultyIcon difficultyLabel={difficulty} />
+              ) : (
+                <NetworkLogos network={network} />
+              )
+            }
+          />
         </Box>
       );
     });

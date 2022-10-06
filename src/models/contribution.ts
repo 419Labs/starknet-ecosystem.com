@@ -4,4 +4,5 @@ export interface Contribution {
   title: string;
   difficulty: string;
   technology: string;
+  sourceName: string;
 }

@@ -1,14 +1,20 @@
 import { Flex, SimpleGrid, Text, VStack } from "@chakra-ui/layout";
 
 import type { ResourceItf } from "../../../data/academy";
-import NetworkLogos from "../layout/NetworkLogos";
 
 interface CardResourceProps {
   index: number;
   resource: ResourceItf;
+  indication?: any;
+  cardContent?: any;
 }
-function CardResource({ index, resource }: CardResourceProps) {
-  const { name, description, network } = resource;
+function CardResource({
+  index,
+  resource,
+  indication,
+  cardContent,
+}: CardResourceProps) {
+  const { name, description } = resource;
 
   const getFallbackText = (text: string) => {
     return (
@@ -46,7 +52,7 @@ function CardResource({ index, resource }: CardResourceProps) {
         align="center"
         justify="center"
       >
-        {getFallbackText(name)}
+        {cardContent || getFallbackText(name)}
       </Flex>
       <Flex
         h="full"
@@ -69,7 +75,7 @@ function CardResource({ index, resource }: CardResourceProps) {
           >
             {description}
           </Text>
-          <NetworkLogos network={network} />
+          {indication}
         </VStack>
       </Flex>
     </SimpleGrid>

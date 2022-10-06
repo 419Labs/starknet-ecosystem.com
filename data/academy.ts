@@ -12,6 +12,8 @@ export interface Resource {
   network: Network;
   highlight?: boolean;
   link?: string;
+  sourceName?: string;
+  difficulty?: string;
 }
 
 export interface ResourceItf extends Resource {
