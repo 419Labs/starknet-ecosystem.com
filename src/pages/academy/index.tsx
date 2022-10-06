@@ -13,6 +13,7 @@ import {
 } from "../../../data/academy";
 import CardHighlight from "../../components/card/CardHighlight";
 import CardResource from "../../components/card/CardResource";
+import CardResourceSkeleton from "../../components/card/CardResourceSkeleton";
 import HighlightedText from "../../components/layout/HighlightedText";
 import Menu from "../../components/layout/Menu";
 import { useTranslate } from "../../context/TranslateProvider";
@@ -21,6 +22,7 @@ import { shortenText } from "../../services/project.service";
 
 const AcademyPage: FC = () => {
   const { t } = useTranslate();
+  const [loading, setLoading] = useState(false);
   const [currentCategory, setCurrentCategory] = useState(allAcademyCategory[0]);
   const [currentResources, setCurrentResources] = useState<ResourceItf[]>(
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -33,7 +35,8 @@ const AcademyPage: FC = () => {
 
   useEffect(() => {
     if (currentCategory.value === "contributions") {
-      EcosystemApi.fetchContributions(keyword).then((contributions) =>
+      setLoading(true);
+      EcosystemApi.fetchContributions(keyword).then((contributions) => {
         setCurrentResources(
           contributions.map((contribution) => ({
             id: contribution.id,
@@ -42,8 +45,9 @@ const AcademyPage: FC = () => {
             network: {},
             link: `https://app.onlydust.xyz/contributions/${contribution.id}`,
           }))
-        )
-      );
+        );
+        setLoading(false);
+      });
       return;
     }
 
@@ -69,6 +73,32 @@ const AcademyPage: FC = () => {
 
   const handleChangeKeyword = (event: ChangeEvent<HTMLInputElement>) =>
     setKeyword(event.target.value);
+
+  const renderLoadingState = () => {
+    return Array(20)
+      .fill(0)
+      .map((_, index) => (
+        // eslint-disable-next-line react/no-array-index-key
+        <Box key={`project-skeleton-${index}`} flex={1}>
+          <CardResourceSkeleton />
+        </Box>
+      ));
+  };
+
+  const renderData = () => {
+    return currentResources.map((resource: ResourceItf, index: number) => {
+      return (
+        <Box
+          ref={index === currentResources.length - 1 ? observe : null}
+          // eslint-disable-next-line react/no-array-index-key
+          key={`resource-${resource.name}-${index}`}
+          flex={1}
+        >
+          <CardResource index={index} resource={resource} />
+        </Box>
+      );
+    });
+  };
 
   return (
     <Flex
@@ -99,12 +129,14 @@ const AcademyPage: FC = () => {
             setCurrentCategory(newValue);
           }}
         />
-        <VStack justify="flex-start" align="flex-start">
+        <Flex direction="column" w="full" align="flex-end">
           <Input
+            my={2}
+            mb={8}
+            maxW={{ base: "inherit", md: "250px" }}
             value={keyword}
             onChange={handleChangeKeyword}
             placeholder="Search"
-            mb={5}
           />
           {/* <Text fontSize="6xl" fontWeight="bold">
             Highlights 🔥
@@ -130,51 +162,43 @@ const AcademyPage: FC = () => {
                 );
               })}
           </SimpleGrid> */}
-          <Text pt={20} fontSize="6xl" fontWeight="bold">
-            {currentCategory.label}
-          </Text>
-          {currentResources && currentResources.length > 0 ? (
-            <SimpleGrid columns={{ sm: 1, lg: 2, xl: 3 }} spacing="20px">
-              {/* eslint-disable-next-line sonarjs/no-identical-functions */}
-              {currentResources.map((resource: ResourceItf, index: number) => {
-                return (
-                  <Box
-                    ref={index === currentResources.length - 1 ? observe : null}
-                    // eslint-disable-next-line react/no-array-index-key
-                    key={`resource-${resource.name}-${index}`}
-                    flex={1}
-                  >
-                    <CardResource index={index} resource={resource} />
-                  </Box>
-                );
-              })}
-            </SimpleGrid>
-          ) : (
-            <Flex w="full" direction="column" align="center" opacity=".8">
-              <Text fontSize="24px">{t.common.no_project}</Text>
-              <Text mt={2} fontSize="18px">
-                {t.common.maybe_yours}
-              </Text>
-            </Flex>
-          )}
-          <Text pt={20} fontSize="6xl" fontWeight="bold">
-            Useful
-          </Text>
-          <HStack>
-            <CardHighlight
-              bg="flat.100"
-              icon={<FontAwesomeIcon icon={solid("home")} />}
-              title="Get started"
-              content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
-            />
-            <CardHighlight
-              color="flat.100"
-              icon={<FontAwesomeIcon icon={solid("home")} />}
-              title="Get started"
-              content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
-            />
-          </HStack>
-        </VStack>
+          <VStack w="full" align="flex-start">
+            {loading || (currentResources && currentResources.length > 0) ? (
+              <SimpleGrid
+                columns={{ sm: 1, lg: 2, xl: 3 }}
+                spacing="20px"
+                w="full"
+              >
+                {/* eslint-disable-next-line sonarjs/no-identical-functions */}
+                {loading ? renderLoadingState() : renderData()}
+              </SimpleGrid>
+            ) : (
+              <Flex w="full" direction="column" align="center" opacity=".8">
+                <Text fontSize="24px">{t.common.no_project}</Text>
+                <Text mt={2} fontSize="18px">
+                  {t.common.maybe_yours}
+                </Text>
+              </Flex>
+            )}
+            <Text pt={20} fontSize="6xl" fontWeight="bold">
+              Useful
+            </Text>
+            <HStack>
+              <CardHighlight
+                bg="flat.100"
+                icon={<FontAwesomeIcon icon={solid("home")} />}
+                title="Get started"
+                content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
+              />
+              <CardHighlight
+                color="flat.100"
+                icon={<FontAwesomeIcon icon={solid("home")} />}
+                title="Get started"
+                content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
+              />
+            </HStack>
+          </VStack>
+        </Flex>
       </Flex>
     </Flex>
   );
