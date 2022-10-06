@@ -8,6 +8,7 @@ import type { Project, ProjectItf } from "../../data/ecosystem";
 import type { Tag } from "../../data/tag";
 import { allTags } from "../../data/tag";
 import CardProject from "../components/card/CardProject";
+import CardProjectSkeleton from "../components/card/CardProjectSkeleton";
 import HighlightedText from "../components/layout/HighlightedText";
 import Menu from "../components/layout/Menu";
 import { useTranslate } from "../context/TranslateProvider";
@@ -18,7 +19,7 @@ const Home = () => {
   const { t } = useTranslate();
   const LOADED_STEPS = 10;
   const tagAll = allTags[0];
-  // const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
   const [filter, setFilter] = useState(tagAll);
   const [allProjects, setAllProjects] = useState<Project[]>([]);
   const [projects, setProjects] = useState<ProjectItf[]>([]);
@@ -28,7 +29,7 @@ const Home = () => {
   const [keyword, setKeyword] = useState<string>("");
 
   useEffect(() => {
-    EcosystemApi.fetchEcosystemProjects(1000).then(setAllProjects);
+    EcosystemApi.fetchEcosystemProjects(1000).then(setAllProjects).then(() => setLoading(false));
   }, []);
 
   useEffect(() => {
@@ -72,6 +73,29 @@ const Home = () => {
   const handleChangeKeyword = (event: ChangeEvent<HTMLInputElement>) =>
     setKeyword(event.target.value);
 
+  const renderLoadingState = () => {
+    return Array(20)
+      .fill(0)
+      .map((_, index) => (
+        <Box key={`project-skeleton-${index}`} flex={1}>
+          <CardProjectSkeleton />
+        </Box>
+      ));
+  };
+
+  const renderData = () => {
+    return projects.map((project: ProjectItf, index: number) => {
+      return (
+        <Box
+          ref={index === projects.length - 1 ? observe : null}
+          key={`project-${project.name}`}
+          flex={1}
+        >
+          <CardProject index={index} project={project} />
+        </Box>
+      );
+    });
+  };
   return (
     <Flex
       w="full"
@@ -131,19 +155,13 @@ const Home = () => {
             onChange={handleChangeKeyword}
             placeholder="Search project"
           />
-          {projects && projects.length > 0 ? (
-            <SimpleGrid columns={{ sm: 1, md: 1, lg: 2, xl: 3 }} spacing="20px">
-              {projects.map((project: ProjectItf, index: number) => {
-                return (
-                  <Box
-                    ref={index === projects.length - 1 ? observe : null}
-                    key={`project-${project.name}`}
-                    flex={1}
-                  >
-                    <CardProject index={index} project={project} />
-                  </Box>
-                );
-              })}
+          {loading || (projects && projects.length > 0) ? (
+            <SimpleGrid
+              columns={{ sm: 1, md: 1, lg: 2, xl: 3 }}
+              spacing="20px"
+              w="full"
+            >
+              {loading ? renderLoadingState() : renderData()}
             </SimpleGrid>
           ) : (
             <Flex

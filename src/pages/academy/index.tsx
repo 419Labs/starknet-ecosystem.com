@@ -55,7 +55,6 @@ const AcademyPage: FC = () => {
         resource.name.toLowerCase().includes(keyword.toLowerCase()) ||
         resource.description.toLowerCase().includes(keyword.toLowerCase())
     );
-    console.log(resources, keyword);
     setCurrentResources(resources);
   }, [keyword, currentCategory]);
 
