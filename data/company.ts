@@ -287,6 +287,19 @@ const allCompanies: Company[] = [
       telegram: "https://t.me/RabbitX_Official",
     },
   },
+  {
+    id: 23,
+    name: "FuzzingLabs",
+    logo: "fuzzinglabs.png",
+    network: {
+      website: "https://fuzzinglabs.com/",
+      github: "https://github.com/FuzzingLabs",
+      twitter: "https://twitter.com/FuzzingLabs",
+      medium: "",
+      discord: "",
+      telegram: "https://t.me/fuzzinglabs",
+    },
+  },
 ];
 
 export default allCompanies;
