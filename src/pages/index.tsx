@@ -1,5 +1,6 @@
 import { Box, Flex, SimpleGrid, Text } from "@chakra-ui/layout";
-import { Image } from "@chakra-ui/react";
+import { Image, Show } from "@chakra-ui/react";
+import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 import type { ChangeEvent } from "react";
 import { useEffect, useState } from "react";
 import useInView from "react-cool-inview";
@@ -14,14 +15,28 @@ import Input from "../components/layout/Input";
 import Menu from "../components/layout/Menu";
 import { useTranslate } from "../context/TranslateProvider";
 import { EcosystemApi } from "../services/ecosystem-api.service";
-import { projectIncludesKeyword } from "../services/project.service";
+import {
+  projectIncludesKeyword,
+  ProjectSorting,
+  sortBy,
+} from "../services/project.service";
 
 const Home = () => {
   const { t } = useTranslate();
   const LOADED_STEPS = 10;
+  const sortTags: Tag[] = [
+    { key: ProjectSorting.A_Z, value: "A - Z", icon: "", label: "A - Z" },
+    {
+      key: ProjectSorting.TWITTER,
+      value: "Followers",
+      icon: "",
+      label: "Followers",
+    },
+  ];
   const tagAll = allEcosystemTags[0];
   const [loading, setLoading] = useState(true);
   const [filter, setFilter] = useState(tagAll);
+  const [sorter, setSorter] = useState(sortTags[0]);
   const [allProjects, setAllProjects] = useState<Project[]>([]);
   const [projects, setProjects] = useState<ProjectItf[]>([]);
   const [filteredProjectsCount, setFilteredProjectsCount] =
@@ -36,18 +51,18 @@ const Home = () => {
   }, []);
 
   useEffect(() => {
-    const filteredProjects = allProjects
-      .filter((project: Project) => {
+    const filteredProjects = sortBy(
+      allProjects.filter((project: Project) => {
         return (
           (filter === tagAll || project.tags.indexOf(filter.value) !== -1) &&
           projectIncludesKeyword(project, keyword)
         );
-      })
-      .sort(
-        (project1, project2) =>
-          (project2.socialMetrics?.twitterFollower || 0) -
-          (project1.socialMetrics?.twitterFollower || 0)
-      );
+      }),
+      sorter.key === ProjectSorting.A_Z
+        ? ProjectSorting.A_Z
+        : ProjectSorting.TWITTER
+    );
+
     const newProjects = filteredProjects
       .slice(0, lastIndexLoaded)
       .map((project) => {
@@ -62,7 +77,7 @@ const Home = () => {
     setProjects(newProjects);
     setFilteredProjectsCount(loading ? -1 : filteredProjects.length);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [filter, keyword, lastIndexLoaded, allProjects]);
+  }, [filter, sorter, keyword, lastIndexLoaded, allProjects]);
 
   const { observe } = useInView({
     // When the last item comes to the viewport
@@ -85,6 +100,21 @@ const Home = () => {
           <CardProjectSkeleton />
         </Box>
       ));
+  };
+
+  const renderSortMenu = () => {
+    return (
+      <Menu
+        icon={solid("sort")}
+        small
+        typeText=""
+        tags={sortTags}
+        initialValue={sorter}
+        onChange={(newValue) => {
+          setSorter(newValue);
+        }}
+      />
+    );
   };
 
   const renderData = () => {
@@ -144,25 +174,35 @@ const Home = () => {
 
       {/* Main part */}
       <Flex w="full" h="full" direction={{ base: "column", md: "row" }} mt={24}>
-        <Menu
-          typeText="Projects"
-          tags={allEcosystemTags}
-          initialValue={tagAll}
-          childCount={filteredProjectsCount}
-          onChange={(newValue) => {
-            setFilter(newValue);
-            setFilteredProjectsCount(-1);
-          }}
-        />
+        <Flex>
+          <Box flex={1}>
+            <Menu
+              typeText="Projects"
+              tags={allEcosystemTags}
+              initialValue={tagAll}
+              childCount={filteredProjectsCount}
+              onChange={(newValue) => {
+                setFilter(newValue);
+                setFilteredProjectsCount(-1);
+              }}
+            />
+          </Box>
+          <Show below="md">
+            <Box ml={2}>{renderSortMenu()}</Box>
+          </Show>
+        </Flex>
         <Flex direction="column" w="full" align="flex-end">
-          <Input
-            debounce={200}
-            my={2}
-            mb={8}
-            maxW={{ base: "inherit", md: "250px" }}
-            onChange={handleChangeKeyword}
-            placeholder="Search project"
-          />
+          <Flex mt={2} mb={8}>
+            <Show above="md">
+              <Box mr={2}>{renderSortMenu()}</Box>
+            </Show>
+            <Input
+              debounce={200}
+              maxW={{ base: "inherit", md: "250px" }}
+              onChange={handleChangeKeyword}
+              placeholder="Search project"
+            />
+          </Flex>
           {loading || (projects && projects.length > 0) ? (
             <SimpleGrid
               columns={{ sm: 1, md: 1, lg: 2, xl: 3 }}
