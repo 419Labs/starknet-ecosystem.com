@@ -15,7 +15,7 @@ const defaultSEOConfig = {
       "Explore projects, teams, jobs, metrics and everything around StarkNet Ecosystem",
     images: [
       {
-        url: "https://starknet-ecosystem.com/starknet-ecosystem-map.png",
+        url: "https://starknet-ecosystem.com/starknet-ecosystem-map-min.png",
         alt: "StarkNet Ecosystem logo",
       },
     ],
