@@ -300,6 +300,20 @@ const allCompanies: Company[] = [
       telegram: "https://t.me/fuzzinglabs",
     },
   },
+    {
+    id: 24,
+    name: "Newton.so",
+    logo: "Newtonso.png",
+    network: {
+      website: "https://newton.so/",
+      github: "https://github.com/NewtonDAO",
+      twitter: "https://twitter.com/TheNewtonHQ",
+      medium: "",
+      discord: "https://discord.gg/rmTjw2DQnH",
+      telegram: "https://t.me/+EUX9cW_LHcgwZTdk",
+    },
+  },
+ 
 ];
 
 export default allCompanies;
