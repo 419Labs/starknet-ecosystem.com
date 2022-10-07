@@ -70,7 +70,7 @@ const JobsPage: NextPage = () => {
         {t.common.jobs_subtitle}
       </Text>
       <Flex w="full" direction={{ base: "column", md: "row" }} mt={24}>
-        <Menu
+        {/* <Menu
           typeText="Jobs"
           childCount={filteredJobsCount}
           tags={allJobTags}
@@ -83,7 +83,7 @@ const JobsPage: NextPage = () => {
             });
             setFilteredJobsCount(-1);
           }}
-        />
+        /> */}
         <Flex direction="column" w="full" align="flex-end">
           <Input
             debounce={200}
