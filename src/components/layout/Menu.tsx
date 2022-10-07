@@ -1,4 +1,4 @@
-import { Box, Flex, Text } from "@chakra-ui/layout";
+import { Flex, Text } from "@chakra-ui/layout";
 import { Show } from "@chakra-ui/react";
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -141,10 +141,10 @@ function Menu({
   };
 
   return (
-    <Box>
+    <>
       <Show below="md">{renderMobileMenu()}</Show>
       <Show above="md">{small ? renderMobileMenu() : renderDefaultMenu()}</Show>
-    </Box>
+    </>
   );
 }
 

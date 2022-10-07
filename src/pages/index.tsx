@@ -175,7 +175,7 @@ const Home = () => {
       {/* Main part */}
       <Flex w="full" h="full" direction={{ base: "column", md: "row" }} mt={24}>
         <Flex>
-          <Box flex={1}>
+          <Flex flex={1}>
             <Menu
               typeText="Projects"
               tags={allEcosystemTags}
@@ -186,7 +186,7 @@ const Home = () => {
                 setFilteredProjectsCount(-1);
               }}
             />
-          </Box>
+          </Flex>
           <Show below="md">
             <Box ml={2}>{renderSortMenu()}</Box>
           </Show>
