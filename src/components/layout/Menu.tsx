@@ -34,6 +34,8 @@ interface MenuProps {
   initialValue: Tag;
   childCount?: number;
   typeText: string;
+  small?: boolean;
+  icon?: any;
   onChange: (tag: Tag) => void;
 }
 
@@ -42,6 +44,8 @@ function Menu({
   initialValue,
   childCount = -1,
   typeText,
+  small,
+  icon,
   onChange,
 }: MenuProps) {
   const { t } = useTranslate();
@@ -76,7 +80,7 @@ function Menu({
               onSelect: () => onSelected(tag),
             };
           })}
-          icon={solid("chevron-down")}
+          icon={icon || solid("chevron-down")}
           text={t.tags[selectedValue.value] || selectedValue.label}
         />
       </Flex>
@@ -139,7 +143,7 @@ function Menu({
   return (
     <Box>
       <Show below="md">{renderMobileMenu()}</Show>
-      <Show above="md">{renderDefaultMenu()}</Show>
+      <Show above="md">{small ? renderMobileMenu() : renderDefaultMenu()}</Show>
     </Box>
   );
 }
