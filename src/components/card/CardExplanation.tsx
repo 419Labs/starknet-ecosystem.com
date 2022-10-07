@@ -33,9 +33,10 @@ function CardExplanation({ title, content, bg, link }: CardExplanationProps) {
             href="https://goerli.voyager.online"
             _hover={{ textDecoration: "none", color: "whiteAlpha.900" }}
             display="flex"
+            alignItems="center"
             mt={4}
           >
-            <Text mr={1}>Read more</Text>
+            <Text mr={2}>Read more</Text>
             <FontAwesomeIcon icon={solid("up-right-from-square")} />
           </Link>
         )}
