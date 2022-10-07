@@ -30,7 +30,7 @@ function CardExplanation({ title, content, bg, link }: CardExplanationProps) {
           <Link
             fontWeight="bold"
             isExternal
-            href="https://goerli.voyager.online"
+            href={link}
             _hover={{ textDecoration: "none", color: "whiteAlpha.900" }}
             display="flex"
             alignItems="center"
