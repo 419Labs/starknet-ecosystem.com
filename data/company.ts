@@ -310,7 +310,7 @@ const allCompanies: Company[] = [
       twitter: "https://twitter.com/TheNewtonHQ",
       medium: "",
       discord: "https://discord.gg/rmTjw2DQnH",
-      telegram: "https://t.me/+XUKxiUisflE0MTRk",
+      telegram: "https://t.me/+EUX9cW_LHcgwZTdk",
     },
   },
  
