@@ -73,7 +73,8 @@ const AcademyPage: FC = () => {
         return (
           <LearnContent
             observe={observe}
-            resources={academyResourcesBundle.learning}
+            highlightedResources={academyResourcesBundle.learning.highlighted}
+            resources={academyResourcesBundle.learning.other}
             keyword={keyword}
           />
         );

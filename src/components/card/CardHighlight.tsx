@@ -46,7 +46,7 @@ function CardHighlight({
       h="full"
       borderRadius="md"
     >
-      <HStack overflow="hidden" align="flex-start">
+      <HStack overflow="hidden" align="flex-start" pb={10}>
         <Box
           h="full"
           pt={1}
@@ -95,32 +95,28 @@ function CardHighlight({
         }}
       >
         {link && linkCover && (
-          <Flex
+          <Link
+            h="full"
+            w="full"
             transition=".4s ease all"
             className="link-highlighted"
             opacity={0}
-            w="full"
-            h="full"
             bg={bgHover || "gray.600"}
             borderRadius="md"
-            justify="center"
-            align="center"
+            fontWeight="bold"
+            isExternal
+            href={link}
+            _hover={{
+              textDecoration: "none",
+              color: "whiteAlpha.900",
+            }}
+            display="flex"
+            alignItems="center"
+            justifyContent="center"
           >
-            <Link
-              fontWeight="bold"
-              isExternal
-              href={link}
-              _hover={{
-                textDecoration: "none",
-                color: "whiteAlpha.900",
-              }}
-              display="flex"
-              alignItems="center"
-            >
-              <Text mr={4}>Read more</Text>
-              <FontAwesomeIcon icon={solid("up-right-from-square")} />
-            </Link>
-          </Flex>
+            <Text mr={4}>Read more</Text>
+            <FontAwesomeIcon icon={solid("up-right-from-square")} />
+          </Link>
         )}
       </Box>
     </Flex>

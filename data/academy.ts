@@ -20,10 +20,7 @@ export interface ResourceItf extends Resource {
   tagsRef?: Tag[];
 }
 
-// ======================================================================
-// Learning links
-// ======================================================================
-export const learning: Resource[] = [
+export const highlightedLearning: Resource[] = [
   {
     name: "Hello, StarkNet",
     shortName: "hello-starknet-official-doc",
@@ -54,6 +51,11 @@ export const learning: Resource[] = [
       github: "https://github.com/onlydustxyz/starklings",
     },
   },
+];
+// ======================================================================
+// Learning links
+// ======================================================================
+export const learning: Resource[] = [
   {
     name: "cairomate",
     shortName: "cairomate",
@@ -1123,7 +1125,10 @@ export const newsfeed: Resource[] = [
 ];
 
 export interface ResourceBundleItf {
-  learning: ResourceItf[];
+  learning: {
+    highlighted: ResourceItf[];
+    other: ResourceItf[];
+  };
   contributions: ResourceItf[];
   tools: ResourceItf[];
   wallets: ResourceItf[];
@@ -1131,7 +1136,10 @@ export interface ResourceBundleItf {
 }
 
 export const academyResourcesBundle: ResourceBundleItf = {
-  learning,
+  learning: {
+    highlighted: highlightedLearning,
+    other: learning,
+  },
   contributions: [],
   tools,
   wallets,
