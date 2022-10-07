@@ -30,7 +30,7 @@ function Footer() {
         overflow="hidden"
         textOverflow="ellipsis"
         display="-webkit-box"
-        sx={{ WebkitLineClamp: "4", WebkitBoxOrient: "vertical" }}
+        sx={{ WebkitLineClamp: "3", WebkitBoxOrient: "vertical" }}
       >
         {label}
       </Text>

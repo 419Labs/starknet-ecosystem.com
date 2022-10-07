@@ -8,6 +8,7 @@ import { useState } from "react";
 import { useTranslate } from "../../context/TranslateProvider";
 
 import Drawer from "./Drawer";
+import LanguageChooser from "./LanguageChooser";
 import Link from "./Link";
 import Logo from "./Logo";
 
@@ -27,7 +28,7 @@ function Header() {
     >
       <Logo />
       <Hide below="md">
-        <Flex direction="row">
+        <Flex direction="row" align="center">
           <Box ml={6}>
             <Link href={`/${locale}`} active={pathname === "/"}>
               {t.common.ecosystem || "Ecosystem"}
@@ -48,6 +49,9 @@ function Header() {
               {t.common.metrics || "Metrics"}
             </Link>
           </Box>
+          <Box ml={6}>
+            <LanguageChooser />
+          </Box>
         </Flex>
       </Hide>
       <Hide above="md">
@@ -56,6 +60,7 @@ function Header() {
             <FontAwesomeIcon fontSize="24px" icon={solid("bars")} />
           </Button>
           <Drawer
+            headerAction={<LanguageChooser />}
             links={[
               {
                 href: `/${locale}`,
