@@ -1,4 +1,5 @@
 import {
+  Box,
   Divider,
   Flex,
   HStack,
@@ -6,6 +7,7 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/layout";
+import { Tooltip as ChakraTooltip } from "@chakra-ui/react";
 
 import { useTranslate } from "../../context/TranslateProvider";
 
@@ -19,6 +21,38 @@ const twitterLink = "https://twitter.com/StarkNetEco";
 
 function Footer() {
   const { t } = useTranslate();
+
+  const renderTooltip = (label: string) => {
+    const content = (
+      <Text
+        fontSize="sm"
+        color="whiteAlpha.600"
+        overflow="hidden"
+        textOverflow="ellipsis"
+        display="-webkit-box"
+        sx={{ WebkitLineClamp: "4", WebkitBoxOrient: "vertical" }}
+      >
+        {label}
+      </Text>
+    );
+    const tooltip = (
+      <Flex
+        fontSize="md"
+        color="whiteAlpha.900"
+        bg="primary.500"
+        borderRadius="md"
+        p={4}
+      >
+        {label}
+      </Flex>
+    );
+    return (
+      <ChakraTooltip bg="transparent" label={tooltip}>
+        <Box>{content}</Box>
+      </ChakraTooltip>
+    );
+  };
+
   return (
     <Flex
       w="full"
@@ -81,14 +115,14 @@ function Footer() {
         </VStack>
         <VStack align="flex-start">
           <Text fontSize="lg">About</Text>
-          <VStack align="flex-start" fontSize="sm">
-            <Link href="/">
-              This is a community-owned initiative supported by StarkWare. The
-              links in the StarkNet Ecosystem are provided as a convenience and
-              for informational purposes only; they do not constitute an
-              endorsement or approval by our initiative of any of the projects
-              or services listed therein.
-            </Link>
+          <VStack align="flex-start" fontSize="sm" pr={8}>
+            {renderTooltip(
+              "This is a community-owned initiative supported by StarkWare. The\n" +
+                "        links in the StarkNet Ecosystem are provided as a convenience and\n" +
+                "        for informational purposes only; they do not constitute an\n" +
+                "        endorsement or approval by our initiative of any of the projects\n" +
+                "        or services listed therein."
+            )}
           </VStack>
         </VStack>
         <VStack align="flex-start">
