@@ -9,6 +9,7 @@ interface LinkProps {
   href: string;
   fontWeight?: string;
   fontSize?: string;
+  isExternal?: boolean;
 }
 function Link({
   children,
@@ -18,10 +19,13 @@ function Link({
   hoverOpacity = "1",
   fontWeight,
   fontSize,
+  isExternal,
 }: LinkProps) {
   return (
     <NextLink href={href}>
       <ChakraLink
+        isExternal={isExternal}
+        href={href}
         fontSize={fontSize}
         fontWeight={fontWeight}
         color={color}

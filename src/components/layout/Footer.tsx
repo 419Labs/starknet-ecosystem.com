@@ -33,7 +33,7 @@ function Footer() {
         <Text color="whiteAlpha.600">{t.common.made_with}</Text>
         <Text>❤️</Text>
         <Text color="whiteAlpha.600">{t.common.by}</Text>
-        <Link active href="https://twitter.com/alpharoad_fi">
+        <Link isExternal active href="https://twitter.com/alpharoad_fi">
           {t.common.alpha_road_team}
         </Link>
       </HStack>
@@ -42,25 +42,25 @@ function Footer() {
         <VStack align="flex-start">
           <Text fontSize="lg">Company</Text>
           <VStack align="flex-start" fontSize="sm">
-            <Link href="https://api.starknet-db.com/swagger-ui/index.html#/">
+            <Link isExternal href="https://api.starknet-db.com/swagger-ui/index.html#/">
               API
             </Link>
-            <Link href="https://github.com/419Labs/starknet-ecosystem.com">
+            <Link isExternal href="https://github.com/419Labs/starknet-ecosystem.com">
               About
             </Link>
-            <Link href="https://twitter.com/StarkNetEco">Linktree</Link>
+            <Link isExternal href="https://twitter.com/StarkNetEco">Linktree</Link>
           </VStack>
         </VStack>
         <VStack align="flex-start">
           <Text fontSize="lg">Support</Text>
           <VStack align="flex-start" fontSize="sm">
-            <Link href="https://github.com/419Labs/starknet-ecosystem.com/blob/main/docs/add-project.md">
+            <Link isExternal href="https://github.com/419Labs/starknet-ecosystem.com/blob/main/docs/add-project.md">
               List a project
             </Link>
-            <Link href="https://github.com/419Labs/starknet-ecosystem.com/blob/main/docs/add-job.md">
+            <Link isExternal href="https://github.com/419Labs/starknet-ecosystem.com/blob/main/docs/add-job.md">
               List a job
             </Link>
-            <Link href="https://t.me/starknet_ecosystem">Contact us</Link>
+            <Link isExternal href="https://t.me/starknet_ecosystem">Contact us</Link>
           </VStack>
         </VStack>
         <VStack align="flex-start">
