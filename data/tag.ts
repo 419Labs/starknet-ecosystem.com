@@ -124,27 +124,27 @@ export const allAcademyTags: Tag[] = [
   {
     value: AcademyCategory.LEARNING,
     label: "Learn",
-    icon: "bridge",
+    icon: "graduation-cap",
   },
   {
     value: AcademyCategory.CONTRIBUTE,
     label: "Contribute",
-    icon: "people-group",
+    icon: "pen",
   },
   {
     value: AcademyCategory.TOOLS,
     label: "Tools",
-    icon: "rocket",
+    icon: "screwdriver-wrench",
   },
   {
     value: AcademyCategory.WALLETS,
     label: "Wallets",
-    icon: "id-card",
+    icon: "wallet",
   },
   {
     value: AcademyCategory.NEWS_FEED,
     label: "News & Infos",
-    icon: "gamepad",
+    icon: "rss",
   },
 ];
 

@@ -11,8 +11,11 @@ import MenuButton from "./MenuButton";
 
 const icons = {
   home: solid("home"),
+  rss: solid("rss"),
   bridge: solid("bridge"),
+  pen: solid("pen"),
   "people-group": solid("people-group"),
+  "graduation-cap": solid("graduation-cap"),
   rocket: solid("rocket"),
   "id-card": solid("id-card"),
   gamepad: solid("gamepad"),
