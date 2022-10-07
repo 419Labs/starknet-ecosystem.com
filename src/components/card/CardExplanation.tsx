@@ -1,4 +1,4 @@
-import { Box, Flex, Link, Text, VStack } from "@chakra-ui/layout";
+import { Flex, Link, Text } from "@chakra-ui/layout";
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -25,7 +25,7 @@ function CardExplanation({ title, content, bg, link }: CardExplanationProps) {
         {title}
       </Text>
       <Flex flex={1} fontSize="md" direction="column" justify="space-between">
-        <Text mt={4} dangerouslySetInnerHTML={{ __html: content }}/>
+        <Text mt={4} dangerouslySetInnerHTML={{ __html: content }} />
         {link && (
           <Link
             fontWeight="bold"

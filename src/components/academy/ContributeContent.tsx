@@ -34,6 +34,8 @@ function ContributeContent({ keyword = "", observe }: BasicContentProps) {
   }, [keyword]);
 
   const getGradient = () => {
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
     return `radial-gradient(ellipse at top, ${theme.colors.onlyDust[100]}, transparent), radial-gradient(ellipse at bottom, ${theme.colors.onlyDust[200]}, transparent), radial-gradient(ellipse at center, ${theme.colors.onlyDust[500]}, transparent), radial-gradient(ellipse at left, ${theme.colors.onlyDust[400]}, transparent)`;
   };
 
@@ -43,7 +45,7 @@ function ContributeContent({ keyword = "", observe }: BasicContentProps) {
         <CardExplanation
           bg={getGradient()}
           title="Open contributions"
-          content={`Thanks to our partnership with OnlyDust you can find below all open contributions provided by StarkNet companies. <br/>Get involved, contribute & get paid for that.`}
+          content="Thanks to our partnership with OnlyDust you can find below all open contributions provided by StarkNet companies. <br/>Get involved, contribute & get paid for that."
           link="https://www.onlydust.xyz/"
         />
       </Box>
