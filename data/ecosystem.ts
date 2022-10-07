@@ -1914,4 +1914,22 @@ export const allProjects: Array<Project> = [
     isLive: false,
     isTestnetLive: false,
   },
+  {
+    id: "00dd4c69-02d6-4e3e-a79f-7bbd9bfb94f4",
+    name: "Newton.so | Ask developers questions about StarkNet and Cairo Lang here",
+    short_name: "Newton.so",
+    description: "StarkNet & Cairo Lang place to share knowledge. A tokenized platform to ask and answer questions about blockchain and web3. Put bounties for your questions and improve the speed of software development now",
+    tags: ["infrastructure", "tools"],
+    logo: "Newtonso.png",
+    network: {
+      website: "https://newton.so",
+      github: "https://github.com/NewtonDAO",
+      twitter: "https://twitter.com/TheNewtonHQ",
+      medium: "",
+      discord: "https://discord.gg/rmTjw2DQnH",
+      telegram: "https://t.me/+EUX9cW_LHcgwZTdk",
+    },
+    isLive: true,
+    isTestnetLive: true,
+  },
 ];
