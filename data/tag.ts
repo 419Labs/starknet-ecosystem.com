@@ -112,29 +112,37 @@ export const allJobTags: Tag[] = [
   },
 ];
 
+export enum AcademyCategory {
+  LEARNING = "learning",
+  CONTRIBUTE = "contributions",
+  TOOLS = "tools",
+  WALLETS = "wallets",
+  NEWS_FEED = "newsfeed",
+}
+
 export const allAcademyTags: Tag[] = [
   {
-    value: "learning",
+    value: AcademyCategory.LEARNING,
     label: "Learn",
     icon: "bridge",
   },
   {
-    value: "contributions",
+    value: AcademyCategory.CONTRIBUTE,
     label: "Contribute",
     icon: "people-group",
   },
   {
-    value: "tools",
+    value: AcademyCategory.TOOLS,
     label: "Tools",
     icon: "rocket",
   },
   {
-    value: "wallets",
+    value: AcademyCategory.WALLETS,
     label: "Wallets",
     icon: "id-card",
   },
   {
-    value: "newsfeed",
+    value: AcademyCategory.NEWS_FEED,
     label: "News & Infos",
     icon: "gamepad",
   },

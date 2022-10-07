@@ -1060,7 +1060,7 @@ export const wallets: Resource[] = [
     description:
       'First StarkNet wallet to interact with tokens and NFTs. Manage your identities with "Sign in with StarkNet" (very soon ™️), and enjoy the best of defi. Made with ❤️ by the Argent team.',
     tags: ["wallet"],
-    image: "argent-x.svg",
+    image: "/logos/argent-x.svg",
     network: {
       website: "https://www.argent.xyz/argent-x/",
       github: "https://github.com/argentlabs/argent-x",
@@ -1076,7 +1076,7 @@ export const wallets: Resource[] = [
     description:
       "First and only StarkNet wallet on mobile, Android & iOS. Use all your favorite StarkNet dApps on the go! Also available for chrome, Firefox and Edge. All in one assets management - DeFi and NFTs",
     tags: ["wallet"],
-    image: "braavos.svg",
+    image: "/logos/braavos.svg",
     network: {
       website: "https://braavos.app/",
       github: "https://github.com/myBraavos",

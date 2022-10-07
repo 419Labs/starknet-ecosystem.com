@@ -1,70 +1,25 @@
-import { Box, Flex, HStack, SimpleGrid, Text, VStack } from "@chakra-ui/layout";
-import { Image } from "@chakra-ui/react";
-import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Flex, Text } from "@chakra-ui/layout";
 import type { FC, ChangeEvent } from "react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import useInView from "react-cool-inview";
-
-import type { ResourceItf } from "../../../data/academy";
 import { academyResourcesBundle } from "../../../data/academy";
-import { allAcademyTags } from "../../../data/tag";
-import CardHighlight from "../../components/card/CardHighlight";
-import CardResource from "../../components/card/CardResource";
-import CardResourceSkeleton from "../../components/card/CardResourceSkeleton";
-import DifficultyIcon from "../../components/layout/DifficultyIcon";
+import { AcademyCategory, allAcademyTags } from "../../../data/tag";
+import ContributeContent from "../../components/academy/ContributeContent";
+import LearnContent from "../../components/academy/LearnContent";
+import NewsInfosContent from "../../components/academy/NewsInfosContent";
+import ToolsContent from "../../components/academy/ToolsContent";
+import WalletsContent from "../../components/academy/WalletsContent";
 import HighlightedText from "../../components/layout/HighlightedText";
 import Input from "../../components/layout/Input";
 import Menu from "../../components/layout/Menu";
-import NetworkLogos from "../../components/layout/NetworkLogos";
 import { useTranslate } from "../../context/TranslateProvider";
-import { EcosystemApi } from "../../services/ecosystem-api.service";
-import { shortenText } from "../../services/project.service";
 
 const AcademyPage: FC = () => {
   const { t } = useTranslate();
-  const [loading, setLoading] = useState(false);
   const [currentCategory, setCurrentCategory] = useState(allAcademyTags[0]);
-  const [currentResources, setCurrentResources] = useState<ResourceItf[]>(
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
-    academyResourcesBundle[currentCategory.value]
-  );
   const [keyword, setKeyword] = useState<string>("");
   const LOADED_STEPS = 20;
   const [lastIndexLoaded, setLastIndexLoaded] = useState<number>(LOADED_STEPS);
-
-  useEffect(() => {
-    if (currentCategory.value === "contributions") {
-      setLoading(true);
-      EcosystemApi.fetchContributions(keyword).then((contributions) => {
-        setCurrentResources(
-          contributions.map((contribution) => ({
-            id: contribution.id,
-            image: contribution.image,
-            name: shortenText(contribution.title, 50),
-            description: contribution.projectName,
-            network: {},
-            link: `https://app.onlydust.xyz/contributions/${contribution.id}`,
-            sourceName: contribution.sourceName,
-            difficulty: contribution.difficulty,
-          }))
-        );
-        setLoading(false);
-      });
-      return;
-    }
-
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
-    const resources = academyResourcesBundle[currentCategory.value].filter(
-      (resource: ResourceItf) =>
-        keyword === "" ||
-        resource.name.toLowerCase().includes(keyword.toLowerCase()) ||
-        resource.description.toLowerCase().includes(keyword.toLowerCase())
-    );
-    setCurrentResources(resources);
-  }, [keyword, currentCategory]);
 
   const { observe } = useInView({
     // When the last item comes to the viewport
@@ -78,42 +33,50 @@ const AcademyPage: FC = () => {
   const handleChangeKeyword = (event: ChangeEvent<HTMLInputElement>) =>
     setKeyword(event.target.value);
 
-  const renderLoadingState = () => {
-    return Array(20)
-      .fill(0)
-      .map((_, index) => (
-        // eslint-disable-next-line react/no-array-index-key
-        <Box key={`project-skeleton-${index}`} flex={1}>
-          <CardResourceSkeleton />
-        </Box>
-      ));
-  };
-
-  const renderData = () => {
-    return currentResources.map((resource: ResourceItf, index: number) => {
-      const { network, difficulty, image } = resource;
-      return (
-        <Box
-          ref={index === currentResources.length - 1 ? observe : null}
-          // eslint-disable-next-line react/no-array-index-key
-          key={`resource-${resource.name}-${index}`}
-          flex={1}
-        >
-          <CardResource
-            index={index}
-            resource={resource}
-            cardContent={image ? <Image src={image} /> : undefined}
-            indication={
-              difficulty ? (
-                <DifficultyIcon difficultyLabel={difficulty} />
-              ) : (
-                <NetworkLogos network={network} />
-              )
-            }
+  const renderContent = () => {
+    switch (currentCategory.value) {
+      case AcademyCategory.CONTRIBUTE:
+        return (
+          <ContributeContent
+            resources={academyResourcesBundle.contributions}
+            observe={observe}
+            keyword={keyword}
           />
-        </Box>
-      );
-    });
+        );
+      case AcademyCategory.TOOLS:
+        return (
+          <ToolsContent
+            resources={academyResourcesBundle.tools}
+            observe={observe}
+            keyword={keyword}
+          />
+        );
+      case AcademyCategory.WALLETS:
+        return (
+          <WalletsContent
+            resources={academyResourcesBundle.wallets}
+            observe={observe}
+            keyword={keyword}
+          />
+        );
+      case AcademyCategory.NEWS_FEED:
+        return (
+          <NewsInfosContent
+            resources={academyResourcesBundle.newsfeed}
+            observe={observe}
+            keyword={keyword}
+          />
+        );
+      case AcademyCategory.LEARNING:
+      default:
+        return (
+          <LearnContent
+            observe={observe}
+            resources={academyResourcesBundle.learning}
+            keyword={keyword}
+          />
+        );
+    }
   };
 
   return (
@@ -178,39 +141,7 @@ const AcademyPage: FC = () => {
                 );
               })}
           </SimpleGrid> */}
-          <VStack w="full" align="flex-start">
-            {loading || (currentResources && currentResources.length > 0) ? (
-              <SimpleGrid
-                columns={{ sm: 1, lg: 2, xl: 3 }}
-                spacing="20px"
-                w="full"
-              >
-                {/* eslint-disable-next-line sonarjs/no-identical-functions */}
-                {loading ? renderLoadingState() : renderData()}
-              </SimpleGrid>
-            ) : (
-              <Flex
-                w="full"
-                direction="column"
-                justify="center"
-                align="center"
-                mt={20}
-              >
-                <Text fontSize="xl">{t.common.no_resource}</Text>
-              </Flex>
-            )}
-            <Text pt={20} fontSize="6xl" fontWeight="bold">
-              Useful
-            </Text>
-            <HStack>
-              <CardHighlight
-                bg="flat.100"
-                icon={<FontAwesomeIcon icon={solid("home")} />}
-                title="Get started"
-                content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
-              />
-            </HStack>
-          </VStack>
+          {renderContent()}
         </Flex>
       </Flex>
     </Flex>
