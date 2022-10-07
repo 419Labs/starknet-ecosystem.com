@@ -6,11 +6,11 @@ import useInView from "react-cool-inview";
 
 import { allProjects } from "../../../data/ecosystem";
 import allJobs from "../../../data/job";
-import { allJobTags } from "../../../data/tag";
+// import { allJobTags } from "../../../data/tag";
 import JobTable from "../../components/job/JobTable";
 import HighlightedText from "../../components/layout/HighlightedText";
 import Input from "../../components/layout/Input";
-import Menu from "../../components/layout/Menu";
+// import Menu from "../../components/layout/Menu";
 import { useTranslate } from "../../context/TranslateProvider";
 import type { Job } from "../../models/job";
 import type { JobFilter } from "../../models/job-filter";
@@ -22,7 +22,7 @@ const JobsPage: NextPage = () => {
   const { t } = useTranslate();
   const [lastIndexLoaded, setLastIndexLoaded] = useState<number>(LOADED_STEPS);
   const [jobs, setJobs] = useState<Job[]>([]);
-  const [filteredJobsCount, setFilteredJobsCount] = useState<number>(-1);
+  // const [filteredJobsCount, setFilteredJobsCount] = useState<number>(-1);
   const [filters, setFilters] = useState<JobFilter>({
     remote: false,
     search: "",
@@ -34,7 +34,7 @@ const JobsPage: NextPage = () => {
       .sort((job1, job2) => (job1.createdOn > job2.createdOn ? -1 : 1))
       .slice(0, lastIndexLoaded);
     setJobs(newJobs);
-    setFilteredJobsCount(newJobs.length);
+    // setFilteredJobsCount(newJobs.length);
   }, [filters, lastIndexLoaded]);
 
   const { observe } = useInView({

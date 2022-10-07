@@ -1,4 +1,5 @@
 import { VStack } from "@chakra-ui/layout";
+
 import type { BasicContentProps } from "./BasicContent";
 import BasicContent from "./BasicContent";
 

@@ -2,6 +2,7 @@ import { Flex, Text } from "@chakra-ui/layout";
 import type { FC, ChangeEvent } from "react";
 import { useState } from "react";
 import useInView from "react-cool-inview";
+
 import { academyResourcesBundle } from "../../../data/academy";
 import { AcademyCategory, allAcademyTags } from "../../../data/tag";
 import ContributeContent from "../../components/academy/ContributeContent";
