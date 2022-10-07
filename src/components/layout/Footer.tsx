@@ -8,6 +8,7 @@ import {
   VStack,
 } from "@chakra-ui/layout";
 import { Tooltip as ChakraTooltip } from "@chakra-ui/react";
+import { useState } from "react";
 
 import { useTranslate } from "../../context/TranslateProvider";
 
@@ -21,6 +22,7 @@ const twitterLink = "https://twitter.com/StarkNetEco";
 
 function Footer() {
   const { t } = useTranslate();
+  const [isTooltipOpen, setTooltipOpen] = useState(false);
 
   const renderTooltip = (label: string) => {
     const content = (
@@ -47,8 +49,14 @@ function Footer() {
       </Flex>
     );
     return (
-      <ChakraTooltip bg="transparent" label={tooltip}>
-        <Box>{content}</Box>
+      <ChakraTooltip isOpen={isTooltipOpen} bg="transparent" label={tooltip}>
+        <Box
+          onMouseEnter={() => setTooltipOpen(true)}
+          onMouseLeave={() => setTooltipOpen(false)}
+          onClick={() => setTooltipOpen(true)}
+        >
+          {content}
+        </Box>
       </ChakraTooltip>
     );
   };
