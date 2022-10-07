@@ -51,6 +51,7 @@ function CardResource({
         borderRadius="md"
         align="center"
         justify="center"
+        overflow="hidden"
       >
         {cardContent || getFallbackText(name)}
       </Flex>

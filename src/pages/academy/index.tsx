@@ -1,4 +1,5 @@
 import { Box, Flex, HStack, SimpleGrid, Text, VStack } from "@chakra-ui/layout";
+import { Image } from "@chakra-ui/react";
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import type { FC, ChangeEvent } from "react";
@@ -40,6 +41,7 @@ const AcademyPage: FC = () => {
         setCurrentResources(
           contributions.map((contribution) => ({
             id: contribution.id,
+            image: contribution.image,
             name: shortenText(contribution.title, 50),
             description: contribution.projectName,
             network: {},
@@ -89,7 +91,7 @@ const AcademyPage: FC = () => {
 
   const renderData = () => {
     return currentResources.map((resource: ResourceItf, index: number) => {
-      const { network, difficulty, sourceName } = resource;
+      const { network, difficulty, image } = resource;
       return (
         <Box
           ref={index === currentResources.length - 1 ? observe : null}
@@ -100,7 +102,7 @@ const AcademyPage: FC = () => {
           <CardResource
             index={index}
             resource={resource}
-            cardContent={sourceName}
+            cardContent={image ? <Image src={image} /> : undefined}
             indication={
               difficulty ? (
                 <DifficultyIcon difficultyLabel={difficulty} />
