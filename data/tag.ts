@@ -68,4 +68,8 @@ export const allTags: Tag[] = [
     value: "starkex",
     label: "StarkEx",
   },
+  {
+    value: "security",
+    label: "Security",
+  },
 ];

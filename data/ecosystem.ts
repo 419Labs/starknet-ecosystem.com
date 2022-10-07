@@ -23,6 +23,24 @@ export interface ProjectItf extends Project {
 
 export const allProjects: Array<Project> = [
   {
+    id: "62c32b6f-e7ad-49ac-b5fe-4104a164e5d0",
+    name: "Thoth",
+    short_name: "Thoth",
+    description: "Thoth is a Cairo/Starknet analyzer, disassembler & decompiler written in Python 3.",
+    tags: ["tools", "security"],
+    logo: "",
+    network: {
+      website: "",
+      github: "https://github.com/FuzzingLabs/thoth",
+      twitter: "",
+      medium: "",
+      discord: "",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: true,
+  },
+  {
     id: "a0627f79-af7d-4398-8936-5957eee99783",
     name: "STARKSCAN",
     short_name: "STARKSCAN",
