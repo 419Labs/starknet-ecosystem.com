@@ -42,24 +42,37 @@ function Footer() {
         <VStack align="flex-start">
           <Text fontSize="lg">Company</Text>
           <VStack align="flex-start" fontSize="sm">
-            <Link href="/">API</Link>
-            <Link href="/">About</Link>
-            <Link href="/">Linktree</Link>
+            <Link href="https://api.starknet-db.com/swagger-ui/index.html#/">
+              API
+            </Link>
+            <Link href="https://github.com/419Labs/starknet-ecosystem.com">
+              About
+            </Link>
+            <Link href="https://twitter.com/StarkNetEco">Linktree</Link>
           </VStack>
         </VStack>
         <VStack align="flex-start">
           <Text fontSize="lg">Support</Text>
           <VStack align="flex-start" fontSize="sm">
-            <Link href="/">List a project</Link>
-            <Link href="/">List a job</Link>
-            <Link href="/">Contact us</Link>
+            <Link href="https://github.com/419Labs/starknet-ecosystem.com/blob/main/docs/add-project.md">
+              List a project
+            </Link>
+            <Link href="https://github.com/419Labs/starknet-ecosystem.com/blob/main/docs/add-job.md">
+              List a job
+            </Link>
+            <Link href="https://t.me/starknet_ecosystem">Contact us</Link>
           </VStack>
         </VStack>
         <VStack align="flex-start">
           <Text fontSize="lg">About</Text>
           <VStack align="flex-start" fontSize="sm">
-            <Link href="/">Terms of service</Link>
-            <Link href="/">Privacy policy</Link>
+            <Link href="/">
+              This is a community-owned initiative supported by StarkWare. The
+              links in the StarkNet Ecosystem are provided as a convenience and
+              for informational purposes only; they do not constitute an
+              endorsement or approval by our initiative of any of the projects
+              or services listed therein.
+            </Link>
           </VStack>
         </VStack>
         <VStack align="flex-start">

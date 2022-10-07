@@ -26,7 +26,7 @@ const MetricsPage: FC = () => {
     >
       <HighlightedText highlighted={t.metrics.title || "Ecosystem metrics"} />
       {/* Sub intro text */}
-      <Text
+      {/* <Text
         zIndex={1}
         mt={8}
         textAlign="start"
@@ -35,12 +35,12 @@ const MetricsPage: FC = () => {
         maxWidth="600px"
       >
         {t.common.subtitle_main}
-      </Text>
-      <Flex w="full" direction="column" mt={24}>
+      </Text> */}
+      <Flex w="full" direction="column" mt={12}>
         <Box mb={8} w="full">
           <Flex direction={{ base: "column", md: "row" }} mb={4}>
             <Text as="h2" mr={8} fontSize="2xl" fontWeight="bold">
-              {t.metrics.developer_tools || "Developer tools"}
+              {t.metrics.network_activity || "Network activity"}
             </Text>
             <Flex
               justify="flex-start"
@@ -61,7 +61,7 @@ const MetricsPage: FC = () => {
         </Box>
         <Box mb={8} w="full">
           <Text as="h2" mb={4} fontSize="2xl" fontWeight="bold" w="full">
-            {t.metrics.developer_tools || "Developer tools"}
+            {t.metrics.developonchain_activityer_tools || "Developer tools"}
           </Text>
           <SimpleGrid columns={{ sm: 1, md: 2, lg: 2, xl: 3 }} spacing={4}>
             <GithubReposPaper />

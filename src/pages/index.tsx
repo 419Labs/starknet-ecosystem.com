@@ -115,7 +115,10 @@ const Home = () => {
         position="relative"
       >
         {/* Big intro text */}
-        <HighlightedText text={t.common.title_main_dapps} highlighted="1234" />
+        <HighlightedText
+          text={t.common.title_main_dapps}
+          highlighted="Hundreds"
+        />
         <Box
           boxSize="400px"
           position="absolute"

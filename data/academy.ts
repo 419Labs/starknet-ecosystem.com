@@ -38,7 +38,7 @@ export const learning: Resource[] = [
     name: "Hello, Cairo",
     shortName: "hello-cairo-official-doc",
     description:
-      "“Hello, Cairo describes Cairo for the programmer who wishes to understand what Cairo can do hands-on, and start writing programs in Cairo.",
+      "Hello, Cairo describes Cairo for the programmer who wishes to understand what Cairo can do hands-on, and start writing programs in Cairo.",
     tags: ["starknet", "cairo", "learn"],
     network: {
       website: "https://www.cairo-lang.org/docs/hello_cairo/index.html",

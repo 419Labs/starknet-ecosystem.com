@@ -11,6 +11,7 @@ import { allAcademyTags } from "../../../data/tag";
 import CardHighlight from "../../components/card/CardHighlight";
 import CardResource from "../../components/card/CardResource";
 import CardResourceSkeleton from "../../components/card/CardResourceSkeleton";
+import DifficultyIcon from "../../components/layout/DifficultyIcon";
 import HighlightedText from "../../components/layout/HighlightedText";
 import Input from "../../components/layout/Input";
 import Menu from "../../components/layout/Menu";
@@ -18,7 +19,6 @@ import NetworkLogos from "../../components/layout/NetworkLogos";
 import { useTranslate } from "../../context/TranslateProvider";
 import { EcosystemApi } from "../../services/ecosystem-api.service";
 import { shortenText } from "../../services/project.service";
-import DifficultyIcon from "../../components/layout/DifficultyIcon";
 
 const AcademyPage: FC = () => {
   const { t } = useTranslate();
@@ -132,7 +132,7 @@ const AcademyPage: FC = () => {
         fontSize="20px"
         maxWidth="600px"
       >
-        {t.common.subtitle_main}
+        {t.common.academy_subtitle}
       </Text>
       <Flex w="full" direction={{ base: "column", md: "row" }} mt={24}>
         <Menu
