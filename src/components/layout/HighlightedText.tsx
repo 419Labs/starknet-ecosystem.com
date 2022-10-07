@@ -22,7 +22,7 @@ function HighlightedText({
       lineHeight={1.2}
       fontSize={fontSize}
       fontWeight="bold"
-      maxWidth="600px"
+      maxWidth={{ base: "300px", sm: "600px" }}
     >
       <Box position="relative" display="inline">
         <Text as="span" position="relative" zIndex={1}>
@@ -41,7 +41,7 @@ function HighlightedText({
         />
       </Box>
       {text && (
-        <Text ml={4} as="span">
+        <Text ml={{ base: 0, sm: 4 }} as="span">
           {text}
         </Text>
       )}
