@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 
 import type { Project } from "../../../data/ecosystem";
 import allJobs from "../../../data/job";
+import { useTranslate } from "../../context/TranslateProvider";
 import Link from "../layout/Link";
 import NetworkLogos from "../layout/NetworkLogos";
 
@@ -14,6 +15,7 @@ interface Props {
 }
 
 const ProjectsInfos: FC<Props> = ({ project }) => {
+  const { t } = useTranslate();
   const [jobCount, setJobCount] = useState(0);
 
   useEffect(() => {
