@@ -67,7 +67,8 @@ const JobsPage: NextPage = () => {
         fontSize="20px"
         maxWidth="600px"
       >
-        {t.common.jobs_subtitle}
+        {t.common.jobs_subtitle ||
+          "You may be one click away from your dream job."}
       </Text>
       <Flex w="full" direction={{ base: "column", md: "row" }} mt={24}>
         {/* <Menu

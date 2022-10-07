@@ -4,9 +4,9 @@ const enTranslate: TranslateState = {
   common: {
     title_main: "StarkNet revolution is coming out of the woods",
     title_main_dapps: "dApps, Services & Wallets",
+    hundreds: "Hundreds",
     subtitle_main:
       "Immerse yourself into the StarNet Ecosystem by discovering projects, jobs, metrics and learning resources. ",
-    // "Discover a wide variety of apps, blockchains, wallets and explorers, built in the Starknet ecosystem by developers and contributors from across the globe.",
     community_driven:
       "✨ This project is managed by the awesome StarkNet community",
     no_project: "😕 No projects in this category",
@@ -22,6 +22,9 @@ const enTranslate: TranslateState = {
     no_resource: "😕 No resources",
     more: "view more",
     data_error: "Error while loading data, please try again later",
+    ecosystem: "Ecosystem",
+    jobs: "Jobs",
+    metrics: "Metrics",
     academy: "Academy",
     academy_subtitle:
       "Your StarkNet learning shop. Find tutorials, guides, contributions, libraries. Subscribe to newsletters to keep track on this very fast-moving ecosystem.",
@@ -45,7 +48,10 @@ const enTranslate: TranslateState = {
     social: "Social",
     tools: "Tools",
     wallet: "Wallet",
+    wallets: "Wallets",
     starkex: "StarkEx",
+    learning: "Learn",
+    contribute: "Contribute",
   },
   jobs: {
     apply: "Apply now",

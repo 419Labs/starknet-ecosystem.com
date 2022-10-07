@@ -89,7 +89,7 @@ const AcademyPage: FC = () => {
       align="flex-start"
       transform="translateZ(0)"
     >
-      <HighlightedText highlighted="Academy" />
+      <HighlightedText highlighted={t.common.academy || "Academy"} />
       {/* Sub intro text */}
       <Text
         zIndex={1}
@@ -99,7 +99,8 @@ const AcademyPage: FC = () => {
         fontSize="20px"
         maxWidth="600px"
       >
-        {t.common.academy_subtitle}
+        {t.common.academy_subtitle ||
+          "Your StarkNet learning shop. Find tutorials, guides, contributions, libraries. Subscribe to newsletters to keep track on this very fast-moving ecosystem."}
       </Text>
       <Flex w="full" direction={{ base: "column", md: "row" }} mt={24}>
         <Menu

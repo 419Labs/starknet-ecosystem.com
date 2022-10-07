@@ -23,8 +23,8 @@ function NewsInfosContent({
         <CardExplanation
           bg={getGradient()}
           title="News & Feeds"
-          content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam <br/>Lorem ipsum dolor sit amet"
-          link="https://www.google.com/"
+          content="Follow StarkNet Ecosystem by subscribing to community newsletters, Telegram groups or StarkWare official website."
+          link="https://starkware.co/content/"
         />
       </Box>
       <BasicContent resources={resources} observe={observe} keyword={keyword} />

@@ -4,8 +4,9 @@ const frTranslate: TranslateState = {
   common: {
     title_main: "La révolution StarkNet est en route",
     title_main_dapps: "dApps, Services & Portefeuilles",
+    hundreds: "Centaines",
     subtitle_main:
-      "Discover a wide variety of apps, blockchains, wallets and explorers, built in the Starknet ecosystem by developers and contributors from across the globe.",
+      "Plongez dans l'écosystème StarNet. Découvrez les projets qui construisent le futur, les emplois, les métriques et les ressources d'apprentissage de l'écosystème.",
     community_driven: "✨ Une initiative guidée par la communauté",
     no_project: "😕 Aucun projet dans cette catégorie",
     maybe_yours: "Peut-être le vôtre ?",
@@ -21,7 +22,13 @@ const frTranslate: TranslateState = {
     more: "voir plus",
     data_error:
       "Erreur lors du chargement des données, veuillez réessayer plus tard",
-    academy: "Academy",
+    ecosystem: "Ecosystème",
+    jobs: "Jobs",
+    metrics: "Métriques",
+    academy: "Académie",
+    academy_subtitle:
+      "Votre boutique d'apprentissage StarkNet. Trouvez des tutoriels, des guides, des contributions, des bibliothèques. Abonnez-vous aux newsletters pour suivre cet écosystème en évolution très rapide.",
+    jobs_subtitle: "Vous êtes peut-être à un clic de l'emploi de vos rêves.",
     cumulative_chart: "Cumulatif",
     non_cumulative_chart: "Non cumulatif",
   },
@@ -40,12 +47,21 @@ const frTranslate: TranslateState = {
     payments: "Paiements",
     social: "Social",
     tools: "Outils",
-    wallet: "Portefeuilles",
+    wallet: "Portefeuille",
+    wallets: "Portefeuilles",
     starkex: "StarkEx",
+    learning: "Apprendre",
+    contribute: "Contribuer",
   },
   jobs: {
     apply: "Postuler",
     apply_long: "Postuler pour ce job",
+    is_hiring: " recrute ",
+    description: "Description",
+    requirements: "Requirements",
+    published: "Publié",
+    ago: "ago",
+    no_selected: "Aucun job sélectionné",
   },
   metrics: {
     title: "Métriques de l'écosystème",

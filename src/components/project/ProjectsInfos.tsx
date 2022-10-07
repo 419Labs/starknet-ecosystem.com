@@ -149,7 +149,7 @@ const ProjectsInfos: FC<Props> = ({ project }) => {
           {/*  value={<Text color="whiteAlpha.600">No</Text>} */}
           {/* /> */}
           <ProjectsInfosDetails
-            title="Jobs"
+            title={t.common.jobs || "Jobs"}
             value={
               <HStack>
                 <Text color="whiteAlpha.600">

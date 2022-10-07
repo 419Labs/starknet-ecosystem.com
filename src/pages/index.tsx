@@ -116,8 +116,8 @@ const Home = () => {
       >
         {/* Big intro text */}
         <HighlightedText
-          text={t.common.title_main_dapps}
-          highlighted="Hundreds"
+          text={t.common.title_main_dapps || "dApps, Services & Wallets"}
+          highlighted={t.common.hundreds || "Hundreds"}
         />
         <Box
           boxSize="400px"
@@ -138,7 +138,8 @@ const Home = () => {
         fontSize="20px"
         maxWidth="600px"
       >
-        {t.common.subtitle_main}
+        {t.common.subtitle_main ||
+          "Immerse yourself into the StarNet Ecosystem by discovering projects, jobs, metrics and learning resources. "}
       </Text>
 
       {/* Main part */}
