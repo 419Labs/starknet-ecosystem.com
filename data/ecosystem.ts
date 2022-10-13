@@ -1932,4 +1932,22 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: true,
   },
+  {
+    id: "91c05ece-ccf9-4e80-91e9-0ed4fad81b25",
+    name: "StarkGate",
+    short_name: "StarkGate",
+    description: "StarkGate is the Ethereum↔StarkNet token bridge developed by StarkWare.",
+    tags: ["bridge", "starkware"],
+    logo: "starkgate.png",
+    network: {
+      website: "https://starkgate.starknet.io/",
+      github: "https://github.com/starkware-libs/starkgate-contracts",
+      twitter: "https://twitter.com/StarkWareLtd",
+      medium: "",
+      discord: "http://starknet.io/discord",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: true,
+  },
 ];
