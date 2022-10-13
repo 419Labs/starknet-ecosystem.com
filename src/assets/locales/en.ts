@@ -3,7 +3,7 @@ import type { TranslateState } from "../../context/TranslateProvider/model";
 const enTranslate: TranslateState = {
   common: {
     title_main: "StarkNet revolution is coming out of the woods",
-    title_main_dapps: "dApps, Services & Wallets",
+    title_main_dapps: "of dApps, Services & Wallets",
     hundreds: "Hundreds",
     subtitle_main:
       "Immerse yourself into the StarNet Ecosystem by discovering projects, jobs, metrics and learning resources. ",
