@@ -45,7 +45,7 @@ function ContributeContent({ keyword = "", observe }: BasicContentProps) {
         <CardExplanation
           bg={getGradient()}
           title="Open contributions"
-          content="Thanks to our partnership with OnlyDust you can find below all open contributions provided by StarkNet companies. <br/>Get involved, contribute & get paid for that."
+          content="Thanks to our partnership with OnlyDust you can find below all open contributions provided by the StarkNet ecosystem. <br/>Get involved, contribute & get paid for that."
           link="https://www.onlydust.xyz/"
         />
       </Box>

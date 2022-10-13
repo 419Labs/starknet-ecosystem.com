@@ -6,7 +6,7 @@ const enTranslate: TranslateState = {
     title_main_dapps: "of dApps, Services & Wallets",
     hundreds: "Hundreds",
     subtitle_main:
-      "Immerse yourself into the StarNet Ecosystem by discovering projects, jobs, metrics and learning resources. ",
+      "Immerse yourself in the StarNet Ecosystem by discovering projects, jobs, metrics and learning resources. ",
     community_driven:
       "✨ This project is managed by the awesome StarkNet community",
     no_project: "😕 No projects in this category",
