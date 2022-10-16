@@ -1950,4 +1950,22 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: true,
   },
+  {
+    id: "680388bf-7d32-4143-b291-05751cc9bf42",
+    name: "RYG Labs",
+    short_name: "RYG Labs",
+    description: "RYG.Labs is a project that focuses on building and developing utilities of NFT; we also provide blockchain application solutions for individual users and businesses. Hence, heighten the blue-chip NFTs liquidity and create the playground for NFT DAOs are also our objectives.",
+    tags: ["nft", "dao"],
+    logo: "ryg-labs.jpg",
+    network: {
+      website: "https://www.itsryg.com/",
+      github: "https://github.com/RYG-Labs",
+      twitter: "https://twitter.com/RYG_Labs",
+      medium: "",
+      discord: "https://discord.gg/rEVCAYjq",
+      telegram: "",
+    },
+    isLive: false,
+    isTestnetLive: false,
+  }
 ];
