@@ -313,6 +313,19 @@ const allCompanies: Company[] = [
       telegram: "https://t.me/+EUX9cW_LHcgwZTdk",
     },
   },
+    {
+    id: 25,
+    name: "Commercium",
+    logo: "Commercium.png",
+    network: {
+      website: "https://www.commercium.app/",
+      github: "https://github.com/AdeptusDigitales",
+      twitter: "https://twitter.com/TheCommercium",
+      medium: "https://medium.com/@adeptusdigitales",
+      discord: "https://discord.gg/4nxZrT2R",
+      telegram: "",
+    },
+  },
  
 ];
 
