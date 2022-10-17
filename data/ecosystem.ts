@@ -1967,8 +1967,7 @@ export const allProjects: Array<Project> = [
     },
     isLive: false,
     isTestnetLive: false,
-  }
-  ,
+  },
   {
     id: "a0ba2a5d-8e34-46a3-9f5b-758ab715dd57",
     name: "The Commercium",
