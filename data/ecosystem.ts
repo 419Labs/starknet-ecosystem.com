@@ -1967,5 +1967,23 @@ export const allProjects: Array<Project> = [
     },
     isLive: false,
     isTestnetLive: false,
+  },
+  {
+    id: "a0ba2a5d-8e34-46a3-9f5b-758ab715dd57",
+    name: "The Commercium",
+    short_name: "Commercium",
+    description: "The Commercium enables DEX aggregation algorithms to be exeuted on-chain. Thus creating a truely decentralized and permissionless DEX aggregation protocol.",
+    tags: ["defi"],
+    logo: "commercium.png",
+    network: {
+      website: "https://www.commercium.app/",
+      github: "https://github.com/AdeptusDigitales",
+      twitter: "https://twitter.com/TheCommercium",
+      medium: "https://medium.com/@adeptusdigitales",
+      discord: "https://discord.gg/4nxZrT2R",
+      telegram: "",
+    },
+    isLive: false,
+    isTestnetLive: true,
   }
 ];
