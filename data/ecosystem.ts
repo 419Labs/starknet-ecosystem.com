@@ -1973,9 +1973,9 @@ export const allProjects: Array<Project> = [
     id: "a0ba2a5d-8e34-46a3-9f5b-758ab715dd57",
     name: "The Commercium",
     short_name: "Commercium",
-    description: "RYG.Labs is a project that focuses on building and developing utilities of NFT; we also provide blockchain application solutions for individual users and businesses. Hence, heighten the blue-chip NFTs liquidity and create the playground for NFT DAOs are also our objectives.",
+    description: "The Commercium enables DEX aggregation algorithms to be exeuted on-chain. Thus creating a truely decentralized and permissionless DEX aggregation protocol.",
     tags: ["defi"],
-    logo: "commercium.jpg",
+    logo: "commercium.png",
     network: {
       website: "https://www.commercium.app/",
       github: "https://github.com/AdeptusDigitales",
