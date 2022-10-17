@@ -1968,4 +1968,23 @@ export const allProjects: Array<Project> = [
     isLive: false,
     isTestnetLive: false,
   }
+  ,
+  {
+    id: "a0ba2a5d-8e34-46a3-9f5b-758ab715dd57",
+    name: "The Commercium",
+    short_name: "Commercium",
+    description: "RYG.Labs is a project that focuses on building and developing utilities of NFT; we also provide blockchain application solutions for individual users and businesses. Hence, heighten the blue-chip NFTs liquidity and create the playground for NFT DAOs are also our objectives.",
+    tags: ["defi"],
+    logo: "commercium.jpg",
+    network: {
+      website: "https://www.commercium.app/",
+      github: "https://github.com/AdeptusDigitales",
+      twitter: "https://twitter.com/TheCommercium",
+      medium: "https://medium.com/@adeptusdigitales",
+      discord: "https://discord.gg/4nxZrT2R",
+      telegram: "",
+    },
+    isLive: false,
+    isTestnetLive: true,
+  }
 ];
