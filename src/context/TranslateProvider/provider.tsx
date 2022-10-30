@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import type React from "react";
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useMemo } from "react";
 
 import en from "../../assets/locales/en";
 import fr from "../../assets/locales/fr";
@@ -12,7 +12,6 @@ import zh_CN from "../../assets/locales/zh_CN";
 import zh_TW from "../../assets/locales/zh_TW";
 
 import { TranslateContext } from "./context";
-import type { TranslateState } from "./model";
 
 export interface TranslateProviderProps {
   children: React.ReactNode;
