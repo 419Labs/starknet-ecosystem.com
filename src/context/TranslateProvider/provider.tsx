@@ -22,6 +22,7 @@ export function TranslateProvider({
   children,
 }: TranslateProviderProps): JSX.Element {
   const router = useRouter();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const getLocale = () => {
     switch (router.locale) {
       case "en":
