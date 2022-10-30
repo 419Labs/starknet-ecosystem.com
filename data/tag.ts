@@ -228,4 +228,8 @@ export const allEcosystemTags: Tag[] = [
     label: "StarkEx",
     icon: "ellipsis-vertical",
   },
+  {
+    value: "security",
+    label: "Security",
+  },
 ];

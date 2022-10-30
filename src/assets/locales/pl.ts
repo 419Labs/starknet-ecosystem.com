@@ -5,8 +5,7 @@ const translate: TranslateState = {
     title_main: "Nadchodzi Rewolucja StarkNet",
     title_main_dapps: "dApps, Services & Wallets",
     hundreds: "Setki",
-    subtitle_main:
-      "Zanurz się w ekosystemie StarNet, odkrywając projekty, zadania, wskaźniki i zasoby edukacyjne.",
+    subtitle_main: "Poznaj wszystkie projekty zbudowane na StarkNet L2",
     community_driven:
       "✨ Ten projekt tworzony jest przez fantastyczną społeczność StarkNet ",
     no_project: "😕 Brak projektów w tej kategorii",
