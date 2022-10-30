@@ -44,23 +44,13 @@ export function TranslateProvider({
         return en;
     }
   };
-  const [locale, setLocale] = useState<TranslateState>(getLocale());
 
-  const getLocalCallback = useCallback(() => {
-    return getLocale();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  useEffect(() => {
-    setLocale(getLocalCallback);
-  }, [getLocalCallback, router.locale]);
-
-  const test = useMemo(() => {
-    return { t: locale, locale: router.locale };
-  }, [locale, router.locale]);
+  const localValue = useMemo(() => {
+    return { t: getLocale(), locale: router.locale };
+  }, [getLocale, router.locale]);
 
   return (
-    <TranslateContext.Provider value={test}>
+    <TranslateContext.Provider value={localValue}>
       {children}
     </TranslateContext.Provider>
   );
