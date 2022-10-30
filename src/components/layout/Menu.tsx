@@ -27,6 +27,7 @@ const icons = {
   "screwdriver-wrench": solid("screwdriver-wrench"),
   wallet: solid("wallet"),
   "ellipsis-vertical": solid("ellipsis-vertical"),
+  "shield-halved": solid("shield-halved"),
 };
 
 interface MenuProps {
