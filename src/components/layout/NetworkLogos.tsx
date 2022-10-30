@@ -14,40 +14,78 @@ const NetworkLogos: FC<Props> = ({
   network: { website, telegram, twitter, medium, github, discord },
   justifyContent = "flex-start",
 }) => {
+  const hoverColor = "whiteAlpha.900";
   return (
     <HStack
       justifyContent={justifyContent}
       spacing={4}
-      fontSize="20px"
+      fontSize="18px"
+      color="whiteAlpha.600"
       onClick={(e) => e.stopPropagation()}
     >
       {website && (
-        <Link isExternal href={website}>
+        <Link
+          isExternal
+          href={website}
+          _hover={{
+            color: hoverColor,
+          }}
+        >
           <FontAwesomeIcon icon={solid("globe")} />
         </Link>
       )}
       {twitter && (
-        <Link isExternal href={twitter}>
+        <Link
+          isExternal
+          href={twitter}
+          _hover={{
+            color: hoverColor,
+          }}
+        >
           <FontAwesomeIcon icon={brands("twitter")} />
         </Link>
       )}
       {telegram && (
-        <Link isExternal href={telegram}>
+        <Link
+          isExternal
+          href={telegram}
+          _hover={{
+            color: hoverColor,
+          }}
+        >
           <FontAwesomeIcon icon={brands("telegram")} />
         </Link>
       )}
       {discord && (
-        <Link isExternal href={discord}>
+        <Link
+          isExternal
+          href={discord}
+          _hover={{
+            color: hoverColor,
+          }}
+        >
           <FontAwesomeIcon icon={brands("discord")} />
         </Link>
       )}
       {medium && (
-        <Link isExternal href={medium}>
+        <Link
+          isExternal
+          href={medium}
+          _hover={{
+            color: hoverColor,
+          }}
+        >
           <FontAwesomeIcon icon={brands("medium")} />
         </Link>
       )}
       {github && (
-        <Link isExternal href={github}>
+        <Link
+          isExternal
+          href={github}
+          _hover={{
+            color: hoverColor,
+          }}
+        >
           <FontAwesomeIcon icon={brands("github")} />
         </Link>
       )}

@@ -17,27 +17,12 @@ const getAccessToken = (): Promise<string> =>
     .then((response) => response.access_token)
     .catch((e) => console.log(e))
 
-
-const projectDtos = allProjects.map((project) => ({
-  id: project.id,
-  name: project.name,
-  shortName: project.short_name,
-  description: project.description,
-  image: project.logo,
-  token: project.token,
-  tags: project.tags,
-  technologies: project.technologies,
-  network: project.network,
-  isLive: project.isLive,
-  isTestnetLive: project.isTestnetLive,
-}))
-
 const pushData = (token: string): Promise<string> =>
   axios.request({
     method: 'PUT',
     url: `${process.env.STARKNET_DB_URL}/projects`,
     headers: { 'content-type': "application/json", "Authorization": `Bearer ${token}` },
-    data: projectDtos
+    data: allProjects
   }).then((response) => response.data)
     .then((response) => response.access_token)
     .catch((e) => console.log(e))

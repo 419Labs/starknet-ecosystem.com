@@ -3,7 +3,10 @@ import type { TranslateState } from "../../context/TranslateProvider/model";
 const zhCNTranslation: TranslateState = {
   common: {
     title_main: "StarkNet 革命即将到来",
-    subtitle_main: "探索所有在 StarkNet L2 上建立和运行的项目",
+    title_main_dapps: "dApp、服务和钱包",
+    hundreds: "数百",
+    subtitle_main:
+      "通过发现项目、工作、指标和学习资源，让自己沉浸在 StarNet 生态系统中。",
     community_driven: "✨ 社区驱动的倡议",
 
     no_project: "😕 该目录下暂无项目",
@@ -13,6 +16,21 @@ const zhCNTranslation: TranslateState = {
     alpha_road_team: "Alpha Road Team",
     apply: "添加项目",
     community: "社区",
+    job_title_main: "工作",
+    job: "工作",
+    no_job: "😕 No 工作",
+    no_resource: "😕 No resources",
+    more: "view more",
+    data_error: "Error while loading data, please try again later",
+    ecosystem: "生态系统",
+    jobs: "工作",
+    metrics: "指标",
+    academy: "学院",
+    academy_subtitle:
+      "您的 StarkNet 学习商店。查找教程、指南、贡献、图书馆。订阅新闻通讯以跟踪这个快速发展的生态系统",
+    jobs_subtitle: "You may be one click away from your dream job.",
+    cumulative_chart: "累积图表",
+    non_cumulative_chart: "非累积图表",
   },
   tags: {
     all: "所有",
@@ -30,12 +48,35 @@ const zhCNTranslation: TranslateState = {
     social: "社交",
     tools: "工具",
     wallet: "钱包",
+    wallets: "钱包",
     starkex: "StarkEx",
+    learning: "学",
+    contribute: "贡献",
   },
   jobs: {
     apply: "Apply now",
+    apply_long: "Apply for this job",
+    is_hiring: " is hiring a",
+    description: "Description",
+    requirements: "Requirements",
+    published: "Published",
+    ago: "ago",
+    no_selected: "No job selected",
   },
-  metrics: {},
+  metrics: {
+    title: "Ecosystem metrics",
+    data_sources: "Data sources",
+    data_coming_from: "Data coming from",
+    transactions: "transactions",
+    contracts: "contracts",
+    blocks: "blocks",
+    network_activity: "Network activity",
+    developer_tools: "Developer tools",
+    metrics: "Metrics",
+    github_repo: "Tools & Libraries",
+    npm_last_downloads: "downloads last 7 days",
+    npm_total_downloads: "downloads",
+  },
 };
 
 export default zhCNTranslation;

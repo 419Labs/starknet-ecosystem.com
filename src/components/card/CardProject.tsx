@@ -1,7 +1,8 @@
-import { Box, Flex, Text } from "@chakra-ui/layout";
-import { Image, Tag as ChakraTag } from "@chakra-ui/react";
-import type { ReactElement } from "react";
-import Flippy, { BackSide, FrontSide } from "react-flippy";
+import { Box, Flex, HStack, Text } from "@chakra-ui/layout";
+import { Avatar, Image, Tag as ChakraTag } from "@chakra-ui/react";
+import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useRouter } from "next/router";
 
 import type { ProjectItf } from "../../../data/ecosystem";
 import { useTranslate } from "../../context/TranslateProvider";
@@ -12,21 +13,26 @@ function pick(amount: number) {
 }
 
 interface CardProjectProps {
+  index: number;
   project: ProjectItf;
-  isFlipped: boolean;
-  onClick: () => void;
 }
-function CardProject({ project, isFlipped, onClick }: CardProjectProps) {
+function CardProject({ index, project }: CardProjectProps) {
   const { t } = useTranslate();
+  const router = useRouter();
 
-  const {
-    name,
-    description,
-    tagsRef: tags,
-    logo,
-    isLive,
-    isTestnetLive,
-  } = project;
+  const { name, tagsRef: tags, network, isLive, isTestnetLive } = project;
+
+  const getFallbackText = (text: string) => {
+    return (
+      <Text fontWeight="bold" fontSize="24px">
+        {text}
+      </Text>
+    );
+  };
+
+  const getFallbackColor = () => {
+    return `flat.${((index % 9) + 1) * 100}`;
+  };
 
   const getIndicationText = (): string | undefined => {
     if (isLive) {
@@ -38,117 +44,107 @@ function CardProject({ project, isFlipped, onClick }: CardProjectProps) {
     return undefined;
   };
 
-  const renderFallbackIcon = () => {
+  const renderFallbackImage = () => {
     return (
       <Flex
-        align="center"
+        borderTopRadius="md"
+        minH="110px"
+        align="flex-start"
         justify="center"
-        boxSize="170px"
-        bg="gray.600"
-        borderRadius="50%"
+        pt={4}
+        bg={getFallbackColor()}
       >
-        <Text fontWeight="bold" fontSize="56px" color="gray.800">
-          {name.substring(0, 2).toUpperCase()}
-        </Text>
+        {getFallbackText(name.toUpperCase())}
       </Flex>
     );
   };
 
-  const renderBaseCard = (content: ReactElement, indication?: string) => {
-    return (
-      <Flex
-        border="1px solid"
-        borderColor="gray.800"
-        _hover={{
-          // boxShadow: "0px 0px 1px #1a202c, 0 0px 20px #46526a",
-          borderColor: "gray.600",
-        }}
-        cursor="pointer"
-        p={5}
-        bg="gray.800"
-        borderRadius="md"
-        direction="column"
-        justify="space-between"
-        align="center"
-        minHeight="350px"
-        height="full"
-        position="relative"
-      >
-        {indication && (
-          <Box position="absolute" right={2} top={2}>
-            <ChakraTag color="green.100" background="green.500">
-              {indication}
-            </ChakraTag>
-          </Box>
-        )}
-        {content}
-      </Flex>
-    );
-  };
+  const indication = getIndicationText();
   return (
-    <Flippy
-      isFlipped={isFlipped}
-      height="100%"
-      flipDirection="horizontal"
-      onClick={onClick}
+    <Flex
+      onClick={() => router.push({ pathname: `/projects/${project.id}` })}
+      align="center"
+      direction="column"
+      bg="primary.700"
+      borderRadius="lg"
+      overflow="hidden"
+      p={1}
+      transition=".4s ease all"
+      cursor="pointer"
+      _hover={{
+        background: "primary.500",
+        ".project-banner": {
+          transform: "scale(1.1)",
+        },
+      }}
     >
-      <FrontSide style={{ padding: 0 }}>
-        {renderBaseCard(
-          <>
-            <Flex align="center" justify="center" flex={1}>
-              <Image
-                width="170px"
-                maxHeight="170px"
-                src={`/logos/${logo}`}
-                alt={`${name} logo`}
-                fallback={renderFallbackIcon()}
-              />
-            </Flex>
-            <Text as="h2" my={8} fontSize="xl" fontWeight="bold">
-              {name}
-            </Text>
-            <Flex direction="row" wrap="wrap" justifyContent="center">
-              {tags && tags.length > 0 ? (
-                tags.filter(pick(5)).map((tag) => {
-                  // limit to 5 tags, as this looks nice and limits tags to 2 lines max
-                  return (
-                    <ChakraTag m={0.5} key={`project-${name}-tag-${tag.value}`}>
-                      {t.tags[tag.value]}
-                    </ChakraTag>
-                  );
-                })
-              ) : (
-                <ChakraTag key={`project-${name}-tag-none`}>😕</ChakraTag>
-              )}
-            </Flex>
-          </>,
-          getIndicationText()
-        )}
-      </FrontSide>
-      <BackSide style={{ padding: 0 }}>
-        {renderBaseCard(
-          <Flex
-            position="relative"
-            direction="column"
-            justify="space-between"
-            align="flex-start"
-            h="full"
-            w="full"
+      <Box position="relative" w="full" overflow="hidden" borderTopRadius="md">
+        <Image
+          minH="110px"
+          fallback={renderFallbackImage()}
+          transition="all .4s ease"
+          src={network.twitterBanner}
+          position="relative"
+          objectFit="cover"
+          className="project-banner"
+        />
+        {indication && (
+          <ChakraTag
+            position="absolute"
+            top={2}
+            left={2}
+            borderRadius="xl"
+            background="green.500"
           >
-            <Text
-              fontSize="md"
-              fontWeight="500"
-              opacity=".8"
-              px={0}
-              noOfLines={10}
-            >
-              {description}
+            <FontAwesomeIcon fontSize="8px" icon={solid("circle")} />
+            <Text ml={2} fontSize="xs" color="green.100" fontWeight="bold">
+              {indication}
             </Text>
-            <NetworkLogos network={project.network} />
-          </Flex>
+          </ChakraTag>
         )}
-      </BackSide>
-    </Flippy>
+      </Box>
+      <Flex direction="column" align="center" mt="-50px">
+        <Avatar
+          size="xl"
+          name={name}
+          src={network.twitterImage}
+          border="2px solid white"
+          bg={getFallbackColor()}
+        />
+        <Text as="h6" fontSize="lg" fontWeight="bold" mt={4}>
+          {name}
+        </Text>
+        <HStack
+          spacing={0}
+          flexWrap="wrap"
+          justify="center"
+          shouldWrapChildren
+          mt={4}
+        >
+          {tags && tags.length > 0 ? (
+            tags.filter(pick(5)).map((tag) => {
+              // limit to 5 tags, as this looks nice and limits tags to 2 lines max
+              return (
+                <ChakraTag
+                  fontSize="xs"
+                  fontWeight="medium"
+                  borderRadius="xl"
+                  m={0.5}
+                  key={`project-${name}-tag-${tag.value}`}
+                >
+                  {t.tags[tag.value]}
+                </ChakraTag>
+              );
+            })
+          ) : (
+            <ChakraTag key={`project-${name}-tag-none`}>😕</ChakraTag>
+          )}
+        </HStack>
+        <Box my={4}>
+          <NetworkLogos network={network} />
+        </Box>
+      </Flex>
+    </Flex>
   );
 }
 

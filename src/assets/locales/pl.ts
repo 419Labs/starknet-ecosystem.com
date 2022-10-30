@@ -3,6 +3,8 @@ import type { TranslateState } from "../../context/TranslateProvider/model";
 const translate: TranslateState = {
   common: {
     title_main: "Nadchodzi Rewolucja StarkNet",
+    title_main_dapps: "dApps, Services & Wallets",
+    hundreds: "Setki",
     subtitle_main: "Poznaj wszystkie projekty zbudowane na StarkNet L2",
     community_driven:
       "✨ Ten projekt tworzony jest przez fantastyczną społeczność StarkNet ",
@@ -18,6 +20,15 @@ const translate: TranslateState = {
     no_job: "😕 Brak pracy",
     more: "zobacz więcej",
     data_error: "Błąd w czasie ładowania danych, spróbuj później",
+    ecosystem: "Ekosystem",
+    jobs: "Oferty pracy",
+    metrics: "Metrics",
+    academy: "Metryka",
+    academy_subtitle:
+      "Twój sklep edukacyjny StarkNet. Znajdź samouczki, przewodniki, wkłady, biblioteki. Subskrybuj biuletyny, aby śledzić ten bardzo szybko rozwijający się ekosystem.",
+    jobs_subtitle: "Możesz być o jedno kliknięcie od wymarzonej pracy.",
+    cumulative_chart: "Wykres zbiorczy",
+    non_cumulative_chart: "Wykres nieskumulowany",
   },
   tags: {
     all: "Wszystko",
@@ -35,7 +46,10 @@ const translate: TranslateState = {
     social: "Społeczność",
     tools: "Narzędzia",
     wallet: "Portfel",
+    wallets: "Portfels",
     starkex: "StarkEx",
+    learning: "Learn",
+    contribute: "Contribute",
   },
   jobs: {
     apply: "Złoż aplikację",
@@ -49,12 +63,15 @@ const translate: TranslateState = {
   metrics: {
     title: "Metryki ekosystemu",
     data_sources: "Źródła danych",
+    data_coming_from: "Data coming from",
     transactions: "transakcji",
     contracts: "kontraktów",
+    blocks: "blocks",
     developer_tools: "Narzędzia developerskie",
     metrics: "Metryki",
     github_repo: "Narzędzia i biblioteki",
     npm_last_downloads: "pobrań przez ostatnie 7 dni",
+    npm_total_downloads: "downloads",
   },
 };
 

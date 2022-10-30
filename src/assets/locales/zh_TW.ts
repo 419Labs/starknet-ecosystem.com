@@ -3,7 +3,10 @@ import type { TranslateState } from "../../context/TranslateProvider/model";
 const zhTWTranslate: TranslateState = {
   common: {
     title_main: "StarkNet 革命即將到來",
-    subtitle_main: "探索所有在 StarkNet L2 上建立和運行的項目",
+    title_main_dapps: "dApp、服務和錢包",
+    hundreds: "數百",
+    subtitle_main:
+      "通過發現項目、工作、指標和學習資源，讓自己沉浸在 StarNet 生態系統中。",
     community_driven: "✨ 社區驅動的倡議",
 
     no_project: "😕 該目錄下暫無項目",
@@ -13,6 +16,21 @@ const zhTWTranslate: TranslateState = {
     alpha_road_team: "Alpha Road Team",
     apply: "添加項目",
     community: "社區",
+    job_title_main: "工作",
+    job: "工作",
+    no_job: "😕 No 工作",
+    no_resource: "😕 No resources",
+    more: "view more",
+    data_error: "Error while loading data, please try again later",
+    ecosystem: "生態系統",
+    jobs: "工作",
+    metrics: "指標",
+    academy: "學院",
+    academy_subtitle:
+      "您的 StarkNet 學習商店。查找教程、指南、貢獻、圖書館。訂閱新聞通訊以跟踪這個快速發展的生態系統。",
+    jobs_subtitle: "你可能離你夢想的工作只有一鍵之遙",
+    cumulative_chart: "累積圖表",
+    non_cumulative_chart: "非累積圖表",
   },
   tags: {
     all: "所有",
@@ -30,12 +48,35 @@ const zhTWTranslate: TranslateState = {
     social: "社交",
     tools: "工具",
     wallet: "錢包",
+    wallets: "錢包",
     starkex: "StarkEx",
+    learning: "學",
+    contribute: "貢獻",
   },
   jobs: {
     apply: "Apply now",
+    apply_long: "Apply for this job",
+    is_hiring: " is hiring a",
+    description: "Description",
+    requirements: "Requirements",
+    published: "Published",
+    ago: "ago",
+    no_selected: "No job selected",
   },
-  metrics: {},
+  metrics: {
+    title: "Ecosystem metrics",
+    data_sources: "Data sources",
+    data_coming_from: "Data coming from",
+    transactions: "transactions",
+    contracts: "contracts",
+    blocks: "blocks",
+    network_activity: "Network activity",
+    developer_tools: "Developer tools",
+    metrics: "Metrics",
+    github_repo: "Tools & Libraries",
+    npm_last_downloads: "downloads last 7 days",
+    npm_total_downloads: "downloads",
+  },
 };
 
 export default zhTWTranslate;

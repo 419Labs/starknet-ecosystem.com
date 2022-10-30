@@ -1,21 +1,21 @@
 /** @type {import('next-seo').DefaultSeoProps} */
 const defaultSEOConfig = {
   title:
-    "StarkNet Ecosystem | Explore projects, teams, jobs, metrics and everything around StarkNet",
+    "StarkNet Ecosystem | Discover the future of Ethereum scalability.",
   titleTemplate: "%s",
   defaultTitle:
-    "StarkNet Ecosystem | Explore projects, teams, jobs, metrics and everything around StarkNet",
+    "Explore projects, teams, jobs, metrics and everything around StarkNet Ecosystem",
   description:
-    "Explore projects, teams, jobs, metrics and everything around StarkNet",
+    "Explore projects, teams, jobs, metrics and everything around StarkNet Ecosystem",
   canonical: "https://starknet-ecosystem.com",
   openGraph: {
     url: "https://starknet-ecosystem.com",
     title: "StarkNet Ecosystem",
     description:
-      "Explore projects, teams, jobs, metrics and everything around StarkNet",
+      "Explore projects, teams, jobs, metrics and everything around StarkNet Ecosystem",
     images: [
       {
-        url: "https://starknet-ecosystem.com/starknet-banner.jpg",
+        url: "https://www.starknet-ecosystem.com/starknet-map.png",
         alt: "StarkNet Ecosystem logo",
       },
     ],
@@ -23,7 +23,7 @@ const defaultSEOConfig = {
   },
   twitter: {
     cardType: "summary_large_image",
-    site: "@alpharoad_fi",
+    site: "@StarkNetEco",
   },
 };
 

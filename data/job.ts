@@ -4,7 +4,7 @@ const allJobs: Array<Job> = [
   {
     key: "1",
     title: "Product Lead - Argent X",
-    companyId: 10,
+    projectId: "8df27359-f05d-439b-8592-ca1b61cf049c",
     tags: ["Product", "Argent X"],
     location: "Remote (Europe)",
     remote: true,
@@ -44,7 +44,7 @@ const allJobs: Array<Job> = [
   {
     key: "2",
     title: "Senior Smart Contract Engineer for StarkNet",
-    companyId: 5,
+    projectId: "dce4260c-807e-48d0-b57c-d8488dbe8889",
     tags: ["Cairo", "Solidity", "Web3", "StarkNet"],
     location: "Remote",
     remote: true,
@@ -91,7 +91,7 @@ const allJobs: Array<Job> = [
   {
     key: "3",
     title: "Blockchain/Full Stack Devs",
-    companyId: 6,
+    projectId: "5299693a-a684-4332-a3cc-8b8fca48b4ce",
     tags: [],
     location: "Toronto, Canada",
     remote: true,
@@ -104,7 +104,7 @@ const allJobs: Array<Job> = [
   {
     key: "4",
     title: "Senior Software Engineer",
-    companyId: 3,
+    projectId: "efde17bc-1077-4d74-a2d3-77d8cdc7ac8a",
     tags: ["typescript", "docker", "serverless"],
     location: "Remote",
     remote: true,
@@ -132,7 +132,7 @@ const allJobs: Array<Job> = [
   {
     key: "5",
     title: "UI/UX Designer",
-    companyId: 12,
+    projectId: "5368a3f6-b8f0-44e3-ba88-9b1d64adee23",
     tags: ["ui", "ux", "design"],
     location: "Remote",
     remote: true,
@@ -169,55 +169,9 @@ const allJobs: Array<Job> = [
       "https://zkpad.notion.site/UI-UX-Designer-55ce7ece2d944b42abf6abda9633f454",
   },
   {
-    key: "6",
-    title: "StarkNet Developer Advocate",
-    companyId: 7,
-    tags: [],
-    location: "Remote",
-    remote: true,
-    description:
-      "StarkWare is looking for a Developer Advocate to educate developers who will build on/for StarkNet. We’re looking to hire two people: one in North America, the other in the Far East.\n" +
-      "\n" +
-      "StarkNet is a permissionless ZK-Rollup, powered by the STARK zero-knowledge proof protocol. It is a Layer-2 scaling solution that settles on Ethereum. StarkNet Alpha, supporting general computation and composability, has been on a public testnet since June 2021, and on Mainnet Ethereum since Nov 2021.\n" +
-      "\n" +
-      "StarkWare is a 4-year old company, which has raised over $150M from Paradigm, Sequoia, the Ethereum Foundation, Vitalik Buterin, and other notable investors. Over the past year, its permissioned scaling solution, StarkEx, has settled over 100M txs on Ethereum, and over $400B for dYdX, Sorare, Immutable, and DeversiFi. Both StarkNet and StarkEx are written in Cairo, a Turing-complete language for STARK-proving computational statements. Cairo was invented by StarkWare.\n" +
-      "\n" +
-      "Geography: we are looking for two Developer Advocates: one who is based in North America, and one who is based in the Far East. Most of the team is based in Israel.\n" +
-      "\n" +
-      "Objective: spreading the StarkNet and Cairo gospel",
-    responsibilities:
-      "- Write technical content, including tutorials\n" +
-      "- Regularly write Cairo and use the fast-moving StarkNet toolchain in order to better understand the developer experience\n" +
-      "- Review and critique code for newcomers to StarkNet\n" +
-      "- Plan and host meetups/workshops/hackathons, both online and in-person, to educate developers. Travel is a must.",
-    requirements:
-      "A strong candidate should be:\n" +
-      "- Curious\n" +
-      "- An excellent communicator (teacher, f2f, and on Crypto-Twitter)\n" +
-      "- Fluent in English (North America) or Mandarin (Far East). Other languages are a plus\n" +
-      "- Familiar with and interested in blockchain/crypto/DeFi\n" +
-      "- Knows how to initiate and promote new activities",
-    createdOn: new Date("2022-02-15"),
-    applyLink: "mailto:jobs@starkware.co",
-  },
-  {
-    key: "7",
-    title: "Protocol Engineer",
-    companyId: 8,
-    tags: [],
-    location: "Sydney",
-    remote: true,
-    description:
-      "Engineers will be exposed to novel research and applications of practical cryptography at scale in rollup systems i.e. StarkEx / StarkNet. They’ll also be involved in the research, design and implementation of some of the very first layer-2 building blocks for NFTs such as a limit order DEX, asset bridges across our multi-layer system (L1-L2-LN?), trading primitives (AMM / sharding / fractionalisation of NFTs, auctions, derivatives and more) as well as setting the gold standard for the rest of the DeFi / NFT ecosystem on areas such as token, bridging, metadata and royalty standards among others.",
-    requirements:
-      "Most of the work here will require deep prerequisite knowledge of smart contracts and layer-1 systems and ideally but not necessarily practical experience in field arithmetics, cryptography, zero-knowledge proofs (commitment schemes), DeFi (decentralised financial systems), and layer-2 rollup systems.",
-    createdOn: new Date("2022-02-21"),
-    applyLink: "mailto:ignatius.widjaja@immutable.com",
-  },
-  {
     key: "8",
     title: "Front-End Dev",
-    companyId: 9,
+    projectId: "74b82528-dea9-44fe-824b-220825334699",
     tags: ["frontend"],
     location: "San Francisco",
     remote: true,
@@ -247,7 +201,7 @@ const allJobs: Array<Job> = [
   {
     key: "9",
     title: "Back-End Dev",
-    companyId: 9,
+    projectId: "74b82528-dea9-44fe-824b-220825334699",
     tags: ["backend"],
     location: "San Francisco",
     remote: true,
@@ -276,7 +230,7 @@ const allJobs: Array<Job> = [
   {
     key: "10",
     title: "JavaScript/Typescript Engineer",
-    companyId: 10,
+    projectId: "8df27359-f05d-439b-8592-ca1b61cf049c",
     tags: ["javascript"],
     location: "Remote",
     remote: true,
@@ -314,7 +268,7 @@ const allJobs: Array<Job> = [
   {
     key: "11",
     title: "JavaScript/Typescript Developer",
-    companyId: 11,
+    projectId: "8d1d3c38-0abb-4fd3-8333-2b3eae34c5b2",
     tags: ["javascript", "typescript", "web3.js", "ether.js"],
     location: "Remote",
     remote: true,
@@ -341,7 +295,7 @@ const allJobs: Array<Job> = [
   {
     key: "12",
     title: "Cairo Developer",
-    companyId: 14,
+    projectId: "cfe632a1-18f1-49d0-af4b-f6a08c4620c6",
     tags: ["Cairo", "Solidity", "Vyper"],
     location: "Remote",
     remote: true,
@@ -370,7 +324,7 @@ const allJobs: Array<Job> = [
   {
     key: "13",
     title: "Cairo Auditor",
-    companyId: 14,
+    projectId: "cfe632a1-18f1-49d0-af4b-f6a08c4620c6",
     tags: ["Cairo", "Solidity", "JavaScript", "TypeScript", "Python"],
     location: "Remote",
     remote: true,
@@ -400,7 +354,7 @@ const allJobs: Array<Job> = [
   {
     key: "14",
     title: "Generalist Developer",
-    companyId: 15,
+    projectId: "19c738b6-2b7e-4826-bb5d-15f2c4330001",
     tags: ["Cairo", "Solidity", "StarkNet"],
     location: "San Francisco or Remote",
     remote: true,
@@ -429,69 +383,9 @@ const allJobs: Array<Job> = [
     applyLink: "info@stork.network",
   },
   {
-    key: "15",
-    title: "Head of Product Lead",
-    companyId: 16,
-    tags: ["gaming"],
-    location: "Remote",
-    remote: true,
-    description:
-      "The Technical and Product Lead will have an understanding of blockchain technology, specifically Layer 2s and zkRollups. They will lead technical projects that solve challenging technical problems. This includes writing design specifications, creating demonstrations, and managing teams of developers. They will have a high degree of autonomy to pursue their interests and build their own schedule, all while receiving competitive compensation and equity in Matchbox DAO.\n" +
-      "\n" +
-      "Responsibilities\n" +
-      "- Write technical specifications of blockchain gaming primitives\n" +
-      "- Lead dev teams building gaming utilities and components\n" +
-      "- Onboard and mentor research fellows to design and write about gaming primitives\n" +
-      "- Maintain and document repositories of primitives\n" +
-      "- Report directly to Matchbox lead (Yoni Ben Shimon)",
-    requirements:
-      "- You are a technical product manager with 2+ years of experience\n" +
-      "- You have experience managing and coordinating programmers\n" +
-      "- You have a comprehension of blockchain technology\n" +
-      "- You are passionate about gaming and the future of online games\n" +
-      "\n" +
-      "Nice to have:\n" +
-      "- Introductory knowledge to zkRollups and StarkNet\n" +
-      "- Experience with Cairo (StarkNet’s native programming language)",
-    createdOn: new Date("2022-05-08"),
-    applyLink:
-      "https://www.notion.so/Hiring-Matchbox-DAO-head-of-Product-Lead-59c6cecf35624d6c87a422482496ba4a",
-  },
-  {
-    key: "16",
-    title: "Program Manager",
-    companyId: 16,
-    tags: ["gaming"],
-    location: "Remote",
-    remote: true,
-    description:
-      "Matchbox DAO envisions itself as the primary ecosystem for web3 game builders. Currently, we are a thriving community of developers and content creators who are passionate about on-chain gaming. We are looking for a technical product manager to lead a variety of Matchbox’s technical projects. \n" +
-      "\n" +
-      "The accelerator Lead will have an understanding of blockchain technology, specifically Layer 2s and zkRollups. They will accept teams that solve challenging technical problems.\n" +
-      "\n" +
-      "This includes interviewing the new candidates and evaluating their technical and product acumen.  They will have a high degree of autonomy to pursue their interests and build their own schedule, all while receiving competitive compensation and equity in Matchbox DAO.\n" +
-      "\n" +
-      "Responsibilities\n" +
-      "- Evaluate and judge teams that get into the accelerator\n" +
-      "- Help build the launch strategy to matchbox and its projects\n" +
-      "- Creating flows for them\n" +
-      "- Onboard and mentor research fellows to design and write about gaming primitives",
-    requirements:
-      "- You have a comprehension of blockchain technology\n" +
-      "- You have experience working with teams\n" +
-      "- You are passionate about gaming and the future of online games\n" +
-      "\n" +
-      "Nice to have:\n" +
-      "- Introductory knowledge to zkRollups and StarkNet\n" +
-      "- Experience with Cairo (StarkNet’s native programming language)",
-    createdOn: new Date("2022-05-08"),
-    applyLink:
-      "https://www.notion.so/Hiring-Matchbox-program-manager-28440dab9f4142818ccb8f4db8484f21",
-  },
-  {
     key: "17",
     title: "Cairo Developer",
-    companyId: 17,
+    projectId: "b19c74a5-6434-42dc-9329-98ca1ead255d",
     tags: ["Cairo", "Solidity", "StarkNet", "AMM"],
     location: "Remote",
     remote: true,
@@ -524,73 +418,9 @@ const allJobs: Array<Job> = [
     applyLink: "https://apply.workable.com/sithswap/j/C20203825C/",
   },
   {
-    key: "18",
-    title: "Senior frontend engineer",
-    companyId: 18,
-    tags: ["UI", "React", "TypeScript"],
-    location: "Remote",
-    remote: true,
-    description:
-      "Yuki works with the best engineering teams in the Ethereum and Layer 2 ecosystem. We help them to design and build outstanding Web3 user experiences – positioning their technology and products for success.\n" +
-      "\n" +
-      "We’re looking for an enthusiastic, self-motivated frontend engineer to help us support even more teams and projects. You’ll be joining a small but close knit team known for shipping quality design and frontend.\n" +
-      "\n" +
-      "Crypto and Web3 can be complex – experience is a plus but not required – you will have a strong support system in the Yuki team to help navigate new concepts and technologies.\n" +
-      "\n" +
-      "What you'll do:\n" +
-      "Work closely with Yuki’s product designers and crypto teams to understand the problems they are solving and implement beautiful and usable interfaces that make their technology accessible to users\n" +
-      "Rapidly implement functional UI elements from design mocks, with an eye toward performance and accessibility\n" +
-      "Know when to create abstractions vs. one-off features\n" +
-      "Ensure that components are functional, elegant, accessible, performant, and mobile-friendly\n" +
-      "Understand when and how to run UI tests",
-    requirements:
-      "- At least 3 years of React experience\n" +
-      "- A deep understanding of the architecture of modern client-side React applications\n" +
-      "- Prior experience working with component libraries or design teams in user-facing applications\n" +
-      "- A desire to keep up with modern best practices in web development\n" +
-      "\n" +
-      "Nice to have:\n" +
-      "- Prior experience creating a design system or component library\n" +
-      "- Familiarity with the web3 frontend stack (ethers.js/web3.js, EIP-1193, client-side private key management, etc.)\n" +
-      "- Familiarity with React Hooks\n" +
-      "- Experience with TypeScript in React",
-    createdOn: new Date("2022-05-24"),
-    applyLink:
-      "https://yuki-labs.notion.site/yuki-labs/Senior-frontend-engineer-contract-to-hire-22162a6fa8e54c9c98926df688917195",
-  },
-  {
-    key: "19",
-    title: "Product designer",
-    companyId: 18,
-    tags: ["Figma"],
-    location: "Remote",
-    remote: true,
-    description:
-      "Yuki works with the best engineering teams in the Ethereum and Layer 2 ecosystem. We help them to design and build outstanding Web3 user experiences – positioning their technology and products for success.\n" +
-      "\n" +
-      "We’re looking for an enthusiastic, self-motivated frontend engineer to help us support even more teams and projects. You’ll be joining a small but close knit team known for shipping quality design and frontend.\n" +
-      "\n" +
-      "Crypto and Web3 can be complex – experience is a plus but not required – you will have a strong support system in the Yuki team to help navigate new concepts and technologies.\n" +
-      "\n" +
-      "What you'll do:\n" +
-      "Work closely with crypto teams to understand the problems they are solving and design beautiful and usable interfaces that make their technology accessible to users\n" +
-      "Help crypto teams that need guidance on how to turn their idea into a tangible product.\n" +
-      "Guide teams through the design process, from problem definition through to beautifully polished visual designs",
-    requirements:
-      "- 3 years of product design experience including research, prototyping and visual design\n" +
-      "- Prior experience shipping web / mobile apps\n" +
-      "- Comfortable guiding and managing projects with clients\n" +
-      "- Prior experience working with component libraries or design systems\n" +
-      "- A desire to design within the context of web3/crypto.\n" +
-      "- Experience designing with Figma",
-    createdOn: new Date("2022-05-24"),
-    applyLink:
-      "https://yuki-labs.notion.site/yuki-labs/Product-designer-contract-to-hire-bc55db9c1c0d4d81952334ed648f587f",
-  },
-  {
     key: "20",
     title: "Senior Full Stack Engineer",
-    companyId: 19,
+    projectId: "30c7c562-75de-404d-bc95-570118d00653",
     tags: ["React", "Typescript", "Python", "Docker", "Cairo"],
     location: "New York City or Remote",
     remote: true,
@@ -614,36 +444,9 @@ const allJobs: Array<Job> = [
       "mailto:hello@42labs.xyz?body=Hi%20Empiric%20Team%2C%0A%0AI%27d%20like%20to%20join%20your%20team%21",
   },
   {
-    key: "21",
-    title: "Smart Contract Engineer",
-    companyId: 19,
-    tags: ["Solidity", "Cairo"],
-    location: "New York City or Remote",
-    remote: true,
-    description:
-      "Empiric Network is the zk-native oracle, bringing the principles of DeFi to data infrastructure: decentralization, transparency and composability.\n" +
-      "Empiric is the leading oracle on Starknet, powered by high-quality data from the biggest market makers and exchanges, such as Alameda, CMT, Flow Traders, FTX, Gemini and Jane Street.\n" +
-      "Our offer:\n" +
-      "- Be at the cutting edge of web3 and help build critical infrastructure for the future of Ethereum\n" +
-      "- Learn together with a world-class team, and our friends at Starkware and within the Starknet ecosystem\n" +
-      "- A fast-paced, no bullshit work environment that has high expectations and helps you achieve them\n" +
-      "- Work on a project that is growing extremely quickly and has clear product-market fit in an existing market — while also pursuing moonshot opportunities to re-define trustless data fetching\n" +
-      "- Above-market compensation and meaningful equity",
-    requirements:
-      "We don't think in terms of hard requirements. Rather, here is what you'd be helping us do - if you think you're up for it, we'd love to hear from you!\n" +
-      "- Develop secure contracts that make up our entirely on-chain architecture (Cairo)\n" +
-      "- Create both internal and public tooling that will help us and the ecosystem move faster\n" +
-      "- Create smart contracts on the Ethereum L1 that bridge over critical data, such as Uniswap TWAP rates or Aave overnight rates (Solidity)\n" +
-      "- Think from first principles to tackle challenges at the cutting edge of cryptography, smart contracts and data - prioritizing safety and robustness\n" +
-      "- Hire the brightest and most ambitious technical talent to come work with you",
-    createdOn: new Date("2022-07-16"),
-    applyLink:
-      "mailto:hello@42labs.xyz?body=Hi%20Empiric%20Team%2C%0A%0AI%27d%20like%20to%20join%20your%20team%21",
-  },
-  {
     key: "22",
     title: "Graphic Designer / Visual Artist",
-    companyId: 2,
+    projectId: "bcb424ed-5f3d-4bb8-8474-fb7bb11ed484",
     tags: ["Photoshop", "Illustrator"],
     location: "Remote",
     remote: true,
@@ -677,7 +480,7 @@ const allJobs: Array<Job> = [
   {
     key: "24",
     title: "Senior Full Stack Engineer",
-    companyId: 13,
+    projectId: "f22a3d11-9c55-4d6f-98c3-b56230589def",
     tags: ["React", "TypeScript", "Wallet", "Mobile", "Braavos"],
     location: "Tel-Aviv/Remote",
     remote: true,

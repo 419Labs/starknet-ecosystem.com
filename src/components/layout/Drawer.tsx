@@ -13,7 +13,7 @@ import Logo from "./Logo";
 
 interface DrawerProps {
   links: { href: string; label: string; icon?: any; isExternal?: boolean }[];
-  headerAction: ReactElement;
+  headerAction?: ReactElement;
   isOpen: boolean;
   onClose: () => void;
 }
@@ -26,7 +26,7 @@ function Drawer({ links, headerAction, isOpen, onClose }: DrawerProps) {
       isOpen={isOpen}
     >
       <DrawerOverlay />
-      <DrawerContent bg="gray.800">
+      <DrawerContent bg="primary.700">
         <DrawerHeader borderBottomWidth="1px">
           <Flex w="full" direction="row" justify="space-between" align="center">
             <Logo justify="flex-start" />

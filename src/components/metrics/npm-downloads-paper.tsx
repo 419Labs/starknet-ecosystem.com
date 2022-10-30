@@ -1,5 +1,5 @@
-import { Box, Flex, HStack, Link, Text, VStack } from "@chakra-ui/layout";
-import { Button } from "@chakra-ui/react";
+import { Box, Flex, HStack, Text, VStack, Link } from "@chakra-ui/layout";
+import { Skeleton } from "@chakra-ui/react";
 import { useTheme } from "@emotion/react";
 import { brands, solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -23,11 +23,10 @@ import type {
   NpmDownloads,
   NpmDownloadsChart,
 } from "../../models/npm-downloads";
+import { MetricsApi } from "../../services/metrics-api.service";
 import { toNpmDownloadsChart } from "../../services/metrics.service";
-
-interface Props {
-  npmDownloads: NpmDownloads | undefined;
-}
+import Card from "../card/Card";
+import CardContentLoading from "../card/CardContentLoading";
 
 ChartJS.register(
   Filler,
@@ -40,19 +39,29 @@ ChartJS.register(
   Legend
 );
 
-const NpmDownloadsPaper: FC<Props> = ({ npmDownloads }) => {
+interface Props {
+  name: string;
+  label: string;
+}
+
+const NpmDownloadsPaper: FC<Props> = ({ name, label }) => {
   const theme = useTheme();
   const { t } = useTranslate();
   const [values, setValues] = useState<NpmDownloadsChart>();
+  const [npmDownloads, setNpmDownloads] = useState<NpmDownloads>();
   const [cumulative, setCumulative] = useState(true);
+
+  useEffect(() => {
+    MetricsApi.fetchNpmDownloads(name).then((result) =>
+      setNpmDownloads({ ...result, label })
+    );
+  }, [name, label]);
 
   useEffect(() => {
     if (npmDownloads !== undefined) {
       setValues(toNpmDownloadsChart(npmDownloads, cumulative));
     }
   }, [npmDownloads, cumulative]);
-
-  if (!values) return null;
 
   let height: number;
   let width: number;
@@ -72,27 +81,30 @@ const NpmDownloadsPaper: FC<Props> = ({ npmDownloads }) => {
       );
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
-      gradient.addColorStop(0, theme.colors.brand["900"]);
+      gradient.addColorStop(0, theme.colors.primary["500"]);
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
-      gradient.addColorStop(1, theme.colors.brand["400"]);
+      gradient.addColorStop(1, theme.colors.primary["300"]);
     }
 
     return gradient;
   }
 
+  const renderLittleSkeleton = () => {
+    return <Skeleton h={2} w="30px" />;
+  };
   return (
-    <Box borderRadius="md" backgroundColor="gray.800" p={5}>
+    <Card>
       <VStack alignItems="flex-start" spacing={0} mb={4}>
         <Flex w="full" justify="space-between" alignItems="flex-start" mb={1}>
           <HStack as="h3" fontSize="lg" fontWeight="bold">
             <FontAwesomeIcon fontSize="24px" icon={brands("npm")} />
-            <Text ml={1}>{values.label}</Text>
+            <Text ml={1}>{label}</Text>
           </HStack>
           <Box fontSize="sm" color="whiteAlpha.600">
             <Link
               isExternal
-              href={`https://www.npmjs.com/package/${values.package}`}
+              href={`https://www.npmjs.com/package/${name}`}
               _hover={{ textDecoration: "none", color: "whiteAlpha.500" }}
             >
               <HStack alignItems="center">
@@ -103,9 +115,13 @@ const NpmDownloadsPaper: FC<Props> = ({ npmDownloads }) => {
           </Box>
         </Flex>
         <HStack fontSize="xs" color="whiteAlpha.600">
-          <Text fontWeight="bold">
-            {values.downloads[values.downloads.length - 1].downloads}
-          </Text>
+          {values ? (
+            <Text fontWeight="bold">
+              {values.downloads[values.downloads.length - 1].downloads}
+            </Text>
+          ) : (
+            renderLittleSkeleton()
+          )}
           <Text>
             {cumulative
               ? t.metrics.npm_total_downloads ?? "downloads"
@@ -113,78 +129,106 @@ const NpmDownloadsPaper: FC<Props> = ({ npmDownloads }) => {
           </Text>
         </HStack>
       </VStack>
-      <Line
-        options={{
-          responsive: true,
-          elements: {
-            point: {
-              radius: 0,
-            },
-          },
-          hover: {
-            mode: "nearest",
-            intersect: true,
-          },
-          scales: {
-            xAxis: {
-              display: false,
-            },
-          },
-          plugins: {
-            tooltip: {
-              mode: "index",
-              intersect: false,
-            },
-            filler: {
-              propagate: true,
-            },
-            legend: {
-              display: false,
-            },
-          },
-        }}
-        data={{
-          labels: values.downloads.map((week) =>
-            cumulative ? week.end : `${week.start} to ${week.end}`
-          ),
-          datasets: [
-            {
-              fill: true,
-              borderWidth: 2,
-              tension: 0.4,
-              label: values.package,
-              data: values.downloads.map((week) => week.downloads),
-              borderColor(context) {
-                const { chart } = context;
-                const { ctx, chartArea } = chart;
-
-                if (!chartArea) {
-                  // Initial chart load
-                  return;
-                }
-                // eslint-disable-next-line consistent-return
-                return getGradient(ctx, chartArea);
+      {values ? (
+        <>
+          <Line
+            options={{
+              responsive: true,
+              elements: {
+                point: {
+                  radius: 0,
+                },
               },
-              // eslint-disable-next-line @typescript-eslint/dot-notation
-              // backgroundColor: `${theme["__cssMap"]["colors.brand.900"].value}80`,
-              backgroundColor: "transparent",
-            },
-          ],
-        }}
-      />
-      <HStack
-        fontSize="xs"
-        color="whiteAlpha.600"
-        mt={3}
-        justifyContent="center"
-      >
-        <Button size="xs" onClick={() => setCumulative(!cumulative)}>
-          {cumulative
-            ? t.common.cumulative_chart ?? "Cumulative chart"
-            : t.common.non_cumulative_chart ?? "Non cumulative chart"}
-        </Button>
-      </HStack>
-    </Box>
+              hover: {
+                mode: "nearest",
+                intersect: true,
+              },
+              scales: {
+                xAxis: {
+                  display: false,
+                },
+                y: {
+                  grid: {
+                    display: false,
+                  },
+                  ticks: {
+                    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                    // @ts-ignore
+                    color: theme.colors.whiteAlpha["600"],
+                    font: {
+                      size: 12,
+                    },
+                  },
+                },
+              },
+              plugins: {
+                tooltip: {
+                  mode: "index",
+                  intersect: false,
+                },
+                filler: {
+                  propagate: true,
+                },
+                legend: {
+                  display: false,
+                },
+              },
+            }}
+            data={{
+              labels: values.downloads.map((week) =>
+                cumulative ? week.end : `${week.start} to ${week.end}`
+              ),
+              datasets: [
+                {
+                  fill: true,
+                  borderWidth: 2,
+                  tension: 0.4,
+                  label: values.package,
+                  data: values.downloads.map((week) => week.downloads),
+                  borderColor(context) {
+                    const { chart } = context;
+                    const { ctx, chartArea } = chart;
+
+                    if (!chartArea) {
+                      // Initial chart load
+                      return;
+                    }
+                    // eslint-disable-next-line consistent-return
+                    return getGradient(ctx, chartArea);
+                  },
+                  // eslint-disable-next-line @typescript-eslint/dot-notation
+                  // backgroundColor: `${theme["__cssMap"]["colors.brand.900"].value}80`,
+                  backgroundColor: "transparent",
+                },
+              ],
+            }}
+          />
+          <HStack
+            fontSize="sm"
+            mt={3}
+            justifyContent="center"
+            onClick={() => setCumulative(!cumulative)}
+            opacity={0.5}
+            transition=".4s all ease"
+            _hover={{
+              opacity: 1,
+            }}
+          >
+            <Text as="button" size="sm">
+              {cumulative
+                ? t.common.cumulative_chart ?? "Cumulative chart"
+                : t.common.non_cumulative_chart ?? "Non cumulative chart"}
+            </Text>
+            <FontAwesomeIcon
+              fontSize="14px"
+              icon={solid("arrow-right-arrow-left")}
+            />
+          </HStack>
+        </>
+      ) : (
+        <CardContentLoading />
+      )}
+    </Card>
   );
 };
 

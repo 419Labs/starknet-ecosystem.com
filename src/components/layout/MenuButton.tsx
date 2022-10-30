@@ -15,6 +15,7 @@ export interface MenuItf {
   children: any;
   href: string;
   icon?: any;
+  onSelect?: () => void;
 }
 interface MenuButtonProps {
   menus: MenuItf[];
@@ -25,7 +26,7 @@ interface MenuButtonProps {
 const MenuButton = ({ menus, text, mainGroupTitle, icon }: MenuButtonProps) => {
   const renderMenus = (menusToRender: MenuItf[]) => {
     return menusToRender.map((menu, index: number) => {
-      const { children, icon: menuItemIcon, href } = menu;
+      const { children, icon: menuItemIcon, href, onSelect } = menu;
       return typeof children === "string" ? (
         <MenuItem
           as={Link}
@@ -47,6 +48,11 @@ const MenuButton = ({ menus, text, mainGroupTitle, icon }: MenuButtonProps) => {
       ) : (
         // eslint-disable-next-line react/no-array-index-key
         <MenuItem
+          onClick={() => {
+            if (onSelect) {
+              onSelect();
+            }
+          }}
           cursor="pointer"
           fontSize="14px"
           // eslint-disable-next-line react/no-array-index-key
@@ -62,11 +68,11 @@ const MenuButton = ({ menus, text, mainGroupTitle, icon }: MenuButtonProps) => {
 
   return (
     <ChakraMenu
-      strategy="fixed"
+      strategy="absolute"
       autoSelect={false}
       isLazy
       id="more-menu-id"
-      matchWidth
+      placement="auto"
     >
       <ChakraMenuButton as={Button}>
         <Flex direction="row" align="center" justify="center">
@@ -78,7 +84,7 @@ const MenuButton = ({ menus, text, mainGroupTitle, icon }: MenuButtonProps) => {
           <FontAwesomeIcon icon={icon} fontSize={text ? "10px" : "16px"} />
         </Flex>
       </ChakraMenuButton>
-      <MenuList>
+      <MenuList zIndex={2}>
         <MenuGroup title={mainGroupTitle}>{renderMenus(menus)}</MenuGroup>
       </MenuList>
     </ChakraMenu>

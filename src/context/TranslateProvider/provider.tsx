@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import type React from "react";
-import { useEffect, useState } from "react";
+import { useMemo } from "react";
 
 import en from "../../assets/locales/en";
 import fr from "../../assets/locales/fr";
@@ -12,7 +12,6 @@ import zh_CN from "../../assets/locales/zh_CN";
 import zh_TW from "../../assets/locales/zh_TW";
 
 import { TranslateContext } from "./context";
-import type { TranslateState } from "./model";
 
 export interface TranslateProviderProps {
   children: React.ReactNode;
@@ -22,6 +21,7 @@ export function TranslateProvider({
   children,
 }: TranslateProviderProps): JSX.Element {
   const router = useRouter();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const getLocale = () => {
     switch (router.locale) {
       case "en":
@@ -44,14 +44,13 @@ export function TranslateProvider({
         return en;
     }
   };
-  const [locale, setLocale] = useState<TranslateState>(getLocale());
 
-  useEffect(() => {
-    setLocale(getLocale);
-  }, [router.locale]);
+  const localValue = useMemo(() => {
+    return { t: getLocale(), locale: router.locale };
+  }, [getLocale, router.locale]);
 
   return (
-    <TranslateContext.Provider value={{ t: locale, locale: router.locale }}>
+    <TranslateContext.Provider value={localValue}>
       {children}
     </TranslateContext.Provider>
   );
