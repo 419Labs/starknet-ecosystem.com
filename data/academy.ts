@@ -365,6 +365,15 @@ export const learning: Resource[] = [
       github: "https://github.com/stars/pcaversaccio/lists/cairo-starknet",
     },
   },
+  {
+    name: "Starknet France",
+    shortName: "Starknet France",
+    description: "A french translated blog explaining StarkWare technologies",
+    tags: ["learn"],
+    network: {
+      website: "https://starknet-france.com/",
+    },
+  },
 ];
 
 // ======================================================================
