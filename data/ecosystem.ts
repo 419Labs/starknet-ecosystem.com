@@ -2010,4 +2010,23 @@ export const allProjects: Array<Project> = [
     isLive: false,
     isTestnetLive: true,
   },
+  {
+    id: "8980449e-08de-4617-8e17-6d9590f56eae",
+    name: "Herodotus",
+    shortName: "Herodotus",
+    description:
+      "Herodotus is building storage-proof technology to enable synchronous cross-layer data access between Ethereum blockchains.",
+    tags: ["infrastructure", "tools"],
+    image: "herodotus.png",
+    network: {
+      website: "https://docs.herodotus.dev",
+      github: "https://github.com/HerodotusDev",
+      twitter: "https://twitter.com/HerodotusDev",
+      medium: "",
+      discord: "",
+      telegram: "",
+    },
+    isLive: false,
+    isTestnetLive: true,
+  },
 ];
