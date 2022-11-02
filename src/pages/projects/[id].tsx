@@ -10,10 +10,8 @@ import { EcosystemApi } from "../../services/ecosystem-api.service";
 
 interface Props {
   project: Project;
-  error: boolean;
 }
-const ProjectPage: FC<Props> = ({ project, error }: Props) => {
-  if (!project && error) return <p>404</p>; // TODO 404 page
+const ProjectPage: FC<Props> = ({ project }: Props) => {
   const getHighlighted = (): string => project.name.split(" ")[0];
 
   const getText = (): string => {
@@ -79,10 +77,7 @@ export async function getServerSideProps({ query }: GetServerSidePropsContext) {
     })
     .catch(() => {
       return {
-        props: {
-          project: undefined,
-          error: true,
-        }, // will be passed to the page component as props
+        notFound: true,
       };
     });
 }
