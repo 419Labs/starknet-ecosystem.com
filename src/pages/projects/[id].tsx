@@ -1,34 +1,19 @@
 import { GridItem, SimpleGrid, Text } from "@chakra-ui/layout";
 import { Image } from "@chakra-ui/react";
-import { useRouter } from "next/router";
+import type { GetServerSidePropsContext } from "next";
 import type { FC } from "react";
-import { useEffect, useState } from "react";
 
 import type { Project } from "../../../data/ecosystem";
 import HighlightedText from "../../components/layout/HighlightedText";
 import ProjectsInfos from "../../components/project/ProjectsInfos";
 import { EcosystemApi } from "../../services/ecosystem-api.service";
 
-const ProjectPage: FC = () => {
-  const router = useRouter();
-  const { id } = router.query;
-  // TODO Fetch correct project by UUID in service side props
-  const [project, setProject] = useState<Project>();
-  const [error, setError] = useState<boolean>(false);
-
-  useEffect(() => {
-    if (typeof id === "string") {
-      EcosystemApi.fetchProjectById(id)
-        .then(setProject)
-        .catch(() => setError(true));
-    } else {
-      setError(true);
-    }
-  }, [id]);
-
+interface Props {
+  project: Project;
+  error: boolean;
+}
+const ProjectPage: FC<Props> = ({ project, error }: Props) => {
   if (!project && error) return <p>404</p>; // TODO 404 page
-  if (!project) return <p>Loading</p>; // TODO loading
-
   const getHighlighted = (): string => project.name.split(" ")[0];
 
   const getText = (): string => {
@@ -80,5 +65,26 @@ const ProjectPage: FC = () => {
     </SimpleGrid>
   );
 };
+
+export async function getServerSideProps({ query }: GetServerSidePropsContext) {
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
+  return EcosystemApi.fetchProjectById(query.id)
+    .then((project) => {
+      return {
+        props: {
+          project,
+        },
+      };
+    })
+    .catch(() => {
+      return {
+        props: {
+          project: undefined,
+          error: true,
+        }, // will be passed to the page component as props
+      };
+    });
+}
 
 export default ProjectPage;
