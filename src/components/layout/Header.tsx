@@ -15,6 +15,7 @@ import Logo from "./Logo";
 function Header() {
   const { locale, t } = useTranslate();
   const { pathname } = useRouter();
+  const router = useRouter();
   const [isDrawerOpen, setDrawerOpen] = useState(false);
 
   return (
@@ -26,7 +27,13 @@ function Header() {
       align="center"
       px={0}
     >
-      <Logo />
+      <Logo
+        icon={
+          router && router.pathname.startsWith("/projects")
+            ? solid("arrow-left")
+            : undefined
+        }
+      />
       <Hide below="md">
         <Flex direction="row" align="center">
           <Box ml={6}>
