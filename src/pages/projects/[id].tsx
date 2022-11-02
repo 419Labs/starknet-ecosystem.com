@@ -1,17 +1,34 @@
 import { GridItem, SimpleGrid, Text } from "@chakra-ui/layout";
 import { Image } from "@chakra-ui/react";
-import type { GetServerSidePropsContext } from "next";
+import { useRouter } from "next/router";
 import type { FC } from "react";
+import { useEffect, useState } from "react";
 
 import type { Project } from "../../../data/ecosystem";
 import HighlightedText from "../../components/layout/HighlightedText";
 import ProjectsInfos from "../../components/project/ProjectsInfos";
 import { EcosystemApi } from "../../services/ecosystem-api.service";
+import FourOhFour from "../404";
 
-interface Props {
-  project: Project;
-}
-const ProjectPage: FC<Props> = ({ project }: Props) => {
+const ProjectPage: FC = () => {
+  const router = useRouter();
+  const { id } = router.query;
+  const [project, setProject] = useState<Project>();
+  const [error, setError] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (typeof id === "string") {
+      EcosystemApi.fetchProjectById(id)
+        .then(setProject)
+        .catch(() => setError(true));
+    } else {
+      setError(true);
+    }
+  }, [id]);
+
+  if (!project && error) return <FourOhFour />;
+  if (!project) return <p>Loading</p>; // TODO loading
+
   const getHighlighted = (): string => project.name.split(" ")[0];
 
   const getText = (): string => {
@@ -63,23 +80,5 @@ const ProjectPage: FC<Props> = ({ project }: Props) => {
     </SimpleGrid>
   );
 };
-
-export async function getServerSideProps({ query }: GetServerSidePropsContext) {
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-ignore
-  return EcosystemApi.fetchProjectById(query.id)
-    .then((project) => {
-      return {
-        props: {
-          project,
-        },
-      };
-    })
-    .catch(() => {
-      return {
-        notFound: true,
-      };
-    });
-}
 
 export default ProjectPage;
