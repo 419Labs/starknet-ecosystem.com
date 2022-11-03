@@ -2030,6 +2030,25 @@ export const allProjects: Array<Project> = [
     isTestnetLive: true,
   },
   {
+    id: "2a4b2a87-be16-46a4-9030-64ed231ad647",
+    name: "Apibara",
+    shortName: "Apibara",
+    description:
+      "Apibara is an open-source tool to stream live web3 and web2 data.",
+    tags: ["infrastructure", "tools"],
+    image: "apibara.png",
+    network: {
+      website: "https://www.apibara.com/",
+      github: "https://github.com/apibara",
+      twitter: "https://www.twitter.com/apibara_web3",
+      medium: "",
+      discord: "https://discord.gg/m7B92CNFNt",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: true,
+  },
+  {
     id: "c4bc5ce9-0bf2-460e-9ba6-3b32433e43a9",
     name: "Amarna",
     shortName: "Amarna",

@@ -8,11 +8,11 @@ import type { Project } from "../../../data/ecosystem";
 import HighlightedText from "../../components/layout/HighlightedText";
 import ProjectsInfos from "../../components/project/ProjectsInfos";
 import { EcosystemApi } from "../../services/ecosystem-api.service";
+import FourOhFour from "../404";
 
 const ProjectPage: FC = () => {
   const router = useRouter();
   const { id } = router.query;
-  // TODO Fetch correct project by UUID in service side props
   const [project, setProject] = useState<Project>();
   const [error, setError] = useState<boolean>(false);
 
@@ -26,7 +26,7 @@ const ProjectPage: FC = () => {
     }
   }, [id]);
 
-  if (!project && error) return <p>404</p>; // TODO 404 page
+  if (!project && error) return <FourOhFour />;
   if (!project) return <p>Loading</p>; // TODO loading
 
   const getHighlighted = (): string => project.name.split(" ")[0];

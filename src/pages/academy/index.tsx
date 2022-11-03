@@ -120,30 +120,6 @@ const AcademyPage: FC = () => {
             onChange={handleChangeKeyword}
             placeholder="Search"
           />
-          {/* <Text fontSize="6xl" fontWeight="bold">
-            Highlights 🔥
-          </Text>
-           Highlighted resources
-           TODO Remove that & choose 3 resources that are hot / new / have interest ???
-          <SimpleGrid columns={{ sm: 1, lg: 2, xl: 3 }} spacing="20px">
-            {academyResourcesBundle.learning
-              .slice(0, 3)
-              .map((resource: ResourceItf, index: number) => {
-                return (
-                  <Box
-                    ref={
-                      index === academyResourcesBundle.learning.length - 1
-                        ? observe
-                        : null
-                    }
-                    key={`resource-${resource.name}`}
-                    flex={1}
-                  >
-                    <CardResource index={index} resource={resource} />
-                  </Box>
-                );
-              })}
-          </SimpleGrid> */}
           {renderContent()}
         </Flex>
       </Flex>
