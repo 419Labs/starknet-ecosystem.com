@@ -6,11 +6,9 @@ import useInView from "react-cool-inview";
 
 import { allProjects } from "../../../data/ecosystem";
 import allJobs from "../../../data/job";
-// import { allJobTags } from "../../../data/tag";
 import JobTable from "../../components/job/JobTable";
 import HighlightedText from "../../components/layout/HighlightedText";
 import Input from "../../components/layout/Input";
-// import Menu from "../../components/layout/Menu";
 import { useTranslate } from "../../context/TranslateProvider";
 import type { Job } from "../../models/job";
 import type { JobFilter } from "../../models/job-filter";
