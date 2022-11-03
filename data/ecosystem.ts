@@ -2029,4 +2029,42 @@ export const allProjects: Array<Project> = [
     isLive: false,
     isTestnetLive: true,
   },
+  {
+    id: "c4bc5ce9-0bf2-460e-9ba6-3b32433e43a9",
+    name: "Amarna",
+    shortName: "Amarna",
+    description:
+      "Amarna is a static-analyzer and linter for the Cairo programming language.",
+    tags: ["tools", "security"],
+    image: "",
+    network: {
+      website: "https://www.trailofbits.com/",
+      github: "https://github.com/crytic/amarna",
+      twitter: "",
+      medium: "",
+      discord: "",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: true,
+  },
+  {
+    id: "2713d1e6-cc60-4550-8774-c5a5f6896b6d",
+    name: "VSCode StarNet Explorer",
+    shortName: "StarNet Explorer",
+    description:
+      "VSCode extension to visualize StarkNet contracts: view storage variables, external and view functions, and events.",
+    tags: ["tools", "security"],
+    image: "",
+    network: {
+      website: "https://marketplace.visualstudio.com/items?itemName=trailofbits.starknet-explorer",
+      github: "https://github.com/crytic/vscode-starknet-explorer",
+      twitter: "",
+      medium: "",
+      discord: "",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: true,
+  },
 ];
