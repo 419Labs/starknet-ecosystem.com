@@ -52,6 +52,7 @@ const trTranslate: TranslateState = {
     wallets: "Cüzdan",
     learning: "Learn",
     contribute: "Contribute",
+    security: "Güvenlik",
   },
   jobs: {
     apply: "Apply now",

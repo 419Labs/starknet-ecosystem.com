@@ -52,6 +52,7 @@ const zhTWTranslate: TranslateState = {
     starkex: "StarkEx",
     learning: "學",
     contribute: "貢獻",
+    security: "安全",
   },
   jobs: {
     apply: "Apply now",
