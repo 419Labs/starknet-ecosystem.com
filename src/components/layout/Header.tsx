@@ -12,6 +12,8 @@ import LanguageChooser from "./LanguageChooser";
 import Link from "./Link";
 import Logo from "./Logo";
 
+const addProjectUrl =
+  "https://github.com/419Labs/starknet-ecosystem.com/blob/main/docs/add-project.md";
 function Header() {
   const { locale, t } = useTranslate();
   const { pathname } = useRouter();
@@ -57,6 +59,11 @@ function Header() {
             </Link>
           </Box>
           <Box ml={6}>
+            <Link isExternal href={addProjectUrl}>
+              {t.common.apply || "Apply"}
+            </Link>
+          </Box>
+          <Box ml={6}>
             <LanguageChooser />
           </Box>
         </Flex>
@@ -84,6 +91,11 @@ function Header() {
               {
                 href: `/${locale}/metrics`,
                 label: t.common.metrics || "Metrics",
+              },
+              {
+                isExternal: true,
+                href: addProjectUrl,
+                label: t.common.apply || "Apply",
               },
             ]}
             isOpen={isDrawerOpen}
