@@ -52,6 +52,7 @@ const frTranslate: TranslateState = {
     starkex: "StarkEx",
     learning: "Apprendre",
     contribute: "Contribuer",
+    security: "Sécurité",
   },
   jobs: {
     apply: "Postuler",

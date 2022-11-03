@@ -52,6 +52,7 @@ const zhCNTranslation: TranslateState = {
     starkex: "StarkEx",
     learning: "学",
     contribute: "贡献",
+    security: "安全",
   },
   jobs: {
     apply: "Apply now",

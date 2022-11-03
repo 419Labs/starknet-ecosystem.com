@@ -52,6 +52,7 @@ const enTranslate: TranslateState = {
     starkex: "StarkEx",
     learning: "Learn",
     contribute: "Contribute",
+    security: "Security",
   },
   jobs: {
     apply: "Apply now",
