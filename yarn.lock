@@ -967,7 +967,7 @@
     "@chakra-ui/react-use-merge-refs" "2.0.4"
     "@chakra-ui/react-use-safe-layout-effect" "2.0.2"
 
-"@chakra-ui/tag@2.0.11":
+"@chakra-ui/tag@2.0.11", "@chakra-ui/tag@^2.0.11":
   version "2.0.11"
   resolved "https://registry.yarnpkg.com/@chakra-ui/tag/-/tag-2.0.11.tgz#14702adf5d1456dbbb84ea7a4b314953b92c323f"
   integrity sha512-iJJcX+4hl+6Se/8eCRzG+xxDwZfiYgc4Ly/8s93M0uW2GLb+ybbfSE2DjeKSyk3mQVeGzuxGkBfDHH2c2v26ew==
