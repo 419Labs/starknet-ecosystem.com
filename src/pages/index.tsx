@@ -13,6 +13,7 @@ import CardProjectSkeleton from "../components/card/CardProjectSkeleton";
 import HighlightedText from "../components/layout/HighlightedText";
 import Input from "../components/layout/Input";
 import Menu from "../components/layout/Menu";
+import SwitchTag from "../components/layout/SwitchTag";
 import { useTranslate } from "../context/TranslateProvider";
 import { EcosystemApi } from "../services/ecosystem-api.service";
 import {
@@ -36,6 +37,7 @@ const Home = () => {
   const tagAll = allEcosystemTags[0];
   const [loading, setLoading] = useState(true);
   const [filter, setFilter] = useState(tagAll);
+  const [filterMainnet, setFilterMainnet] = useState(false);
   const [sorter, setSorter] = useState(sortTags[0]);
   const [allProjects, setAllProjects] = useState<Project[]>([]);
   const [projects, setProjects] = useState<ProjectItf[]>([]);
@@ -52,12 +54,14 @@ const Home = () => {
 
   useEffect(() => {
     const filteredProjects = sortBy(
-      allProjects.filter((project: Project) => {
-        return (
-          (filter === tagAll || project.tags.indexOf(filter.value) !== -1) &&
-          projectIncludesKeyword(project, keyword)
-        );
-      }),
+      allProjects
+        .filter((project) => !filterMainnet || project.isLive)
+        .filter((project: Project) => {
+          return (
+            (filter === tagAll || project.tags.indexOf(filter.value) !== -1) &&
+            projectIncludesKeyword(project, keyword)
+          );
+        }),
       sorter.key === ProjectSorting.A_Z
         ? ProjectSorting.A_Z
         : ProjectSorting.TWITTER
@@ -77,7 +81,7 @@ const Home = () => {
     setProjects(newProjects);
     setFilteredProjectsCount(loading ? -1 : filteredProjects.length);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [filter, sorter, keyword, lastIndexLoaded, allProjects]);
+  }, [filter, filterMainnet, sorter, keyword, lastIndexLoaded, allProjects]);
 
   const { observe } = useInView({
     // When the last item comes to the viewport
@@ -192,16 +196,26 @@ const Home = () => {
           </Show>
         </Flex>
         <Flex direction="column" w="full" align="flex-end">
-          <Flex mt={2} mb={8}>
-            <Show above="md">
-              <Box mr={2}>{renderSortMenu()}</Box>
-            </Show>
-            <Input
-              debounce={200}
-              maxW={{ base: "inherit", md: "250px" }}
-              onChange={handleChangeKeyword}
-              placeholder="Search project"
-            />
+          <Flex w="full" mt={2} mb={8} justify="space-between" align="center">
+            <Box mr={2}>
+              <SwitchTag
+                onCheckedChange={(newValue: boolean) =>
+                  setFilterMainnet(newValue)
+                }
+                isChecked={filterMainnet}
+              />
+            </Box>
+            <Flex>
+              <Show above="md">
+                <Box mr={2}>{renderSortMenu()}</Box>
+              </Show>
+              <Input
+                debounce={200}
+                maxW={{ base: "inherit", md: "250px" }}
+                onChange={handleChangeKeyword}
+                placeholder="Search project"
+              />
+            </Flex>
           </Flex>
           {loading || (projects && projects.length > 0) ? (
             <SimpleGrid
