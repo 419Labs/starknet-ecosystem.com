@@ -32,6 +32,25 @@ export interface ProjectItf extends Project {
 
 export const allProjects: Array<Project> = [
   {
+    id: "36df24b3-2007-4822-8110-5a44b01afb0f",
+    name: "ViewBlock",
+    shortName: "ViewBlock",
+    description:
+      "StarkNet Explorer with full decoding, advanced analytics and prime token/NFT support.",
+    tags: ["tools", "infrastructure"],
+    image: "viewblock.png",
+    network: {
+      website: "https://v2.viewblock.io/starknet",
+      github: "https://github.com/ViewBlock",
+      twitter: "https://twitter.com/ViewBlock",
+      medium: "https://blog.viewblock.io",
+      discord: "",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: true,
+  },
+  {
     id: "62c32b6f-e7ad-49ac-b5fe-4104a164e5d0",
     name: "Thoth",
     shortName: "Thoth",
