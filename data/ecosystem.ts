@@ -51,6 +51,25 @@ export const allProjects: Array<Project> = [
     isTestnetLive: true,
   },
   {
+    id: "bf58edd8-fb46-4066-9ed9-5bbaa683c1f5",
+    name: "0xStarks",
+    shortName: "Starks",
+    description:
+      "An NFT acting as Proof of OG on StarkNet",
+    tags: ["nft", "defi", "gamefi", "governance"],
+    image: "",
+    network: {
+      website: "",
+      github: "",
+      twitter: "https://twitter.com/Gen0_Stark",
+      medium: "",
+      discord: "",
+      telegram: "",
+    },
+    isLive: false,
+    isTestnetLive: false,
+  },
+  {
     id: "62c32b6f-e7ad-49ac-b5fe-4104a164e5d0",
     name: "Thoth",
     shortName: "Thoth",
