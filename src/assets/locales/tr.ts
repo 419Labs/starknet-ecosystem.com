@@ -6,7 +6,7 @@ const trTranslate: TranslateState = {
     title_main_dapps: "dApps, Services & Wallets",
     hundreds: "Yüzlerce",
     subtitle_main:
-      "Projeleri, işleri, ölçümleri ve öğrenme kaynaklarını keşfederek kendinizi StarNet Ekosistemine bırakın.",
+      "Projeleri, işleri, ölçümleri ve öğrenme kaynaklarını keşfederek kendinizi StarkNet Ekosistemine bırakın.",
     community_driven: "✨ Topluluk odaklı bir girişim",
 
     no_project: "😕 Bu kategoride bir proje yok",
