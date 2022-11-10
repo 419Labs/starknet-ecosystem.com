@@ -57,7 +57,7 @@ export const allProjects: Array<Project> = [
     description:
       "An NFT acting as Proof of OG on StarkNet",
     tags: ["nft", "defi", "gamefi", "governance"],
-    image: "",
+    image: "0xStarks.png",
     network: {
       website: "",
       github: "",
