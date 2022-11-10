@@ -2124,4 +2124,24 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: true,
   },
+  {
+    id: "becd0842-ec49-4f82-8240-3e7d4a9adbd0",
+    name: "WIW Protocol",
+    shortName: "WIW",
+    description:
+        'WIW is a privacy-preserving on-chain identity protocol that curates openly accessible Web3 user reputations.',
+    tags: ["digital_id", "infrastructure", "tools"],
+    image: "wiw.png",
+    network: {
+      website: "https://wiw.io",
+      github: "https://github.com/wiw-io",
+      twitter: "https://twitter.com/wiw_io",
+      medium: "",
+      discord: "https://discord.gg/tmUFBHS2Yh",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: true,
+  },
+
 ];
