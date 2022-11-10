@@ -4,7 +4,7 @@ const itTranslate: TranslateState = {
   common: {
     title_main: "La rivoluzione di StarkNet sta venendo alla luce del giorno",
     subtitle_main:
-      "Immergiti nell'ecosistema StarNet scoprendo progetti, lavori, metriche e risorse di apprendimento.",
+      "Immergiti nell'ecosistema StarkNet scoprendo progetti, lavori, metriche e risorse di apprendimento.",
     community_driven: "✨ Un'iniziativa guidata dalla comunità",
 
     no_project: "😕 Nessun progetto in questa categoria",

@@ -6,7 +6,7 @@ const ptTranslate: TranslateState = {
     title_main_dapps: "dApps, serviços e carteiras",
     hundreds: "Centenas",
     subtitle_main:
-      "Mergulhe no ecossistema StarNet descobrindo projetos, empregos, métricas e recursos de aprendizado.",
+      "Mergulhe no ecossistema StarkNet descobrindo projetos, empregos, métricas e recursos de aprendizado.",
     community_driven: "✨ Uma iniciativa guiada pela comunidade",
     no_project: "😕 Nenhum projeto nesta categoria",
     maybe_yours: "Talvez o seu?",

@@ -173,7 +173,7 @@ const Home = () => {
         maxWidth="600px"
       >
         {t.common.subtitle_main ||
-          "Immerse yourself in the StarNet Ecosystem by discovering projects, jobs, metrics and learning resources. "}
+          "Immerse yourself in the StarkNet Ecosystem by discovering projects, jobs, metrics and learning resources. "}
       </Text>
 
       {/* Main part */}

@@ -6,7 +6,7 @@ const frTranslate: TranslateState = {
     title_main_dapps: "dApps, Services & Portefeuilles",
     hundreds: "Centaines",
     subtitle_main:
-      "Plongez dans l'écosystème StarNet. Découvrez les projets qui construisent le futur, les emplois, les métriques et les ressources d'apprentissage de l'écosystème.",
+      "Plongez dans l'écosystème StarkNet. Découvrez les projets qui construisent le futur, les emplois, les métriques et les ressources d'apprentissage de l'écosystème.",
     community_driven: "✨ Une initiative guidée par la communauté",
     no_project: "😕 Aucun projet dans cette catégorie",
     maybe_yours: "Peut-être le vôtre ?",

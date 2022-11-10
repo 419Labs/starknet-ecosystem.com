@@ -2107,8 +2107,8 @@ export const allProjects: Array<Project> = [
   },
   {
     id: "2713d1e6-cc60-4550-8774-c5a5f6896b6d",
-    name: "VSCode StarNet Explorer",
-    shortName: "StarNet Explorer",
+    name: "VSCode StarkNet Explorer",
+    shortName: "StarkNet Explorer",
     description:
       "VSCode extension to visualize StarkNet contracts: view storage variables, external and view functions, and events.",
     tags: ["tools", "security"],
