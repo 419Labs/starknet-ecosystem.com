@@ -2143,5 +2143,24 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: true,
   },
+  {
+    id: "320d804a-cf3c-49eb-9013-b2873d17a8ae",
+    name: "Dragon Quest",
+    shortName: "Dragon Quest",
+    description:
+        'Dragon Quest is a text-based RPG game.',
+    tags: ["gamefi", "nft"],
+    image: "",
+    network: {
+      website: "https://dragon-quest.vercel.app/",
+      github: "",
+      twitter: "",
+      medium: "",
+      discord: "",
+      telegram: "",
+    },
+    isLive: false,
+    isTestnetLive: true,
+  },
 
 ];
