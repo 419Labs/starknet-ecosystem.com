@@ -2162,5 +2162,24 @@ export const allProjects: Array<Project> = [
     isLive: false,
     isTestnetLive: true,
   },
+  {
+    id: "5b54b8c6-ae8c-403e-ae55-0dc64d577cb6",
+    name: "Stark Sport",
+    shortName: "Stark Sport",
+    description:
+      'Starksport is a king sport inspired project built on Binance Smart Chain, StarkNet...',
+    tags: ["gamefi"],
+    image: "starksport.png",
+    network: {
+      website: "https://starksport.io/",
+      github: "",
+      twitter: "https://twitter.com/starksportbet",
+      medium: "",
+      discord: "",
+      telegram: "https://t.me/starksportchanel",
+    },
+    isLive: false,
+    isTestnetLive: false,
+  },
 
 ];
