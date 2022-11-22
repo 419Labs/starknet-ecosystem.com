@@ -1566,7 +1566,7 @@ export const allProjects: Array<Project> = [
     name: "Starksheet",
     shortName: "Starksheet",
     description:
-      "A spreadsheet built on StarkNet: each cell is a dynamic NFT and each sheet is a collection. Cell as a NFT brings granular cell ownership and unlimited data.",
+      "A spreadsheet interface to read, write and execute anything on-chain.",
     tags: ["nft", "defi", "tools"],
     image: "starksheet.png",
     network: {
@@ -1577,8 +1577,8 @@ export const allProjects: Array<Project> = [
       discord: "https://discord.gg/Aab6qdWb5k",
       telegram: "",
     },
-    isLive: false,
-    isTestnetLive: false,
+    isLive: true,
+    isTestnetLive: true,
   },
   {
     id: "7d9a42ae-cc81-4c0b-8b9b-90f7b76cb17c",
