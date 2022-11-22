@@ -2181,5 +2181,24 @@ export const allProjects: Array<Project> = [
     isLive: false,
     isTestnetLive: false,
   },
+    {
+    id: "01babbb2-b6d9-4585-b795-2e388123ffd8",
+    name: "Dynamic",
+    shortName: "Dynamic",
+    description:
+      'Your multi-chain web3 auth platform. A smart, beautiful and dynamic multi-chain wallet login flow, and powerful developer tools to match.',
+    tags: ["wallet", "digital_id", "infrastructure", "tools"],
+    image: "dynamic.svg",
+    network: {
+      website: "https://www.dynamic.xyz/",
+      github: "https://github.com/dynamic-labs",
+      twitter: "https://twitter.com/dynamic_xyz",
+      medium: "",
+      discord: "",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: true,
+  },
 
 ];
