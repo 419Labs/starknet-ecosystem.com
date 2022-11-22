@@ -2181,5 +2181,24 @@ export const allProjects: Array<Project> = [
     isLive: false,
     isTestnetLive: false,
   },
+    {
+    id: "8df27359-f05d-439b-8592-ca1b61cf049c",
+    name: "Dynamic",
+    shortName: "Dynamic",
+    description:
+      'First StarkNet wallet to interact with tokens and NFTs. Manage your identities with "Sign in with StarkNet" (very soon ™️), and enjoy the best of defi. Made with ❤️ by the Argent team.',
+    tags: ["wallet", "digital_id", "defi", "nft", "gamefi"],
+    image: "dynamic.svg",
+    network: {
+      website: "https://www.dynamic.xyz/",
+      github: "https://github.com/dynamic-labs",
+      twitter: "https://twitter.com/dynamic_xyz",
+      medium: "",
+      discord: "",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: true,
+  },
 
 ];
