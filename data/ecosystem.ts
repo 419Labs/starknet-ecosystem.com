@@ -2181,7 +2181,7 @@ export const allProjects: Array<Project> = [
     isLive: false,
     isTestnetLive: false,
   },
-    {
+  {
     id: "01babbb2-b6d9-4585-b795-2e388123ffd8",
     name: "Dynamic",
     shortName: "Dynamic",
@@ -2195,6 +2195,25 @@ export const allProjects: Array<Project> = [
       twitter: "https://twitter.com/dynamic_xyz",
       medium: "",
       discord: "",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: true,
+  },
+  {
+    id: "d77ea656-8440-4ee8-a4d1-895c57e2caea",
+    name: "Comoco",
+    shortName: "Comoco",
+    description:
+      "Building a new NFT bridge protocol that will empower the NFT licensing, utility & derivative between Ethereum and other L1/L2.",
+    tags: ["nft", "bridge", "infrastructure"],
+    image: "comoco.jpg",
+    network: {
+      website: "https://comoco.xyz/",
+      github: "https://github.com/comoco-labs",
+      twitter: "https://twitter.com/comocolabs",
+      medium: "",
+      discord: "https://discord.gg/comoco",
       telegram: "",
     },
     isLive: true,
