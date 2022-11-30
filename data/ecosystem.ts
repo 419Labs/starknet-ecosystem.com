@@ -2219,5 +2219,23 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: true,
   },
-
+  {
+    id: "96e3d45a-0aba-48f2-89eb-f586683a7ace",
+    name: "StarknetSale",
+    shortName: "StarknetSale",
+    description:
+      "StarknetSale is one of the biggest launchpad communities in Starknet. For the Community, By the Community.",
+    tags: ["nft"],
+    image: "starknetsale.jpg",
+    network: {
+      website: "https://starknetsale.com/",
+      github: "",
+      twitter: "https://twitter.com/starknetsale",
+      medium: "",
+      discord: "https://discord.gg/MsdYh7kZ88",
+      telegram: "https://t.me/StarknetSale",
+    },
+    isLive: false,
+    isTestnetLive: false,
+  },
 ];
