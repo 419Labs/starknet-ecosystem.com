@@ -2225,7 +2225,7 @@ export const allProjects: Array<Project> = [
     shortName: "StarknetSale",
     description:
       "StarknetSale is one of the biggest launchpad communities in Starknet. For the Community, By the Community.",
-    tags: ["nft"],
+    tags: ["defi", "nft"],
     image: "starknetsale.jpg",
     network: {
       website: "https://starknetsale.com/",
