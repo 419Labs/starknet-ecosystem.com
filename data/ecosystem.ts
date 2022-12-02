@@ -2238,4 +2238,23 @@ export const allProjects: Array<Project> = [
     isLive: false,
     isTestnetLive: false,
   },
+  {
+    id: "1d796be5-4bd5-4689-aebf-f810c3d0fbd9",
+    name: "Donex Finance",
+    shortName: "Donex",
+    description:
+      "The Donex Protocol is a DeFi protocol for providing liquidity, trading and borrowing & lending ERC20 tokens on StarkNet",
+    tags: ["defi"],
+    image: "donexfinance.png",
+    network: {
+      website: "https://donex.finance/",
+      github: "",
+      twitter: "https://twitter.com/donexfinance",
+      medium: "https://medium.com/@donexfinance",
+      discord: "https://discord.com/invite/AUm7KDRZhh",
+      telegram: "",
+    },
+    isLive: false,
+    isTestnetLive: true,
+  },
 ];
