@@ -50,6 +50,25 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: true,
   },
+   {
+    id: "25d886a0-dee0-4651-904c-ff97309efd6b",
+    name: "Bubbleswa[",
+    shortName: "Bubble",
+    description:
+      "swap on ethereum",
+    tags: ["nft", "defi", "gamefi", "governance"],
+    image: "0xStarks.png",
+    network: {
+      website: "",
+      github: "",
+      twitter: "https://twitter.com/Gen0_Stark",
+      medium: "",
+      discord: "",
+      telegram: "",
+    },
+    isLive: false,
+    isTestnetLive: false,
+  },
   {
     id: "bf58edd8-fb46-4066-9ed9-5bbaa683c1f5",
     name: "0xStarks",
