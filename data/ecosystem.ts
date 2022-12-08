@@ -2257,4 +2257,23 @@ export const allProjects: Array<Project> = [
     isLive: false,
     isTestnetLive: true,
   },
+  {
+    id: "f7c7eecd-21d2-4729-adad-d94109864b30",
+    name: "MonkeyMind",
+    shortName: "MonkeyMind",
+    description:
+      "Gamified Mindfulness app on Starknet",
+    tags: ["nft", "gamefi"],
+    image: "monkeymind.png",
+    network: {
+      website: "",
+      github: "",
+      twitter: "https://twitter.com/0xMonkeyMind",
+      medium: "",
+      discord: "",
+      telegram: "",
+    },
+    isLive: false,
+    isTestnetLive: false,
+  }
 ];

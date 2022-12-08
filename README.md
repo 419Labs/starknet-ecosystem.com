@@ -18,7 +18,7 @@ Here are the guides helping you to contribute on the ecosystem dashboard and get
 
 ### Projects
 
-+ [List a project](docs/add-job.md)
++ [List a project](docs/add-project.md)
 + [Update a project](docs/update-project.md)
 
 ### Jobs
