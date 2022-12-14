@@ -2275,5 +2275,24 @@ export const allProjects: Array<Project> = [
     },
     isLive: false,
     isTestnetLive: false,
+  },
+  {
+    id: "4e95f7dc-9a31-40bb-829e-0a19098521e5",
+    name: "Saddle Finance",
+    shortName: "Saddle Finance",
+    description:
+      "Multichain open source AMM for low slippage stableswaps",
+    tags: ["defi"],
+    image: "SDL_SVG.svg",
+    network: {
+      website: "https://saddle.finance",
+      github: "https://github.com/saddle-finance",
+      twitter: "https://twitter.com/saddlefinance",
+      medium: "",
+      discord: "https://discord.gg/saddle",
+      telegram: "https://t.me/saddle_finance",
+    },
+    isLive: false,
+    isTestnetLive: false,
   }
 ];
