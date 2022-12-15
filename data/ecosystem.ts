@@ -2290,7 +2290,7 @@ export const allProjects: Array<Project> = [
       twitter: "https://twitter.com/saddlefinance",
       medium: "",
       discord: "https://discord.gg/saddle",
-      telegram: "https://t.me/saddle_finance",
+      telegram: "",
     },
     isLive: false,
     isTestnetLive: false,
