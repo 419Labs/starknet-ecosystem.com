@@ -2294,5 +2294,24 @@ export const allProjects: Array<Project> = [
     },
     isLive: false,
     isTestnetLive: false,
+  },
+  {
+    id: "f47cfe5d-bb7d-4382-94cb-b979b7f8e518",
+    name: "Concise Labs",
+    shortName: "Concise Labs",
+    description:
+      "Concise Labs offers API and data infra for contracts on Starkware",
+    tags: ["infrastructure"],
+    image: "conciselabs.svg",
+    network: {
+      website: "https://www.conciselabs.io/",
+      github: "https://github.com/concise-labs",
+      twitter: "https://twitter.com/ConciseLabs",
+      medium: "https://www.wordcelclub.com/conciselabs.sol",
+      discord: "http://discord.gg/5qPBtderXs",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: false,
   }
 ];
