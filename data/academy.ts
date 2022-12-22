@@ -1131,6 +1131,15 @@ export const newsfeed: Resource[] = [
       website: "https://starknet.io/latest-updates/",
     },
   },
+  {
+    name: "Nurstar",
+    shortName: "Nurstar - Newsletter",
+    description: "The Recap of the Previous Day on StarkNet",
+    tags: ["newsletter"],
+    network: {
+      website: "https://nurstar.substack.com/",
+    },
+  },
 ];
 
 export interface ResourceBundleItf {
