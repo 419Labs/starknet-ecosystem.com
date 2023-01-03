@@ -1373,13 +1373,13 @@ export const allProjects: Array<Project> = [
     name: "Voyager",
     shortName: "Voyager",
     description:
-      "Voyager is a block explorer for StarkNet ecosystem, providing all the capabilities needed in navigating through this ecosystem. It includes not only read-only data but also supports interaction with Starknet contracts.",
-    tags: ["tools"],
-    image: "voyager.svg",
+      "Voyager is a block explorer for the StarkNet ecosystem, providing all the capabilities needed in navigating through this ecosystem. It includes not only read-only data but also supports interaction with StarkNet contracts.",
+    tags: ["tools", "infrastructure"],
+    image: "voyager.png",
     network: {
       website: "https://voyager.online/",
       github: "",
-      twitter: "https://twitter.com/nethermindeth",
+      twitter: "https://twitter.com/0xvoyageronline",
       medium: "",
       discord:
         "https://discord.com/channels/793094838509764618/912410047236149298",
