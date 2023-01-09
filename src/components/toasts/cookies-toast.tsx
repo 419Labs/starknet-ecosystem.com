@@ -11,7 +11,7 @@ interface Props extends FlexProps {
   onAccept: () => void;
 }
 const CookiesToast: FC<Props> = ({ children, onAccept, ...props }) => {
-  const { t } = useTranslate();
+  const { locale, t } = useTranslate();
   return (
     <Flex
       {...props}
@@ -30,7 +30,7 @@ const CookiesToast: FC<Props> = ({ children, onAccept, ...props }) => {
         </Text>
       </HStack>
       <HStack mt={{ base: 4, md: 0 }}>
-        <Link href="privacy-policy" ml={{ base: 4, lg: 100 }}>
+        <Link href={`/${locale}/privacy-policy`} ml={{ base: 4, lg: 100 }}>
           Privacy Policy
         </Link>
         <Button

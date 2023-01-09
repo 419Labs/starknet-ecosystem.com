@@ -28,7 +28,7 @@ const PrivacyPolicyPage: FC = () => {
       <Text mt={4} fontSize="2xl" fontWeight="bold">
         High Level Summary
       </Text>
-      <Text ml={12} mt={4}>
+      <Text ml={12} mt={4} as="div">
         <ul>
           <li>
             419Labs is an incorporated company based in Switzerland that
