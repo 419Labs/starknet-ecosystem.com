@@ -77,6 +77,10 @@ const ptTranslate: TranslateState = {
     npm_last_downloads: "downloads last 7 days",
     npm_total_downloads: "downloads",
   },
+  cookies: {
+    description:
+      "We use cookies to ensure you get the best experience on our website",
+  },
 };
 
 export default ptTranslate;

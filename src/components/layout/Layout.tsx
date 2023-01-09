@@ -1,5 +1,10 @@
 import { Box, Flex } from "@chakra-ui/layout";
+import type { RenderProps } from "@chakra-ui/react";
+import { useToast } from "@chakra-ui/react";
 import type { ReactNode } from "react";
+import { useEffect } from "react";
+
+import CookiesToast from "../toasts/cookies-toast";
 
 import Footer from "./Footer";
 import Header from "./Header";
@@ -9,6 +14,32 @@ type LayoutProps = {
 };
 
 function Layout({ children }: LayoutProps) {
+  const toast = useToast();
+  const id = "cookies-consent";
+  useEffect(() => {
+    const isCookiesAccepted =
+      localStorage.getItem("cookies-consent") === "true";
+    // If cookies already accepted or already displayed, do nothing
+    if (toast.isActive(id) || isCookiesAccepted) {
+      return;
+    }
+    toast({
+      id,
+      status: "success",
+      duration: null,
+      containerStyle: {
+        maxWidth: "100%",
+      },
+      isClosable: true,
+      render({ onClose }: RenderProps): React.ReactNode {
+        const onAccept = () => {
+          onClose();
+          localStorage.setItem(id, "true");
+        };
+        return <CookiesToast onAccept={onAccept} />;
+      },
+    });
+  }, [toast]);
   return (
     <Flex
       zIndex={1}

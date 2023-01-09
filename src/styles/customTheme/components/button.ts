@@ -44,6 +44,20 @@ const Button: DeepPartial<Theme["components"]["Button"]> = {
         },
       },
     },
+    "solid-soft": {
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
+      _dark: {
+        border: "none",
+        bg: "white",
+        color: "primary.500",
+        "&:hover, &:active": {
+          // eslint-disable-next-line sonarjs/no-duplicate-string
+          bg: "white",
+          color: "primary.500",
+        },
+      },
+    },
   },
 };
 
