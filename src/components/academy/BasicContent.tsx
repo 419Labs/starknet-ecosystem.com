@@ -38,7 +38,7 @@ function BasicContent({
           <CardResource
             index={index}
             resource={resource}
-            cardContent={image ? <Image src={image} /> : undefined}
+            cardContent={image ? <Image maxW="64px" src={image} /> : undefined}
             indication={
               difficulty ? (
                 <DifficultyIcon difficultyLabel={difficulty} />

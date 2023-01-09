@@ -127,11 +127,11 @@ export const allAcademyTags: Tag[] = [
     label: "Learn",
     icon: "graduation-cap",
   },
-  {
+  /*  {
     value: AcademyCategory.CONTRIBUTE,
     label: "Contribute",
     icon: "pen",
-  },
+  }, */
   {
     value: AcademyCategory.TOOLS,
     label: "Tools",
