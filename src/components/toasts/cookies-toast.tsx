@@ -30,7 +30,9 @@ const CookiesToast: FC<Props> = ({ children, onAccept, ...props }) => {
         </Text>
       </HStack>
       <HStack mt={{ base: 4, md: 0 }}>
-        <Link href="privacy-policy" ml={{ base: 4, lg: 100 }}>Privacy Policy</Link>
+        <Link href="privacy-policy" ml={{ base: 4, lg: 100 }}>
+          Privacy Policy
+        </Link>
         <Button
           size="sm"
           ml={4}

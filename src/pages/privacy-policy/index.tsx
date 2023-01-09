@@ -3,11 +3,8 @@ import { Text } from "@chakra-ui/react";
 import type { FC } from "react";
 
 import HighlightedText from "../../components/layout/HighlightedText";
-import { useTranslate } from "../../context/TranslateProvider";
 
 const PrivacyPolicyPage: FC = () => {
-  const { t } = useTranslate();
-
   return (
     <Flex
       w="full"
