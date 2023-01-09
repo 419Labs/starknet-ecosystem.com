@@ -48,8 +48,11 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <script async src="https://www.googletagmanager.com/gtag/js?id=G-KW215DTHVD"/>
-          <script async src="/scripts/google-analytics.js"/>
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-KW215DTHVD"
+          />
+          <script async src="/scripts/google-analytics.js" />
           <meta name="application-name" content={APP_NAME} />
           <meta name="apple-mobile-web-app-capable" content="yes" />
           <meta
