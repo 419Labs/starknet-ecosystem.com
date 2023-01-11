@@ -2315,7 +2315,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: false,
   },
     {
-    id: "4e95f7dc-9a31-40bb-829e-0a19098521e5",
+    id: "4b4e4bd6-119d-4202-b26e-bafd803940da",
     name: "Aura Protocol",
     shortName: "Aura Protocol",
     description:
