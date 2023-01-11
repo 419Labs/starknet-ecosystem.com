@@ -2313,5 +2313,24 @@ export const allProjects: Array<Project> = [
     },
     isLive: true,
     isTestnetLive: false,
+  },
+    {
+    id: "4e95f7dc-9a31-40bb-829e-0a19098521e5",
+    name: "Aura Protocol",
+    shortName: "Aura Protocol",
+    description:
+      "Aura is a capital efficient cross margin credit protocol on StarkNet with autonomous, dynamically generated risk parameters.",
+    tags: ["defi"],
+    image: "aura.svg",
+    network: {
+      website: "https://auraprotocol.com",
+      github: "",
+      twitter: "https://twitter.com/AuraProtocol",
+      medium: "https://medium.com/aura-protocol",
+      discord: "",
+      telegram: "",
+    },
+    isLive: false,
+    isTestnetLive: false,
   }
 ];
