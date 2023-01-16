@@ -1,6 +1,6 @@
 # Translations
 
-Our audience is GLOBAL and that's why all translations are welcome and valuable to push this ecosystem forwards!
+Our audience is GLOBAL and that's why all translations are welcome and valuable to push this ecosystem forward!
 
 To add a new translation:
 
@@ -14,4 +14,4 @@ To update a translation:
 + update the sentences and provide a PR
 
 As soon as your PR is merged an automatic deployment will be started.
-Don't hesitate to joing and ping on the community Telegram group: https://t.me/starknet_ecosystem
+Don't hesitate to join and ping on the community Telegram group: https://t.me/starknet_ecosystem
