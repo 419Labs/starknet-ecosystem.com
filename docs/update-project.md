@@ -4,4 +4,4 @@ To update your project you have to do the same thing than for adding. Edit the `
 create a dedicated Pull Request following this title: "🎨 Updating AwesomeProjectName"
 
 As soon as your PR is merged an automatic deployment will be started.
-Don't hesitate to joing and ping on the community Telegram group: https://t.me/starknet_ecosystem
+Don't hesitate to join and ping on the community Telegram group: https://t.me/starknet_ecosystem
