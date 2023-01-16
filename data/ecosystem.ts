@@ -2332,5 +2332,24 @@ export const allProjects: Array<Project> = [
     },
     isLive: false,
     isTestnetLive: false,
+  },
+  {
+    id: "ee574078-7642-4bd9-8a30-f7c0031d43ab",
+    name: "Layerswap",
+    shortName: "Layerswap",
+    description:
+      "LayerSwap is a bridge between centralized exchanges and blockchains.",
+    tags: ["bridge", "infrastructure", "starkex"],
+    image: "layerswap.svg",
+    network: {
+      website: "https://www.layerswap.io/git",
+      github: "https://github.com/layerswap/",
+      twitter: "https://twitter.com/layerswap",
+      medium: "",
+      discord: "https://discord.gg/layerswap",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: true,
   }
 ];
