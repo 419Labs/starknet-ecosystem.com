@@ -1059,6 +1059,24 @@ export const tools: Resource[] = [
       github: "https://github.com/smchala/DecimalToBinary",
     },
   },
+  {
+    name: "StarkNet URL",
+    shortName: "starknet-url",
+    description: "Build & parse StarkNet URLs",
+    tags: ["tools", "uri", "url", "deeplink", "qr", "barcode"],
+    network: {
+      github: "https://github.com/myBraavos/starknet-url",
+    },
+  },
+  {
+    name: "StarkNet Deeplink",
+    shortName: "starknet-deeplink",
+    description: "StarkNet deeplink generator",
+    tags: ["tools", "url", "deeplink", "qr", "barcode"],
+    network: {
+      github: "https://github.com/myBraavos/starknet-deeplink",
+    },
+  },
 ];
 
 // ======================================================================
@@ -1087,7 +1105,7 @@ export const wallets: Resource[] = [
     description:
       "First and only StarkNet wallet on mobile, Android & iOS. Use all your favorite StarkNet dApps on the go! Also available for chrome, Firefox and Edge. All in one assets management - DeFi and NFTs",
     tags: ["wallet"],
-    image: "/logos/braavos.svg",
+    image: "/logos/braavos-flat.svg",
     network: {
       website: "https://braavos.app/",
       github: "https://github.com/myBraavos",

@@ -1038,7 +1038,7 @@ export const allProjects: Array<Project> = [
     shortName: "Braavos",
     description:
       "First and only StarkNet wallet on mobile, Android & iOS. Use all your favorite StarkNet dApps on the go! Also available for chrome, Firefox and Edge. All in one assets management - DeFi and NFTs",
-    tags: ["wallet", "mobile", "defi", "nft", "gamefi"],
+    tags: ["wallet", "mobile", "digital_id", "defi", "nft", "gamefi"],
     image: "braavos.svg",
     network: {
       website: "https://braavos.app/",
