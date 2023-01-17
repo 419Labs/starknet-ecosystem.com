@@ -15,10 +15,11 @@ type LayoutProps = {
 
 function Layout({ children }: LayoutProps) {
   const toast = useToast();
+  // Todo update this id to re-display the toast to the user after policies update
+  // Todo maybe add a dynamic env variable for policy version
   const id = "cookies-consent";
   useEffect(() => {
-    const isCookiesAccepted =
-      localStorage.getItem("cookies-consent") === "true";
+    const isCookiesAccepted = localStorage.getItem(id) === "true";
     // If cookies already accepted or already displayed, do nothing
     if (toast.isActive(id) || isCookiesAccepted) {
       return;
