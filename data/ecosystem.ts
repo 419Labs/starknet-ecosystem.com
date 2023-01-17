@@ -2168,7 +2168,7 @@ export const allProjects: Array<Project> = [
     shortName: "Stark Sport",
     description:
       'Starksport is a king sport inspired project built on Binance Smart Chain, StarkNet...',
-    tags: ["gamefi"],
+    tags: ["defi", "gamefi"],
     image: "starksport.png",
     network: {
       website: "https://starksport.io/",
@@ -2314,7 +2314,7 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: false,
   },
-    {
+  {
     id: "4b4e4bd6-119d-4202-b26e-bafd803940da",
     name: "Aura Protocol",
     shortName: "Aura Protocol",
