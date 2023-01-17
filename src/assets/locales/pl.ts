@@ -74,6 +74,10 @@ const translate: TranslateState = {
     npm_last_downloads: "pobrań przez ostatnie 7 dni",
     npm_total_downloads: "downloads",
   },
+  cookies: {
+    description:
+      "We use cookies to ensure you get the best experience on our website",
+  },
 };
 
 export default translate;

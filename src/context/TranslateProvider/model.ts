@@ -3,6 +3,7 @@ export interface TranslateState {
   tags: any;
   jobs: any;
   metrics: any;
+  cookies: any;
 }
 
 export interface TranslateManagerState {
@@ -16,6 +17,7 @@ export const TRANSLATE_STATE_INITIAL_STATE: TranslateManagerState = {
     tags: {},
     jobs: {},
     metrics: {},
+    cookies: {},
   },
   locale: undefined,
 };
