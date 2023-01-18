@@ -21,7 +21,7 @@ const telegramLink = "https://t.me/starknet_ecosystem";
 const twitterLink = "https://twitter.com/StarkNetEco";
 
 function Footer() {
-  const { t } = useTranslate();
+  const { locale, t } = useTranslate();
   const [isTooltipOpen, setTooltipOpen] = useState(false);
 
   const renderTooltip = (label: string) => {
@@ -96,9 +96,7 @@ function Footer() {
             >
               About
             </Link>
-            <Link isExternal href="https://twitter.com/StarkNetEco">
-              Linktree
-            </Link>
+            <Link href={`/${locale}/privacy-policy`}>Privacy Policy</Link>
           </VStack>
         </VStack>
         <VStack align="flex-start">
