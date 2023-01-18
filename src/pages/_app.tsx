@@ -1,6 +1,7 @@
 import "../styles/globals.css";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { ChakraProvider } from "@chakra-ui/react";
+import { Analytics } from "@vercel/analytics/react";
 import dayjs from "dayjs";
 import duration from "dayjs/plugin/duration";
 import { NextSeo } from "next-seo";
@@ -20,6 +21,7 @@ function StarknetEcosystem({ Component, pageProps }: AppProps) {
         <NextSeo {...defaultSEOConfig} />
         <Layout>
           <Component {...pageProps} />
+          <Analytics />
         </Layout>
       </ChakraProvider>
     </TranslateProvider>

@@ -41,6 +41,7 @@
     "@types/react-fontawesome": "^1.6.5",
     "@typescript-eslint/eslint-plugin": "^5.12.1",
     "@typescript-eslint/parser": "^5.12.1",
+    "@vercel/analytics": "^0.1.8",
     "add": "^2.0.6",
     "babel-plugin-macros": "^3.1.0",
     "chart.js": "^3.7.1",
