@@ -2171,7 +2171,7 @@ export const allProjects: Array<Project> = [
     tags: ["defi", "gamefi"],
     image: "starksport.png",
     network: {
-      website: "https://starksport.io/",
+      website: "https://nft-dev.starksport.io/",
       github: "",
       twitter: "https://twitter.com/starksportbet",
       medium: "",
