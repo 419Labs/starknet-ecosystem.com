@@ -2351,5 +2351,24 @@ export const allProjects: Array<Project> = [
     },
     isLive: true,
     isTestnetLive: true,
+  },
+  {
+    id: "f52694c1-0963-494c-91aa-40af0a94e77e",
+    name: "Sphinx",
+    shortName: "Sphinx",
+    description:
+      "A natively cross-chain CLOB orderbook DEX deployed on StarkNet.",
+    tags: ["defi", "bridge"],
+    image: "sphinx.jpg",
+    network: {
+      website: "http://sphnx.xyz/",
+      github: "https://github.com/sphinx-dex",
+      twitter: "https://twitter.com/sphinxdex",
+      medium: "",
+      discord: "https://discord.gg/bx65SJ6u",
+      telegram: "",
+    },
+    isLive: false,
+    isTestnetLive: true,
   }
 ];
