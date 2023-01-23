@@ -7,13 +7,15 @@ import {
   MenuList,
   MenuGroup,
   MenuItem,
-  Text, Image,
+  Text,
+  Image,
 } from "@chakra-ui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react";
 
 import type { Ads } from "../../models/ads";
 import { getRandomAd } from "../../services/ads.service";
+import SmallBannerAd from "../ads/SmallBannerAd";
 
 export interface MenuItf {
   children: any;
@@ -96,11 +98,7 @@ const MenuButton = ({ menus, text, mainGroupTitle, icon }: MenuButtonProps) => {
       <MenuList zIndex={2} pb={0} overflow="hidden" maxW="200px">
         <MenuGroup title={mainGroupTitle}>
           {renderMenus(menus)}
-          <Link href={ad?.link}>
-            <Flex bg={ad?.color} h="36px" px={2} mt={4} cursor="pointer">
-              <Image src={ad?.banner} alt={ad?.title} fit="contain" />
-            </Flex>
-          </Link>
+          {ad && <SmallBannerAd ad={ad} px={2} mt={4} />}
         </MenuGroup>
       </MenuList>
     </ChakraMenu>
