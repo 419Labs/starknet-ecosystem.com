@@ -7,9 +7,13 @@ import {
   MenuList,
   MenuGroup,
   MenuItem,
-  Text,
+  Text, Image,
 } from "@chakra-ui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useEffect, useState } from "react";
+
+import type { Ads } from "../../models/ads";
+import { getRandomAd } from "../../services/ads.service";
 
 export interface MenuItf {
   children: any;
@@ -24,6 +28,11 @@ interface MenuButtonProps {
   icon?: any;
 }
 const MenuButton = ({ menus, text, mainGroupTitle, icon }: MenuButtonProps) => {
+  const [ad, setAd] = useState<Ads | undefined>(undefined);
+  useEffect(() => {
+    setAd(getRandomAd());
+  }, []);
+
   const renderMenus = (menusToRender: MenuItf[]) => {
     return menusToRender.map((menu, index: number) => {
       const { children, icon: menuItemIcon, href, onSelect } = menu;
@@ -84,8 +93,15 @@ const MenuButton = ({ menus, text, mainGroupTitle, icon }: MenuButtonProps) => {
           <FontAwesomeIcon icon={icon} fontSize={text ? "10px" : "16px"} />
         </Flex>
       </ChakraMenuButton>
-      <MenuList zIndex={2}>
-        <MenuGroup title={mainGroupTitle}>{renderMenus(menus)}</MenuGroup>
+      <MenuList zIndex={2} pb={0} overflow="hidden" maxW="200px">
+        <MenuGroup title={mainGroupTitle}>
+          {renderMenus(menus)}
+          <Link href={ad?.link}>
+            <Flex bg={ad?.color} h="36px" px={2} mt={4} cursor="pointer">
+              <Image src={ad?.banner} alt={ad?.title} fit="contain" />
+            </Flex>
+          </Link>
+        </MenuGroup>
       </MenuList>
     </ChakraMenu>
   );
