@@ -98,7 +98,7 @@ const MenuButton = ({ menus, text, mainGroupTitle, icon }: MenuButtonProps) => {
       <MenuList zIndex={2} pb={0} overflow="hidden" maxW="200px">
         <MenuGroup title={mainGroupTitle}>
           {renderMenus(menus)}
-          {ad && <SmallBannerAd ad={ad} px={2} mt={4} />}
+          {ad && ad.active && <SmallBannerAd ad={ad} mt={4} />}
         </MenuGroup>
       </MenuList>
     </ChakraMenu>
