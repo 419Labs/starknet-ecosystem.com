@@ -32,6 +32,25 @@ export interface ProjectItf extends Project {
 
 export const allProjects: Array<Project> = [
   {
+    id: "f5745de2-4bfe-4086-9962-4da6b409d2ca",
+    name: "Wido",
+    shortName: "Wido",
+    description:
+      "Infrastructure for cross-chain transaction bundling. Among other things, we enable once-click deposits into pools, vaults or farms on StarkNet from other chains.",
+    tags: ["tools", "infrastructure", "bridge", "defi"],
+    image: "wido.png",
+    network: {
+      website: "https://www.joinwido.com/",
+      github: "https://github.com/widolabs",
+      twitter: "https://mobile.twitter.com/widolabs",
+      medium: "",
+      discord: "",
+      telegram: "https://t.me/joinwido",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
+  {
     id: "36df24b3-2007-4822-8110-5a44b01afb0f",
     name: "ViewBlock",
     shortName: "ViewBlock",
