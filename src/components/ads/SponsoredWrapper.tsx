@@ -4,18 +4,36 @@ import type { FC } from "react";
 
 interface Props extends FlexProps {
   customTextEl?: JSX.Element;
+  floatBottom?: boolean;
+  floatEnd?: boolean;
 }
 
-export const SponsoredText = (props: TextProps) => (
-  <Text {...props} textAlign="end" color="whiteAlpha.600" fontSize="sm">
+interface SponsoredTextProps extends TextProps {
+  floatEnd?: boolean;
+}
+
+export const SponsoredText = ({ floatEnd, ...props }: SponsoredTextProps) => (
+  <Text
+    textAlign={floatEnd ? "end" : "start"}
+    {...props}
+    color="whiteAlpha.600"
+    fontSize="sm"
+  >
     sponsored
   </Text>
 );
-const SponsoredWrapper: FC<Props> = ({ children, customTextEl, ...props }) => {
+const SponsoredWrapper: FC<Props> = ({
+  children,
+  customTextEl,
+  floatBottom,
+  floatEnd,
+  ...props
+}) => {
   return (
     <Flex {...props} direction="column">
-      <Box mb={2}>{customTextEl || <SponsoredText />}</Box>
-      {children}
+      {floatBottom && children}
+      <Box mb={2}>{customTextEl || <SponsoredText floatEnd={floatEnd} />}</Box>
+      {!floatBottom && children}
     </Flex>
   );
 };

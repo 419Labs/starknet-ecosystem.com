@@ -2,12 +2,15 @@ import { Flex, Text } from "@chakra-ui/layout";
 import { Show } from "@chakra-ui/react";
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useState } from "react";
+import {useEffect, useState} from "react";
 
 import type { Tag } from "../../../data/tag";
 import { useTranslate } from "../../context/TranslateProvider";
 
 import MenuButton from "./MenuButton";
+import TextButtonAd from "../ads/TextButtonAd";
+import {Ads} from "../../models/ads";
+import {getRandomAd} from "../../services/ads.service";
 
 const icons = {
   home: solid("home"),
@@ -51,6 +54,11 @@ function Menu({
 }: MenuProps) {
   const { t } = useTranslate();
   const [selectedValue, setSelectedValue] = useState<Tag>(initialValue);
+  const [ad, setAd] = useState<Ads | undefined>(undefined);
+
+  useEffect(() => {
+    setAd(getRandomAd());
+  }, []);
 
   const onSelected = (newTag: Tag) => {
     setSelectedValue(newTag);
@@ -137,6 +145,7 @@ function Menu({
             </Flex>
           );
         })}
+        <TextButtonAd ad={ad}/>
       </Flex>
     );
   };
