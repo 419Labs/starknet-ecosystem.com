@@ -1,16 +1,23 @@
 import { Link } from "@chakra-ui/layout";
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 import NextLink from "next/link";
+import { useEffect, useState } from "react";
 
 import { useTranslate } from "../../context/TranslateProvider";
+import type { Ads } from "../../models/ads";
+import { getRandomAd } from "../../services/ads.service";
 
 import MenuButton from "./MenuButton";
 
 function LanguageChooser() {
   const { locale } = useTranslate();
-
+  const [ad, setAd] = useState<Ads | undefined>(undefined);
+  useEffect(() => {
+    setAd(getRandomAd());
+  }, []);
   return (
     <MenuButton
+      displayedAd={ad}
       menus={[
         {
           href: "",

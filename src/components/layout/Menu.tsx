@@ -2,15 +2,15 @@ import { Flex, Text } from "@chakra-ui/layout";
 import { Show } from "@chakra-ui/react";
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 
 import type { Tag } from "../../../data/tag";
 import { useTranslate } from "../../context/TranslateProvider";
+import type { Ads } from "../../models/ads";
+import { getRandomAd } from "../../services/ads.service";
+import TextButtonAd from "../ads/TextButtonAd";
 
 import MenuButton from "./MenuButton";
-import TextButtonAd from "../ads/TextButtonAd";
-import {Ads} from "../../models/ads";
-import {getRandomAd} from "../../services/ads.service";
 
 const icons = {
   home: solid("home"),
@@ -145,7 +145,7 @@ function Menu({
             </Flex>
           );
         })}
-        <TextButtonAd ad={ad}/>
+        {ad && ad.active && <TextButtonAd variant="text-button" ad={ad} mt={8} />}
       </Flex>
     );
   };

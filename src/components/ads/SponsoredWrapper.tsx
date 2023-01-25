@@ -27,12 +27,17 @@ const SponsoredWrapper: FC<Props> = ({
   customTextEl,
   floatBottom,
   floatEnd,
+  hidden,
   ...props
 }) => {
   return (
     <Flex {...props} direction="column">
       {floatBottom && children}
-      <Box mb={2}>{customTextEl || <SponsoredText floatEnd={floatEnd} />}</Box>
+      {!hidden && (
+        <Box mb={floatBottom ? 0 : 2} mt={floatBottom ? 2 : 0}>
+          {customTextEl || <SponsoredText floatEnd={floatEnd} />}
+        </Box>
+      )}
       {!floatBottom && children}
     </Flex>
   );

@@ -27,13 +27,9 @@ interface MenuButtonProps {
   text?: string;
   mainGroupTitle?: string;
   icon?: any;
+  displayedAd?: Ads;
 }
-const MenuButton = ({ menus, text, mainGroupTitle, icon }: MenuButtonProps) => {
-  const [ad, setAd] = useState<Ads | undefined>(undefined);
-  useEffect(() => {
-    setAd(getRandomAd());
-  }, []);
-
+const MenuButton = ({ menus, text, mainGroupTitle, icon, displayedAd }: MenuButtonProps) => {
   const renderMenus = (menusToRender: MenuItf[]) => {
     return menusToRender.map((menu, index: number) => {
       const { children, icon: menuItemIcon, href, onSelect } = menu;
@@ -97,7 +93,7 @@ const MenuButton = ({ menus, text, mainGroupTitle, icon }: MenuButtonProps) => {
       <MenuList zIndex={2} pb={0} overflow="hidden" maxW="200px">
         <MenuGroup title={mainGroupTitle}>
           {renderMenus(menus)}
-          {ad && ad.active && <SmallBannerAd ad={ad} mt={4} />}
+          {displayedAd && displayedAd.active && <SmallBannerAd ad={displayedAd} mt={4} />}
         </MenuGroup>
       </MenuList>
     </ChakraMenu>

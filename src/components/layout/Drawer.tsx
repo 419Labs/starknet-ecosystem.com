@@ -10,6 +10,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import type { ReactElement } from "react";
 
 import Logo from "./Logo";
+import {useEffect, useState} from "react";
+import {Ads} from "../../models/ads";
+import {getRandomAd} from "../../services/ads.service";
+import TextButtonAd from "../ads/TextButtonAd";
 
 interface DrawerProps {
   links: { href: string; label: string; icon?: any; isExternal?: boolean }[];
@@ -18,6 +22,12 @@ interface DrawerProps {
   onClose: () => void;
 }
 function Drawer({ links, headerAction, isOpen, onClose }: DrawerProps) {
+  const [ad, setAd] = useState<Ads | undefined>(undefined);
+
+  useEffect(() => {
+    setAd(getRandomAd());
+  }, []);
+
   return (
     <ChakraDrawer
       autoFocus={false}
@@ -53,6 +63,7 @@ function Drawer({ links, headerAction, isOpen, onClose }: DrawerProps) {
               );
             })}
           </Flex>
+          {ad && ad.active && <TextButtonAd ad={ad} my={4} />}
         </DrawerBody>
       </DrawerContent>
     </ChakraDrawer>
