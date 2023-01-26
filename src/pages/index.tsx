@@ -9,6 +9,7 @@ import type { Project, ProjectItf } from "../../data/ecosystem";
 import type { Tag } from "../../data/tag";
 import { allEcosystemTags } from "../../data/tag";
 import CardAd from "../components/ads/CardAd";
+import CardBannerAd from "../components/ads/CardBannerAd";
 import CardProject from "../components/card/CardProject";
 import CardProjectSkeleton from "../components/card/CardProjectSkeleton";
 import HighlightedText from "../components/layout/HighlightedText";
@@ -129,7 +130,15 @@ const Home = () => {
   const renderData = () => {
     const projectsElelements = projects.map(
       (project: ProjectItf, index: number) => {
-        return (
+        return (index + 1) % 12 === 0 && ad ? (
+          <Box
+            ref={index === projects.length - 1 ? observe : null}
+            key={`project-${project.name}`}
+            flex={3}
+          >
+            <CardBannerAd ad={ad} />
+          </Box>
+        ) : (
           <Box
             ref={index === projects.length - 1 ? observe : null}
             key={`project-${project.name}`}
