@@ -1,4 +1,4 @@
-import type { FlexProps, LinkProps } from "@chakra-ui/layout";
+import type { LinkProps } from "@chakra-ui/layout";
 import { Flex, Link, Text } from "@chakra-ui/layout";
 import { Image } from "@chakra-ui/react";
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";

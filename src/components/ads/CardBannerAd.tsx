@@ -1,6 +1,6 @@
-import type { FlexProps, LinkProps } from "@chakra-ui/layout";
+import type { FlexProps } from "@chakra-ui/layout";
 import { Flex, Link, Text } from "@chakra-ui/layout";
-import { Hide, Image, Show } from "@chakra-ui/react";
+import { Hide, Image } from "@chakra-ui/react";
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import type { FC } from "react";
@@ -61,7 +61,7 @@ const CardBannerAd: FC<Props> = ({ ad, ...props }) => {
           </Hide>
         </Flex>
       </Link>
-        <SponsoredText mt={2} />
+      <SponsoredText mt={2} />
     </Flex>
   );
 };
