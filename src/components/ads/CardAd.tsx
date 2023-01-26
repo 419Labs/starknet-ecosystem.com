@@ -16,6 +16,7 @@ const CardAd: FC<Props> = ({ ad, ...props }) => {
   return (
     <Flex
       h="full"
+      w="full"
       onClick={() => console.log("click")}
       align="center"
       justifyContent="space-between"
@@ -36,8 +37,10 @@ const CardAd: FC<Props> = ({ ad, ...props }) => {
     >
       <Flex h="full" direction="column" justify="space-between">
         <Flex direction="column" mt={8} px={12}>
-          <Image src={ad.banner} alt={ad.title} fit="contain" />
-          <Image mt={8} src={ad.bannerSupp} alt={ad.title} fit="contain" />
+          <Image src={ad.bannerSmall} alt={ad.title} fit="contain" />
+          {ad.bannerSupp && (
+            <Image mt={8} src={ad.bannerSupp} alt={ad.title} fit="contain" />
+          )}
         </Flex>
         <Link
           my={8}

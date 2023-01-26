@@ -8,7 +8,6 @@ import useInView from "react-cool-inview";
 import type { Project, ProjectItf } from "../../data/ecosystem";
 import type { Tag } from "../../data/tag";
 import { allEcosystemTags } from "../../data/tag";
-import CardAd from "../components/ads/CardAd";
 import CardBannerAd from "../components/ads/CardBannerAd";
 import CardProject from "../components/card/CardProject";
 import CardProjectSkeleton from "../components/card/CardProjectSkeleton";
@@ -25,10 +24,13 @@ import {
   ProjectSorting,
   sortBy,
 } from "../services/project.service";
+import CardAd from "../components/ads/CardAd";
 
 const Home = () => {
   const { t } = useTranslate();
-  const LOADED_STEPS = 10;
+  const LOADED_STEPS = 24;
+  // Better if multiple of 2 & 3
+  const AD_BANNER_INDEX = 24;
   const sortTags: Tag[] = [
     { key: ProjectSorting.A_Z, value: "A - Z", icon: "", label: "A - Z" },
     {
@@ -128,36 +130,60 @@ const Home = () => {
   };
 
   const renderData = () => {
-    const projectsElelements = projects.map(
-      (project: ProjectItf, index: number) => {
-        return (index + 1) % 12 === 0 && ad ? (
-          <Box
-            ref={index === projects.length - 1 ? observe : null}
-            key={`project-${project.name}`}
-            flex={3}
-          >
-            <CardBannerAd ad={ad} />
-          </Box>
-        ) : (
-          <Box
-            ref={index === projects.length - 1 ? observe : null}
-            key={`project-${project.name}`}
-            flex={1}
-          >
-            <CardProject index={index} project={project} />
-          </Box>
-        );
+    if (loading) {
+      return (
+        <SimpleGrid
+          columns={{ sm: 1, md: 1, lg: 2, xl: 3 }}
+          spacing="20px"
+          w="full"
+        >
+          {renderLoadingState()}
+        </SimpleGrid>
+      );
+    }
+
+    const resultWithAds = [];
+    for (let i = 0; i < projects.length; i += AD_BANNER_INDEX) {
+      resultWithAds.push(
+        <SimpleGrid
+          columns={{ sm: 1, md: 1, lg: 2, xl: 3 }}
+          spacing="20px"
+          w="full"
+        >
+          {/* i === 0 && ad && (
+            <Box key="project-ad" flex={1}>
+              <CardAd ad={ad} />
+            </Box>
+          ) */}
+          {projects
+            .slice(i, i + AD_BANNER_INDEX)
+            .map((project: ProjectItf, index: number) => {
+              return (
+                <Box
+                  ref={index + i === projects.length - 1 ? observe : null}
+                  key={`project-${project.name}`}
+                  flex={1}
+                >
+                  <CardProject index={index} project={project} />
+                </Box>
+              );
+            })}
+        </SimpleGrid>
+      );
+      if (ad){
+        const adEl = <>
+          <Show below="lg">
+            <CardAd my={4} ad={ad} />
+          </Show>
+          <Show above="lg">
+            <CardBannerAd my={4} ad={ad} />
+          </Show>
+        </>
+        resultWithAds.push(adEl);
       }
-    );
+    }
     // Add advertising at the beginning
-    return ad
-      ? [
-          <Box key="project-ad" flex={1}>
-            <CardAd ad={ad} />
-          </Box>,
-          ...projectsElelements,
-        ]
-      : projectsElelements;
+    return resultWithAds;
   };
 
   return (
@@ -244,13 +270,7 @@ const Home = () => {
             </Flex>
           </Flex>
           {loading || (projects && projects.length > 0) ? (
-            <SimpleGrid
-              columns={{ sm: 1, md: 1, lg: 2, xl: 3 }}
-              spacing="20px"
-              w="full"
-            >
-              {loading ? renderLoadingState() : renderData()}
-            </SimpleGrid>
+            renderData()
           ) : (
             <Flex
               w="full"

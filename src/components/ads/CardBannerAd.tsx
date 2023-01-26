@@ -1,6 +1,6 @@
 import type { FlexProps } from "@chakra-ui/layout";
 import { Flex, Link, Text } from "@chakra-ui/layout";
-import { Image } from "@chakra-ui/react";
+import { Hide, Image, Show } from "@chakra-ui/react";
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import type { FC } from "react";
@@ -12,40 +12,48 @@ interface Props extends FlexProps {
 }
 const CardBannerAd: FC<Props> = ({ ad, ...props }) => {
   return (
-    <Flex
-      w="full"
-      onClick={() => console.log("click")}
-      align="center"
-      bg={ad.bgColor}
-      color={ad.fontColor}
-      borderRadius="lg"
-      overflow="hidden"
-      p={2}
-      transition=".4s ease all"
-      cursor="pointer"
-      _hover={{
-        ".banner-content": {
-          transform: "scale(1.1)",
-        },
-      }}
-      {...props}
-    >
-      <Flex mt={8} px={12}>
-        <Image src={ad.banner} alt={ad.title} fit="contain" />
-        <Image mt={8} src={ad.bannerSupp} alt={ad.title} fit="contain" />
+    <Link w="full" isExternal href={ad.link} style={{ textDecoration: "none" }}>
+      <Flex
+        h="86px"
+        w="full"
+        onClick={() => console.log("click")}
+        align="center"
+        justify="space-between"
+        bg={ad.bgColor}
+        color={ad.fontColor}
+        borderRadius="lg"
+        overflow="hidden"
+        py={2}
+        px={{ base: 4, xl: 12 }}
+        transition=".4s ease all"
+        cursor="pointer"
+        _hover={{
+          ".banner-content": {
+            transform: "scale(1.1)",
+          },
+        }}
+        {...props}
+      >
+        <Image
+          src={ad.bannerFull}
+          alt={ad.title}
+          fit="contain"
+          maxH={{ base: "100%", xl: "36px" }}
+        />
+
+        <Hide below="xl">
+          <Flex
+            justify="center"
+            align="center"
+            color={ad.fontColor}
+            fontWeight="bold"
+          >
+            <Text mr={4}>{ad.callToAction}</Text>
+            <FontAwesomeIcon icon={solid("up-right-from-square")} />
+          </Flex>
+        </Hide>
       </Flex>
-      <Link my={8} isExternal href={ad.link} style={{ textDecoration: "none" }}>
-        <Flex
-          justify="center"
-          align="center"
-          color={ad.fontColor}
-          fontWeight="bold"
-        >
-          <Text mr={4}>{ad.callToAction}</Text>
-          <FontAwesomeIcon icon={solid("up-right-from-square")} />
-        </Flex>
-      </Link>
-    </Flex>
+    </Link>
   );
 };
 

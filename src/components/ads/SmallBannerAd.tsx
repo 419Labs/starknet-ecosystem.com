@@ -20,7 +20,7 @@ const SmallBannerAd: FC<Props> = ({ ad, noSponsoredText, ...props }) => {
     >
       <Link href={ad.link} isExternal>
         <Flex px={2} bg={ad.bgColor} h="36px" cursor="pointer">
-          <Image src={ad.banner} alt={ad.title} fit="contain" />
+          <Image src={ad.bannerSmall} alt={ad.title} fit="contain" />
         </Flex>
       </Link>
     </SponsoredWrapper>
