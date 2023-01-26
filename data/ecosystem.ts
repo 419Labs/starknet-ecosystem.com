@@ -36,7 +36,7 @@ export const allProjects: Array<Project> = [
     name: "Wido",
     shortName: "Wido",
     description:
-      "Infrastructure for cross-chain transaction bundling. Among other things, we enable once-click deposits into pools, vaults or farms on StarkNet from other chains.",
+      "Infrastructure for cross-chain transaction bundling. Among other things, we enable one-click deposits into pools, vaults or farms on StarkNet from other chains.",
     tags: ["tools", "infrastructure", "bridge", "defi"],
     image: "wido.png",
     network: {
