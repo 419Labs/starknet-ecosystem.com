@@ -8,6 +8,7 @@ import useInView from "react-cool-inview";
 import type { Project, ProjectItf } from "../../data/ecosystem";
 import type { Tag } from "../../data/tag";
 import { allEcosystemTags } from "../../data/tag";
+import CardAd from "../components/ads/CardAd";
 import CardBannerAd from "../components/ads/CardBannerAd";
 import CardProject from "../components/card/CardProject";
 import CardProjectSkeleton from "../components/card/CardProjectSkeleton";
@@ -24,7 +25,6 @@ import {
   ProjectSorting,
   sortBy,
 } from "../services/project.service";
-import CardAd from "../components/ads/CardAd";
 
 const Home = () => {
   const { t } = useTranslate();
@@ -150,11 +150,13 @@ const Home = () => {
           spacing="20px"
           w="full"
         >
-          {/* i === 0 && ad && (
+          {/*
+            i === 0 && ad && (
             <Box key="project-ad" flex={1}>
               <CardAd ad={ad} />
             </Box>
-          ) */}
+          )
+          */}
           {projects
             .slice(i, i + AD_BANNER_INDEX)
             .map((project: ProjectItf, index: number) => {
@@ -170,15 +172,17 @@ const Home = () => {
             })}
         </SimpleGrid>
       );
-      if (ad){
-        const adEl = <>
-          <Show below="lg">
-            <CardAd my={4} ad={ad} />
-          </Show>
-          <Show above="lg">
-            <CardBannerAd my={4} ad={ad} />
-          </Show>
-        </>
+      if (ad) {
+        const adEl = (
+          <>
+            <Show below="lg">
+              <CardAd my={4} ad={ad} />
+            </Show>
+            <Show above="lg">
+              <CardBannerAd my={4} ad={ad} />
+            </Show>
+          </>
+        );
         resultWithAds.push(adEl);
       }
     }
