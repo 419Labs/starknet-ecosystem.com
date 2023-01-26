@@ -15,9 +15,9 @@ interface SponsoredTextProps extends TextProps {
 export const SponsoredText = ({ floatEnd, ...props }: SponsoredTextProps) => (
   <Text
     textAlign={floatEnd ? "end" : "start"}
-    {...props}
     color="whiteAlpha.600"
     fontSize="sm"
+    {...props}
   >
     sponsored
   </Text>

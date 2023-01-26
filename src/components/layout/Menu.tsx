@@ -145,7 +145,9 @@ function Menu({
             </Flex>
           );
         })}
-        {ad && ad.active && <TextButtonAd variant="text-button" ad={ad} mt={8} />}
+        {ad && ad.active && (
+          <TextButtonAd variant="text-button" ad={ad} mt={8} />
+        )}
       </Flex>
     );
   };

@@ -8,6 +8,7 @@ import useInView from "react-cool-inview";
 import type { Project, ProjectItf } from "../../data/ecosystem";
 import type { Tag } from "../../data/tag";
 import { allEcosystemTags } from "../../data/tag";
+import CardAd from "../components/ads/CardAd";
 import CardProject from "../components/card/CardProject";
 import CardProjectSkeleton from "../components/card/CardProjectSkeleton";
 import HighlightedText from "../components/layout/HighlightedText";
@@ -15,6 +16,8 @@ import Input from "../components/layout/Input";
 import Menu from "../components/layout/Menu";
 import SwitchTag from "../components/layout/SwitchTag";
 import { useTranslate } from "../context/TranslateProvider";
+import type { Ads } from "../models/ads";
+import { getRandomAd } from "../services/ads.service";
 import { EcosystemApi } from "../services/ecosystem-api.service";
 import {
   projectIncludesKeyword,
@@ -45,8 +48,10 @@ const Home = () => {
     useState<number>(-1);
   const [lastIndexLoaded, setLastIndexLoaded] = useState<number>(LOADED_STEPS);
   const [keyword, setKeyword] = useState<string>("");
+  const [ad, setAd] = useState<Ads | undefined>(undefined);
 
   useEffect(() => {
+    setAd(getRandomAd());
     EcosystemApi.fetchEcosystemProjects(1000)
       .then(setAllProjects)
       .then(() => setLoading(false));
@@ -122,18 +127,30 @@ const Home = () => {
   };
 
   const renderData = () => {
-    return projects.map((project: ProjectItf, index: number) => {
-      return (
-        <Box
-          ref={index === projects.length - 1 ? observe : null}
-          key={`project-${project.name}`}
-          flex={1}
-        >
-          <CardProject index={index} project={project} />
-        </Box>
-      );
-    });
+    const projectsElelements = projects.map(
+      (project: ProjectItf, index: number) => {
+        return (
+          <Box
+            ref={index === projects.length - 1 ? observe : null}
+            key={`project-${project.name}`}
+            flex={1}
+          >
+            <CardProject index={index} project={project} />
+          </Box>
+        );
+      }
+    );
+    // Add advertising at the beginning
+    return ad
+      ? [
+          <Box key="project-ad" flex={1}>
+            <CardAd ad={ad} />
+          </Box>,
+          ...projectsElelements,
+        ]
+      : projectsElelements;
   };
+
   return (
     <Flex
       w="full"

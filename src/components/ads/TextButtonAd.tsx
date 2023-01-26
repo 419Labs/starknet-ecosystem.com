@@ -1,5 +1,5 @@
 import type { FlexProps } from "@chakra-ui/layout";
-import {Box, Flex, Link, Text} from "@chakra-ui/layout";
+import { Box, Flex, Link, Text } from "@chakra-ui/layout";
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import type { FC } from "react";
@@ -17,7 +17,7 @@ interface Props extends FlexProps {
 const ButtonLink: FC<{ ad: Ads }> = ({ ad }) => {
   const { title, description } = ad;
   return (
-    <Link href={ad.link} isExternal>
+    <Link href={ad.link} isExternal style={{ textDecoration: "none" }}>
       <Flex
         position="relative"
         cursor="pointer"
