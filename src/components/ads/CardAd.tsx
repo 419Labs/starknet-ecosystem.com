@@ -1,12 +1,13 @@
 import type { FlexProps } from "@chakra-ui/layout";
-import {Flex, Link, Text, VStack} from "@chakra-ui/layout";
+import { Flex, Link, Text } from "@chakra-ui/layout";
+import { Image } from "@chakra-ui/react";
+import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import type { FC } from "react";
 
 import type { Ads } from "../../models/ads";
-import {Image} from "@chakra-ui/react";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {solid} from "@fortawesome/fontawesome-svg-core/import.macro";
-import {SponsoredText} from "./SponsoredWrapper";
+
+import { SponsoredText } from "./SponsoredWrapper";
 
 interface Props extends FlexProps {
   ad: Ads;
@@ -17,7 +18,7 @@ const CardAd: FC<Props> = ({ ad, ...props }) => {
       h="full"
       onClick={() => console.log("click")}
       align="center"
-      justifyContent={"space-between"}
+      justifyContent="space-between"
       direction="column"
       bg={ad.bgColor}
       color={ad.fontColor}
@@ -33,26 +34,31 @@ const CardAd: FC<Props> = ({ ad, ...props }) => {
       }}
       {...props}
     >
-        <Flex h="full" direction="column" justify="space-between">
-            <Flex direction="column" mt={8} px={12}>
-                <Image src={ad.banner} alt={ad.title} fit="contain" />
-                <Image mt={8} src={ad.bannerSupp} alt={ad.title} fit="contain" />
-            </Flex>
-            <Link my={8} isExternal href={ad.link} style={{textDecoration: "none"}}>
-                <Flex
-                    justify="center"
-                    align="center"
-                    color={ad.fontColor}
-                    fontWeight="bold"
-                >
-                    <Text mr={4}>{ad.callToAction}</Text>
-                    <FontAwesomeIcon icon={solid("up-right-from-square")} />
-                </Flex>
-            </Link>
+      <Flex h="full" direction="column" justify="space-between">
+        <Flex direction="column" mt={8} px={12}>
+          <Image src={ad.banner} alt={ad.title} fit="contain" />
+          <Image mt={8} src={ad.bannerSupp} alt={ad.title} fit="contain" />
         </Flex>
-        <Flex w="full" justify="flex-end">
-            <SponsoredText color={"blackAlpha.600"}/>
-        </Flex>
+        <Link
+          my={8}
+          isExternal
+          href={ad.link}
+          style={{ textDecoration: "none" }}
+        >
+          <Flex
+            justify="center"
+            align="center"
+            color={ad.fontColor}
+            fontWeight="bold"
+          >
+            <Text mr={4}>{ad.callToAction}</Text>
+            <FontAwesomeIcon icon={solid("up-right-from-square")} />
+          </Flex>
+        </Link>
+      </Flex>
+      <Flex w="full" justify="flex-end">
+        <SponsoredText color="blackAlpha.600" />
+      </Flex>
     </Flex>
   );
 };

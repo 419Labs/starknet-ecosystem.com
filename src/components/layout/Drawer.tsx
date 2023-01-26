@@ -8,12 +8,13 @@ import {
 } from "@chakra-ui/modal";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import type { ReactElement } from "react";
+import { useEffect, useState } from "react";
+
+import type { Ads } from "../../models/ads";
+import { getRandomAd } from "../../services/ads.service";
+import TextButtonAd from "../ads/TextButtonAd";
 
 import Logo from "./Logo";
-import {useEffect, useState} from "react";
-import {Ads} from "../../models/ads";
-import {getRandomAd} from "../../services/ads.service";
-import TextButtonAd from "../ads/TextButtonAd";
 
 interface DrawerProps {
   links: { href: string; label: string; icon?: any; isExternal?: boolean }[];
