@@ -74,10 +74,7 @@ function Header() {
           />
           <Box>
             <Link isExternal href={bridgeUrl}>
-              <HStack>
-                <Text>{t.common.bridge || "Bridge"}</Text>
-                <FontAwesomeIcon fontSize="14px" icon={solid("bridge-water")} />
-              </HStack>
+              {t.common.bridge || "Bridge"}
             </Link>
           </Box>
           <Box ml={6}>
