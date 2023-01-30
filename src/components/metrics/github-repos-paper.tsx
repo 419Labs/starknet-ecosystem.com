@@ -29,8 +29,6 @@ const githubReposToFollow = [
   { organization: "software-mansion", name: "starknet.py" },
   { organization: "OpenZeppelin", name: "nile" },
   { organization: "Shard-Labs", name: "starknet-devnet" },
-  { organization: "myBraavos", name: "starknet-url" },
-  { organization: "myBraavos", name: "starknet-deeplink" },
 ];
 
 const GithubReposPaper: FC = () => {

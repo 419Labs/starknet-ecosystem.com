@@ -1,8 +1,8 @@
+import type { LinkProps } from "@chakra-ui/layout";
 import { Link as ChakraLink } from "@chakra-ui/layout";
 import NextLink from "next/link";
 
-interface LinkProps {
-  children: string;
+interface Props extends LinkProps {
   active?: boolean;
   color?: string;
   hoverOpacity?: string;
@@ -20,7 +20,7 @@ function Link({
   fontWeight,
   fontSize,
   isExternal,
-}: LinkProps) {
+}: Props) {
   return (
     <NextLink href={href}>
       <ChakraLink
