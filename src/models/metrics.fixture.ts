@@ -11,7 +11,7 @@ export const aGitHubRepo = (): GithubRepo => ({
   homepage: "https://www.starknetjs.com",
   openIssuesCount: 16,
   forksCount: 39,
-  stargazersCount: 152,
+  starsCount: 152,
   subscribersCount: 11,
 });
 

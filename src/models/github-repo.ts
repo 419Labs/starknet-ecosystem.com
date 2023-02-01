@@ -7,6 +7,6 @@ export interface GithubRepo {
   homepage: string | undefined;
   openIssuesCount: number;
   forksCount: number;
-  stargazersCount: number;
+  starsCount: number;
   subscribersCount: number;
 }
