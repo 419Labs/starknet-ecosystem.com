@@ -98,7 +98,7 @@ const GithubReposPaper: FC = () => {
                       </HStack>
                       <HStack fontSize="sm" spacing={1}>
                         <FontAwesomeIcon icon={solid("star")} />
-                        <Text>{repo.stargazersCount}</Text>
+                        <Text>{repo.starsCount}</Text>
                       </HStack>
                     </HStack>
                   </Link>
