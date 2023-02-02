@@ -2187,12 +2187,12 @@ export const allProjects: Array<Project> = [
     shortName: "Stark Sport",
     description:
       'Starksport is a king sport inspired project built on Binance Smart Chain, StarkNet...',
-    tags: ["defi", "gamefi"],
+    tags: ["nft", "defi", "gamefi"],
     image: "starksport.png",
     network: {
-      website: "https://nft-dev.starksport.io/",
+      website: "http://starksport.finance",
       github: "",
-      twitter: "https://twitter.com/starksportbet",
+      twitter: "https://twitter.com/starkfinance",
       medium: "",
       discord: "https://discord.gg/rX38ZwbqKw",
       telegram: "https://t.me/starksportchanel",
