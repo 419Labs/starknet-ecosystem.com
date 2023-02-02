@@ -2148,7 +2148,7 @@ export const allProjects: Array<Project> = [
     name: "WIW Protocol",
     shortName: "WIW",
     description:
-        'WIW is a privacy-preserving on-chain identity protocol that curates openly accessible Web3 user reputations.',
+      'WIW is a privacy-preserving on-chain identity protocol that curates openly accessible Web3 user reputations.',
     tags: ["digital_id", "infrastructure", "tools"],
     image: "wiw.png",
     network: {
@@ -2167,7 +2167,7 @@ export const allProjects: Array<Project> = [
     name: "Dragon Quest",
     shortName: "Dragon Quest",
     description:
-        'Dragon Quest is a text-based RPG game.',
+      'Dragon Quest is a text-based RPG game.',
     tags: ["gamefi", "nft"],
     image: "",
     network: {
@@ -2187,12 +2187,12 @@ export const allProjects: Array<Project> = [
     shortName: "Stark Sport",
     description:
       'Starksport is a king sport inspired project built on Binance Smart Chain, StarkNet...',
-    tags: ["defi", "gamefi"],
+    tags: ["nft", "defi", "gamefi"],
     image: "starksport.png",
     network: {
-      website: "https://nft-dev.starksport.io/",
+      website: "http://starksport.finance",
       github: "",
-      twitter: "https://twitter.com/starksportbet",
+      twitter: "https://twitter.com/starkfinance",
       medium: "",
       discord: "https://discord.gg/rX38ZwbqKw",
       telegram: "https://t.me/starksportchanel",
