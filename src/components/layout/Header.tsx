@@ -14,6 +14,8 @@ import Logo from "./Logo";
 
 const addProjectUrl =
   "https://github.com/419Labs/starknet-ecosystem.com/blob/main/docs/add-project.md";
+const bridgeUrl = "https://starkgate.starknet.io/";
+
 function Header() {
   const { locale, t } = useTranslate();
   const { pathname } = useRouter();
@@ -63,6 +65,18 @@ function Header() {
               {t.common.apply || "Apply"}
             </Link>
           </Box>
+          <Box
+            mx={6}
+            h="28px"
+            w="1px"
+            borderLeft="1px solid"
+            borderColor="whiteAlpha.300"
+          />
+          <Box>
+            <Link isExternal href={bridgeUrl}>
+              {t.common.bridge || "Bridge"}
+            </Link>
+          </Box>
           <Box ml={6}>
             <LanguageChooser />
           </Box>
@@ -91,6 +105,11 @@ function Header() {
               {
                 href: `/${locale}/metrics`,
                 label: t.common.metrics || "Metrics",
+              },
+              {
+                isExternal: true,
+                href: bridgeUrl,
+                label: t.common.bridge || "Bridge",
               },
               {
                 isExternal: true,

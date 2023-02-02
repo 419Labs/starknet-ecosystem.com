@@ -53,6 +53,7 @@ class MyDocument extends Document {
             src="https://www.googletagmanager.com/gtag/js?id=G-KW215DTHVD"
           />
           <script async src="/scripts/google-analytics.js" />
+          <script async src="/scripts/hot-jar.js" />
           <meta name="application-name" content={APP_NAME} />
           <meta name="apple-mobile-web-app-capable" content="yes" />
           <meta

@@ -15,7 +15,7 @@ const PrivacyPolicyPage: FC = () => {
     >
       <HighlightedText text="Policy" highlighted="Privacy" />
       <Text mt={4}>
-        <i>Last modified: January 17, 2023</i>
+        <i>Last modified: January 27, 2023</i>
       </Text>
       <Text mt={4}>
         This Privacy Policy (the “Policy”) explains how
@@ -119,9 +119,11 @@ const PrivacyPolicyPage: FC = () => {
             Sentry, for application monitoring and error tracking purposes;
           </li> */}
           <li>
-            <Text fontWeight="bold">Google Analytics & Vercel analytics</Text>To
-            have a better understanding of the use of the starknet-ecosystem app
-            by our users;
+            <Text fontWeight="bold">
+              Google Analytics, Vercel analytics & Hotjar
+            </Text>
+            To have a better understanding of the use of the starknet-ecosystem
+            app by our users;
           </li>
           <li>
             <Text fontWeight="bold">Vercel</Text>For hosting purposes

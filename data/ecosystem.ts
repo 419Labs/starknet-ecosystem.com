@@ -32,6 +32,25 @@ export interface ProjectItf extends Project {
 
 export const allProjects: Array<Project> = [
   {
+    id: "f5745de2-4bfe-4086-9962-4da6b409d2ca",
+    name: "Wido",
+    shortName: "Wido",
+    description:
+      "Infrastructure for cross-chain transaction bundling. Among other things, we enable single-click deposits into pools, vaults or farms on StarkNet from other chains.",
+    tags: ["tools", "infrastructure", "bridge", "defi"],
+    image: "wido.png",
+    network: {
+      website: "https://www.joinwido.com/",
+      github: "https://github.com/widolabs",
+      twitter: "https://mobile.twitter.com/widolabs",
+      medium: "",
+      discord: "",
+      telegram: "https://t.me/joinwido",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
+  {
     id: "36df24b3-2007-4822-8110-5a44b01afb0f",
     name: "ViewBlock",
     shortName: "ViewBlock",
@@ -2350,6 +2369,25 @@ export const allProjects: Array<Project> = [
       telegram: "",
     },
     isLive: true,
+    isTestnetLive: true,
+  },
+  {
+    id: "f52694c1-0963-494c-91aa-40af0a94e77e",
+    name: "Sphinx",
+    shortName: "Sphinx",
+    description:
+      "A natively cross-chain CLOB orderbook DEX deployed on StarkNet.",
+    tags: ["defi", "bridge"],
+    image: "sphinx.jpg",
+    network: {
+      website: "http://sphnx.xyz/",
+      github: "https://github.com/sphinx-dex",
+      twitter: "https://twitter.com/sphinxdex",
+      medium: "",
+      discord: "https://discord.gg/bx65SJ6u",
+      telegram: "",
+    },
+    isLive: false,
     isTestnetLive: true,
   }
 ];

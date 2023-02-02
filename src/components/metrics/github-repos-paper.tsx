@@ -29,8 +29,6 @@ const githubReposToFollow = [
   { organization: "software-mansion", name: "starknet.py" },
   { organization: "OpenZeppelin", name: "nile" },
   { organization: "Shard-Labs", name: "starknet-devnet" },
-  { organization: "myBraavos", name: "starknet-url" },
-  { organization: "myBraavos", name: "starknet-deeplink" },
 ];
 
 const GithubReposPaper: FC = () => {
@@ -100,7 +98,7 @@ const GithubReposPaper: FC = () => {
                       </HStack>
                       <HStack fontSize="sm" spacing={1}>
                         <FontAwesomeIcon icon={solid("star")} />
-                        <Text>{repo.stargazersCount}</Text>
+                        <Text>{repo.starsCount}</Text>
                       </HStack>
                     </HStack>
                   </Link>
