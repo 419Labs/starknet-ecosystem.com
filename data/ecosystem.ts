@@ -2389,5 +2389,24 @@ export const allProjects: Array<Project> = [
     },
     isLive: false,
     isTestnetLive: true,
+  },
+  {
+    id: "cf6a3044-bf12-4c0e-89fc-ad8bb352daa7",
+    name: "Kasar Labs",
+    shortName: "KasarLabs",
+    description:
+      "A Starknet engineering and research laboratory.",
+      tags: ["infrastructure", "tools"],
+    image: "Kasarlabs.png",
+    network: {
+      website: "http://kasar.io/",
+      github: "https://github.com/kasarlabs",
+      twitter: "https://twitter.com/kasarlabs",
+      medium: "",
+      discord: "",
+      telegram: "",
+    },
+    isLive: false,
+    isTestnetLive: true,
   }
 ];
