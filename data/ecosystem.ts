@@ -2397,7 +2397,7 @@ export const allProjects: Array<Project> = [
     description:
       "A Starknet engineering and research laboratory.",
       tags: ["infrastructure", "tools"],
-    image: "Kasarlabs.png",
+    image: "kasar.png",
     network: {
       website: "http://kasar.io/",
       github: "https://github.com/kasarlabs",
