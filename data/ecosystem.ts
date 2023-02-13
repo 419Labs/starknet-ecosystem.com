@@ -252,11 +252,11 @@ export const allProjects: Array<Project> = [
       github: "https://github.com/Starkdefi",
       twitter: "https://twitter.com/StarkDefi",
       medium: "https://starkdefi.medium.com/",
-      discord: "",
+      discord: "https://discord.com/invite/starkdefi",
       telegram: "https://t.me/starkdefi_ann",
     },
     isLive: false,
-    isTestnetLive: false,
+    isTestnetLive: true,
   },
   {
     id: "1410afcb-a1ec-4f41-bc66-f9680b1e6241",
