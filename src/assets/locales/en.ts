@@ -2,13 +2,13 @@ import type { TranslateState } from "../../context/TranslateProvider/model";
 
 const enTranslate: TranslateState = {
   common: {
-    title_main: "StarkNet revolution is coming out of the woods",
+    title_main: "Starknet revolution is coming out of the woods",
     title_main_dapps: "of dApps, Services & Wallets",
     hundreds: "Hundreds",
     subtitle_main:
-      "Immerse yourself in the StarkNet Ecosystem by discovering projects, jobs, metrics and learning resources. ",
+      "Immerse yourself in the Starknet Ecosystem by discovering projects, jobs, metrics and learning resources. ",
     community_driven:
-      "✨ This project is managed by the awesome StarkNet community",
+      "✨ This project is managed by the awesome Starknet community",
     no_project: "😕 No projects in this category",
     maybe_yours: "Maybe yours?",
     made_with: "Made with",
@@ -27,7 +27,7 @@ const enTranslate: TranslateState = {
     metrics: "Metrics",
     academy: "Academy",
     academy_subtitle:
-      "Your StarkNet learning shop. Find tutorials, guides, contributions, libraries. Subscribe to newsletters to keep track on this very fast-moving ecosystem.",
+      "Your Starknet learning shop. Find tutorials, guides, contributions, libraries. Subscribe to newsletters to keep track on this very fast-moving ecosystem.",
     jobs_subtitle: "You may be one click away from your dream job.",
     cumulative_chart: "Cumulative chart",
     non_cumulative_chart: "Non cumulative chart",

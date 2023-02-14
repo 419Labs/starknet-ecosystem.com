@@ -23,7 +23,7 @@ function NewsInfosContent({
         <CardExplanation
           bg={getGradient()}
           title="News & Feeds"
-          content="Follow StarkNet Ecosystem by subscribing to community newsletters, Telegram groups or StarkWare official website."
+          content="Follow Starknet Ecosystem by subscribing to community newsletters, Telegram groups or StarkWare official website."
           link="https://starkware.co/content/"
         />
       </Box>
