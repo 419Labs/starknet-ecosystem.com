@@ -1323,11 +1323,11 @@ export const allProjects: Array<Project> = [
     tags: ["tools"],
     image: "",
     network: {
-      website: "https://github.com/NethermindEth/warp",
+      website: "https://nethermind.io/warp/",
       github: "https://github.com/NethermindEth/warp",
       twitter: "",
       medium: "",
-      discord: "",
+      discord: "https://discord.gg/cPqaZXev7P",
       telegram: "",
     },
     isLive: true,
@@ -2407,6 +2407,44 @@ export const allProjects: Array<Project> = [
       telegram: "",
     },
     isLive: false,
+    isTestnetLive: true,
+  },
+  {
+    id: "9c9d0282-1311-437d-a20d-15a79844e25f",
+    name: "Horus",
+    shortName: "Horus",
+    description:
+      "A formal verification tool for StarkNet smart contracts.",
+    tags: ["tools", "security", "formal-verification"],
+    image: "horus.png",
+    network: {
+      website: "https://nethermind.io/horus/",
+      github: "https://github.com/NethermindEth/horus-checker",
+      twitter: "",
+      medium: "",
+      discord: "https://discord.gg/FhgPG6cEvH",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: true,
+  },
+  {
+    id: "ed86c982-8968-47e8-8fb2-d879155c629e",
+    name: "Juno",
+    shortName: "Juno",
+    description:
+      "Starknet full state node written in Go",
+    tags: ["tools", "infrastructure"],
+    image: "",
+    network: {
+      website: "https://github.com/NethermindEth/juno",
+      github: "https://github.com/NethermindEth/juno",
+      twitter: "juno.png",
+      medium: "",
+      discord: "https://discord.gg/eZgAjMWjJW",
+      telegram: "",
+    },
+    isLive: true,
     isTestnetLive: true,
   }
 ];
