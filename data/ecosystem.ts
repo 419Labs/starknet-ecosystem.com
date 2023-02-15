@@ -2435,11 +2435,11 @@ export const allProjects: Array<Project> = [
     description:
       "Starknet full state node written in Go",
     tags: ["tools", "infrastructure"],
-    image: "",
+    image: "juno.png",
     network: {
       website: "https://github.com/NethermindEth/juno",
       github: "https://github.com/NethermindEth/juno",
-      twitter: "juno.png",
+      twitter: "",
       medium: "",
       discord: "https://discord.gg/eZgAjMWjJW",
       telegram: "",
