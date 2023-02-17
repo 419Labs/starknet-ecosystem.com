@@ -2197,8 +2197,8 @@ export const allProjects: Array<Project> = [
       discord: "https://discord.gg/rX38ZwbqKw",
       telegram: "https://t.me/starksportchanel",
     },
-    isLive: false,
-    isTestnetLive: false,
+    isLive: true,
+    isTestnetLive: true,
   },
   {
     id: "01babbb2-b6d9-4585-b795-2e388123ffd8",
