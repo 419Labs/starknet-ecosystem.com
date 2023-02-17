@@ -27,5 +27,15 @@ const pushData = (token: string): Promise<string> =>
     .then((response) => response.access_token)
     .catch((e) => console.log(e))
 
+const refreshTwitter = (token: string): Promise<string> =>
+  axios.request({
+    method: 'POST',
+    url: `${process.env.STARKNET_DB_URL}/projects/refresh-twitter`,
+    headers: { "Authorization": `Bearer ${token}` },
+  })
+
 getAccessToken()
-  .then(token => pushData(token))
+  .then(async token => {
+    await pushData(token)
+    await refreshTwitter(token)
+  });

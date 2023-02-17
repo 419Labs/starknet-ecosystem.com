@@ -2,11 +2,11 @@ import type { TranslateState } from "../../context/TranslateProvider/model";
 
 const ptTranslate: TranslateState = {
   common: {
-    title_main: "StarkNet revolução está a chegar",
+    title_main: "Starknet revolução está a chegar",
     title_main_dapps: "dApps, serviços e carteiras",
     hundreds: "Centenas",
     subtitle_main:
-      "Mergulhe no ecossistema StarkNet descobrindo projetos, empregos, métricas e recursos de aprendizado.",
+      "Mergulhe no ecossistema Starknet descobrindo projetos, empregos, métricas e recursos de aprendizado.",
     community_driven: "✨ Uma iniciativa guiada pela comunidade",
     no_project: "😕 Nenhum projeto nesta categoria",
     maybe_yours: "Talvez o seu?",
@@ -26,7 +26,7 @@ const ptTranslate: TranslateState = {
     metrics: "Métricas",
     academy: "Academia",
     academy_subtitle:
-      "Sua loja de aprendizado StarkNet. Encontre tutoriais, guias, contribuições, bibliotecas. Assine boletins informativos para acompanhar esse ecossistema em rápida evolução.",
+      "Sua loja de aprendizado Starknet. Encontre tutoriais, guias, contribuições, bibliotecas. Assine boletins informativos para acompanhar esse ecossistema em rápida evolução.",
     jobs_subtitle: "You may be one click away from your dream job.",
     cumulative_chart: "Gráfico cumulativo",
     non_cumulative_chart: "Gráfico não cumulativo",

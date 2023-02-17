@@ -2,11 +2,11 @@ import type { TranslateState } from "../../context/TranslateProvider/model";
 
 const frTranslate: TranslateState = {
   common: {
-    title_main: "La révolution StarkNet est en route",
+    title_main: "La révolution Starknet est en route",
     title_main_dapps: "dApps, Services & Portefeuilles",
     hundreds: "Centaines",
     subtitle_main:
-      "Plongez dans l'écosystème StarkNet. Découvrez les projets qui construisent le futur, les emplois, les métriques et les ressources d'apprentissage de l'écosystème.",
+      "Plongez dans l'écosystème Starknet. Découvrez les projets qui construisent le futur, les emplois, les métriques et les ressources d'apprentissage de l'écosystème.",
     community_driven: "✨ Une initiative guidée par la communauté",
     no_project: "😕 Aucun projet dans cette catégorie",
     maybe_yours: "Peut-être le vôtre ?",
@@ -27,7 +27,7 @@ const frTranslate: TranslateState = {
     metrics: "Métriques",
     academy: "Académie",
     academy_subtitle:
-      "Votre boutique d'apprentissage StarkNet. Trouvez des tutoriels, des guides, des contributions, des bibliothèques. Abonnez-vous aux newsletters pour suivre cet écosystème en évolution très rapide.",
+      "Votre boutique d'apprentissage Starknet. Trouvez des tutoriels, des guides, des contributions, des bibliothèques. Abonnez-vous aux newsletters pour suivre cet écosystème en évolution très rapide.",
     jobs_subtitle: "Vous êtes peut-être à un clic de l'emploi de vos rêves.",
     cumulative_chart: "Cumulatif",
     non_cumulative_chart: "Non cumulatif",

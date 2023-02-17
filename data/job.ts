@@ -11,15 +11,15 @@ const allJobs: Array<Job> = [
     description:
       "Own Argent X’s development and redefine what’s possible in crypto, pushing the boundaries of security and ease of use.\n" +
       "\n" +
-      "Argent X is an open source browser wallet. It's the first wallet for StarkNet, a breakthrough network that offers unlimited scale without compromising on security.\n" +
+      "Argent X is an open source browser wallet. It's the first wallet for Starknet, a breakthrough network that offers unlimited scale without compromising on security.\n" +
       "\n" +
-      "The aim is to move the needle for the adoption of self-custody. Argent X is in alpha, and StarkNet is still on testnet, but it already has 60,000 users. Transaction volume is also exploding.\n" +
+      "The aim is to move the needle for the adoption of self-custody. Argent X is in alpha, and Starknet is still on testnet, but it already has 60,000 users. Transaction volume is also exploding.\n" +
       "\n" +
       "So join us on Day 1 and shape the future of money and the internet.",
     responsibilities:
       "What you’ll be doing\n\n" +
       "- Oversee Argent X’s development from ideation to execution. With a constant focus on delighting users.\n" +
-      "- Collaborate extensively with StarkWare, the team behind StarkNet, as well as some of the world’s most exciting Dapp developers and founders.\n" +
+      "- Collaborate extensively with StarkWare, the team behind Starknet, as well as some of the world’s most exciting Dapp developers and founders.\n" +
       "- Work alongside Argent’s founders, giving clear product requirements and roadmaps to our engineers and designers.\n" +
       "- Define product goals, track performance and remove roadblocks.\n" +
       "If you’re successful in the role you’ll have played a pivotal part in bringing the benefits of crypto to tens of millions more people.",
@@ -43,9 +43,9 @@ const allJobs: Array<Job> = [
   },
   {
     key: "2",
-    title: "Senior Smart Contract Engineer for StarkNet",
+    title: "Senior Smart Contract Engineer for Starknet",
     projectId: "dce4260c-807e-48d0-b57c-d8488dbe8889",
-    tags: ["Cairo", "Solidity", "Web3", "StarkNet"],
+    tags: ["Cairo", "Solidity", "Web3", "Starknet"],
     location: "Remote",
     remote: true,
     aboutUs:
@@ -96,7 +96,7 @@ const allJobs: Array<Job> = [
     location: "Toronto, Canada",
     remote: true,
     description:
-      "PlayOasis is an NFT marketplace powered by StarkNet, where our clients offer and list nfts with near zero gas fees. We are looking for a software engineer to work on frontend, backend and smart contracts.",
+      "PlayOasis is an NFT marketplace powered by Starknet, where our clients offer and list nfts with near zero gas fees. We are looking for a software engineer to work on frontend, backend and smart contracts.",
     requirements: "Coding knowledge and experience is required",
     createdOn: new Date("2022-03-20"),
     applyLink: "mailto:jobs@playoasis.xyz",
@@ -214,7 +214,7 @@ const allJobs: Array<Job> = [
     responsibilities:
       "– Respect and Collaborate with team members.\n" +
       "– Communicate regularly and quickly with the team (using weekly reports and the Scrum methodology) to check status and progress.\n" +
-      "– Design and development of smart contracts in Solidity and Cairo (Ethereum Layer-1 and StarkNet ZK-Rollup)\n" +
+      "– Design and development of smart contracts in Solidity and Cairo (Ethereum Layer-1 and Starknet ZK-Rollup)\n" +
       "– Design and develop API’s\n" +
       "– Collecting on-chain data",
     requirements:
@@ -237,11 +237,11 @@ const allJobs: Array<Job> = [
     description:
       "Help us build the future of Ethereum scaling by working on Argent X.\n" +
       "\n" +
-      "Argent X is the first wallet for StarkNet, a zk-rollup technology built on the Ethereum blockchain, and it comes as a Browser Extension written in Javascript/Typescript.\n" +
+      "Argent X is the first wallet for Starknet, a zk-rollup technology built on the Ethereum blockchain, and it comes as a Browser Extension written in Javascript/Typescript.\n" +
       "\n" +
       "With a focus on world class UX and security, you’ll take ownership of the entire development lifecycle and quickly ship features in an agile environment.\n" +
       "\n" +
-      "As part of the team, you will also help define and build starknet.js, an open source library helping applications interact with the StarkNet protocol.\n" +
+      "As part of the team, you will also help define and build starknet.js, an open source library helping applications interact with the Starknet protocol.\n" +
       "\n" +
       "It’s a particularly exciting time to join us as we launch on Layer 2 and prepare to bring the benefits of crypto to millions more people. We’re fortunate to be backed by Paradigm, Index Ventures and Creandum and have been building since 2017.",
     requirements:
@@ -273,7 +273,7 @@ const allJobs: Array<Job> = [
     location: "Remote",
     remote: true,
     description:
-      "You will be a developer within the StarkNet team, so some of the responsibilities on this project include: \n" +
+      "You will be a developer within the Starknet team, so some of the responsibilities on this project include: \n" +
       "\n" +
       "- Analyzing, designing, and developing software features and enhancements\n" +
       "- Participating in software design meetings and analyzing user needs to determine technical requirements\n" +
@@ -330,14 +330,14 @@ const allJobs: Array<Job> = [
     remote: true,
     description:
       "We’re looking for developers with smart contract auditing experience/knowledge to join our newly fledged Cairo smart contract Auditing team.\n" +
-      "You’ll get the opportunity to work at the bleeding edge of blockchain technology by auditing StarkNet protocols and building cutting-edge security-related tooling for Cairo, StarkNet’s native smart contract language.\n" +
+      "You’ll get the opportunity to work at the bleeding edge of blockchain technology by auditing Starknet protocols and building cutting-edge security-related tooling for Cairo, Starknet’s native smart contract language.\n" +
       "Cairo is a great language, but many existing protocols cannot switch to a new language due to time/money/talent constraints.\n" +
       "\n" +
       "Responsibilities\n" +
-      "- Work directly with the leading protocols in the StarkNet ecosystem to review their code and help secure their protocols\n" +
+      "- Work directly with the leading protocols in the Starknet ecosystem to review their code and help secure their protocols\n" +
       "- Design and implement solutions & tooling for difficult engineering and security analysis problems\n" +
       "- Collaborate with teammates to maintain and continually improve our existing Cairo security tools using modern software engineering practices\n" +
-      "- Develop new Cairo/StarkNet security tools",
+      "- Develop new Cairo/Starknet security tools",
     requirements:
       "- 1+ year of experience in Solidity security analysis\n" +
       "- Solid understanding of the Ethereum Virtual Machine and Yellow Paper\n" +
@@ -355,16 +355,16 @@ const allJobs: Array<Job> = [
     key: "14",
     title: "Generalist Developer",
     projectId: "19c738b6-2b7e-4826-bb5d-15f2c4330001",
-    tags: ["Cairo", "Solidity", "StarkNet"],
+    tags: ["Cairo", "Solidity", "Starknet"],
     location: "San Francisco or Remote",
     remote: true,
     description:
-      "Stork Oracle is a new oracle in the StarkNet ecosystem. We are a small, San Francisco based team. " +
+      "Stork Oracle is a new oracle in the Starknet ecosystem. We are a small, San Francisco based team. " +
       "Stork is supported by Dexterity Capital, one of the most successful and experienced algorithmic trading firms in the crypto world.\n\n" +
       "If you’re on the fence about your fit for the role, take the risk and drop us a line. Worst case, you’ll make some new friends.\n" +
       "\n" +
       "Responsibilities\n" +
-      "- Building full-stack blockchain applications on StarkNet\n" +
+      "- Building full-stack blockchain applications on Starknet\n" +
       "- Integrating with exchanges, data providers, and other APIs\n" +
       "- Contributing to whitepapers and solving complex challenges related to decentralization, security, data reliability, and more\n",
 
@@ -386,29 +386,29 @@ const allJobs: Array<Job> = [
     key: "17",
     title: "Cairo Developer",
     projectId: "b19c74a5-6434-42dc-9329-98ca1ead255d",
-    tags: ["Cairo", "Solidity", "StarkNet", "AMM"],
+    tags: ["Cairo", "Solidity", "Starknet", "AMM"],
     location: "Remote",
     remote: true,
     description:
-      "SithSwap is developing an advanced stableswap AMM on StarkNet, a permissionless decentralized ZK-Rollup operating as an L2 network over Ethereum, enabling dApps to achieve unlimited scale for its computation – without compromising Ethereum's composability and security.\n" +
+      "SithSwap is developing an advanced stableswap AMM on Starknet, a permissionless decentralized ZK-Rollup operating as an L2 network over Ethereum, enabling dApps to achieve unlimited scale for its computation – without compromising Ethereum's composability and security.\n" +
       "\n" +
       "For this endeavour, SithSwap is looking to onboard a talented Cairo developer, remotely and in any capacity (ranging from task-based to full-time).\n" +
       "\n" +
       "TODO:\n" +
-      "As a Cairo Developer, you will play a leading role in porting over an existing reference Solidity implementation of the SithSwap protocol (Core + Rewards contracts) over to StarkNet in native Cairo language.\n\n" +
+      "As a Cairo Developer, you will play a leading role in porting over an existing reference Solidity implementation of the SithSwap protocol (Core + Rewards contracts) over to Starknet in native Cairo language.\n\n" +
       "More specifically, in coordination with the team, you will be responsible for designing and implementing the Cairo counterparts of any provided Solidity smart contracts, suggesting modifications and adaptations as needed for successfully porting over the codebase to the latest Cairo release, starting with the Core AMM smart contracts.\n\n" +
-      "To do the above, you will be relying on the most advanced tooling for StarkNet yet released, using either TypeScript or Python to write your off-chain backend code.",
+      "To do the above, you will be relying on the most advanced tooling for Starknet yet released, using either TypeScript or Python to write your off-chain backend code.",
     requirements:
       "- 2+ years experience developing top-tier smart contracts in an EVM mainnet environment\n" +
       "- Great understanding and daily use of Cairo (up to the latest release/features)\n" +
       "- Good understanding of Solidity/Yul and the EVM\n" +
-      "- Strong working knowledge of at least 1 advanced StarkNet development framework (e.g. Ape, Protostar, Nile, Hardhat)\n" +
+      "- Strong working knowledge of at least 1 advanced Starknet development framework (e.g. Ape, Protostar, Nile, Hardhat)\n" +
       "- A GitHub profile (doesn't need to be public, as long as we can inspect it)" +
       "\n" +
       "Nice to have:\n" +
       "- Experience with Uniswap V2 and Curve Finance contracts architectures and APIs\n" +
       "- Experience with common smart contracts patterns such as upgradability, proxy wallets, meta-transactions, and counterfactual deployments\n" +
-      "- Strong knowledge of StarkNet as-a-platform, its underlying architecture and tech stack\n" +
+      "- Strong knowledge of Starknet as-a-platform, its underlying architecture and tech stack\n" +
       "- Strong working knowledge of both Python and TypeScript\n" +
       "- Good knowledge of historical smart contract exploits and vulnerabilities (across all chains)\n" +
       "- Ability to write code that is clean, easy to audit, yet efficient in terms of deployment, execution and maintenance\n" +
@@ -451,7 +451,7 @@ const allJobs: Array<Job> = [
     location: "Remote",
     remote: true,
     description:
-      "ZKX is the first permissionless protocol for derivatives built on StarkNet. We’re building a decentralized exchange that lets users trade derivatives using reward mechanisms, liquidity provisioning, and simplified access to complex trading strategies.\n" +
+      "ZKX is the first permissionless protocol for derivatives built on Starknet. We’re building a decentralized exchange that lets users trade derivatives using reward mechanisms, liquidity provisioning, and simplified access to complex trading strategies.\n" +
       "\n" +
       "The role: \n" +
       "The mission for the Visual Artist is to lead the protocol’s visual identity and be the leading creative mind to structure its visual experience for users. You’ll take ownership of all design needs and will help manage external partners or coordinate with community members for additional resources. Ideally, you’re someone who’s excited about branding, memes, NFTs and more. You probably know about DeFi and crypto, and are looking to learn more about it.\n" +
@@ -493,7 +493,7 @@ const allJobs: Array<Job> = [
       "\n" +
       "Passionate to learn new things and constantly improve.",
     responsibilities:
-      "- Perform the software design of web3 product features on top of StarkNet\n" +
+      "- Perform the software design of web3 product features on top of Starknet\n" +
       "- Build web3 applications and browser extensions through appealing visual design\n" +
       "- Write tests to ensure your code is working, responsive and efficient\n" +
       "- Troubleshoot, debug and upgrade software\n" +

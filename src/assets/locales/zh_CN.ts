@@ -2,11 +2,11 @@ import type { TranslateState } from "../../context/TranslateProvider/model";
 
 const zhCNTranslation: TranslateState = {
   common: {
-    title_main: "StarkNet 革命即将到来",
+    title_main: "Starknet 革命即将到来",
     title_main_dapps: "dApp、服务和钱包",
     hundreds: "数百",
     subtitle_main:
-      "通过发现项目、工作、指标和学习资源，让自己沉浸在 StarkNet 生态系统中。",
+      "通过发现项目、工作、指标和学习资源，让自己沉浸在 Starknet 生态系统中。",
     community_driven: "✨ 社区驱动的倡议",
 
     no_project: "😕 该目录下暂无项目",
@@ -27,7 +27,7 @@ const zhCNTranslation: TranslateState = {
     metrics: "指标",
     academy: "学院",
     academy_subtitle:
-      "您的 StarkNet 学习商店。查找教程、指南、贡献、图书馆。订阅新闻通讯以跟踪这个快速发展的生态系统",
+      "您的 Starknet 学习商店。查找教程、指南、贡献、图书馆。订阅新闻通讯以跟踪这个快速发展的生态系统",
     jobs_subtitle: "You may be one click away from your dream job.",
     cumulative_chart: "累积图表",
     non_cumulative_chart: "非累积图表",
