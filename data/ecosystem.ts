@@ -2148,7 +2148,7 @@ export const allProjects: Array<Project> = [
     name: "WIW Protocol",
     shortName: "WIW",
     description:
-        'WIW is a privacy-preserving on-chain identity protocol that curates openly accessible Web3 user reputations.',
+      'WIW is a privacy-preserving on-chain identity protocol that curates openly accessible Web3 user reputations.',
     tags: ["digital_id", "infrastructure", "tools"],
     image: "wiw.png",
     network: {
@@ -2167,7 +2167,7 @@ export const allProjects: Array<Project> = [
     name: "Dragon Quest",
     shortName: "Dragon Quest",
     description:
-        'Dragon Quest is a text-based RPG game.',
+      'Dragon Quest is a text-based RPG game.',
     tags: ["gamefi", "nft"],
     image: "",
     network: {
@@ -2197,8 +2197,8 @@ export const allProjects: Array<Project> = [
       discord: "https://discord.gg/rX38ZwbqKw",
       telegram: "https://t.me/starksportchanel",
     },
-    isLive: false,
-    isTestnetLive: false,
+    isLive: true,
+    isTestnetLive: true,
   },
   {
     id: "01babbb2-b6d9-4585-b795-2e388123ffd8",
@@ -2396,7 +2396,7 @@ export const allProjects: Array<Project> = [
     shortName: "KasarLabs",
     description:
       "A Starknet engineering and research laboratory.",
-      tags: ["infrastructure", "tools"],
+    tags: ["infrastructure", "tools"],
     image: "Kasarlabs.png",
     network: {
       website: "http://kasar.io/",
