@@ -1,45 +1,33 @@
-# Starknet Ecosystem
-[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) ![version](https://img.shields.io/badge/version-2.0.0-blue) ![Vercel Deployment](https://img.shields.io/github/deployments/419Labs/starknet-ecosystem.com/production?label=vercel)
+Starknet Ecosystem
+License
+version
+Vercel Deployment
 
-> Building on Starknet is a financial advice.
-> Louis G.
+Building on Starknet is a financial advice.
+Louis G.
 
-Your entrypoint in Starknet. Explore projects, teams, jobs, metrics and everything around Starknet.
+Welcome to Starknet Ecosystem, your entrypoint in the world of Starknet. Explore projects, teams, jobs, metrics and everything around Starknet.
 
-![Starknet Ecosystem by https://twitter.com/Maz_eth](docs/img/Starknet_Ecosystem.png)
+Starknet Ecosystem by https://twitter.com/Maz_eth
 
-👉 Feel free to join our dedicated [Telegram](https://t.me/starknet_ecosystem) channel.
+👉 Feel free to join our dedicated Telegram channel.
 
-## Contribute
+Contribute
+Every contribution is welcome! Do you want to help us manage this repo and related Pull Request? Here are the guides that can help you to contribute to the ecosystem dashboard and get you listed.
 
-Every contribution is welcome! Do you want to help us manage this repo and related Pull Request?
+Projects
+List a project
+Update a project
+Jobs
+List a Job
+Update a Job
+Translations
+Add/improve translations
+Others
+If you want to contribute in any way to this initiative, please submit a pull request. If you have any ideas or feedback, feel free to open an issue.
 
-Here are the guides helping you to contribute to the ecosystem dashboard and get you listed.
+Community-driven
+We have created a dedicated Telegram channel to manage pull requests and the starknet-ecosystem.com project. By joining the Telegram channel, you'll be informed immediately when a new project is coming out of stealth mode.
 
-### Projects
-
-+ [List a project](docs/add-project.md)
-+ [Update a project](docs/update-project.md)
-
-### Jobs
-
-+ [List a Job](docs/add-job.md)
-+ [Update a Job](docs/update-job.md)
-
-### Translations
-
-+ [Add/improve translations](docs/translations.md)
-
-
-### Others
-
-If you want to contribute in any way to this initiative please submit a PR. If you have ideas or want to share feedbacks feel free to open an issue.
-
-### Community-driven
-
-We have created a dedicated Telegram channel to manage quickly Pull Request and the starknet-ecosystem.com project.
-By joining the [Telegram channel](https://t.me/starknet_ecosystem) you'll be informed immediately when a new Project is coming out of stealth mode.
-
-## Conclusion
-
-This project has been initiated with ❤️ by [Alpha Road Team](https://twitter.com/alpharoad_fi) and grows thanks to the awesome Starknet community.
+Conclusion
+This project has been initiated with ❤️ by the Alpha Road Team and grows thanks to the awesome Starknet community.
