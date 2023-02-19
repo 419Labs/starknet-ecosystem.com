@@ -3,10 +3,10 @@ import type { TranslateState } from "../../context/TranslateProvider/model";
 const zhCNTranslation: TranslateState = {
   common: {
     title_main: "Starknet革命即将到来",
-    title_main_dapps: "dApp、服务和钱包",
+    title_main_dapps: "DAPP、服务和钱包",
     hundreds: "数百",
     subtitle_main:
-      "通过发现项目、工作、指标和学习资源，让自己沉浸在Starknet生态系统中。",
+      "通过发现项目、工作、指标和学习资源，让自己沉浸在 Starknet 生态系统中。",
     community_driven: "✨ 社区驱动的倡议",
 
     no_project: "😕 该目录下暂无项目",
@@ -20,8 +20,8 @@ const zhCNTranslation: TranslateState = {
     job: "工作",
     no_job: "😕 No 工作",
     no_resource: "😕 No resources",
-    more: "view more",
-    data_error: "Error while loading data, please try again later",
+    more: "查看更多",
+    data_error: "数据加载错误，请稍后再试",
     ecosystem: "生态系统",
     jobs: "工作",
     metrics: "指标",
@@ -39,7 +39,7 @@ const zhCNTranslation: TranslateState = {
     defi: "DeFi",
     digital_id: "数字身份",
     gamefi: "GameFi",
-    governance: "Governance",
+    governance: "治理",
     infrastructure: "基础设施",
     mobile: "Mobile",
     nft: "NFT",
