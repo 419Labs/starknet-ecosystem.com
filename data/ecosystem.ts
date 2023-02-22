@@ -2446,5 +2446,24 @@ export const allProjects: Array<Project> = [
     },
     isLive: true,
     isTestnetLive: true,
+  },
+  {
+    id: "1750c340-6dfa-4207-b973-0948e183a8d7",
+    name: "Security Challenges Factory",
+    shortName: "Security Challenges Factory",
+    description:
+      "Inspired in Solidity security challenges, this is a game in which you hack Starknet Testnet smart contracts to learn about security. It's meant to be both fun and educational. The game consists of a series of challenges in different categories. You earn points for every challenge you complete.",
+    tags: ["security"],
+    image: "scf.png",
+    network: {
+      website: "https://starknet-challenges.vercel.app/",
+      github: "https://github.com/devnet0x/Starknet-Security-Challenges-Repo",
+      twitter: "https://twitter.com/devnet0x",
+      medium: "https://medium.com/@devnet0x",
+      discord: "",
+      telegram: "",
+    },
+    isLive: false,
+    isTestnetLive: true,
   }
 ];
