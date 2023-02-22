@@ -2191,7 +2191,7 @@ export const allProjects: Array<Project> = [
     image: "starksport.png",
     network: {
       website: "http://starksport.finance",
-      github: "",
+      github: "https://github.com/possc/StarkSport",
       twitter: "https://twitter.com/starkfinance",
       medium: "",
       discord: "https://discord.gg/rX38ZwbqKw",
