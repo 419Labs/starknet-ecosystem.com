@@ -2458,10 +2458,7 @@ export const allProjects: Array<Project> = [
     network: {
       website: "https://starknet-challenges.vercel.app/",
       github: "https://github.com/devnet0x/Starknet-Security-Challenges-Repo",
-      twitter: "https://twitter.com/devnet0x",
-      medium: "https://medium.com/@devnet0x",
-      discord: "",
-      telegram: "",
+      medium: "https://medium.com/@devnet0x"
     },
     isLive: false,
     isTestnetLive: true,
