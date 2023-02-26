@@ -16,7 +16,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "next lint --dir data --dir src",
     "test": "jest --watch",
     "test:ci": "jest --ci"
   },

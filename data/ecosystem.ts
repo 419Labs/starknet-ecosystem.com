@@ -73,8 +73,7 @@ export const allProjects: Array<Project> = [
     id: "bf58edd8-fb46-4066-9ed9-5bbaa683c1f5",
     name: "0xStarks",
     shortName: "Starks",
-    description:
-      "An NFT acting as Proof of OG on Starknet",
+    description: "An NFT acting as Proof of OG on Starknet",
     tags: ["nft", "defi", "gamefi", "governance"],
     image: "0xStarks.png",
     network: {
@@ -2133,7 +2132,8 @@ export const allProjects: Array<Project> = [
     tags: ["tools", "security"],
     image: "",
     network: {
-      website: "https://marketplace.visualstudio.com/items?itemName=trailofbits.starknet-explorer",
+      website:
+        "https://marketplace.visualstudio.com/items?itemName=trailofbits.starknet-explorer",
       github: "https://github.com/crytic/vscode-starknet-explorer",
       twitter: "",
       medium: "",
@@ -2148,7 +2148,7 @@ export const allProjects: Array<Project> = [
     name: "WIW Protocol",
     shortName: "WIW",
     description:
-      'WIW is a privacy-preserving on-chain identity protocol that curates openly accessible Web3 user reputations.',
+      "WIW is a privacy-preserving on-chain identity protocol that curates openly accessible Web3 user reputations.",
     tags: ["digital_id", "infrastructure", "tools"],
     image: "wiw.png",
     network: {
@@ -2166,8 +2166,7 @@ export const allProjects: Array<Project> = [
     id: "320d804a-cf3c-49eb-9013-b2873d17a8ae",
     name: "Dragon Quest",
     shortName: "Dragon Quest",
-    description:
-      'Dragon Quest is a text-based RPG game.',
+    description: "Dragon Quest is a text-based RPG game.",
     tags: ["gamefi", "nft"],
     image: "",
     network: {
@@ -2186,7 +2185,7 @@ export const allProjects: Array<Project> = [
     name: "Stark Sport",
     shortName: "Stark Sport",
     description:
-      'Starksport is a king sport inspired project built on Binance Smart Chain, Starknet...',
+      "Starksport is a king sport inspired project built on Binance Smart Chain, Starknet...",
     tags: ["nft", "defi", "gamefi"],
     image: "starksport.png",
     network: {
@@ -2205,7 +2204,7 @@ export const allProjects: Array<Project> = [
     name: "Dynamic",
     shortName: "Dynamic",
     description:
-      'Your multi-chain web3 auth platform. A smart, beautiful and dynamic multi-chain wallet login flow, and powerful developer tools to match.',
+      "Your multi-chain web3 auth platform. A smart, beautiful and dynamic multi-chain wallet login flow, and powerful developer tools to match.",
     tags: ["wallet", "digital_id", "infrastructure", "tools"],
     image: "dynamic.svg",
     network: {
@@ -2280,8 +2279,7 @@ export const allProjects: Array<Project> = [
     id: "f7c7eecd-21d2-4729-adad-d94109864b30",
     name: "MonkeyMind",
     shortName: "MonkeyMind",
-    description:
-      "Gamified Mindfulness app on Starknet",
+    description: "Gamified Mindfulness app on Starknet",
     tags: ["nft", "gamefi"],
     image: "monkeymind.png",
     network: {
@@ -2299,8 +2297,7 @@ export const allProjects: Array<Project> = [
     id: "4e95f7dc-9a31-40bb-829e-0a19098521e5",
     name: "Saddle Finance",
     shortName: "Saddle Finance",
-    description:
-      "Multichain open source AMM for low slippage stableswaps",
+    description: "Multichain open source AMM for low slippage stableswaps",
     tags: ["defi"],
     image: "SDL_SVG.svg",
     network: {
@@ -2394,8 +2391,7 @@ export const allProjects: Array<Project> = [
     id: "cf6a3044-bf12-4c0e-89fc-ad8bb352daa7",
     name: "Kasar Labs",
     shortName: "KasarLabs",
-    description:
-      "A Starknet engineering and research laboratory.",
+    description: "A Starknet engineering and research laboratory.",
     tags: ["infrastructure", "tools"],
     image: "Kasarlabs.png",
     network: {
@@ -2413,8 +2409,7 @@ export const allProjects: Array<Project> = [
     id: "9c9d0282-1311-437d-a20d-15a79844e25f",
     name: "Horus",
     shortName: "Horus",
-    description:
-      "A formal verification tool for StarkNet smart contracts.",
+    description: "A formal verification tool for StarkNet smart contracts.",
     tags: ["tools", "security", "formal-verification"],
     image: "horus.png",
     network: {
@@ -2432,8 +2427,7 @@ export const allProjects: Array<Project> = [
     id: "ed86c982-8968-47e8-8fb2-d879155c629e",
     name: "Juno",
     shortName: "Juno",
-    description:
-      "Starknet full state node written in Go",
+    description: "Starknet full state node written in Go",
     tags: ["tools", "infrastructure"],
     image: "juno.png",
     network: {
@@ -2458,9 +2452,9 @@ export const allProjects: Array<Project> = [
     network: {
       website: "https://starknet-challenges.vercel.app/",
       github: "https://github.com/devnet0x/Starknet-Security-Challenges-Repo",
-      medium: "https://medium.com/@devnet0x"
+      medium: "https://medium.com/@devnet0x",
     },
     isLive: false,
     isTestnetLive: true,
-  }
+  },
 ];

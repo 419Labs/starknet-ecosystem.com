@@ -1,3 +1,4 @@
+/* eslint-disable sonarjs/no-duplicate-string */
 import type { Network } from "../src/models/company";
 
 import type { Tag } from "./tag";
