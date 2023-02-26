@@ -1,3 +1,4 @@
+/* eslint-disable sonarjs/no-duplicate-string */
 import type { Job } from "../src/models/job";
 
 const allJobs: Array<Job> = [
