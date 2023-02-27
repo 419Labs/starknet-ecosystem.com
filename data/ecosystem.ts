@@ -2457,4 +2457,22 @@ export const allProjects: Array<Project> = [
     isLive: false,
     isTestnetLive: true,
   },
+  {
+    id: "9b8cd693-a9aa-4eb6-81f5-5059d848f0df",
+    name: "Deri Protocol",
+    shortName: "Deri Protocol",
+    description:
+      "Instant trading experience with futures, options and powers",
+    tags: ["DeFi","NFT"],
+    image: "deri.svg",
+    network: {
+      website: "https://deri.io/",
+      github: "https://github.com/deri-protocol",
+      medium: "https://deri-protocol.medium.com/",
+      twitter:"https://twitter.com/DeriProtocol",
+      discord:"https://discord.com/invite/ATWUmUecKP"
+    },
+    isLive: false,
+    isTestnetLive: false,
+  },
 ];
