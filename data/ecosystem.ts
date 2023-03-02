@@ -686,7 +686,7 @@ export const allProjects: Array<Project> = [
       discord: "https://discord.gg/Eqp53YafYP",
       telegram: "https://www.t.me/nostrafinance",
     },
-    isLive: false,
+    isLive: true,
     isTestnetLive: false,
   },
   {
