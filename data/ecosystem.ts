@@ -2457,4 +2457,22 @@ export const allProjects: Array<Project> = [
     isLive: false,
     isTestnetLive: true,
   },
+  {
+    id: "cf99e8ee-00b7-4b59-afd7-4288ffe7a97b",
+    name: "0xPawa",
+    shortName: "0xPawa",
+    description: "First DEX Aggregator LIVE on Starknet Mainnet",
+    tags: ["defi", "infrastructure"],
+    image: "0xPawa.png",
+    network: {
+      website: "https://pawaswap.com",
+      github: "https://github.com/0xPawa",
+      twitter: "https://twitter.com/0xPawa",
+      medium: "",
+      discord: "https://discord.gg/duPgjSvnGV",
+      telegram: "https://t.me/pawaswap",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
 ];
