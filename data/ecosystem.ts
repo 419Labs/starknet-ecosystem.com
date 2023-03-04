@@ -2459,8 +2459,8 @@ export const allProjects: Array<Project> = [
   },
   {
     id: "cf99e8ee-00b7-4b59-afd7-4288ffe7a97b",
-    name: "0xPawa",
-    shortName: "0xPawa",
+    name: "Pawaswap",
+    shortName: "Pawaswap",
     description: "First DEX Aggregator LIVE on Starknet Mainnet",
     tags: ["defi", "infrastructure"],
     image: "0xPawa.png",
