@@ -526,7 +526,18 @@ const allJobs: Array<Job> = [
       "- Successful experience designing, building, and scaling production services.\n" +
       "- Experience owning long projects, including communication of progress, dependencies, and risk mitigation directly with stakeholders and partners.\n" +
       "- A computer science degree or equivalent.\n" +
-      "- Ability to be creative and resourceful when tackling ambiguous technical challenges.",
+      "- Ability to be creative and resourceful when tackling ambiguous technical challenges." +
+      "- Previous experience working on oracles, blockchain infrastructure, or Defi.\n" +
+      "- Previous experience in big tech or top-tier blockchain company.\n" +
+      "- Familiarity with AWS.\n" +
+      "- Entrepreneurial / doer mindset.\n" +
+      "- Familiarity with ZK technology and L2s.",
+    offer:
+      "- Full remote work (most of the team is based in Paris, France).\n" +
+      "- High equity share. Competitive salary.\n" +
+      "- Total freedom and decentralized culture.\n" +
+      "- The opportunity to work with a professional team with many years of experience.\n" +
+      "- Major technical challenge.",
     createdOn: new Date("2023-03-06"),
     applyLink: "mailto:nicolas@empiric.network",
   },
