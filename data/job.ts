@@ -509,6 +509,38 @@ const allJobs: Array<Job> = [
     createdOn: new Date("2022-09-13"),
     applyLink: "mailto:jobs@braavos.app",
   },
+  {
+    key: "25",
+    title: "Founding Engineer",
+    projectId: "8d0d1cc3-af7e-48ab-aa22-bef4ede008df",
+    tags: ["Infrastructure", "DeFi", "AWS"],
+    location: "Paris/Remote",
+    remote: true,
+    description:
+      "We believe that society’s crucial applications should be accessible to anyone, that transparency should replace backroom dealings and that trustless software will make the middlemen obsolete.\n" +
+      "With Empiric we want to change the status quo and allow devs to access real world data without relying on an off-chain, trusted, black box oracle.\n" +
+      "We are reimagining oracles with a robust and transparent architecture made possible by leveraging new zk-technology.",
+    requirements:
+      "- 3+ years of experience in Rust.\n" +
+      "- Hands-on experience in smart-contract development (Solidity, Rust or Cairo).\n" +
+      "- Successful experience designing, building, and scaling production services.\n" +
+      "- Experience owning long projects, including communication of progress, dependencies, and risk mitigation directly with stakeholders and partners.\n" +
+      "- A computer science degree or equivalent.\n" +
+      "- Ability to be creative and resourceful when tackling ambiguous technical challenges." +
+      "- Previous experience working on oracles, blockchain infrastructure, or Defi.\n" +
+      "- Previous experience in big tech or top-tier blockchain company.\n" +
+      "- Familiarity with AWS.\n" +
+      "- Entrepreneurial / doer mindset.\n" +
+      "- Familiarity with ZK technology and L2s.",
+    offer:
+      "- Full remote work (most of the team is based in Paris, France).\n" +
+      "- High equity share. Competitive salary.\n" +
+      "- Total freedom and decentralized culture.\n" +
+      "- The opportunity to work with a professional team with many years of experience.\n" +
+      "- Major technical challenge.",
+    createdOn: new Date("2023-03-06"),
+    applyLink: "mailto:nicolas@empiric.network",
+  },
 ];
 
 export default allJobs;
