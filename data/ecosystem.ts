@@ -32,6 +32,25 @@ export interface ProjectItf extends Project {
 
 export const allProjects: Array<Project> = [
   {
+    id: "51e35a90-b7eb-4fbf-ba7e-2c19bf645b9c",
+    name: "Foxes NFT",
+    shortName: "Foxes NFT",
+    description:
+      "500 free NFTs created to increase community interaction in the Starknet NFT ecosystem",
+    tags: ["NFT", "DAO"],
+    image: "foxesnft.jpg",
+    network: {
+      website: "",
+      github: "",
+      twitter: "https://twitter.com/foxesnftt",
+      medium: "",
+      discord: "",
+      telegram: "",
+    },
+    isLive: false,
+    isTestnetLive: false,
+  }
+   {
     id: "f5745de2-4bfe-4086-9962-4da6b409d2ca",
     name: "Wido",
     shortName: "Wido",
