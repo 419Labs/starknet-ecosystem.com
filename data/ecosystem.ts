@@ -8,7 +8,7 @@
     description:
       "500 free NFTs created to increase community interaction in the Starknet NFT ecosystem",
     tags: ["NFT"],
-    image: "svg",
+    image: "foxesnft.jpg",
     network: {
       website: "",
       github: "",
