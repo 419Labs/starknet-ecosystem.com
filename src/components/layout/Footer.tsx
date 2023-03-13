@@ -117,6 +117,9 @@ function Footer() {
             <Link isExternal href="https://t.me/starknet_ecosystem">
               Contact us
             </Link>
+            <Link isExternal href="https://status.starknet-ecosystem.com">
+              Status
+            </Link>
           </VStack>
         </VStack>
         <VStack align="flex-start">
