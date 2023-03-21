@@ -8,8 +8,6 @@ import {
   VStack,
 } from "@chakra-ui/layout";
 import { Show, Button, Collapse, Image } from "@chakra-ui/react";
-import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import dayjs from "dayjs";
 import { useRouter } from "next/router";
 import type { FC } from "react";
