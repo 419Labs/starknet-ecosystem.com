@@ -8,8 +8,6 @@ import {
   VStack,
 } from "@chakra-ui/layout";
 import { Show, Button, Collapse, Image } from "@chakra-ui/react";
-import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import dayjs from "dayjs";
 import { useRouter } from "next/router";
 import type { FC } from "react";
@@ -161,15 +159,11 @@ const JobListRaw: FC<Props> = ({ id, project, job, last, observe }) => {
             color="whiteAlpha.600"
           >
             {job.compensation && (
-              <HStack>
-                <FontAwesomeIcon fontSize="18px" icon={solid("dollar-sign")} />
-                <Text>
-                  {job.compensation?.currency || "$"}
-                  {job.compensation?.from}k -{" "}
-                  {job.compensation?.currency || "$"}
-                  {job.compensation?.to}k
-                </Text>
-              </HStack>
+              <Text>
+                {job.compensation?.currency || "$"}
+                {job.compensation?.from}k - {job.compensation?.currency || "$"}
+                {job.compensation?.to}k
+              </Text>
             )}
             <Text>{job.location}</Text>
           </VStack>

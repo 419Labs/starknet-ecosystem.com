@@ -541,6 +541,50 @@ const allJobs: Array<Job> = [
     createdOn: new Date("2023-03-06"),
     applyLink: "mailto:nicolas@empiric.network",
   },
+  {
+    key: "26",
+    title: "FullStack Starknet Dev",
+    projectId: "3c1f84eb-46e0-45d7-b52b-02c57b0e3eb9",
+    tags: ["digital_id", "nft", "tools", "typescript", "react", "cairo"],
+    location: "Remote",
+    remote: true,
+    aboutUs:
+      'Starknet ID is an identity provider on Starknet. The protocol allows you to create your Starknet Identity (that can be seen as your on-chain ID card) and to attach things to it. You can already register ".stark" human-readable domains on your starknet identity that will be used as your Starknet username.',
+    description:
+      "- Do you want to contribute to the best ZK rollup ecosystem (Starknet) ?\n" +
+      "- Do you want to be an early employee of one of the most significant protocols of Starknet ?\n" +
+      "- Do you want to be able to work remotely when you want and where you want ?\n\n" +
+      "Today, you can do it all in Starknet ID",
+    responsibilities:
+      "- Front-end development using TypeScript, React, and blockchain tools such as starknet.js and starknet-react\n" +
+      "- Starknet smart contract development using Cairo, other blockchain tools, and software\n" +
+      "- Complete code reviews of other team member's code and assist in the mentoring more junior developers\n" +
+      "- Define, design, and develop small products that add value to the starknet ID ecosystem \n" +
+      "- Maintenance of the starknetid.js npm package",
+    aboutYou:
+      "- You take responsability. When you take on a task, you get it done. When you get it done, it’s not good, it’s great.\n" +
+      "- You're knowledgeable about NFTs and their ecosystem (could be on Solana, Ethereum, or any chain). You love to talk about DeFi, your overpriced Jpegs, validity rollups, and blockchain tech in general. You understand the technology well enough to answer questions off-hand and are familiar with the more significant projects …\n" +
+      "- You're highly independent. You're self-motivated and can work well independently, but you know when to ask for help or collaborate to achieve a common goal.\n" +
+      "- You're a quick learner. You're always eager to learn new skills and technologies to improve your work, and you can quickly adapt to changing project requirements.\n\n" +
+      "Does it speak to you ? So stay with me, we'll get along fine",
+    requirements:
+      "- Expertise in front-end development with an understanding of React best practices, optimizations, and profiling\n" +
+      "- Experienced with TypeScript\n" +
+      "- Some experience with smart contract development (1-year minimum)\n" +
+      "- Verbal fluency in English\n" +
+      "- Interest and enthusiasm for Ethereum, deFi, NFTs, and Layer 2 space.\n" +
+      "- Experience in an agile work environment as well as remote/asynchronous work\n",
+    offer:
+      "- Great daily autonomy\n" +
+      "- Quickly take on responsibilities within the company, if you are good\n" +
+      "- Work from anywhere in the world and make your own schedules\n",
+    compensation: {
+      from: 75,
+      to: 300,
+    },
+    createdOn: new Date("2023-03-21"),
+    applyLink: "https://https://twitter.com/Fricoben",
+  },
 ];
 
 export default allJobs;
