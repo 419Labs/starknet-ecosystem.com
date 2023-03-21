@@ -63,6 +63,8 @@ const enTranslate: TranslateState = {
     published: "Published",
     ago: "ago",
     no_selected: "No job selected",
+    aboutUs: "About us",
+    aboutYou: "About you",
   },
   metrics: {
     title: "Ecosystem metrics",

@@ -63,6 +63,8 @@ const frTranslate: TranslateState = {
     published: "Publié",
     ago: "ago",
     no_selected: "Aucun job sélectionné",
+    aboutUs: "A propos de nous",
+    aboutYou: "A propos de vous",
   },
   metrics: {
     title: "Métriques de l'écosystème",
