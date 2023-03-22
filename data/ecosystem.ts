@@ -2494,4 +2494,23 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: false,
   },
+  {
+    id: "41b4285a-2f2b-471d-bb8b-61e747a8cbdc",
+    name: "RedStone Oracle",
+    shortName: "RedStone",
+    description:
+      "RedStone On-Demand Oracle delivers data feeds for 1,100+ assets, with a few seconds refresh interval to Starknet & StarkEx ecosystems. We provide: long-tail, LP, staked, ecosystem-native tokens, indexes, commodities, Forex and custom data feeds, i.e. NFT related.",
+    tags: ["tools", "infrastructure", "bridge", "defi"],
+    image: "RedStone.svg",
+    network: {
+      website: "https://redstone.finance/",
+      github: "https://github.com/redstone-finance",
+      twitter: "https://twitter.com/redstone_defi",
+      medium: "https://medium.com/@RedStone_Finance",
+      discord: "https://discord.gg/83wpSMYV",
+      telegram: "https://t.me/redstonefinance",
+    },
+    isLive: true,
+    isTestnetLive: true,
+  }
 ];
