@@ -1698,7 +1698,7 @@ export const allProjects: Array<Project> = [
     name: "Pragma Oracle",
     shortName: "Pragma",
     description:
-      "Empiric Network is the leading oracle on Starknet, making data decentralized, transparent and composable. Powered by high-quality data from Alameda, Jane Street, Gemini, FTX, and more.",
+      "Pragma Oracle is the leading oracle on Starknet, making data decentralized, transparent and composable. Powered by high-quality data from Alameda, Jane Street, Gemini, FTX, and more.",
     tags: ["defi", "infrastructure"],
     image: "pragma.svg",
     network: {
