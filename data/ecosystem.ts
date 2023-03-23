@@ -1695,10 +1695,10 @@ export const allProjects: Array<Project> = [
   },
   {
     id: "8d0d1cc3-af7e-48ab-aa22-bef4ede008df",
-    name: "Pragma Oracle",
+    name: "Pragma Network",
     shortName: "Pragma",
     description:
-      "Empiric Network is the leading oracle on Starknet, making data decentralized, transparent and composable. Powered by high-quality data from Alameda, Jane Street, Gemini, FTX, and more.",
+      "Pragma is the ZK-native oracle offering decentralized & composable data built on Starknet. It leverages state-of-the-art zk-proofs technology to securely bring high-quality data from first-party data providers on-chain.",
     tags: ["defi", "infrastructure"],
     image: "pragma.svg",
     network: {
