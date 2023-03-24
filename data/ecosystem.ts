@@ -32,6 +32,19 @@ export interface ProjectItf extends Project {
 
 export const allProjects: Array<Project> = [
   {
+    id: "c96307cc-e733-4e8a-9a13-553eba885644",
+    name: "test",
+    shortName: "test",
+    description: "test",
+    tags: ["tools", "infrastructure", "nft", "starkex"],
+    image: "reddio.png",
+    network: {
+    
+    },
+    isLive: false,
+    isTestnetLive: false,
+  },
+  {
     id: "9bc2502d-3eba-4aaa-b585-b308fa0d57c2",
     name: "Reddio",
     shortName: "Reddio",
