@@ -50,6 +50,25 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: true,
   },
+    {
+    id: "a9f9b227-1a8f-4b45-9e04-f85ac1a1178a",
+    name: "Starknet Social",
+    shortName: "Starknet Social",
+    description:
+      "Claim your Social Space ✨ .strk .cairo .starknet and more identity options are available. Share your socials, trust score, and a lot more🍭 all in one place.",
+    tags: ["digital_id", "nft"],
+    image: "starknet-social.png",
+    network: {
+      website: "https://starknet.social/",
+      github: "https://github.com/dolven-labs-catalyst",
+      twitter: "https://twitter.com/StarknetSocial",
+      medium: "https://medium.com/@starknetsocial",
+      discord: "https://discord.dolvenlabs.com/",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: true,
+  },
   {
     id: "f5745de2-4bfe-4086-9962-4da6b409d2ca",
     name: "Wido",
