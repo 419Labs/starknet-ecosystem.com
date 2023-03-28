@@ -50,7 +50,7 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: true,
   },
-    {
+  {
     id: "a9f9b227-1a8f-4b45-9e04-f85ac1a1178a",
     name: "Starknet Social",
     shortName: "Starknet Social",
