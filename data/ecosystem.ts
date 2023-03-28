@@ -64,7 +64,6 @@ export const allProjects: Array<Project> = [
       twitter: "https://twitter.com/StarknetSocial",
       medium: "https://medium.com/@starknetsocial",
       discord: "https://discord.dolvenlabs.com/",
-      telegram: "",
     },
     isLive: true,
     isTestnetLive: true,
