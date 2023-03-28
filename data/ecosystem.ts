@@ -2517,7 +2517,8 @@ export const allProjects: Array<Project> = [
     id: "2603b4ea-42ce-4881-bbaf-aca81dcc4824",
     name: "Checkpoint",
     shortName: "Checkpoint",
-    description: " Checkpoint is a library for indexing data from Starknet events and making it accessible through GraphQL.",
+    description:
+      "Checkpoint is a library for indexing data from Starknet events and making it accessible through GraphQL.",
     tags: ["tools", "infrastructure"],
     image: "checkpoint.png",
     network: {
