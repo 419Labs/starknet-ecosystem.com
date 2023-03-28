@@ -1051,6 +1051,25 @@ export const allProjects: Array<Project> = [
     isTestnetLive: false,
   },
   {
+    id: "1337zb03-25d7-406c-a339-5dccbefeaa18",
+    name: "StarkGuardians",
+    shortName: "StarkGuardians",
+    description:
+      "StarkGuardians - First NFT collection of #StarkNet with decrease in supply. NFT Audit and Investigation Service 🔍",
+    tags: ["nft", "tools", "infrastructure", "security", "governance"],
+    image: "StarkGuardians.jpeg",
+    network: {
+      website: "https://starkguardians.com",
+      github: "https://github.com/StarkGuardians",
+      twitter: "https://twitter.com/StarkGuardians",
+      medium: "",
+      discord: "https://discord.gg/starkguardians",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
+  {
     id: "8df27359-f05d-439b-8592-ca1b61cf049c",
     name: "Argent X",
     shortName: "Argent X",
