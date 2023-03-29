@@ -1069,7 +1069,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: false,
   },
   {
-    id: "1337zb03-25d7-406c-a339-5dccbefeaa18",
+    id: "1337ab03-25d7-406c-a339-5dccbefeaa18",
     name: "StarkGuardians",
     shortName: "StarkGuardians",
     description:
