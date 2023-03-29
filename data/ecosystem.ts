@@ -2414,7 +2414,7 @@ export const allProjects: Array<Project> = [
     tags: ["bridge", "infrastructure", "starkex"],
     image: "layerswap.svg",
     network: {
-      website: "https://www.layerswap.io/git",
+      website: "https://www.layerswap.io",
       github: "https://github.com/layerswap/",
       twitter: "https://twitter.com/layerswap",
       medium: "",
