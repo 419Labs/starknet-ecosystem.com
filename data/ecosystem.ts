@@ -435,13 +435,13 @@ export const allProjects: Array<Project> = [
     image: "jediswap.svg",
     network: {
       website: "https://jediswap.xyz/",
-      github: "",
+      github: "https://github.com/jediswaplabs",
       twitter: "https://twitter.com/jediswap",
-      medium: "",
-      discord: "",
-      telegram: "",
+      medium: "https://mirror.xyz/jediswap.eth",
+      discord: "https://discord.gg/jediswap",
+      telegram: "t.me/jediswap",
     },
-    isLive: false,
+    isLive: true,
     isTestnetLive: true,
   },
   {
