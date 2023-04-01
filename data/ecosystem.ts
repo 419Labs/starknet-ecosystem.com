@@ -439,7 +439,7 @@ export const allProjects: Array<Project> = [
       twitter: "https://twitter.com/jediswap",
       medium: "https://mirror.xyz/jediswap.eth",
       discord: "https://discord.gg/jediswap",
-      telegram: "t.me/jediswap",
+      telegram: "https://t.me/jediswap",
     },
     isLive: true,
     isTestnetLive: true,
