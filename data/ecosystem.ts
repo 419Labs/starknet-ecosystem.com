@@ -2569,4 +2569,23 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: true,
   },
+  {
+    id: "2431f5bb-9a1c-418d-9bd7-a46afdfe6f53",
+    name: "BitKeep Wallet",
+    shortName: "BitKeep Wallet",
+    description:
+      "Your Web3 Crypto Wallet for effortless trading. One of the top non-custodial multi-chain crypto wallet, integrates Wallet, Swap, NFT Market, DApp and Discover in a single location, allowing users to enter the era of Web 3.0 with ease.",
+    tags: ["wallet", "Defi", "NFT", "digital_id", "infrastructure"],
+    image: "bitkeep.png",
+    network: {
+      website: "https://bitkeep.com/",
+      github: "https://github.com/bitkeepwallet",
+      twitter: "https://twitter.com/BitKeepOS",
+      medium: "https://medium.com/@bitkeepblog",
+      discord: "https://discord.gg/au3GJCe5Wc",
+      telegram: "https://t.me/+EzN4nAFK_UllMTQ1",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
 ];
