@@ -670,25 +670,6 @@ export const allProjects: Array<Project> = [
     isTestnetLive: false,
   },
   {
-    id: "5368a3f6-b8f0-44e3-ba88-9b1d64adee23",
-    name: "Astraly",
-    shortName: "Astraly",
-    description:
-      "Astraly is a fundraising and community building platform. We're building the infrastructure for communities on Starknet.",
-    tags: ["defi"],
-    image: "zkpad.png",
-    network: {
-      website: "https://testnet.astraly.xyz/",
-      github: "https://github.com/Astraly-Labs/",
-      twitter: "https://twitter.com/AstralyXYZ",
-      medium: "https://astraly.mirror.xyz/",
-      discord: "https://discord.gg/astralyxyz",
-      telegram: "https://t.me/astralyy",
-    },
-    isLive: false,
-    isTestnetLive: true,
-  },
-  {
     id: "bcb424ed-5f3d-4bb8-8474-fb7bb11ed484",
     name: "ZKX",
     shortName: "ZKX",
@@ -1746,7 +1727,7 @@ export const allProjects: Array<Project> = [
       discord: "https://discord.com/invite/N7sM7VzfJB",
       telegram: "",
     },
-    isLive: false,
+    isLive: true,
     isTestnetLive: true,
   },
   {
