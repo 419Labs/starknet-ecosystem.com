@@ -2569,4 +2569,20 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: false,
   },
+  {
+    id: "3F2D7D59-2153-475B-A5D7-A68B32184091",
+    name: "Protoss Exchange",
+    shortName: "ProtossDEX",
+    description:
+      "Swap, earn and enjoy the seemless liquidity platform on StarkNet",
+    tags: ["Defi", "DEX"],
+    image: "Protoss.png",
+    network: {
+      website: "https://protoss.exchange/",
+      github: "https://github.com/protoss-exchange",
+      twitter: "https://twitter.com/ProtossDEX",
+    },
+    isLive: true,
+    isTestnetLive: true,
+  }
 ];
