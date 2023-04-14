@@ -352,19 +352,21 @@ export const allProjects: Array<Project> = [
   },
   {
     id: "502b0dbc-5169-4db6-8796-36a968a798fd",
-    name: "Alpha Road",
-    shortName: "Alpha Road",
+    name: "AVNU",
+    shortName: "AVNU",
     description:
-      "Pioneer in DeFi L2 solution — Alpha Road aim at maximizing user investment returns by providing next gen DeFi experience and bespoke financial products.\n",
-    tags: ["defi", "nft"],
-    image: "alpharoad.png",
+      "AVNU is a decentralized exchange protocol designed to offer the best execution.\n" +
+      "\n" +
+      "Our mission is to build the Liquidity Infrastructure that aims to empower traders and dApps with the best execution. We believe that the only way to serve our customers is to secure the most competitive prices for them, as well as access to the broadest range of assets while providing an exceptional user experience that sets the industry standard.\n",
+    tags: ["defi", "infrastructure", "tools"],
+    image: "avnu.png",
     network: {
-      website: "https://testnet.app.alpharoad.fi",
+      website: "https://avnu.fi",
       github: "",
-      twitter: "https://twitter.com/alpharoad_fi",
-      medium: "https://alpharoad.medium.com/",
-      discord: "https://discord.gg/Bhfa3B2Gnq",
-      telegram: "https://t.me/alpharoad_fi",
+      twitter: "https://twitter.com/avnu_fi",
+      medium: "https://avnu-fi.medium.com/",
+      discord: "https://discord.gg/invite/avnu-fi",
+      telegram: "https://t.me/avnu_fi",
     },
     isLive: false,
     isTestnetLive: true,
