@@ -2571,4 +2571,23 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: false,
   },
+  {
+    id: "fc004c2a-fa4e-4dfe-b553-ad8e80f782bd",
+    name: "RockX Access Node",
+    shortName: "RockX",
+    description:
+      "Institutional-grade blockchain nodes so you can build, scale and stake with ease.",
+    tags: ["access node", "data", "staking", "infrastructure"],
+    image: "rockx-logo.png",
+    network: {
+      website: "https://www.rockx.com/",
+      github: "https://github.com/RockX-SG",
+      twitter: "https://twitter.com/rockx_official",
+      medium: "",
+      discord: "https://discord.gg/e7WSJmCrNZ",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
 ];
