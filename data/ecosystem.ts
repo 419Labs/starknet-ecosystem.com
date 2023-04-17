@@ -2590,4 +2590,23 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: false,
   },
+  {
+    id: "1589cd6b-7816-4d98-b968-ae6cbb4ef388",
+    name: "Supremacy",
+    shortName: "Supremacy",
+    description:
+      "Supremacy is a leading blockchain security agency, comprised of industry hackers and academic researchers",
+    tags: ["security", "infrastructure"],
+    image: "supremacy.png",
+    network: {
+      website: "https://www.supremacy.team/",
+      github: "",
+      twitter: "https://twitter.com/Supremacy_CA",
+      medium: "",
+      discord: "",
+      telegram: "https://t.me/SupremacyInc",
+    },
+    isLive: true,
+    isTestnetLive: true,
+  },
 ];
