@@ -88,6 +88,25 @@ export const allProjects: Array<Project> = [
     isTestnetLive: false,
   },
   {
+    id: "792dab31-4477-42bd-a16b-ce2494fffdb8",
+    name: "WEChart",
+    shortName: "WEChart",
+    description:
+      "A one-stop gateway of Defi provides real-time price charts and trading data analysis across multi-chains and Dexs that integrates many utility tools, including watchlist, DeFi portfolio tracker, notebook, price alert etc..",
+    tags: ["tools", "infrastructure"],
+    image: "wechart.png",
+    network: {
+      website: "https://www.wechart.io/",
+      github: "",
+      twitter: "https://twitter.com/WEconomyNetwork",
+      medium: "",
+      discord: "https://discord.gg/zyM3G4pUCc",
+      telegram: "https://t.me/WEconomyNetwork",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
+  {
     id: "36df24b3-2007-4822-8110-5a44b01afb0f",
     name: "ViewBlock",
     shortName: "ViewBlock",
