@@ -32,6 +32,44 @@ export interface ProjectItf extends Project {
 
 export const allProjects: Array<Project> = [
   {
+    id: "7fd6b20d-782a-40c2-8ee0-19790e9ee70b",
+    name: "MorphineFi",
+    shortName: "Morphine",
+    description:
+      "DeFi layer allowing composable leverage and automation",
+    tags: ["defi"],
+    image: "morphine.png",
+    network: {
+      website: "https://delightfi.xyz/",
+      github: "https://github.com/DeLightFi",
+      twitter: "https://twitter.com/MorphineFi",
+      medium: "",
+      discord: "https://discord.com/invite/hJupqTrK4G",
+      telegram: "",
+    },
+    isLive: false,
+    isTestnetLive: true,
+  },
+  {
+    id: "affdebf1-c5c1-4e44-9c9c-649dbddc5f26",
+    name: "StarkenFi",
+    shortName: "Starken",
+    description:
+      "Indexing infrastructure providing insights into portfolio evolution, yield APY analysis, and more.",
+    tags: ["tools", "defi"],
+    image: "starken.png",
+    network: {
+      website: "https://delightfi.xyz/",
+      github: "https://github.com/DeLightFi",
+      twitter: "https://twitter.com/starkendefi",
+      medium: "",
+      discord: "https://discord.com/invite/hJupqTrK4G",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: true,
+  },
+  {
     id: "9bc2502d-3eba-4aaa-b585-b308fa0d57c2",
     name: "Reddio",
     shortName: "Reddio",
