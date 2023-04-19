@@ -2593,7 +2593,7 @@ export const allProjects: Array<Project> = [
   {
     id: "3478f2f8-49b9-4916-83e1-5bd758ec5d4a",
     name: "Battle of Faith: Honor and Chaos",
-    shortName: "Battle of Faith",
+		shortName: "Battle of Faith",
     description: "Battle of Faith: Honor and Chaos is a fantasy-themed open-world role-playing game.",
     tags: ["nft", "gamefi", "defi"],
     image: "BattleofFaith.png",
@@ -2606,6 +2606,6 @@ export const allProjects: Array<Project> = [
         telegram: "https://t.me/BattleofFaith",
     },
     isLive: false,
-    isTestnetLive: true
+    isTestnetLive: true,
   },
 ];
