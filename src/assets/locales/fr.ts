@@ -12,7 +12,7 @@ const frTranslate: TranslateState = {
     maybe_yours: "Peut-être le vôtre ?",
     made_with: "Fait avec",
     by: "par",
-    alpha_road_team: "L'équipe Alpha Road",
+    avnu_team: "L'équipe AVNU",
     apply: "Appliquer",
     community: "Communauté",
     job_title_main: "Jobs",

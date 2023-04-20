@@ -13,7 +13,7 @@ const trTranslate: TranslateState = {
     maybe_yours: "Belki de seninki olabilir",
     made_with: "Made with",
     by: "by",
-    alpha_road_team: "Alpha Road Team",
+    avnu_team: "AVNU Team",
     apply: "Başvur",
     community: "Topluluk",
     job_title_main: "Jobs",

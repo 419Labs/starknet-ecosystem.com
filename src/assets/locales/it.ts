@@ -11,7 +11,7 @@ const itTranslate: TranslateState = {
     maybe_yours: "Forse la tua?",
     made_with: "Fatto con",
     by: "da",
-    alpha_road_team: "Alpha Road Team",
+    avnu_team: "AVNU Team",
     apply: "Applica",
     community: "Comunità",
     job_title_main: "Lavori",

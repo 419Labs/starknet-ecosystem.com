@@ -31,7 +31,7 @@ describe("Job service", () => {
 
       // Then
       expect(result).toStrictEqual(
-        "alpha_road-senior__backend__developer-502b0dbc-5169-4db6-8796-36a968a798fd"
+        "avnu-senior__backend__developer-502b0dbc-5169-4db6-8796-36a968a798fd"
       );
     });
   });
