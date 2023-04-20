@@ -42,4 +42,4 @@ By joining the [Telegram channel](https://t.me/starknet_ecosystem) you'll be inf
 
 ## Conclusion
 
-This project has been initiated with ❤️ by [Alpha Road Team](https://twitter.com/alpharoad_fi) and grows thanks to the awesome Starknet community.
+This project has been initiated with ❤️ by [AVNU Team](https://twitter.com/avnu_fi) and grows thanks to the awesome Starknet community.

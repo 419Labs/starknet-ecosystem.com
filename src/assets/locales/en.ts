@@ -13,7 +13,7 @@ const enTranslate: TranslateState = {
     maybe_yours: "Maybe yours?",
     made_with: "Made with",
     by: "by",
-    alpha_road_team: "Alpha Road Team",
+    alpha_road_team: "AVNU Team",
     apply: "Apply",
     community: "Community",
     job_title_main: "Jobs",

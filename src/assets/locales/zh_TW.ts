@@ -13,7 +13,7 @@ const zhTWTranslate: TranslateState = {
     maybe_yours: "提交你的項目 ？",
     made_with: "Made with",
     by: "by",
-    alpha_road_team: "Alpha Road Team",
+    alpha_road_team: "AVNU Team",
     apply: "添加項目",
     community: "社區",
     job_title_main: "工作",
