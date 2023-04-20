@@ -76,7 +76,7 @@ function Footer() {
         <Text>❤️</Text>
         <Text color="whiteAlpha.600">{t.common.by}</Text>
         <Link isExternal active href="https://twitter.com/avnu_fi">
-          {t.common.alpha_road_team}
+          {t.common.avnu_team}
         </Link>
       </HStack>
       <Divider my={4} bg="whiteAlpha.900" />

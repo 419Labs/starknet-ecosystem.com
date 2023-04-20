@@ -2,13 +2,13 @@ import type { Project } from "../../data/ecosystem";
 
 import type { Job } from "./job";
 
-const ALPHA_ROAD_ID = "502b0dbc-5169-4db6-8796-36a968a798fd";
-const ALPHA_ROAD_NAME = "AVNU";
+const AVNU_ID = "502b0dbc-5169-4db6-8796-36a968a798fd";
+const AVNU_NAME = "AVNU";
 
 export const aJob = (): Job => ({
   key: "1",
   title: "Senior / backend - developer",
-  projectId: ALPHA_ROAD_ID,
+  projectId: AVNU_ID,
   compensation: {
     from: 200,
     to: 600,
@@ -35,12 +35,12 @@ export const aListOfJob = (): Job[] => [
   {
     ...aJob(),
     title: "Senior / backend - developer",
-    projectId: ALPHA_ROAD_ID,
+    projectId: AVNU_ID,
   },
   {
     ...aJob(),
     title: "Senior backend developer",
-    projectId: ALPHA_ROAD_ID,
+    projectId: AVNU_ID,
     remote: false,
   },
   {
@@ -53,8 +53,8 @@ export const aListOfJob = (): Job[] => [
 
 export const aProject = (): Project => ({
   id: "502b0dbc-5169-4db6-8796-36a968a798fd",
-  name: ALPHA_ROAD_NAME,
-  shortName: ALPHA_ROAD_NAME,
+  name: AVNU_NAME,
+  shortName: AVNU_NAME,
   description:
     "AVNU is a decentralized exchange protocol designed to offer the best execution.\n" +
     "\n" +
