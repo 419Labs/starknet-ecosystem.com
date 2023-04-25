@@ -2609,4 +2609,22 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: false,
   },
+  {
+    id: "3478f2f8-49b9-4916-83e1-5bd758ec5d4a",
+    name: "Battle of Faith: Honor and Chaos",
+    shortName: "Battle of Faith",
+    description: "Battle of Faith: Honor and Chaos is a fantasy-themed open-world role-playing game.",
+    tags: ["nft", "gamefi", "defi"],
+    image: "BattleofFaith.png",
+    network: {
+      website: "https://battleoffaith.xyz/",
+      github: "https://github.com/CryptoFaith/Battle-of-Faith",
+      twitter: "https://twitter.com/BattleOfFaith",
+      medium: "",
+      discord: "https://discord.com/invite/FAU8drpKwx",
+      telegram: "https://t.me/BattleofFaith",
+    },
+    isLive: false,
+    isTestnetLive: true,
+  },
 ];
