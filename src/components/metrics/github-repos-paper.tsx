@@ -21,14 +21,14 @@ import Card from "../card/Card";
 import ErrorData from "./error-data";
 
 const githubReposToFollow = [
-  { organization: "starkware-libs", name: "cairo-lang" },
-  { organization: "starkware-libs", name: "starkgate-frontend" },
-  { organization: "starknet-community-libs", name: "get-starknet" },
-  { organization: "software-mansion", name: "protostar" },
+  { organization: "starkware-libs", name: "cairo" },
+  { organization: "lambdaclass", name: "cairo-rs" },
+  { organization: "OpenZeppelin", name: "cairo-contracts" },
+  { organization: "xJonathanLEI", name: "starknet-rs" },
   { organization: "0xs34n", name: "starknet.js" },
   { organization: "software-mansion", name: "starknet.py" },
+  { organization: "software-mansion", name: "protostar" },
   { organization: "OpenZeppelin", name: "nile" },
-  { organization: "Shard-Labs", name: "starknet-devnet" },
 ];
 
 const GithubReposPaper: FC = () => {
