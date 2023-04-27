@@ -2050,7 +2050,7 @@ export const allProjects: Array<Project> = [
   },
   {
     id: "00dd4c69-02d6-4e3e-a79f-7bbd9bfb94f4",
-    name: "Newton.so | Ask developers questions about Starknet and Cairo Lang here",
+    name: "Newton.so",
     shortName: "Newton.so",
     description:
       "Starknet & Cairo Lang place to share knowledge. A tokenized platform to ask and answer questions about blockchain and web3. Put bounties for your questions and improve the speed of software development now",
@@ -2611,7 +2611,7 @@ export const allProjects: Array<Project> = [
   },
   {
     id: "3f68f506-8d2b-473d-b033-7238e5ab5c1f",
-    name: "OpenZeppelin Contracts for Cairo",
+    name: "OpenZeppelin Contracts",
     shortName: "OpenZeppelin",
     description: "OpenZeppelin Contracts written in Cairo for StarkNet",
     tags: ["tools", "security", "infrastructure", "nft", "defi"],
