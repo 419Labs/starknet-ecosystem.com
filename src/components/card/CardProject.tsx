@@ -53,6 +53,7 @@ function CardProject({ index, project }: CardProjectProps) {
         justify="center"
         pt={4}
         bg={getFallbackColor()}
+        textAlign="center"
       >
         {getFallbackText(name.toUpperCase())}
       </Flex>
@@ -111,7 +112,7 @@ function CardProject({ index, project }: CardProjectProps) {
           border="2px solid white"
           bg={getFallbackColor()}
         />
-        <Text as="h6" fontSize="lg" fontWeight="bold" mt={4}>
+        <Text as="h6" fontSize="lg" fontWeight="bold" mt={4} textAlign="center">
           {name}
         </Text>
         <HStack
