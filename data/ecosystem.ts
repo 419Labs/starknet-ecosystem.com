@@ -2613,8 +2613,7 @@ export const allProjects: Array<Project> = [
     id: "3f68f506-8d2b-473d-b033-7238e5ab5c1f",
     name: "OpenZeppelin Contracts for Cairo",
     shortName: "OpenZeppelin",
-    description:
-      "OpenZeppelin Contracts written in Cairo for StarkNet",
+    description: "OpenZeppelin Contracts written in Cairo for StarkNet",
     tags: ["tools", "security", "infrastructure", "nft", "defi"],
     image: "openzeppelin.png",
     network: {
