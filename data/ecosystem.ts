@@ -2627,4 +2627,23 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: false,
   },
+  {
+    id: "b75f8c8c-f464-48c5-a7c5-444ac03f5d68",
+    name: "Madara Starknet Sequencer",
+    shortName: "Madara",
+    description:
+      "🥷🩸 Madara is a ⚡ blazing fast ⚡ Starknet sequencer, based on substrate, powered by Rust 🦀",
+    tags: ["all", "security", "infrastructure"],
+    image: "madara.png",
+    network: {
+      website: "https://github.com/keep-starknet-strange/madara",
+      github: "https://github.com/keep-starknet-strange/madara",
+      twitter: "https://twitter.com/MadaraStarknet",
+      medium: "",
+      discord: "",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
 ];
