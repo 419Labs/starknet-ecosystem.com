@@ -35,8 +35,7 @@ export const allProjects: Array<Project> = [
     id: "7fd6b20d-782a-40c2-8ee0-19790e9ee70b",
     name: "MorphineFi",
     shortName: "Morphine",
-    description:
-      "DeFi layer allowing composable leverage and automation",
+    description: "DeFi layer allowing composable leverage and automation",
     tags: ["defi"],
     image: "morphine.png",
     network: {
