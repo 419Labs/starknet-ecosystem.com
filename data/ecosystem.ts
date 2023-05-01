@@ -537,8 +537,8 @@ export const allProjects: Array<Project> = [
       discord: "http://hashstack.community",
       telegram: "",
     },
-    isLive: false,
-    isTestnetLive: false,
+    isLive: true,
+    isTestnetLive: true,
   },
   {
     id: "d95046cb-7ce0-4f3f-9d1c-7214acc30bc7",
