@@ -2651,7 +2651,7 @@ export const allProjects: Array<Project> = [
     name: "Beerus Starknet Light Client",
     shortName: "Beerus",
     description:
-      "Beerus is a trustless StarkNet Light Client, ⚡ blazing fast ⚡ and powered by Rust 🦀",
+      "Beerus is a trustless Starknet Light Client, ⚡ blazing fast ⚡ and powered by Rust 🦀",
     tags: ["all", "security", "infrastructure"],
     image: "beerus.png",
     network: {
