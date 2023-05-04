@@ -2683,4 +2683,23 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: false,
   },
+  {
+    id: "e4128000-d4ba-409c-9cf1-0cf758c16bd4",
+    name: "Beerus Starknet Light Client",
+    shortName: "Beerus",
+    description:
+      "Beerus is a trustless Starknet Light Client, ⚡ blazing fast ⚡ and powered by Rust 🦀",
+    tags: ["all", "security", "infrastructure"],
+    image: "beerus.png",
+    network: {
+      website: "https://github.com/keep-starknet-strange/beerus",
+      github: "https://github.com/keep-starknet-strange/beerus",
+      twitter: "https://twitter.com/BeerusStarknet",
+      medium: "",
+      discord: "",
+      telegram: "https://t.me/BeerusStarknet",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
 ];
