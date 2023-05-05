@@ -2702,4 +2702,23 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: false,
   },
+  {
+    id: "6531429c-71a0-4722-8c01-e2ad207ba761",
+    name: "Bullets Finance",
+    shortName: "Bullets",
+    description:
+      "Revolutionize Your DeFi Experience with Bulletswap Finance on ZKSync Era Technologies",
+    tags: ["defi"],
+    image: "bulletsfinance.png",
+    network: {
+      website: "https://bullets.finance",
+      github: "https://github.com/BulletSwap-DEX",
+      twitter: "https://twitter.com/Bulletswap_DEX",
+      medium: "https://bulletswapdex.medium.com/",
+      discord: "https://discord.gg/uRx8jmGgS6",
+      telegram: "https://t.me/Bulletswap_Official",
+    },
+    isLive: false,
+    isTestnetLive: false,
+  },
 ];
