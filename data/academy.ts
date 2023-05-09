@@ -1078,6 +1078,15 @@ export const tools: Resource[] = [
       github: "https://github.com/myBraavos/starknet-deeplink",
     },
   },
+  {
+    name: "Charged: Transaction Debugger",
+    shortName: "Charged",
+    description: "Pause, edit and simulate transactions before sending them on chain",
+    tags: ["tools"],
+    network: {
+      github: "https://github.com/quick-wallet",
+    },
+  },
 ];
 
 // ======================================================================

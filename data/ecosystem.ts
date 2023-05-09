@@ -2702,4 +2702,23 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: false,
   },
+  {
+    id: "1a37301e-1596-4969-bdc3-77e543da2969",
+    name: "Charged: Transaction Debugger",
+    shortName: "Charged",
+    description:
+      "Charged is a chrome extensions that allows you to pause, edit and simulate transactions before sending them on chain. So you don't need to spend hours in debugging transactions when you can do it in minutes ⚡",
+    tags: ["all", "security", "infrastructure","tools"],
+    image: "beerus.png",
+    network: {
+      website: "https://getcharged.dev",
+      github: "https://github.com/quick-wallet",
+      twitter: "https://twitter.com/getcharged_",
+      medium: "",
+      discord: "",
+      telegram: "https://t.me/getcharg3d",
+    },
+    isLive: true,
+    isTestnetLive: true,
+  },
 ];
