@@ -2721,4 +2721,22 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: true,
   },
+  {
+    id: "36813178-0b5d-4e5c-879c-2b7ce7ecc6d8",
+    name: "StarkEx",
+    shortName: "StarkEx",
+    description: "StarkEx——AMM,Liquidity Farms,and Reward pools on StarkNet. StarkEx is also a community-based and open-source ecosystem for DeFi! Say goodbye to CeFi!",
+    tags: ["defi", "infrastructure"],
+    image: "StarkEx.png",
+    network: {
+      twitter: "https://twitter.com/starkex_org",
+      github: "",
+      medium: "",
+      telegram: "",
+      website: "https://app.starkex.org/",
+      discord: "https://discord.gg/6XgTWpWR",
+    },
+    isLive: true,
+    isTestnetLive: true,
+  },
 ];
