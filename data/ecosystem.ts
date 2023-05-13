@@ -73,7 +73,8 @@ export const allProjects: Array<Project> = [
     name: "Reddio",
     shortName: "Reddio",
     description:
-      "Reddio is a technology company that builds infrastructure for the blockchain, to help developers adopt blockchain technologies with the world’s first easy-to-use Layer 2 zkRollup Agnostic APIs. Enabling developers embed Token or NFT (Non-fungible token) into their web, desktop and mobile applications with massive scalability and zero gas fee for off-chain. Reddio has partnered with the leading layer 2 zkRollup provider Starkware to launch StarkEx APIs, with which you can have instant trading confirmation within second, high concurrent transactions up to 10k TPS, 0 gas fee as it’s done on layer 2 and the asset security derived from layer 1 Ethereum. Reddio is dedicated to Starknet ecosystem to build reference implementation on Cairo Smart Contrats. Reddio is backed by top VCs such as Paradigm and Arena Holdings.",
+      "Reddio is a technology company that builds infrastructure for the blockchain, to help developers adopt blockchain technologies with the world’s first easy-to-use Layer 2 zkRollup Agnostic APIs. Enabling developers embed Token or NFT (Non-fungible token) into their web, desktop and mobile applications with massive scalability and zero gas fee for off-chain. Reddio has partnered with the leading layer 2 zkRollup provider Starkware to launch StarkEx APIs, with which you can have instant trading confirmation within second, high concurrent transactions up to 
+  TPS, 0 gas fee as it’s done on layer 2 and the asset security derived from layer 1 Ethereum. Reddio is dedicated to Starknet ecosystem to build reference implementation on Cairo Smart Contrats. Reddio is backed by top VCs such as Paradigm and Arena Holdings.",
     tags: ["tools", "infrastructure", "nft", "starkex"],
     image: "reddio.png",
     network: {
@@ -2721,4 +2722,22 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: true,
   },
+  {
+    id: "36813178-0b5d-4e5c-879c-2b7ce7ecc6d8",
+    name: "StarkEx",
+    shortName: "StarkEx",
+    description: "StarkEx——AMM,Liquidity Farms,and Reward pools on StarkNet. StarkEx is also a community-based and open-source ecosystem for DeFi! Say goodbye to CeFi!",
+    tags: ["defi", "infrastructure"],
+    image: "StarkEx.png",
+    network: {
+      twitter: "https://twitter.com/starkex_org",
+      github: "",
+      medium: "",
+      telegram: "",
+      website: "https://app.starkex.org/",
+      discord: "https://discord.gg/6XgTWpWR",
+    },
+    isLive: true,
+    isTestnetLive: true,
+  }
 ];
