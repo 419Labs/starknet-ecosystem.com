@@ -2721,4 +2721,22 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: true,
   },
+  {
+    id: "f174231a-746f-478e-85b0-14f6cb795a79",
+    name: "ProtossDex: A Dex Protocol on Starknet",
+    shortName: "Protoss",
+    description: "We serve Protoss- a protocol for trading and automated liquidity provision on @Starknet",
+    tags: ["all", "infrastructure", "defi"],
+    image: "protoss.png",
+    network: {
+      website: "https://protoss.org",
+      github: "https://github.com/protoss-exchange",
+      twitter: "https://twitter.com/protossdex",
+      medium: "",
+      discord: "",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
 ];
