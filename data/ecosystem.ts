@@ -2578,11 +2578,11 @@ export const allProjects: Array<Project> = [
     tags: ["Defi", "DEX"],
     image: "Protoss.png",
     network: {
-      website: "https://protoss.exchange/",
+      website: "https://protoss.org/",
       github: "https://github.com/protoss-exchange",
       twitter: "https://twitter.com/ProtossDEX",
     },
     isLive: true,
-    isTestnetLive: true,
+    isTestnetLive: false,
   }
 ];
