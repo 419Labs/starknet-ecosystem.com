@@ -2702,7 +2702,7 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: false,
   },
-   {
+  {
     id: "e0ae7230-84d9-43c0-93e8-189f78e4c331",
     name: "OmniBTC",
     shortName: "OmniBTC",
