@@ -2708,7 +2708,7 @@ export const allProjects: Array<Project> = [
     shortName: "Charged",
     description:
       "Charged is a chrome extensions that allows you to pause, edit and simulate transactions before sending them on chain. So you don't need to spend hours in debugging transactions when you can do it in minutes ⚡",
-    tags: ["all", "security", "infrastructure","tools"],
+    tags: ["all", "security", "infrastructure", "tools"],
     image: "beerus.png",
     network: {
       website: "https://getcharged.dev",
@@ -2720,5 +2720,24 @@ export const allProjects: Array<Project> = [
     },
     isLive: true,
     isTestnetLive: true,
+  },
+  {
+    id: "f174231a-746f-478e-85b0-14f6cb795a79",
+    name: "ProtossDex: A Dex Protocol on Starknet",
+    shortName: "Protoss",
+    description:
+      "We serve Protoss - a protocol for trading and automated liquidity provision on @Starknet",
+    tags: ["all", "infrastructure", "defi"],
+    image: "protoss.png",
+    network: {
+      website: "https://protoss.org",
+      github: "https://github.com/protoss-exchange",
+      twitter: "https://twitter.com/protossdex",
+      medium: "",
+      discord: "",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: false,
   },
 ];
