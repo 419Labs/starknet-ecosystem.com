@@ -2299,7 +2299,7 @@ export const allProjects: Array<Project> = [
     name: "Stark Sport",
     shortName: "Stark Sport",
     description:
-      "Starksport is a king sport inspired project built on Binance Smart Chain, Starknet...",
+      "Connect the world's major sporting events with Defi and NFT market services",
     tags: ["nft", "defi", "gamefi"],
     image: "starksport.png",
     network: {
