@@ -35,7 +35,8 @@ export const allProjects: Array<Project> = [
     id: "ab4517ca-14a6-4a5e-acb9-849954a0af4d",
     name: "Lava Network",
     shortName: "Lava",
-    description: "Lava is an open-source protocol for reliable access to RPC data, across all chains.",
+    description:
+      "Lava is an open-source protocol for reliable access to RPC data across all chains.",
     tags: ["infrastructure", "tools"],
     image: "lava.png",
     network: {
