@@ -1081,7 +1081,8 @@ export const tools: Resource[] = [
   {
     name: "Charged: Transaction Debugger",
     shortName: "Charged",
-    description: "Pause, edit and simulate transactions before sending them on chain",
+    description:
+      "Pause, edit and simulate transactions before sending them on chain",
     tags: ["tools"],
     network: {
       github: "https://github.com/quick-wallet",

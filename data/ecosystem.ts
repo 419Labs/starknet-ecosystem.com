@@ -2708,7 +2708,7 @@ export const allProjects: Array<Project> = [
     shortName: "Charged",
     description:
       "Charged is a chrome extensions that allows you to pause, edit and simulate transactions before sending them on chain. So you don't need to spend hours in debugging transactions when you can do it in minutes ⚡",
-    tags: ["all", "security", "infrastructure","tools"],
+    tags: ["all", "security", "infrastructure", "tools"],
     image: "beerus.png",
     network: {
       website: "https://getcharged.dev",
