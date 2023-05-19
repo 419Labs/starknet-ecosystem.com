@@ -32,6 +32,25 @@ export interface ProjectItf extends Project {
 
 export const allProjects: Array<Project> = [
   {
+    id: "ab4517ca-14a6-4a5e-acb9-849954a0af4d",
+    name: "Lava Network",
+    shortName: "Lava",
+    description:
+      "Lava is an open-source protocol for reliable access to RPC data across all chains.",
+    tags: ["infrastructure", "tools"],
+    image: "lava.png",
+    network: {
+      website: "https://lavanet.xyz/",
+      github: "https://github.com/lavanet",
+      twitter: "https://twitter.com/lavanetxyz",
+      medium: "https://medium.com/lava-network",
+      discord: "https://discord.gg/Tbk5NxTCdA",
+      telegram: "",
+    },
+    isLive: false,
+    isTestnetLive: true,
+  },
+  {
     id: "7fd6b20d-782a-40c2-8ee0-19790e9ee70b",
     name: "MorphineFi",
     shortName: "Morphine",
@@ -713,19 +732,19 @@ export const allProjects: Array<Project> = [
     name: "zkLend",
     shortName: "zkLend",
     description:
-      "zkLend is an L2 money-market protocol built on Starknet, combining zk-rollup scalability, superior transaction speed, and cost-savings with Ethereum’s security. The protocol offers a dual solution: a permissioned and compliance-focused solution for institutional clients, and a permissionless service for DeFi users - all without sacrificing decentralisation.",
+      "zkLend is the native L2 money-market protocol built on Starknet, combining zk-rollup scalability, superior transaction speed, and cost-savings with Ethereum’s security.",
     tags: ["defi"],
     image: "zklend.svg",
     network: {
       website: "https://zklend.com/",
       github: "",
       twitter: "https://twitter.com/zkLend",
-      medium: "",
-      discord: "",
-      telegram: "",
+      medium: "https://medium.com/zklend",
+      discord: "https://discord.com/invite/3v7RhwtJ8S",
+      telegram: "https://t.me/zkLendAnnouncements",
     },
-    isLive: false,
-    isTestnetLive: false,
+    isLive: true,
+    isTestnetLive: true,
   },
   {
     id: "bcb424ed-5f3d-4bb8-8474-fb7bb11ed484",
@@ -2280,7 +2299,7 @@ export const allProjects: Array<Project> = [
     name: "Stark Sport",
     shortName: "Stark Sport",
     description:
-      "Starksport is a king sport inspired project built on Binance Smart Chain, Starknet...",
+      "Connect the world's major sporting events with Defi and NFT market services",
     tags: ["nft", "defi", "gamefi"],
     image: "starksport.png",
     network: {
@@ -2716,6 +2735,25 @@ export const allProjects: Array<Project> = [
       twitter: "https://twitter.com/OmniBTC",
       medium: "https://medium.com/@omnibtc",
       discord: "https://discord.gg/Z2EzZcJ72x",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
+  {
+    id: "f174231a-746f-478e-85b0-14f6cb795a79",
+    name: "ProtossDex: A Dex Protocol on Starknet",
+    shortName: "Protoss",
+    description:
+      "We serve Protoss - a protocol for trading and automated liquidity provision on @Starknet",
+    tags: ["all", "infrastructure", "defi"],
+    image: "protoss.png",
+    network: {
+      website: "https://protoss.org",
+      github: "https://github.com/protoss-exchange",
+      twitter: "https://twitter.com/protossdex",
+      medium: "",
+      discord: "",
       telegram: "",
     },
     isLive: true,
