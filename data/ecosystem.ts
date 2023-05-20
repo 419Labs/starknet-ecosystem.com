@@ -2759,4 +2759,23 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: false,
   },
+  {
+    id: "e0ae7230-84d9-43c0-93e8-189f78e4c331",
+    name: "OmniBTC",
+    shortName: "OmniBTC",
+    description:
+      "OmniBTC is an omnichain defi platform based on interoperability protocols to realize cross-chain swap/lending across multi-VM ecosystems, aiming to provide users with the best cross-chain experience at the lowest cost.",
+    tags: ["all", "defi", "bridge"],
+    image: "omnibtc.png",
+    network: {
+      website: "https://omnibtc.finance/",
+      github: "https://github.com/OmniBTC",
+      twitter: "https://twitter.com/OmniBTC",
+      medium: "https://medium.com/@omnibtc",
+      discord: "https://discord.gg/Z2EzZcJ72x",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
 ];
