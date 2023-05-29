@@ -2778,4 +2778,23 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: false,
   },
+  {
+    id: "007b64a7-fd7f-480b-874e-75e7aa898d62",
+    name: "cexSwap",
+    shortName: "cexSwap",
+    description:
+      "BOT in discord and telegram for direct exchange from centralized exchanges (internal transfer) to the StarkNet network. Confirmation happens 10 times faster. There is no need to pay exchange fees.",
+    tags: ["all", "starkex", "bridge"],
+    image: "cexswap.png",
+    network: {
+      website: "",
+      github: "",
+      twitter: "",
+      medium: "",
+      discord: "https://discord.gg/42CYp4Xped",
+      telegram: "https://t.me/cexswap_ru",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
 ];
