@@ -2708,7 +2708,7 @@ export const allProjects: Array<Project> = [
     shortName: "Charged",
     description:
       "Charged is a chrome extensions that allows you to pause, edit and simulate transactions before sending them on chain. So you don't need to spend hours in debugging transactions when you can do it in minutes ⚡",
-    tags: ["all", "security", "infrastructure","tools"],
+    tags: ["all", "security", "infrastructure", "tools"],
     image: "beerus.png",
     network: {
       website: "https://getcharged.dev",
@@ -2725,7 +2725,8 @@ export const allProjects: Array<Project> = [
     id: "36813178-0b5d-4e5c-879c-2b7ce7ecc6d8",
     name: "StarkEx",
     shortName: "StarkEx",
-    description: "StarkEx——AMM,Liquidity Farms,and Reward pools on StarkNet. StarkEx is also a community-based and open-source ecosystem for DeFi! Say goodbye to CeFi!",
+    description:
+      "StarkEx——AMM,Liquidity Farms,and Reward pools on StarkNet. StarkEx is also a community-based and open-source ecosystem for DeFi! Say goodbye to CeFi!",
     tags: ["defi", "infrastructure"],
     image: "StarkEx.png",
     network: {
