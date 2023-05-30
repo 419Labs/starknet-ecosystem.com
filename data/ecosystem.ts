@@ -443,7 +443,7 @@ export const allProjects: Array<Project> = [
       discord: "https://discord.gg/invite/avnu-fi",
       telegram: "https://t.me/avnu_fi",
     },
-    isLive: false,
+    isLive: true,
     isTestnetLive: true,
   },
   {
