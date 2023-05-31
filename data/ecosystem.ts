@@ -2797,4 +2797,23 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: true,
   },
+  {
+    id: "d6d98ff4-25aa-42b5-b22b-f696eae0ea19",
+    name: "D2Y",
+    shortName: "D2Y",
+    description:
+      "D2Y is building a decentralized order-book based options and futures exchange.",
+    tags: ["defi"],
+    image: "d2y.png",
+    network: {
+      twitter: "https://twitter.com/D2YExchange",
+      github: "",
+      medium: "https://d2yexchange.medium.com",
+      telegram: "",
+      website: "",
+      discord: "https://discord.gg/zRfEKmU3cQ",
+    },
+    isLive: false,
+    isTestnetLive: false,
+  },
 ];
