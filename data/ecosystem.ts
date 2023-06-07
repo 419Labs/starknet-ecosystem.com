@@ -2547,7 +2547,7 @@ export const allProjects: Array<Project> = [
     network: {
       website: "https://github.com/NethermindEth/juno",
       github: "https://github.com/NethermindEth/juno",
-      twitter: "",
+      twitter: "https://twitter.com/NethermindStark",
       medium: "",
       discord: "https://discord.gg/eZgAjMWjJW",
       telegram: "",
