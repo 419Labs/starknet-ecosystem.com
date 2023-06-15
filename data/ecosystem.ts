@@ -2006,7 +2006,7 @@ export const allProjects: Array<Project> = [
       github: "https://github.com/starknet-id",
       twitter: "https://twitter.com/starknet_id",
     },
-    isLive: false,
+    isLive: true,
     isTestnetLive: true,
   },
   {
@@ -2815,5 +2815,23 @@ export const allProjects: Array<Project> = [
     },
     isLive: false,
     isTestnetLive: false,
+  },
+  {
+    id: "58bebd20-2314-464b-b2f7-e95da6da41e1",
+    name: "Starknet Quest",
+    shortName: "Starknet Quest",
+    description: "Accomplish quests to collect unique NFTs on Starknet.",
+    tags: ["all", "digital_id", "nft"],
+    image: "starknetquestLogo.svg",
+    network: {
+      website: "starknet.quest",
+      github: "https://starknet.quest/",
+      twitter: "https://twitter.com/Starknet_quest",
+      medium: "",
+      discord: "",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: true,
   },
 ];
