@@ -23,23 +23,23 @@ export interface ResourceItf extends Resource {
 
 export const highlightedLearning: Resource[] = [
   {
-    name: "Hello, Starknet",
+    name: "Starknet Book",
     shortName: "hello-starknet-official-doc",
     description:
-      "This tutorial walks you through writing and deploying a Starknet contract.",
+      "The Starknet Book is a curriculum created to document the Cairo programming language and Starknet development.",
     tags: ["starknet", "learn"],
     network: {
-      website: "https://www.cairo-lang.org/docs/hello_starknet/index.html",
+      website: "https://book.starknet.io/",
     },
   },
   {
-    name: "Hello, Cairo",
+    name: "Cairo Book",
     shortName: "hello-cairo-official-doc",
     description:
-      "Hello, Cairo describes Cairo for the programmer who wishes to understand what Cairo can do hands-on, and start writing programs in Cairo.",
+      "The Cairo Book is a introductory book about Cairo Programming Language.",
     tags: ["starknet", "cairo", "learn"],
     network: {
-      website: "https://www.cairo-lang.org/docs/hello_cairo/index.html",
+      website: "https://cairo-book.github.io/",
     },
   },
   {
