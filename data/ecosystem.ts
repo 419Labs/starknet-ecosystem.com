@@ -2838,7 +2838,8 @@ export const allProjects: Array<Project> = [
     id: "101f06d5-595f-4254-ac9e-4bb6c7975b00",
     name: "RN Bridge",
     shortName: "RN Bridge",
-    description: "Raum Network's RN Bridge facilitates seamless transfer of RN tokens from Polygon to StarkNet, with plans to expand its support for additional tokens and chains in the near future.",
+    description: 
+      "Raum Network's RN Bridge facilitates seamless transfer of RN tokens from Polygon to StarkNet, with plans to expand its support for additional tokens and chains in the near future.",
     tags: ["all", "bridge", "defi"],
     image: "RN_Bridge.png",
     network: {
