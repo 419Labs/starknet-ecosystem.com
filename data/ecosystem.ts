@@ -1915,7 +1915,7 @@ export const allProjects: Array<Project> = [
       discord: "",
       telegram: "",
     },
-    isLive: false,
+    isLive: true,
     isTestnetLive: false,
   },
   {
