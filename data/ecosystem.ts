@@ -2852,4 +2852,22 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: true,
   },
+  {
+    id: "1c847e77-2cb0-437d-8c03-bbf5a5c39806",
+    name: "XpandX Protocol",
+    shortName: "XpandX",
+    description: "Decentralized perp exchange on Starknet and Venom",
+    tags: ["defi"],
+    image: "xpandx.png",
+    network: {
+      website: "https://xpandx.xyz/",
+      github: "https://github.com/XpandX-Labs",
+      twitter: "https://twitter.com/xpandx_xyz",
+      medium: "https://linktr.ee/xpandx",
+      discord: "https://linktr.ee/xpandx",
+      telegram: "https://t.me/xpandxlabs",
+    },
+    isLive: false,
+    isTestnetLive: false,
+  },
 ];
