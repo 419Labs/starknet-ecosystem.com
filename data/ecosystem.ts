@@ -2852,4 +2852,20 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: true,
   },
+  {
+    id: "5fa38c5c-942c-4b0a-af0f-e3979a44eec9",
+    name: "zk-Name Service",
+    shortName: "zk-Name Service",
+    description:
+      "This is a decentralized community domain name project. After users purchase domain names at extremely low prices, they can mint governance tokens, which are all distributed to domain name owners, developers do not have any reserved shares. When users mint governance tokens, the community relations will be automatically bound, which for subsequent social applications and game applications.",
+    tags: ["digital_id", "nft", "tools"],
+    image: "zk-name-service.png",
+    network: {
+      website: "https://zk-ns.xyz/",
+      github: "https://github.com/zk-ns/zk-name-service--cairo1.0",
+      discord: "https://discord.com/invite/YWrevpKWPx",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
 ];
