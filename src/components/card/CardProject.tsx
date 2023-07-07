@@ -20,7 +20,14 @@ function CardProject({ index, project }: CardProjectProps) {
   const { t } = useTranslate();
   const router = useRouter();
 
-  const { name, tagsRef: tags, network, isLive, isTestnetLive } = project;
+  const {
+    name,
+    tagsRef: tags,
+    network,
+    isLive,
+    isTestnetLive,
+    image,
+  } = project;
 
   const getFallbackText = (text: string) => {
     return (
@@ -108,7 +115,7 @@ function CardProject({ index, project }: CardProjectProps) {
         <Avatar
           size="xl"
           name={name}
-          src={network.twitterImage}
+          src={network.twitterImage || `/logos/${image}`}
           border="2px solid white"
           bg={getFallbackColor()}
         />
