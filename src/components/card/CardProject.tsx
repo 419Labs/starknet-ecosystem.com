@@ -55,7 +55,7 @@ function CardProject({ index, project }: CardProjectProps) {
     return (
       <Flex
         borderTopRadius="md"
-        minH="110px"
+        h="110px"
         align="flex-start"
         justify="center"
         pt={4}
