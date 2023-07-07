@@ -137,7 +137,12 @@ function CardProject({ index, project }: CardProjectProps) {
             {name}
           </Text>
         </Flex>
-        <Flex flexGrow={1} direction="column" align="center" justify="space-between">
+        <Flex
+          flexGrow={1}
+          direction="column"
+          align="center"
+          justify="space-between"
+        >
           <HStack
             spacing={0}
             flexWrap="wrap"
