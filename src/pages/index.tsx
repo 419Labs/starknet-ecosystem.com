@@ -37,7 +37,7 @@ const Home = () => {
   const tagAll = allEcosystemTags[0];
   const [loading, setLoading] = useState(true);
   const [filter, setFilter] = useState(tagAll);
-  const [filterMainnet, setFilterMainnet] = useState(false);
+  const [filterMainnet, setFilterMainnet] = useState(true);
   const [sorter, setSorter] = useState(sortTags[0]);
   const [allProjects, setAllProjects] = useState<Project[]>([]);
   const [projects, setProjects] = useState<ProjectItf[]>([]);
