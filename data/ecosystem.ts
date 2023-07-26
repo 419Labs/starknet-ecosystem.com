@@ -2852,4 +2852,22 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: true,
   },
+  {
+    id: "fe115048-2b5f-11ee-be56-0242ac120002",
+    name: "StarkWars",
+    shortName: "StarkWars",
+    description: "StarkWars is the first major interstellar game on Starknet. ",
+    tags: ["nft", "gamefi"],
+    image: "starkwars.png",
+    network: {
+      website: "https://www.starkwars.xyz",
+      github: "",
+      twitter: "https://twitter.com/starknet_wars",
+      medium: "",
+      discord: "https://discord.com/invite/hJupqTrK4G",
+      telegram: "https://t.me/starknet_wars",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
 ];
