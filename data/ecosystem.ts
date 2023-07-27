@@ -32,6 +32,25 @@ export interface ProjectItf extends Project {
 
 export const allProjects: Array<Project> = [
   {
+    id: "abd25d78-ffb6-4a1d-94c0-d2f9016d6015",
+    name: "Dmail Network",
+    shortName: "Dmail",
+    description:
+      "Dmail Network is building an AI-powered decentralized infrastructure which allows users to stay informed and connected with intelligent, seamless messaging and notifications.",
+    tags: ["infrastructure", "tools", "digital_id"],
+    image: "dmail.png",
+    network: {
+      website: "https://dmail.ai",
+      github: "https://github.com/dmailofficial/dmail",
+      twitter: "https://twitter.com/dmailofficial",
+      medium: "https://medium.com/@dmail_official",
+      discord: "https://discord.com/invite/QbvaeqwMFg",
+      telegram: "https://t.me/dmailofficial",
+    },
+    isLive: true,
+    isTestnetLive: true,
+  },
+  {
     id: "ab4517ca-14a6-4a5e-acb9-849954a0af4d",
     name: "Lava Network",
     shortName: "Lava",
