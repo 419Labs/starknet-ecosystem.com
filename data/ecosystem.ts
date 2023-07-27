@@ -619,7 +619,8 @@ export const allProjects: Array<Project> = [
     id: "ba85310d-c82c-43c5-a42c-6479f8946b98",
     name: "Ekubo Protocol",
     shortName: "Ekubo",
-    description: "Ekubo Protocol is a highly optimized DEX featuring concentrated liquidity and extensibility",
+    description:
+      "Ekubo Protocol is a highly optimized DEX featuring concentrated liquidity and extensibility",
     tags: ["defi"],
     image: "ekubo.png",
     network: {
