@@ -2852,4 +2852,23 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: true,
   },
+  {
+    id: "1f60939b-9194-43ae-ab83-95137b93d7d8",
+    name: "Renegade",
+    shortName: "Renegade",
+    description:
+      "On-chain dark pool. Trade any ERC-20 in size with zero price impact.",
+    tags: ["all", "defi"],
+    image: "renegade.png",
+    network: {
+      website: "https://renegade.fi",
+      github: "https://github.com/renegade-fi",
+      twitter: "https://twitter.com/renegade_fi",
+      medium: "",
+      discord: "https://discord.gg/renegade-fi",
+      telegram: "",
+    },
+    isLive: false,
+    isTestnetLive: false,
+  },
 ];
