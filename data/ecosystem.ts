@@ -616,6 +616,25 @@ export const allProjects: Array<Project> = [
     isTestnetLive: true,
   },
   {
+    id: "ba85310d-c82c-43c5-a42c-6479f8946b98",
+    name: "Ekubo Protocol",
+    shortName: "Ekubo",
+    description:
+      "Ekubo Protocol is a highly optimized DEX featuring concentrated liquidity and extensibility",
+    tags: ["defi"],
+    image: "ekubo.png",
+    network: {
+      website: "https://app.ekubo.org",
+      github: "https://github.com/EkuboProtocol",
+      twitter: "https://twitter.com/EkuboProtocol",
+      medium: "",
+      discord: "https://discord.gg/RFbSXxtqUG",
+      telegram: "https://t.me/Ekubo_Protocol",
+    },
+    isLive: false,
+    isTestnetLive: true,
+  },
+  {
     id: "4b8593f2-5c40-48b4-93a8-1cfd1df9dd5e",
     name: "Sandclock",
     shortName: "Sandclock",
@@ -2296,8 +2315,8 @@ export const allProjects: Array<Project> = [
   },
   {
     id: "5b54b8c6-ae8c-403e-ae55-0dc64d577cb6",
-    name: "Stark Sport",
-    shortName: "Stark Sport",
+    name: "StarkSport",
+    shortName: "StarkSport",
     description:
       "Connect the world's major sporting events with Defi and NFT market services",
     tags: ["nft", "defi", "gamefi"],
@@ -2851,6 +2870,40 @@ export const allProjects: Array<Project> = [
     },
     isLive: true,
     isTestnetLive: true,
+  },
+  {
+    id: "5fa38c5c-942c-4b0a-af0f-e3979a44eec9",
+    name: "zk-Name Service",
+    shortName: "zk-Name Service",
+    description:
+      "This is a decentralized community domain name project. After users purchase domain names at extremely low prices, they can mint governance tokens, which are all distributed to domain name owners, developers do not have any reserved shares. When users mint governance tokens, the community relations will be automatically bound, which for subsequent social applications and game applications.",
+    tags: ["digital_id", "nft", "tools"],
+    image: "zk-name-service.png",
+    network: {
+      website: "https://zk-ns.xyz/",
+      github: "https://github.com/zk-ns/zk-name-service--cairo1.0",
+      discord: "https://discord.com/invite/YWrevpKWPx",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
+  {
+    id: "fe115048-2b5f-11ee-be56-0242ac120002",
+    name: "StarkWars",
+    shortName: "StarkWars",
+    description: "StarkWars is the first major interstellar game on Starknet. ",
+    tags: ["nft", "gamefi"],
+    image: "starkwars.png",
+    network: {
+      website: "https://www.starkwars.xyz",
+      github: "",
+      twitter: "https://twitter.com/starknet_wars",
+      medium: "",
+      discord: "https://discord.com/invite/hJupqTrK4G",
+      telegram: "https://t.me/starknet_wars",
+    },
+    isLive: true,
+    isTestnetLive: false,
   },
   {
     id: "1f60939b-9194-43ae-ab83-95137b93d7d8",
