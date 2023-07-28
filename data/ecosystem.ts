@@ -2296,8 +2296,8 @@ export const allProjects: Array<Project> = [
   },
   {
     id: "5b54b8c6-ae8c-403e-ae55-0dc64d577cb6",
-    name: "Stark Sport",
-    shortName: "Stark Sport",
+    name: "StarkSport",
+    shortName: "StarkSport",
     description:
       "Connect the world's major sporting events with Defi and NFT market services",
     tags: ["nft", "defi", "gamefi"],
