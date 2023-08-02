@@ -2943,4 +2943,23 @@ export const allProjects: Array<Project> = [
     isLive: false,
     isTestnetLive: false,
   },
+  {
+    id: "252c20b9-8fa6-4750-ab48-6ef320cab9b2",
+    name: "1RPC",
+    shortName: "1RPC",
+    description:
+      "1RPC is the relay safeguarding Web3 interactions.",
+    tags: ["all", "infrastructure", "tools"],
+    image: "1rpc.png",
+    network: {
+      website: "https://1rpc.io",
+      github: "",
+      twitter: "https://twitter.com/AutomataNetwork",
+      medium: "",
+      discord: "https://discord.com/invite/automata",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
 ];
