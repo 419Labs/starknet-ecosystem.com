@@ -2943,4 +2943,23 @@ export const allProjects: Array<Project> = [
     isLive: false,
     isTestnetLive: false,
   },
+  {
+    id: "5a1fad08-47f2-45f7-bc4c-8183392176c1",
+    name: "Expectium Protocol",
+    shortName: "Expectium",
+    description:
+      "Expectium is an information markets platform that lets you trade on the world’s most highly-debated topics (e.g. politics, current events, etc). On Expectium, you build a portfolio based on your forecasts and earn a return if you are right. When you decide to buy shares in a market, you are weighing in with your own knowledge, research, and view of the future. Market prices reflect what traders think are the odds of future events, turning trading activity into actionable insights that help people make better decisions. As a result, Expectium is a leading source of unbiased and real-time data about future events.",
+    tags: ["all", "dao", "defi", "nft", "gamefi"],
+    image: "expectium.png",
+    network: {
+      website: "https://expectium.io/",
+      github: "",
+      twitter: "https://twitter.com/expectiumio",
+      medium: "",
+      discord: "https://discord.com/invite/TU54zXjNuq",
+      telegram: "https://t.me/expectiumprotocol",
+    },
+    isLive: false,
+    isTestnetLive: true,
+  },
 ];
