@@ -2962,4 +2962,23 @@ export const allProjects: Array<Project> = [
     isLive: false,
     isTestnetLive: true,
   },
+  {
+    id: "2a3c8513-e1a3-41b5-8e65-74a033b68eb1",
+    name: "StarkStats",
+    shortName: "StarkStats",
+    description:
+      "StarkStats is the statistics tool for users activity analyze.",
+    tags: ["all", "tools"],
+    image: "starkstats.png",
+    network: {
+      website: "https://starkstats.xyz/",
+      github: "https://github.com/sm1ck/starkstats",
+      twitter: "",
+      medium: "",
+      discord: "",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
 ];
