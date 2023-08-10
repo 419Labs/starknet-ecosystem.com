@@ -2981,4 +2981,19 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: false,
   },
+  {
+    id: "adf0c80f-2e8a-455d-9312-2f02fba41ec8",
+    name: "disperse-starknet",
+    shortName: "ds",
+    description:
+      "This dapp helps you in disperse ERC20 tokens on the StarkNet mainnet and testnet to multiple wallet addresses.",
+    tags: ["all", "defi", "cairo"],
+    image: "disperse-starknet-logo.png",
+    network: {
+      website: "https://disperse-starknet.vercel.app/",
+      github: "https://github.com/Scotthamy/disperse-starknet",
+    },
+    isLive: true,
+    isTestnetLive: true,
+  },
 ];
