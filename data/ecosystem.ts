@@ -2962,7 +2962,6 @@ export const allProjects: Array<Project> = [
     isLive: false,
     isTestnetLive: true,
   },
-
   {
     id: "2a3c8513-e1a3-41b5-8e65-74a033b68eb1",
     name: "StarkStats",
