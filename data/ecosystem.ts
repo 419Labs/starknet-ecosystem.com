@@ -2996,4 +2996,23 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: true,
   },
+  {
+    id: "8a79276c-3b5b-11ee-be56-0242ac120002",
+    name: "Face To See NFTs",
+    shortName: "FATOCE",
+    description:
+      "F2C is the 1st collection in the product suite of DeColGen Labs, aiming to build a collective of mini-games and entertainment dapps.",
+    tags: ["nft"],
+    image: "logo-face-to-see.png",
+    network: {
+      twitter:"https://twitter.com/FaceToSee_",
+      discord:"https://discord.com/invite/djU2mEJcSq",
+      website: "https://linktr.ee/facetosee_",
+      github: "",
+      telegram:"",
+    },
+    isLive: true,
+    isTestnetLive: false,
+
+  }
 ];
