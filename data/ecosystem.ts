@@ -2876,8 +2876,8 @@ export const allProjects: Array<Project> = [
     id: "101f06d5-595f-4254-ac9e-4bb6c7975b00",
     name: "RN Bridge",
     shortName: "RN Bridge",
-    description: 
-      "Raum Network's RN Bridge introduces an innovative solution for users seeking to seamlessly transfer their RN Tokens from the Polygon network to StarkNet. This bridge serves as a vital link, ensuring the smooth migration of tokens between these two distinct blockchain ecosystems. While currently catering to RN Tokens between Polygon and StarkNet, the bridge is set to broaden its utility by incorporating major tokens such as ETH, USDC, USDT, DAI, and WBTC in forthcoming updates.",
+    description:
+      "Raum Network's RN Bridge introduces an innovative solution for users seeking to seamlessly transfer their RN Tokens from the Polygon network to StarkNet. This bridge serves as a vital link, ensuring the smooth migration of tokens between these two distinct blockchain ecosystems. We will incorporate major tokens such as ETH, USDC, USDT, DAI, and WBTC in forthcoming updates.",
     tags: ["all", "bridge", "defi"],
     image: "RN_Bridge.png",
     network: {
