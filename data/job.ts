@@ -694,7 +694,7 @@ const allJobs: Array<Job> = [
       "- Collaborative and inclusive work environment.\n" +
       "- Work on projects that shape the future of web development.",
     createdOn: new Date("2023-08-21"),
-    applyLink: "https://tally.so/r/mRMLvQ"
+    applyLink: "https://tally.so/r/mRMLvQ",
   },
 ];
 
