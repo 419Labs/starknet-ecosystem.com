@@ -585,6 +585,118 @@ const allJobs: Array<Job> = [
     createdOn: new Date("2023-03-21"),
     applyLink: "https://https://twitter.com/Fricoben",
   },
+  {
+    key: "27",
+    title: "Blockchain Development Intern - Raum Network",
+    projectId: "101f06d5-595f-4254-ac9e-4bb6c7975b00",
+    tags: ["Internship", "Blockchain Development"],
+    location: "Remote",
+    remote: true,
+    description:
+      "Join our Blockchain Development Internship program and gain hands-on experience in the exciting world of blockchain technology.\n" +
+      "\n" +
+      "As a Blockchain Development Intern, you'll be immersed in the development of cutting-edge blockchain solutions, learning from experienced professionals in the field.\n" +
+      "\n" +
+      "This is a unique opportunity to contribute to real-world projects, enhance your technical skills, and be part of a team that's shaping the future of decentralized systems.",
+    responsibilities:
+      "What you’ll be doing\n\n" +
+      "- Collaborate with our senior developers on the design and implementation of blockchain applications.\n" +
+      "- Assist in the development and testing of smart contracts using languages like Solidity and Rust.\n" +
+      "- Contribute to the troubleshooting and resolution of technical issues.\n" +
+      "- Participate in brainstorming sessions and provide innovative ideas for blockchain solutions.\n" +
+      "- Learn about various blockchain protocols, consensus mechanisms, and decentralized applications.",
+    requirements:
+      "- Enrolled in a computer science, engineering, or related program.\n" +
+      "- Strong passion for blockchain technology and its potential to transform industries.\n" +
+      "- Basic understanding of blockchain concepts and principles.\n" +
+      "- Proficiency in at least one programming language (e.g., Python, JavaScript).\n" +
+      "- Eagerness to learn, adapt, and contribute within a collaborative team environment.\n" +
+      "- Excellent problem-solving skills and attention to detail.",
+    offer:
+      "- Remote internship: work from the comfort of your home or preferred location.\n" +
+      "- Mentorship: learn from experienced blockchain developers and expand your skill set.\n" +
+      "- Practical experience: contribute to real projects with tangible impact.\n" +
+      "- Learning opportunities: deepen your knowledge of blockchain technology and its applications.\n" +
+      "- Flexible schedule: balance your internship with other commitments.\n" +
+      "- Certificate: receive recognition for your contributions at the end of the internship.",
+    createdOn: new Date("2023-08-21"),
+    applyLink: "https://tally.so/r/wL7Mjj"
+  },
+  {
+    key: "28",
+    title: "Business Development Analyst - Raum Network",
+    projectId: "101f06d5-595f-4254-ac9e-4bb6c7975b00",
+    tags: ["Business Development", "StarkNet", "Web3"],
+    location: "Remote",
+    remote: true,
+    description:
+      "Join our Raum Network team and drive strategic partnerships and investment opportunities that shape the future of decentralized technologies.\n" +
+      "\n" +
+      "Our team is at the forefront of identifying, nurturing, and collaborating with innovative blockchain projects that have the potential to revolutionize industries and redefine technology.\n" +
+      "\n" +
+      "Be a part of a dynamic team that's fostering growth and development in the blockchain ecosystem.",
+    responsibilities:
+      "What you’ll be doing\n\n" +
+      "- Research and identify potential partnership and investment opportunities within the blockchain space.\n" +
+      "- Build and maintain relationships with key stakeholders, project leaders, and entrepreneurs in the blockchain community.\n" +
+      "- Collaborate with cross-functional teams to evaluate projects for strategic alignment and growth potential.\n" +
+      "- Negotiate and structure partnerships and investment deals to drive mutual success.\n" +
+      "- Monitor industry trends, market developments, and emerging technologies to inform strategic decisions and recommendations.",
+    requirements:
+      "- 2 years of experience in business development, strategic partnerships, or investment analysis.\n" +
+      "- Passion for blockchain technology and its potential to disrupt traditional industries.\n" +
+      "- Excellent communication and interpersonal skills.\n" +
+      "- Ability to analyze market trends, financial data, and project potential.\n" +
+      "- Strong negotiation and deal structuring capabilities.\n" +
+      "- Entrepreneurial mindset with the ability to identify innovative opportunities.",
+    offer:
+      "- Work remotely from anywhere around the world, leveraging your global perspective.\n" +
+      "- Opportunity to collaborate with leading blockchain innovators and projects.\n" +
+      "- Competitive compensation package including performance-based incentives.\n" +
+      "- Autonomy to shape the direction of strategic partnerships and investments.\n" +
+      "- Access to cutting-edge blockchain technology and industry insights.\n" +
+      "- Flexible working hours to accommodate different time zones.\n" +
+      "- Contribute to the growth and transformation of the blockchain ecosystem.",
+    createdOn: new Date("2023-08-21"),
+    applyLink: "https://tally.so/r/3xMZ4k",
+}
+,
+  {
+    key: "29",
+    title: "Frontend Developer - Raum Network",
+    projectId: "101f06d5-595f-4254-ac9e-4bb6c7975b00",
+    tags: ["Frontend", "React", "Vue", "Typescript", "Javascript"],
+    location: "Remote",
+    remote: true,
+    description:
+      "Join the Raum Network team to craft stunning and responsive user interfaces that redefine the digital experience. Raum Network is dedicated to pushing the boundaries of web development, creating innovative solutions that captivate users and drive engagement.\n" +
+      "\n" +
+      "Raum Network is at the forefront of web technology, employing cutting-edge practices and tools to build next-generation storage solutions and DeFi applications.",
+    responsibilities:
+      "What you’ll be doing\n\n" +
+      "- Collaborate closely with design and backend teams to implement visually appealing and user-friendly interfaces.\n" +
+      "- Develop and maintain responsive web applications that deliver exceptional user experiences.\n" +
+      "- Participate in the design and implementation of new features, contributing your expertise to the creative process.\n" +
+      "- Optimize application performance and ensure compatibility across various devices and browsers.\n" +
+      "- Stay up-to-date with the latest frontend trends, tools, and best practices.",
+    requirements:
+      "- 2+ years of professional frontend development experience.\n" +
+      "- Proficiency in HTML, CSS, and JavaScript.\n" +
+      "- Experience with frontend frameworks like React, Vue.js, or Angular.\n" +
+      "- Strong understanding of responsive design principles.\n" +
+      "- Familiarity with version control systems (e.g., Git).\n" +
+      "- Problem-solving skills and attention to detail.\n" +
+      "- Excellent communication and teamwork abilities.",
+    offer:
+      "- Flexible work arrangement: Choose between working on-site at our Dunedin office or remotely.\n" +
+      "- Token allocation's and benefits package.\n" +
+      "- Opportunities for professional growth and skill development.\n" +
+      "- Access to cutting-edge technologies and tools.\n" +
+      "- Collaborative and inclusive work environment.\n" +
+      "- Work on projects that shape the future of web development.",
+    createdOn: new Date("2023-08-21"),
+    applyLink: "https://tally.so/r/mRMLvQ"
+  },
 ];
 
 export default allJobs;
