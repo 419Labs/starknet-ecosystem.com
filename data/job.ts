@@ -620,7 +620,7 @@ const allJobs: Array<Job> = [
       "- Flexible schedule: balance your internship with other commitments.\n" +
       "- Certificate: receive recognition for your contributions at the end of the internship.",
     createdOn: new Date("2023-08-21"),
-    applyLink: "https://tally.so/r/wL7Mjj"
+    applyLink: "https://tally.so/r/wL7Mjj",
   },
   {
     key: "28",
