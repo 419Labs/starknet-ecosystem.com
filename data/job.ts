@@ -600,7 +600,7 @@ const allJobs: Array<Job> = [
       "This is a unique opportunity to contribute to real-world projects, enhance your technical skills, and be part of a team that's shaping the future of decentralized systems.",
     responsibilities:
       "What you’ll be doing\n\n" +
-      "- Collaborate with our senior developers on the design and implementation of blockchain applications.\n" +
+      "- Collaborate with senior developers on the design and implementation of blockchain applications.\n" +
       "- Assist in the development and testing of smart contracts using languages like Solidity and Rust.\n" +
       "- Contribute to the troubleshooting and resolution of technical issues.\n" +
       "- Participate in brainstorming sessions and provide innovative ideas for blockchain solutions.\n" +
@@ -659,8 +659,7 @@ const allJobs: Array<Job> = [
       "- Contribute to the growth and transformation of the blockchain ecosystem.",
     createdOn: new Date("2023-08-21"),
     applyLink: "https://tally.so/r/3xMZ4k",
-}
-,
+  },
   {
     key: "29",
     title: "Frontend Developer - Raum Network",
