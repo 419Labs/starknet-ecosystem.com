@@ -2997,4 +2997,19 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: true,
   },
+  {
+    id: "2dd53057-6641-45c0-b4c2-e4544d2c7571",
+    name: "flipblob",
+    shortName: "flipblob",
+    description:
+      "FlipBlob is a Starknet-based (dApp) that provides a secure and transparent platform for coin-flipping. Win, and you'll receive double your stake.",
+    tags: ["gamefi", "defi", "cairo", "all", "nft"],
+    image: "disperse-starknet-logo.png",
+    network: {
+      website: "https://flipblob.com/",
+      twitter: "https://twitter.com/flipblob",
+    },
+    isLive: false,
+    isTestnetLive: true,
+  },
 ];
