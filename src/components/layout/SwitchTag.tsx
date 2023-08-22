@@ -8,8 +8,15 @@ import type { FC } from "react";
 interface Props extends TagProps {
   isChecked?: boolean;
   onCheckedChange?: (isChecked: boolean) => void;
+  checkedText: string;
+  placeholderText: string;
 }
-const SwitchTag: FC<Props> = ({ isChecked, onCheckedChange }) => {
+const SwitchTag: FC<Props> = ({
+  isChecked,
+  onCheckedChange,
+  checkedText,
+  placeholderText,
+}) => {
   return (
     <ChakraTag
       onClick={() => onCheckedChange && onCheckedChange(!isChecked)}
@@ -21,7 +28,7 @@ const SwitchTag: FC<Props> = ({ isChecked, onCheckedChange }) => {
     >
       <FontAwesomeIcon fontSize="8px" icon={solid("circle")} />
       <Text ml={2} fontSize="xs" color="green.100" fontWeight="bold">
-        {isChecked ? "Show all" : "Show only mainnet"}
+        {isChecked ? checkedText : placeholderText}
       </Text>
     </ChakraTag>
   );
