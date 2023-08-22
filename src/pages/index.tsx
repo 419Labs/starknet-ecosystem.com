@@ -1,4 +1,4 @@
-import { Box, Flex, HStack, SimpleGrid, Text, VStack } from "@chakra-ui/layout";
+import { Box, Flex, SimpleGrid, Text } from "@chakra-ui/layout";
 import { Image, Show } from "@chakra-ui/react";
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 import type { ChangeEvent } from "react";
