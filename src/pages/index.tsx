@@ -1,4 +1,4 @@
-import { Box, Flex, HStack, SimpleGrid, Text } from "@chakra-ui/layout";
+import { Box, Flex, HStack, SimpleGrid, Text, VStack } from "@chakra-ui/layout";
 import { Image, Show } from "@chakra-ui/react";
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 import type { ChangeEvent } from "react";
@@ -197,7 +197,11 @@ const Home = () => {
         </Flex>
         <Flex direction="column" w="full" align="flex-end">
           <Flex w="full" mt={2} mb={8} justify="space-between" align="center">
-            <HStack mr={2}>
+            <Flex
+              direction={{ base: "column", lg: "row" }}
+              align="flex-start"
+              mr={2}
+            >
               <SwitchTag
                 checkedText="Show all"
                 placeholderText="Show all"
@@ -205,12 +209,14 @@ const Home = () => {
                 isChecked={!filterMainnet}
               />
               <SwitchTag
+                ml={{ base: 0, lg: 2 }}
+                mt={{ base: 2, lg: 0 }}
                 checkedText="Only mainnet"
                 placeholderText="Only mainnet"
                 onCheckedChange={() => setFilterMainnet(true)}
                 isChecked={filterMainnet}
               />
-            </HStack>
+            </Flex>
             <Flex>
               <Show above="md">
                 <Box mr={2}>{renderSortMenu()}</Box>

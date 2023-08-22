@@ -16,6 +16,7 @@ const SwitchTag: FC<Props> = ({
   onCheckedChange,
   checkedText,
   placeholderText,
+  ...props
 }) => {
   return (
     <ChakraTag
@@ -25,6 +26,7 @@ const SwitchTag: FC<Props> = ({
       background={isChecked ? "green.500" : "transparent"}
       border="1px solid"
       borderColor={isChecked ? "transparent" : "green.500"}
+      {...props}
     >
       <FontAwesomeIcon fontSize="8px" icon={solid("circle")} />
       <Text ml={2} fontSize="xs" color="green.100" fontWeight="bold">
