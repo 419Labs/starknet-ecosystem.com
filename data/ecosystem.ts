@@ -3005,14 +3005,13 @@ export const allProjects: Array<Project> = [
     tags: ["nft"],
     image: "logo-face-to-see.png",
     network: {
-      twitter:"https://twitter.com/FaceToSee_",
-      discord:"https://discord.com/invite/djU2mEJcSq",
+      twitter: "https://twitter.com/FaceToSee_",
+      discord: "https://discord.com/invite/djU2mEJcSq",
       website: "https://linktr.ee/facetosee_",
       github: "",
-      telegram:"",
+      telegram: "",
     },
     isLive: true,
     isTestnetLive: false,
-
-  }
+  },
 ];
