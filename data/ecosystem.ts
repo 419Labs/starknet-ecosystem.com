@@ -2876,11 +2876,12 @@ export const allProjects: Array<Project> = [
     id: "101f06d5-595f-4254-ac9e-4bb6c7975b00",
     name: "RN Bridge",
     shortName: "RN Bridge",
-    description: "Seamless transfer of RN tokens from Polygon to StarkNet.",
+    description:
+      "Raum Network's RN Bridge introduces an innovative solution for users seeking to seamlessly transfer their RN Tokens from the Polygon network to StarkNet. This bridge serves as a vital link, ensuring the smooth migration of tokens between these two distinct blockchain ecosystems. We will incorporate major tokens such as ETH, USDC, USDT, DAI, and WBTC in forthcoming updates.",
     tags: ["all", "bridge", "defi"],
     image: "RN_Bridge.png",
     network: {
-      website: "https://raum.network",
+      website: "https://v1.bridge.raum.network/swap",
       github: "https://github.com/Raum-Network",
       twitter: "https://twitter.com/RaumNetwork",
       medium: "https://raumnetwork.medium.com",
@@ -3013,5 +3014,20 @@ export const allProjects: Array<Project> = [
     },
     isLive: true,
     isTestnetLive: false,
+  },
+  {
+    id: "2dd53057-6641-45c0-b4c2-e4544d2c7571",
+    name: "flipblob",
+    shortName: "flipblob",
+    description:
+      "FlipBlob is a Starknet-based (dApp) that provides a secure and transparent platform for coin-flipping. Win, and you'll receive double your stake.",
+    tags: ["gamefi", "defi", "cairo", "all", "nft"],
+    image: "disperse-starknet-logo.png",
+    network: {
+      website: "https://flipblob.com/",
+      twitter: "https://twitter.com/flipblob",
+    },
+    isLive: false,
+    isTestnetLive: true,
   },
 ];
