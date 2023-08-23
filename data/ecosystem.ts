@@ -2876,11 +2876,12 @@ export const allProjects: Array<Project> = [
     id: "101f06d5-595f-4254-ac9e-4bb6c7975b00",
     name: "RN Bridge",
     shortName: "RN Bridge",
-    description: "Seamless transfer of RN tokens from Polygon to StarkNet.",
+    description:
+      "Raum Network's RN Bridge introduces an innovative solution for users seeking to seamlessly transfer their RN Tokens from the Polygon network to StarkNet. This bridge serves as a vital link, ensuring the smooth migration of tokens between these two distinct blockchain ecosystems. We will incorporate major tokens such as ETH, USDC, USDT, DAI, and WBTC in forthcoming updates.",
     tags: ["all", "bridge", "defi"],
     image: "RN_Bridge.png",
     network: {
-      website: "https://raum.network",
+      website: "https://v1.bridge.raum.network/swap",
       github: "https://github.com/Raum-Network",
       twitter: "https://twitter.com/RaumNetwork",
       medium: "https://raumnetwork.medium.com",
@@ -2997,12 +2998,45 @@ export const allProjects: Array<Project> = [
     isTestnetLive: true,
   },
   {
+    id: "8a79276c-3b5b-11ee-be56-0242ac120002",
+    name: "Face To See NFTs",
+    shortName: "FATOCE",
+    description:
+      "F2C is the 1st collection in the product suite of DeColGen Labs, aiming to build a collective of mini-games and entertainment dapps.",
+    tags: ["nft"],
+    image: "logo-face-to-see.png",
+    network: {
+      twitter: "https://twitter.com/FaceToSee_",
+      discord: "https://discord.com/invite/djU2mEJcSq",
+      website: "https://linktr.ee/facetosee_",
+      github: "",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
+  {
+    id: "2dd53057-6641-45c0-b4c2-e4544d2c7571",
+    name: "flipblob",
+    shortName: "flipblob",
+    description:
+      "FlipBlob is a Starknet-based (dApp) that provides a secure and transparent platform for coin-flipping. Win, and you'll receive double your stake.",
+    tags: ["gamefi", "defi", "cairo", "all", "nft"],
+    image: "disperse-starknet-logo.png",
+    network: {
+      website: "https://flipblob.com/",
+      twitter: "https://twitter.com/flipblob",
+    },
+    isLive: false,
+    isTestnetLive: true,
+  },
+  {
     id: "3b8a8bae-d7bc-4b80-a3ce-fb0e88e0fec6",
     name: "StarkID",
     shortName: "STK",
     description:
       "StarkID is the most user-friendly decentralized naming service platform on Starknet, offering customized DIDs for users, with the suffix .stk.",
-    tags: ["nft", "cairo"],
+    tags: ["nft", "tools", "digital_id"],
     image: "StarkID-logo.png",
     network: {
       website: "https://starkid.pro/",

@@ -27,8 +27,8 @@ const githubReposToFollow = [
   { organization: "xJonathanLEI", name: "starknet-rs" },
   { organization: "0xs34n", name: "starknet.js" },
   { organization: "software-mansion", name: "starknet.py" },
-  { organization: "software-mansion", name: "protostar" },
-  { organization: "OpenZeppelin", name: "nile" },
+  { organization: "foundry-rs", name: "starknet-foundry" },
+  { organization: "software-mansion", name: "scarb" },
 ];
 
 const GithubReposPaper: FC = () => {

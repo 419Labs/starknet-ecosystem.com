@@ -197,14 +197,26 @@ const Home = () => {
         </Flex>
         <Flex direction="column" w="full" align="flex-end">
           <Flex w="full" mt={2} mb={8} justify="space-between" align="center">
-            <Box mr={2}>
+            <Flex
+              direction={{ base: "column", lg: "row" }}
+              align="flex-start"
+              mr={2}
+            >
               <SwitchTag
-                onCheckedChange={(newValue: boolean) =>
-                  setFilterMainnet(newValue)
-                }
+                checkedText="Show all"
+                placeholderText="Show all"
+                onCheckedChange={() => setFilterMainnet(false)}
+                isChecked={!filterMainnet}
+              />
+              <SwitchTag
+                ml={{ base: 0, lg: 2 }}
+                mt={{ base: 2, lg: 0 }}
+                checkedText="Only mainnet"
+                placeholderText="Only mainnet"
+                onCheckedChange={() => setFilterMainnet(true)}
                 isChecked={filterMainnet}
               />
-            </Box>
+            </Flex>
             <Flex>
               <Show above="md">
                 <Box mr={2}>{renderSortMenu()}</Box>
