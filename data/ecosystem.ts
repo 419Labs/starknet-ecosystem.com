@@ -3030,4 +3030,19 @@ export const allProjects: Array<Project> = [
     isLive: false,
     isTestnetLive: true,
   },
+  {
+    id: "f5c7c4b6-251a-4f8b-964c-607e832a8431",
+    name: "StarkDAO",
+    shortName: "StarkDAO",
+    description:
+      "StarkDAO is a community-driven decentralized autonomous organization (DAO) that serves projects on Starknet.",
+    tags: ["dao", "defi", "cairo", "all"],
+    image: "starkdao-logo.png",
+    network: {
+      website: "https://starkdao.org",
+      twitter: "https://x.com/starkdao_",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
 ];
