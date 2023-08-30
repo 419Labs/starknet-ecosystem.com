@@ -3030,4 +3030,18 @@ export const allProjects: Array<Project> = [
     isLive: false,
     isTestnetLive: true,
   },
+  {
+    id: "3b8a8bae-d7bc-4b80-a3ce-fb0e88e0fec6",
+    name: "StarkID",
+    shortName: "STK",
+    description:
+      "StarkID is the most user-friendly decentralized naming service platform on Starknet, offering customized DIDs for users, with the suffix .stk.",
+    tags: ["nft", "tools", "digital_id"],
+    image: "StarkID-logo.png",
+    network: {
+      website: "https://starkid.pro/",
+    },
+    isLive: true,
+    isTestnetLive: true,
+  },
 ];
