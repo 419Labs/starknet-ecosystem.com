@@ -59,7 +59,7 @@
     "react-cool-inview": "^2.0.9",
     "react-dom": "^18.2.0",
     "react-flippy": "^1.1.0",
-    "react-tsparticles": "^1.41.5",
+    "react-tsparticles": "^2.12.2",
     "swr": "^2.2.2",
     "yarn": "^1.22.17"
   },
