@@ -3044,4 +3044,18 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: true,
   },
+  {
+    id: "b1098e92-4b0c-44d3-995a-063ec53d019b",
+    name: "CairoFiSwap",
+    shortName: "CairoFi",
+    description:
+      "CairoFi is a decentralized platform built on Starknet, utilizing 100% Cairo, aiming to provide the most convenient services for Starknet. Its core ethos is ‘’code is law’’!",
+    tags: ["defi"],
+    image: "CairoFi-logo.png",
+    network: {
+      website: "https://cairofi.org/",
+    },
+    isLive: true,
+    isTestnetLive: true,
+  },
 ];
