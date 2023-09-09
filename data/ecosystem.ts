@@ -3044,4 +3044,18 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: true,
   },
+  {
+    id: "9423b0f0-d1de-4d58-be0f-a59b5fa2e09c",
+    name: "Starknet.unity",
+    shortName: "Starknet.unity",
+    description:
+      "The Starknet.unity is endeavoring to take the StarknetJS experience into unity engine",
+    tags: ["infrastructure", "tools"],
+    image: "starknetunity.png",
+    network: {
+      github: "https://github.com/iLAYER-ORG/Starknet.unity",
+    },
+    isLive: true,
+    isTestnetLive: true,
+  },
 ];
