@@ -650,7 +650,7 @@ export const allProjects: Array<Project> = [
       discord: "https://discord.gg/RFbSXxtqUG",
       telegram: "https://t.me/Ekubo_Protocol",
     },
-    isLive: false,
+    isLive: true,
     isTestnetLive: true,
   },
   {
