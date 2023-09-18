@@ -55,7 +55,7 @@
     "next-seo": "^6.1.0",
     "prettier": "^2.5.1",
     "react": "^18.2.0",
-    "react-chartjs-2": "^4.1.0",
+    "react-chartjs-2": "^5.0.0",
     "react-cool-inview": "^2.0.9",
     "react-dom": "^18.2.0",
     "react-flippy": "^1.1.0",
