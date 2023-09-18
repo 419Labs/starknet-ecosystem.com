@@ -608,12 +608,19 @@
   dependencies:
     "@chakra-ui/icon" "3.0.11"
 
-"@chakra-ui/color-mode@2.1.9", "@chakra-ui/color-mode@^2.1.9":
+"@chakra-ui/color-mode@2.1.9":
   version "2.1.9"
   resolved "https://registry.yarnpkg.com/@chakra-ui/color-mode/-/color-mode-2.1.9.tgz#d3a6f9ba9eee15d9e14cc96484e25d44cef1dbc1"
   integrity sha512-0kx0I+AQon8oS23/X+qMtnhsv/1BUulyJvU56p3Uh8CRaBfgJ7Ly9CerShoUL+5kadu6hN1M9oty4cugaCwv2w==
   dependencies:
     "@chakra-ui/react-use-safe-layout-effect" "2.0.2"
+
+"@chakra-ui/color-mode@^2.2.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@chakra-ui/color-mode/-/color-mode-2.2.0.tgz#828d47234c74ba2fb4c5dd63a63331aead20b9f6"
+  integrity sha512-niTEA8PALtMWRI9wJ4LL0CSBDo8NBfLNp4GD6/0hstcm3IlbBHTVKxN6HwSaoNYfphDQLxCjT4yG+0BJA5tFpg==
+  dependencies:
+    "@chakra-ui/react-use-safe-layout-effect" "2.1.0"
 
 "@chakra-ui/control-box@2.0.10":
   version "2.0.10"
@@ -996,6 +1003,11 @@
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/@chakra-ui/react-use-safe-layout-effect/-/react-use-safe-layout-effect-2.0.2.tgz#31088eeb4b2a6910251683ddb15fb855d6127adf"
   integrity sha512-gl5HDq9RVeDJiT8udtpx12KRV8JPLJHDIUX8f/yZcKpXow0C7FFGg5Yy5I9397NQog5ZjKMuOg+AUq9TLJxsyQ==
+
+"@chakra-ui/react-use-safe-layout-effect@2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@chakra-ui/react-use-safe-layout-effect/-/react-use-safe-layout-effect-2.1.0.tgz#3a95f0ba6fd5d2d0aa14919160f2c825f13e686f"
+  integrity sha512-Knbrrx/bcPwVS1TorFdzrK/zWA8yuU/eaXDkNj24IrKoRlQrSBFarcgAEzlCHtzuhufP3OULPkELTzz91b0tCw==
 
 "@chakra-ui/react-use-size@2.0.4":
   version "2.0.4"

@@ -21,7 +21,7 @@
     "test:ci": "jest --ci"
   },
   "dependencies": {
-    "@chakra-ui/color-mode": "^2.1.9",
+    "@chakra-ui/color-mode": "^2.2.0",
     "@chakra-ui/input": "^2.0.11",
     "@chakra-ui/layout": "^2.1.8",
     "@chakra-ui/modal": "^2.2.1",
