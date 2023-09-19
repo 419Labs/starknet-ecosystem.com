@@ -36,8 +36,8 @@ export const allProjects: Array<Project> = [
     name: "Reddio",
     shortName: "Reddio",
     description:
-      "Reddio is a technology company that builds infrastructure for the blockchain, to help developers adopt blockchain technologies with the world’s first easy-to-use Layer 2 zkRollup Agnostic APIs. Enabling developers embed Token or NFT (Non-fungible token) into their web, desktop and mobile applications with massive scalability and zero gas fee for off-chain. Reddio has partnered with the leading layer 2 zkRollup provider Starkware to launch StarkEx APIs, with which you can have instant trading confirmation within second, high concurrent transactions up to 10k TPS, 0 gas fee as it’s done on layer 2 and the asset security derived from layer 1 Ethereum. Reddio is dedicated to Starknet ecosystem to build reference implementation on Cairo Smart Contrats. Reddio is backed by top VCs such as Paradigm and Arena Holdings.",
-    tags: ["tools", "infrastructure", "nft", "starkex"],
+      "Reddio is a technology company that builds infrastructure for the blockchain, to help developers adopt blockchain technologies with the easy-to-use zkRollup Layer 2 for Apps and Games. Enabling developers embed Token or NFT(Non-fungible token) into their web, desktop and mobile applications with massive scalability (up to 10k TPS) and zero gas fee for off-chain. Reddio also offers the fastest way to build Web3 Apps on StarkNet and launch your own StarkNet on layer 3.",
+    tags: ["tools", "infrastructure", "nft", "gamefi", "starkex"],
     image: "reddio.png",
     network: {
       website: "https://www.reddio.com/",
