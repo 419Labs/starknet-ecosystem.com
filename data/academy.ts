@@ -49,7 +49,7 @@ export const highlightedLearning: Resource[] = [
       "An interactive tutorial to get you up and running with Starknet",
     tags: ["learn", "tutorial"],
     network: {
-      github: "https://github.com/onlydustxyz/starklings",
+      github: "https://github.com/shramee/starklings-cairo1",
     },
   },
 ];
