@@ -1,5 +1,3 @@
-import { BigNumber } from "ethers";
-
 import type { BridgeMetrics } from "../models/bridge-metrics";
 import type { GithubRepo } from "../models/github-repo";
 import type { NpmDownloadsDto } from "../models/npm-downloads";
@@ -82,7 +80,7 @@ const fetchBridgeMetrics = (testnet?: boolean): Promise<BridgeMetrics> =>
       return response.json();
     })
     .then((result) => ({
-      balance: BigNumber.from(result.balance),
+      balance: BigInt(result.balance),
       ethValue: result.ethValue,
     }));
 

@@ -1,7 +1,7 @@
 import { Box, Flex, Link, SimpleGrid, Text } from "@chakra-ui/layout";
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { formatUnits } from "ethers/lib/utils";
+import { formatUnits } from "ethers";
 import type { FC } from "react";
 import { useEffect, useState } from "react";
 
