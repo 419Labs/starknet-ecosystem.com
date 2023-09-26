@@ -3024,7 +3024,7 @@ export const allPr  ojects: Array<Project> = [
     tags: ["gamefi", "defi", "cairo", "all", "nft"],
     image: "disperse-starknet-logo.png",
     network: {
-      website: "https://flipblob.com/",
+      website: "https://flipblob.com/", 
       twitter: "https://twitter.com/flipblob",
     },
     isLive: false,
@@ -3063,7 +3063,7 @@ export const allPr  ojects: Array<Project> = [
     name: "OnchainBlock",
     shortName: "OnchainBlock",
     description:
-      "Welcome to OnchainBlock - the destination to delve deeper into the realm of Stablecoins, Ethereum, and various other asset types based on blockchain technology.",
+      "Welcome to OnchainBlock - the destination to delve deeper into the realm of Starknet, and various other asset types based on blockchain technology.",
     tags: ["bridge", "tools"],
     image: "OnchainBlock.png",
     network: {
