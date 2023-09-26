@@ -30,7 +30,7 @@ export interface ProjectItf extends Project {
   tagsRef: Tag[];
 }
 
-export const allProjects: Array<Project> = [
+export const allPr  ojects: Array<Project> = [
   {
     id: "abd25d78-ffb6-4a1d-94c0-d2f9016d6015",
     name: "Dmail Network",
@@ -3058,4 +3058,22 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: true,
   },
+  {
+    id: "e6d336fd-f243-4e35-95be-74d9c6bdc929",
+    name: "OnchainBlock",
+    shortName: "OnchainBlock",
+    description:
+      "Welcome to OnchainBlock - the destination to delve deeper into the realm of Stablecoins, Ethereum, and various other asset types based on blockchain technology.",
+    tags: ["bridge", "tools"],
+    image: "OnchainBlock.png",
+    network: {
+      website: "https://onchainblock.xyz/",
+      github: "https://github.com/OnchainBlock",
+      twitter: "https://twitter.com/OnchainBlock",
+      medium: "https://medium.com/@onchainblock",
+      telegram: "https://t.me/trackerETH",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  }
 ];
