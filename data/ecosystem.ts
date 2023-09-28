@@ -30,7 +30,7 @@ export interface ProjectItf extends Project {
   tagsRef: Tag[];
 }
 
-export const allPr  ojects: Array<Project> = [
+export const allProjects: Array<Project> = [
   {
     id: "abd25d78-ffb6-4a1d-94c0-d2f9016d6015",
     name: "Dmail Network",
@@ -3024,7 +3024,7 @@ export const allPr  ojects: Array<Project> = [
     tags: ["gamefi", "defi", "cairo", "all", "nft"],
     image: "disperse-starknet-logo.png",
     network: {
-      website: "https://flipblob.com/", 
+      website: "https://flipblob.com/",
       twitter: "https://twitter.com/flipblob",
     },
     isLive: false,
