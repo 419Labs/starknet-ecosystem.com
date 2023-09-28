@@ -3040,6 +3040,7 @@ export const allProjects: Array<Project> = [
     image: "StarkID-logo.png",
     network: {
       website: "https://starkid.pro/",
+      twitter: "https://twitter.com/stark_did",
     },
     isLive: true,
     isTestnetLive: true,
