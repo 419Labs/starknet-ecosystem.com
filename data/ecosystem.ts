@@ -3093,6 +3093,7 @@ export const allProjects: Array<Project> = [
       twitter: "https://twitter.com/OnchainBlock",
       medium: "https://medium.com/@onchainblock",
       telegram: "https://t.me/trackerETH",
+      discord: "",
     },
     isLive: true,
     isTestnetLive: false,
