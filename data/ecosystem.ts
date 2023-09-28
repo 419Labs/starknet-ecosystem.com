@@ -84,7 +84,7 @@ export const allProjects: Array<Project> = [
       discord: "https://discord.com/invite/hJupqTrK4G",
       telegram: "",
     },
-    isLive: false,
+    isLive: true,
     isTestnetLive: true,
   },
   {
@@ -456,7 +456,7 @@ export const allProjects: Array<Project> = [
     image: "avnu.png",
     network: {
       website: "https://avnu.fi",
-      github: "",
+      github: "https://github.com/avnu-labs/avnu-contracts-v2",
       twitter: "https://twitter.com/avnu_fi",
       medium: "https://avnu-fi.medium.com/",
       discord: "https://discord.gg/invite/avnu-fi",
