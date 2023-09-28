@@ -3096,5 +3096,5 @@ export const allProjects: Array<Project> = [
     },
     isLive: true,
     isTestnetLive: false,
-  }
+  },
 ];
