@@ -477,8 +477,8 @@ export const allProjects: Array<Project> = [
     network: {
       website: "https://www.starkpulse.xyz/",
       github: "",
-      twitter: "https://twitter.com/avnu_fi",
-      medium: "https://avnu-fi.medium.com/",
+      twitter: "",
+      medium: "",
       discord: "https://discord.gg/invite/avnu-fi",
       telegram: "https://t.me/StarkPulseBot",
     },
