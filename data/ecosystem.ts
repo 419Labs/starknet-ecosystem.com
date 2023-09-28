@@ -84,7 +84,7 @@ export const allProjects: Array<Project> = [
       discord: "https://discord.com/invite/hJupqTrK4G",
       telegram: "",
     },
-    isLive: false,
+    isLive: true,
     isTestnetLive: true,
   },
   {
@@ -456,7 +456,7 @@ export const allProjects: Array<Project> = [
     image: "avnu.png",
     network: {
       website: "https://avnu.fi",
-      github: "",
+      github: "https://github.com/avnu-labs/avnu-contracts-v2",
       twitter: "https://twitter.com/avnu_fi",
       medium: "https://avnu-fi.medium.com/",
       discord: "https://discord.gg/invite/avnu-fi",
@@ -464,6 +464,26 @@ export const allProjects: Array<Project> = [
     },
     isLive: true,
     isTestnetLive: true,
+  },
+  {
+    id: "a144e176-e790-4ab3-878b-2a6ca15c9251",
+    name: "StarkPulse",
+    shortName: "StarkPulse",
+    description:
+      "Explore the Starknet realm with StarkPulse.\n" +
+      "Wallet Tracking, Token Discovery, Pool Detection, and APY Insights at Your Fingertips. And more to come soon.\n",
+    tags: ["defi", "infrastructure", "tools"],
+    image: "starkpulse.jpg",
+    network: {
+      website: "https://www.starkpulse.xyz/",
+      github: "",
+      twitter: "",
+      medium: "",
+      discord: "https://discord.gg/invite/avnu-fi",
+      telegram: "https://t.me/StarkPulseBot",
+    },
+    isLive: true,
+    isTestnetLive: false,
   },
   {
     id: "03f6f911-c24f-411f-9b31-1bc113ec7a0c",
@@ -3040,6 +3060,7 @@ export const allProjects: Array<Project> = [
     image: "StarkID-logo.png",
     network: {
       website: "https://starkid.pro/",
+      twitter: "https://twitter.com/stark_did",
     },
     isLive: true,
     isTestnetLive: true,
