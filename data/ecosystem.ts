@@ -3095,6 +3095,6 @@ export const allProjects: Array<Project> = [
       telegram: "https://t.me/trackerETH",
     },
     isLive: true,
-    isTestnetLive: true,
+    isTestnetLive: false,
   },
 ];
