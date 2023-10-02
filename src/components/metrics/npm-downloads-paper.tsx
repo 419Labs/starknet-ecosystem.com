@@ -147,6 +147,17 @@ const NpmDownloadsPaper: FC<Props> = ({ name, label }) => {
                 xAxis: {
                   display: false,
                 },
+                yAxis: {
+                  display: false,
+                },
+                x: {
+                  grid: {
+                    display: false,
+                  },
+                  ticks: {
+                    display: false,
+                  },
+                },
                 y: {
                   grid: {
                     display: false,
