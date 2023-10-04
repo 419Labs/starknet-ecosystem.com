@@ -3097,4 +3097,20 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: false,
   },
+  {
+    id: "4bce31ab-6c5f-478a-b8ac-0dba6f8ed9a3",
+    name: "D'islands",
+    shortName: "D'islands",
+    description: "D'islands is an on-chain gaming ecosystem built on the Starknet blockchain. It aims to create a truly decentralized, scalable and autonomous world where players can enjoy unlimited games and interact with each other without any limitations.",
+    tags: ["nft", "gamefi"],
+    image: "Disland-logo.jpg",
+    network: {
+      website: "https://www.dislands.com/",
+      twitter: "https://twitter.com/0xDislands",
+      medium: "https://medium.com/@dislands",
+      discord: "https://discord.com/invite/G6ds4SZBvf",
+    },
+    isLive: false,
+    isTestnetLive: false,
+  },
 ];
