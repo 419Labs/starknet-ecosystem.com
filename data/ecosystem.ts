@@ -3114,4 +3114,23 @@ export const allProjects: Array<Project> = [
     isLive: false,
     isTestnetLive: false,
   },
+  {
+    id: "f0f90980-e14e-43c4-b50b-2c1c6150f345",
+    name: "Owlto Finance",
+    shortName: "Owlto",
+    description:
+      "Owlto Finance is a decentralized cross-rollup bridge that focuses on L2, providing 'safe, fast, cheap, and easy-to-use' services.",
+    tags: ["bridge", "infrastructure"],
+    image: "owlto.png",
+    network: {
+      website: "https://owlto.finance/",
+      github: "https://github.com/owlto-finance/",
+      twitter: "https://twitter.com/Owlto_Finance",
+      medium: "https://owlto-finance.medium.com/",
+      discord: "https://discord.gg/dyArfVwdxm",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
 ];
