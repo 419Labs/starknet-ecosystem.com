@@ -3114,4 +3114,22 @@ export const allProjects: Array<Project> = [
     isLive: false,
     isTestnetLive: false,
   },
+  {    
+    id: "1d211d22-a83c-407f-aabe-9f34081048b4",
+    name: "Element Market",
+    shortName: "Element",
+    description: "The First Community-driven Aggregated Marketplace, the most gas-saving trading place for NFTs",
+    tags: ["nft"],
+    image: "elementmarket.png",
+    network: {
+      website: "https://element.market/",
+      github: "element-market - Overview",
+      twitter: "https://twitter.com/Element_Market",
+      medium: "https://element-market.medium.com/",
+      discord: "https://discord.com/invite/elementmarket",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
 ];
