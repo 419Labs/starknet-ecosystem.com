@@ -64,7 +64,7 @@
   },
   "devDependencies": {
     "@testing-library/jest-dom": "5.16.4",
-    "@testing-library/react": "12.1.4",
+    "@testing-library/react": "14.0.0",
     "@testing-library/user-event": "13.5.0",
     "@types/dompurify": "^3.0.2",
     "@types/node": "~17.0.32",
