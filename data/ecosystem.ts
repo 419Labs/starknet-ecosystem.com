@@ -3114,4 +3114,21 @@ export const allProjects: Array<Project> = [
     isLive: false,
     isTestnetLive: false,
   },
+  {
+    id: "f6437ccf-fa61-407f-a45b-b54f0147c52c",
+    name: "Flex Marketplace",
+    shortName: "Flexing.GG",
+    description:
+      "Flexing.GG is the first dynamic NFT Marketplace on Starknet - built by community for community",
+    tags: ["nft", "infrastructure", "gamefi"]
+    image: "Flexing.GG.png",
+    network: {
+      website: "https://flexing.gg/",
+      twitter: "https://twitter.com/flex_strk",
+      medium: "https://mirror.xyz/0x4522b644fCD50cBB71Bc8682d67A0E7c2031ABd1",
+      telegram: "https://t.me/+ZSlSNq-porFhNDU1",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
 ];
