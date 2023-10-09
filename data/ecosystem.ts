@@ -3120,13 +3120,32 @@ export const allProjects: Array<Project> = [
     shortName: "Flexing.GG",
     description:
       "Flexing.GG is the first dynamic NFT Marketplace on Starknet - built by community for community",
-    tags: ["nft", "infrastructure", "gamefi"]
+    tags: ["nft", "infrastructure", "gamefi"],
     image: "Flexing.GG.png",
     network: {
       website: "https://flexing.gg/",
       twitter: "https://twitter.com/flex_strk",
       medium: "https://mirror.xyz/0x4522b644fCD50cBB71Bc8682d67A0E7c2031ABd1",
       telegram: "https://t.me/+ZSlSNq-porFhNDU1",
+      },
+    isLive: false,
+    isTestnetLive: false,
+  },
+  {
+    id: "f0f90980-e14e-43c4-b50b-2c1c6150f345",
+    name: "Owlto Finance",
+    shortName: "Owlto",
+    description:
+      "Owlto Finance is a decentralized cross-rollup bridge that focuses on L2, providing 'safe, fast, cheap, and easy-to-use' services.",
+    tags: ["bridge", "infrastructure"],
+    image: "owlto.png",
+    network: {
+      website: "https://owlto.finance/",
+      github: "https://github.com/owlto-finance/",
+      twitter: "https://twitter.com/Owlto_Finance",
+      medium: "https://owlto-finance.medium.com/",
+      discord: "https://discord.gg/dyArfVwdxm",
+      telegram: "",
     },
     isLive: true,
     isTestnetLive: false,
