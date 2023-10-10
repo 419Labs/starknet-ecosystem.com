@@ -3114,11 +3114,12 @@ export const allProjects: Array<Project> = [
     isLive: false,
     isTestnetLive: false,
   },
-  {    
+  {
     id: "1d211d22-a83c-407f-aabe-9f34081048b4",
     name: "Element Market",
     shortName: "Element",
-    description: "The First Community-driven Aggregated Marketplace, the most gas-saving trading place for NFTs",
+    description:
+      "The First Community-driven Aggregated Marketplace, the most gas-saving trading place for NFTs",
     tags: ["nft"],
     image: "elementmarket.png",
     network: {
