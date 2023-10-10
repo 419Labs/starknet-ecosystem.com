@@ -3133,4 +3133,23 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: false,
   },
+  {
+    id: "966c960c-8bd9-49b4-b67b-94616e959e43",
+    name: "Crypts and Caverns",
+    shortName: "Crypts and Caverns",
+    description:
+      "9000 generative on-chain dungeons in the Lootverse. Can be used by designers and developers for text-based, 2D, and 3D games.",
+    tags: ["gamefi", "nft"],
+    image: "cryptsandcaverns.png",
+    network: {
+      website: "https://threepwave.com/cryptsandcaverns",
+      github: "https://github.com/CheDAOLabs/cryptsandcaverns",
+      twitter: "https://twitter.com/cryptsncaverns",
+      medium: "",
+      discord: "https://discord.com/invite/vXX84QjR7F",
+      telegram: "",
+    },
+    isLive: false,
+    isTestnetLive: true,
+  },
 ];
