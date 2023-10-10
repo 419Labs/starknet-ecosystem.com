@@ -3115,6 +3115,25 @@ export const allProjects: Array<Project> = [
     isTestnetLive: false,
   },
   {
+    id: "1d211d22-a83c-407f-aabe-9f34081048b4",
+    name: "Element Market",
+    shortName: "Element",
+    description:
+      "The First Community-driven Aggregated Marketplace, the most gas-saving trading place for NFTs",
+    tags: ["nft"],
+    image: "elementmarket.png",
+    network: {
+      website: "https://element.market/",
+      github: "element-market - Overview",
+      twitter: "https://twitter.com/Element_Market",
+      medium: "https://element-market.medium.com/",
+      discord: "https://discord.com/invite/elementmarket",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
+  {
     id: "f0f90980-e14e-43c4-b50b-2c1c6150f345",
     name: "Owlto Finance",
     shortName: "Owlto",
