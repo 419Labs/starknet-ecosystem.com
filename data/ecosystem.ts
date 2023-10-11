@@ -2365,7 +2365,7 @@ export const allProjects: Array<Project> = [
       github: "https://github.com/possc/StarkSport",
       twitter: "https://twitter.com/starkfinance",
       medium: "",
-      discord: "https://discord.gg/rX38ZwbqKw",
+      discord: "https://discord.gg/starksports",
       telegram: "https://t.me/starksportchanel",
     },
     isLive: true,
