@@ -3171,4 +3171,23 @@ export const allProjects: Array<Project> = [
     isLive: false,
     isTestnetLive: true,
   },
+  {
+    id: "6561553f-1d01-429f-98cc-69a8d7182a9c",
+    name: "Blast",
+    shortName: "Blast",
+    description:
+      "Blast is a decentralized API platform with best in class response times and availability. It leverages the power of hundreds of node providers and advanced routing algorithms for unmatched service quality!",
+    tags: ["tools", "infrastructure"],
+    image: "blast.png",
+    network: {
+      website: "https://blastapi.io/",
+      github: "https://github.com/dave/blast",
+      twitter: "https://twitter.com/BlastAPI",
+      medium: "https://bware.page.link/medium",
+      discord: "https://discord.gg/bwarelabs",
+      telegram: "https://t.me/BwareLabsAnnouncements",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
 ];
