@@ -3181,7 +3181,7 @@ export const allProjects: Array<Project> = [
     image: "blast.png",
     network: {
       website: "https://blastapi.io/",
-      github: "https://github.com/dave/blast",
+      github: "https://github.com/bwarelabs",
       twitter: "https://twitter.com/BlastAPI",
       medium: "https://bware.page.link/medium",
       discord: "https://discord.gg/bwarelabs",
