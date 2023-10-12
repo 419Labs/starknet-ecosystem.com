@@ -3190,4 +3190,23 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: false,
   },
+  {
+    id: "809178ab-4f9c-4188-a8d7-6cdf47150cdf",
+    name: "Metacube",
+    shortName: "Metacube",
+    description:
+      "Metacube is a Free2Play Massive Multiplayer Game, where the winners of ephemeral events get their assets distributed on Starknet",
+    tags: ["gamefi", "nft", "mobile"],
+    image: "metacube.png",
+    network: {
+      website: "https://metacube.games/",
+      github: "https://github.com/metacube-games",
+      twitter: "https://twitter.com/metacubegames",
+      medium: "",
+      discord: "discord.gg/3Ka4jACr7b",
+      telegram: "",
+    },
+    isLive: false,
+    isTestnetLive: false,
+  },
 ];
