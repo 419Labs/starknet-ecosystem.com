@@ -3209,4 +3209,23 @@ export const allProjects: Array<Project> = [
     isLive: false,
     isTestnetLive: false,
   },
+  {
+    id: "3d86dd11-fce5-4a86-9386-afd3c7c953d6",
+    name: "OG SponziMaask",
+    shortName: "Sponzi",
+    description:
+      "The OG SponziMaask collection is your Sponzi OG Pass. It gives to the owners an exclusive pole position within the SPONZI project.",
+    tags: ["nft","governance"],
+    image: "ogSponziMaask.jpg",
+    network: {
+      website: "https://www.sponzi.wtf/",
+      github: "",
+      twitter: "https://twitter.com/official_sponzi",
+      medium: "https://medium.com/@sponzimaask/og-sponzimaask-nft-7f2f184f446d",
+      discord: "",
+      telegram: "",
+    },
+    isLive: false,
+    isTestnetLive: false,
+  },
 ];
