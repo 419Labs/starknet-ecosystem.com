@@ -114,7 +114,7 @@ const EcosystemMetrics: FC<Props> = ({ isMainnet = true }: Props) => {
         <Text mr={2}>{t.metrics.data_coming_from || "Data coming from"} </Text>
         <Link
           isExternal
-          href="https://goerli.voyager.online"
+          href="https://voyager.online"
           _hover={{ textDecoration: "none", color: "whiteAlpha.900" }}
           display="flex"
           mr={2}
@@ -125,7 +125,7 @@ const EcosystemMetrics: FC<Props> = ({ isMainnet = true }: Props) => {
         <Text mr={2}>and</Text>
         <Link
           isExternal
-          href="https://etherscan.io/address/0xae0ee0a63a2ce6baeeffe56e7714fb4efe48d419"
+          href="https://etherscan.io"
           _hover={{ textDecoration: "none", color: "whiteAlpha.900" }}
           display="flex"
           mr={2}
