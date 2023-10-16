@@ -131,89 +131,92 @@ const NpmDownloadsPaper: FC<Props> = ({ name, label }) => {
       </VStack>
       {values ? (
         <>
-          <Line
-            options={{
-              responsive: true,
-              elements: {
-                point: {
-                  radius: 0,
-                },
-              },
-              hover: {
-                mode: "nearest",
-                intersect: true,
-              },
-              scales: {
-                xAxis: {
-                  display: false,
-                },
-                yAxis: {
-                  display: false,
-                },
-                x: {
-                  grid: {
-                    display: false,
-                  },
-                  ticks: {
-                    display: false,
+          <Box h="200px" flexGrow={1}>
+            <Line
+              options={{
+                maintainAspectRatio: false,
+                responsive: true,
+                elements: {
+                  point: {
+                    radius: 0,
                   },
                 },
-                y: {
-                  grid: {
+                hover: {
+                  mode: "nearest",
+                  intersect: true,
+                },
+                scales: {
+                  xAxis: {
                     display: false,
                   },
-                  ticks: {
-                    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-                    // @ts-ignore
-                    color: theme.colors.whiteAlpha["600"],
-                    font: {
-                      size: 12,
+                  yAxis: {
+                    display: false,
+                  },
+                  x: {
+                    grid: {
+                      display: false,
+                    },
+                    ticks: {
+                      display: false,
+                    },
+                  },
+                  y: {
+                    grid: {
+                      display: false,
+                    },
+                    ticks: {
+                      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                      // @ts-ignore
+                      color: theme.colors.whiteAlpha["600"],
+                      font: {
+                        size: 12,
+                      },
                     },
                   },
                 },
-              },
-              plugins: {
-                tooltip: {
-                  mode: "index",
-                  intersect: false,
-                },
-                filler: {
-                  propagate: true,
-                },
-                legend: {
-                  display: false,
-                },
-              },
-            }}
-            data={{
-              labels: values.downloads.map((week) =>
-                cumulative ? week.end : `${week.start} to ${week.end}`
-              ),
-              datasets: [
-                {
-                  fill: true,
-                  borderWidth: 2,
-                  tension: 0.4,
-                  label: values.package,
-                  data: values.downloads.map((week) => week.downloads),
-                  borderColor(context) {
-                    const { chart } = context;
-                    const { ctx, chartArea } = chart;
-
-                    if (!chartArea) {
-                      // Initial chart load
-                      return;
-                    }
-                    // eslint-disable-next-line consistent-return
-                    return getGradient(ctx, chartArea);
+                plugins: {
+                  tooltip: {
+                    mode: "index",
+                    intersect: false,
                   },
-                  // eslint-disable-next-line @typescript-eslint/dot-notation
-                  // backgroundColor: `${theme["__cssMap"]["colors.brand.900"].value}80`,
-                  backgroundColor: "transparent",
+                  filler: {
+                    propagate: true,
+                  },
+                  legend: {
+                    display: false,
+                  },
                 },
-              ],
-            }}
-          />
+              }}
+              data={{
+                labels: values.downloads.map((week) =>
+                  cumulative ? week.end : `${week.start} to ${week.end}`
+                ),
+                datasets: [
+                  {
+                    fill: true,
+                    borderWidth: 2,
+                    tension: 0.4,
+                    label: values.package,
+                    data: values.downloads.map((week) => week.downloads),
+                    borderColor(context) {
+                      const { chart } = context;
+                      const { ctx, chartArea } = chart;
+
+                      if (!chartArea) {
+                        // Initial chart load
+                        return;
+                      }
+                      // eslint-disable-next-line consistent-return
+                      return getGradient(ctx, chartArea);
+                    },
+                    // eslint-disable-next-line @typescript-eslint/dot-notation
+                    // backgroundColor: `${theme["__cssMap"]["colors.brand.900"].value}80`,
+                    backgroundColor: "transparent",
+                  },
+                ],
+              }}
+            />
+          </Box>
           <HStack
             fontSize="sm"
             mt={3}

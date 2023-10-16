@@ -61,7 +61,7 @@ const MetricsPage: FC = () => {
         </Box>
         <Box mb={8} w="full">
           <Text as="h2" mb={4} fontSize="2xl" fontWeight="bold" w="full">
-            {t.metrics.developonchain_activityer_tools || "Developer tools"}
+            {t.metrics.developer_tools || "Developer tools"}
           </Text>
           <SimpleGrid columns={{ sm: 1, md: 2, lg: 2, xl: 3 }} spacing={4}>
             <GithubReposPaper />
