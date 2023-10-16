@@ -3209,4 +3209,23 @@ export const allProjects: Array<Project> = [
     isLive: false,
     isTestnetLive: false,
   },
+  {
+    id: "6b6252b1-c47e-4695-a31f-a435227aa9ce",
+    name: "Flex NFT Marketplace",
+    shortName: "Flex",
+    description:
+      "🛒 The 1st Dynamic Marketplace for Starknet - By community for the community. Building the Big Picture, Not Just MARKET.",
+    tags: ["nft", "infrastructure"],
+    image: "flex.png",
+    network: {
+      website: "https://flexing.gg/",
+      github: "https://github.com/0xandee/flex-marketplace-cairo0-contracts",
+      twitter: "https://twitter.com/Flex_strk",
+      medium: "",
+      discord: "https://discord.com/invite/6HvG4ckx9T",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
 ];
