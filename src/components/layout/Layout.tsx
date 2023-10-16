@@ -1,6 +1,6 @@
 import { Box, Flex } from "@chakra-ui/layout";
-import type { RenderProps } from "@chakra-ui/react";
 import { useToast } from "@chakra-ui/react";
+import type { RenderProps } from "@chakra-ui/toast/dist/toast.types";
 import type { ReactNode } from "react";
 import { useEffect } from "react";
 

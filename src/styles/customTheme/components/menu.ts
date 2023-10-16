@@ -7,6 +7,12 @@ const Menu: DeepPartial<Theme["components"]["Menu"]> = {
     list: {
       background: "primary.700",
     },
+    item: {
+      bg: "transparent",
+      _hover: {
+        bg: "whiteAlpha.200",
+      },
+    },
   },
 };
 

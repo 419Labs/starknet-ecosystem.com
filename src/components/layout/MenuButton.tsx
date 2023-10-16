@@ -57,7 +57,6 @@ const MenuButton = ({ menus, text, mainGroupTitle, icon }: MenuButtonProps) => {
           fontSize="14px"
           // eslint-disable-next-line react/no-array-index-key
           key={`link-${href}-${index}`}
-          href={href}
           as={Flex}
         >
           {children}
