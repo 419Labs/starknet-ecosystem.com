@@ -962,18 +962,18 @@ export const allProjects: Array<Project> = [
     name: "Influence",
     shortName: "Influence",
     description:
-      "Influence is a crypto-native space strategy game set in a realistic asteroid belt with real-time orbital dynamics.",
+      "Influence is an open-economy, space strategy MMO in which players own all of their content. Colonize asteroids, build infrastructure, discover technologies, engage in combat. Expand your influence across the belt.",
     tags: ["gamefi", "nft"],
     image: "influence.svg",
     network: {
       website: "https://www.influenceth.io/",
-      github: "",
+      github: "https://github.com/influenceth",
       twitter: "https://twitter.com/influenceth",
       medium: "",
-      discord: "https://discord.com/invite/6GjgPkp464",
+      discord: "https://discord.gg/influenceth",
       telegram: "",
     },
-    isLive: false,
+    isLive: true,
     isTestnetLive: true,
   },
   {
