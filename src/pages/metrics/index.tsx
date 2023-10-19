@@ -1,7 +1,5 @@
-import { Box, Flex, HStack, SimpleGrid, Text } from "@chakra-ui/layout";
+import { Box, Flex, SimpleGrid, Text } from "@chakra-ui/layout";
 import { Switch } from "@chakra-ui/react";
-import { brands } from "@fortawesome/fontawesome-svg-core/import.macro";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import type { FC } from "react";
 import { useState } from "react";
 
@@ -9,7 +7,6 @@ import HighlightedText from "../../components/layout/HighlightedText";
 import EcosystemMetrics from "../../components/metrics/ecosystem-metrics";
 import GithubReposPaper from "../../components/metrics/github-repos-paper";
 import NpmDownloadsPaper from "../../components/metrics/npm-downloads-paper";
-import TwitterMetrics from "../../components/metrics/twitter-metrics";
 import { useTranslate } from "../../context/TranslateProvider";
 
 const MetricsPage: FC = () => {
@@ -25,17 +22,6 @@ const MetricsPage: FC = () => {
       transform="translateZ(0)"
     >
       <HighlightedText highlighted={t.metrics.title || "Ecosystem metrics"} />
-      {/* Sub intro text */}
-      {/* <Text
-        zIndex={1}
-        mt={8}
-        textAlign="start"
-        color="whiteAlpha.600"
-        fontSize="20px"
-        maxWidth="600px"
-      >
-        {t.common.subtitle_main}
-      </Text> */}
       <Flex w="full" direction="column" mt={12}>
         <Box mb={8} w="full">
           <Flex direction={{ base: "column", md: "row" }} mb={4}>
@@ -68,17 +54,6 @@ const MetricsPage: FC = () => {
             <NpmDownloadsPaper name="starknet" label="starknet.js" />
             <NpmDownloadsPaper name="get-starknet" label="get-starknet" />
           </SimpleGrid>
-        </Box>
-        <Box mb={8} w="full">
-          <HStack mb={4}>
-            <Text>
-              <FontAwesomeIcon fontSize="24px" icon={brands("twitter")} />
-            </Text>
-            <Text as="h2" fontSize="2xl" fontWeight="bold" w="full">
-              Twitter trends
-            </Text>
-          </HStack>
-          <TwitterMetrics />
         </Box>
       </Flex>
     </Flex>
