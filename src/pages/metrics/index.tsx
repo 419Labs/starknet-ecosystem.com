@@ -69,7 +69,7 @@ const MetricsPage: FC = () => {
             <NpmDownloadsPaper name="get-starknet" label="get-starknet" />
           </SimpleGrid>
         </Box>
-        <Box mb={8} w="full">
+        {/* <Box mb={8} w="full">
           <HStack mb={4}>
             <Text>
               <FontAwesomeIcon fontSize="24px" icon={brands("twitter")} />
@@ -79,7 +79,7 @@ const MetricsPage: FC = () => {
             </Text>
           </HStack>
           <TwitterMetrics />
-        </Box>
+        </Box> */}
       </Flex>
     </Flex>
   );
