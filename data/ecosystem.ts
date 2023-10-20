@@ -962,18 +962,18 @@ export const allProjects: Array<Project> = [
     name: "Influence",
     shortName: "Influence",
     description:
-      "Influence is a crypto-native space strategy game set in a realistic asteroid belt with real-time orbital dynamics.",
+      "Influence is an open-economy, space strategy MMO in which players own all of their content. Colonize asteroids, build infrastructure, discover technologies, engage in combat. Expand your influence across the belt.",
     tags: ["gamefi", "nft"],
     image: "influence.svg",
     network: {
       website: "https://www.influenceth.io/",
-      github: "",
+      github: "https://github.com/influenceth",
       twitter: "https://twitter.com/influenceth",
       medium: "",
-      discord: "https://discord.com/invite/6GjgPkp464",
+      discord: "https://discord.gg/influenceth",
       telegram: "",
     },
-    isLive: false,
+    isLive: true,
     isTestnetLive: true,
   },
   {
@@ -3210,12 +3210,31 @@ export const allProjects: Array<Project> = [
     isTestnetLive: false,
   },
   {
+    id: "6b6252b1-c47e-4695-a31f-a435227aa9ce",
+    name: "Flex NFT Marketplace",
+    shortName: "Flex",
+    description:
+      "🛒 The 1st Dynamic Marketplace for Starknet - By community for the community. Building the Big Picture, Not Just MARKET.",
+    tags: ["nft", "infrastructure"],
+    image: "flex.png",
+    network: {
+      website: "https://flexing.gg/",
+      github: "https://github.com/0xandee/flex-marketplace-cairo0-contracts",
+      twitter: "https://twitter.com/Flex_strk",
+      medium: "",
+      discord: "https://discord.com/invite/6HvG4ckx9T",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
+  {
     id: "3d86dd11-fce5-4a86-9386-afd3c7c953d6",
     name: "OG SponziMaask",
     shortName: "Sponzi",
     description:
       "The OG SponziMaask collection is your Sponzi OG Pass. It gives to the owners an exclusive pole position within the SPONZI project.",
-    tags: ["nft","governance"],
+    tags: ["nft", "governance"],
     image: "ogSponziMaask.jpg",
     network: {
       website: "https://www.sponzi.wtf/",
