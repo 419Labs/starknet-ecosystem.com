@@ -3247,4 +3247,23 @@ export const allProjects: Array<Project> = [
     isLive: false,
     isTestnetLive: false,
   },
+  {
+    id: "3a987dfb-1ef8-4c91-a9e6-454367a72b42",
+    name: "Stark Sharp",
+    shortName: "Stark Sharp",
+    description:
+      "Starksharp is a robust C# toolkit designed to seamlessly integrate C# based applications with Starknet",
+    tags: ["gamefi", "tools" ],
+    image: "starksharp.jpg",
+    network: {
+      website: "",
+      github: "https://github.com/project3fusion/StarkSharp",
+      twitter: "https://twitter.com/starksharpsdk",
+      medium: "",
+      discord: "",
+      telegram: "https://t.me/starksharp",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
 ];
