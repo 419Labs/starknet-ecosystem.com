@@ -130,7 +130,7 @@ function Footer() {
                 "        links in the StarkNet Ecosystem are provided as a convenience and\n" +
                 "        for informational purposes only; they do not constitute an\n" +
                 "        endorsement or approval by our initiative of any of the projects\n" +
-                "        or services listed therein."
+                "        or services listed therein.",
             )}
           </VStack>
         </VStack>

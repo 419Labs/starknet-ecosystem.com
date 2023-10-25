@@ -11,13 +11,12 @@ const Input: FC<Props> = ({ debounce = 0, onChange, ...props }) => {
   const styles = useStyleConfig("Input");
 
   const handleChange = _.debounce(function (
-    event: ChangeEvent<HTMLInputElement>
+    event: ChangeEvent<HTMLInputElement>,
   ) {
     if (onChange) {
       onChange(event);
     }
-  },
-  debounce);
+  }, debounce);
 
   return <ChakraInput __css={styles} onChange={handleChange} {...props} />;
 };

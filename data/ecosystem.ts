@@ -3251,8 +3251,7 @@ export const allProjects: Array<Project> = [
     id: "843a7abe-0d8f-4742-9a3d-b73e1a0b2a3c",
     name: "StarkPass",
     shortName: "StarkPass",
-    description:
-      "The ticketing platform that operates on Starknet.",
+    description: "The ticketing platform that operates on Starknet.",
     tags: ["nft", "infrastructure"],
     image: "starkpass.png",
     network: {
