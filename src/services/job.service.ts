@@ -23,5 +23,5 @@ export const filterJobs = (jobs: Job[], filters: JobFilter): Job[] =>
       (!filters.search ||
         job.title.toLowerCase().includes(filters.search.toLowerCase()) ||
         job.location.toLowerCase().includes(filters.search.toLowerCase()) ||
-        job.tags.includes(filters.search.toLowerCase())),
+        job.tags.includes(filters.search.toLowerCase()))
   );

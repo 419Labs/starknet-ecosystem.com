@@ -1,6 +1,7 @@
 /** @type {import('next-seo').DefaultSeoProps} */
 const defaultSEOConfig = {
-  title: "Starknet Ecosystem | Discover the future of Ethereum scalability.",
+  title:
+    "Starknet Ecosystem | Discover the future of Ethereum scalability.",
   titleTemplate: "%s",
   defaultTitle:
     "Explore projects, teams, jobs, metrics and everything around Starknet Ecosystem",

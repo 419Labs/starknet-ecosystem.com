@@ -7,7 +7,7 @@ const STARKNET_DB_BASE_URL = "https://api.starknet-db.com";
 
 const fetchGithubRepo = (
   organization: string,
-  name: string,
+  name: string
 ): Promise<GithubRepo> =>
   fetch(`${STARKNET_DB_BASE_URL}/github-metrics/${organization}/${name}`).then(
     (response: Response) => {
@@ -15,7 +15,7 @@ const fetchGithubRepo = (
         throw new Error(`${response.statusText}${organization}/${name}`);
       }
       return response.json();
-    },
+    }
   );
 
 const fetchNpmDownloads = (name: string): Promise<NpmDownloadsDto> =>
@@ -43,7 +43,7 @@ const fetchTransactionCount = (testnet?: boolean): Promise<number> =>
 
 const fetchBlockCount = (testnet?: boolean): Promise<number> =>
   fetch(
-    `https://${testnet ? "goerli." : ""}voyager.online/api/blocks?ps=10&p=1`,
+    `https://${testnet ? "goerli." : ""}voyager.online/api/blocks?ps=10&p=1`
   )
     .then((response: Response) => {
       if (!response.ok) throw new Error(response.statusText);
@@ -57,7 +57,7 @@ const fetchBlockCount = (testnet?: boolean): Promise<number> =>
 
 const fetchContractCount = (testnet?: boolean): Promise<number> =>
   fetch(
-    `https://${testnet ? "goerli." : ""}voyager.online/api/contracts?ps=10&p=1`,
+    `https://${testnet ? "goerli." : ""}voyager.online/api/contracts?ps=10&p=1`
   )
     .then((response: Response) => {
       if (!response.ok) throw new Error(response.statusText);
@@ -73,7 +73,7 @@ const fetchBridgeMetrics = (testnet?: boolean): Promise<BridgeMetrics> =>
   fetch(
     `${STARKNET_DB_BASE_URL}/bridge-metrics?network=${
       testnet ? "GOERLI" : "MAINNET"
-    }`,
+    }`
   )
     .then((response: Response) => {
       if (!response.ok) throw new Error(response.statusText);
@@ -89,7 +89,7 @@ const fetchTweetCounts = (keyword: string): Promise<TweetCount[]> =>
     (response: Response) => {
       if (!response.ok) throw new Error(response.statusText);
       return response.json();
-    },
+    }
   );
 
 export const MetricsApi = {

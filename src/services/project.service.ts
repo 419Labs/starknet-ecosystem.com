@@ -6,7 +6,7 @@ export enum ProjectSorting {
 }
 export const projectIncludesKeyword = (
   project: Project,
-  keyword: string,
+  keyword: string
 ): boolean =>
   keyword === "" ||
   project.name.toLowerCase().includes(keyword.toLowerCase()) ||
@@ -15,7 +15,7 @@ export const projectIncludesKeyword = (
 
 export const findProjectById = (
   projects: Project[],
-  id: string,
+  id: string
 ): Project | undefined => projects.find((project) => project.id === id);
 
 export const shortenText = (text: string, maxLength: number): string => {
@@ -25,7 +25,7 @@ export const shortenText = (text: string, maxLength: number): string => {
 
 export const sortBy = (
   projects: Project[],
-  sorting?: ProjectSorting,
+  sorting?: ProjectSorting
 ): Project[] => {
   return projects.sort((project1, project2) => {
     if (sorting === ProjectSorting.TWITTER) {

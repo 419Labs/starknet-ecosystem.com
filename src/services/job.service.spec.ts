@@ -31,7 +31,7 @@ describe("Job service", () => {
 
       // Then
       expect(result).toStrictEqual(
-        "avnu-senior__backend__developer-502b0dbc-5169-4db6-8796-36a968a798fd",
+        "avnu-senior__backend__developer-502b0dbc-5169-4db6-8796-36a968a798fd"
       );
     });
   });
@@ -58,14 +58,14 @@ describe("Job service", () => {
       },
     ].forEach(({ given, expectedJobCounts }) =>
       it(`should return ${expectedJobCounts} jobs when jobFilter is ${JSON.stringify(
-        given,
+        given
       )}`, () => {
         // When
         const result = filterJobs(aListOfJob(), given);
 
         // Then
         expect(result.length).toBe(expectedJobCounts);
-      }),
+      })
     );
   });
 });
