@@ -43,8 +43,8 @@ export const highlightedLearning: Resource[] = [
     },
   },
   {
-    name: "starklings",
-    shortName: "starklings",
+    name: "Starklings",
+    shortName: "Starklings",
     description:
       "An interactive tutorial to get you up and running with Starknet",
     tags: ["learn", "tutorial"],
@@ -216,7 +216,7 @@ export const learning: Resource[] = [
     },
   },
   {
-    name: "Solidity-vs-Cairo",
+    name: "solidity-vs-Cairo",
     shortName: "solidity-vs-cairo",
     description:
       "This repo shows the cairo equivalents of the solidity language patterns",
@@ -265,7 +265,7 @@ export const learning: Resource[] = [
     },
   },
   {
-    name: "Starknet-NFT-Template",
+    name: "starknet-nft-template",
     shortName: "starknet-nft-template",
     description: "A Template for deploying NFT Projects on Starknet",
     tags: ["learn"],
@@ -367,12 +367,22 @@ export const learning: Resource[] = [
     },
   },
   {
-    name: "Starknet France",
-    shortName: "Starknet France",
+    name: "starknet france",
+    shortName: "starknet France",
     description: "A french translated blog explaining StarkWare technologies",
     tags: ["learn"],
     network: {
       website: "https://starknet-france.com/",
+    },
+  },
+  {
+    name: "starknet learn",
+    shortName: "starknet learn",
+    description:
+      "A specialized educational platform dedicated to empower students with zk-STARK technology, the Cairo programming language, and the StarkNet contract architecture",
+    tags: ["learn"],
+    network: {
+      website: "https://starklearn.com/Blogs/",
     },
   },
 ];
@@ -411,7 +421,7 @@ export const tools: Resource[] = [
     },
   },
   {
-    name: "Cairo Goldmine",
+    name: "cairo-goldmine",
     shortName: "cairo-goldmine",
     description:
       "A comprehensive, annotated list of repositories of the starknet ecosystem.",
@@ -561,7 +571,7 @@ export const tools: Resource[] = [
     },
   },
   {
-    name: "Papyrus",
+    name: "papyrus",
     shortName: "papyrus",
     description: "A Symbolic Execution Tool for Cairo",
     tags: ["tools"],
@@ -608,7 +618,7 @@ export const tools: Resource[] = [
     },
   },
   {
-    name: "Starkops",
+    name: "starkops",
     shortName: "starkops",
     description: "Starknet Toolchain CLI written in TypeScript.",
     tags: ["tools"],
@@ -674,7 +684,7 @@ export const tools: Resource[] = [
     },
   },
   {
-    name: "StarkWare",
+    name: "starkware",
     shortName: "starkware",
     description: "StarkTx - Starknet transactions decoder",
     tags: ["tools"],
@@ -776,7 +786,7 @@ export const tools: Resource[] = [
     },
   },
   {
-    name: "Zem",
+    name: "zem",
     shortName: "zem",
     description:
       "A deployment system for Hardhat which supports EVM and Starknet contracts",
@@ -786,8 +796,8 @@ export const tools: Resource[] = [
     },
   },
   {
-    name: "starkBridgeLocal",
-    shortName: "starkbridgelocal",
+    name: "stark-bridge-local",
+    shortName: "stark-bridge-local",
     description: "Local Test Environment For Starknet L1 <> L2 Messaging",
     tags: ["tools"],
     network: {
@@ -959,7 +969,7 @@ export const tools: Resource[] = [
     },
   },
   {
-    name: "Cairo-SafeMath",
+    name: "cairo-safemath",
     shortName: "cairo-safemath",
     description: "No description, website, or topics provided.",
     tags: ["math", "tools"],
@@ -1052,8 +1062,8 @@ export const tools: Resource[] = [
     },
   },
   {
-    name: "DecimalToBinary",
-    shortName: "decimaltobinary",
+    name: "decimal-to-binary",
+    shortName: "decimal-to-binary",
     description: "Starknet smart contract converting decimal to binary",
     tags: ["math", "tools"],
     network: {
@@ -1061,7 +1071,7 @@ export const tools: Resource[] = [
     },
   },
   {
-    name: "Starknet URL",
+    name: "starknet-url",
     shortName: "starknet-url",
     description: "Build & parse Starknet URLs",
     tags: ["tools", "uri", "url", "deeplink", "qr", "barcode"],
@@ -1070,7 +1080,7 @@ export const tools: Resource[] = [
     },
   },
   {
-    name: "Starknet Deeplink",
+    name: "starknet-deeplink",
     shortName: "starknet-deeplink",
     description: "Starknet deeplink generator",
     tags: ["tools", "url", "deeplink", "qr", "barcode"],
@@ -1126,6 +1136,22 @@ export const wallets: Resource[] = [
       telegram: "https://t.me/mybraavos",
     },
   },
+  {
+    name: "Argent Web Wallet",
+    shortName: "Argent Web Wallet",
+    description:
+      "A self-custodial wallet in your browser. It takes advantage of account abstraction to bring you the best experience from both web2 and web3.",
+    tags: ["wallet"],
+    image: "/logos/argent.svg",
+    network: {
+      website: "https://web.argent.xyz/",
+      github: "https://github.com/argentlabs/argent-x",
+      twitter: "https://twitter.com/argentHQ",
+      medium: "",
+      discord: "",
+      telegram: "",
+    },
+  },
 ];
 
 // ======================================================================
@@ -1167,6 +1193,16 @@ export const newsfeed: Resource[] = [
     tags: ["newsletter"],
     network: {
       website: "https://nurstar.substack.com/",
+    },
+  },
+  {
+    name: "Starknet Ecosystem Twitter",
+    shortName: "Starknet Ecosystem Twitter",
+    description:
+      "Your daily dose of knowledge and updates about Starknet on twitter",
+    tags: ["social"],
+    network: {
+      website: "https://twitter.com/StarknetEco",
     },
   },
 ];
