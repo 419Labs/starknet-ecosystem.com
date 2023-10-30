@@ -69,6 +69,7 @@ export const allProjects: Array<Project> = [
     isLive: false,
     isTestnetLive: true,
   },
+
   {
     id: "7fd6b20d-782a-40c2-8ee0-19790e9ee70b",
     name: "MorphineFi",
@@ -101,6 +102,25 @@ export const allProjects: Array<Project> = [
       twitter: "https://twitter.com/starkendefi",
       medium: "",
       discord: "https://discord.com/invite/hJupqTrK4G",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: true,
+  },
+  {
+    id: "834b3515-b32c-475f-bef4-a594885665a0",
+    name: "Nimbora",
+    shortName: "Nimbora",
+    description:
+      "Nimbora is a DeFi middleware platform that seeks to offer users the best prices for accessing a wide range of DeFi products and services across blockchains.",
+    tags: ["tools", "defi", "infrastructure"],
+    image: "nimbora.jpg",
+    network: {
+      website: "https://app.nimbora.io/",
+      github: "",
+      twitter: "https://twitter.com/Nimbora_",
+      medium: "",
+      discord: "",
       telegram: "",
     },
     isLive: true,
