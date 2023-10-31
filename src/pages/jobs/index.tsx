@@ -2,7 +2,7 @@ import { Flex, Text } from "@chakra-ui/layout";
 import type { NextPage } from "next";
 import type { ChangeEvent } from "react";
 import { useEffect, useState } from "react";
-import useInView from "react-cool-inview";
+import { useInView } from "react-cool-inview";
 
 import { allProjects } from "../../../data/ecosystem";
 import allJobs from "../../../data/job";

@@ -3,7 +3,7 @@ import { Image, Show } from "@chakra-ui/react";
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 import type { ChangeEvent } from "react";
 import { useEffect, useState } from "react";
-import useInView from "react-cool-inview";
+import { useInView } from "react-cool-inview";
 
 import type { Project, ProjectItf } from "../../data/ecosystem";
 import type { Tag } from "../../data/tag";
