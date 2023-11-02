@@ -3285,4 +3285,22 @@ export const allProjects: Array<Project> = [
     isLive: false,
     isTestnetLive: true,
   },
+  {
+    id: "b552586a-22e5-4df8-9fef-f75e5d9b9a46",
+    name: "AstroSwap",
+    shortName: "AstroSwap",
+    description:
+      "AstroSwap——AMM,Liquidity Farms,and Reward pools on StarkNet. AstroSwap is also a community-based and open-source ecosystem for DeFi! Say goodbye to CeFi!",
+    tags: ["defi", "infrastructure"],
+    image: "AstroSwap.png",
+    network: {
+      twitter: "https://x.com/astroswapreal",
+      github: "https://github.com/Astro-swap/Contracts",
+      medium: "",
+      telegram: "",
+      website: "https://astroswap.xyz/",
+    },
+    isLive: true,
+    isTestnetLive: true,
+  },
 ];
