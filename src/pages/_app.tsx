@@ -4,8 +4,8 @@ import { ChakraProvider } from "@chakra-ui/react";
 import { Analytics } from "@vercel/analytics/react";
 import dayjs from "dayjs";
 import duration from "dayjs/plugin/duration";
-import { NextSeo } from "next-seo";
 import type { AppProps } from "next/app";
+import { NextSeo } from "next-seo";
 
 import defaultSEOConfig from "../../next-seo.config";
 import Layout from "../components/layout/Layout";

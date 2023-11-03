@@ -3285,4 +3285,24 @@ export const allProjects: Array<Project> = [
     isLive: false,
     isTestnetLive: true,
   },
+
+  {
+    id: "b14295c1-aab2-4b92-917f-22c66736fb7b",
+    name: "Resmic",
+    shortName: "Resmic",
+    description:
+      "Decentralised, Non-Custodial, Peer-to-Peer payment infrastructure",
+    tags: ["defi", "payments", "infrastructure", "tools"],
+    image: "Resmic.png",
+    network: {
+      website: "https://resmic.com",
+      github: "https://github.com/0xResmic",
+      twitter: "https://twitter.com/0xResmic",
+      medium: "",
+      discord: "",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: true,
+  },
 ];
