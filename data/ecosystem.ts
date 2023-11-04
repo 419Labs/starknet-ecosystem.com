@@ -3286,6 +3286,25 @@ export const allProjects: Array<Project> = [
     isTestnetLive: true,
   },
   {
+    id: "b14295c1-aab2-4b92-917f-22c66736fb7b",
+    name: "Resmic",
+    shortName: "Resmic",
+    description:
+      "Decentralised, Non-Custodial, Peer-to-Peer payment infrastructure",
+    tags: ["defi", "payments", "infrastructure", "tools"],
+    image: "Resmic.png",
+    network: {
+      website: "https://resmic.com",
+      github: "https://github.com/0xResmic",
+      twitter: "https://twitter.com/0xResmic",
+      medium: "",
+      discord: "",
+      telegram: "",
+    },
+    isLive: false,
+    isTestnetLive: false,
+  },
+  {
     id: "b552586a-22e5-4df8-9fef-f75e5d9b9a46",
     name: "AstroSwap",
     shortName: "AstroSwap",
@@ -3301,6 +3320,6 @@ export const allProjects: Array<Project> = [
       website: "https://astroswap.xyz/",
     },
     isLive: true,
-    isTestnetLive: true,
+    isTestnetLive: false,
   },
 ];
