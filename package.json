@@ -68,7 +68,7 @@
     "@testing-library/user-event": "13.5.0",
     "@types/dompurify": "^3.0.4",
     "@types/node": "~17.0.32",
-    "@types/react": "^18.2.31",
+    "@types/react": "^18.2.36",
     "babel-jest": "29.7.0",
     "eslint": "8.52.0",
     "eslint-config-next": "14.0.1",
