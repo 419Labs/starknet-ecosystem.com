@@ -47,7 +47,7 @@
     "chart.js": "^4.4.0",
     "dayjs": "1.11.10",
     "eslint-config-sznm": "^1.1.2",
-    "ethers": "6.8.0",
+    "ethers": "6.8.1",
     "framer-motion": "^10.16.4",
     "jest-environment-jsdom": "^29.7.0",
     "lodash": "^4.17.21",
