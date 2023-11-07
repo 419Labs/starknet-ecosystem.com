@@ -3309,7 +3309,8 @@ export const allProjects: Array<Project> = [
     id: "6175cd83-81fb-48d0-9f56-80cea421aa1c",
     name: "OKX Wallet's DEX",
     shortName: "OKX Wallet's DEX",
-    description: "A multi-chain, cross-chain decentralized exchange aggregator of 300+ other DEXs and approximately 15 bridges, with 200,000+ coins and more than 20 blockchains supported.",
+    description:
+        "A multi-chain, cross-chain decentralized exchange aggregator of 300+ other DEXs and approximately 15 bridges, with 200,000+ coins and more than 20 blockchains supported.",
     tags: ["DEX, wallet, multi-chain, cross-chain, OKX, bridge, blockchain"],
     image: "okx.png",
     network: {
