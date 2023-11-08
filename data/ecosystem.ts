@@ -1422,7 +1422,7 @@ export const allProjects: Array<Project> = [
     shortName: "StarkSharp",
     description:
       "Starksharp is a robust C# toolkit designed to seamlessly integrate C# based applications with Starknet",
-    tags: ["gamefi", "tools" ],
+    tags: ["gamefi", "tools"],
     image: "starksharp.jpg",
     network: {
       website: "",
