@@ -19,7 +19,7 @@ interface Props {
 
 const JobCreatedFrom: FC<Props> = ({ createdAt }: Props) => {
   const [createdForm, setCreatedForm] = useState(
-    dayjs.duration(dayjs().diff(createdAt))
+    dayjs.duration(dayjs().diff(createdAt)),
   );
 
   useEffect(() => {

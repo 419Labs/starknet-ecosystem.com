@@ -18,7 +18,7 @@ interface Props {
 const EcosystemMetrics: FC<Props> = ({ isMainnet = true }: Props) => {
   const { t } = useTranslate();
   const [mainnetTxCount, setMainnetTxCount] = useState<number | undefined>(
-    undefined
+    undefined,
   );
   const [mainnetContractCount, setMainnetContractCount] = useState<
     number | undefined
@@ -27,7 +27,7 @@ const EcosystemMetrics: FC<Props> = ({ isMainnet = true }: Props) => {
     number | undefined
   >(undefined);
   const [testnetTxCount, setTestnetTxCount] = useState<number | undefined>(
-    undefined
+    undefined,
   );
   const [testnetContractCount, setTestnetContractCount] = useState<
     number | undefined
@@ -62,7 +62,7 @@ const EcosystemMetrics: FC<Props> = ({ isMainnet = true }: Props) => {
               bridgeMetrics && bridgeMetrics.ethValue
                 ? `Ether value: ${formatCompactNumber(
                     parseFloat(formatUnits(bridgeMetrics.balance)) *
-                      bridgeMetrics.ethValue
+                      bridgeMetrics.ethValue,
                   )} $ ($${bridgeMetrics.ethValue}/ETH)`
                 : undefined
             }

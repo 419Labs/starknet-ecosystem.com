@@ -38,8 +38,8 @@ const GithubReposPaper: FC = () => {
   useEffect(() => {
     Promise.all(
       githubReposToFollow.map((repo) =>
-        MetricsApi.fetchGithubRepo(repo.organization, repo.name)
-      )
+        MetricsApi.fetchGithubRepo(repo.organization, repo.name),
+      ),
     ).then((repos) => setGithubRepos(repos));
   }, []);
 
