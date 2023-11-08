@@ -15,7 +15,7 @@ describe("Number service", () => {
 
         // Then
         expect(result).toStrictEqual(expected);
-      })
+      }),
     );
   });
 });

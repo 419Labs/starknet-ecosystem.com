@@ -27,7 +27,7 @@ function ContributeContent({ keyword = "", observe }: BasicContentProps) {
           link: `https://app.onlydust.xyz/contributions/${contribution.id}`,
           sourceName: contribution.sourceName,
           difficulty: contribution.difficulty,
-        }))
+        })),
       );
       setLoading(false);
     });

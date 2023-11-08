@@ -64,7 +64,7 @@ const Home = () => {
         }),
       sorter.key === ProjectSorting.A_Z
         ? ProjectSorting.A_Z
-        : ProjectSorting.TWITTER
+        : ProjectSorting.TWITTER,
     );
 
     const newProjects = filteredProjects
