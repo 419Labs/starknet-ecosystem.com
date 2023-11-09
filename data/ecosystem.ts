@@ -1417,6 +1417,25 @@ export const allProjects: Array<Project> = [
     isTestnetLive: true,
   },
   {
+    id: "3a987dfb-1ef8-4c91-a9e6-454367a72b42",
+    name: "StarkSharp",
+    shortName: "StarkSharp",
+    description:
+      "Starksharp is a robust C# toolkit designed to seamlessly integrate C# based applications with Starknet",
+    tags: ["gamefi", "tools"],
+    image: "starksharp.jpg",
+    network: {
+      website: "",
+      github: "https://github.com/project3fusion/StarkSharp",
+      twitter: "https://twitter.com/starksharpsdk",
+      medium: "",
+      discord: "",
+      telegram: "https://t.me/starksharp",
+    },
+    isLive: true,
+    isTestnetLive: true,
+  },
+  {
     id: "8b3bcdfb-b621-4d4b-b214-fad5d5e16514",
     name: "Starknet React",
     shortName: "Starknet React",
