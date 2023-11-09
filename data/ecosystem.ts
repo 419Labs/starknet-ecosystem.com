@@ -3324,4 +3324,23 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: true,
   },
+  {
+    id: "e53f84df-2c81-44c9-8afd-b79a0ff7171b",
+    name: "StarkExport",
+    shortName: "StarkExport",
+    description:
+      "Effortlessly effort Starknet transactions to CSV, XLSX, JSON and more",
+    tags: ["tools"],
+    image: "starkexport.png",
+    network: {
+      website: "https://starkexport.xyz",
+      github: "",
+      twitter: "",
+      medium: "",
+      discord: "",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
 ];
