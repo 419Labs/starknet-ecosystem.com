@@ -2583,8 +2583,7 @@ export const allProjects: Array<Project> = [
     id: "f52694c1-0963-494c-91aa-40af0a94e77e",
     name: "Sphinx",
     shortName: "Sphinx",
-    description:
-      "An advanced AMM for all liquidity providers.",
+    description: "An advanced AMM for all liquidity providers.",
     tags: ["defi"],
     image: "sphinx.png",
     network: {
