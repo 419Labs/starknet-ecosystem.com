@@ -33,7 +33,7 @@ Here are the guides helping you to contribute to the ecosystem dashboard and get
 
 ### Others
 
-If you want to contribute in any way to this initiative please submit a PR. If you have ideas or want to share feedbacks feel free to open an issue.
+If you want to contribute in any way to this initiative please submit a PR. If you have ideas or want to share feedback feel free to open an issue.
 
 ### Community-driven
 
