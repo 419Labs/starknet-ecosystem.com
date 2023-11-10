@@ -3352,7 +3352,8 @@ export const allProjects: Array<Project> = [
     tags: ["bridge", "defi"],
     image: "rhinofi.svg",
     network: {
-      website: "https://app.rhino.fi/bridge?token=ETH&chainOut=STARKNET&chain=zkSync",
+      website:
+        "https://app.rhino.fi/bridge?token=ETH&chainOut=STARKNET&chain=zkSync",
       github: "https://github.com/rhinofi/",
       twitter: "https://twitter.com/rhinofi",
       medium: "",
