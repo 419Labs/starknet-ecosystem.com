@@ -44,7 +44,7 @@ const PrivacyPolicyPage: FC = () => {
           </li>
           <li>
             Starknet-ecosystem webapp is a community owned dashboard that
-            provide usefull informations about the starknet ecosystem in his
+            provide useful information about the starknet ecosystem in his
             global.
           </li>
           <li>
@@ -136,7 +136,7 @@ const PrivacyPolicyPage: FC = () => {
       <Text mt={4} as="div">
         <p>
           We process personal data for the purposes described in the section
-          titled “How We Use Data” above. Our bases for processing your data
+          titled “How We Use Data” above. Our basis for processing your data
           include: (i) you have given consent to the process to us or our
           service provides for one or more specific purposes; (ii) processing is
           necessary for the performance of a contract with you; (iii) processing
