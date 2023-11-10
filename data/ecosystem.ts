@@ -3343,4 +3343,23 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: false,
   },
+  {
+    id: "99c4de9e-4e82-4268-a734-1aed4854d1f5",
+    name: "rhino.fi",
+    shortName: "rhino.fi",
+    description:
+      "rhino.fi - The lightning-fast secure bridge for seamless cross-chain transactions",
+    tags: ["bridge", "defi"],
+    image: "rhinofi.svg",
+    network: {
+      website: "https://app.rhino.fi/bridge?token=ETH&chainOut=STARKNET&chain=zkSync",
+      github: "https://github.com/rhinofi/",
+      twitter: "https://twitter.com/rhinofi",
+      medium: "",
+      discord: "https://discord.gg/JvN3dcQrhk",
+      telegram: "https://t.me/rhinofi",
+    },
+    isLive: true,
+    isTestnetLive: true,
+  },
 ];
