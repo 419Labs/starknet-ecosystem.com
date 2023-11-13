@@ -58,7 +58,7 @@
     "react-cool-inview": "^3.0.1",
     "react-dom": "^18.2.0",
     "react-flippy": "^1.1.0",
-    "swr": "^2.2.2",
+    "swr": "^2.2.4",
     "yarn": "^1.22.17"
   },
   "devDependencies": {
