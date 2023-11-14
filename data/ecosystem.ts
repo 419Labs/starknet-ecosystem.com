@@ -3362,4 +3362,24 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: true,
   },
+  {
+    id: "ec3fbc60-5722-4fd5-b36b-34656e507da7",
+    name: "StarkRekt",
+    shortName: "StarkRekt",
+    description:
+      "StarkRekt enables users to check and reset their token spending permissions on StarkNet",
+    tags: ["tools", "security"],
+    image: "starkrekt-logo.png",
+    network: {
+      website:
+        "https://starkrekt.com/",
+      github: "",
+      twitter: "https://twitter.com/StarkRekt",
+      medium: "",
+      discord: "",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
 ];
