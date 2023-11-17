@@ -3371,8 +3371,7 @@ export const allProjects: Array<Project> = [
     tags: ["tools", "security"],
     image: "starkrekt-logo.png",
     network: {
-      website:
-        "https://starkrekt.com/",
+      website: "https://starkrekt.com/",
       github: "",
       twitter: "https://twitter.com/StarkRekt",
       medium: "",
