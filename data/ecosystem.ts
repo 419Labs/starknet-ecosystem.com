@@ -3399,4 +3399,23 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: false,
   },
+  {
+    id: "7a72fc4d-4f0c-4be2-9a12-808de7555236",
+    name: "Phantom Spirit Arena",
+    shortName: "Phantom Spirit Arena",
+    description:
+      " \"Phantom Spirit Arena\", an exciting PVP game that combines blockchain technology with fantasy elements. In this colorful world of gaming, players will take on the role of sprite masters, collecting and training unique sprite creatures to engage in intense battles, experiencing the perfect fusion of competition and strategy.",
+    tags: ["nft", "gamefi"],
+    image: "spritegame-logo.png",
+    network: {
+      website: "https://spritegame.xyz/",
+      github: "",
+      twitter: "https://twitter.com/Phantom_SArena",
+      medium: "",
+      discord: "",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
 ];
