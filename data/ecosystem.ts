@@ -446,12 +446,11 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: true,
   },
-   {
+  {
     id: "b74fbad2-1348-4649-a760-1280d7672a50",
     name: "Rango Exchange",
     shortName: "Rango",
-    description:
-      "Rango is the ultimate cross-chain DEX and bridge aggregator.",
+    description: "Rango is the ultimate cross-chain DEX and bridge aggregator.",
     tags: ["bridge", "infrastructure"],
     image: "Rango.png",
     network: {
