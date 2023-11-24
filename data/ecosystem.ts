@@ -31,6 +31,25 @@ export interface ProjectItf extends Project {
 }
 
 export const allProjects: Array<Project> = [
+    {
+    id: "d51a8396-308b-4cdf-83e3-913a55376592",
+    name: "Astarion",
+    shortName: "Astarion",
+    description:
+      "Deploy your own NFT Smart Contarcts, mint and earn the minting fee. Withdraw the minting fee to your wallet throughout our UI, without any programming knowledge.",
+    tags: ["infrastructure", "tools", "nft"],
+    image: "astarion.png",
+    network: {
+      website: "https://astarion.net",
+      github: "https://github.com/ASTARIONCrypto",
+      twitter: "https://twitter.com/ASTARION11111",
+      medium: "",
+      discord: "",
+      telegram: "https://t.me/astarionproject",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
   {
     id: "abd25d78-ffb6-4a1d-94c0-d2f9016d6015",
     name: "Dmail Network",
