@@ -3400,7 +3400,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: false,
   },
   {
-    id: "044892b4-abfc-4d62-b0b8-1d83129d1dad",
+    id: "5ed17e6d-b820-4cc5-9277-fcb1c1f717bf",
     name: "SonicForce",
     shortName: "SonicForce",
     description:
