@@ -3399,4 +3399,42 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: false,
   },
+  {
+    id: "eed0595f-eef8-467a-be38-ace345f7be1a",
+    name: "CheDAOLabs",
+    shortName: "CheDAO",
+    description:
+      "CheDAO is a Web3 autonomous organization formed by a group of rebellious game lovers. Inspired by the spirit of Che Guevara, our mission is to liberate the productive forces of gaming. Our vision is to establish an eternal, onchain autonomous world.CheDAO also is the parent company of @AW_Research & @cryptsncaverns",
+    tags: ["all", "dao", "gamefi", "governance", "infrastructure", "nft", "tools"],
+    image: "chedao.png",
+    network: {
+      website: "https://www.chedao.io/",
+      github: "https://github.com/CheDAOLabs",
+      twitter: "https://twitter.com/CheDAOLabs",
+      medium: "",
+      discord: "https://discord.gg/XWGSNJ7vv5",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: true,
+  },
+  {
+    id: "ce6c8ede-a806-4f42-b4d9-84a1d8c51868",
+    name: "AW Research",
+    shortName: "AW Research",
+    description:
+      "AW Research is an institution dedicated to Autonomous Worlds research, powered by CheDAO.",
+    tags: ["dao", "governance"],
+    image: "awResearch.png",
+    network: {
+      website: "https://chedao.notion.site/AW-Research-Collection-234dcfb1fc4441f9b0c14725b01fb921?pvs=4",
+      github: "",
+      twitter: "https://twitter.com/AW_Research",
+      medium: "https://mirror.xyz/0x8046108b92EEAa28b8970B6294BfD432dc382c7D",
+      discord: "https://discord.gg/XWGSNJ7vv5",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: true,
+  },
 ];
