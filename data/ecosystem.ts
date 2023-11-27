@@ -3404,7 +3404,7 @@ export const allProjects: Array<Project> = [
     name: "Phantom Spirit Arena",
     shortName: "Phantom Spirit Arena",
     description:
-      "'Phantom Spirit Arena', an exciting PVP game that combines Starknet blockchain technology with fantasy elements. In this colorful world of gaming, players will take on the role of sprite masters, collecting and training unique sprite creatures to engage in intense battles, experiencing the perfect fusion of competition and strategy.",
+      "Phantom Spirit Arena, an exciting PVP game that combines Starknet blockchain technology with fantasy elements. In this colorful world of gaming, players will take on the role of sprite masters, collecting and training unique sprite creatures to engage in intense battles, experiencing the perfect fusion of competition and strategy.",
     tags: ["nft", "gamefi"],
     image: "spritegame-logo.png",
     network: {
