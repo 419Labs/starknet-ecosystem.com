@@ -31,7 +31,7 @@ export interface ProjectItf extends Project {
 }
 
 export const allProjects: Array<Project> = [
-    {
+  {
     id: "d51a8396-308b-4cdf-83e3-913a55376592",
     name: "Astarion",
     shortName: "Astarion",
