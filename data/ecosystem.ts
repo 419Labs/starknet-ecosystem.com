@@ -3405,7 +3405,7 @@ export const allProjects: Array<Project> = [
     shortName: "CheDAO",
     description:
       "CheDAO is a Web3 autonomous organization formed by a group of rebellious game lovers. Inspired by the spirit of Che Guevara, our mission is to liberate the productive forces of gaming. Our vision is to establish an eternal, onchain autonomous world.CheDAO also is the parent company of @AW_Research & @cryptsncaverns",
-    tags: ["all", "dao", "gamefi", "governance", "infrastructure", "nft", "tools"],
+    tags: ["dao", "gamefi", "nft", "tools"],
     image: "chedao.png",
     network: {
       website: "https://www.chedao.io/",
@@ -3427,7 +3427,7 @@ export const allProjects: Array<Project> = [
     tags: ["dao", "governance"],
     image: "awResearch.png",
     network: {
-      website: "https://chedao.notion.site/AW-Research-Collection-234dcfb1fc4441f9b0c14725b01fb921?pvs=4",
+      website: "https://www.chedao.io/",
       github: "",
       twitter: "https://twitter.com/AW_Research",
       medium: "https://mirror.xyz/0x8046108b92EEAa28b8970B6294BfD432dc382c7D",
