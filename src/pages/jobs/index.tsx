@@ -20,7 +20,6 @@ const JobsPage: NextPage = () => {
   const { t } = useTranslate();
   const [lastIndexLoaded, setLastIndexLoaded] = useState<number>(LOADED_STEPS);
   const [jobs, setJobs] = useState<Job[]>([]);
-  // const [filteredJobsCount, setFilteredJobsCount] = useState<number>(-1);
   const [filters, setFilters] = useState<JobFilter>({
     remote: false,
     search: "",
@@ -69,20 +68,6 @@ const JobsPage: NextPage = () => {
           "You may be one click away from your dream job."}
       </Text>
       <Flex w="full" direction={{ base: "column", md: "row" }} mt={24}>
-        {/* <Menu
-          typeText="Jobs"
-          childCount={filteredJobsCount}
-          tags={allJobTags}
-          initialValue={allJobTags[0]}
-          onChange={(newValue) => {
-            const { value } = newValue;
-            setFilters({
-              ...filters,
-              tags: value === "all" ? [] : [newValue.value],
-            });
-            setFilteredJobsCount(-1);
-          }}
-        /> */}
         <Flex direction="column" w="full" align="flex-end">
           <Input
             debounce={200}
@@ -92,14 +77,7 @@ const JobsPage: NextPage = () => {
             onChange={handleChangeKeyword}
             placeholder="Search"
           />
-          <JobTable
-            projects={allProjects}
-            jobs={jobs}
-            observe={observe}
-            onFilterChanged={(updatedFilter) =>
-              setFilters({ ...filters, ...updatedFilter })
-            }
-          />
+          <JobTable projects={allProjects} jobs={jobs} observe={observe} />
         </Flex>
       </Flex>
     </Flex>
