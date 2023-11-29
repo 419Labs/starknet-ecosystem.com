@@ -1286,8 +1286,7 @@ export const allProjects: Array<Project> = [
     description:
       "If you've used Hardhat and want to develop for Starknet, this plugin might come in hand.",
     tags: ["tools"],
-    image:
-      "https://user-images.githubusercontent.com/2848732/181497954-297848fb-4e9d-4bf0-91bd-c1c5da8ae10d.svg",
+    image: "hardhat.svg",
     network: {
       website: "",
       github: "https://github.com/Shard-Labs/starknet-hardhat-plugin",
@@ -1910,7 +1909,7 @@ export const allProjects: Array<Project> = [
     description:
       "Pragma is the ZK-native oracle offering decentralized & composable data built on Starknet. It leverages state-of-the-art zk-proofs technology to securely bring high-quality data from first-party data providers on-chain.",
     tags: ["defi", "infrastructure"],
-    image: "pragma.svg",
+    image: "pragma.png",
     network: {
       website: "https://www.pragmaoracle.com/",
       github: "https://github.com/Astraly-Labs/Pragma",
