@@ -3398,4 +3398,22 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: false,
   },
+  {
+    id: "24990877-03e8-4059-a886-c24ca1bfe93c",
+    name: "Chainspect",
+    shortName: "Chainspect",
+    description:
+      "Chainspect is a blockchain analytics platform aiming to be an all-in-one solution for comparing networks. Make better decisions with our real-time insights and up-to-date metrics for the most widely used blockchains, including Starknet.",
+    tags: ["tools"],
+    image: "chainspect.png",
+    network: {
+      website: "https://chainspect.app/",
+      twitter: "https://twitter.com/chainspect_app",
+      medium: "https://medium.com/@chainspect_app",
+      discord: "https://discord.gg/nnmJf56XYU",
+      telegram: "https://t.me/chainspect_app",
+    },
+    isLive: true,
+    isTestnetLive: true,
+  },
 ];
