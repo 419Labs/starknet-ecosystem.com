@@ -395,7 +395,7 @@ export const allProjects: Array<Project> = [
     shortName: "StarkDefi",
     description:
       "StarkDefi is a permissionless and trustless hub of comprehensive Defi solutions built to leverage the Decentralized ZK-Rollup on Starknet's L2 Network over Ethereum. Starting with a highly intuitive Automated Market Maker (AMM), StarkDefi will strategically release other planned defi solutions to cement its position as the ultimate one-stop platform for all defi solutions on Starknet.",
-    tags: ["starkex", "defi"],
+    tags: ["defi"],
     image: "starkdefi.png",
     network: {
       website: "https://starkdefi.com/",
@@ -405,7 +405,7 @@ export const allProjects: Array<Project> = [
       discord: "https://discord.com/invite/starkdefi",
       telegram: "https://t.me/starkdefi_ann",
     },
-    isLive: false,
+    isLive: true,
     isTestnetLive: true,
   },
   {
