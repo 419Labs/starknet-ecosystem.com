@@ -901,21 +901,21 @@ export const allProjects: Array<Project> = [
   },
   {
     id: "2cf7259e-055f-4888-91da-12a0fc555d1e",
-    name: "Briq",
-    shortName: "Briq",
+    name: "briq",
+    shortName: "briq",
     description:
       "NFT building and composition protocol. Get some briqs and build the dream.",
     tags: ["nft"],
     image: "briq.png",
     network: {
       website: "https://briq.construction/",
-      github: "",
+      github: "https://github.com/briqnft/",
       twitter: "https://twitter.com/briqNFT",
       medium: "",
       discord: "https://discord.com/invite/kpvbDCw5pr",
       telegram: "",
     },
-    isLive: false,
+    isLive: true,
     isTestnetLive: true,
   },
   {
