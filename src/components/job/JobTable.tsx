@@ -13,15 +13,10 @@ interface Props {
   projects: Project[];
   jobs: Job[];
   observe?: (element?: HTMLElement | null | undefined) => void;
-  onFilterChanged: (value: { search: string }) => void;
 }
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const JobTable: FC<Props> = ({ projects, jobs, observe, onFilterChanged }) => {
+const JobTable: FC<Props> = ({ projects, jobs, observe }) => {
   const { t } = useTranslate();
-
-  /* const handleChangeSearch = (event: ChangeEvent<HTMLInputElement>) =>
-    onFilterChanged({ search: event.target.value }); */
 
   return (
     <Flex w="full" direction="column">

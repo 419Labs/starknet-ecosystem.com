@@ -395,7 +395,7 @@ export const allProjects: Array<Project> = [
     shortName: "StarkDefi",
     description:
       "StarkDefi is a permissionless and trustless hub of comprehensive Defi solutions built to leverage the Decentralized ZK-Rollup on Starknet's L2 Network over Ethereum. Starting with a highly intuitive Automated Market Maker (AMM), StarkDefi will strategically release other planned defi solutions to cement its position as the ultimate one-stop platform for all defi solutions on Starknet.",
-    tags: ["starkex", "defi"],
+    tags: ["defi"],
     image: "starkdefi.png",
     network: {
       website: "https://starkdefi.com/",
@@ -405,7 +405,7 @@ export const allProjects: Array<Project> = [
       discord: "https://discord.com/invite/starkdefi",
       telegram: "https://t.me/starkdefi_ann",
     },
-    isLive: false,
+    isLive: true,
     isTestnetLive: true,
   },
   {
@@ -901,21 +901,21 @@ export const allProjects: Array<Project> = [
   },
   {
     id: "2cf7259e-055f-4888-91da-12a0fc555d1e",
-    name: "Briq",
-    shortName: "Briq",
+    name: "briq",
+    shortName: "briq",
     description:
       "NFT building and composition protocol. Get some briqs and build the dream.",
     tags: ["nft"],
     image: "briq.png",
     network: {
       website: "https://briq.construction/",
-      github: "",
+      github: "https://github.com/briqnft/",
       twitter: "https://twitter.com/briqNFT",
       medium: "",
       discord: "https://discord.com/invite/kpvbDCw5pr",
       telegram: "",
     },
-    isLive: false,
+    isLive: true,
     isTestnetLive: true,
   },
   {
@@ -1286,8 +1286,7 @@ export const allProjects: Array<Project> = [
     description:
       "If you've used Hardhat and want to develop for Starknet, this plugin might come in hand.",
     tags: ["tools"],
-    image:
-      "https://user-images.githubusercontent.com/2848732/181497954-297848fb-4e9d-4bf0-91bd-c1c5da8ae10d.svg",
+    image: "hardhat.svg",
     network: {
       website: "",
       github: "https://github.com/Shard-Labs/starknet-hardhat-plugin",
@@ -1910,7 +1909,7 @@ export const allProjects: Array<Project> = [
     description:
       "Pragma is the ZK-native oracle offering decentralized & composable data built on Starknet. It leverages state-of-the-art zk-proofs technology to securely bring high-quality data from first-party data providers on-chain.",
     tags: ["defi", "infrastructure"],
-    image: "pragma.svg",
+    image: "pragma.png",
     network: {
       website: "https://www.pragmaoracle.com/",
       github: "https://github.com/Astraly-Labs/Pragma",
