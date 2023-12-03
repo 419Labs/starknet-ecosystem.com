@@ -14,7 +14,7 @@ describe("Project service", () => {
       name: "ZKEX: Multi-Chain DEX",
       shortName: "ZKEX",
       description:
-        "ZKEX is a bridgeless multi-chain order book DEX, secured with zero-knowledge proofs, powered by zkLink, StarkNet, and zkSync.",
+        "ZKEX is a bridgeless multi-chain order book DEX, secured with zero-knowledge proofs, powered by zkLink, Starknet, and zkSync.",
       tags: ["defi"],
       image: "zkex-logo-rounded.png",
       network: {
@@ -89,7 +89,7 @@ describe("Project service", () => {
 
         // Then
         expect(result).toStrictEqual(expected);
-      })
+      }),
     );
   });
 });

@@ -2,16 +2,16 @@ import type { TranslateState } from "../../context/TranslateProvider/model";
 
 const itTranslate: TranslateState = {
   common: {
-    title_main: "La rivoluzione di StarkNet sta venendo alla luce del giorno",
+    title_main: "La rivoluzione di Starknet sta venendo alla luce del giorno",
     subtitle_main:
-      "Immergiti nell'ecosistema StarkNet scoprendo progetti, lavori, metriche e risorse di apprendimento.",
+      "Immergiti nell'ecosistema Starknet scoprendo progetti, lavori, metriche e risorse di apprendimento.",
     community_driven: "✨ Un'iniziativa guidata dalla comunità",
 
     no_project: "😕 Nessun progetto in questa categoria",
     maybe_yours: "Forse la tua?",
     made_with: "Fatto con",
     by: "da",
-    alpha_road_team: "Alpha Road Team",
+    avnu_team: "AVNU Team",
     apply: "Applica",
     community: "Comunità",
     job_title_main: "Lavori",
@@ -25,7 +25,7 @@ const itTranslate: TranslateState = {
     metrics: "Metrica",
     academy: "Accademia",
     academy_subtitle:
-      "Il tuo negozio di apprendimento StarkNet. Trova tutorial, guide, contributi, biblioteche. Iscriviti alle newsletter per tenere traccia di questo ecosistema in rapida evoluzione.",
+      "Il tuo negozio di apprendimento Starknet. Trova tutorial, guide, contributi, biblioteche. Iscriviti alle newsletter per tenere traccia di questo ecosistema in rapida evoluzione.",
     jobs_subtitle: "Potresti essere a un clic dal lavoro dei tuoi sogni.",
     cumulative_chart: "Grafico cumulativo",
     non_cumulative_chart: "Grafico non cumulativo",

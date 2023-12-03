@@ -21,14 +21,14 @@ import Card from "../card/Card";
 import ErrorData from "./error-data";
 
 const githubReposToFollow = [
-  { organization: "starkware-libs", name: "cairo-lang" },
-  { organization: "starkware-libs", name: "starkgate-frontend" },
-  { organization: "starknet-community-libs", name: "get-starknet" },
-  { organization: "software-mansion", name: "protostar" },
+  { organization: "starkware-libs", name: "cairo" },
+  { organization: "lambdaclass", name: "cairo-rs" },
+  { organization: "OpenZeppelin", name: "cairo-contracts" },
+  { organization: "xJonathanLEI", name: "starknet-rs" },
   { organization: "0xs34n", name: "starknet.js" },
   { organization: "software-mansion", name: "starknet.py" },
-  { organization: "OpenZeppelin", name: "nile" },
-  { organization: "Shard-Labs", name: "starknet-devnet" },
+  { organization: "foundry-rs", name: "starknet-foundry" },
+  { organization: "software-mansion", name: "scarb" },
 ];
 
 const GithubReposPaper: FC = () => {
@@ -38,8 +38,8 @@ const GithubReposPaper: FC = () => {
   useEffect(() => {
     Promise.all(
       githubReposToFollow.map((repo) =>
-        MetricsApi.fetchGithubRepo(repo.organization, repo.name)
-      )
+        MetricsApi.fetchGithubRepo(repo.organization, repo.name),
+      ),
     ).then((repos) => setGithubRepos(repos));
   }, []);
 

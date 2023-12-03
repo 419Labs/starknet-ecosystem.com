@@ -32,11 +32,143 @@ export interface ProjectItf extends Project {
 
 export const allProjects: Array<Project> = [
   {
+    id: "abd25d78-ffb6-4a1d-94c0-d2f9016d6015",
+    name: "Dmail Network",
+    shortName: "Dmail",
+    description:
+      "Dmail Network is building an AI-powered decentralized infrastructure which allows users to stay informed and connected with intelligent, seamless messaging and notifications.",
+    tags: ["infrastructure", "tools", "digital_id"],
+    image: "dmail.png",
+    network: {
+      website: "https://dmail.ai",
+      github: "https://github.com/dmailofficial/dmail",
+      twitter: "https://twitter.com/dmailofficial",
+      medium: "https://medium.com/@dmail_official",
+      discord: "https://discord.com/invite/QbvaeqwMFg",
+      telegram: "https://t.me/dmailofficial",
+    },
+    isLive: true,
+    isTestnetLive: true,
+  },
+  {
+    id: "ab4517ca-14a6-4a5e-acb9-849954a0af4d",
+    name: "Lava Network",
+    shortName: "Lava",
+    description:
+      "Lava is an open-source protocol for reliable access to RPC data across all chains.",
+    tags: ["infrastructure", "tools"],
+    image: "lava.png",
+    network: {
+      website: "https://lavanet.xyz/",
+      github: "https://github.com/lavanet",
+      twitter: "https://twitter.com/lavanetxyz",
+      medium: "https://medium.com/lava-network",
+      discord: "https://discord.gg/Tbk5NxTCdA",
+      telegram: "",
+    },
+    isLive: false,
+    isTestnetLive: true,
+  },
+
+  {
+    id: "7fd6b20d-782a-40c2-8ee0-19790e9ee70b",
+    name: "MorphineFi",
+    shortName: "Morphine",
+    description: "DeFi layer allowing composable leverage and automation",
+    tags: ["defi"],
+    image: "morphine.png",
+    network: {
+      website: "https://delightfi.xyz/",
+      github: "https://github.com/DeLightFi",
+      twitter: "https://twitter.com/MorphineFi",
+      medium: "",
+      discord: "https://discord.com/invite/hJupqTrK4G",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: true,
+  },
+  {
+    id: "affdebf1-c5c1-4e44-9c9c-649dbddc5f26",
+    name: "StarkenFi",
+    shortName: "Starken",
+    description:
+      "Indexing infrastructure providing insights into portfolio evolution, yield APY analysis, and more.",
+    tags: ["tools", "defi"],
+    image: "starken.png",
+    network: {
+      website: "https://delightfi.xyz/",
+      github: "https://github.com/DeLightFi",
+      twitter: "https://twitter.com/starkendefi",
+      medium: "",
+      discord: "https://discord.com/invite/hJupqTrK4G",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: true,
+  },
+  {
+    id: "834b3515-b32c-475f-bef4-a594885665a0",
+    name: "Nimbora",
+    shortName: "Nimbora",
+    description:
+      "Nimbora is a DeFi middleware platform that seeks to offer users the best prices for accessing a wide range of DeFi products and services across blockchains.",
+    tags: ["tools", "defi", "infrastructure"],
+    image: "nimbora.jpg",
+    network: {
+      website: "https://app.nimbora.io/",
+      github: "",
+      twitter: "https://twitter.com/Nimbora_",
+      medium: "",
+      discord: "",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: true,
+  },
+  {
+    id: "9bc2502d-3eba-4aaa-b585-b308fa0d57c2",
+    name: "Reddio",
+    shortName: "Reddio",
+    description:
+      "Reddio is a technology company that builds infrastructure for the blockchain, to help developers adopt blockchain technologies with the world’s first easy-to-use Layer 2 zkRollup Agnostic APIs. Enabling developers embed Token or NFT (Non-fungible token) into their web, desktop and mobile applications with massive scalability and zero gas fee for off-chain. Reddio has partnered with the leading layer 2 zkRollup provider Starkware to launch StarkEx APIs, with which you can have instant trading confirmation within second, high concurrent transactions up to 10k TPS, 0 gas fee as it’s done on layer 2 and the asset security derived from layer 1 Ethereum. Reddio is dedicated to Starknet ecosystem to build reference implementation on Cairo Smart Contrats. Reddio is backed by top VCs such as Paradigm and Arena Holdings.",
+    tags: ["tools", "infrastructure", "nft", "starkex"],
+    image: "reddio.png",
+    network: {
+      website: "https://www.reddio.com/",
+      github: "https://github.com/reddio-com",
+      twitter: "https://twitter.com/reddio_com",
+      medium: "https://reddio.medium.com/",
+      discord: "https://discord.com/invite/SjNAJ4qkK3",
+      telegram: "https://t.me/Reddio_com",
+    },
+    isLive: true,
+    isTestnetLive: true,
+  },
+  {
+    id: "a9f9b227-1a8f-4b45-9e04-f85ac1a1178a",
+    name: "Starknet Social",
+    shortName: "Starknet Social",
+    description:
+      "Claim your Social Space ✨ .strk .cairo .starknet and more identity options are available. Share your socials, trust score, and a lot more🍭 all in one place.",
+    tags: ["digital_id", "nft"],
+    image: "starknet-social.png",
+    network: {
+      website: "https://starknet.social/",
+      github: "https://github.com/dolven-labs-catalyst",
+      twitter: "https://twitter.com/StarknetSocial",
+      medium: "https://medium.com/@starknetsocial",
+      discord: "https://discord.dolvenlabs.com/",
+    },
+    isLive: true,
+    isTestnetLive: true,
+  },
+  {
     id: "f5745de2-4bfe-4086-9962-4da6b409d2ca",
     name: "Wido",
     shortName: "Wido",
     description:
-      "Infrastructure for cross-chain transaction bundling. Among other things, we enable single-click deposits into pools, vaults or farms on StarkNet from other chains.",
+      "Infrastructure for cross-chain transaction bundling. Among other things, we enable single-click deposits into pools, vaults or farms on Starknet from other chains.",
     tags: ["tools", "infrastructure", "bridge", "defi"],
     image: "wido.png",
     network: {
@@ -51,11 +183,30 @@ export const allProjects: Array<Project> = [
     isTestnetLive: false,
   },
   {
+    id: "792dab31-4477-42bd-a16b-ce2494fffdb8",
+    name: "WEChart",
+    shortName: "WEChart",
+    description:
+      "A one-stop gateway of Defi provides real-time price charts and trading data analysis across multi-chains and Dexs that integrates many utility tools, including watchlist, DeFi portfolio tracker, notebook, price alert etc..",
+    tags: ["tools", "infrastructure"],
+    image: "wechart.png",
+    network: {
+      website: "https://www.wechart.io/",
+      github: "",
+      twitter: "https://twitter.com/WEconomyNetwork",
+      medium: "",
+      discord: "https://discord.gg/zyM3G4pUCc",
+      telegram: "https://t.me/WEconomyNetwork",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
+  {
     id: "36df24b3-2007-4822-8110-5a44b01afb0f",
     name: "ViewBlock",
     shortName: "ViewBlock",
     description:
-      "StarkNet Explorer with full decoding, advanced analytics and prime token/NFT support.",
+      "Starknet Explorer with full decoding, advanced analytics and prime token/NFT support.",
     tags: ["tools", "infrastructure"],
     image: "viewblock.png",
     network: {
@@ -73,8 +224,7 @@ export const allProjects: Array<Project> = [
     id: "bf58edd8-fb46-4066-9ed9-5bbaa683c1f5",
     name: "0xStarks",
     shortName: "Starks",
-    description:
-      "An NFT acting as Proof of OG on StarkNet",
+    description: "An NFT acting as Proof of OG on Starknet",
     tags: ["nft", "defi", "gamefi", "governance"],
     image: "0xStarks.png",
     network: {
@@ -111,7 +261,7 @@ export const allProjects: Array<Project> = [
     id: "a0627f79-af7d-4398-8936-5957eee99783",
     name: "STARKSCAN",
     shortName: "STARKSCAN",
-    description: "Next-generaation StarkNet Block Explorer",
+    description: "Next-generaation Starknet Block Explorer",
     tags: ["tools", "infrastructure"],
     image: "starkscan.png",
     network: {
@@ -130,7 +280,7 @@ export const allProjects: Array<Project> = [
     name: "ZKEX: Multi-Chain DEX",
     shortName: "ZKEX",
     description:
-      "ZKEX is a bridgeless multi-chain order book DEX, secured with zero-knowledge proofs, powered by zkLink, StarkNet, and zkSync.",
+      "ZKEX is a bridgeless multi-chain order book DEX, secured with zero-knowledge proofs, powered by zkLink, Starknet, and zkSync.",
     tags: ["defi"],
     image: "zkex-logo-rounded.png",
     network: {
@@ -168,7 +318,7 @@ export const allProjects: Array<Project> = [
     name: "SithSwap",
     shortName: "SithSwap",
     description:
-      "SithSwap is a next-gen AMM on StarkNet featuring stable + volatile swaps, ultra-low fees & slippage, gauged (3,3) rewards & bribes governed by veNFTs",
+      "SithSwap is a next-gen AMM on Starknet featuring stable + volatile swaps, ultra-low fees & slippage, gauged (3,3) rewards & bribes governed by veNFTs",
     tags: ["defi"],
     image: "sithswap.png",
     network: {
@@ -187,7 +337,7 @@ export const allProjects: Array<Project> = [
     name: "Dolven Labs",
     shortName: "DolvenLabs",
     description:
-      "Dolven Labs is a DAO Based Ecosystem Catalyst for projects built on the StarkNet Network, Dolven Labs aims to be the future of investing, deal flow, and value creation in the StarkNet Ecosystem.",
+      "Dolven Labs is a DAO Based Ecosystem Catalyst for projects built on the Starknet Network, Dolven Labs aims to be the future of investing, deal flow, and value creation in the Starknet Ecosystem.",
     tags: ["defi", "dao", "governance"],
     image: "dolven-logo.png",
     network: {
@@ -206,7 +356,7 @@ export const allProjects: Array<Project> = [
     name: "Giza",
     shortName: "giza",
     description:
-      "Giza is a Machine Learning platform built on StarkNet focused on fully on-chain model deployment scaling.",
+      "Giza is a Machine Learning platform built on Starknet focused on fully on-chain model deployment scaling.",
     tags: ["infrastructure"],
     image: "giza.png",
     network: {
@@ -225,7 +375,7 @@ export const allProjects: Array<Project> = [
     name: "Chainstack",
     shortName: "chainstack",
     description:
-      "Chainstack is a managed node provider for the StarkNet mainnet and testnet.",
+      "Chainstack is a managed node provider for the Starknet mainnet and testnet.",
     tags: ["infrastructure"],
     image: "chainstack.png",
     network: {
@@ -244,7 +394,7 @@ export const allProjects: Array<Project> = [
     name: "Stark Defi",
     shortName: "StarkDefi",
     description:
-      "StarkDefi is a permissionless and trustless hub of comprehensive Defi solutions built to leverage the Decentralized ZK-Rollup on StarkNet's L2 Network over Ethereum. Starting with a highly intuitive Automated Market Maker (AMM), StarkDefi will strategically release other planned defi solutions to cement its position as the ultimate one-stop platform for all defi solutions on StarkNet.",
+      "StarkDefi is a permissionless and trustless hub of comprehensive Defi solutions built to leverage the Decentralized ZK-Rollup on Starknet's L2 Network over Ethereum. Starting with a highly intuitive Automated Market Maker (AMM), StarkDefi will strategically release other planned defi solutions to cement its position as the ultimate one-stop platform for all defi solutions on Starknet.",
     tags: ["starkex", "defi"],
     image: "starkdefi.png",
     network: {
@@ -297,6 +447,24 @@ export const allProjects: Array<Project> = [
     isTestnetLive: true,
   },
   {
+    id: "b74fbad2-1348-4649-a760-1280d7672a50",
+    name: "Rango Exchange",
+    shortName: "Rango",
+    description: "Rango is the ultimate cross-chain DEX and bridge aggregator.",
+    tags: ["bridge", "infrastructure"],
+    image: "Rango.png",
+    network: {
+      website: "https://app.rango.exchange",
+      github: "https://github.com/rango-exchange",
+      twitter: "https://twitter.com/RangoExchange",
+      medium: "https://blog.rango.exchange",
+      discord: "https://discord.com/invite/q3EngGyTrZ",
+      telegram: "https://t.me/rangoexchange",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
+  {
     id: "37f554a8-abb2-4839-831c-8065eef7c01c",
     name: "Musicvers",
     shortName: "Musicvers",
@@ -316,22 +484,44 @@ export const allProjects: Array<Project> = [
   },
   {
     id: "502b0dbc-5169-4db6-8796-36a968a798fd",
-    name: "Alpha Road",
-    shortName: "Alpha Road",
+    name: "AVNU",
+    shortName: "AVNU",
     description:
-      "Pioneer in DeFi L2 solution — Alpha Road aim at maximizing user investment returns by providing next gen DeFi experience and bespoke financial products.\n",
-    tags: ["defi", "nft"],
-    image: "alpharoad.png",
+      "AVNU is a decentralized exchange protocol designed to offer the best execution.\n" +
+      "\n" +
+      "Our mission is to build the Liquidity Infrastructure that aims to empower traders and dApps with the best execution. We believe that the only way to serve our customers is to secure the most competitive prices for them, as well as access to the broadest range of assets while providing an exceptional user experience that sets the industry standard.\n",
+    tags: ["defi", "infrastructure", "tools"],
+    image: "avnu.png",
     network: {
-      website: "https://testnet.app.alpharoad.fi",
-      github: "",
-      twitter: "https://twitter.com/alpharoad_fi",
-      medium: "https://alpharoad.medium.com/",
-      discord: "https://discord.gg/Bhfa3B2Gnq",
-      telegram: "https://t.me/alpharoad_fi",
+      website: "https://avnu.fi",
+      github: "https://github.com/avnu-labs/avnu-contracts-v2",
+      twitter: "https://twitter.com/avnu_fi",
+      medium: "https://avnu-fi.medium.com/",
+      discord: "https://discord.gg/invite/avnu-fi",
+      telegram: "https://t.me/avnu_fi",
     },
-    isLive: false,
+    isLive: true,
     isTestnetLive: true,
+  },
+  {
+    id: "a144e176-e790-4ab3-878b-2a6ca15c9251",
+    name: "StarkPulse",
+    shortName: "StarkPulse",
+    description:
+      "Explore the Starknet realm with StarkPulse.\n" +
+      "Wallet Tracking, Token Discovery, Pool Detection, and APY Insights at Your Fingertips. And more to come soon.\n",
+    tags: ["defi", "infrastructure", "tools"],
+    image: "starkpulse.jpg",
+    network: {
+      website: "https://www.starkpulse.xyz/",
+      github: "",
+      twitter: "",
+      medium: "",
+      discord: "https://discord.gg/invite/avnu-fi",
+      telegram: "https://t.me/StarkPulseBot",
+    },
+    isLive: true,
+    isTestnetLive: false,
   },
   {
     id: "03f6f911-c24f-411f-9b31-1bc113ec7a0c",
@@ -394,18 +584,18 @@ export const allProjects: Array<Project> = [
     name: "JediSwap",
     shortName: "JediSwap",
     description:
-      "JediSwap is a fully permissionless and composable AMM on StarkNet. Users can swap assets instantaneously with 0 gas fees while relying on Ethereum security. Anyone can add a pair on Jediswap, and builders can build more advanced applications using JediSwap open sourced contracts",
+      "JediSwap is a fully permissionless and composable AMM on Starknet. Users can swap assets instantaneously with 0 gas fees while relying on Ethereum security. Anyone can add a pair on Jediswap, and builders can build more advanced applications using JediSwap open sourced contracts",
     tags: ["defi"],
     image: "jediswap.svg",
     network: {
       website: "https://jediswap.xyz/",
-      github: "",
+      github: "https://github.com/jediswaplabs",
       twitter: "https://twitter.com/jediswap",
-      medium: "",
-      discord: "",
-      telegram: "",
+      medium: "https://mirror.xyz/jediswap.eth",
+      discord: "https://discord.gg/jediswap",
+      telegram: "https://t.me/jediswap",
     },
-    isLive: false,
+    isLive: true,
     isTestnetLive: true,
   },
   {
@@ -480,15 +670,15 @@ export const allProjects: Array<Project> = [
       discord: "http://hashstack.community",
       telegram: "",
     },
-    isLive: false,
-    isTestnetLive: false,
+    isLive: true,
+    isTestnetLive: true,
   },
   {
     id: "d95046cb-7ce0-4f3f-9d1c-7214acc30bc7",
     name: "mySwap",
     shortName: "mySwap",
     description:
-      "mySwap is the first AMM built on StarkNet.\nYou can swap ETH with USDC and DAI, and deposit your cryptos in liquidity pools.\nCheck our website and follow us on Twitter for future announcements.",
+      "mySwap is the first AMM built on Starknet.\nYou can swap ETH with USDC and DAI, and deposit your cryptos in liquidity pools.\nCheck our website and follow us on Twitter for future announcements.",
     tags: ["defi", "mobile"],
     image: "myswap.png",
     network: {
@@ -498,6 +688,25 @@ export const allProjects: Array<Project> = [
       medium: "",
       discord: "https://discord.gg/tZgJnydyZr",
       telegram: "https://t.me/mySwapxyz",
+    },
+    isLive: true,
+    isTestnetLive: true,
+  },
+  {
+    id: "ba85310d-c82c-43c5-a42c-6479f8946b98",
+    name: "Ekubo Protocol",
+    shortName: "Ekubo",
+    description:
+      "Ekubo Protocol is a highly optimized DEX featuring concentrated liquidity and extensibility",
+    tags: ["defi"],
+    image: "ekubo.png",
+    network: {
+      website: "https://app.ekubo.org",
+      github: "https://github.com/EkuboProtocol",
+      twitter: "https://twitter.com/EkuboProtocol",
+      medium: "",
+      discord: "https://discord.gg/RFbSXxtqUG",
+      telegram: "https://t.me/Ekubo_Protocol",
     },
     isLive: true,
     isTestnetLive: true,
@@ -563,7 +772,7 @@ export const allProjects: Array<Project> = [
     name: "StarkSwap",
     shortName: "StarkSwap",
     description:
-      "Building the next generation of DeFi on StarkNet. First offering is an AMM, with other DeFi products to follow.",
+      "Building the next generation of DeFi on Starknet. First offering is an AMM, with other DeFi products to follow.",
     tags: ["defi"],
     image: "starkswap.png",
     network: {
@@ -619,37 +828,18 @@ export const allProjects: Array<Project> = [
     name: "zkLend",
     shortName: "zkLend",
     description:
-      "zkLend is an L2 money-market protocol built on StarkNet, combining zk-rollup scalability, superior transaction speed, and cost-savings with Ethereum’s security. The protocol offers a dual solution: a permissioned and compliance-focused solution for institutional clients, and a permissionless service for DeFi users - all without sacrificing decentralisation.",
+      "zkLend is the native L2 money-market protocol built on Starknet, combining zk-rollup scalability, superior transaction speed, and cost-savings with Ethereum’s security.",
     tags: ["defi"],
     image: "zklend.svg",
     network: {
       website: "https://zklend.com/",
       github: "",
       twitter: "https://twitter.com/zkLend",
-      medium: "",
-      discord: "",
-      telegram: "",
+      medium: "https://medium.com/zklend",
+      discord: "https://discord.com/invite/3v7RhwtJ8S",
+      telegram: "https://t.me/zkLendAnnouncements",
     },
-    isLive: false,
-    isTestnetLive: false,
-  },
-  {
-    id: "5368a3f6-b8f0-44e3-ba88-9b1d64adee23",
-    name: "Astraly",
-    shortName: "Astraly",
-    description:
-      "Astraly is a fundraising and community building platform. We're building the infrastructure for communities on Starknet.",
-    tags: ["defi"],
-    image: "zkpad.png",
-    network: {
-      website: "https://testnet.astraly.xyz/",
-      github: "https://github.com/Astraly-Labs/",
-      twitter: "https://twitter.com/AstralyXYZ",
-      medium: "https://astraly.mirror.xyz/",
-      discord: "https://discord.gg/astralyxyz",
-      telegram: "https://t.me/astralyy",
-    },
-    isLive: false,
+    isLive: true,
     isTestnetLive: true,
   },
   {
@@ -687,7 +877,7 @@ export const allProjects: Array<Project> = [
       discord: "https://discord.gg/Eqp53YafYP",
       telegram: "https://www.t.me/nostrafinance",
     },
-    isLive: false,
+    isLive: true,
     isTestnetLive: false,
   },
   {
@@ -752,7 +942,7 @@ export const allProjects: Array<Project> = [
     name: "Eykar",
     shortName: "Eykar",
     description:
-      "A decentralized game of conquest powered by StarkNet. An almost infinite territory that can be conquered through alliances and wars",
+      "A decentralized game of conquest powered by Starknet. An almost infinite territory that can be conquered through alliances and wars",
     tags: ["nft", "gamefi"],
     image: "eykar.png",
     network: {
@@ -771,7 +961,7 @@ export const allProjects: Array<Project> = [
     name: "GoL2",
     shortName: "GoL2",
     description:
-      "GoL2 on StarkNet – an on-chain iteration of the classic Game of Play by John Conway. ",
+      "GoL2 on Starknet – an on-chain iteration of the classic Game of Play by John Conway. ",
     tags: ["gamefi"],
     image: "GoL2-icon.png",
     network: {
@@ -810,18 +1000,18 @@ export const allProjects: Array<Project> = [
     name: "Influence",
     shortName: "Influence",
     description:
-      "Influence is a crypto-native space strategy game set in a realistic asteroid belt with real-time orbital dynamics.",
+      "Influence is an open-economy, space strategy MMO in which players own all of their content. Colonize asteroids, build infrastructure, discover technologies, engage in combat. Expand your influence across the belt.",
     tags: ["gamefi", "nft"],
     image: "influence.svg",
     network: {
       website: "https://www.influenceth.io/",
-      github: "",
+      github: "https://github.com/influenceth",
       twitter: "https://twitter.com/influenceth",
       medium: "",
-      discord: "https://discord.com/invite/6GjgPkp464",
+      discord: "https://discord.gg/influenceth",
       telegram: "",
     },
-    isLive: false,
+    isLive: true,
     isTestnetLive: true,
   },
   {
@@ -923,7 +1113,7 @@ export const allProjects: Array<Project> = [
     name: "Aspect",
     shortName: "aspect",
     description:
-      "Aspect is an NFT marketplace powered by StarkNet, a ZK rollup L2 on ETH. Buy, Sell, and Create in the meta economy.",
+      "Aspect is an NFT marketplace powered by Starknet, a ZK rollup L2 on ETH. Buy, Sell, and Create in the meta economy.",
     tags: ["nft"],
     image: "aspect.png",
     network: {
@@ -939,8 +1129,8 @@ export const allProjects: Array<Project> = [
   },
   {
     id: "67551838-5d7b-47ba-96d4-c4d61fd3a795",
-    name: "StarkNet Fractals",
-    shortName: "StarkNet Fractals",
+    name: "Starknet Fractals",
+    shortName: "Starknet Fractals",
     description:
       "Generating the Mandelbrot Set on Starknet and storing the data to required to reconstruct the plot on-chain. Was created as a proof of concept for leveraging L2s to create fully on chain NFTs.",
     tags: ["nft"],
@@ -998,7 +1188,7 @@ export const allProjects: Array<Project> = [
     name: "Yagi Finance",
     shortName: "Yagi Finance",
     description:
-      "Yagi is a network of keepers on StarkNet L2 that automate protocol actions.",
+      "Yagi is a network of keepers on Starknet L2 that automate protocol actions.",
     tags: ["infrastructure", "defi"],
     image: "yagi.svg",
     network: {
@@ -1018,7 +1208,7 @@ export const allProjects: Array<Project> = [
     name: "Zorro",
     shortName: "Zorro",
     description:
-      "Proof of personhood protocol for democratic DAO voting, quadratic funding, etc. Runs on the Ethereum L2 StarkNet.",
+      "Proof of personhood protocol for democratic DAO voting, quadratic funding, etc. Runs on the Ethereum L2 Starknet.",
     tags: ["dao", "governance"],
     image: "zorro.svg",
     network: {
@@ -1033,11 +1223,30 @@ export const allProjects: Array<Project> = [
     isTestnetLive: false,
   },
   {
+    id: "1337ab03-25d7-406c-a339-5dccbefeaa18",
+    name: "StarkGuardians",
+    shortName: "StarkGuardians",
+    description:
+      "StarkGuardians - First NFT collection of #StarkNet with decrease in supply. NFT Audit and Investigation Service 🔍",
+    tags: ["nft", "tools", "infrastructure", "security", "governance"],
+    image: "StarkGuardians.jpeg",
+    network: {
+      website: "https://starkguardians.com",
+      github: "https://github.com/StarkGuardians",
+      twitter: "https://twitter.com/StarkGuardians",
+      medium: "",
+      discord: "https://discord.gg/starkguardians",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
+  {
     id: "8df27359-f05d-439b-8592-ca1b61cf049c",
     name: "Argent X",
     shortName: "Argent X",
     description:
-      'First StarkNet wallet to interact with tokens and NFTs. Manage your identities with "Sign in with StarkNet" (very soon ™️), and enjoy the best of defi. Made with ❤️ by the Argent team.',
+      'First Starknet wallet to interact with tokens and NFTs. Manage your identities with "Sign in with Starknet" (very soon ™️), and enjoy the best of defi. Made with ❤️ by the Argent team.',
     tags: ["wallet", "digital_id", "defi", "nft", "gamefi"],
     image: "argent-x.svg",
     network: {
@@ -1056,7 +1265,7 @@ export const allProjects: Array<Project> = [
     name: "Braavos",
     shortName: "Braavos",
     description:
-      "First and only StarkNet wallet on mobile, Android & iOS. Use all your favorite StarkNet dApps on the go! Also available for chrome, Firefox and Edge. All in one assets management - DeFi and NFTs",
+      "First and only Starknet wallet on mobile, Android & iOS. Use all your favorite Starknet dApps on the go! Also available for chrome, Firefox and Edge. All in one assets management - DeFi and NFTs",
     tags: ["wallet", "mobile", "digital_id", "defi", "nft", "gamefi"],
     image: "braavos.svg",
     network: {
@@ -1077,8 +1286,7 @@ export const allProjects: Array<Project> = [
     description:
       "If you've used Hardhat and want to develop for Starknet, this plugin might come in hand.",
     tags: ["tools"],
-    image:
-      "https://user-images.githubusercontent.com/2848732/181497954-297848fb-4e9d-4bf0-91bd-c1c5da8ae10d.svg",
+    image: "hardhat.svg",
     network: {
       website: "",
       github: "https://github.com/Shard-Labs/starknet-hardhat-plugin",
@@ -1096,7 +1304,7 @@ export const allProjects: Array<Project> = [
     name: "hardhat-starknet-compile",
     shortName: "hardhat-starknet-compile",
     description:
-      "Hardhat Plugin for intelligently compiling StarkNet contracts in a Hardhat project.",
+      "Hardhat Plugin for intelligently compiling Starknet contracts in a Hardhat project.",
     tags: ["tools"],
     image: "hardhat-starknet-compile.png",
     network: {
@@ -1114,7 +1322,7 @@ export const allProjects: Array<Project> = [
     id: "48b43f8b-c067-46e4-9f2b-d8b0d58fbbc3",
     name: "hardhat-starknetjs",
     shortName: "hardhat-starknetjs",
-    description: "Hardhat Plugin integrating StarkNet.js.",
+    description: "Hardhat Plugin integrating Starknet.js.",
     tags: ["tools"],
     image: "hardhat-starknetjs.png",
     network: {
@@ -1133,7 +1341,7 @@ export const allProjects: Array<Project> = [
     name: "Zem",
     shortName: "zem",
     description:
-      "Deployment system for Hardhat supporting EVM and StarkNet contracts.",
+      "Deployment system for Hardhat supporting EVM and Starknet contracts.",
     tags: ["tools"],
     image: "zem.png",
     network: {
@@ -1151,7 +1359,7 @@ export const allProjects: Array<Project> = [
     id: "6f3d1ddf-f402-49d2-8bed-62b141df4000",
     name: "Protostar",
     shortName: "Protostar",
-    description: "StarkNet smart contract development toolchain",
+    description: "Starknet smart contract development toolchain",
     tags: ["tools"],
     image: "protostar.svg",
     network: {
@@ -1170,7 +1378,7 @@ export const allProjects: Array<Project> = [
     id: "2cd4ddcb-335f-4b29-abcd-f781ffd61557",
     name: "Nile",
     shortName: "Nile",
-    description: "CLI tool to develop StarkNet projects written in Cairo",
+    description: "CLI tool to develop Starknet projects written in Cairo",
     tags: ["tools"],
     image: "",
     network: {
@@ -1207,10 +1415,10 @@ export const allProjects: Array<Project> = [
   },
   {
     id: "ca28ab0c-d96d-44eb-85d2-0d99e3d4c586",
-    name: "StarkNet.js",
-    shortName: "StarkNet.js",
+    name: "Starknet.js",
+    shortName: "Starknet.js",
     description:
-      "Javascript library for StarkNet. Build your dapp or any other StarkNet web project today.",
+      "Javascript library for Starknet. Build your dapp or any other Starknet web project today.",
     tags: ["tools"],
     image: "starknet-js.svg",
     network: {
@@ -1226,10 +1434,29 @@ export const allProjects: Array<Project> = [
     isTestnetLive: true,
   },
   {
+    id: "3a987dfb-1ef8-4c91-a9e6-454367a72b42",
+    name: "StarkSharp",
+    shortName: "StarkSharp",
+    description:
+      "Starksharp is a robust C# toolkit designed to seamlessly integrate C# based applications with Starknet",
+    tags: ["gamefi", "tools"],
+    image: "starksharp.jpg",
+    network: {
+      website: "",
+      github: "https://github.com/project3fusion/StarkSharp",
+      twitter: "https://twitter.com/starksharpsdk",
+      medium: "",
+      discord: "",
+      telegram: "https://t.me/starksharp",
+    },
+    isLive: true,
+    isTestnetLive: true,
+  },
+  {
     id: "8b3bcdfb-b621-4d4b-b214-fad5d5e16514",
-    name: "StarkNet React",
-    shortName: "StarkNet React",
-    description: "A collection of React hooks for StarkNet",
+    name: "Starknet React",
+    shortName: "Starknet React",
+    description: "A collection of React hooks for Starknet",
     tags: ["tools"],
     image: "",
     network: {
@@ -1245,9 +1472,9 @@ export const allProjects: Array<Project> = [
   },
   {
     id: "d159858b-b0e1-4318-9c78-cf6a64466ad5",
-    name: "StarkNet.py",
-    shortName: "StarkNet.py",
-    description: "Python SDK for StarkNet",
+    name: "Starknet.py",
+    shortName: "Starknet.py",
+    description: "Python SDK for Starknet",
     tags: ["tools"],
     image: "",
     network: {
@@ -1263,9 +1490,9 @@ export const allProjects: Array<Project> = [
   },
   {
     id: "6274fab2-be65-4c58-b868-788c0397b29b",
-    name: "StarkNet.php",
-    shortName: "StarkNet.php",
-    description: "A PHP package for interacting with StarkNet",
+    name: "Starknet.php",
+    shortName: "Starknet.php",
+    description: "A PHP package for interacting with Starknet",
     tags: ["tools"],
     image: "",
     network: {
@@ -1283,7 +1510,7 @@ export const allProjects: Array<Project> = [
     id: "a3c1cb27-8fec-49b4-89ef-abd0acdc15c3",
     name: "starknet-jvm",
     shortName: "starknet-jvm",
-    description: "StarkNet SDK for java and other JVM languages",
+    description: "Starknet SDK for java and other JVM languages",
     tags: ["tools"],
     image: "",
     network: {
@@ -1299,9 +1526,9 @@ export const allProjects: Array<Project> = [
   },
   {
     id: "a8b84c0c-379f-4b94-b09a-1b5588497630",
-    name: "StarkNet-rs",
-    shortName: "StarkNet-rs",
-    description: "StarkNet client library in Rust",
+    name: "Starknet-rs",
+    shortName: "Starknet-rs",
+    description: "Starknet client library in Rust",
     tags: ["tools"],
     image: "starknet-rs.png",
     network: {
@@ -1323,11 +1550,11 @@ export const allProjects: Array<Project> = [
     tags: ["tools"],
     image: "",
     network: {
-      website: "https://github.com/NethermindEth/warp",
+      website: "https://nethermind.io/warp/",
       github: "https://github.com/NethermindEth/warp",
       twitter: "",
       medium: "",
-      discord: "",
+      discord: "https://discord.gg/cPqaZXev7P",
       telegram: "",
     },
     isLive: true,
@@ -1373,7 +1600,7 @@ export const allProjects: Array<Project> = [
     id: "b3f862ea-064a-49ba-91a3-2491e8f8a190",
     name: "StarkTx",
     shortName: "StarkTx",
-    description: "StarkNet transactions analysis tool",
+    description: "Starknet transactions analysis tool",
     tags: ["tools"],
     image: "",
     network: {
@@ -1392,7 +1619,7 @@ export const allProjects: Array<Project> = [
     name: "Voyager",
     shortName: "Voyager",
     description:
-      "Voyager is a block explorer for the StarkNet ecosystem, providing all the capabilities needed in navigating through this ecosystem. It includes not only read-only data but also supports interaction with StarkNet contracts.",
+      "Voyager is a block explorer for the Starknet ecosystem, providing all the capabilities needed in navigating through this ecosystem. It includes not only read-only data but also supports interaction with Starknet contracts.",
     tags: ["tools", "infrastructure"],
     image: "voyager.png",
     network: {
@@ -1412,7 +1639,7 @@ export const allProjects: Array<Project> = [
     name: "Venus investment protocol",
     shortName: "vip",
     description:
-      "vip is an automatic investment tool of StarkNet ecosystem, providing decentralized automatic swap token plan for most non professional financial users, .ie. you want to buy eth token via usdt periodically， you can schedule a plan for it then unattended execution!",
+      "vip is an automatic investment tool of Starknet ecosystem, providing decentralized automatic swap token plan for most non professional financial users, .ie. you want to buy eth token via usdt periodically， you can schedule a plan for it then unattended execution!",
     tags: ["defi"],
     image: "vip.png",
     network: {
@@ -1432,7 +1659,7 @@ export const allProjects: Array<Project> = [
     name: "Stork Oracle Network",
     shortName: "Stork",
     description:
-      "Stork is an oracle network for StarkEx and StarkNet, optimized for DeFi and providing low latency off-chain price quotes from trusted sources.",
+      "Stork is an oracle network for StarkEx and Starknet, optimized for DeFi and providing low latency off-chain price quotes from trusted sources.",
     tags: ["defi"],
     image: "stork.png",
     network: {
@@ -1451,7 +1678,7 @@ export const allProjects: Array<Project> = [
     name: "Redline",
     shortName: "Redline",
     description:
-      "Giant robot NFT racing and engineering on StarkNet and UE5.Deep Strategy and Drama Game.",
+      "Giant robot NFT racing and engineering on Starknet and UE5.Deep Strategy and Drama Game.",
     tags: ["gamefi"],
     image: "redline.jpeg",
     network: {
@@ -1470,7 +1697,7 @@ export const allProjects: Array<Project> = [
     name: "ZKStarter",
     shortName: "ZKStarter",
     description:
-      "Decentralized Launchpad shaping the future for projects on StarkNet.",
+      "Decentralized Launchpad shaping the future for projects on Starknet.",
     tags: ["defi"],
     image: "zkstarter.jpg",
     network: {
@@ -1508,7 +1735,7 @@ export const allProjects: Array<Project> = [
     name: "Arcticium",
     shortName: "Arcticium",
     description:
-      "We are building ecosystem and community for NFTs on StarkNet by StarkWareLtd.",
+      "We are building ecosystem and community for NFTs on Starknet by StarkWareLtd.",
     tags: ["nft"],
     image: "arcticium.jpg",
     network: {
@@ -1642,7 +1869,7 @@ export const allProjects: Array<Project> = [
     name: "Triality",
     shortName: "Triality",
     description:
-      "A decentralized knowledge sharing platform for web3 developers. Ask questions and find answers for the Cairo programming language, StarkNet, and more.",
+      "A decentralized knowledge sharing platform for web3 developers. Ask questions and find answers for the Cairo programming language, Starknet, and more.",
     tags: ["tools"],
     image: "triality.png",
     network: {
@@ -1677,21 +1904,21 @@ export const allProjects: Array<Project> = [
   },
   {
     id: "8d0d1cc3-af7e-48ab-aa22-bef4ede008df",
-    name: "Empiric Network",
-    shortName: "Empiric",
+    name: "Pragma Network",
+    shortName: "Pragma",
     description:
-      "Empiric Network is the leading oracle on Starknet, making data decentralized, transparent and composable. Powered by high-quality data from Alameda, Jane Street, Gemini, FTX, and more.",
+      "Pragma is the ZK-native oracle offering decentralized & composable data built on Starknet. It leverages state-of-the-art zk-proofs technology to securely bring high-quality data from first-party data providers on-chain.",
     tags: ["defi", "infrastructure"],
-    image: "empiric.svg",
+    image: "pragma.png",
     network: {
-      website: "https://www.empiric.network",
-      github: "https://github.com/42labs/Empiric",
-      twitter: "https://twitter.com/EmpiricNetwork",
-      medium: "https://medium.com/@EmpiricNetwork",
-      discord: "",
+      website: "https://www.pragmaoracle.com/",
+      github: "https://github.com/Astraly-Labs/Pragma",
+      twitter: "https://twitter.com/PragmaOracle",
+      medium: "https://medium.com/@PragmaOracle",
+      discord: "https://discord.com/invite/N7sM7VzfJB",
       telegram: "",
     },
-    isLive: false,
+    isLive: true,
     isTestnetLive: true,
   },
   {
@@ -1717,7 +1944,7 @@ export const allProjects: Array<Project> = [
     name: "ZKGraph",
     shortName: "ZKGraph",
     description:
-      "Your social graph, with limitless possibilities and uncompromised privacy, secured by StarkNet.",
+      "Your social graph, with limitless possibilities and uncompromised privacy, secured by Starknet.",
     tags: ["defi", "infrastructure"],
     image: "zk_graph.jpeg",
     network: {
@@ -1791,7 +2018,7 @@ export const allProjects: Array<Project> = [
     id: "0f6c18c3-9b0a-4532-b1e6-8d26bcacb114",
     name: "Fibrous Finance",
     shortName: "Fibrous",
-    description: "Gathers all AMMs of StarkNet at one place.",
+    description: "Gathers all AMMs of Starknet at one place.",
     tags: ["defi", "infrastructure"],
     image: "fibrousfinance.png",
     network: {
@@ -1802,7 +2029,7 @@ export const allProjects: Array<Project> = [
       discord: "",
       telegram: "",
     },
-    isLive: false,
+    isLive: true,
     isTestnetLive: false,
   },
   {
@@ -1810,7 +2037,7 @@ export const allProjects: Array<Project> = [
     name: "Frens Lands",
     shortName: "Frens Lands",
     description:
-      "On-chain world builder RTS built on StarkNet where you harvest resources and build to create your dream community.",
+      "On-chain world builder RTS built on Starknet where you harvest resources and build to create your dream community.",
     tags: ["nft", "gamefi"],
     image: "FrensLands.png",
     network: {
@@ -1826,21 +2053,21 @@ export const allProjects: Array<Project> = [
   },
   {
     id: "3c2bdf31-7d16-4a0a-b27c-35fdd6ce0340",
-    name: "Carmine Options AMM",
+    name: "Carmine Option AMM",
     shortName: "Carmine",
     description:
-      "Options AMM to allow users not only to buy, but also to sell options. To hedge or insure not only crypto pairs but also NFTs and game commodities.",
-    tags: ["defi"],
+      "On Carmine, you can buy or sell options to hedge your risk or speculate on the price of assets.",
+    tags: ["defi", "dao"],
     image: "carmine_round.png",
     network: {
       website: "https://carmine.finance",
       github: "https://github.com/CarmineOptions",
       twitter: "https://twitter.com/CarmineOptions",
-      medium: "",
+      medium: "https://medium.com/@carminefinanceinfo",
       discord: "https://discord.gg/uRs7j8w3bX",
       telegram: "",
     },
-    isLive: false,
+    isLive: true,
     isTestnetLive: false,
   },
   {
@@ -1848,7 +2075,7 @@ export const allProjects: Array<Project> = [
     name: "Early Starkers",
     shortName: "Early Starkers",
     description:
-      "Early Starkers project aims to gather the early adaptors and pioneers of StarkNet community.",
+      "Early Starkers project aims to gather the early adaptors and pioneers of Starknet community.",
     tags: ["nft"],
     image: "early_starkers.png",
     network: {
@@ -1893,7 +2120,7 @@ export const allProjects: Array<Project> = [
       github: "https://github.com/starknet-id",
       twitter: "https://twitter.com/starknet_id",
     },
-    isLive: false,
+    isLive: true,
     isTestnetLive: true,
   },
   {
@@ -1901,7 +2128,7 @@ export const allProjects: Array<Project> = [
     name: "BlastApi",
     shortName: "blastapi",
     description:
-      "BlastApi offers high quality StarkNet mainnet and testnet APIs.",
+      "BlastApi offers high quality Starknet mainnet and testnet APIs.",
     tags: ["infrastructure"],
     image: "blastapi.png",
     network: {
@@ -1919,7 +2146,7 @@ export const allProjects: Array<Project> = [
     id: "a98adf16-f8d9-4694-bb55-654564cbd2e9",
     name: "10KSwap",
     shortName: "10KSwap",
-    description: "10KSwap is a Layer 2 AMM protocol building on StarkNet",
+    description: "10KSwap is a Layer 2 AMM protocol building on Starknet",
     tags: ["defi", "infrastructure"],
     image: "10kswap.png",
     network: {
@@ -1977,7 +2204,7 @@ export const allProjects: Array<Project> = [
     name: "CygnusDAO",
     shortName: "Cygnus",
     description:
-      "Stablecoin Lending and Margin Trading Protocol designed specifically for Liquidity Providers across EVMs and StarkNet.",
+      "Stablecoin Lending and Margin Trading Protocol designed specifically for Liquidity Providers across EVMs and Starknet.",
     tags: ["defi", "dao", "governance"],
     image: "cygnusdao.png",
     network: {
@@ -1993,10 +2220,10 @@ export const allProjects: Array<Project> = [
   },
   {
     id: "00dd4c69-02d6-4e3e-a79f-7bbd9bfb94f4",
-    name: "Newton.so | Ask developers questions about StarkNet and Cairo Lang here",
+    name: "Newton.so",
     shortName: "Newton.so",
     description:
-      "StarkNet & Cairo Lang place to share knowledge. A tokenized platform to ask and answer questions about blockchain and web3. Put bounties for your questions and improve the speed of software development now",
+      "Starknet & Cairo Lang place to share knowledge. A tokenized platform to ask and answer questions about blockchain and web3. Put bounties for your questions and improve the speed of software development now",
     tags: ["infrastructure", "tools"],
     image: "Newtonso.png",
     network: {
@@ -2015,7 +2242,7 @@ export const allProjects: Array<Project> = [
     name: "StarkGate",
     shortName: "StarkGate",
     description:
-      "StarkGate is the Ethereum↔StarkNet token bridge developed by StarkWare.",
+      "StarkGate is the Ethereum↔Starknet token bridge developed by StarkWare.",
     tags: ["bridge", "starkware"],
     image: "starkgate.png",
     network: {
@@ -2126,14 +2353,15 @@ export const allProjects: Array<Project> = [
   },
   {
     id: "2713d1e6-cc60-4550-8774-c5a5f6896b6d",
-    name: "VSCode StarkNet Explorer",
-    shortName: "StarkNet Explorer",
+    name: "VSCode Starknet Explorer",
+    shortName: "Starknet Explorer",
     description:
-      "VSCode extension to visualize StarkNet contracts: view storage variables, external and view functions, and events.",
+      "VSCode extension to visualize Starknet contracts: view storage variables, external and view functions, and events.",
     tags: ["tools", "security"],
     image: "",
     network: {
-      website: "https://marketplace.visualstudio.com/items?itemName=trailofbits.starknet-explorer",
+      website:
+        "https://marketplace.visualstudio.com/items?itemName=trailofbits.starknet-explorer",
       github: "https://github.com/crytic/vscode-starknet-explorer",
       twitter: "",
       medium: "",
@@ -2148,7 +2376,7 @@ export const allProjects: Array<Project> = [
     name: "WIW Protocol",
     shortName: "WIW",
     description:
-        'WIW is a privacy-preserving on-chain identity protocol that curates openly accessible Web3 user reputations.',
+      "WIW is a privacy-preserving on-chain identity protocol that curates openly accessible Web3 user reputations.",
     tags: ["digital_id", "infrastructure", "tools"],
     image: "wiw.png",
     network: {
@@ -2166,8 +2394,7 @@ export const allProjects: Array<Project> = [
     id: "320d804a-cf3c-49eb-9013-b2873d17a8ae",
     name: "Dragon Quest",
     shortName: "Dragon Quest",
-    description:
-        'Dragon Quest is a text-based RPG game.',
+    description: "Dragon Quest is a text-based RPG game.",
     tags: ["gamefi", "nft"],
     image: "",
     network: {
@@ -2183,29 +2410,29 @@ export const allProjects: Array<Project> = [
   },
   {
     id: "5b54b8c6-ae8c-403e-ae55-0dc64d577cb6",
-    name: "Stark Sport",
-    shortName: "Stark Sport",
+    name: "StarkSport",
+    shortName: "StarkSport",
     description:
-      'Starksport is a king sport inspired project built on Binance Smart Chain, StarkNet...',
+      "Connect the world's major sporting events with Defi and NFT market services",
     tags: ["nft", "defi", "gamefi"],
     image: "starksport.png",
     network: {
       website: "http://starksport.finance",
-      github: "",
+      github: "https://github.com/possc/StarkSport",
       twitter: "https://twitter.com/starkfinance",
       medium: "",
-      discord: "https://discord.gg/rX38ZwbqKw",
+      discord: "https://discord.gg/starksports",
       telegram: "https://t.me/starksportchanel",
     },
-    isLive: false,
-    isTestnetLive: false,
+    isLive: true,
+    isTestnetLive: true,
   },
   {
     id: "01babbb2-b6d9-4585-b795-2e388123ffd8",
     name: "Dynamic",
     shortName: "Dynamic",
     description:
-      'Your multi-chain web3 auth platform. A smart, beautiful and dynamic multi-chain wallet login flow, and powerful developer tools to match.',
+      "Your multi-chain web3 auth platform. A smart, beautiful and dynamic multi-chain wallet login flow, and powerful developer tools to match.",
     tags: ["wallet", "digital_id", "infrastructure", "tools"],
     image: "dynamic.svg",
     network: {
@@ -2262,7 +2489,7 @@ export const allProjects: Array<Project> = [
     name: "Donex Finance",
     shortName: "Donex",
     description:
-      "The Donex Protocol is a DeFi protocol for providing liquidity, trading and borrowing & lending ERC20 tokens on StarkNet",
+      "The Donex Protocol is a DeFi protocol for providing liquidity, trading and borrowing & lending ERC20 tokens on Starknet",
     tags: ["defi"],
     image: "donexfinance.png",
     network: {
@@ -2280,8 +2507,7 @@ export const allProjects: Array<Project> = [
     id: "f7c7eecd-21d2-4729-adad-d94109864b30",
     name: "MonkeyMind",
     shortName: "MonkeyMind",
-    description:
-      "Gamified Mindfulness app on Starknet",
+    description: "Gamified Mindfulness app on Starknet",
     tags: ["nft", "gamefi"],
     image: "monkeymind.png",
     network: {
@@ -2299,8 +2525,7 @@ export const allProjects: Array<Project> = [
     id: "4e95f7dc-9a31-40bb-829e-0a19098521e5",
     name: "Saddle Finance",
     shortName: "Saddle Finance",
-    description:
-      "Multichain open source AMM for low slippage stableswaps",
+    description: "Multichain open source AMM for low slippage stableswaps",
     tags: ["defi"],
     image: "SDL_SVG.svg",
     network: {
@@ -2338,7 +2563,7 @@ export const allProjects: Array<Project> = [
     name: "Aura Protocol",
     shortName: "Aura Protocol",
     description:
-      "Aura is a capital efficient cross margin credit protocol on StarkNet with autonomous, dynamically generated risk parameters.",
+      "Aura is a capital efficient cross margin credit protocol on Starknet with autonomous, dynamically generated risk parameters.",
     tags: ["defi"],
     image: "aura.svg",
     network: {
@@ -2361,7 +2586,7 @@ export const allProjects: Array<Project> = [
     tags: ["bridge", "infrastructure", "starkex"],
     image: "layerswap.svg",
     network: {
-      website: "https://www.layerswap.io/git",
+      website: "https://www.layerswap.io",
       github: "https://github.com/layerswap/",
       twitter: "https://twitter.com/layerswap",
       medium: "",
@@ -2375,17 +2600,16 @@ export const allProjects: Array<Project> = [
     id: "f52694c1-0963-494c-91aa-40af0a94e77e",
     name: "Sphinx",
     shortName: "Sphinx",
-    description:
-      "A natively cross-chain CLOB orderbook DEX deployed on StarkNet.",
-    tags: ["defi", "bridge"],
-    image: "sphinx.jpg",
+    description: "An advanced AMM for all liquidity providers.",
+    tags: ["defi"],
+    image: "sphinx.png",
     network: {
-      website: "http://sphnx.xyz/",
-      github: "https://github.com/sphinx-dex",
-      twitter: "https://twitter.com/sphinxdex",
+      website: "http://sphinx.exchange/",
+      github: "https://github.com/sphinx-protocol",
+      twitter: "https://twitter.com/sphinxamm",
       medium: "",
-      discord: "https://discord.gg/bx65SJ6u",
-      telegram: "",
+      discord: "https://discord.gg/TWNfa2eX",
+      telegram: "https://t.me/+n2-ImCpHqKc1Yzdk",
     },
     isLive: false,
     isTestnetLive: true,
@@ -2394,9 +2618,8 @@ export const allProjects: Array<Project> = [
     id: "cf6a3044-bf12-4c0e-89fc-ad8bb352daa7",
     name: "Kasar Labs",
     shortName: "KasarLabs",
-    description:
-      "A Starknet engineering and research laboratory.",
-      tags: ["infrastructure", "tools"],
+    description: "A Starknet engineering and research laboratory.",
+    tags: ["infrastructure", "tools"],
     image: "Kasarlabs.png",
     network: {
       website: "http://kasar.io/",
@@ -2408,5 +2631,771 @@ export const allProjects: Array<Project> = [
     },
     isLive: false,
     isTestnetLive: true,
-  }
+  },
+  {
+    id: "9c9d0282-1311-437d-a20d-15a79844e25f",
+    name: "Horus",
+    shortName: "Horus",
+    description: "A formal verification tool for StarkNet smart contracts.",
+    tags: ["tools", "security", "formal-verification"],
+    image: "horus.png",
+    network: {
+      website: "https://nethermind.io/horus/",
+      github: "https://github.com/NethermindEth/horus-checker",
+      twitter: "",
+      medium: "",
+      discord: "https://discord.gg/FhgPG6cEvH",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: true,
+  },
+  {
+    id: "ed86c982-8968-47e8-8fb2-d879155c629e",
+    name: "Juno",
+    shortName: "Juno",
+    description: "Starknet full state node written in Go",
+    tags: ["tools", "infrastructure"],
+    image: "juno.png",
+    network: {
+      website: "https://github.com/NethermindEth/juno",
+      github: "https://github.com/NethermindEth/juno",
+      twitter: "https://twitter.com/NethermindStark",
+      medium: "",
+      discord: "https://discord.gg/eZgAjMWjJW",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: true,
+  },
+  {
+    id: "1750c340-6dfa-4207-b973-0948e183a8d7",
+    name: "Security Challenges Factory",
+    shortName: "Security Challenges Factory",
+    description:
+      "Inspired in Solidity security challenges, this is a game in which you hack Starknet Testnet smart contracts to learn about security. It's meant to be both fun and educational. The game consists of a series of challenges in different categories. You earn points for every challenge you complete.",
+    tags: ["security"],
+    image: "scf.png",
+    network: {
+      website: "https://starknet-challenges.vercel.app/",
+      github: "https://github.com/devnet0x/Starknet-Security-Challenges-Repo",
+      medium: "https://medium.com/@devnet0x",
+    },
+    isLive: false,
+    isTestnetLive: true,
+  },
+  {
+    id: "cf99e8ee-00b7-4b59-afd7-4288ffe7a97b",
+    name: "Pawaswap",
+    shortName: "Pawaswap",
+    description: "First DEX Aggregator LIVE on Starknet Mainnet",
+    tags: ["defi", "infrastructure"],
+    image: "0xPawa.png",
+    network: {
+      website: "https://pawaswap.com",
+      github: "https://github.com/0xPawa",
+      twitter: "https://twitter.com/0xPawa",
+      medium: "",
+      discord: "https://discord.gg/duPgjSvnGV",
+      telegram: "https://t.me/pawaswap",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
+  {
+    id: "2603b4ea-42ce-4881-bbaf-aca81dcc4824",
+    name: "Checkpoint",
+    shortName: "Checkpoint",
+    description:
+      "Checkpoint is a library for indexing data from Starknet events and making it accessible through GraphQL.",
+    tags: ["tools", "infrastructure"],
+    image: "checkpoint.png",
+    network: {
+      website: "https://checkpoint.fyi/",
+      github: "https://github.com/snapshot-labs/checkpoint",
+      twitter: "https://twitter.com/checkpointfyi",
+      medium: "",
+      discord: "https://discord.gg/QJupGWJbge",
+      telegram: "https://t.me/checkpointfyi",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
+  {
+    id: "41b4285a-2f2b-471d-bb8b-61e747a8cbdc",
+    name: "RedStone Oracle",
+    shortName: "RedStone",
+    description:
+      "RedStone On-Demand Oracle delivers data feeds for 1,100+ assets, with a few seconds refresh interval to Starknet & StarkEx ecosystems. We provide: long-tail, LP, staked, ecosystem-native tokens, indexes, commodities, Forex and custom data feeds, i.e. NFT related.",
+    tags: ["tools", "infrastructure", "bridge", "defi"],
+    image: "RedStone.svg",
+    network: {
+      website: "https://redstone.finance/",
+      github: "https://github.com/redstone-finance",
+      twitter: "https://twitter.com/redstone_defi",
+      medium: "https://medium.com/@RedStone_Finance",
+      discord: "https://discord.gg/83wpSMYV",
+      telegram: "https://t.me/redstonefinance",
+    },
+    isLive: true,
+    isTestnetLive: true,
+  },
+  {
+    id: "2431f5bb-9a1c-418d-9bd7-a46afdfe6f53",
+    name: "Bitget Wallet",
+    shortName: "Bitget Wallet",
+    description:
+      "Your Web3 Crypto Wallet for effortless trading. One of the top non-custodial multi-chain crypto wallet, integrates Wallet, Swap, NFT Market, DApp and Discover in a single location, allowing users to enter the era of Web 3.0 with ease.",
+    tags: ["wallet", "Defi", "NFT", "digital_id", "infrastructure"],
+    image: "bitgetWallet.png",
+    network: {
+      website: "https://web3.bitget.com/",
+      github: "https://github.com/bitkeepwallet",
+      twitter: "https://twitter.com/BitgetWallet",
+      medium: "https://bitgetwalletblog.medium.com/",
+      discord: "https://discord.gg/qjH6YGDYgh",
+      telegram: "https://t.me/Bitget_Wallet",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
+  {
+    id: "fc004c2a-fa4e-4dfe-b553-ad8e80f782bd",
+    name: "RockX Access Node",
+    shortName: "RockX",
+    description:
+      "Institutional-grade blockchain nodes so you can build, scale and stake with ease.",
+    tags: ["access node", "data", "staking", "infrastructure"],
+    image: "rockx-logo.png",
+    network: {
+      website: "https://www.rockx.com/",
+      github: "https://github.com/RockX-SG",
+      twitter: "https://twitter.com/rockx_official",
+      medium: "",
+      discord: "https://discord.gg/e7WSJmCrNZ",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
+  {
+    id: "3f68f506-8d2b-473d-b033-7238e5ab5c1f",
+    name: "OpenZeppelin Contracts",
+    shortName: "OpenZeppelin",
+    description: "OpenZeppelin Contracts written in Cairo for StarkNet",
+    tags: ["tools", "security", "infrastructure", "nft", "defi"],
+    image: "openzeppelin.png",
+    network: {
+      website: "https://www.openzeppelin.com/",
+      github: "https://github.com/OpenZeppelin/cairo-contracts",
+      twitter: "https://twitter.com/OpenZeppelin",
+      medium: "",
+      discord: "",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
+  {
+    id: "b75f8c8c-f464-48c5-a7c5-444ac03f5d68",
+    name: "Madara Starknet Sequencer",
+    shortName: "Madara",
+    description:
+      "🥷🩸 Madara is a ⚡ blazing fast ⚡ Starknet sequencer, based on substrate, powered by Rust 🦀",
+    tags: ["all", "security", "infrastructure"],
+    image: "madara.png",
+    network: {
+      website: "https://github.com/keep-starknet-strange/madara",
+      github: "https://github.com/keep-starknet-strange/madara",
+      twitter: "https://twitter.com/MadaraStarknet",
+      medium: "",
+      discord: "",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
+  {
+    id: "e4128000-d4ba-409c-9cf1-0cf758c16bd4",
+    name: "Beerus Starknet Light Client",
+    shortName: "Beerus",
+    description:
+      "Beerus is a trustless Starknet Light Client, ⚡ blazing fast ⚡ and powered by Rust 🦀",
+    tags: ["all", "security", "infrastructure"],
+    image: "beerus.png",
+    network: {
+      website: "https://github.com/keep-starknet-strange/beerus",
+      github: "https://github.com/keep-starknet-strange/beerus",
+      twitter: "https://twitter.com/BeerusStarknet",
+      medium: "",
+      discord: "",
+      telegram: "https://t.me/BeerusStarknet",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
+  {
+    id: "1a37301e-1596-4969-bdc3-77e543da2969",
+    name: "Charged: Transaction Debugger",
+    shortName: "Charged",
+    description:
+      "Charged is a chrome extensions that allows you to pause, edit and simulate transactions before sending them on chain. So you don't need to spend hours in debugging transactions when you can do it in minutes ⚡",
+    tags: ["all", "security", "infrastructure", "tools"],
+    image: "beerus.png",
+    network: {
+      website: "https://getcharged.dev",
+      github: "https://github.com/quick-wallet",
+      twitter: "https://twitter.com/getcharged_",
+      medium: "",
+      discord: "",
+      telegram: "https://t.me/getcharg3d",
+    },
+    isLive: true,
+    isTestnetLive: true,
+  },
+  {
+    id: "f174231a-746f-478e-85b0-14f6cb795a79",
+    name: "ProtossDex: A Dex Protocol on Starknet",
+    shortName: "Protoss",
+    description:
+      "We serve Protoss - a protocol for trading and automated liquidity provision on @Starknet",
+    tags: ["all", "infrastructure", "defi"],
+    image: "protoss.png",
+    network: {
+      website: "https://protoss.org",
+      github: "https://github.com/protoss-exchange",
+      twitter: "https://twitter.com/protossdex",
+      medium: "",
+      discord: "",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
+  {
+    id: "e0ae7230-84d9-43c0-93e8-189f78e4c331",
+    name: "OmniBTC",
+    shortName: "OmniBTC",
+    description:
+      "OmniBTC is an omnichain defi platform based on interoperability protocols to realize cross-chain swap/lending across multi-VM ecosystems, aiming to provide users with the best cross-chain experience at the lowest cost.",
+    tags: ["all", "defi", "bridge"],
+    image: "omnibtc.png",
+    network: {
+      website: "https://omnibtc.finance/",
+      github: "https://github.com/OmniBTC",
+      twitter: "https://twitter.com/OmniBTC",
+      medium: "https://medium.com/@omnibtc",
+      discord: "https://discord.gg/Z2EzZcJ72x",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
+  {
+    id: "36813178-0b5d-4e5c-879c-2b7ce7ecc6d8",
+    name: "StarkEx",
+    shortName: "StarkEx",
+    description:
+      "StarkEx——AMM,Liquidity Farms,and Reward pools on StarkNet. StarkEx is also a community-based and open-source ecosystem for DeFi! Say goodbye to CeFi!",
+    tags: ["defi", "infrastructure"],
+    image: "StarkEx.png",
+    network: {
+      twitter: "https://twitter.com/starkex_org",
+      github: "",
+      medium: "",
+      telegram: "",
+      website: "https://app.starkex.org/",
+      discord: "https://discord.gg/6XgTWpWR",
+    },
+    isLive: true,
+    isTestnetLive: true,
+  },
+  {
+    id: "d6d98ff4-25aa-42b5-b22b-f696eae0ea19",
+    name: "D2Y",
+    shortName: "D2Y",
+    description:
+      "D2Y is building a decentralized order-book based options and futures exchange.",
+    tags: ["defi"],
+    image: "d2y.png",
+    network: {
+      twitter: "https://twitter.com/D2YExchange",
+      github: "",
+      medium: "https://d2yexchange.medium.com",
+      telegram: "",
+      website: "",
+      discord: "https://discord.gg/zRfEKmU3cQ",
+    },
+    isLive: false,
+    isTestnetLive: false,
+  },
+  {
+    id: "58bebd20-2314-464b-b2f7-e95da6da41e1",
+    name: "Starknet Quest",
+    shortName: "Starknet Quest",
+    description: "Accomplish quests to collect unique NFTs on Starknet.",
+    tags: ["all", "digital_id", "nft"],
+    image: "starknetquestLogo.svg",
+    network: {
+      website: "starknet.quest",
+      github: "https://starknet.quest/",
+      twitter: "https://twitter.com/Starknet_quest",
+      medium: "",
+      discord: "",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: true,
+  },
+  {
+    id: "101f06d5-595f-4254-ac9e-4bb6c7975b00",
+    name: "RN Bridge",
+    shortName: "RN Bridge",
+    description:
+      "Raum Network's RN Bridge introduces an innovative solution for users seeking to seamlessly transfer their RN Tokens from the Polygon network to StarkNet. This bridge serves as a vital link, ensuring the smooth migration of tokens between these two distinct blockchain ecosystems. We will incorporate major tokens such as ETH, USDC, USDT, DAI, and WBTC in forthcoming updates.",
+    tags: ["all", "bridge", "defi"],
+    image: "RN_Bridge.png",
+    network: {
+      website: "https://v1.bridge.raum.network/swap",
+      github: "https://github.com/Raum-Network",
+      twitter: "https://twitter.com/RaumNetwork",
+      medium: "https://raumnetwork.medium.com",
+      discord: "https://discord.gg/3TRy4pzzHn",
+      telegram: "https://guild.xyz/raum-network",
+    },
+    isLive: true,
+    isTestnetLive: true,
+  },
+  {
+    id: "5fa38c5c-942c-4b0a-af0f-e3979a44eec9",
+    name: "zk-Name Service",
+    shortName: "zk-Name Service",
+    description:
+      "This is a decentralized community domain name project. After users purchase domain names at extremely low prices, they can mint governance tokens, which are all distributed to domain name owners, developers do not have any reserved shares. When users mint governance tokens, the community relations will be automatically bound, which for subsequent social applications and game applications.",
+    tags: ["digital_id", "nft", "tools"],
+    image: "zk-name-service.png",
+    network: {
+      website: "https://zk-ns.xyz/",
+      github: "https://github.com/zk-ns/zk-name-service--cairo1.0",
+      discord: "https://discord.com/invite/YWrevpKWPx",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
+  {
+    id: "fe115048-2b5f-11ee-be56-0242ac120002",
+    name: "StarkWars",
+    shortName: "StarkWars",
+    description: "StarkWars is the first major interstellar game on Starknet. ",
+    tags: ["nft", "gamefi"],
+    image: "starkwars.png",
+    network: {
+      website: "https://www.starkwars.xyz",
+      github: "",
+      twitter: "https://twitter.com/starknet_wars",
+      medium: "",
+      discord: "https://discord.com/invite/hJupqTrK4G",
+      telegram: "https://t.me/starknet_wars",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
+  {
+    id: "1f60939b-9194-43ae-ab83-95137b93d7d8",
+    name: "Renegade",
+    shortName: "Renegade",
+    description:
+      "On-chain dark pool. Trade any ERC-20 in size with zero price impact.",
+    tags: ["all", "defi"],
+    image: "renegade.png",
+    network: {
+      website: "https://renegade.fi",
+      github: "https://github.com/renegade-fi",
+      twitter: "https://twitter.com/renegade_fi",
+      medium: "",
+      discord: "https://discord.gg/renegade-fi",
+      telegram: "",
+    },
+    isLive: false,
+    isTestnetLive: false,
+  },
+  {
+    id: "5a1fad08-47f2-45f7-bc4c-8183392176c1",
+    name: "Expectium Protocol",
+    shortName: "Expectium",
+    description:
+      "Expectium is an information markets platform that lets you trade on the world’s most highly-debated topics (e.g. politics, current events, etc). On Expectium, you build a portfolio based on your forecasts and earn a return if you are right. When you decide to buy shares in a market, you are weighing in with your own knowledge, research, and view of the future. Market prices reflect what traders think are the odds of future events, turning trading activity into actionable insights that help people make better decisions. As a result, Expectium is a leading source of unbiased and real-time data about future events.",
+    tags: ["all", "dao", "defi", "nft", "gamefi"],
+    image: "expectium.png",
+    network: {
+      website: "https://expectium.io/",
+      github: "",
+      twitter: "https://twitter.com/expectiumio",
+      medium: "",
+      discord: "https://discord.com/invite/TU54zXjNuq",
+      telegram: "https://t.me/expectiumprotocol",
+    },
+    isLive: false,
+    isTestnetLive: true,
+  },
+  {
+    id: "2a3c8513-e1a3-41b5-8e65-74a033b68eb1",
+    name: "StarkStats",
+    shortName: "StarkStats",
+    description:
+      "StarkStats is the statistics tool for users activity analyze.",
+    tags: ["all", "tools"],
+    image: "starkstats.png",
+    network: {
+      website: "https://starkstats.xyz/",
+      github: "https://github.com/sm1ck/starkstats",
+      twitter: "",
+      medium: "",
+      discord: "",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
+  {
+    id: "adf0c80f-2e8a-455d-9312-2f02fba41ec8",
+    name: "disperse-starknet",
+    shortName: "ds",
+    description:
+      "This dapp helps you in disperse ERC20 tokens on the StarkNet mainnet and testnet to multiple wallet addresses.",
+    tags: ["all", "defi", "cairo"],
+    image: "disperse-starknet-logo.png",
+    network: {
+      website: "https://disperse-starknet.vercel.app/",
+      github: "https://github.com/Scotthamy/disperse-starknet",
+    },
+    isLive: true,
+    isTestnetLive: true,
+  },
+  {
+    id: "8a79276c-3b5b-11ee-be56-0242ac120002",
+    name: "Face To See NFTs",
+    shortName: "FATOCE",
+    description:
+      "F2C is the 1st collection in the product suite of DeColGen Labs, aiming to build a collective of mini-games and entertainment dapps.",
+    tags: ["nft"],
+    image: "logo-face-to-see.png",
+    network: {
+      twitter: "https://twitter.com/FaceToSee_",
+      discord: "https://discord.com/invite/djU2mEJcSq",
+      website: "https://linktr.ee/facetosee_",
+      github: "",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
+  {
+    id: "2dd53057-6641-45c0-b4c2-e4544d2c7571",
+    name: "flipblob",
+    shortName: "flipblob",
+    description:
+      "FlipBlob is a Starknet-based (dApp) that provides a secure and transparent platform for coin-flipping. Win, and you'll receive double your stake.",
+    tags: ["gamefi", "defi", "cairo", "all", "nft"],
+    image: "disperse-starknet-logo.png",
+    network: {
+      website: "https://flipblob.com/",
+      twitter: "https://twitter.com/flipblob",
+    },
+    isLive: false,
+    isTestnetLive: true,
+  },
+  {
+    id: "3b8a8bae-d7bc-4b80-a3ce-fb0e88e0fec6",
+    name: "StarkID",
+    shortName: "STK",
+    description:
+      "StarkID is the most user-friendly decentralized naming service platform on Starknet, offering customized DIDs for users, with the suffix .stk.",
+    tags: ["nft", "tools", "digital_id"],
+    image: "StarkID-logo.png",
+    network: {
+      website: "https://starkid.pro/",
+      twitter: "https://twitter.com/stark_did",
+    },
+    isLive: true,
+    isTestnetLive: true,
+  },
+  {
+    id: "9423b0f0-d1de-4d58-be0f-a59b5fa2e09c",
+    name: "Starknet.unity",
+    shortName: "Starknet.unity",
+    description:
+      "The Starknet.unity is endeavoring to take the StarknetJS experience into unity engine",
+    tags: ["infrastructure", "tools"],
+    image: "starknetunity.png",
+    network: {
+      github: "https://github.com/iLAYER-ORG/Starknet.unity",
+    },
+    isLive: true,
+    isTestnetLive: true,
+  },
+  {
+    id: "e6d336fd-f243-4e35-95be-74d9c6bdc929",
+    name: "OnchainBlock",
+    shortName: "OnchainBlock",
+    description:
+      "Welcome to OnchainBlock - the destination to delve deeper into the realm of Starknet, and various other asset types based on blockchain technology.",
+    tags: ["bridge", "tools"],
+    image: "OnchainBlock.png",
+    network: {
+      website: "https://onchainblock.xyz/",
+      github: "https://github.com/OnchainBlock",
+      twitter: "https://twitter.com/OnchainBlock",
+      medium: "https://medium.com/@onchainblock",
+      telegram: "https://t.me/trackerETH",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
+  {
+    id: "4bce31ab-6c5f-478a-b8ac-0dba6f8ed9a3",
+    name: "D'islands",
+    shortName: "D'islands",
+    description:
+      "D'islands is an on-chain gaming ecosystem built on Starknet. D'islands aims to create a truly decentralized, scalable and autonomous world where players can enjoy unlimited games and interact with each other without any limitations.",
+    tags: ["nft", "gamefi"],
+    image: "Disland-logo.jpg",
+    network: {
+      website: "https://www.dislands.com/",
+      twitter: "https://twitter.com/0xDislands",
+      medium: "https://medium.com/@dislands",
+      discord: "https://discord.com/invite/G6ds4SZBvf",
+    },
+    isLive: false,
+    isTestnetLive: false,
+  },
+  {
+    id: "1d211d22-a83c-407f-aabe-9f34081048b4",
+    name: "Element Market",
+    shortName: "Element",
+    description:
+      "The First Community-driven Aggregated Marketplace, the most gas-saving trading place for NFTs",
+    tags: ["nft"],
+    image: "elementmarket.png",
+    network: {
+      website: "https://element.market/",
+      github: "element-market - Overview",
+      twitter: "https://twitter.com/Element_Market",
+      medium: "https://element-market.medium.com/",
+      discord: "https://discord.com/invite/elementmarket",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
+  {
+    id: "f0f90980-e14e-43c4-b50b-2c1c6150f345",
+    name: "Owlto Finance",
+    shortName: "Owlto",
+    description:
+      "Owlto Finance is a decentralized cross-rollup bridge that focuses on L2, providing 'safe, fast, cheap, and easy-to-use' services.",
+    tags: ["bridge", "infrastructure"],
+    image: "owlto.png",
+    network: {
+      website: "https://owlto.finance/",
+      github: "https://github.com/owlto-finance/",
+      twitter: "https://twitter.com/Owlto_Finance",
+      medium: "https://owlto-finance.medium.com/",
+      discord: "https://discord.gg/dyArfVwdxm",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
+  {
+    id: "966c960c-8bd9-49b4-b67b-94616e959e43",
+    name: "Crypts and Caverns",
+    shortName: "Crypts and Caverns",
+    description:
+      "9000 generative on-chain dungeons in the Lootverse. Can be used by designers and developers for text-based, 2D, and 3D games.",
+    tags: ["gamefi", "nft"],
+    image: "cryptsandcaverns.png",
+    network: {
+      website: "https://threepwave.com/cryptsandcaverns",
+      github: "https://github.com/CheDAOLabs/cryptsandcaverns",
+      twitter: "https://twitter.com/cryptsncaverns",
+      medium: "",
+      discord: "https://discord.com/invite/vXX84QjR7F",
+      telegram: "",
+    },
+    isLive: false,
+    isTestnetLive: true,
+  },
+  {
+    id: "6561553f-1d01-429f-98cc-69a8d7182a9c",
+    name: "Blast",
+    shortName: "Blast",
+    description:
+      "Blast is a decentralized API platform with best in class response times and availability. It leverages the power of hundreds of node providers and advanced routing algorithms for unmatched service quality!",
+    tags: ["tools", "infrastructure"],
+    image: "blast.png",
+    network: {
+      website: "https://blastapi.io/",
+      github: "https://github.com/bwarelabs",
+      twitter: "https://twitter.com/BlastAPI",
+      medium: "https://bware.page.link/medium",
+      discord: "https://discord.gg/bwarelabs",
+      telegram: "https://t.me/BwareLabsAnnouncements",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
+  {
+    id: "809178ab-4f9c-4188-a8d7-6cdf47150cdf",
+    name: "Metacube",
+    shortName: "Metacube",
+    description:
+      "Metacube is a Free2Play Massive Multiplayer Game, where the winners of ephemeral events get their assets distributed on Starknet",
+    tags: ["gamefi", "nft", "mobile"],
+    image: "metacube.png",
+    network: {
+      website: "https://metacube.games/",
+      github: "https://github.com/metacube-games",
+      twitter: "https://twitter.com/metacubegames",
+      medium: "",
+      discord: "discord.gg/3Ka4jACr7b",
+      telegram: "",
+    },
+    isLive: false,
+    isTestnetLive: false,
+  },
+  {
+    id: "6b6252b1-c47e-4695-a31f-a435227aa9ce",
+    name: "Flex NFT Marketplace",
+    shortName: "Flex",
+    description:
+      "🛒 The 1st Dynamic Marketplace for Starknet - By community for the community. Building the Big Picture, Not Just MARKET.",
+    tags: ["nft", "infrastructure"],
+    image: "flex.png",
+    network: {
+      website: "https://flexing.gg/",
+      github: "https://github.com/0xandee/flex-marketplace-cairo0-contracts",
+      twitter: "https://twitter.com/Flex_strk",
+      medium: "",
+      discord: "https://discord.com/invite/6HvG4ckx9T",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
+  {
+    id: "3d86dd11-fce5-4a86-9386-afd3c7c953d6",
+    name: "OG SponziMaask",
+    shortName: "Sponzi",
+    description:
+      "The OG SponziMaask collection is your Sponzi OG Pass. It gives to the owners an exclusive pole position within the SPONZI project.",
+    tags: ["nft", "governance"],
+    image: "ogSponziMaask.jpg",
+    network: {
+      website: "https://www.sponzi.wtf/",
+      github: "",
+      twitter: "https://twitter.com/official_sponzi",
+      medium: "https://medium.com/@sponzimaask/og-sponzimaask-nft-7f2f184f446d",
+      discord: "",
+      telegram: "",
+    },
+    isLive: false,
+    isTestnetLive: false,
+  },
+  {
+    id: "843a7abe-0d8f-4742-9a3d-b73e1a0b2a3c",
+    name: "StarkPass",
+    shortName: "StarkPass",
+    description: "The ticketing platform that operates on Starknet.",
+    tags: ["nft", "infrastructure"],
+    image: "starkpass.png",
+    network: {
+      website: "https://starkpass.com",
+      github: "",
+      twitter: "https://twitter.com/door_labs",
+      medium: "",
+      discord: "",
+      telegram: "",
+    },
+    isLive: false,
+    isTestnetLive: true,
+  },
+
+  {
+    id: "b14295c1-aab2-4b92-917f-22c66736fb7b",
+    name: "Resmic",
+    shortName: "Resmic",
+    description:
+      "Decentralised, Non-Custodial, Peer-to-Peer payment infrastructure",
+    tags: ["defi", "payments", "infrastructure", "tools"],
+    image: "Resmic.png",
+    network: {
+      website: "https://resmic.com",
+      github: "https://github.com/0xResmic",
+      twitter: "https://twitter.com/0xResmic",
+      medium: "",
+      discord: "",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: true,
+  },
+  {
+    id: "e53f84df-2c81-44c9-8afd-b79a0ff7171b",
+    name: "StarkExport",
+    shortName: "StarkExport",
+    description:
+      "Effortlessly effort Starknet transactions to CSV, XLSX, JSON and more",
+    tags: ["tools"],
+    image: "starkexport.png",
+    network: {
+      website: "https://starkexport.xyz",
+      github: "",
+      twitter: "",
+      medium: "",
+      discord: "",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
+  {
+    id: "99c4de9e-4e82-4268-a734-1aed4854d1f5",
+    name: "rhino.fi",
+    shortName: "rhino.fi",
+    description:
+      "rhino.fi - The lightning-fast secure bridge for seamless cross-chain transactions",
+    tags: ["bridge", "defi"],
+    image: "rhinofi.svg",
+    network: {
+      website:
+        "https://app.rhino.fi/bridge?token=ETH&chainOut=STARKNET&chain=zkSync",
+      github: "https://github.com/rhinofi/",
+      twitter: "https://twitter.com/rhinofi",
+      medium: "",
+      discord: "https://discord.gg/JvN3dcQrhk",
+      telegram: "https://t.me/rhinofi",
+    },
+    isLive: true,
+    isTestnetLive: true,
+  },
+  {
+    id: "ec3fbc60-5722-4fd5-b36b-34656e507da7",
+    name: "StarkRekt",
+    shortName: "StarkRekt",
+    description:
+      "StarkRekt enables users to check and reset their token spending permissions on StarkNet",
+    tags: ["tools", "security"],
+    image: "starkrekt-logo.png",
+    network: {
+      website: "https://starkrekt.com/",
+      github: "",
+      twitter: "https://twitter.com/StarkRekt",
+      medium: "",
+      discord: "",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
 ];

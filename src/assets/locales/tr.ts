@@ -2,18 +2,18 @@ import type { TranslateState } from "../../context/TranslateProvider/model";
 
 const trTranslate: TranslateState = {
   common: {
-    title_main: "StarkNet devrimi hayata geçiyor",
+    title_main: "Starknet devrimi hayata geçiyor",
     title_main_dapps: "dApps, Services & Wallets",
     hundreds: "Yüzlerce",
     subtitle_main:
-      "Projeleri, işleri, ölçümleri ve öğrenme kaynaklarını keşfederek kendinizi StarkNet Ekosistemine bırakın.",
+      "Projeleri, işleri, ölçümleri ve öğrenme kaynaklarını keşfederek kendinizi Starknet Ekosistemine bırakın.",
     community_driven: "✨ Topluluk odaklı bir girişim",
 
     no_project: "😕 Bu kategoride bir proje yok",
     maybe_yours: "Belki de seninki olabilir",
     made_with: "Made with",
     by: "by",
-    alpha_road_team: "Alpha Road Team",
+    avnu_team: "AVNU Team",
     apply: "Başvur",
     community: "Topluluk",
     job_title_main: "Jobs",
@@ -27,7 +27,7 @@ const trTranslate: TranslateState = {
     metrics: "Metrikler",
     academy: "Akademi",
     academy_subtitle:
-      "Your StarkNet learning shop. Find tutorials, guides, contributions, libraries. Subscribe to newsletters to keep track on this very fast-moving ecosystem.",
+      "Your Starknet learning shop. Find tutorials, guides, contributions, libraries. Subscribe to newsletters to keep track on this very fast-moving ecosystem.",
     jobs_subtitle: "You may be one click away from your dream job.",
     cumulative_chart: "Cumulative chart",
     non_cumulative_chart: "Non cumulative chart",

@@ -1,6 +1,4 @@
-import type { BigNumber } from "ethers";
-
 export interface BridgeMetrics {
-  balance: BigNumber;
+  balance: bigint;
   ethValue?: number;
 }

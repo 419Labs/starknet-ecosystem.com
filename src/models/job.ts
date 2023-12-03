@@ -12,6 +12,7 @@ export interface Job {
   location: string; // "City, State"
   remote?: boolean;
   aboutUs?: string;
+  aboutYou?: string;
   description: string;
   responsibilities?: string;
   requirements?: string;

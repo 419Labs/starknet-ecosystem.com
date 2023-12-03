@@ -1,6 +1,7 @@
 {
   "rules": {
-    "no-console": "off"
+    "no-console": "off",
+    "@typescript-eslint/no-explicit-any": "off"
   },
   "parserOptions": {
     "project": ["./tsconfig.json"]

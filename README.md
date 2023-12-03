@@ -1,12 +1,12 @@
-# StarkNet Ecosystem
+# Starknet Ecosystem
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) ![version](https://img.shields.io/badge/version-2.0.0-blue) ![Vercel Deployment](https://img.shields.io/github/deployments/419Labs/starknet-ecosystem.com/production?label=vercel)
 
-> Building on StarkNet is a financial advice.
+> Building on Starknet is a financial advice.
 > Louis G.
 
-Your entrypoint in StarkNet. Explore projects, teams, jobs, metrics and everything around StarkNet.
+Your entrypoint in Starknet. Explore projects, teams, jobs, metrics and everything around Starknet.
 
-![StarkNet Ecosystem by https://twitter.com/Maz_eth](docs/img/Starknet_Ecosystem.png)
+![Starknet Ecosystem by https://twitter.com/Maz_eth](docs/img/Starknet_Ecosystem.png)
 
 👉 Feel free to join our dedicated [Telegram](https://t.me/starknet_ecosystem) channel.
 
@@ -33,7 +33,7 @@ Here are the guides helping you to contribute to the ecosystem dashboard and get
 
 ### Others
 
-If you want to contribute in any way to this initiative please submit a PR. If you have ideas or want to share feedbacks feel free to open an issue.
+If you want to contribute in any way to this initiative please submit a PR. If you have ideas or want to share feedback feel free to open an issue.
 
 ### Community-driven
 
@@ -42,4 +42,4 @@ By joining the [Telegram channel](https://t.me/starknet_ecosystem) you'll be inf
 
 ## Conclusion
 
-This project has been initiated with ❤️ by [Alpha Road Team](https://twitter.com/alpharoad_fi) and grows thanks to the awesome StarkNet community.
+This project has been initiated with ❤️ by [AVNU Team](https://twitter.com/avnu_fi) and grows thanks to the awesome Starknet community.

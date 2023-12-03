@@ -1,29 +1,29 @@
 /** @type {import('next-seo').DefaultSeoProps} */
 const defaultSEOConfig = {
   title:
-    "StarkNet Ecosystem | Discover the future of Ethereum scalability.",
+    "Starknet Ecosystem | Discover the future of Ethereum scalability.",
   titleTemplate: "%s",
   defaultTitle:
-    "Explore projects, teams, jobs, metrics and everything around StarkNet Ecosystem",
+    "Explore projects, teams, jobs, metrics and everything around Starknet Ecosystem",
   description:
-    "Explore projects, teams, jobs, metrics and everything around StarkNet Ecosystem",
+    "Explore projects, teams, jobs, metrics and everything around Starknet Ecosystem",
   canonical: "https://starknet-ecosystem.com",
   openGraph: {
     url: "https://starknet-ecosystem.com",
-    title: "StarkNet Ecosystem",
+    title: "Starknet Ecosystem",
     description:
-      "Explore projects, teams, jobs, metrics and everything around StarkNet Ecosystem",
+      "Explore projects, teams, jobs, metrics and everything around Starknet Ecosystem",
     images: [
       {
         url: "https://www.starknet-ecosystem.com/starknet-map.png",
-        alt: "StarkNet Ecosystem logo",
+        alt: "Starknet Ecosystem logo",
       },
     ],
-    site_name: "StarkNet Ecosystem",
+    site_name: "Starknet Ecosystem",
   },
   twitter: {
     cardType: "summary_large_image",
-    site: "@StarkNetEco",
+    site: "@StarknetEco",
   },
 };
 

@@ -2,17 +2,17 @@ import type { TranslateState } from "../../context/TranslateProvider/model";
 
 const translate: TranslateState = {
   common: {
-    title_main: "Nadchodzi Rewolucja StarkNet",
+    title_main: "Nadchodzi Rewolucja Starknet",
     title_main_dapps: "dApps, Services & Wallets",
     hundreds: "Setki",
-    subtitle_main: "Poznaj wszystkie projekty zbudowane na StarkNet L2",
+    subtitle_main: "Poznaj wszystkie projekty zbudowane na Starknet L2",
     community_driven:
-      "✨ Ten projekt tworzony jest przez fantastyczną społeczność StarkNet ",
+      "✨ Ten projekt tworzony jest przez fantastyczną społeczność Starknet ",
     no_project: "😕 Brak projektów w tej kategorii",
     maybe_yours: "Może twój?",
     made_with: "Stworzony z",
     by: "przez",
-    alpha_road_team: "Alpha Road Team",
+    avnu_team: "AVNU Team",
     apply: "Zaaplikuj",
     community: "Społeczność",
     job_title_main: "Praca",
@@ -25,7 +25,7 @@ const translate: TranslateState = {
     metrics: "Metrics",
     academy: "Metryka",
     academy_subtitle:
-      "Twój sklep edukacyjny StarkNet. Znajdź samouczki, przewodniki, wkłady, biblioteki. Subskrybuj biuletyny, aby śledzić ten bardzo szybko rozwijający się ekosystem.",
+      "Twój sklep edukacyjny Starknet. Znajdź samouczki, przewodniki, wkłady, biblioteki. Subskrybuj biuletyny, aby śledzić ten bardzo szybko rozwijający się ekosystem.",
     jobs_subtitle: "Możesz być o jedno kliknięcie od wymarzonej pracy.",
     cumulative_chart: "Wykres zbiorczy",
     non_cumulative_chart: "Wykres nieskumulowany",

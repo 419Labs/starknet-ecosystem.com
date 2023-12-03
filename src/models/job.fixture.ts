@@ -2,13 +2,13 @@ import type { Project } from "../../data/ecosystem";
 
 import type { Job } from "./job";
 
-const ALPHA_ROAD_ID = "502b0dbc-5169-4db6-8796-36a968a798fd";
-const ALPHA_ROAD_NAME = "Alpha Road";
+const AVNU_ID = "502b0dbc-5169-4db6-8796-36a968a798fd";
+const AVNU_NAME = "AVNU";
 
 export const aJob = (): Job => ({
   key: "1",
   title: "Senior / backend - developer",
-  projectId: ALPHA_ROAD_ID,
+  projectId: AVNU_ID,
   compensation: {
     from: 200,
     to: 600,
@@ -35,12 +35,12 @@ export const aListOfJob = (): Job[] => [
   {
     ...aJob(),
     title: "Senior / backend - developer",
-    projectId: ALPHA_ROAD_ID,
+    projectId: AVNU_ID,
   },
   {
     ...aJob(),
     title: "Senior backend developer",
-    projectId: ALPHA_ROAD_ID,
+    projectId: AVNU_ID,
     remote: false,
   },
   {
@@ -53,25 +53,27 @@ export const aListOfJob = (): Job[] => [
 
 export const aProject = (): Project => ({
   id: "502b0dbc-5169-4db6-8796-36a968a798fd",
-  name: ALPHA_ROAD_NAME,
-  shortName: ALPHA_ROAD_NAME,
+  name: AVNU_NAME,
+  shortName: AVNU_NAME,
   description:
-    "Pioneer in DeFi L2 solution — Alpha Road aim at maximizing user investment returns by providing next gen DeFi experience and bespoke financial products.\n",
-  tags: ["defi", "nft"],
-  image: "alpharoad.png",
+    "AVNU is a decentralized exchange protocol designed to offer the best execution.\n" +
+    "\n" +
+    "Our mission is to build the Liquidity Infrastructure that aims to empower traders and dApps with the best execution. We believe that the only way to serve our customers is to secure the most competitive prices for them, as well as access to the broadest range of assets while providing an exceptional user experience that sets the industry standard.\n",
+  tags: ["defi", "infrastructure", "tools"],
+  image: "avnu.png",
   network: {
-    website: "https://testnet.app.alpharoad.fi",
+    website: "https://app.avnu.fi",
     github: "",
-    twitter: "https://twitter.com/alpharoad_fi",
-    medium: "https://alpharoad.medium.com/",
-    discord: "https://discord.gg/Bhfa3B2Gnq",
-    telegram: "https://t.me/alpharoad_fi",
+    twitter: "https://twitter.com/avnu_fi",
+    medium: "https://avnu-fi.medium.com/",
+    discord: "https://discord.gg/avnu-fi",
+    telegram: "https://t.me/avnu_fi",
   },
   isLive: false,
   isTestnetLive: true,
 });
 
 export const aListOfProject = (): Project[] => [
-  { ...aProject(), name: "Alpha Road", id: "1" },
+  { ...aProject(), name: "AVNU", id: "1" },
   { ...aProject(), name: "test", id: "2" },
 ];

@@ -75,8 +75,8 @@ function Footer() {
         <Text color="whiteAlpha.600">{t.common.made_with}</Text>
         <Text>❤️</Text>
         <Text color="whiteAlpha.600">{t.common.by}</Text>
-        <Link isExternal active href="https://twitter.com/alpharoad_fi">
-          {t.common.alpha_road_team}
+        <Link isExternal active href="https://twitter.com/avnu_fi">
+          {t.common.avnu_team}
         </Link>
       </HStack>
       <Divider my={4} bg="whiteAlpha.900" />
@@ -117,6 +117,9 @@ function Footer() {
             <Link isExternal href="https://t.me/starknet_ecosystem">
               Contact us
             </Link>
+            <Link isExternal href="https://status.starknet-ecosystem.com">
+              Status
+            </Link>
           </VStack>
         </VStack>
         <VStack align="flex-start">
@@ -127,7 +130,7 @@ function Footer() {
                 "        links in the StarkNet Ecosystem are provided as a convenience and\n" +
                 "        for informational purposes only; they do not constitute an\n" +
                 "        endorsement or approval by our initiative of any of the projects\n" +
-                "        or services listed therein."
+                "        or services listed therein.",
             )}
           </VStack>
         </VStack>

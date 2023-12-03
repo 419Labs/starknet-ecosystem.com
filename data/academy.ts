@@ -1,3 +1,4 @@
+/* eslint-disable sonarjs/no-duplicate-string */
 import type { Network } from "../src/models/company";
 
 import type { Tag } from "./tag";
@@ -22,33 +23,33 @@ export interface ResourceItf extends Resource {
 
 export const highlightedLearning: Resource[] = [
   {
-    name: "Hello, StarkNet",
+    name: "Starknet Book",
     shortName: "hello-starknet-official-doc",
     description:
-      "This tutorial walks you through writing and deploying a StarkNet contract.",
+      "The Starknet Book is a curriculum created to document the Cairo programming language and Starknet development.",
     tags: ["starknet", "learn"],
     network: {
-      website: "https://www.cairo-lang.org/docs/hello_starknet/index.html",
+      website: "https://book.starknet.io/",
     },
   },
   {
-    name: "Hello, Cairo",
+    name: "Cairo Book",
     shortName: "hello-cairo-official-doc",
     description:
-      "Hello, Cairo describes Cairo for the programmer who wishes to understand what Cairo can do hands-on, and start writing programs in Cairo.",
+      "The Cairo Book is a introductory book about Cairo Programming Language.",
     tags: ["starknet", "cairo", "learn"],
     network: {
-      website: "https://www.cairo-lang.org/docs/hello_cairo/index.html",
+      website: "https://cairo-book.github.io/",
     },
   },
   {
-    name: "starklings",
-    shortName: "starklings",
+    name: "Starklings",
+    shortName: "Starklings",
     description:
       "An interactive tutorial to get you up and running with Starknet",
     tags: ["learn", "tutorial"],
     network: {
-      github: "https://github.com/onlydustxyz/starklings",
+      github: "https://github.com/shramee/starklings-cairo1",
     },
   },
 ];
@@ -68,7 +69,7 @@ export const learning: Resource[] = [
   {
     name: "fullstack-starknet",
     shortName: "fullstack-starknet",
-    description: "Tutorials for on-ramping to StarkNet",
+    description: "Tutorials for on-ramping to Starknet",
     tags: ["learn", "tutorial"],
     network: {
       github: "https://github.com/sambarnes/fullstack-starknet",
@@ -96,7 +97,7 @@ export const learning: Resource[] = [
     name: "starknet-messaging-bridge",
     shortName: "starknet-messaging-bridge",
     description:
-      "Learn how to build StarkNet <-> Ethereum cross layer applications",
+      "Learn how to build Starknet <-> Ethereum cross layer applications",
     tags: ["learn"],
     network: {
       github: "https://github.com/starknet-edu/starknet-messaging-bridge",
@@ -162,7 +163,7 @@ export const learning: Resource[] = [
     name: "starknet-erc721",
     shortName: "starknet-erc721",
     description:
-      "Learn how to deploy and customize an ERC721 token on StarkNet",
+      "Learn how to deploy and customize an ERC721 token on Starknet",
     tags: ["learn"],
     network: {
       github: "https://github.com/starknet-edu/starknet-erc721",
@@ -189,7 +190,7 @@ export const learning: Resource[] = [
   {
     name: "starknet-debug",
     shortName: "starknet-debug",
-    description: "Learn how to debug a StarkNet smart contract",
+    description: "Learn how to debug a Starknet smart contract",
     tags: ["learn"],
     network: {
       github: "https://github.com/starknet-edu/starknet-debug/",
@@ -215,7 +216,7 @@ export const learning: Resource[] = [
     },
   },
   {
-    name: "Solidity-vs-Cairo",
+    name: "solidity-vs-Cairo",
     shortName: "solidity-vs-cairo",
     description:
       "This repo shows the cairo equivalents of the solidity language patterns",
@@ -257,26 +258,26 @@ export const learning: Resource[] = [
   {
     name: "development-guidelines",
     shortName: "development-guidelines",
-    description: "StarkNet development guidelines",
+    description: "Starknet development guidelines",
     tags: ["learn"],
     network: {
       github: "https://github.com/onlydustxyz/development-guidelines/",
     },
   },
   {
-    name: "StarkNet-NFT-Template",
+    name: "starknet-nft-template",
     shortName: "starknet-nft-template",
-    description: "A Template for deploying NFT Projects on StarkNet",
+    description: "A Template for deploying NFT Projects on Starknet",
     tags: ["learn"],
     network: {
-      github: "https://github.com/rzmahmood/StarkNet-NFT-Template",
+      github: "https://github.com/rzmahmood/Starknet-NFT-Template",
     },
   },
   {
     name: "starknet-tokens-showdown",
     shortName: "starknet-tokens-showdown",
     description:
-      "Illustrates the difference in gas costs when using a Uint256 and a felt based token on StarkNet",
+      "Illustrates the difference in gas costs when using a Uint256 and a felt based token on Starknet",
     tags: ["learn"],
     network: {
       github: "https://github.com/milancermak/starknet-tokens-showdown",
@@ -286,7 +287,7 @@ export const learning: Resource[] = [
     name: "starknet-tx-hash-demo",
     shortName: "starknet-tx-hash-demo",
     description:
-      "This repo demonstrates an important StarkNet concept with regard to transaction hashes and how they are processed by StarkNet Alpha v4.",
+      "This repo demonstrates an important Starknet concept with regard to transaction hashes and how they are processed by Starknet Alpha v4.",
     tags: ["learn"],
     network: {
       github: "https://github.com/hubsmoke/starknet-tx-hash-demo",
@@ -322,7 +323,7 @@ export const learning: Resource[] = [
   {
     name: "starknet-data-availability-cost",
     shortName: "starknet-data-availability-cost",
-    description: "calculates the cost of data availability in StarkNet",
+    description: "calculates the cost of data availability in Starknet",
     tags: ["learn"],
     network: {
       github: "https://github.com/lucadonnoh/starknet-data-availability-cost",
@@ -340,7 +341,7 @@ export const learning: Resource[] = [
   {
     name: "voting-starkware",
     shortName: "voting-starkware",
-    description: "This repo shows how to connect your React app to StarkNet.",
+    description: "This repo shows how to connect your React app to Starknet.",
     tags: ["learn"],
     network: {
       github: "https://github.com/ironsoul0/voting-starkware",
@@ -359,19 +360,29 @@ export const learning: Resource[] = [
     name: "cairo-starknet",
     shortName: "cairo-starknet",
     description:
-      "A curated list of Cairo/StarkNet resources, libraries, tools, and more",
+      "A curated list of Cairo/Starknet resources, libraries, tools, and more",
     tags: ["learn"],
     network: {
       github: "https://github.com/stars/pcaversaccio/lists/cairo-starknet",
     },
   },
   {
-    name: "Starknet France",
-    shortName: "Starknet France",
+    name: "starknet france",
+    shortName: "starknet France",
     description: "A french translated blog explaining StarkWare technologies",
     tags: ["learn"],
     network: {
       website: "https://starknet-france.com/",
+    },
+  },
+  {
+    name: "starknet learn",
+    shortName: "starknet learn",
+    description:
+      "A specialized educational platform dedicated to empower students with zk-STARK technology, the Cairo programming language, and the StarkNet contract architecture",
+    tags: ["learn"],
+    network: {
+      website: "https://starklearn.com/Blogs/",
     },
   },
 ];
@@ -410,7 +421,7 @@ export const tools: Resource[] = [
     },
   },
   {
-    name: "Cairo Goldmine",
+    name: "cairo-goldmine",
     shortName: "cairo-goldmine",
     description:
       "A comprehensive, annotated list of repositories of the starknet ecosystem.",
@@ -423,7 +434,7 @@ export const tools: Resource[] = [
     name: "cairo-contracts",
     shortName: "cairo-contracts",
     description:
-      "OpenZeppelin Contracts written in Cairo for StarkNet, a decentralized ZK Rollup",
+      "OpenZeppelin Contracts written in Cairo for Starknet, a decentralized ZK Rollup",
     tags: ["tools"],
     network: {
       github: "https://github.com/OpenZeppelin/cairo-contracts",
@@ -432,7 +443,7 @@ export const tools: Resource[] = [
   {
     name: "nile",
     shortName: "nile",
-    description: "CLI tool to develop StarkNet projects written in Cairo",
+    description: "CLI tool to develop Starknet projects written in Cairo",
     tags: ["tools"],
     network: {
       github: "https://github.com/OpenZeppelin/nile",
@@ -441,7 +452,7 @@ export const tools: Resource[] = [
   {
     name: "starknet.js",
     shortName: "starknet.js",
-    description: "JavaScript library for StarkNet",
+    description: "JavaScript library for Starknet",
     tags: ["tools"],
     network: {
       github: "https://github.com/0xs34n/starknet.js",
@@ -460,7 +471,7 @@ export const tools: Resource[] = [
     name: "protostar",
     shortName: "protostar",
     description:
-      "Protostar is a toolchain for developing and testing with Cairo contracts for StarkNet",
+      "Protostar is a toolchain for developing and testing with Cairo contracts for Starknet",
     tags: ["tools"],
     network: {
       github: "https://github.com/software-mansion/protostar",
@@ -469,7 +480,7 @@ export const tools: Resource[] = [
   {
     name: "starknet.py",
     shortName: "starknet.py",
-    description: "Python SDK for StarkNet.",
+    description: "Python SDK for Starknet.",
     tags: ["tools"],
     network: {
       github: "https://github.com/software-mansion/starknet.py",
@@ -526,7 +537,7 @@ export const tools: Resource[] = [
     name: "onlydustxyz/generator-starknet",
     shortName: "onlydustxyz/generator-starknet",
     description:
-      "This is a development platform to quickly generate, develop & deploy smart contract based applications on StarkNet",
+      "This is a development platform to quickly generate, develop & deploy smart contract based applications on Starknet",
     tags: ["tools"],
     network: {
       github: "https://github.com/onlydustxyz/generator-starknet",
@@ -560,7 +571,7 @@ export const tools: Resource[] = [
     },
   },
   {
-    name: "Papyrus",
+    name: "papyrus",
     shortName: "papyrus",
     description: "A Symbolic Execution Tool for Cairo",
     tags: ["tools"],
@@ -581,7 +592,7 @@ export const tools: Resource[] = [
     name: "scaffold-stark",
     shortName: "scaffold-stark",
     description:
-      "StarkNet dev stack focused on fast product iterations, inspired by scaffold-eth",
+      "Starknet dev stack focused on fast product iterations, inspired by scaffold-eth",
     tags: ["tools"],
     network: {
       github: "https://github.com/parketh/scaffold-stark",
@@ -607,9 +618,9 @@ export const tools: Resource[] = [
     },
   },
   {
-    name: "Starkops",
+    name: "starkops",
     shortName: "starkops",
-    description: "StarkNet Toolchain CLI written in TypeScript.",
+    description: "Starknet Toolchain CLI written in TypeScript.",
     tags: ["tools"],
     network: {
       github: "https://github.com/0xs34n/starkops",
@@ -639,7 +650,7 @@ export const tools: Resource[] = [
   {
     name: "ape-starknet",
     shortName: "ape-starknet",
-    description: "An ape plugin for the StarkNet networks",
+    description: "An ape plugin for the Starknet networks",
     tags: ["tools"],
     network: {
       github: "https://github.com/ApeWorX/ape-starknet",
@@ -673,9 +684,9 @@ export const tools: Resource[] = [
     },
   },
   {
-    name: "StarkWare",
+    name: "starkware",
     shortName: "starkware",
-    description: "StarkTx - StarkNet transactions decoder",
+    description: "StarkTx - Starknet transactions decoder",
     tags: ["tools"],
     network: {
       github: "https://github.com/TokenFlowInsights/StarkTx",
@@ -684,7 +695,7 @@ export const tools: Resource[] = [
   {
     name: "prototype",
     shortName: "prototype",
-    description: "a batteries-included template for Cairo projects on StarkNet",
+    description: "a batteries-included template for Cairo projects on Starknet",
     tags: ["tools"],
     network: {
       github: "https://github.com/sambarnes/prototype",
@@ -775,19 +786,19 @@ export const tools: Resource[] = [
     },
   },
   {
-    name: "Zem",
+    name: "zem",
     shortName: "zem",
     description:
-      "A deployment system for Hardhat which supports EVM and StarkNet contracts",
+      "A deployment system for Hardhat which supports EVM and Starknet contracts",
     tags: ["tools"],
     network: {
       github: "https://github.com/anders-torbjornsen/zem",
     },
   },
   {
-    name: "starkBridgeLocal",
-    shortName: "starkbridgelocal",
-    description: "Local Test Environment For StarkNet L1 <> L2 Messaging",
+    name: "stark-bridge-local",
+    shortName: "stark-bridge-local",
+    description: "Local Test Environment For Starknet L1 <> L2 Messaging",
     tags: ["tools"],
     network: {
       github: "https://github.com/dontpanicdao/starkBridgeLocal",
@@ -806,7 +817,7 @@ export const tools: Resource[] = [
     name: "hardhat-starknetjs",
     shortName: "hardhat-starknetjs",
     description:
-      "Hardhat plugin which integrates StarkNet.js to allow deploying and interacting with StarkNet contracts from Hardhat projects",
+      "Hardhat plugin which integrates Starknet.js to allow deploying and interacting with Starknet contracts from Hardhat projects",
     tags: ["tools"],
     network: {
       github: "https://github.com/playmint/hardhat-starknetjs",
@@ -844,11 +855,11 @@ export const tools: Resource[] = [
   {
     name: "simps",
     shortName: "simps",
-    description: "Monorepo for StarkNet Improvement Projects (SIMPs) platform",
+    description: "Monorepo for Starknet Improvement Projects (SIMPs) platform",
     tags: ["tools"],
     network: {
       github:
-        "https://github.com/socol-labs/simps.app) - Monorepo for StarkNet Improvement Projects (SIMPs",
+        "https://github.com/socol-labs/simps.app) - Monorepo for Starknet Improvement Projects (SIMPs",
     },
   },
   {
@@ -884,7 +895,7 @@ export const tools: Resource[] = [
     name: "hardhat-starknet-compile",
     shortName: "hardhat-starknet-compile",
     description:
-      "Hardhat plugin for automatically and intelligently compiling StarkNet contracts",
+      "Hardhat plugin for automatically and intelligently compiling Starknet contracts",
     tags: ["tools"],
     network: {
       github: "https://github.com/playmint/hardhat-starknet-compile",
@@ -958,7 +969,7 @@ export const tools: Resource[] = [
     },
   },
   {
-    name: "Cairo-SafeMath",
+    name: "cairo-safemath",
     shortName: "cairo-safemath",
     description: "No description, website, or topics provided.",
     tags: ["math", "tools"],
@@ -1051,8 +1062,8 @@ export const tools: Resource[] = [
     },
   },
   {
-    name: "DecimalToBinary",
-    shortName: "decimaltobinary",
+    name: "decimal-to-binary",
+    shortName: "decimal-to-binary",
     description: "Starknet smart contract converting decimal to binary",
     tags: ["math", "tools"],
     network: {
@@ -1060,21 +1071,31 @@ export const tools: Resource[] = [
     },
   },
   {
-    name: "StarkNet URL",
+    name: "starknet-url",
     shortName: "starknet-url",
-    description: "Build & parse StarkNet URLs",
+    description: "Build & parse Starknet URLs",
     tags: ["tools", "uri", "url", "deeplink", "qr", "barcode"],
     network: {
       github: "https://github.com/myBraavos/starknet-url",
     },
   },
   {
-    name: "StarkNet Deeplink",
+    name: "starknet-deeplink",
     shortName: "starknet-deeplink",
-    description: "StarkNet deeplink generator",
+    description: "Starknet deeplink generator",
     tags: ["tools", "url", "deeplink", "qr", "barcode"],
     network: {
       github: "https://github.com/myBraavos/starknet-deeplink",
+    },
+  },
+  {
+    name: "Charged: Transaction Debugger",
+    shortName: "Charged",
+    description:
+      "Pause, edit and simulate transactions before sending them on chain",
+    tags: ["tools"],
+    network: {
+      github: "https://github.com/quick-wallet",
     },
   },
 ];
@@ -1087,7 +1108,7 @@ export const wallets: Resource[] = [
     name: "Argent X",
     shortName: "argent-x",
     description:
-      'First StarkNet wallet to interact with tokens and NFTs. Manage your identities with "Sign in with StarkNet" (very soon ™️), and enjoy the best of defi. Made with ❤️ by the Argent team.',
+      'First Starknet wallet to interact with tokens and NFTs. Manage your identities with "Sign in with Starknet" (very soon ™️), and enjoy the best of defi. Made with ❤️ by the Argent team.',
     tags: ["wallet"],
     image: "/logos/argent-x.svg",
     network: {
@@ -1103,7 +1124,7 @@ export const wallets: Resource[] = [
     name: "Braavos",
     shortName: "Braavos",
     description:
-      "First and only StarkNet wallet on mobile, Android & iOS. Use all your favorite StarkNet dApps on the go! Also available for chrome, Firefox and Edge. All in one assets management - DeFi and NFTs",
+      "First and only Starknet wallet on mobile, Android & iOS. Use all your favorite Starknet dApps on the go! Also available for chrome, Firefox and Edge. All in one assets management - DeFi and NFTs",
     tags: ["wallet"],
     image: "/logos/braavos-flat.svg",
     network: {
@@ -1115,6 +1136,22 @@ export const wallets: Resource[] = [
       telegram: "https://t.me/mybraavos",
     },
   },
+  {
+    name: "Argent Web Wallet",
+    shortName: "Argent Web Wallet",
+    description:
+      "A self-custodial wallet in your browser. It takes advantage of account abstraction to bring you the best experience from both web2 and web3.",
+    tags: ["wallet"],
+    image: "/logos/argent.svg",
+    network: {
+      website: "https://web.argent.xyz/",
+      github: "https://github.com/argentlabs/argent-x",
+      twitter: "https://twitter.com/argentHQ",
+      medium: "",
+      discord: "",
+      telegram: "",
+    },
+  },
 ];
 
 // ======================================================================
@@ -1122,7 +1159,7 @@ export const wallets: Resource[] = [
 // ======================================================================
 export const newsfeed: Resource[] = [
   {
-    name: "StarkNet Edu Newsletter",
+    name: "Starknet Edu Newsletter",
     shortName: "starknet-edu-newsletter",
     description: "Official weekly edu newsletter",
     tags: ["newsletter"],
@@ -1131,19 +1168,19 @@ export const newsfeed: Resource[] = [
     },
   },
   {
-    name: "Swagtimus - Newsletter (StarkNet Roundup)",
+    name: "Swagtimus - Newsletter (Starknet Roundup)",
     shortName: "swagtimus-newsletter",
     description:
-      "Weekly summary of everything that is going on with the StarkNet protocol & ecosystem",
+      "Weekly summary of everything that is going on with the Starknet protocol & ecosystem",
     tags: ["newsletter"],
     network: {
       website: "https://swagtimus.substack.com/",
     },
   },
   {
-    name: "Official latest updates about StarkNet",
+    name: "Official latest updates about Starknet",
     shortName: "official-latest-updates",
-    description: "Official latest updates about StarkNet from StarkWare",
+    description: "Official latest updates about Starknet from StarkWare",
     tags: ["newsletter"],
     network: {
       website: "https://starknet.io/latest-updates/",
@@ -1152,10 +1189,20 @@ export const newsfeed: Resource[] = [
   {
     name: "Nurstar",
     shortName: "Nurstar - Newsletter",
-    description: "The Recap of the Previous Day on StarkNet",
+    description: "The Recap of the Previous Day on Starknet",
     tags: ["newsletter"],
     network: {
       website: "https://nurstar.substack.com/",
+    },
+  },
+  {
+    name: "Starknet Ecosystem Twitter",
+    shortName: "Starknet Ecosystem Twitter",
+    description:
+      "Your daily dose of knowledge and updates about Starknet on twitter",
+    tags: ["social"],
+    network: {
+      website: "https://twitter.com/StarknetEco",
     },
   },
 ];

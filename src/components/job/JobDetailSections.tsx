@@ -26,6 +26,10 @@ const JobDetailSections: FC<Props> = ({ currentJob }) => {
         value={currentJob.responsibilities}
       />
       <JobDetailSection
+        label={t.jobs.aboutYou || "About you"}
+        value={currentJob.aboutYou}
+      />
+      <JobDetailSection
         label={t.jobs.requirements || "Requirements"}
         value={currentJob.requirements}
       />

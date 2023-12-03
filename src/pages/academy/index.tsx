@@ -1,7 +1,7 @@
 import { Flex, Text } from "@chakra-ui/layout";
 import type { FC, ChangeEvent } from "react";
 import { useState } from "react";
-import useInView from "react-cool-inview";
+import { useInView } from "react-cool-inview";
 
 import { academyResourcesBundle } from "../../../data/academy";
 import { AcademyCategory, allAcademyTags } from "../../../data/tag";
@@ -100,7 +100,7 @@ const AcademyPage: FC = () => {
         maxWidth="600px"
       >
         {t.common.academy_subtitle ||
-          "Your StarkNet learning shop. Find tutorials, guides, contributions, libraries. Subscribe to newsletters to keep track on this very fast-moving ecosystem."}
+          "Your Starknet learning shop. Find tutorials, guides, contributions, libraries. Subscribe to newsletters to keep track of this very fast-moving ecosystem."}
       </Text>
       <Flex w="full" direction={{ base: "column", md: "row" }} mt={24}>
         <Menu

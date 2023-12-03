@@ -1,7 +1,7 @@
 import { Box, Flex, Link, SimpleGrid, Text } from "@chakra-ui/layout";
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { formatUnits } from "ethers/lib/utils";
+import { formatUnits } from "ethers";
 import type { FC } from "react";
 import { useEffect, useState } from "react";
 
@@ -18,7 +18,7 @@ interface Props {
 const EcosystemMetrics: FC<Props> = ({ isMainnet = true }: Props) => {
   const { t } = useTranslate();
   const [mainnetTxCount, setMainnetTxCount] = useState<number | undefined>(
-    undefined
+    undefined,
   );
   const [mainnetContractCount, setMainnetContractCount] = useState<
     number | undefined
@@ -27,7 +27,7 @@ const EcosystemMetrics: FC<Props> = ({ isMainnet = true }: Props) => {
     number | undefined
   >(undefined);
   const [testnetTxCount, setTestnetTxCount] = useState<number | undefined>(
-    undefined
+    undefined,
   );
   const [testnetContractCount, setTestnetContractCount] = useState<
     number | undefined
@@ -62,7 +62,7 @@ const EcosystemMetrics: FC<Props> = ({ isMainnet = true }: Props) => {
               bridgeMetrics && bridgeMetrics.ethValue
                 ? `Ether value: ${formatCompactNumber(
                     parseFloat(formatUnits(bridgeMetrics.balance)) *
-                      bridgeMetrics.ethValue
+                      bridgeMetrics.ethValue,
                   )} $ ($${bridgeMetrics.ethValue}/ETH)`
                 : undefined
             }
@@ -114,7 +114,7 @@ const EcosystemMetrics: FC<Props> = ({ isMainnet = true }: Props) => {
         <Text mr={2}>{t.metrics.data_coming_from || "Data coming from"} </Text>
         <Link
           isExternal
-          href="https://goerli.voyager.online"
+          href="https://voyager.online"
           _hover={{ textDecoration: "none", color: "whiteAlpha.900" }}
           display="flex"
           mr={2}
@@ -125,7 +125,7 @@ const EcosystemMetrics: FC<Props> = ({ isMainnet = true }: Props) => {
         <Text mr={2}>and</Text>
         <Link
           isExternal
-          href="https://etherscan.io/address/0xae0ee0a63a2ce6baeeffe56e7714fb4efe48d419"
+          href="https://etherscan.io"
           _hover={{ textDecoration: "none", color: "whiteAlpha.900" }}
           display="flex"
           mr={2}
