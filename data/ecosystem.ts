@@ -32,6 +32,25 @@ export interface ProjectItf extends Project {
 
 export const allProjects: Array<Project> = [
   {
+    id: "d51a8396-308b-4cdf-83e3-913a55376592",
+    name: "Astarion",
+    shortName: "Astarion",
+    description:
+      "Deploy your own NFT Smart Contarcts, mint and earn the minting fee. Withdraw the minting fee to your wallet throughout our UI, without any programming knowledge.",
+    tags: ["infrastructure", "tools", "nft"],
+    image: "astarion.png",
+    network: {
+      website: "https://astarion.net",
+      github: "https://github.com/ASTARIONCrypto",
+      twitter: "https://twitter.com/ASTARION11111",
+      medium: "",
+      discord: "",
+      telegram: "https://t.me/astarionproject",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
+  {
     id: "abd25d78-ffb6-4a1d-94c0-d2f9016d6015",
     name: "Dmail Network",
     shortName: "Dmail",
@@ -2410,18 +2429,18 @@ export const allProjects: Array<Project> = [
   },
   {
     id: "5b54b8c6-ae8c-403e-ae55-0dc64d577cb6",
-    name: "StarkSport",
-    shortName: "StarkSport",
+    name: "Starkfinance",
+    shortName: "Starkfinance",
     description:
-      "Connect the world's major sporting events with Defi and NFT market services",
-    tags: ["nft", "defi", "gamefi"],
+      "Starkfinance is an all-in-one Incubation Hub with a full stack DeFi platform across blockchain networks. We provide exclusive services including IDO Launchpad, NFT Auction, Marketplace, and Exchange.",
+    tags: ["nft", "defi"],
     image: "starksport.png",
     network: {
-      website: "http://starksport.finance",
-      github: "https://github.com/possc/StarkSport",
+      website: "https://starkfinance.co/",
+      github: "https://github.com/starkfinance-organization",
       twitter: "https://twitter.com/starkfinance",
       medium: "",
-      discord: "https://discord.gg/starksports",
+      discord: "https://discord.com/invite/vm7DJJn54Y",
       telegram: "https://t.me/starksportchanel",
     },
     isLive: true,
@@ -3341,6 +3360,25 @@ export const allProjects: Array<Project> = [
     isTestnetLive: true,
   },
   {
+    id: "6175cd83-81fb-48d0-9f56-80cea421aa1c",
+    name: "OKX Wallet's DEX",
+    shortName: "OKX Wallet's DEX",
+    description:
+      "A multi-chain, cross-chain decentralized exchange aggregator of 300+ other DEXs and approximately 15 bridges, with 200,000+ coins and more than 20 blockchains supported.",
+    tags: ["DEX, wallet, multi-chain, cross-chain, OKX, bridge, blockchain"],
+    image: "okx.png",
+    network: {
+      website: "https://www.okx.com/web3/dex",
+      github: "https://www.okx.com/web3/build/docs/api/dex-introduction",
+      twitter: " https://twitter.com/okxweb3",
+      medium: "",
+      discord: "https://discord.gg/okx",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: true,
+  },
+  {
     id: "e53f84df-2c81-44c9-8afd-b79a0ff7171b",
     name: "StarkExport",
     shortName: "StarkExport",
@@ -3397,6 +3435,43 @@ export const allProjects: Array<Project> = [
     },
     isLive: true,
     isTestnetLive: false,
+  },
+  {
+    id: "7a72fc4d-4f0c-4be2-9a12-808de7555236",
+    name: "Phantom Spirit Arena",
+    shortName: "Phantom Spirit Arena",
+    description:
+      "Phantom Spirit Arena, an exciting PVP game that combines Starknet blockchain technology with fantasy elements. In this colorful world of gaming, players will take on the role of sprite masters, collecting and training unique sprite creatures to engage in intense battles, experiencing the perfect fusion of competition and strategy.",
+    tags: ["nft", "gamefi"],
+    image: "spritegame-logo.png",
+    network: {
+      website: "https://spritegame.xyz/",
+      github: "",
+      twitter: "https://twitter.com/Phantom_SArena",
+      medium: "",
+      discord: "",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
+  {
+    id: "24990877-03e8-4059-a886-c24ca1bfe93c",
+    name: "Chainspect",
+    shortName: "Chainspect",
+    description:
+      "Chainspect is a blockchain analytics platform aiming to be an all-in-one solution for comparing networks. Make better decisions with our real-time insights and up-to-date metrics for the most widely used blockchains, including Starknet.",
+    tags: ["tools"],
+    image: "chainspect.png",
+    network: {
+      website: "https://chainspect.app/",
+      twitter: "https://twitter.com/chainspect_app",
+      medium: "https://medium.com/@chainspect_app",
+      discord: "https://discord.gg/nnmJf56XYU",
+      telegram: "https://t.me/chainspect_app",
+    },
+    isLive: true,
+    isTestnetLive: true,
   },
   {
     id: "5ed17e6d-b820-4cc5-9277-fcb1c1f717bf",
