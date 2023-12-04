@@ -2,7 +2,7 @@ import type { NpmDownloads, NpmDownloadsChart } from "../models/npm-downloads";
 
 export const toNpmDownloadsChart = (
   npmDownloads: NpmDownloads,
-  cumulative?: boolean
+  cumulative?: boolean,
 ): NpmDownloadsChart => {
   npmDownloads.downloads.splice(0, npmDownloads.downloads.length % 7);
   const weeks: { downloads: number; day: string }[][] = [];

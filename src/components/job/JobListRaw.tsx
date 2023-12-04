@@ -7,7 +7,7 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/layout";
-import { Show, Button, Collapse, Image } from "@chakra-ui/react";
+import { Show, Button, Collapse, Image, Avatar } from "@chakra-ui/react";
 import dayjs from "dayjs";
 import { useRouter } from "next/router";
 import type { FC } from "react";
@@ -94,10 +94,6 @@ const JobListRaw: FC<Props> = ({ id, project, job, last, observe }) => {
   };
 
   return (
-    /* <NextLink
-      id={id}
-      href={`/${locale}/jobs/?key=${getJobKey(job, company)}#${id}`}
-    > */
     <Flex
       onClick={() => {
         setOpened(!opened);
@@ -128,12 +124,16 @@ const JobListRaw: FC<Props> = ({ id, project, job, last, observe }) => {
         justify="space-between"
         align="center"
       >
-        <Flex justify="flex-start" pl={0} pr={5} h="full" w="88px">
-          <Image
-            w="full"
-            src={`/logos/${project.image}`}
-            alt={`${project.name} logo`}
-          />
+        <Flex justify="center" pl={0} pr={5} h="full" w="88px">
+          {project.image ? (
+            <Image
+              w="full"
+              src={`/logos/${project.image}`}
+              alt={`${project.name} logo`}
+            />
+          ) : (
+            <Avatar bg="flat.600" name={project.name.slice(0, 2)} />
+          )}
         </Flex>
         <VStack
           flex={3}

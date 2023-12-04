@@ -98,7 +98,7 @@ const allJobs: Array<Job> = [
     remote: true,
     description:
       "PlayOasis is an NFT marketplace powered by Starknet, where our clients offer and list nfts with near zero gas fees. We are looking for a software engineer to work on frontend, backend and smart contracts.",
-    requirements: "Coding knowledge and experience is required",
+    requirements: "Coding knowledge and experience are required",
     createdOn: new Date("2022-03-20"),
     applyLink: "mailto:jobs@playoasis.xyz",
   },
@@ -312,7 +312,7 @@ const allJobs: Array<Job> = [
       "Essential:\n" +
       "- Experience writing production in any low-level programming language\n" +
       "- Interest in Ethereum or blockchain in general, either on a commercial or personal basis is a must\n" +
-      "- Experience deploying and interacting with smart contacts on Ethereum, either on a commercial or personal basis is a must\n" +
+      "- Experience deploying and interacting with smart contracts on Ethereum, either on a commercial or personal basis is a must\n" +
       "\n" +
       "Nice to have:\n" +
       "- Knowledge of the EVM\n" +
@@ -562,7 +562,7 @@ const allJobs: Array<Job> = [
       "- Define, design, and develop small products that add value to the starknet ID ecosystem \n" +
       "- Maintenance of the starknetid.js npm package",
     aboutYou:
-      "- You take responsability. When you take on a task, you get it done. When you get it done, it’s not good, it’s great.\n" +
+      "- You take responsibility. When you take on a task, you get it done. When you get it done, it’s not good, it’s great.\n" +
       "- You're knowledgeable about NFTs and their ecosystem (could be on Solana, Ethereum, or any chain). You love to talk about DeFi, your overpriced Jpegs, validity rollups, and blockchain tech in general. You understand the technology well enough to answer questions off-hand and are familiar with the more significant projects …\n" +
       "- You're highly independent. You're self-motivated and can work well independently, but you know when to ask for help or collaborate to achieve a common goal.\n" +
       "- You're a quick learner. You're always eager to learn new skills and technologies to improve your work, and you can quickly adapt to changing project requirements.\n\n" +

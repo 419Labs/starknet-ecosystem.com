@@ -89,7 +89,7 @@ describe("Project service", () => {
 
         // Then
         expect(result).toStrictEqual(expected);
-      })
+      }),
     );
   });
 });

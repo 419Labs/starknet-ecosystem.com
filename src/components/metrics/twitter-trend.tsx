@@ -25,7 +25,7 @@ ChartJS.register(
   LineElement,
   Title,
   Tooltip,
-  Legend
+  Legend,
 );
 
 interface Props {
@@ -51,7 +51,7 @@ const TwitterTrend: FC<Props> = ({ values }) => {
         0,
         chartArea.bottom,
         0,
-        chartArea.top
+        chartArea.top,
       );
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
@@ -100,7 +100,7 @@ const TwitterTrend: FC<Props> = ({ values }) => {
         }}
         data={{
           labels: values.map((count) =>
-            dayjs(parseFloat(count.date) * 1000).format("DD/MM/YYYY")
+            dayjs(parseFloat(count.date) * 1000).format("DD/MM/YYYY"),
           ),
           datasets: [
             {

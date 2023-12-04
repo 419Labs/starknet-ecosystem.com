@@ -36,7 +36,7 @@ ChartJS.register(
   LineElement,
   Title,
   Tooltip,
-  Legend
+  Legend,
 );
 
 interface Props {
@@ -53,7 +53,7 @@ const NpmDownloadsPaper: FC<Props> = ({ name, label }) => {
 
   useEffect(() => {
     MetricsApi.fetchNpmDownloads(name).then((result) =>
-      setNpmDownloads({ ...result, label })
+      setNpmDownloads({ ...result, label }),
     );
   }, [name, label]);
 
@@ -77,7 +77,7 @@ const NpmDownloadsPaper: FC<Props> = ({ name, label }) => {
         0,
         chartArea.bottom,
         0,
-        chartArea.top
+        chartArea.top,
       );
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
@@ -189,7 +189,7 @@ const NpmDownloadsPaper: FC<Props> = ({ name, label }) => {
               }}
               data={{
                 labels: values.downloads.map((week) =>
-                  cumulative ? week.end : `${week.start} to ${week.end}`
+                  cumulative ? week.end : `${week.start} to ${week.end}`,
                 ),
                 datasets: [
                   {
