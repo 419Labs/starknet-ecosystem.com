@@ -3473,4 +3473,23 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: true,
   },
+  {
+    id: "5ed17e6d-b820-4cc5-9277-fcb1c1f717bf",
+    name: "SonicForce",
+    shortName: "SonicForce",
+    description:
+      "SonicForce on Starknet: A dynamic dApp suite featuring a Faucet for easy token acquisition, Token Creation for personalized assets, and Multi-Sender for efficient mass transfers, redefining user interaction within the decentralized landscape",
+    tags: ["tools", "payments"],
+    image: "sonicforce.png",
+    network: {
+      website: "https://sonicforce.xyz/",
+      github: "https://github.com/DevPioneers/",
+      twitter: "",
+      medium: "",
+      discord: "",
+      telegram: "",
+    },
+    isLive: false,
+    isTestnetLive: true,
+  },
 ];
