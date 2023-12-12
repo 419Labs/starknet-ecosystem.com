@@ -447,6 +447,25 @@ export const allProjects: Array<Project> = [
     isTestnetLive: true,
   },
   {
+    id: "9133eda1-9682-4927-943c-c49f8406696e",
+    name: "TrustGo",
+    shortName: "TrustGo",
+    description:
+      "Trusta Labs aims to continuously develop MEDIA Score as the infrastructure for on-chain user reputation assessment. In the KYA (Know Your Account) product called TrustGo from Trusta Labs, every user can look up their own unique MEDIA Score on Starknet. It helps to fairly identify accounts that contribute to the Starknet ecosystem. Through MEDIA Score, users can gain a deeper understanding of their on-chain activities and value, while project teams can accurately allocate resources and incentives to users who truly contribute. TrustGo and MEDIA score will accelerate the grow of Starknet ecosystem.",
+    tags: ["digital_id", "infrastructure", "tools", "security"],
+    image: "trustgo.jpg",
+    network: {
+      website: "https://trustgo.trustalabs.ai/",
+      github: "https://github.com/TrustaLabs",
+      twitter: "https://twitter.com/TrustaLabs",
+      medium: "https://medium.com/@trustalabs.ai",
+      discord: "https://discord.com/invite/rtwSQxDM6F",
+      telegram: "https://t.me/Trusta_Labs",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
+  {
     id: "09f0b163-c62a-4fde-b30e-758915aefd51",
     name: "Orbiter Finance",
     shortName: "Oribter",
