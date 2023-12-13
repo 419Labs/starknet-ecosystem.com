@@ -3549,4 +3549,23 @@ export const allProjects: Array<Project> = [
     isLive: false,
     isTestnetLive: true,
   },
+  {
+    id: "b101cc19-3fcc-44cd-aac0-8c5e21979afd",
+    name: "Peaceout Omini",
+    shortName: "Peaceout",
+    description:
+      "Peaceout is not just a decentralized exchange dapp, it's a visionary ecosystem where traders, collectors, and enthusiasts come together to explore the exciting realms of both DeFi and NFTs",
+    tags: ["defi", "nft"],
+    image: "peaceout.png",
+    network: {
+      website: "https://peaceout.tech/",
+      github: "",
+      twitter: "https://twitter.com/peaceoutOmini",
+      medium: "",
+      discord: "",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: true,
+  },
 ];
