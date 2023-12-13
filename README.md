@@ -40,6 +40,11 @@ If you want to contribute in any way to this initiative please submit a PR. If y
 We have created a dedicated Telegram channel to manage quickly Pull Request and the starknet-ecosystem.com project.
 By joining the [Telegram channel](https://t.me/starknet_ecosystem) you'll be informed immediately when a new Project is coming out of stealth mode.
 
+### GitPOAP
+
+Once your pull request is merged, you are awarded the right to mint [a Starknet-ecosystem.com Contributor GitPOAP](https://www.gitpoap.io/gh/419Labs/starknet-ecosystem.com).
+
+
 ## Conclusion
 
 This project has been initiated with ❤️ by [AVNU Team](https://twitter.com/avnu_fi) and grows thanks to the awesome Starknet community.
