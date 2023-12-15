@@ -29,7 +29,6 @@ function CardHighlight({
       position="relative"
       direction="column"
       p={4}
-      minW="250px"
       transition=".4s ease all"
       cursor="pointer"
       onClick={() => console.log("coucou")}
