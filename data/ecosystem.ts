@@ -3549,4 +3549,23 @@ export const allProjects: Array<Project> = [
     isLive: false,
     isTestnetLive: true,
   },
+  {
+    id: "72744880-7c02-42d6-93ca-663062690b67",
+    name: "Bountive",
+    shortName: "Bountive",
+    description:
+      "Bountive is a Decentralized no-loss prize savings protocol on Starknet",
+    tags: ["defi"],
+    image: "bountive.png",
+    network: {
+      website: "https://www.bountive.fi/",
+      github: "",
+      twitter: "https://twitter.com/Bountive",
+      medium: "https://medium.com/@bountive",
+      discord: "",
+      telegram: "",
+    },
+    isLive: false,
+    isTestnetLive: false,
+  },
 ];
