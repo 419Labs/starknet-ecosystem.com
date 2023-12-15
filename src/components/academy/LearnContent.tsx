@@ -22,8 +22,8 @@ function LearnContent({
     <VStack w="full" align="flex-start">
       {highlightedResources && (
         <SimpleGrid
-          columns={{ sm: 1, lg: 2, xl: 4 }}
-          spacing={2}
+          columns={{ sm: 1, lg: 2, "2xl": 4 }}
+          spacing={4}
           w="full"
           mb={8}
         >

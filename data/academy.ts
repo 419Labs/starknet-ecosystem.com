@@ -55,8 +55,7 @@ export const highlightedLearning: Resource[] = [
   {
     name: "Node Guardians",
     shortName: "NG",
-    description:
-      "Uncover the secrets of Cairo through epic fantasy quests.",
+    description: "Uncover the secrets of Cairo through epic fantasy quests.",
     tags: ["learn", "tutorial"],
     network: {
       github: "https://nodeguardians.io/",
