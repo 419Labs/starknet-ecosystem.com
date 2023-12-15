@@ -22,12 +22,12 @@ function LearnContent({
     <VStack w="full" align="flex-start">
       {highlightedResources && (
         <SimpleGrid
-          columns={{ sm: 1, lg: 2, xl: 3 }}
-          spacing={4}
+          columns={{ sm: 1, lg: 2, xl: 4 }}
+          spacing={2}
           w="full"
           mb={8}
         >
-          {highlightedResources.slice(0, 3).map((highlightedResource) => {
+          {highlightedResources.slice(0, 4).map((highlightedResource) => {
             const { name, description, link, network } = highlightedResource;
             const { github, twitter, website } = network;
             return (
