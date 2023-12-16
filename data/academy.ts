@@ -39,7 +39,7 @@ export const highlightedLearning: Resource[] = [
       "The Cairo Book is a introductory book about Cairo Programming Language.",
     tags: ["starknet", "cairo", "learn"],
     network: {
-      website: "https://cairo-book.github.io/",
+      website: "https://book.cairo-lang.org/",
     },
   },
   {
@@ -50,6 +50,15 @@ export const highlightedLearning: Resource[] = [
     tags: ["learn", "tutorial"],
     network: {
       github: "https://github.com/shramee/starklings-cairo1",
+    },
+  },
+  {
+    name: "Node Guardians",
+    shortName: "NG",
+    description: "Uncover the secrets of Cairo through epic fantasy quests.",
+    tags: ["learn", "tutorial"],
+    network: {
+      github: "https://nodeguardians.io/",
     },
   },
 ];
