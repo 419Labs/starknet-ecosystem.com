@@ -66,7 +66,7 @@
     "@testing-library/jest-dom": "5.16.4",
     "@testing-library/react": "14.1.2",
     "@testing-library/user-event": "13.5.0",
-    "@types/dompurify": "^3.0.4",
+    "@types/dompurify": "^3.0.5",
     "@types/node": "~20.10.0",
     "@types/react": "^18.2.37",
     "babel-jest": "29.7.0",
