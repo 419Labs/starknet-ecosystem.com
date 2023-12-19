@@ -3568,4 +3568,23 @@ export const allProjects: Array<Project> = [
     isLive: false,
     isTestnetLive: false,
   },
+  {
+    id: "f4ece137-2b50-483a-8db9-0a8601ef3671",
+    name: "BattleBoosters",
+    shortName: "BattleBoosters",
+    description:
+      "Play BattleBoosters, a Fantasy MMA web3 game. Collect, trade, and compete with NFTs for prizes. Immerse yourself in the strategic world of MMA card gaming.",
+    tags: ["gamefi", "nft"],
+    image: "battleboosters.png",
+    network: {
+      website: "https://battleboosters.com",
+      github: "https://github.com/BattleBoosters",
+      twitter: "https://twitter.com/battleboosters",
+      medium: "https://medium.com/@battleboosters",
+      discord: "https://github.com/BattleBoosters",
+      telegram: "https://t.me/BattleBoosters",
+    },
+    isLive: false,
+    isTestnetLive: false,
+  },
 ];
