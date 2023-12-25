@@ -3568,4 +3568,23 @@ export const allProjects: Array<Project> = [
     isLive: false,
     isTestnetLive: false,
   },
+  {
+    id: "9c967156-6b8d-4072-bb5a-83ac3b28e154",
+    name: "BlockPi",
+    shortName: "BlockPi",
+    description:
+      "Distributed multi-chain acceleration layer solving the RPC requests congestion problem with infinite scalability.",
+    tags: ["infrastructure"],
+    image: "blockpi.png",
+    network: {
+      website: "https://blockpi.io/",
+      github: "https://github.com/BlockPILabs",
+      twitter: "https://twitter.com/RealBlockPI",
+      medium: "https://medium.com/@blockpi",
+      discord: "https://discord.com/invite/xTvGVrGVZv",
+      telegram: "https://t.me/blockpidaily",
+    },
+    isLive: false,
+    isTestnetLive: false,
+  },
 ];
