@@ -3573,7 +3573,7 @@ export const allProjects: Array<Project> = [
     name: "Starki",
     shortName: "Starki",
     description:
-        "Starki is the first inscription,deploy and trading platform on starknet.",
+      "Starki is the first inscription, deploy and trading platform on starknet.",
     tags: ["dao", "defi", "governance", "payments", "tools"],
     image: "starki.svg",
     network: {
