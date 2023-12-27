@@ -3625,4 +3625,23 @@ export const allProjects: Array<Project> = [
     isLive: false,
     isTestnetLive: false,
   },
+  {
+    id: "d7329bec-5e43-4d8a-a44d-c162084e0069",
+    name: "0Z Starkmint",
+    shortName: "0ZStarkmint",
+    description:
+      "0Z Starkmint alows you to create your ERC20 tokens,create liquidity and lock your liquidity to secure investors. It also provide staking as a service. Just connect your wallet, it's all set up, no dev required!",
+    tags: ["tools", "infrastructure", "defi", "nft", "gamefi"],
+    image: "starkmint.png",
+    network: {
+      website: "https://www.starkmint.com/",
+      github: "https://github.com/Kuurus/starkmint",
+      twitter: "https://twitter.com/starkminzor",
+      medium: "",
+      discord: "",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: true,
+  },
 ];
