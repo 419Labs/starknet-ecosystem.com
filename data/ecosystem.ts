@@ -3568,4 +3568,23 @@ export const allProjects: Array<Project> = [
     isLive: false,
     isTestnetLive: false,
   },
+  {
+    id: "89a3729a-0f73-415b-a3b4-8473c6675cfb",
+    name: "Starki",
+    shortName: "Starki",
+    description:
+        "Starki is the first inscription,deploy and trading platform on starknet.",
+    tags: ["dao", "defi", "governance", "payments", "tools"],
+    image: "starki.svg",
+    network: {
+      website: "https://starki.io/",
+      github: "https://github.com/ton618-labs",
+      twitter: "https://twitter.com/Starki_io",
+      medium: "",
+      discord: "",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
 ];
