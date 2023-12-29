@@ -3648,7 +3648,7 @@ export const allProjects: Array<Project> = [
     id: "316ffe9d-8870-449c-8e10-afc2c335ccce",
     name: "Starkpunks NFT",
     shortName: "Starkpunks",
-    description: 
+    description:  
     "Starkpunks launched as the first 10k NFTs collection on StarkNet in 2022.",
     tags: ["nft"],
     image: "logo starkpunks.png",
