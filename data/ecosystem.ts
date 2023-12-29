@@ -3644,7 +3644,7 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: true,
   },
-   {
+  {
     id: "b5c3cb75-5d84-426c-9723-d977a2ce6ee3",
     name: "Stark Inu - On-chain Casino",
     shortName: "Starkinu",
