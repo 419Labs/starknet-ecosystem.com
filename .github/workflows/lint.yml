@@ -21,7 +21,7 @@ jobs:
       - name: Check out Git repository
         uses: actions/checkout@v3
 
-      - name: Use Node.js 16
+      - name: Install Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '16'
@@ -32,5 +32,5 @@ jobs:
       - name: Install dependencies
         run: yarn install
 
-      - name: Run linters
+      - name: Run linters with --fix
         run: yarn lint --fix
