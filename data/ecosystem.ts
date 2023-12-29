@@ -3651,7 +3651,7 @@ export const allProjects: Array<Project> = [
     description:
       "Starkpunks launched as the first 10k NFTs collection on StarkNet in 2022.",
     tags: ["nft"],
-    image: "public/logos/logo starkpunks.png",
+    image: "logo starkpunks.png",
     network: {
       website: "https://www.starkpunks.com/",
       github: "",
