@@ -8,7 +8,7 @@ on:
       - main
   # Replace pull_request with pull_request_target if you
   # plan to use this action with forks, see the Limitations section
-  pull_request:
+  pull_request_target:
     branches:
       - main
 
