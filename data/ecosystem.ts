@@ -3644,6 +3644,25 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: true,
   },
+   {
+    id: "b5c3cb75-5d84-426c-9723-d977a2ce6ee3",
+    name: "Stark Inu - On-chain Casino",
+    shortName: "Starkinu",
+    description:
+      "Stark Inu is an on-chain casino leveraging Pragma's VRF oracles",
+    tags: ["gamefi", "defi"],
+    image: "starkinu.png",
+    network: {
+      website: "https://www.starkinu.com",
+      github: "https://github.com/starkinu",
+      twitter: "https://twitter.com/starkinucom",
+      medium: "",
+      discord: "",
+      telegram: "https://t.me/stark_inu",
+    },
+    isLive: false,
+    isTestnetLive: false,
+  },
   {
     id: "316ffe9d-8870-449c-8e10-afc2c335ccce",
     name: "Starkpunks NFT",
