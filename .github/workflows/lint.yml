@@ -21,10 +21,10 @@ jobs:
       - name: Check out Git repository
         uses: actions/checkout@v3
 
-      - name: Install Node.js
+      - name: Use Node.js 16
         uses: actions/setup-node@v3
         with:
-          node-version: '14'
+          node-version: '16'
 
       - name: Install Yarn
         run: npm install -g yarn
