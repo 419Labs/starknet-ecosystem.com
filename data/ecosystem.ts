@@ -3645,7 +3645,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: true,
   },
   {
-   id: "316ffe9d-8870-449c-8e10-afc2c335ccce",
+    id: "316ffe9d-8870-449c-8e10-afc2c335ccce",
     name: "Starkpunks NFT",
     shortName: "Starkpunks",
     description:
