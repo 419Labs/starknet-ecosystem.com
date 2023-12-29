@@ -14,12 +14,12 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18.17.0'
-          registry-url: 'https://registry.npmjs.org'
-          cache: 'npm'
-
-      - name: Install Dependencies
         run: |
-          npm install
+          export NVM_DIR=$HOME/.nvm
+          curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+          source $HOME/.nvm/nvm.sh
+          nvm install 18.17.0
+          nvm use 18.17.0
+          
+      - name: Install Dependencies
+        run: yarn install
