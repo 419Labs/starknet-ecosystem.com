@@ -32,6 +32,25 @@ export interface ProjectItf extends Project {
 
 export const allProjects: Array<Project> = [
   {
+    id: "62d39069-c45a-48ea-88e0-324820633300",
+    name: "StarkStarter",
+    shortName: "StarkStarter",
+    description:
+      "StarkStarter provides a framework for constructing Starknet-based Appchains using zero knowledge technology. StarkStarter lets users customize Appchains to meet their needs.StarkStarter",
+    tags: ["infrastructure", "defi"],
+    image: "starkstarter.png",
+    network: {
+      website: "https://starkstarter.foundation/",
+      github: "",
+      twitter: "https://twitter.com/thestarkstarter",
+      medium: "",
+      discord: "",
+      telegram: "https://t.me/StarkStarter_Announcement",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
+  {
     id: "d51a8396-308b-4cdf-83e3-913a55376592",
     name: "Astarion",
     shortName: "Astarion",
