@@ -3663,4 +3663,23 @@ export const allProjects: Array<Project> = [
     isLive: false,
     isTestnetLive: false,
   },
+  {
+    id: "0a4a005d-9a00-4bca-a1b9-aea1dd3db683",
+    name: "Starkpunks",
+    shortName: "Starkpunks",
+    description:
+      "Starkpunks launched as the first 10k NFTs collection on StarkNet in 2022",
+    tags: ["nft"],
+    image: "starkpunkslogo.png",
+    network: {
+      website: "https://www.starkpunks.com",
+      github: "",
+      twitter: "https://twitter.com/starkpunks_nft",
+      medium: "",
+      discord: "",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
 ];
