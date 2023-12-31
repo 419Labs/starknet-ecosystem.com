@@ -3676,7 +3676,7 @@ export const allProjects: Array<Project> = [
       github: "",
       twitter: "https://twitter.com/starkpunks_nft",
       medium: "",
-      discord: "",
+      discord: "https://discord.com/invite/n9hdZ4Smva",
       telegram: "",
     },
     isLive: true,
