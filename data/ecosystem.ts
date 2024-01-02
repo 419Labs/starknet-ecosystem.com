@@ -3309,7 +3309,7 @@ export const allProjects: Array<Project> = [
     description:
       "The communities own indexer Starknet inscription marketplace.",
     tags: ["nft", "infrastructure"],
-    image: "bigcairo.png",
+    image: "BigCairo.jpeg",
     network: {
       website: "https://bigcairo.com/",
       github: "",
