@@ -3302,7 +3302,7 @@ export const allProjects: Array<Project> = [
     isLive: false,
     isTestnetLive: false,
   },
-{
+  {
     id: "a2f29a71-7a52-4326-b05d-de9697c14ef1",
     name: "BigCairo Inscription Marketplace",
     shortName: "BigCairo",
@@ -3321,7 +3321,6 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: false,
   },
-  
   {
     id: "6b6252b1-c47e-4695-a31f-a435227aa9ce",
     name: "Flex NFT Marketplace",
