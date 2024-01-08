@@ -48,7 +48,7 @@
     "chart.js": "^4.4.1",
     "dayjs": "1.11.10",
     "ethers": "6.9.1",
-    "framer-motion": "^10.16.16",
+    "framer-motion": "^10.17.9",
     "jest-environment-jsdom": "^29.7.0",
     "lodash": "^4.17.21",
     "next": "^14.0.4",
