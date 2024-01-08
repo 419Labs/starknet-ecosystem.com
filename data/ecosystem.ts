@@ -3322,6 +3322,25 @@ export const allProjects: Array<Project> = [
     isTestnetLive: false,
   },
   {
+    id: "a2f29a71-7a52-4326-b05d-de9697c14ef1",
+    name: "BigCairo Inscription Marketplace",
+    shortName: "BigCairo",
+    description:
+      "The communities own indexer Starknet inscription marketplace.",
+    tags: ["nft", "infrastructure"],
+    image: "BigCairo.jpeg",
+    network: {
+      website: "https://bigcairo.com/",
+      github: "",
+      twitter: "https://twitter.com/bigcairocom",
+      medium: "",
+      discord: "https://discord.com/invite/ykpgDNp9",
+      telegram: "https://t.me/BigCairocom",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
+  {
     id: "6b6252b1-c47e-4695-a31f-a435227aa9ce",
     name: "Flex NFT Marketplace",
     shortName: "Flex",
