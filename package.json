@@ -42,7 +42,7 @@
     "@typescript-eslint/eslint-plugin": "^6.18.1",
     "@typescript-eslint/parser": "^6.16.0",
     "@vercel/analytics": "^1.1.1",
-    "@vercel/speed-insights": "^1.0.1",
+    "@vercel/speed-insights": "^1.0.3",
     "add": "^2.0.6",
     "babel-plugin-macros": "^3.1.0",
     "chart.js": "^4.4.1",
