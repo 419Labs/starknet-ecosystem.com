@@ -3721,4 +3721,23 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: false,
   },
+  {
+    id: "9bc521e4-980e-4ae3-99e8-083f10efbdaa",
+    name: "Nomis Protocol",
+    shortName: "Nomis",
+    description:
+      "Nomis represents the Reputation Layer for web3, specifically designed to empower users to access and leverage their wallet history. It serves as a valuable tool for BUIDLers, enabling accelerated growth through active engagement and incentives for genuine contributors and early adopters.",
+    tags: ["all", "digital_id", "tools", "infrastructure", "security"],
+    image: "nomis.png",
+    network: {
+      website: "https://nomis.cc",
+      github: "https://github.com/Nomis-cc",
+      twitter: "https://twitter.com/0xNomis",
+      medium: "https://medium.com/@0xNomis",
+      discord: "https://discord.gg/nomis",
+      telegram: "https://t.me/nomis_protocol",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
 ];
