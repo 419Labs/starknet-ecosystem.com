@@ -3740,4 +3740,23 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: false,
   },
+  {
+    id: "41da72ac-5e15-4661-88c2-af5ed4876db6",
+    name: "StarkGas",
+    shortName: "StarkGas",
+    description:
+      "StarkGas is a comprehensive Starknet tool that provides real-time data on gas prices in the Starknet network.",
+    tags: ["tools"],
+    image: "starkgas.png",
+    network: {
+      website: "https://starkgas.space/",
+      github: "https://github.com/pereshkowsky/StarkGas_website",
+      twitter: "",
+      medium: "",
+      discord: "",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
 ];
