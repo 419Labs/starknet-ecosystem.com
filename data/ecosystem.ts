@@ -3759,4 +3759,22 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: false,
   },
+  {
+    id: "00b21789-6562-43bd-a75e-f2be48590853",
+    name: "LayerAkira",
+    shortName: "LAkira",
+    description: "Hybrid onchain/offchain clob dex exchange",
+    tags: ["defi"],
+    image: "layer_akira.png",
+    network: {
+      website: "https://www.layerakira.xyz/",
+      github: "https://github.com/LayerAkira/kurosawa_akira",
+      twitter: "https://twitter.com/LayerAkira",
+      medium: "",
+      discord: "",
+      telegram: "https://t.me/+m5W-wnh5nn9jYjdh",
+    },
+    isLive: true,
+    isTestnetLive: true,
+  },
 ];
