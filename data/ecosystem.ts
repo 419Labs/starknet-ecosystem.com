@@ -3762,9 +3762,9 @@ export const allProjects: Array<Project> = [
   {
     id: "00b21789-6562-43bd-a75e-f2be48590853",
     name: "LayerAkira",
-    shortName: "LAkira",
-    description: "Hybrid onchain/offchain clob dex exchange",
-    tags: ["defi"],
+    shortName: "LayerAkira",
+    description: "first hybrid spot order book infrastructure on Starknet",
+    tags: ["defi", "infrastructure"],
     image: "layer_akira.png",
     network: {
       website: "https://www.layerakira.xyz/",
