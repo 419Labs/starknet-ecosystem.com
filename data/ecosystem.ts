@@ -130,7 +130,8 @@ export const allProjects: Array<Project> = [
     id: "5e3a046d-4487-4fa6-9be0-1abc6cbe0a8e",
     name: "Stargaze Finance",
     shortName: "StargazeFi",
-    description: "Stargaze Finance is a DeFi strategies management protocol enabling advanced strategies automation, composability and reusability between Ethereum and the Starknet ecosystem.",
+    description:
+      "Stargaze Finance is a DeFi strategies management protocol enabling advanced strategies automation, composability and reusability between Ethereum and the Starknet ecosystem.",
     tags: ["defi"],
     image: "stargaze.png",
     network: {
