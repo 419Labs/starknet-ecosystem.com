@@ -2466,10 +2466,10 @@
   dependencies:
     server-only "^0.0.1"
 
-"@vercel/speed-insights@^1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@vercel/speed-insights/-/speed-insights-1.0.4.tgz#b52a66ac041e7d64ab15056be62695b1d7327d9e"
-  integrity sha512-Q7O0bnV11KUqNKAKA984YWIGxCjqgOuJdwH1cdItqlkUVTLbIm8BhObro6hJobGMSUHm+z7xjQ0YbC8ps1ekDg==
+"@vercel/speed-insights@^1.0.8":
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/@vercel/speed-insights/-/speed-insights-1.0.8.tgz#cd317fb2ce99d69d200ba66efd0122a3984e5b89"
+  integrity sha512-x1V9MHUMGkaNafmgY0qRbmbr+jfeU+Cvo5KgreeEGo63SFuBYRg9RS52GUJ9p82nEL6NBzc9HNru6fkcvufYcQ==
 
 "@zag-js/dom-query@0.16.0":
   version "0.16.0"
