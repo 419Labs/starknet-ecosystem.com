@@ -1319,18 +1319,22 @@ export const allProjects: Array<Project> = [
   },
   {
     id: "8df27359-f05d-439b-8592-ca1b61cf049c",
-    name: "Argent X",
-    shortName: "Argent X",
+    name: "Argent",
+    shortName: "Argent",
     description:
-      'First Starknet wallet to interact with tokens and NFTs. Manage your identities with "Sign in with Starknet" (very soon ™️), and enjoy the best of defi. Made with ❤️ by the Argent team.',
-    tags: ["wallet", "digital_id", "defi", "nft", "gamefi"],
-    image: "argent-x.svg",
+      "Argent is the first and most trusted smart wallet on Starknet, with over 2 million downloads.\n" +
+      "\n" +
+      "Fully self-custodial, open-source and audited, Argent includes advanced security features like built-in fraud monitoring, transaction simulation and multisig security.\n" +
+      "\n" +
+      "Buy, swap and bridge token with low fees, and manage all of your Starknet NFTs with ease.",
+    tags: ["wallet", "mobile", "digital_id", "defi", "nft", "gamefi"],
+    image: "argent.svg",
     network: {
       website: "https://www.argent.xyz/argent-x/",
       github: "https://github.com/argentlabs/argent-x",
       twitter: "https://twitter.com/argentHQ",
-      medium: "",
-      discord: "",
+      medium: "https://www.argent.xyz/blog/",
+      discord: "https://discordapp.com/invite/GWSyrHg",
       telegram: "",
     },
     isLive: true,
