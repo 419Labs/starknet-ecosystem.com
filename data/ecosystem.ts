@@ -1326,7 +1326,7 @@ export const allProjects: Array<Project> = [
       "\n" +
       "Fully self-custodial, open-source and audited, Argent includes advanced security features like built-in fraud monitoring, transaction simulation and multisig security.\n" +
       "\n" +
-      "Buy, swap and bridge token with low fees, and manage all of your Starknet NFTs with ease.",
+      "Buy, swap and bridge tokens with low fees, and manage all of your Starknet NFTs with ease.",
     tags: ["wallet", "mobile", "digital_id", "defi", "nft", "gamefi"],
     image: "argent.svg",
     network: {
