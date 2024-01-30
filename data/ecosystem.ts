@@ -1323,14 +1323,14 @@ export const allProjects: Array<Project> = [
     shortName: "Argent X",
     description:
       'First Starknet wallet to interact with tokens and NFTs. Manage your identities with "Sign in with Starknet" (very soon ™️), and enjoy the best of defi. Made with ❤️ by the Argent team.',
-    tags: ["wallet", "digital_id", "defi", "nft", "gamefi"],
+    tags: ["wallet", "digital_id", "defi", "nft", "gamefi", "mobile"],
     image: "argent-x.svg",
     network: {
       website: "https://www.argent.xyz/argent-x/",
       github: "https://github.com/argentlabs/argent-x",
       twitter: "https://twitter.com/argentHQ",
       medium: "",
-      discord: "",
+      discord: "https://discord.gg/T4PDFHxm6T",
       telegram: "",
     },
     isLive: true,
