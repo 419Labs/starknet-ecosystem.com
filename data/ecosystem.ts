@@ -1319,17 +1319,21 @@ export const allProjects: Array<Project> = [
   },
   {
     id: "8df27359-f05d-439b-8592-ca1b61cf049c",
-    name: "Argent X",
-    shortName: "Argent X",
+    name: "Argent",
+    shortName: "Argent",
     description:
-      'First Starknet wallet to interact with tokens and NFTs. Manage your identities with "Sign in with Starknet" (very soon ™️), and enjoy the best of defi. Made with ❤️ by the Argent team.',
+      "Argent is the first and most trusted smart wallet on Starknet, with over 2 million downloads.\n" +
+      "\n" +
+      "Fully self-custodial, open-source and audited, Argent includes advanced security features like built-in fraud monitoring, transaction simulation and multisig security.\n" +
+      "\n" +
+      "Buy, swap and bridge tokens with low fees, and manage all of your Starknet NFTs with ease.",
     tags: ["wallet", "digital_id", "defi", "nft", "gamefi", "mobile"],
-    image: "argent-x.svg",
+    image: "argent.svg",
     network: {
       website: "https://www.argent.xyz/argent-x/",
       github: "https://github.com/argentlabs/argent-x",
       twitter: "https://twitter.com/argentHQ",
-      medium: "",
+      medium: "https://www.argent.xyz/blog/",
       discord: "https://discord.gg/T4PDFHxm6T",
       telegram: "",
     },
@@ -3753,7 +3757,7 @@ export const allProjects: Array<Project> = [
       github: "https://github.com/Nomis-cc",
       twitter: "https://twitter.com/0xNomis",
       medium: "https://medium.com/@0xNomis",
-      discord: "https://discord.gg/nomis",
+      discord: "https://discord.gg/0xnomis",
       telegram: "https://t.me/nomis_protocol",
     },
     isLive: true,
@@ -3792,6 +3796,25 @@ export const allProjects: Array<Project> = [
       medium: "",
       discord: "",
       telegram: "https://t.me/+m5W-wnh5nn9jYjdh",
+    },
+    isLive: true,
+    isTestnetLive: true,
+  },
+  {
+    id: "1c188b96-99b6-4222-a3d3-2831065db88c",
+    name: "Alphaday",
+    shortName: "Alphaday",
+    description:
+      "The one tool you need to stay up to date and interact with crypto using easily customizable dashboards.",
+    tags: ["tools"],
+    image: "Alphaday.png",
+    network: {
+      website: "https://app.alphaday.com/b/starknet/",
+      github: "https://github.com/AlphadayHQ",
+      twitter: "https://twitter.com/AlphadayHQ",
+      medium: "",
+      discord: "https://discord.com/invite/8KSmPyT5k8",
+      telegram: "",
     },
     isLive: true,
     isTestnetLive: true,
