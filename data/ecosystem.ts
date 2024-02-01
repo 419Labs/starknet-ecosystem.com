@@ -1327,14 +1327,14 @@ export const allProjects: Array<Project> = [
       "Fully self-custodial, open-source and audited, Argent includes advanced security features like built-in fraud monitoring, transaction simulation and multisig security.\n" +
       "\n" +
       "Buy, swap and bridge tokens with low fees, and manage all of your Starknet NFTs with ease.",
-    tags: ["wallet", "mobile", "digital_id", "defi", "nft", "gamefi"],
+    tags: ["wallet", "digital_id", "defi", "nft", "gamefi", "mobile"],
     image: "argent.svg",
     network: {
       website: "https://www.argent.xyz/argent-x/",
       github: "https://github.com/argentlabs/argent-x",
       twitter: "https://twitter.com/argentHQ",
       medium: "https://www.argent.xyz/blog/",
-      discord: "https://discordapp.com/invite/GWSyrHg",
+      discord: "https://discord.gg/T4PDFHxm6T",
       telegram: "",
     },
     isLive: true,
