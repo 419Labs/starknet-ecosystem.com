@@ -3757,7 +3757,7 @@ export const allProjects: Array<Project> = [
       github: "https://github.com/Nomis-cc",
       twitter: "https://twitter.com/0xNomis",
       medium: "https://medium.com/@0xNomis",
-      discord: "https://discord.gg/nomis",
+      discord: "https://discord.gg/0xnomis",
       telegram: "https://t.me/nomis_protocol",
     },
     isLive: true,
