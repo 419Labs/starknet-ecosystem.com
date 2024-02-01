@@ -3800,11 +3800,12 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: true,
   },
-    {
+  {
     id: "1c188b96-99b6-4222-a3d3-2831065db88c",
     name: "Alphaday",
     shortName: "Alphaday",
-    description: "The one tool you need to stay up to date and interact with crypto using easily customizable dashboards.",
+    description:
+      "The one tool you need to stay up to date and interact with crypto using easily customizable dashboards.",
     tags: ["tools"],
     image: "Alphaday.png",
     network: {
