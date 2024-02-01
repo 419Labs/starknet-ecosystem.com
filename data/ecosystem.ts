@@ -3800,4 +3800,23 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: true,
   },
+  {
+    id: "1c188b96-99b6-4222-a3d3-2831065db88c",
+    name: "Alphaday",
+    shortName: "Alphaday",
+    description:
+      "The one tool you need to stay up to date and interact with crypto using easily customizable dashboards.",
+    tags: ["tools"],
+    image: "Alphaday.png",
+    network: {
+      website: "https://app.alphaday.com/b/starknet/",
+      github: "https://github.com/AlphadayHQ",
+      twitter: "https://twitter.com/AlphadayHQ",
+      medium: "",
+      discord: "https://discord.com/invite/8KSmPyT5k8",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: true,
+  },
 ];
