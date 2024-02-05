@@ -39,7 +39,7 @@
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@types/react-dom": "^18.2.18",
     "@types/react-fontawesome": "^1.6.8",
-    "@typescript-eslint/eslint-plugin": "^6.19.1",
+    "@typescript-eslint/eslint-plugin": "^6.20.0",
     "@typescript-eslint/parser": "^6.19.1",
     "@vercel/analytics": "^1.1.2",
     "@vercel/speed-insights": "^1.0.9",
