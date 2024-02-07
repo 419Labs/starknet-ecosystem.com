@@ -3819,4 +3819,23 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: true,
   },
+  {
+    id: "08de8cb7-3e91-4d49-8588-9d89156c8b56",
+    name: "ArkProject",
+    shortName: "ArkProject",
+    description:
+      "Crosschain Infrastructure for Digital Assets Exchange. Unleash potential with our key offerings: Starknet NFT API, Open Orderbook, Starknet NFT Indexer, and Marketplace API. Empowering creators and uniting markets for mass adoption.",
+    tags: ["tools", "infrastructure", "nft"],
+    image: "arkproject.svg",
+    network: {
+      website: "https://arkproject.dev",
+      github: "https://github.com/ArkProjectNFTs",
+      twitter: "https://twitter.com/ArkProjectNFTs",
+      medium: "",
+      discord: "https://discord.gg/TdbNwnDrSh",
+      telegram: "https://t.me/arkprojectnfts",
+    },
+    isLive: false,
+    isTestnetLive: true,
+  },
 ];
