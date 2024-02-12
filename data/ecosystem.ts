@@ -3838,4 +3838,23 @@ export const allProjects: Array<Project> = [
     isLive: false,
     isTestnetLive: true,
   },
+  {
+    id: "ad66a93a-bce4-47a0-8ea8-23892147eb70",
+    name: "Paradex",
+    shortName: "Paradex",
+    description:
+      "Trade perpetuals on a high-performance DEX with deep liquidity, capital efficiency and low fees.",
+    tags: ["defi"],
+    image: "paradex.svg",
+    network: {
+      website: "https://paradex.trade",
+      github: "https://github.com/tradeparadex",
+      twitter: "https://twitter.com/tradeparadex",
+      medium: "",
+      discord: "https://discord.gg/paradex",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: true,
+  },
 ];
