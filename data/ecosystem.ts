@@ -3845,7 +3845,7 @@ export const allProjects: Array<Project> = [
     description:
       "Trade perpetuals on a high-performance DEX with deep liquidity, capital efficiency and low fees.",
     tags: ["defi"],
-    image: "paradex.svg",
+    image: "paradex.png",
     network: {
       website: "https://paradex.trade",
       github: "https://github.com/tradeparadex",
