@@ -923,7 +923,7 @@ export const allProjects: Array<Project> = [
     name: "ZKX",
     shortName: "ZKX",
     description:
-      "ZKX is an omnichain perpetual exchange on Starknet, committed to building DeFi solutions for all. The exchange strives to combine the performance of a CEX with the security of a DEX; ZKX achieves this through a decentralized order book powered by the ZKX Appchain and a user-centric self-custodial ZKX Account. At the core of ZKX's protocol design is built-in security and gamification, which has been audited by Nethermind Security twice.",
+      "The OG Perp Exchange on Starknet with $0 gas fees, decentralized order book and lightning fast performance.",
     tags: ["defi", "dao"],
     image: "ZKX.png",
     network: {
