@@ -923,7 +923,7 @@ export const allProjects: Array<Project> = [
     name: "ZKX",
     shortName: "ZKX",
     description:
-      "ZKX is a permissionless protocol for derivatives built on Starknet, with a decentralized order book and a unique way to offer complex financial instruments as swaps.",
+      "ZKX is an omnichain perpetual exchange on Starknet, committed to building DeFi solutions for all. The exchange strives to combine the performance of a CEX with the security of a DEX; ZKX achieves this through a decentralized order book powered by the ZKX Appchain and a user-centric self-custodial ZKX Account. At the core of ZKX's protocol design is built-in security and gamification, which has been audited by Nethermind Security twice.",
     tags: ["defi", "dao"],
     image: "ZKX.png",
     network: {
@@ -931,10 +931,10 @@ export const allProjects: Array<Project> = [
       github: "https://github.com/zkxteam",
       twitter: "https://twitter.com/zkxprotocol",
       medium: "https://medium.com/@zkxprotocol",
-      discord: "https://discord.gg/7YrNHdwNyu",
+      discord: "https://discord.com/invite/jvvjiykh",
       telegram: "https://t.me/zkxcommunity",
     },
-    isLive: false,
+    isLive: true,
     isTestnetLive: false,
   },
   {
