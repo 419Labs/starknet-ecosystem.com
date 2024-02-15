@@ -3839,4 +3839,23 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: true,
   },
+  {
+    id: "aa053a17-af46-4587-9857-a55ecb9f26bc",
+    name: "GeckoTerminal",
+    shortName: "GeckoTerminal",
+    description:
+      "GeckoTerminal is a DEX tracker and crypto price charting tool. Track real-time cryptocurrency prices, trading volume, transactions, liquidity, and more market data across all blockchains.",
+    tags: ["DeFi", "tools", "Security"],
+    image: "geckoterminal.png",
+    network: {
+      website: "https://www.geckoterminal.com",
+      github: "",
+      twitter: "https://twitter.com/GeckoTerminal",
+      medium: "",
+      discord: "",
+      telegram: "https://t.me/geckoterminal",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
 ];
