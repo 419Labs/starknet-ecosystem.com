@@ -47,7 +47,7 @@
     "babel-plugin-macros": "^3.1.0",
     "chart.js": "^4.4.1",
     "dayjs": "1.11.10",
-    "ethers": "6.10.0",
+    "ethers": "6.11.1",
     "framer-motion": "^11.0.3",
     "jest-environment-jsdom": "^29.7.0",
     "lodash": "^4.17.21",
