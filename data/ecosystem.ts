@@ -3858,4 +3858,23 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: false,
   },
+  {
+    id: "86950e8b-6ec2-4681-9b3a-998fffd0616d",
+    name: "StarknetGasPriceTrackerExtension",
+    shortName: "StarknetGasPrice",
+    description:
+      "Starknet gas price tracker, provide all the info about the current gas price on Starknet&Ethereum you need.",
+    tags: ["tools"],
+    image: "starknetGasPriceTracker.png",
+    network: {
+      website: "https://app.onlydust.com/p/starknet-gas-price-browser-extension",
+      github: "https://github.com/cryptonerdcn/Starknet-gas-price-browser-extension",
+      twitter: "https://twitter.com/cryptonerdcn",
+      medium: "",
+      discord: "",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
 ];
