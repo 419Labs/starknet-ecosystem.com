@@ -3859,6 +3859,25 @@ export const allProjects: Array<Project> = [
     isTestnetLive: false,
   },
   {
+    id: "614acd63-fccc-4cb3-9326-1f7bd76eeea7",
+    name: "AlterNova",
+    shortName: "AlterNova",
+    description:
+      "Alter Nova is an intergalactic sporting event for champions on Starknet. The arena has been prepared for 10,000 unique natives; stiff competition and intense battles are expected. Many galaxies, One Arena. Velox, Altum, Vires.",
+    tags: ["NFT", "PFP"],
+    image: "alternova.png",
+    network: {
+      website: "https://alternova.xyz",
+      github: "https://github.com/AlterNova/alternova",
+      twitter: "https://twitter.com/AlterNovaXYZ",
+      medium: "",
+      discord: "",
+      telegram: "https://discord.gg/597zABqter",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
+  {
     id: "86950e8b-6ec2-4681-9b3a-998fffd0616d",
     name: "StarknetGasPriceTrackerExtension",
     shortName: "StarknetGasPrice",
@@ -3867,8 +3886,10 @@ export const allProjects: Array<Project> = [
     tags: ["tools"],
     image: "starknetGasPriceTracker.png",
     network: {
-      website: "https://app.onlydust.com/p/starknet-gas-price-browser-extension",
-      github: "https://github.com/cryptonerdcn/Starknet-gas-price-browser-extension",
+      website:
+        "https://app.onlydust.com/p/starknet-gas-price-browser-extension",
+      github:
+        "https://github.com/cryptonerdcn/Starknet-gas-price-browser-extension",
       twitter: "https://twitter.com/cryptonerdcn",
       medium: "",
       discord: "",
