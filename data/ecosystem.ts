@@ -3858,4 +3858,23 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: false,
   },
+  {
+    id: "c6be69c5-d49f-42d4-9841-a3c187a48e05",
+    name: "ImminentSolace",
+    shortName: "ImminentSolace",
+    description:
+      "Imminent Solace is a fully on-chain game that combines open world exploration, resource mining, and PVP plundering. game details: https://mirror.xyz/0x8C97Eaf9544221EDD7C555A23BE13B45BbF8cA6c/QE2JhXEBvrdmK2N3XIg7qxiA735Mu0ohOtyZnHVRNjg",
+    tags: ["gamefi"],
+    image: "imminentsolace.svg",
+    network: {
+      website: "https://aon-playtest.ptadao.xyz/",
+      github: "https://github.com/Dashsoap/The-Age-of-Navigation",
+      twitter: "https://twitter.com/ptadaofoc",
+      medium: "",
+      discord: "",
+      telegram: "",
+    },
+    isLive: false,
+    isTestnetLive: true,
+  },
 ];
