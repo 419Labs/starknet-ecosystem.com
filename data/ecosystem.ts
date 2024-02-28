@@ -3865,7 +3865,7 @@ export const allProjects: Array<Project> = [
     description:
       "Imminent Solace is a fully on-chain game that combines open world exploration, resource mining, and PVP plundering. game details: https://mirror.xyz/0x8C97Eaf9544221EDD7C555A23BE13B45BbF8cA6c/QE2JhXEBvrdmK2N3XIg7qxiA735Mu0ohOtyZnHVRNjg",
     tags: ["gamefi"],
-    image: "imminentsolace.svg",
+    image: "imminentsolace.png",
     network: {
       website: "https://aon-playtest.ptadao.xyz/",
       github: "https://github.com/Dashsoap/The-Age-of-Navigation",
