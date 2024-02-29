@@ -3862,8 +3862,7 @@ export const allProjects: Array<Project> = [
     id: "4316bbf0-beb1-4671-be5b-30b92ae02412",
     name: "NFTScan",
     shortName: "NFTScan",
-    description:
-      "NFTScan is the world's largest NFT data infrastructure",
+    description: "NFTScan is the world's largest NFT data infrastructure",
     tags: ["tools", "infrastructure", "nft"],
     image: "NFTScan.png",
     network: {
