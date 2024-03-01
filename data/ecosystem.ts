@@ -3917,4 +3917,22 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: false,
   },
+  {
+    id: "4316bbf0-beb1-4671-be5b-30b92ae02412",
+    name: "NFTScan",
+    shortName: "NFTScan",
+    description: "NFTScan is the world's largest NFT data infrastructure",
+    tags: ["tools", "infrastructure", "nft"],
+    image: "NFTScan.png",
+    network: {
+      website: "https://starknet.nftscan.com",
+      github: "",
+      twitter: "https://twitter.com/nftscan_com",
+      medium: "https://medium.com/nftscan",
+      discord: "https://discord.gg/nftscan",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
 ];
