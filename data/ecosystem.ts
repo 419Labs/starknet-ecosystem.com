@@ -50,7 +50,7 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: false,
   },
-    {
+  {
     id: "5931a7e3-8760-457a-a4bc-c1ffc51de175",
     name: "Footprint Analytics",
     shortName: "Footprint",
