@@ -51,6 +51,25 @@ export const allProjects: Array<Project> = [
     isTestnetLive: false,
   },
   {
+    id: "5931a7e3-8760-457a-a4bc-c1ffc51de175",
+    name: "Footprint Analytics",
+    shortName: "Footprint",
+    description:
+      "Footprint Analytics is a data platform blending web2 and web3 data with abstractions. We help analysts, builders, and investors turn blockchain data into insights with accessible visualization tools and a powerful multi-chain API across 20+ chains for NFTs, GameFi, and DeFi. We also provide Footprint Growth Analytics to help with effective growth in GameFi and any web3 projects.",
+    tags: ["infrastructure", "tools"],
+    image: "footprint.png",
+    network: {
+      website: "https://www.footprint.network/",
+      github: "https://github.com/footprintanalytics",
+      twitter: "https://twitter.com/Footprint_Data",
+      medium: "",
+      discord: "https://discord.gg/3HYaR6USM7",
+      telegram: "https://t.me/joinchat/4-ocuURAr2thODFh",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
+  {
     id: "d51a8396-308b-4cdf-83e3-913a55376592",
     name: "Astarion",
     shortName: "Astarion",
