@@ -3935,4 +3935,23 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: false,
   },
+  {
+    id: "6201d817-2c0b-49dd-862d-4d61c97ef706",
+    name: "Ventory NFT Marketplace",
+    shortName: "Ventory",
+    description:
+      "Ventory NFT Marketplace - Multichain NFT Marketplace bringing along one-click NFT liquidity solution. NFT Marketplace Aggregator,NFT Launchpad,  NFT Hybrid Lending.",
+    tags: ["nft", "infrastructure","gamefi","mobile"],
+    image: "ventory.jpg",
+    network: {
+      website: "https://ventory.gg/",
+      github: "https://github.com/ventorymarket",
+      twitter: "https://twitter.com/Ventory_gg",
+      medium: "",
+      discord: "https://discord.com/invite/W6aCg9sU3e",
+      telegram: "https://t.me/ventorychannel",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
 ];
