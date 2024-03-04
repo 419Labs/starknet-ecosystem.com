@@ -3941,7 +3941,7 @@ export const allProjects: Array<Project> = [
     shortName: "Ventory",
     description:
       "Ventory NFT Marketplace - Multichain NFT Marketplace bringing along one-click NFT liquidity solution. NFT Marketplace Aggregator,NFT Launchpad,  NFT Hybrid Lending.",
-    tags: ["nft", "infrastructure","gamefi","mobile"],
+    tags: ["nft", "infrastructure", "gamefi", "mobile"],
     image: "ventory.jpg",
     network: {
       website: "https://ventory.gg/",
