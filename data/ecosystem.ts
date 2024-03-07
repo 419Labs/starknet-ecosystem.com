@@ -3625,10 +3625,10 @@ export const allProjects: Array<Project> = [
       github: "",
       twitter: "https://twitter.com/Bountive",
       medium: "https://medium.com/@bountive",
-      discord: "",
+      discord: "https://discord.com/invite/ZxmMwektnx",
       telegram: "",
     },
-    isLive: false,
+    isLive: true,
     isTestnetLive: false,
   },
   {
