@@ -17,7 +17,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint --dir data --dir src",
-    "test": "jest --watch",
+    "test": "jest --watch"
   },
   "dependencies": {
     "@chakra-ui/color-mode": "2.2.0",
