@@ -24,6 +24,7 @@ export interface Project {
   token?: string;
   technologies?: any;
   socialMetrics?: SocialMetrics;
+  isHidden?: boolean;
 }
 
 export interface ProjectItf extends Project {
@@ -87,6 +88,7 @@ export const allProjects: Array<Project> = [
     },
     isLive: true,
     isTestnetLive: false,
+    isHidden: true,
   },
   {
     id: "abd25d78-ffb6-4a1d-94c0-d2f9016d6015",
