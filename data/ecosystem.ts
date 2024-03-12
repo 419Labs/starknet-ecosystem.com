@@ -165,6 +165,7 @@ export const allProjects: Array<Project> = [
     },
     isLive: false,
     isTestnetLive: true,
+    isHidden: true,
   },
   {
     id: "affdebf1-c5c1-4e44-9c9c-649dbddc5f26",
@@ -278,6 +279,7 @@ export const allProjects: Array<Project> = [
     },
     isLive: true,
     isTestnetLive: false,
+    isHidden: true,
   },
   {
     id: "36df24b3-2007-4822-8110-5a44b01afb0f",
@@ -297,6 +299,7 @@ export const allProjects: Array<Project> = [
     },
     isLive: true,
     isTestnetLive: true,
+    isHidden: true,
   },
   {
     id: "bf58edd8-fb46-4066-9ed9-5bbaa683c1f5",
@@ -407,7 +410,7 @@ export const allProjects: Array<Project> = [
       discord: "https://discord.gg/gAD2wuzeNf",
       telegram: "https://t.me/SithWars",
     },
-    isLive: false,
+    isLive: true,
     isTestnetLive: false,
   },
   {
@@ -578,6 +581,7 @@ export const allProjects: Array<Project> = [
     },
     isLive: false,
     isTestnetLive: false,
+    isHidden: true,
   },
   {
     id: "502b0dbc-5169-4db6-8796-36a968a798fd",
@@ -657,6 +661,7 @@ export const allProjects: Array<Project> = [
     },
     isLive: false,
     isTestnetLive: false,
+    isHidden: true,
   },
   {
     id: "8529056c-2383-48b5-b174-9950b6624ad9",
@@ -675,6 +680,7 @@ export const allProjects: Array<Project> = [
     },
     isLive: false,
     isTestnetLive: false,
+    isHidden: true,
   },
   {
     id: "030a7fa5-d6cf-4cb5-99e7-492b548c5530",
@@ -713,6 +719,7 @@ export const allProjects: Array<Project> = [
     },
     isLive: false,
     isTestnetLive: false,
+    isHidden: true,
   },
   {
     id: "79bd1dc2-a627-4f09-a85b-8757b6406b8e",
@@ -732,6 +739,7 @@ export const allProjects: Array<Project> = [
     },
     isLive: false,
     isTestnetLive: true,
+    isHidden: true,
   },
   {
     id: "dce4260c-807e-48d0-b57c-d8488dbe8889",
@@ -863,6 +871,7 @@ export const allProjects: Array<Project> = [
     },
     isLive: true,
     isTestnetLive: true,
+    isHidden: true,
   },
   {
     id: "55f5c20e-064d-4709-ba1e-6c77d4b3d867",
@@ -1091,6 +1100,7 @@ export const allProjects: Array<Project> = [
     },
     isLive: false,
     isTestnetLive: true,
+    isHidden: true,
   },
   {
     id: "47b08857-89fe-4016-8cfe-e057c2857449",
@@ -1128,6 +1138,7 @@ export const allProjects: Array<Project> = [
     },
     isLive: false,
     isTestnetLive: true,
+    isHidden: true,
   },
   {
     id: "e370a23e-8fdf-47d6-a53c-19503eeb09ba",
@@ -1318,6 +1329,7 @@ export const allProjects: Array<Project> = [
     },
     isLive: false,
     isTestnetLive: false,
+    isHidden: true,
   },
   {
     id: "1337ab03-25d7-406c-a339-5dccbefeaa18",
@@ -1418,6 +1430,7 @@ export const allProjects: Array<Project> = [
     },
     isLive: true,
     isTestnetLive: true,
+    isHidden: true,
   },
   {
     id: "48b43f8b-c067-46e4-9f2b-d8b0d58fbbc3",
@@ -1436,6 +1449,7 @@ export const allProjects: Array<Project> = [
     },
     isLive: true,
     isTestnetLive: true,
+    isHidden: true,
   },
   {
     id: "59425c28-b470-455f-b433-06c488b4dbf7",
@@ -1714,6 +1728,7 @@ export const allProjects: Array<Project> = [
     },
     isLive: true,
     isTestnetLive: true,
+    isHidden: true,
   },
   {
     id: "5cec890e-fc90-48d0-b7eb-011b6a0dc13b",
@@ -1754,6 +1769,7 @@ export const allProjects: Array<Project> = [
     },
     isLive: false,
     isTestnetLive: false,
+    isHidden: true,
   },
   {
     id: "19c738b6-2b7e-4826-bb5d-15f2c4330001",
@@ -1792,6 +1808,7 @@ export const allProjects: Array<Project> = [
     },
     isLive: false,
     isTestnetLive: false,
+    isHidden: true,
   },
   {
     id: "349d3549-025c-4571-a1c7-8c40639fc5b6",
@@ -1811,6 +1828,7 @@ export const allProjects: Array<Project> = [
     },
     isLive: false,
     isTestnetLive: false,
+    isHidden: true,
   },
   {
     id: "8dad20af-ae23-4ecd-9a90-32da6e270498",
@@ -1830,6 +1848,7 @@ export const allProjects: Array<Project> = [
     },
     isLive: false,
     isTestnetLive: true,
+    isHidden: true,
   },
   {
     id: "798bee63-b429-4802-917a-b47104871249",
@@ -1849,6 +1868,7 @@ export const allProjects: Array<Project> = [
     },
     isLive: false,
     isTestnetLive: false,
+    isHidden: true,
   },
   {
     id: "69d057c0-7343-4fc9-98aa-5a7432c9ca06",
@@ -1869,6 +1889,7 @@ export const allProjects: Array<Project> = [
     },
     isLive: false,
     isTestnetLive: true,
+    isHidden: true,
   },
   {
     id: "cc3d0bf3-67e8-408d-aa54-d72fb2fa1240",
@@ -2058,6 +2079,7 @@ export const allProjects: Array<Project> = [
     },
     isLive: false,
     isTestnetLive: false,
+    isHidden: true,
   },
   {
     id: "d2979ad1-12c6-4080-9c1a-4e58d2271356",
@@ -2077,21 +2099,22 @@ export const allProjects: Array<Project> = [
     },
     isLive: false,
     isTestnetLive: false,
+    isHidden: true,
   },
   {
     id: "30c7c562-75de-404d-bc95-570118d00653",
-    name: "Brine Finance",
-    shortName: "Brine",
+    name: "tanX Finance",
+    shortName: "tanX",
     description:
-      "The decentralized order-book exchange for traders crafted by traders 🚀 Gasless | Instant | Multi-Chain | Secure | Trustless.",
+      "Reliable, self custodial and high performance liquidity network for traders, institutions and exchanges.",
     tags: ["defi", "infrastructure"],
-    image: "brine.png",
+    image: "tanx.png",
     network: {
-      website: "https://www.brine.finance/",
+      website: "https://tanx.fi/",
       github: "",
-      twitter: "https://twitter.com/BrineFinance",
-      medium: "https://medium.com/@brine.finance",
-      discord: "https://discord.gg/wuPHBr9e9y",
+      twitter: "https://twitter.com/tanXfinance",
+      medium: "",
+      discord: "",
       telegram: "",
     },
     isLive: false,
@@ -2337,6 +2360,7 @@ export const allProjects: Array<Project> = [
     },
     isLive: true,
     isTestnetLive: true,
+    isHidden: true,
   },
   {
     id: "91c05ece-ccf9-4e80-91e9-0ed4fad81b25",
@@ -2394,6 +2418,7 @@ export const allProjects: Array<Project> = [
     },
     isLive: false,
     isTestnetLive: true,
+    isHidden: true,
   },
   {
     id: "8980449e-08de-4617-8e17-6d9590f56eae",
@@ -2490,6 +2515,7 @@ export const allProjects: Array<Project> = [
     },
     isLive: true,
     isTestnetLive: true,
+    isHidden: true,
   },
   {
     id: "320d804a-cf3c-49eb-9013-b2873d17a8ae",
@@ -2508,6 +2534,7 @@ export const allProjects: Array<Project> = [
     },
     isLive: false,
     isTestnetLive: true,
+    isHidden: true,
   },
   {
     id: "5b54b8c6-ae8c-403e-ae55-0dc64d577cb6",
@@ -2584,6 +2611,7 @@ export const allProjects: Array<Project> = [
     },
     isLive: false,
     isTestnetLive: false,
+    isHidden: true,
   },
   {
     id: "1d796be5-4bd5-4689-aebf-f810c3d0fbd9",
@@ -2603,6 +2631,7 @@ export const allProjects: Array<Project> = [
     },
     isLive: false,
     isTestnetLive: true,
+    isHidden: true,
   },
   {
     id: "f7c7eecd-21d2-4729-adad-d94109864b30",
@@ -2621,6 +2650,7 @@ export const allProjects: Array<Project> = [
     },
     isLive: false,
     isTestnetLive: false,
+    isHidden: true,
   },
   {
     id: "4e95f7dc-9a31-40bb-829e-0a19098521e5",
@@ -2639,6 +2669,7 @@ export const allProjects: Array<Project> = [
     },
     isLive: false,
     isTestnetLive: false,
+    isHidden: true,
   },
   {
     id: "f47cfe5d-bb7d-4382-94cb-b979b7f8e518",
@@ -2658,6 +2689,7 @@ export const allProjects: Array<Project> = [
     },
     isLive: true,
     isTestnetLive: false,
+    isHidden: true,
   },
   {
     id: "4b4e4bd6-119d-4202-b26e-bafd803940da",
@@ -2677,6 +2709,7 @@ export const allProjects: Array<Project> = [
     },
     isLive: false,
     isTestnetLive: false,
+    isHidden: true,
   },
   {
     id: "ee574078-7642-4bd9-8a30-f7c0031d43ab",
@@ -2803,6 +2836,7 @@ export const allProjects: Array<Project> = [
     },
     isLive: true,
     isTestnetLive: false,
+    isHidden: true,
   },
   {
     id: "2603b4ea-42ce-4881-bbaf-aca81dcc4824",
@@ -2973,6 +3007,7 @@ export const allProjects: Array<Project> = [
     },
     isLive: true,
     isTestnetLive: false,
+    isHidden: true,
   },
   {
     id: "e0ae7230-84d9-43c0-93e8-189f78e4c331",
@@ -3011,6 +3046,7 @@ export const allProjects: Array<Project> = [
     },
     isLive: true,
     isTestnetLive: true,
+    isHidden: true,
   },
   {
     id: "d6d98ff4-25aa-42b5-b22b-f696eae0ea19",
@@ -3030,6 +3066,7 @@ export const allProjects: Array<Project> = [
     },
     isLive: false,
     isTestnetLive: false,
+    isHidden: true,
   },
   {
     id: "58bebd20-2314-464b-b2f7-e95da6da41e1",
@@ -3140,6 +3177,7 @@ export const allProjects: Array<Project> = [
     },
     isLive: true,
     isTestnetLive: false,
+    isHidden: true,
   },
   {
     id: "adf0c80f-2e8a-455d-9312-2f02fba41ec8",
@@ -3155,6 +3193,7 @@ export const allProjects: Array<Project> = [
     },
     isLive: true,
     isTestnetLive: true,
+    isHidden: true,
   },
   {
     id: "8a79276c-3b5b-11ee-be56-0242ac120002",
@@ -3480,6 +3519,7 @@ export const allProjects: Array<Project> = [
     },
     isLive: true,
     isTestnetLive: false,
+    isHidden: true,
   },
   {
     id: "99c4de9e-4e82-4268-a734-1aed4854d1f5",
@@ -3689,6 +3729,7 @@ export const allProjects: Array<Project> = [
     },
     isLive: true,
     isTestnetLive: false,
+    isHidden: true,
   },
   {
     id: "d7329bec-5e43-4d8a-a44d-c162084e0069",
@@ -3727,6 +3768,7 @@ export const allProjects: Array<Project> = [
     },
     isLive: false,
     isTestnetLive: false,
+    isHidden: true,
   },
   {
     id: "0a4a005d-9a00-4bca-a1b9-aea1dd3db683",
