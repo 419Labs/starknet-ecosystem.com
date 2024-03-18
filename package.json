@@ -61,7 +61,7 @@
     "react-dom": "18.2.0",
     "react-flippy": "1.1.0",
     "swr": "2.2.5",
-    "yarn": "1.22.21"
+    "yarn": "1.22.22"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "6.4.2",
