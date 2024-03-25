@@ -3954,4 +3954,23 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: false,
   },
+  {
+    id: "5fd616cb-cf88-44de-8dc1-aeec917e9782",
+    name: "OKcontract",
+    shortName: "OKcontract",
+    description:
+      "OKcontract replaces monolithic frontends with a new Interaction Layer to simplify client-side interaction implementation, reduce maintenance and security vulnerabilities. Using OKcontract, developers can specify contract interactions in concise formats, generate embeddable UIs for smart contracts, and benefit from the OKcontract decentralized runtime engine that automatically operates interactions on the client-side.",
+    tags: ["infrastructure", "tools"],
+    image: "okcontract.png",
+    network: {
+      website: "https://www.okcontract.com/",
+      github: "https://github.com/okcontract",
+      twitter: "https://twitter.com/okcontract",
+      medium: "https://medium.com/@okcontract",
+      discord: "https://discord.gg/Ns45RTUXka",
+      telegram: "https://t.me/+OHw-D8OA28VjNDc1",
+    },
+    isLive: false,
+    isTestnetLive: false,
+  },
 ];
