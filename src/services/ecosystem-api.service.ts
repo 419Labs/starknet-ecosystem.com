@@ -11,7 +11,10 @@ const fetchEcosystemProjects = (size: number): Promise<Project[]> =>
       }
       return response.json();
     })
-    .then((response) => response.content);
+    .then((response) => response.content)
+    .then((projects) => {
+      return projects.filter((project: Project) => !project.isHidden);
+    });
 
 const fetchProjectById = (id: string): Promise<Project> =>
   fetch(`${STARKNET_DB_BASE_URL}/projects/${id}`).then((response: Response) => {
