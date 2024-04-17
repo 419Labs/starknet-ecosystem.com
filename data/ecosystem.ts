@@ -4015,4 +4015,22 @@ export const allProjects: Array<Project> = [
     isLive: false,
     isTestnetLive: false,
   },
+  {
+    id: "9f837165-1fda-44d1-825e-a74a54cd0585",
+    name: "CairoSwap",
+    shortName: "CairoSwap",
+    description:
+      "CairoSwap is an innovative decentralized exchange protocol focused on delivering optimal trading experiences.\n" +
+      "\n" +
+      "Our goal is to establish a robust Liquidity Infrastructure that empowers traders and decentralized applications (dApps) alike. We are committed to providing our users with the most competitive prices and access to a wide range of assets. Our mission is to redefine industry standards by offering an exceptional user experience.\n",
+    tags: ["defi", "infrastructure", "tools"],
+    image: "cairoswap.svg",
+    network: {
+      website: "https://cairoswap.com",
+      github: "https://github.com/orgs/DevPioneers",
+      twitter: "https://twitter.com/cairoswap",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
 ];
