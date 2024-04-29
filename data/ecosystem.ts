@@ -4033,4 +4033,25 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: false,
   },
+  {
+    id: "2a9457f2-e716-4173-a4be-53472584ea70",
+    name: "Mobula",
+    shortName: "Mobula",
+    description:
+      "Mobula is full stack data infra for any (including non-EVM) chains:\n" +
+      "\n" +
+      "- Indexing like The Graph, Subsquid\n" +
+      "- Warehousing like Dune Analytics, Flipside\n" +
+      "- Data APIs like Alchemy, Moralis\n",
+    tags: ["infrastructure", "tools"],
+    image: "mobula.jpeg",
+    network: {
+      website: "https://mobula.io",
+      github: "https://github.com/MobulaFi",
+      twitter: "https://twitter.com/MobulaIO",
+      telegram: "https://t.me/MobulaFI",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
 ];
