@@ -39,7 +39,7 @@
     "@fortawesome/react-fontawesome": "0.2.0",
     "@types/react-dom": "18.2.25",
     "@types/react-fontawesome": "1.6.8",
-    "@typescript-eslint/eslint-plugin": "7.7.0",
+    "@typescript-eslint/eslint-plugin": "7.7.1",
     "@typescript-eslint/parser": "7.7.0",
     "@vercel/analytics": "1.2.2",
     "@vercel/speed-insights": "1.0.10",
