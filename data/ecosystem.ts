@@ -3382,7 +3382,7 @@ export const allProjects: Array<Project> = [
       discord: "discord.gg/3Ka4jACr7b",
       telegram: "",
     },
-    isLive: false,
+    isLive: true,
     isTestnetLive: false,
   },
   {
