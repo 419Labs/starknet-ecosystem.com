@@ -37,7 +37,7 @@
     "@fortawesome/free-regular-svg-icons": "6.5.2",
     "@fortawesome/free-solid-svg-icons": "6.5.2",
     "@fortawesome/react-fontawesome": "0.2.0",
-    "@types/react-dom": "18.2.25",
+    "@types/react-dom": "18.3.0",
     "@types/react-fontawesome": "1.6.8",
     "@typescript-eslint/eslint-plugin": "7.8.0",
     "@typescript-eslint/parser": "7.7.0",
@@ -58,7 +58,7 @@
     "react": "18.3.1",
     "react-chartjs-2": "5.2.0",
     "react-cool-inview": "3.0.1",
-    "react-dom": "18.2.0",
+    "react-dom": "18.3.1",
     "react-flippy": "1.1.0",
     "swr": "2.2.5",
     "yarn": "1.22.22"
