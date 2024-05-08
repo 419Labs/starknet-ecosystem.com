@@ -4033,4 +4033,23 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: false,
   },
+  {
+    id: "23f0646c-9d10-44cb-9e8b-8924c16b2cad",
+    name: "Dragark",
+    shortName: "Dragark",
+    description:
+      "Dragark is a Starknet-native fully on-chain game set in the fantastic Sky Kingdom, where players can take their Dragarks on a journey to explore, conquer, exploit, expand their sky territories, and craft & trade the in-game assets within a dynamic economy.",
+    tags: ["nft", "gamefi"],
+    image: "dragark.png",
+    network: {
+      website: "https://dragark.net/",
+      github: "https://github.com/DragarkTeam",
+      twitter: "https://twitter.com/playDRAGARK",
+      medium: "",
+      discord: "https://discord.gg/KEChMrdk7z",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
 ];
