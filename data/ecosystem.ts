@@ -4052,4 +4052,23 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: false,
   },
+  {
+    id: "0f2ecfe3-1212-4157-9176-aeeb4204294f",
+    name: "STRKFarm",
+    shortName: "STRKFarm",
+    description:
+	      "STRKFarm is a DeFi yield aggregator on Starknet that automatically invests your assets across various DeFi protocols within a given strategy to maximise your returns!",
+    tags: ["defi", "infrastructure", "tools"],
+    image: "strkfarm.svg",
+    network: {
+      website: "https://www.strkfarm.xyz/",
+      github: "https://github.com/strkfarm",
+      twitter: "https://twitter.com/strkfarm",
+      medium: "",
+      discord: "",
+      telegram: "https://t.me/+HQ_eHaXmF-1lZDc1",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
 ];
