@@ -4057,7 +4057,7 @@ export const allProjects: Array<Project> = [
     name: "STRKFarm",
     shortName: "STRKFarm",
     description:
-	      "STRKFarm is a DeFi yield aggregator on Starknet that automatically invests your assets across various DeFi protocols within a given strategy to maximise your returns!",
+      "STRKFarm is a DeFi yield aggregator on Starknet that automatically invests your assets across various DeFi protocols within a given strategy to maximise your returns!",
     tags: ["defi", "infrastructure", "tools"],
     image: "strkfarm.svg",
     network: {
