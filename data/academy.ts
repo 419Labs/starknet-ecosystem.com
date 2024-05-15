@@ -391,7 +391,7 @@ export const learning: Resource[] = [
       "A specialized educational platform dedicated to empower students with zk-STARK technology, the Cairo programming language, and the StarkNet contract architecture",
     tags: ["learn"],
     network: {
-      website: "https://starklearn.com/Blogs/",
+      website: "https://starklearn.com/",
     },
   },
 ];
