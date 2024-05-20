@@ -45,7 +45,7 @@
     "@vercel/speed-insights": "1.0.10",
     "add": "2.0.6",
     "babel-plugin-macros": "3.1.0",
-    "chart.js": "4.4.2",
+    "chart.js": "4.4.3",
     "cliui": "^8.0.1",
     "dayjs": "1.11.11",
     "ethers": "6.12.1",
