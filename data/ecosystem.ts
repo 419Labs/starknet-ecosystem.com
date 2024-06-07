@@ -4071,4 +4071,23 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: false,
   },
+  {
+    id: "fb1abe8d-ab6f-4569-919a-eacea3151393",
+    name: "Starkbot",
+    shortName: "Starkbot",
+    description:
+      "Discover Starkbot, the advanced Telegram trading bot for Starknet. Enjoy seamless trades, wallet management, and strategic market features like Sniper and Limit Orders. Multichain support coming soon!",
+    tags: ["defi", "infrastructure", "tools"],
+    image: "starkbot.jpg",
+    network: {
+      website: "https://starkbot.net/",
+      github: "https://github.com/starknetbot",
+      twitter: "https://twitter.com/Starkbot_strk",
+      medium: "",
+      discord: "",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
 ];
