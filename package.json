@@ -48,7 +48,7 @@
     "chart.js": "4.4.3",
     "cliui": "^8.0.1",
     "dayjs": "1.11.11",
-    "ethers": "6.12.1",
+    "ethers": "6.13.0",
     "framer-motion": "11.2.6",
     "jest-environment-jsdom": "29.7.0",
     "lodash": "4.17.21",
