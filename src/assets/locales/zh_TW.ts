@@ -79,8 +79,7 @@ const zhTWTranslate: TranslateState = {
     npm_total_downloads: "下載次數",
   },
   cookies: {
-    description:
-      "我們使用cookies以確保您在我們的網站上獲得最佳體驗",
+    description: "我們使用cookies以確保您在我們的網站上獲得最佳體驗",
   },
 };
 

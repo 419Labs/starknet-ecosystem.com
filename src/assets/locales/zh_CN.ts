@@ -81,8 +81,7 @@ const zhCNTranslation: TranslateState = {
     npm_total_downloads: "下载次数",
   },
   cookies: {
-    description:
-      "我们使用cookies以确保您在我们的网站上获得最佳体验",
+    description: "我们使用cookies以确保您在我们的网站上获得最佳体验",
   },
 };
 
