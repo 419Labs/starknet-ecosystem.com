@@ -7,8 +7,7 @@ const itTranslate: TranslateState = {
     hundreds: "Centinaia",
     subtitle_main:
       "Immergiti nell'ecosistema Starknet scoprendo progetti, lavori, metriche e risorse di apprendimento.",
-    community_driven:
-      "✨ Un'iniziativa guidata dalla comunità",
+    community_driven: "✨ Un'iniziativa guidata dalla comunità",
     no_project: "😕 Nessun progetto in questa categoria",
     maybe_yours: "Forse la tua?",
     made_with: "Fatto con",
