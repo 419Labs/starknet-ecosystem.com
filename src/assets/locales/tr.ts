@@ -21,7 +21,8 @@ const trTranslate: TranslateState = {
     no_job: "😕 İş ilanı yok",
     no_resource: "😕 Kaynak bulunamadı",
     more: "daha fazla görüntüle",
-    data_error: "Veri yüklenirken hata oluştu, lütfen daha sonra tekrar deneyin",
+    data_error:
+      "Veri yüklenirken hata oluştu, lütfen daha sonra tekrar deneyin",
     ecosystem: "Ekosistem",
     jobs: "İşler",
     metrics: "Metrikler",
