@@ -4095,7 +4095,7 @@ export const allProjects: Array<Project> = [
     name: "MusicDex",
     shortName: "MusicDex",
     description:
-        "MusicDex is a revolutionary crowd investment platform which allows you to support artists, earn passive income, and be part of the future of music",
+      "MusicDex is a revolutionary crowd investment platform which allows you to support artists, earn passive income, and be part of the future of music",
     tags: ["defi"],
     image: "musicdex.jpg",
     network: {
