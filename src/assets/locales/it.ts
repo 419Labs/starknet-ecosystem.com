@@ -3,10 +3,11 @@ import type { TranslateState } from "../../context/TranslateProvider/model";
 const itTranslate: TranslateState = {
   common: {
     title_main: "La rivoluzione di Starknet sta venendo alla luce del giorno",
+    title_main_dapps: "dApps, Servizi & Portafogli",
+    hundreds: "Centinaia",
     subtitle_main:
       "Immergiti nell'ecosistema Starknet scoprendo progetti, lavori, metriche e risorse di apprendimento.",
     community_driven: "✨ Un'iniziativa guidata dalla comunità",
-
     no_project: "😕 Nessun progetto in questa categoria",
     maybe_yours: "Forse la tua?",
     made_with: "Fatto con",
@@ -59,8 +60,10 @@ const itTranslate: TranslateState = {
     description: "Descrizione",
     requirements: "Requisiti",
     published: "Pubblicata",
-    ago: "ago",
+    ago: "fa",
     no_selected: "Nessun lavoro selezionato",
+    aboutUs: "Chi siamo",
+    aboutYou: "Chi sei",
   },
   metrics: {
     title: "Metriche dell'ecosistema",
@@ -78,7 +81,7 @@ const itTranslate: TranslateState = {
   },
   cookies: {
     description:
-      "We use cookies to ensure you get the best experience on our website",
+      "Utilizziamo i cookie per assicurarci che tu possa avere la migliore esperienza sul nostro sito web.",
   },
 };
 
