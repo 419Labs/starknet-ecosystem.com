@@ -4090,4 +4090,23 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: false,
   },
+  {
+    id: "7f268845-9bbc-4acd-be3b-bbef13d83135",
+    name: "MusicDex",
+    shortName: "MusicDex",
+    description:
+      "MusicDex is a revolutionary crowd investment platform which allows you to support artists, earn passive income, and be part of the future of music",
+    tags: ["defi"],
+    image: "musicdex.jpg",
+    network: {
+      website: "https://musicdex.co/",
+      github: "",
+      twitter: "https://x.com/MusicDex_inc",
+      medium: "",
+      discord: "",
+      telegram: "https://t.me/musicdexplatform",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
 ];
