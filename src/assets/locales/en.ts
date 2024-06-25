@@ -76,7 +76,7 @@ const enTranslate: TranslateState = {
     network_activity: "Network activity",
     developer_tools: "Developer tools",
     metrics: "Metrics",
-    github_repo: "Ferramentas e Bibliotecas",
+    github_repo: "Tools & Libraries",
     npm_last_downloads: "downloads last 7 days",
     npm_total_downloads: "downloads",
   },

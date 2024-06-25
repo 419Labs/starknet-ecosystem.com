@@ -75,7 +75,7 @@ const ptTranslate: TranslateState = {
     network_activity: "Atividade da rede",
     developer_tools: "Ferramentas para desenvolvedores",
     metrics: "Métricas",
-    github_repo: "Repositório GitHub",
+    github_repo: "Ferramentas e Bibliotecas",
     npm_last_downloads: "downloads nos últimos 7 dias",
     npm_total_downloads: "downloads",
   },
