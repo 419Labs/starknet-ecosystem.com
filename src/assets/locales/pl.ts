@@ -80,7 +80,8 @@ const translate: TranslateState = {
     npm_total_downloads: "pobrań ogółem",
   },
   cookies: {
-    description: "Używamy plików cookie, aby zapewnić najlepsze doświadczenia na naszej stronie internetowej",
+    description:
+      "Używamy plików cookie, aby zapewnić najlepsze doświadczenia na naszej stronie internetowej",
   },
 };
 
