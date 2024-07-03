@@ -4109,4 +4109,23 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: false,
   },
+  {
+    id: "052adf95-b8c0-4f71-9def-116a456ee9e8",
+    name: "Karrot Exchange",
+    shortName: "KarrotExchange",
+    description:
+      "Karrot Exchange is an AMM DEX designed to seamlessly support and thrive in the vibrant world of Meme Tokens.",
+    tags: ["defi", "infrastructure", "tools"],
+    image: "karrot.png",
+    network: {
+      website: "https://karrot.exchange/",
+      github: "https://github.com/KarrotExchange/",
+      twitter: "https://twitter.com/KarrotExchange",
+      medium: "",
+      discord: "",
+      telegram: "",
+    },
+    isLive: false,
+    isTestnetLive: true,
+  },
 ];
