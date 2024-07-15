@@ -3413,7 +3413,7 @@ export const allProjects: Array<Project> = [
     tags: ["nft", "infrastructure"],
     image: "flex.png",
     network: {
-      website: "https://flexing.gg/",
+      website: "https://hyperflex.market/",
       github: "https://github.com/0xandee/flex-marketplace-cairo0-contracts",
       twitter: "https://twitter.com/Flex_strk",
       medium: "",
