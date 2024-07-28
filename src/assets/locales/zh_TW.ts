@@ -63,6 +63,8 @@ const zhTWTranslate: TranslateState = {
     published: "發布時間",
     ago: "前",
     no_selected: "未選擇職位",
+	  aboutUs: "關於我們",
+    aboutYou: "關於你",
   },
   metrics: {
     title: "生態系統指標",
