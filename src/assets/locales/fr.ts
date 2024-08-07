@@ -73,6 +73,7 @@ const frTranslate: TranslateState = {
     transactions: "transactions",
     contracts: "contrats",
     blocks: "blocks",
+    network_activity: "Activité réseau",
     developer_tools: "Outils Développeurs",
     metrics: "Métriques",
     github_repo: "Outils & Librairies",
