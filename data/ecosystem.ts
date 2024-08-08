@@ -4136,12 +4136,13 @@ export const allProjects: Array<Project> = [
     tags: ["GameFi"],
     image: "starkarcade.svg",
     network: {
-      website:"https://www.starkarcade.com/",
+      website: "https://www.starkarcade.com/",
       github: "https://github.com/decolgen-labs",
       twitter: "https://twitter.com/starkarcade",
       telegram: "https://t.me/starkarcade",
     },
-    description: "Starknet Arcade Hub is a tribute to our NFT community and one of the largest mini-games hub for the Starknet Degens",
-    isTestnetLive: false
-  }
+    description:
+      "Starknet Arcade Hub is a tribute to our NFT community and one of the largest mini-games hub for the Starknet Degens",
+    isTestnetLive: false,
+  },
 ];
