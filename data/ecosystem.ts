@@ -4128,4 +4128,21 @@ export const allProjects: Array<Project> = [
     isLive: false,
     isTestnetLive: true,
   },
+  {
+    id: "3603da74-d1a5-4af1-8b87-536f609fc8cf",
+    name: "STARK Arcade",
+    shortName: "STARK Arcade",
+    isLive: true,
+    tags: ["GameFi"],
+    image: "starkarcade.svg",
+    network: {
+      website: "https://www.starkarcade.com/",
+      github: "https://github.com/decolgen-labs",
+      twitter: "https://twitter.com/starkarcade",
+      telegram: "https://t.me/starkarcade",
+    },
+    description:
+      "Starknet Arcade Hub is a tribute to our NFT community and one of the largest mini-games hub for the Starknet Degens",
+    isTestnetLive: false,
+  },
 ];
