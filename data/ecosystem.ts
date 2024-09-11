@@ -4145,4 +4145,23 @@ export const allProjects: Array<Project> = [
       "Starknet Arcade Hub is a tribute to our NFT community and one of the largest mini-games hub for the Starknet Degens",
     isTestnetLive: false,
   },
+  {
+    id: "a4b326b6-ceed-4b13-bc8e-36180f68111b",
+    name: "Calimero Network",
+    shortName: "Calimero Network",
+    description:
+      "A framework for building Peer-To-Peer Self-Sovereign Applications for private data sharing.",
+    tags: ["infrastructure", "tools", "security"],
+    image: "calimero_logo.png",
+    network: {
+      website: "https://www.calimero.network//",
+      github: "https://github.com/calimero-network/core",
+      twitter: "https://x.com/CalimeroNetwork",
+      medium: "",
+      discord: "https://discord.com/invite/kjP4GrafXj",
+      telegram: "https://t.me/StarkStarter_Announcement",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
 ];
