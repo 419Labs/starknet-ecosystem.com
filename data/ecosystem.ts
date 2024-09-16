@@ -4150,16 +4150,15 @@ export const allProjects: Array<Project> = [
     name: "Calimero Network",
     shortName: "Calimero Network",
     description:
-      "A framework for building Peer-To-Peer Self-Sovereign Applications for private data sharing.",
+      "A framework for building Peer-To-Peer Self-Sovereign Applications for private data sharing. Extend the privacy promise of your dApp to your customers by performing the off-chain private data compute on Calimero, and relaying the end results on-chain.",
     tags: ["infrastructure", "tools", "security"],
-    image: "calimero_logo.png",
+    image: "calimero.png",
     network: {
       website: "https://www.calimero.network//",
       github: "https://github.com/calimero-network/core",
       twitter: "https://x.com/CalimeroNetwork",
       medium: "",
       discord: "https://discord.com/invite/kjP4GrafXj",
-      telegram: "https://t.me/StarkStarter_Announcement",
     },
     isLive: true,
     isTestnetLive: false,
