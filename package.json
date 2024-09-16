@@ -76,6 +76,6 @@
     "eslint-config-next": "14.2.8",
     "eslint-config-sznm": "2.0.3",
     "jest": "29.7.0",
-    "typescript": "5.5.4"
+    "typescript": "5.6.2"
   }
 }
