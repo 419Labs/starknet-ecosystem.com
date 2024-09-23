@@ -71,7 +71,7 @@
     "@types/node": "22.5.5",
     "@types/react": "18.3.6",
     "babel-jest": "29.7.0",
-    "eslint": "8.57.0",
+    "eslint": "8.57.1",
     "eslint-config-airbnb-typescript": "18.0.0",
     "eslint-config-next": "14.2.11",
     "eslint-config-sznm": "2.0.3",
