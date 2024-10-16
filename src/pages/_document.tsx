@@ -1,7 +1,6 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import { ColorModeScript } from "@chakra-ui/color-mode";
 import createEmotionServer from "@emotion/server/create-instance";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { DocumentContext } from "next/document";
 import Document, { Html, Head, Main, NextScript } from "next/document";
 import * as React from "react";
@@ -115,7 +114,6 @@ class MyDocument extends Document {
           <ColorModeScript initialColorMode="dark" />
           <Main />
           <NextScript />
-          <SpeedInsights sampleRate={70} />
         </body>
       </Html>
     );
