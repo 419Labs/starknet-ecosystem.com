@@ -25,7 +25,7 @@
     "@chakra-ui/input": "2.1.2",
     "@chakra-ui/layout": "2.3.1",
     "@chakra-ui/modal": "2.3.1",
-    "@chakra-ui/react": "2.8.2",
+    "@chakra-ui/react": "2.10.3",
     "@chakra-ui/tabs": "3.0.0",
     "@chakra-ui/tag": "3.1.1",
     "@emotion/cache": "11.11.0",
