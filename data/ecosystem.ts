@@ -4165,7 +4165,7 @@ export const allProjects: Array<Project> = [
   },
   {
     id: "1b1fedb8-3e97-4288-91e8-7a0c39e5be66",
-    name: "Vesu.xyz",
+    name: "Vesu",
     shortName: "Vesu",
     description:
       "Vesu is an open lending protocol built on Starknet allowing everyone to earn, borrow and build seamlessly.",
@@ -4176,7 +4176,7 @@ export const allProjects: Array<Project> = [
       github: "https://github.com/vesuxyz",
       twitter: "https://x.com/vesuxyz",
       medium: "",
-      discord: "https://discord.com/invite/G9Gxgujj8T",
+      discord: "https://discord.gg/G9Gxgujj8T",
     },
     isLive: true,
     isTestnetLive: false,
