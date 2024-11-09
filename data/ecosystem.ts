@@ -50,6 +50,7 @@ export const allProjects: Array<Project> = [
     },
     isLive: true,
     isTestnetLive: false,
+    isHidden: true,
   },
   {
     id: "5931a7e3-8760-457a-a4bc-c1ffc51de175",
@@ -146,6 +147,7 @@ export const allProjects: Array<Project> = [
     },
     isLive: true,
     isTestnetLive: true,
+    isHidden: true,
   },
   {
     id: "5e3a046d-4487-4fa6-9be0-1abc6cbe0a8e",
@@ -185,6 +187,7 @@ export const allProjects: Array<Project> = [
     },
     isLive: true,
     isTestnetLive: true,
+    isHidden: true,
   },
   {
     id: "834b3515-b32c-475f-bef4-a594885665a0",
@@ -260,6 +263,7 @@ export const allProjects: Array<Project> = [
     },
     isLive: true,
     isTestnetLive: false,
+    isHidden: true,
   },
   {
     id: "792dab31-4477-42bd-a16b-ce2494fffdb8",
@@ -909,6 +913,7 @@ export const allProjects: Array<Project> = [
     },
     isLive: false,
     isTestnetLive: false,
+    isHidden: true,
   },
   {
     id: "ff111cd4-a3b7-46b2-838e-41316152cca0",
@@ -927,6 +932,7 @@ export const allProjects: Array<Project> = [
     },
     isLive: false,
     isTestnetLive: false,
+    isHidden: true,
   },
   {
     id: "efde17bc-1077-4d74-a2d3-77d8cdc7ac8a",
@@ -1204,7 +1210,7 @@ export const allProjects: Array<Project> = [
     image: "phi.jpeg",
     network: {
       website:
-        "https://phi-xyz.notion.site/phi-xyz/532af6de66e64c7c883d552d301b8020",
+       "https://phi.box/",
       github: "",
       twitter: "https://twitter.com/phi_xyz",
       medium: "",
@@ -1399,7 +1405,7 @@ export const allProjects: Array<Project> = [
     tags: ["tools"],
     image: "hardhat.svg",
     network: {
-      website: "",
+      website: "https://shardlabs.io/",
       github: "https://github.com/Shard-Labs/starknet-hardhat-plugin",
       twitter: "https://twitter.com/shard_labs",
       medium: "",
@@ -1699,7 +1705,7 @@ export const allProjects: Array<Project> = [
     tags: ["infrastructure", "governance"],
     image: "",
     network: {
-      website: "",
+      website: "https://equilibrium.co/",
       github: "https://github.com/eqlabs/starknet-multisig",
       twitter: "https://twitter.com/equilibrium_co",
       medium: "",
@@ -1983,6 +1989,7 @@ export const allProjects: Array<Project> = [
     },
     isLive: false,
     isTestnetLive: false,
+    isHidden: true,
   },
   {
     id: "47c66360-2769-4331-a679-1ff3b7efa916",
@@ -2986,6 +2993,7 @@ export const allProjects: Array<Project> = [
     },
     isLive: true,
     isTestnetLive: true,
+    isHidden: true,
   },
   {
     id: "f174231a-746f-478e-85b0-14f6cb795a79",
@@ -3093,7 +3101,7 @@ export const allProjects: Array<Project> = [
     tags: ["all", "bridge", "defi"],
     image: "RN_Bridge.png",
     network: {
-      website: "https://v1.bridge.raum.network/swap",
+      website: "https://www.raum.network/",
       github: "https://github.com/Raum-Network",
       twitter: "https://twitter.com/RaumNetwork",
       medium: "https://raumnetwork.medium.com",
@@ -3210,6 +3218,7 @@ export const allProjects: Array<Project> = [
     },
     isLive: true,
     isTestnetLive: false,
+    isHidden: true,
   },
   {
     id: "2dd53057-6641-45c0-b4c2-e4544d2c7571",
@@ -3240,6 +3249,7 @@ export const allProjects: Array<Project> = [
     },
     isLive: true,
     isTestnetLive: true,
+    isHidden: true,
   },
   {
     id: "9423b0f0-d1de-4d58-be0f-a59b5fa2e09c",
@@ -3272,6 +3282,7 @@ export const allProjects: Array<Project> = [
     },
     isLive: true,
     isTestnetLive: false,
+    isHidden: true,
   },
   {
     id: "4bce31ab-6c5f-478a-b8ac-0dba6f8ed9a3",
@@ -3346,6 +3357,7 @@ export const allProjects: Array<Project> = [
     },
     isLive: false,
     isTestnetLive: true,
+    isHidden: true,
   },
   {
     id: "6561553f-1d01-429f-98cc-69a8d7182a9c",
@@ -3403,6 +3415,7 @@ export const allProjects: Array<Project> = [
     },
     isLive: true,
     isTestnetLive: false,
+    isHidden: true,
   },
   {
     id: "6b6252b1-c47e-4695-a31f-a435227aa9ce",
@@ -3441,6 +3454,7 @@ export const allProjects: Array<Project> = [
     },
     isLive: false,
     isTestnetLive: false,
+    isHidden: true,
   },
   {
     id: "843a7abe-0d8f-4742-9a3d-b73e1a0b2a3c",
@@ -3614,6 +3628,7 @@ export const allProjects: Array<Project> = [
     },
     isLive: true,
     isTestnetLive: false,
+    isHidden: true,
   },
   {
     id: "24990877-03e8-4059-a886-c24ca1bfe93c",
@@ -3651,6 +3666,7 @@ export const allProjects: Array<Project> = [
     },
     isLive: false,
     isTestnetLive: true,
+    isHidden: true,
   },
   {
     id: "72744880-7c02-42d6-93ca-663062690b67",
@@ -3689,6 +3705,7 @@ export const allProjects: Array<Project> = [
     },
     isLive: true,
     isTestnetLive: false,
+    isHidden: true,
   },
   {
     id: "f4ece137-2b50-483a-8db9-0a8601ef3671",
@@ -3824,6 +3841,7 @@ export const allProjects: Array<Project> = [
     },
     isLive: true,
     isTestnetLive: false,
+    isHidden: true,
   },
   {
     id: "00b21789-6562-43bd-a75e-f2be48590853",
@@ -4089,6 +4107,7 @@ export const allProjects: Array<Project> = [
     },
     isLive: true,
     isTestnetLive: false,
+    isHidden: true,
   },
   {
     id: "7f268845-9bbc-4acd-be3b-bbef13d83135",
@@ -4127,6 +4146,7 @@ export const allProjects: Array<Project> = [
     },
     isLive: false,
     isTestnetLive: true,
+    isHidden: true,
   },
   {
     id: "3603da74-d1a5-4af1-8b87-536f609fc8cf",
