@@ -4181,4 +4181,22 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: false,
   },
+  {
+    id: "a7e1c712-84a2-4457-8610-1cab7af37b16",
+    name: "Endur",
+    shortName: "Endur",
+    description:
+      "Endur is a platform offering xSTRK, a tradeable Liquid Staking Token (LST) on Starknet. xSTRK allows STRK token holders to stake their assets while maintaining liquidity.",
+    tags: ["tools", "defi"],
+    image: "endur.svg",
+    network: {
+      website: "https://endur.fi",
+      github: "https://github.com/Endur-fi",
+      twitter: "https://x.com/endurfi",
+      medium: "https://blog.endur.fi",
+      discord: "",
+    },
+    isLive: true,
+    isTestnetLive: true,
+  },
 ];
