@@ -4199,4 +4199,19 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: true,
   },
+  {
+    id: "ecce7648-0e6d-4886-b7a1-0f2d476e632f",
+    name: "Staking Rewards",
+    shortName: "Staking Rewards",
+    description: "Secure & Reliable Crypto Staking",
+    tags: ["tools", "defi"],
+    image: "staking-rewards.svg",
+    network: {
+      website: "https://www.stakingrewards.com/",
+      twitter: "https://x.com/StakingRewards",
+      discord: "http://discord.gg/44nxDZ2SEe",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
 ];
