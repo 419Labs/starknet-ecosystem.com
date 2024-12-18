@@ -124,8 +124,8 @@ const NpmDownloadsPaper: FC<Props> = ({ name, label }) => {
           )}
           <Text>
             {cumulative
-              ? t.metrics.npm_total_downloads ?? "downloads"
-              : t.metrics.npm_last_downloads ?? "downloads last 7 days"}
+              ? (t.metrics.npm_total_downloads ?? "downloads")
+              : (t.metrics.npm_last_downloads ?? "downloads last 7 days")}
           </Text>
         </HStack>
       </VStack>
@@ -230,8 +230,8 @@ const NpmDownloadsPaper: FC<Props> = ({ name, label }) => {
           >
             <Text as="button" size="sm">
               {cumulative
-                ? t.common.cumulative_chart ?? "Cumulative chart"
-                : t.common.non_cumulative_chart ?? "Non cumulative chart"}
+                ? (t.common.cumulative_chart ?? "Cumulative chart")
+                : (t.common.non_cumulative_chart ?? "Non cumulative chart")}
             </Text>
             <FontAwesomeIcon
               fontSize="14px"
