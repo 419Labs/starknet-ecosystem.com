@@ -48,8 +48,8 @@
     "chart.js": "4.4.7",
     "cliui": "^8.0.1",
     "dayjs": "1.11.13",
-    "ethers": "6.13.4",
-    "framer-motion": "11.15.0",
+    "ethers": "6.13.5",
+    "framer-motion": "11.16.0",
     "jest-environment-jsdom": "29.7.0",
     "lodash": "4.17.21",
     "next": "15.1.0",
@@ -60,7 +60,7 @@
     "react-cool-inview": "3.0.1",
     "react-dom": "18.3.1",
     "react-flippy": "1.1.0",
-    "swr": "2.2.5",
+    "swr": "2.3.0",
     "yarn": "1.22.22"
   },
   "devDependencies": {
@@ -68,7 +68,7 @@
     "@testing-library/react": "15.0.7",
     "@testing-library/user-event": "14.5.2",
     "@types/dompurify": "3.2.0",
-    "@types/node": "22.10.2",
+    "@types/node": "22.10.5",
     "@types/react": "18.3.12",
     "babel-jest": "29.7.0",
     "eslint": "8.57.1",
