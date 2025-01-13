@@ -4061,7 +4061,7 @@ export const allProjects: Array<Project> = [
     tags: ["defi", "infrastructure", "tools"],
     image: "strkfarm.svg",
     network: {
-      website: "https://www.strkfarm.xyz/",
+      website: "https://www.strkfarm.com/",
       github: "https://github.com/strkfarm",
       twitter: "https://twitter.com/strkfarm",
       medium: "",
