@@ -4214,4 +4214,21 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: false,
   },
+  {
+    id: "86f024af-7cfa-4769-a285-e54ec07c4964",
+    name: "Goldsky",
+    shortName: "Goldsky",
+    description:
+      "Power your apps with real-time blockchain data and subgraphs without managing complex infrastructure.",
+    tags: ["infrastructure", "tools", "defi"],
+    image: "goldsky-logo-color-round.svg",
+    network: {
+      website: "https://goldsky.com",
+      github: "https://github.com/goldsky-io",
+      twitter: "https://x.com/goldskyio",
+      medium: "https://goldsky.com/blog",
+    },
+    isLive: true,
+    isTestnetLive: true,
+  },
 ];
