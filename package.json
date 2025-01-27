@@ -52,7 +52,7 @@
     "framer-motion": "12.0.0",
     "jest-environment-jsdom": "29.7.0",
     "lodash": "4.17.21",
-    "next": "15.1.5",
+    "next": "15.1.6",
     "next-seo": "6.6.0",
     "prettier": "3.4.2",
     "react": "18.3.1",
