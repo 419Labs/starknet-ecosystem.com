@@ -4203,7 +4203,7 @@ export const allProjects: Array<Project> = [
     id: "ecce7648-0e6d-4886-b7a1-0f2d476e632f",
     name: "Staking Rewards",
     shortName: "Staking Rewards",
-    description: "Secure & Reliable Crypto Staking",
+    description: "Staking Rewards offers an official Starknet staking interface, allowing users to stake STRK using their preferred Starknet wallet. Users can stake directly with any validator or opt for liquid staking through Endu.fi or Nimbora. Once staked, they can easily manage their position, claim rewards, switch validators, or unstake. Users can also gain insights into the Starknet staking ecosystem via their STRK staking dashboard. Explore all Starknet validators and liquid staking protocols, by comparing key metrics such as total AuM, fees, and Net Staking Flows. Or use the STRK staking calculator to estimate potential staking rewards over time.",
     tags: ["tools", "defi"],
     image: "staking-rewards.svg",
     network: {
