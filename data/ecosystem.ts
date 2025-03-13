@@ -4215,4 +4215,21 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: false,
   },
+  {
+    id: "c50b8abf-61da-477f-98f2-ecb5849ccbe7",
+    name: "Starknet Deploy",
+    shortName: "Starknet Deploy",
+    image: "",
+    description:
+      "Starknet Deploy is a tool to streamline the deployment and interaction of Starknet contracts.",
+    tags: ["tools"],
+    network: {
+      website: "",
+      twitter: "",
+      discord: "",
+      github: "https://github.com/olas-protocol/starknet-deploy",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
 ];
