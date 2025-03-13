@@ -4221,7 +4221,7 @@ export const allProjects: Array<Project> = [
     shortName: "Starknet Deploy",
     image: "",
     description:
-      "StarkNet Deploy is a tool to streamline the deployment and interaction of StarkNet contracts.",
+      "Starknet Deploy is a tool to streamline the deployment and interaction of Starknet contracts.",
     tags: ["tools"],
     network: {
       website: "",
