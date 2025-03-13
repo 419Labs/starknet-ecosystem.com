@@ -4221,7 +4221,7 @@ export const allProjects: Array<Project> = [
     shortName: "Olas",
     image: "olas.png",
     description:
-      "Olas is an open protocol for sharing, interrogating, and aggregating information. It also provides developer tools like starknet-deploy to enhance the Starknet development experience.",
+      "Olas is an open protocol for sharing, interrogating, and aggregating information.",
     tags: [ "defi","tools"],
     network: {
       website: "https://olas.info/",
