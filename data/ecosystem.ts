@@ -4232,4 +4232,21 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: false,
   },
+  {
+    id: "4d8463ce-746a-4cd2-ae93-a9adb9adb635",
+    name: "Olas Protocol",
+    shortName: "Olas",
+    image: "olas.png",
+    description:
+      "Olas is an open protocol for sharing, interrogating, and aggregating information.",
+    tags: ["defi", "tools"],
+    network: {
+      website: "https://olas.info/",
+      twitter: "https://x.com/OlasProtocol",
+      discord: "",
+      github: "https://github.com/olas-protocol",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
 ];
