@@ -9,7 +9,7 @@
     "sync-data": "ts-node src/sync-data.ts"
   },
   "dependencies": {
-    "axios": "0.27.2",
+    "axios": "1.8.2",
     "uuid": "9.0.0"
   },
   "devDependencies": {
