@@ -4222,7 +4222,7 @@ export const allProjects: Array<Project> = [
     image: "olas.png",
     description:
       "Olas is an open protocol for sharing, interrogating, and aggregating information.",
-    tags: [ "defi","tools"],
+    tags: ["defi", "tools"],
     network: {
       website: "https://olas.info/",
       twitter: "https://x.com/OlasProtocol",
