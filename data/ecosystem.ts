@@ -4215,4 +4215,21 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: false,
   },
+  {
+    id: "5d6c8f2e-8e4a-4096-aa07-f4ea14ce3c25",
+    name: "XBANKING",
+    shortName: "XBANKING",
+    description:
+      "XBANKING is the leading decentralized DeFi protocol for staking, restaking and liquid pools. We aggregate tens of thousands of staking, restaking, and liquid pools so that you can get the maximum yield from your cryptocurrency. Place your assets with high returns, simply, decentralized and absolutely secure.",
+    tags: ["defi"],
+    image: "xbanking.png",
+    network: {
+      website: "https://xbanking.org",
+      github: "https://github.com/xbankingorg",
+      twitter: "https://x.com/xbankingapp",
+      telegram: "https://t.me/xbanking",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
 ];
