@@ -2714,7 +2714,7 @@ export const allProjects: Array<Project> = [
     name: "Layerswap",
     shortName: "Layerswap",
     description:
-      "LayerSwap is a bridge between centralized exchanges and blockchains.",
+      "Layerswap is a cost-efficient and secure solution for transferring assets across EVM and non-EVM blockchains. The app supports fast cross-chain transfers between more than 60 chains as well as direct transfers between networks and Centralized Exchanges.",
     tags: ["bridge", "infrastructure", "starkex"],
     image: "layerswap.svg",
     network: {
@@ -2723,7 +2723,7 @@ export const allProjects: Array<Project> = [
       twitter: "https://twitter.com/layerswap",
       medium: "",
       discord: "https://discord.gg/layerswap",
-      telegram: "",
+      telegram: "https://t.me/layerswap_io",
     },
     isLive: true,
     isTestnetLive: true,
