@@ -33,25 +33,6 @@ export interface ProjectItf extends Project {
 
 export const allProjects: Array<Project> = [
   {
-    id: "62d39069-c45a-48ea-88e0-324820633300",
-    name: "StarkStarter",
-    shortName: "StarkStarter",
-    description:
-      "StarkStarter provides a framework for constructing Starknet-based Appchains using zero knowledge technology. StarkStarter lets users customize Appchains to meet their needs.StarkStarter",
-    tags: ["infrastructure", "defi"],
-    image: "starkstarter.png",
-    network: {
-      website: "https://starkstarter.foundation/",
-      github: "",
-      twitter: "https://twitter.com/thestarkstarter",
-      medium: "",
-      discord: "",
-      telegram: "https://t.me/StarkStarter_Announcement",
-    },
-    isLive: true,
-    isTestnetLive: false,
-  },
-  {
     id: "5931a7e3-8760-457a-a4bc-c1ffc51de175",
     name: "Footprint Analytics",
     shortName: "Footprint",
@@ -1355,25 +1336,6 @@ export const allProjects: Array<Project> = [
     isHidden: true,
   },
   {
-    id: "59425c28-b470-455f-b433-06c488b4dbf7",
-    name: "Zem",
-    shortName: "zem",
-    description:
-      "Deployment system for Hardhat supporting EVM and Starknet contracts.",
-    tags: ["tools"],
-    image: "zem.png",
-    network: {
-      website: "",
-      github: "https://github.com/anders-torbjornsen/zem",
-      twitter: "https://twitter.com/0x80_eth",
-      medium: "",
-      discord: "",
-      telegram: "",
-    },
-    isLive: true,
-    isTestnetLive: true,
-  },
-  {
     id: "c14cf7d5-5b42-4313-9030-1ed52e82fbde",
     name: "Starknet Devnet",
     shortName: "Starknet Devnet",
@@ -1518,24 +1480,6 @@ export const allProjects: Array<Project> = [
       twitter: "",
       medium: "",
       discord: "",
-      telegram: "",
-    },
-    isLive: true,
-    isTestnetLive: true,
-  },
-  {
-    id: "cfe632a1-18f1-49d0-af4b-f6a08c4620c6",
-    name: "Warp",
-    shortName: "Warp",
-    description: "Warp is a Solidity to Cairo transpiler.",
-    tags: ["tools"],
-    image: "",
-    network: {
-      website: "https://nethermind.io/warp/",
-      github: "https://github.com/NethermindEth/warp",
-      twitter: "",
-      medium: "",
-      discord: "https://discord.gg/cPqaZXev7P",
       telegram: "",
     },
     isLive: true,
@@ -2896,22 +2840,6 @@ export const allProjects: Array<Project> = [
     isTestnetLive: true,
   },
   {
-    id: "5fa38c5c-942c-4b0a-af0f-e3979a44eec9",
-    name: "zk-Name Service",
-    shortName: "zk-Name Service",
-    description:
-      "This is a decentralized community domain name project. After users purchase domain names at extremely low prices, they can mint governance tokens, which are all distributed to domain name owners, developers do not have any reserved shares. When users mint governance tokens, the community relations will be automatically bound, which for subsequent social applications and game applications.",
-    tags: ["digital_id", "nft", "tools"],
-    image: "zk-name-service.png",
-    network: {
-      website: "https://zk-ns.xyz/",
-      github: "https://github.com/zk-ns/zk-name-service--cairo1.0",
-      discord: "https://discord.com/invite/YWrevpKWPx",
-    },
-    isLive: true,
-    isTestnetLive: false,
-  },
-  {
     id: "1f60939b-9194-43ae-ab83-95137b93d7d8",
     name: "Renegade",
     shortName: "Renegade",
@@ -3501,25 +3429,6 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: false,
     isHidden: true,
-  },
-  {
-    id: "d7329bec-5e43-4d8a-a44d-c162084e0069",
-    name: "Starkmint",
-    shortName: "Starkmint",
-    description:
-      "Starkmint alows you to create your ERC20 tokens,create liquidity and lock your liquidity to secure investors. It also provide staking as a service. Just connect your wallet, it's all set up, no dev required!",
-    tags: ["tools", "infrastructure", "defi", "nft", "gamefi"],
-    image: "starkmint.png",
-    network: {
-      website: "https://www.starkmint.com/",
-      github: "https://github.com/Kuurus/starkmint",
-      twitter: "https://twitter.com/starkminzor",
-      medium: "",
-      discord: "",
-      telegram: "",
-    },
-    isLive: true,
-    isTestnetLive: true,
   },
   {
     id: "b5c3cb75-5d84-426c-9723-d977a2ce6ee3",
