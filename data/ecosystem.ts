@@ -2309,25 +2309,6 @@ export const allProjects: Array<Project> = [
     isHidden: true,
   },
   {
-    id: "5b54b8c6-ae8c-403e-ae55-0dc64d577cb6",
-    name: "Starkfinance",
-    shortName: "Starkfinance",
-    description:
-      "Starkfinance is an all-in-one Incubation Hub with a full stack DeFi platform across blockchain networks. We provide exclusive services including IDO Launchpad, NFT Auction, Marketplace, and Exchange.",
-    tags: ["nft", "defi"],
-    image: "starksport.png",
-    network: {
-      website: "https://starkfinance.co/",
-      github: "https://github.com/starkfinance-organization",
-      twitter: "https://twitter.com/starkfinance",
-      medium: "",
-      discord: "https://discord.com/invite/vm7DJJn54Y",
-      telegram: "https://t.me/starksportchanel",
-    },
-    isLive: true,
-    isTestnetLive: true,
-  },
-  {
     id: "01babbb2-b6d9-4585-b795-2e388123ffd8",
     name: "Dynamic",
     shortName: "Dynamic",
@@ -2947,21 +2928,6 @@ export const allProjects: Array<Project> = [
     isTestnetLive: true,
   },
   {
-    id: "3b8a8bae-d7bc-4b80-a3ce-fb0e88e0fec6",
-    name: "StarkID",
-    shortName: "STK",
-    description:
-      "StarkID is the most user-friendly decentralized naming service platform on Starknet, offering customized DIDs for users, with the suffix .stk.",
-    tags: ["nft", "tools", "digital_id"],
-    image: "StarkID-logo.png",
-    network: {
-      website: "https://starkid.pro/",
-      twitter: "https://twitter.com/stark_did",
-    },
-    isLive: true,
-    isTestnetLive: true,
-  },
-  {
     id: "9423b0f0-d1de-4d58-be0f-a59b5fa2e09c",
     name: "Starknet.unity",
     shortName: "Starknet.unity",
@@ -3484,25 +3450,6 @@ export const allProjects: Array<Project> = [
       medium: "https://medium.com/@0xNomis",
       discord: "https://discord.gg/0xnomis",
       telegram: "https://t.me/nomis_protocol",
-    },
-    isLive: true,
-    isTestnetLive: false,
-  },
-  {
-    id: "41da72ac-5e15-4661-88c2-af5ed4876db6",
-    name: "StarkGas",
-    shortName: "StarkGas",
-    description:
-      "StarkGas is a comprehensive Starknet tool that provides real-time data on gas prices in the Starknet network.",
-    tags: ["tools"],
-    image: "starkgas.png",
-    network: {
-      website: "https://starkgas.space/",
-      github: "https://github.com/pereshkowsky/StarkGas_website",
-      twitter: "",
-      medium: "",
-      discord: "",
-      telegram: "",
     },
     isLive: true,
     isTestnetLive: false,
