@@ -2902,4 +2902,21 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: false,
   },
+  {
+    id: "03387d45-fdd8-4082-aa9a-a23a80b639bc",
+    name: "Trivex",
+    shortName: "Trivex",
+    image: "Trivex.png",
+    description:
+      "Trivex is the ultimate DApp for perpetual trading & strategy analysis.",
+    tags: ["defi", "tools"],
+    network: {
+      website: "https://official-trivex.xyz/",
+      twitter: "https://x.com/trivex_xyz",
+      discord: "https://discord.com/invite/EQGmqBkBfj",
+      github: "https://github.com/JY20/trivex_web",
+    },
+    isLive: true,
+    isTestnetLive: true,
+  },
 ];
