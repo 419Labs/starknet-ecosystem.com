@@ -2919,4 +2919,21 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: true,
   },
+  {
+    id: "f7c5c7e2-eee2-4867-8d9f-76e566502b8a",
+    name: "ForgeYields",
+    shortName: "ForgeYields",
+    image: "forgeyields.jpg",
+    description:
+      "ForgeYields finds the best DeFi yield across chains—automatically. One click in, optimized returns out.",
+    tags: ["defi", "tools"],
+    network: {
+      website: "https://app.forgeyields.com/",
+      twitter: "https://x.com/ForgeYields",
+      discord: "",
+      github: "https://github.com/ForgeYields",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
 ];
