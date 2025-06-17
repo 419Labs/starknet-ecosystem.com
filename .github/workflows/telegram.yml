@@ -1,0 +1,16 @@
+on:
+    issues:
+      types: [opened, closed]
+    push:
+      branches: [ main, master ]
+    pull_request:
+      types:
+        [ opened ]
+
+  jobs:
+    send-tele:
+      uses: 0xlny/github-notifs-telebot/.github/workflows/main.yml@main
+      secrets:
+        MESSAGE_THREAD_ID: "64"
+        TELEGRAM_CHAT_ID: ${{ secrets.AVNU_TELEGRAM_CHAT_ID }}
+        TELEGRAM_TOKEN: ${{ secrets.AVNU_BOT_TOKEN }}
