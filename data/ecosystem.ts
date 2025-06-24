@@ -2936,4 +2936,23 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: false,
   },
+  {
+    id: "a26bcaf5-e330-4476-b939-f7f96b57e739",
+    name: "oxLand",
+    shortName: "oxLand",
+    description:
+      "oxLand is a roguelike dungeon crawler game built on StarkNet. Explore dungeons, defeat bosses, and earn rewards while connecting to the StarkNet ecosystem. Playable on web, support for both PC and mobile.",
+    tags: ["gamefi", "defi", "nft", "mobile"],
+    image: "oxland.png",
+    network: {
+      website: "https://www.oxland.site",
+      github: "",
+      twitter: "https://x.com/oxLand_bot",
+      medium: "",
+      discord: "",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
 ];
