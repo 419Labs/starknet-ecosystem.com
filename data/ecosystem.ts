@@ -1000,22 +1000,22 @@ export const allProjects: Array<Project> = [
   },
   {
     id: "8df27359-f05d-439b-8592-ca1b61cf049c",
-    name: "Argent",
-    shortName: "Argent",
+    name: "Ready",
+    shortName: "Ready",
     description:
-      "Argent is the first and most trusted smart wallet on Starknet, with over 2 million downloads.\n" +
+      "Ready is the first and most trusted smart wallet on Starknet, with over 2 million downloads.\n" +
       "\n" +
-      "Fully self-custodial, open-source and audited, Argent includes advanced security features like built-in fraud monitoring, transaction simulation and multisig security.\n" +
+      "Fully self-custodial, open-source and audited, Ready includes advanced security features like built-in fraud monitoring, transaction simulation and multisig security.\n" +
       "\n" +
       "Buy, swap and bridge tokens with low fees, and manage all of your Starknet NFTs with ease.",
     tags: ["wallet", "digital_id", "defi", "nft", "gamefi", "mobile"],
-    image: "argent.svg",
+    image: "ready-wallet.svg",
     network: {
-      website: "https://www.argent.xyz/argent-x/",
+      website: "https://www.ready.co/",
       github: "https://github.com/argentlabs/argent-x",
-      twitter: "https://twitter.com/argentHQ",
-      medium: "https://www.argent.xyz/blog/",
-      discord: "https://discord.gg/T4PDFHxm6T",
+      twitter: "https://x.com/ready_co",
+      medium: "",
+      discord: "https://discordapp.com/invite/GWSyrHg",
       telegram: "",
     },
     isLive: true,

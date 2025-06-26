@@ -1114,18 +1114,18 @@ export const tools: Resource[] = [
 // ======================================================================
 export const wallets: Resource[] = [
   {
-    name: "Argent X",
-    shortName: "argent-x",
+    name: "Ready Wallet",
+    shortName: "ready",
     description:
-      'First Starknet wallet to interact with tokens and NFTs. Manage your identities with "Sign in with Starknet" (very soon ™️), and enjoy the best of defi. Made with ❤️ by the Argent team.',
+      'First Starknet wallet to interact with tokens and NFTs. Manage your identities with "Sign in with Starknet" (very soon ™️), and enjoy the best of defi. Made with ❤️ by the Ready team.',
     tags: ["wallet"],
-    image: "/logos/argent-x.svg",
+    image: "/logos/ready-wallet.svg",
     network: {
-      website: "https://www.argent.xyz/argent-x/",
+      website: "https://www.ready.co/",
       github: "https://github.com/argentlabs/argent-x",
-      twitter: "https://twitter.com/argentHQ",
+      twitter: "https://x.com/ready_co",
       medium: "",
-      discord: "",
+      discord: "https://discordapp.com/invite/GWSyrHg",
       telegram: "",
     },
   },
@@ -1146,18 +1146,18 @@ export const wallets: Resource[] = [
     },
   },
   {
-    name: "Argent Web Wallet",
-    shortName: "Argent Web Wallet",
+    name: "Ready Web Wallet",
+    shortName: "Ready Web Wallet",
     description:
       "A self-custodial wallet in your browser. It takes advantage of account abstraction to bring you the best experience from both web2 and web3.",
     tags: ["wallet"],
-    image: "/logos/argent.svg",
+    image: "/logos/ready.svg",
     network: {
-      website: "https://web.argent.xyz/",
+      website: "https://web.ready.co/",
       github: "https://github.com/argentlabs/argent-x",
-      twitter: "https://twitter.com/argentHQ",
+      twitter: "https://x.com/ready_co",
       medium: "",
-      discord: "",
+      discord: "https://discordapp.com/invite/GWSyrHg",
       telegram: "",
     },
   },
