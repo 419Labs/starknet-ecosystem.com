@@ -73,7 +73,7 @@
     "babel-jest": "30.0.0",
     "eslint": "8.57.1",
     "eslint-config-airbnb-typescript": "18.0.0",
-    "eslint-config-next": "15.3.4",
+    "eslint-config-next": "15.3.5",
     "eslint-config-sznm": "2.0.4",
     "jest": "30.0.4",
     "typescript": "5.8.3"
