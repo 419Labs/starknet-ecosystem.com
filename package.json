@@ -75,7 +75,7 @@
     "eslint-config-airbnb-typescript": "18.0.0",
     "eslint-config-next": "15.4.6",
     "eslint-config-sznm": "2.0.4",
-    "jest": "30.0.4",
+    "jest": "30.0.5",
     "typescript": "5.8.3"
   }
 }
