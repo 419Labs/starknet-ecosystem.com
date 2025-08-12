@@ -1,7 +1,7 @@
 import type { FlexProps } from "@chakra-ui/layout";
 import { Flex, HStack, Link } from "@chakra-ui/layout";
 import { Button, Text } from "@chakra-ui/react";
-import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
+import { faCookieBite } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import type { FC } from "react";
 
@@ -24,7 +24,7 @@ const CookiesToast: FC<Props> = ({ children, onAccept, ...props }) => {
       direction={{ base: "column", md: "row" }}
     >
       <HStack>
-        <FontAwesomeIcon icon={solid("cookie-bite")} fontSize="24px" />
+        <FontAwesomeIcon icon={faCookieBite} fontSize="24px" />
         <Text fontWeight="400" ml={4}>
           {t.cookies.description}
         </Text>

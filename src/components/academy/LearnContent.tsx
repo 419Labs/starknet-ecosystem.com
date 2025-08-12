@@ -1,5 +1,5 @@
 import { Box, SimpleGrid, VStack } from "@chakra-ui/layout";
-import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
+import { faHome } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import type { ResourceItf } from "../../../data/academy";
@@ -38,7 +38,7 @@ function LearnContent({
                 <CardHighlight
                   color="flat.100"
                   bgHover="flat.100"
-                  icon={<FontAwesomeIcon icon={solid("home")} />}
+                  icon={<FontAwesomeIcon icon={faHome} />}
                   title={name}
                   content={description}
                   link={link || website || github || twitter}

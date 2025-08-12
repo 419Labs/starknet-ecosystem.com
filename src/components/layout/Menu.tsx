@@ -1,6 +1,26 @@
 import { Flex, Text } from "@chakra-ui/layout";
 import { Show } from "@chakra-ui/react";
-import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
+import {
+  faHome,
+  faRss,
+  faBridge,
+  faPen,
+  faPeopleGroup,
+  faGraduationCap,
+  faRocket,
+  faIdCard,
+  faGamepad,
+  faMagnifyingGlass,
+  faRoad,
+  faMobile,
+  faFileImage,
+  faCreditCard,
+  faScrewdriverWrench,
+  faWallet,
+  faEllipsisVertical,
+  faShieldHalved,
+  faChevronDown,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 
@@ -10,24 +30,24 @@ import { useTranslate } from "../../context/TranslateProvider";
 import MenuButton from "./MenuButton";
 
 const icons = {
-  home: solid("home"),
-  rss: solid("rss"),
-  bridge: solid("bridge"),
-  pen: solid("pen"),
-  "people-group": solid("people-group"),
-  "graduation-cap": solid("graduation-cap"),
-  rocket: solid("rocket"),
-  "id-card": solid("id-card"),
-  gamepad: solid("gamepad"),
-  "magnifying-glass": solid("magnifying-glass"),
-  road: solid("road"),
-  mobile: solid("mobile"),
-  "file-image": solid("file-image"),
-  "credit-card": solid("credit-card"),
-  "screwdriver-wrench": solid("screwdriver-wrench"),
-  wallet: solid("wallet"),
-  "ellipsis-vertical": solid("ellipsis-vertical"),
-  "shield-halved": solid("shield-halved"),
+  home: faHome,
+  rss: faRss,
+  bridge: faBridge,
+  pen: faPen,
+  "people-group": faPeopleGroup,
+  "graduation-cap": faGraduationCap,
+  rocket: faRocket,
+  "id-card": faIdCard,
+  gamepad: faGamepad,
+  "magnifying-glass": faMagnifyingGlass,
+  road: faRoad,
+  mobile: faMobile,
+  "file-image": faFileImage,
+  "credit-card": faCreditCard,
+  "screwdriver-wrench": faScrewdriverWrench,
+  wallet: faWallet,
+  "ellipsis-vertical": faEllipsisVertical,
+  "shield-halved": faShieldHalved,
 };
 
 interface MenuProps {
@@ -81,7 +101,7 @@ function Menu({
               onSelect: () => onSelected(tag),
             };
           })}
-          icon={icon || solid("chevron-down")}
+          icon={icon || faChevronDown}
           text={t.tags[selectedValue.value] || selectedValue.label}
         />
       </Flex>

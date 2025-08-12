@@ -8,7 +8,13 @@ import {
   Text,
 } from "@chakra-ui/layout";
 import { Skeleton } from "@chakra-ui/react";
-import { solid, brands } from "@fortawesome/fontawesome-svg-core/import.macro";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import {
+  faUpRightFromSquare,
+  faEye,
+  faCodeFork,
+  faStar,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import type { FC } from "react";
 import { useEffect, useState } from "react";
@@ -60,7 +66,7 @@ const GithubReposPaper: FC = () => {
       <Flex direction="column">
         <Flex justify="space-between" alignItems="flex-start" mb={4}>
           <HStack as="h3" mb={4} fontSize="lg" fontWeight="bold">
-            <FontAwesomeIcon icon={brands("github")} />
+            <FontAwesomeIcon icon={faGithub} />
             <Text ml={1}>{t.metrics.github_repo || "Tools & Libraries"}</Text>
           </HStack>
           <Box fontSize="sm" color="whiteAlpha.600">
@@ -71,7 +77,7 @@ const GithubReposPaper: FC = () => {
             >
               <HStack alignItems="center">
                 <Text>{t.metrics.more || "view more"}</Text>
-                <FontAwesomeIcon icon={solid("up-right-from-square")} />
+                <FontAwesomeIcon icon={faUpRightFromSquare} />
               </HStack>
             </Link>
           </Box>
@@ -89,15 +95,15 @@ const GithubReposPaper: FC = () => {
                     <Text fontSize="md">{repo.name}</Text>
                     <HStack spacing={3} mt={1} color="whiteAlpha.600">
                       <HStack fontSize="sm" spacing={1}>
-                        <FontAwesomeIcon icon={solid("eye")} />
+                        <FontAwesomeIcon icon={faEye} />
                         <Text>{repo.subscribersCount}</Text>
                       </HStack>
                       <HStack fontSize="sm" spacing={1}>
-                        <FontAwesomeIcon icon={solid("code-fork")} />
+                        <FontAwesomeIcon icon={faCodeFork} />
                         <Text>{repo.forksCount}</Text>
                       </HStack>
                       <HStack fontSize="sm" spacing={1}>
-                        <FontAwesomeIcon icon={solid("star")} />
+                        <FontAwesomeIcon icon={faStar} />
                         <Text>{repo.starsCount}</Text>
                       </HStack>
                     </HStack>

@@ -1,5 +1,5 @@
 import { Flex, Link, Text } from "@chakra-ui/layout";
-import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
+import { faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 interface CardExplanationProps {
@@ -37,7 +37,7 @@ function CardExplanation({ title, content, bg, link }: CardExplanationProps) {
             mt={4}
           >
             <Text mr={2}>Read more</Text>
-            <FontAwesomeIcon icon={solid("up-right-from-square")} />
+            <FontAwesomeIcon icon={faUpRightFromSquare} />
           </Link>
         )}
       </Flex>

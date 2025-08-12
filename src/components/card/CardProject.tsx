@@ -1,6 +1,6 @@
 import { Box, Flex, HStack, Text } from "@chakra-ui/layout";
 import { Avatar, Image, Tag as ChakraTag } from "@chakra-ui/react";
-import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
+import { faCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useRouter } from "next/router";
 
@@ -105,7 +105,7 @@ function CardProject({ index, project }: CardProjectProps) {
             borderRadius="xl"
             background="green.500"
           >
-            <FontAwesomeIcon fontSize="8px" icon={solid("circle")} />
+            <FontAwesomeIcon fontSize="8px" icon={faCircle} />
             <Text ml={2} fontSize="xs" color="green.100" fontWeight="bold">
               {indication}
             </Text>
