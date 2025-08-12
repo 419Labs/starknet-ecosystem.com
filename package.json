@@ -32,10 +32,10 @@
     "@emotion/react": "11.13.3",
     "@emotion/server": "11.11.0",
     "@emotion/styled": "11.13.0",
-    "@fortawesome/fontawesome-svg-core": "6.5.2",
-    "@fortawesome/free-brands-svg-icons": "6.7.2",
-    "@fortawesome/free-regular-svg-icons": "6.7.2",
-    "@fortawesome/free-solid-svg-icons": "6.7.2",
+    "@fortawesome/fontawesome-svg-core": "7.0.0",
+    "@fortawesome/free-brands-svg-icons": "7.0.0",
+    "@fortawesome/free-regular-svg-icons": "7.0.0",
+    "@fortawesome/free-solid-svg-icons": "7.0.0",
     "@fortawesome/react-fontawesome": "0.2.3",
     "@types/react-dom": "18.3.1",
     "@types/react-fontawesome": "1.6.8",
@@ -75,7 +75,7 @@
     "eslint-config-airbnb-typescript": "18.0.0",
     "eslint-config-next": "15.4.6",
     "eslint-config-sznm": "2.0.4",
-    "jest": "30.0.4",
+    "jest": "30.0.5",
     "typescript": "5.8.3"
   }
 }
