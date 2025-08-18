@@ -50,7 +50,7 @@
     "dayjs": "1.11.13",
     "ethers": "6.15.0",
     "framer-motion": "12.23.12",
-    "jest-environment-jsdom": "30.0.4",
+    "jest-environment-jsdom": "30.0.5",
     "lodash": "4.17.21",
     "next": "15.4.6",
     "next-seo": "6.8.0",
