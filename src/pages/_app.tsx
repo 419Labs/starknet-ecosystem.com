@@ -1,6 +1,8 @@
 import "../styles/globals.css";
 import "@fortawesome/fontawesome-svg-core/styles.css";
+
 import { ChakraProvider } from "@chakra-ui/react";
+import { config } from "@fortawesome/fontawesome-svg-core";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import dayjs from "dayjs";
@@ -13,6 +15,9 @@ import defaultSEOConfig from "../../next-seo.config";
 import Layout from "../components/layout/Layout";
 import { TranslateProvider } from "../context/TranslateProvider";
 import customTheme from "../styles/customTheme";
+
+// Tell Font Awesome to skip adding the CSS automatically since it's being imported above
+config.autoAddCss = false;
 
 dayjs.extend(duration);
 

@@ -1,54 +1,14 @@
 import { Flex, Text } from "@chakra-ui/layout";
 import { Show } from "@chakra-ui/react";
-import {
-  faHome,
-  faRss,
-  faBridge,
-  faPen,
-  faPeopleGroup,
-  faGraduationCap,
-  faRocket,
-  faIdCard,
-  faGamepad,
-  faMagnifyingGlass,
-  faRoad,
-  faMobile,
-  faFileImage,
-  faCreditCard,
-  faScrewdriverWrench,
-  faWallet,
-  faEllipsisVertical,
-  faShieldHalved,
-  faChevronDown,
-} from "@fortawesome/free-solid-svg-icons";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 
 import type { Tag } from "../../../data/tag";
 import { useTranslate } from "../../context/TranslateProvider";
 
+import menuIcons from "./icons";
 import MenuButton from "./MenuButton";
-
-const icons = {
-  home: faHome,
-  rss: faRss,
-  bridge: faBridge,
-  pen: faPen,
-  "people-group": faPeopleGroup,
-  "graduation-cap": faGraduationCap,
-  rocket: faRocket,
-  "id-card": faIdCard,
-  gamepad: faGamepad,
-  "magnifying-glass": faMagnifyingGlass,
-  road: faRoad,
-  mobile: faMobile,
-  "file-image": faFileImage,
-  "credit-card": faCreditCard,
-  "screwdriver-wrench": faScrewdriverWrench,
-  wallet: faWallet,
-  "ellipsis-vertical": faEllipsisVertical,
-  "shield-halved": faShieldHalved,
-};
 
 interface MenuProps {
   tags: Tag[];
@@ -143,9 +103,13 @@ function Menu({
               <Flex direction="row" justify="flex-start" align="center">
                 <Flex minW="24px" justify="center" align="center">
                   {/* see https://fontawesome.com/versions#add-individual-icons-explicitly */}
-                  {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
-                  {/* @ts-ignore */}
-                  <FontAwesomeIcon fontSize="18px" icon={icons[tag.icon]} />
+                  <FontAwesomeIcon
+                    fontSize="18px"
+                    icon={
+                      menuIcons[tag.icon as keyof typeof menuIcons] ||
+                      menuIcons.home
+                    }
+                  />
                 </Flex>
                 <Text ml={4} fontWeight="bold" fontSize="16px">
                   {t.tags[tag.value] || tag.label}

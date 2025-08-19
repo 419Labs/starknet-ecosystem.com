@@ -1,0 +1,43 @@
+import {
+  faHome,
+  faRss,
+  faBridge,
+  faPen,
+  faPeopleGroup,
+  faGraduationCap,
+  faRocket,
+  faIdCard,
+  faGamepad,
+  faMagnifyingGlass,
+  faRoad,
+  faMobile,
+  faFileImage,
+  faCreditCard,
+  faScrewdriverWrench,
+  faWallet,
+  faEllipsisVertical,
+  faShieldHalved,
+} from "@fortawesome/free-solid-svg-icons";
+
+const menuIcons = {
+  home: faHome,
+  rss: faRss,
+  bridge: faBridge,
+  pen: faPen,
+  "people-group": faPeopleGroup,
+  "graduation-cap": faGraduationCap,
+  rocket: faRocket,
+  "id-card": faIdCard,
+  gamepad: faGamepad,
+  "magnifying-glass": faMagnifyingGlass,
+  road: faRoad,
+  mobile: faMobile,
+  "file-image": faFileImage,
+  "credit-card": faCreditCard,
+  "screwdriver-wrench": faScrewdriverWrench,
+  wallet: faWallet,
+  "ellipsis-vertical": faEllipsisVertical,
+  "shield-halved": faShieldHalved,
+};
+
+export default menuIcons;
