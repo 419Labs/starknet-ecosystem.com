@@ -1,5 +1,5 @@
 import { Link } from "@chakra-ui/layout";
-import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import NextLink from "next/link";
 
 import { useTranslate } from "../../context/TranslateProvider";
@@ -93,7 +93,7 @@ function LanguageChooser() {
           ),
         },
       ]}
-      icon={solid("chevron-down")}
+      icon={faChevronDown}
       text={locale ? locale.toUpperCase() : " - "}
     />
   );

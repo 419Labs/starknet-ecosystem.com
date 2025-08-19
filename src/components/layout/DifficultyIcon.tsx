@@ -1,6 +1,6 @@
 import { HStack, Text } from "@chakra-ui/layout";
 import type { InputProps } from "@chakra-ui/react";
-import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
+import { faSignal } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import type { FC } from "react";
 
@@ -35,7 +35,7 @@ const DifficultyIcon: FC<Props> = ({ difficultyLabel }) => {
 
   return (
     <HStack fontSize="sm" color={getColorByLevel(getDifficultyLevel())}>
-      <FontAwesomeIcon fontSize="12px" icon={solid("signal")} />
+      <FontAwesomeIcon fontSize="12px" icon={faSignal} />
       <Text color="whiteAlpha.600">{difficultyLabel}</Text>
     </HStack>
   );

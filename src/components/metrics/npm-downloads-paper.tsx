@@ -1,7 +1,11 @@
 import { Box, Flex, HStack, Text, VStack, Link } from "@chakra-ui/layout";
 import { Skeleton } from "@chakra-ui/react";
 import { useTheme } from "@emotion/react";
-import { brands, solid } from "@fortawesome/fontawesome-svg-core/import.macro";
+import { faNpm } from "@fortawesome/free-brands-svg-icons";
+import {
+  faUpRightFromSquare,
+  faArrowRightArrowLeft,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   CategoryScale,
@@ -98,7 +102,7 @@ const NpmDownloadsPaper: FC<Props> = ({ name, label }) => {
       <VStack alignItems="flex-start" spacing={0} mb={4}>
         <Flex w="full" justify="space-between" alignItems="flex-start" mb={1}>
           <HStack as="h3" fontSize="lg" fontWeight="bold">
-            <FontAwesomeIcon fontSize="24px" icon={brands("npm")} />
+            <FontAwesomeIcon fontSize="24px" icon={faNpm} />
             <Text ml={1}>{label}</Text>
           </HStack>
           <Box fontSize="sm" color="whiteAlpha.600">
@@ -109,7 +113,7 @@ const NpmDownloadsPaper: FC<Props> = ({ name, label }) => {
             >
               <HStack alignItems="center">
                 <Text>{t.metrics.more || "view more"}</Text>
-                <FontAwesomeIcon icon={solid("up-right-from-square")} />
+                <FontAwesomeIcon icon={faUpRightFromSquare} />
               </HStack>
             </Link>
           </Box>
@@ -233,10 +237,7 @@ const NpmDownloadsPaper: FC<Props> = ({ name, label }) => {
                 ? (t.common.cumulative_chart ?? "Cumulative chart")
                 : (t.common.non_cumulative_chart ?? "Non cumulative chart")}
             </Text>
-            <FontAwesomeIcon
-              fontSize="14px"
-              icon={solid("arrow-right-arrow-left")}
-            />
+            <FontAwesomeIcon fontSize="14px" icon={faArrowRightArrowLeft} />
           </HStack>
         </>
       ) : (

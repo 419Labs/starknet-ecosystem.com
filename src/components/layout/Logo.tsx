@@ -1,6 +1,5 @@
 import { Flex, Text } from "@chakra-ui/layout";
 import { Image } from "@chakra-ui/react";
-import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 import type { IconDefinition } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
@@ -21,7 +20,7 @@ function Logo({ justify = "flex-start", icon }: LogoProps) {
             <FontAwesomeIcon
               color="whiteAlpha.900"
               fontSize="18px"
-              icon={solid("arrow-left")}
+              icon={icon}
             />
           ) : (
             <Image src="/starknet-logo.png" alt="Starknet Logo" />

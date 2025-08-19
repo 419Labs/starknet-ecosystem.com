@@ -1,5 +1,5 @@
 import { Box, Flex, HStack, Link, Text, VStack } from "@chakra-ui/layout";
-import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
+import { faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 interface CardHighlightProps {
@@ -114,7 +114,7 @@ function CardHighlight({
             justifyContent="center"
           >
             <Text mr={4}>Read more</Text>
-            <FontAwesomeIcon icon={solid("up-right-from-square")} />
+            <FontAwesomeIcon icon={faUpRightFromSquare} />
           </Link>
         )}
       </Box>

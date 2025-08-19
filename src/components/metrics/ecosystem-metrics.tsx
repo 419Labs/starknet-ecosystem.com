@@ -1,5 +1,5 @@
 import { Box, Flex, Link, SimpleGrid, Text } from "@chakra-ui/layout";
-import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
+import { faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { formatUnits } from "ethers";
 import type { FC } from "react";
@@ -120,7 +120,7 @@ const EcosystemMetrics: FC<Props> = ({ isMainnet = true }: Props) => {
           mr={2}
         >
           <Text mr={1}>Voyager</Text>
-          <FontAwesomeIcon icon={solid("up-right-from-square")} />
+          <FontAwesomeIcon icon={faUpRightFromSquare} />
         </Link>
         <Text mr={2}>and</Text>
         <Link
@@ -131,7 +131,7 @@ const EcosystemMetrics: FC<Props> = ({ isMainnet = true }: Props) => {
           mr={2}
         >
           <Text mr={1}>Etherscan</Text>
-          <FontAwesomeIcon icon={solid("up-right-from-square")} />
+          <FontAwesomeIcon icon={faUpRightFromSquare} />
         </Link>
       </Flex>
     </Box>

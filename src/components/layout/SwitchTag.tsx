@@ -1,7 +1,7 @@
 import { Text } from "@chakra-ui/layout";
 import type { TagProps } from "@chakra-ui/react";
 import { Tag as ChakraTag } from "@chakra-ui/tag";
-import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
+import { faCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import type { FC } from "react";
 
@@ -28,7 +28,7 @@ const SwitchTag: FC<Props> = ({
       borderColor={isChecked ? "transparent" : "green.500"}
       {...props}
     >
-      <FontAwesomeIcon fontSize="8px" icon={solid("circle")} />
+      <FontAwesomeIcon fontSize="8px" icon={faCircle} />
       <Text ml={2} fontSize="xs" color="green.100" fontWeight="bold">
         {isChecked ? checkedText : placeholderText}
       </Text>

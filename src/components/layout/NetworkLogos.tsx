@@ -1,5 +1,12 @@
 import { HStack, Link } from "@chakra-ui/layout";
-import { solid, brands } from "@fortawesome/fontawesome-svg-core/import.macro";
+import {
+  faTwitter,
+  faTelegram,
+  faDiscord,
+  faMedium,
+  faGithub,
+} from "@fortawesome/free-brands-svg-icons";
+import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import type { FC } from "react";
 
@@ -31,7 +38,7 @@ const NetworkLogos: FC<Props> = ({
             color: hoverColor,
           }}
         >
-          <FontAwesomeIcon icon={solid("globe")} />
+          <FontAwesomeIcon icon={faGlobe} />
         </Link>
       )}
       {twitter && (
@@ -42,7 +49,7 @@ const NetworkLogos: FC<Props> = ({
             color: hoverColor,
           }}
         >
-          <FontAwesomeIcon icon={brands("twitter")} />
+          <FontAwesomeIcon icon={faTwitter} />
         </Link>
       )}
       {telegram && (
@@ -53,7 +60,7 @@ const NetworkLogos: FC<Props> = ({
             color: hoverColor,
           }}
         >
-          <FontAwesomeIcon icon={brands("telegram")} />
+          <FontAwesomeIcon icon={faTelegram} />
         </Link>
       )}
       {discord && (
@@ -64,7 +71,7 @@ const NetworkLogos: FC<Props> = ({
             color: hoverColor,
           }}
         >
-          <FontAwesomeIcon icon={brands("discord")} />
+          <FontAwesomeIcon icon={faDiscord} />
         </Link>
       )}
       {medium && (
@@ -75,7 +82,7 @@ const NetworkLogos: FC<Props> = ({
             color: hoverColor,
           }}
         >
-          <FontAwesomeIcon icon={brands("medium")} />
+          <FontAwesomeIcon icon={faMedium} />
         </Link>
       )}
       {github && (
@@ -86,7 +93,7 @@ const NetworkLogos: FC<Props> = ({
             color: hoverColor,
           }}
         >
-          <FontAwesomeIcon icon={brands("github")} />
+          <FontAwesomeIcon icon={faGithub} />
         </Link>
       )}
     </HStack>

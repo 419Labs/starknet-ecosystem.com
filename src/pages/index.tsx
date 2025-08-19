@@ -1,6 +1,6 @@
 import { Box, Flex, SimpleGrid, Text } from "@chakra-ui/layout";
 import { Image, Show } from "@chakra-ui/react";
-import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
+import { faSort } from "@fortawesome/free-solid-svg-icons";
 import type { ChangeEvent } from "react";
 import { useEffect, useState } from "react";
 import { useInView } from "react-cool-inview";
@@ -109,7 +109,7 @@ const Home = () => {
   const renderSortMenu = () => {
     return (
       <Menu
-        icon={solid("sort")}
+        icon={faSort}
         small
         typeText=""
         tags={sortTags}

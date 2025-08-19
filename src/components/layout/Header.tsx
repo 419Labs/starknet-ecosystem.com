@@ -1,6 +1,6 @@
 import { Box, Flex } from "@chakra-ui/layout";
 import { Button, Hide } from "@chakra-ui/react";
-import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
+import { faArrowLeft, faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useRouter } from "next/router";
 import { useState } from "react";
@@ -34,7 +34,7 @@ function Header() {
       <Logo
         icon={
           router && router.pathname.startsWith("/projects")
-            ? solid("arrow-left")
+            ? faArrowLeft
             : undefined
         }
       />
@@ -85,7 +85,7 @@ function Header() {
       <Hide above="md">
         <Flex justify="flex-end">
           <Button onClick={() => setDrawerOpen(true)}>
-            <FontAwesomeIcon fontSize="24px" icon={solid("bars")} />
+            <FontAwesomeIcon fontSize="24px" icon={faBars} />
           </Button>
           <Drawer
             headerAction={<LanguageChooser />}

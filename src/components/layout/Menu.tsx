@@ -1,34 +1,14 @@
 import { Flex, Text } from "@chakra-ui/layout";
 import { Show } from "@chakra-ui/react";
-import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 
 import type { Tag } from "../../../data/tag";
 import { useTranslate } from "../../context/TranslateProvider";
 
+import menuIcons from "./icons";
 import MenuButton from "./MenuButton";
-
-const icons = {
-  home: solid("home"),
-  rss: solid("rss"),
-  bridge: solid("bridge"),
-  pen: solid("pen"),
-  "people-group": solid("people-group"),
-  "graduation-cap": solid("graduation-cap"),
-  rocket: solid("rocket"),
-  "id-card": solid("id-card"),
-  gamepad: solid("gamepad"),
-  "magnifying-glass": solid("magnifying-glass"),
-  road: solid("road"),
-  mobile: solid("mobile"),
-  "file-image": solid("file-image"),
-  "credit-card": solid("credit-card"),
-  "screwdriver-wrench": solid("screwdriver-wrench"),
-  wallet: solid("wallet"),
-  "ellipsis-vertical": solid("ellipsis-vertical"),
-  "shield-halved": solid("shield-halved"),
-};
 
 interface MenuProps {
   tags: Tag[];
@@ -81,7 +61,7 @@ function Menu({
               onSelect: () => onSelected(tag),
             };
           })}
-          icon={icon || solid("chevron-down")}
+          icon={icon || faChevronDown}
           text={t.tags[selectedValue.value] || selectedValue.label}
         />
       </Flex>
@@ -123,9 +103,13 @@ function Menu({
               <Flex direction="row" justify="flex-start" align="center">
                 <Flex minW="24px" justify="center" align="center">
                   {/* see https://fontawesome.com/versions#add-individual-icons-explicitly */}
-                  {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
-                  {/* @ts-ignore */}
-                  <FontAwesomeIcon fontSize="18px" icon={icons[tag.icon]} />
+                  <FontAwesomeIcon
+                    fontSize="18px"
+                    icon={
+                      menuIcons[tag.icon as keyof typeof menuIcons] ||
+                      menuIcons.home
+                    }
+                  />
                 </Flex>
                 <Text ml={4} fontWeight="bold" fontSize="16px">
                   {t.tags[tag.value] || tag.label}
