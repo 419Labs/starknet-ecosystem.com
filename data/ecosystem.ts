@@ -2955,4 +2955,23 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: false,
   },
+  {
+    id: "467e0cf8-b9a8-460a-bfc7-8cccfe10efa8",
+    name: "Kapan Finance",
+    shortName: "Kapan Finance",
+    description:
+      "Kapan Finance is a DeFi protocol that allows users to perform advanced lending operations on underlying protocols in a complete non-custodial manner. Swap collateral and debt, refinance between protocols and close with collateral.",
+    tags: ["defi", "tools", "infrastructure"],
+    image: "kapan.png",
+    network: {
+      website: "https://www.kapan.finance/",
+      github: "https://github.com/stefaniliev545/kapan",
+      twitter: "https://x.com/KapanFinance",
+      medium: "",
+      discord: "https://discord.com/invite/Vjk6NhkxGv",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
 ];
