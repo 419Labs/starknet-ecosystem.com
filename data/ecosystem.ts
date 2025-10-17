@@ -2974,4 +2974,22 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: false,
   },
+  {
+    id: "00afa40f-f1a7-4cb3-a979-13c501ae9b17",
+    name: "Uncap Finance",
+    shortName: "Uncap",
+    description:
+      "BTC-backed CDP stablecoin. Deposit Bitcoin, mint USDU at your own interest rate.",
+    tags: ["defi", "infrastructure"],
+    image: "uncap_icon.png",
+    network: {
+      website: "https://uncap.finance/",
+      github: "https://github.com/UncapLabs",
+      twitter: "https://x.com/uncapfinance",
+      medium: "",
+      discord: "",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: false,
 ];
