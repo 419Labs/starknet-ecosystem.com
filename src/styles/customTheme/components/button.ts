@@ -12,7 +12,6 @@ const Button: DeepPartial<Theme["components"]["Button"]> = {
     _dark: {
       color: "whiteAlpha.900",
       border: "1px solid",
-      // eslint-disable-next-line sonarjs/no-duplicate-string
       borderColor: "primary.700",
       bg: "transparent",
       _hover: {
@@ -34,7 +33,6 @@ const Button: DeepPartial<Theme["components"]["Button"]> = {
         bg: "primary.200",
         borderColor: "primary.200",
         _hover: {
-          // eslint-disable-next-line sonarjs/no-duplicate-string
           bg: "primary.300",
           borderColor: "primary.300",
         },
@@ -52,7 +50,6 @@ const Button: DeepPartial<Theme["components"]["Button"]> = {
         bg: "white",
         color: "primary.500",
         "&:hover, &:active": {
-          // eslint-disable-next-line sonarjs/no-duplicate-string
           bg: "white",
           color: "primary.500",
         },
