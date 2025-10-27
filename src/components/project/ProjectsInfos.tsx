@@ -156,7 +156,7 @@ const ProjectsInfos: FC<Props> = ({ project }) => {
               <HStack>
                 <Text color="whiteAlpha.600">
                   {jobCount === 0
-                    ? "No open positon"
+                    ? "No open position"
                     : `${jobCount} open positions`}
                 </Text>
                 <Link
