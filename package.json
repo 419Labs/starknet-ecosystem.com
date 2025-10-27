@@ -44,7 +44,7 @@
     "@vercel/analytics": "1.5.0",
     "@vercel/speed-insights": "1.2.0",
     "add": "2.0.6",
-    "chart.js": "4.5.0",
+    "chart.js": "4.5.1",
     "cliui": "^8.0.1",
     "dayjs": "1.11.18",
     "ethers": "6.15.0",
