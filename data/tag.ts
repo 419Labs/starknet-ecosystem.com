@@ -1,4 +1,3 @@
-/* eslint-disable sonarjs/no-duplicate-string */
 export interface Tag {
   key?: string;
   value: string;

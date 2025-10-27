@@ -16,7 +16,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint --dir data --dir src",
+    "lint": "eslint data src",
     "test": "jest --watch",
     "test:ci": "jest --ci"
   },
@@ -48,10 +48,10 @@
     "cliui": "^8.0.1",
     "dayjs": "1.11.18",
     "ethers": "6.15.0",
-    "framer-motion": "12.23.12",
-    "jest-environment-jsdom": "30.0.5",
+    "framer-motion": "12.23.24",
+    "jest-environment-jsdom": "30.2.0",
     "lodash": "4.17.21",
-    "next": "15.5.0",
+    "next": "16.0.0",
     "next-seo": "6.8.0",
     "prettier": "3.6.2",
     "react": "18.3.1",
@@ -63,18 +63,24 @@
     "yarn": "1.22.22"
   },
   "devDependencies": {
-    "@testing-library/jest-dom": "^6.6.4",
+    "@eslint/eslintrc": "^3.3.1",
+    "@next/eslint-plugin-next": "^16.0.0",
+    "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "15.0.7",
     "@testing-library/user-event": "14.6.1",
     "@types/dompurify": "3.2.0",
     "@types/node": "24.7.0",
     "@types/react": "18.3.12",
     "babel-jest": "30.2.0",
-    "eslint": "8.57.1",
+    "eslint": "^9",
     "eslint-config-airbnb-typescript": "18.0.0",
-    "eslint-config-next": "15.5.4",
+    "eslint-config-next": "^16.0.0",
     "eslint-config-sznm": "2.0.4",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "globals": "^16.4.0",
     "jest": "30.0.5",
-    "typescript": "5.9.2"
+    "typescript": "5.9.2",
+    "typescript-eslint": "^8.46.2"
   }
 }

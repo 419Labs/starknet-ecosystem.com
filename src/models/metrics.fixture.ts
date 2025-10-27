@@ -17,7 +17,6 @@ export const aGitHubRepo = (): GithubRepo => ({
 
 export const aNpmDownloads = (): NpmDownloads => ({
   start: "2022-04-06",
-  // eslint-disable-next-line sonarjs/no-duplicate-string
   end: "2022-04-20",
   package: "starknet",
   label: starknetjs,
@@ -28,7 +27,6 @@ export const aNpmDownloads = (): NpmDownloads => ({
     },
     {
       downloads: 200,
-      // eslint-disable-next-line sonarjs/no-duplicate-string
       day: "2022-04-07",
     },
     {
@@ -53,12 +51,10 @@ export const aNpmDownloads = (): NpmDownloads => ({
     },
     {
       downloads: 277,
-      // eslint-disable-next-line sonarjs/no-duplicate-string
       day: "2022-04-13",
     },
     {
       downloads: 235,
-      // eslint-disable-next-line sonarjs/no-duplicate-string
       day: "2022-04-14",
     },
     {

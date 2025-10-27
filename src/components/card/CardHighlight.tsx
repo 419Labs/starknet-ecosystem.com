@@ -79,14 +79,16 @@ function CardHighlight({
         sx={{
           boxShadow: `inset 0 -46px 13px -10px ${
             bg
-              ? // eslint-disable-next-line sonarjs/no-nested-template-literals
+              ? // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                // @ts-ignore
                 `var(--chakra-colors-${bg.replace(".", "-")})`
               : "var(--chakra-colors-gray-600)"
           }`,
           "&:hover": {
             boxShadow: `inset 0 -46px 13px -10px ${
               bgHover
-                ? // eslint-disable-next-line sonarjs/no-nested-template-literals
+                ? // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                  // @ts-ignore
                   `var(--chakra-colors-${bgHover.replace(".", "-")})`
                 : "var(--chakra-colors-gray-600)"
             }`,
