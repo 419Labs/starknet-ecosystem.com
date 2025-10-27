@@ -714,7 +714,7 @@ export const tools: Resource[] = [
     name: "starkware-remix-plugin",
     shortName: "starkware-remix-plugin",
     description:
-      "This plugin aims for having smart contracts which are written in Cairo to be compilied and then deployed.",
+      "This plugin aims for having smart contracts which are written in Cairo to be compiled and then deployed.",
     tags: ["tools"],
     network: {
       github: "https://github.com/hexdivision/starkware-remix-plugin",
