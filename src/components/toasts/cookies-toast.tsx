@@ -10,7 +10,7 @@ import { useTranslate } from "../../context/TranslateProvider";
 interface Props extends FlexProps {
   onAccept: () => void;
 }
-const CookiesToast: FC<Props> = ({ children, onAccept, ...props }) => {
+const CookiesToast: FC<Props> = ({ onAccept, ...props }) => {
   const { locale, t } = useTranslate();
   return (
     <Flex

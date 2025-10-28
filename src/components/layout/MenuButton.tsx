@@ -46,7 +46,6 @@ const MenuButton = ({ menus, text, mainGroupTitle, icon }: MenuButtonProps) => {
           {children}
         </MenuItem>
       ) : (
-        // eslint-disable-next-line react/no-array-index-key
         <MenuItem
           onClick={() => {
             if (onSelect) {
