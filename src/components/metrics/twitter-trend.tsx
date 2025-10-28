@@ -115,12 +115,9 @@ const TwitterTrend: FC<Props> = ({ values }) => {
                 if (!chartArea) {
                   // Initial chart load
                   return;
-                }
-                // eslint-disable-next-line consistent-return
+                  }
                 return getGradient(ctx, chartArea);
               },
-              // eslint-disable-next-line @typescript-eslint/dot-notation
-              // backgroundColor: `${theme["__cssMap"]["colors.brand.900"].value}80`,
               backgroundColor: "transparent",
             },
           ],

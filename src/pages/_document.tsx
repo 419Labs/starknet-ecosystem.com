@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-props-no-spreading */
 import { ColorModeScript } from "@chakra-ui/color-mode";
 import createEmotionServer from "@emotion/server/create-instance";
 import type { DocumentContext } from "next/document";
@@ -18,7 +17,6 @@ class MyDocument extends Document {
 
     ctx.renderPage = () =>
       originalRenderPage({
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         enhanceApp: (App: any) => (props) => (
           <App emotionCache={cache} {...props} />
         ),

@@ -39,7 +39,8 @@ export default tseslint.config(
       ...eslintReact.configs.recommended.rules,
       'react/react-in-jsx-scope': 'off', // Not needed with Next.js
       'react/prop-types': 'off', // Using TypeScript
-
+      'react/no-danger': 'error',
+      'react/no-array-index-key': 'error',
       // React Hooks rules
       'react-hooks/rules-of-hooks': 'error',
       'react-hooks/exhaustive-deps': 'warn',
@@ -55,6 +56,7 @@ export default tseslint.config(
 
       // Custom rules
       'no-console': 'off',
+      '@typescript-eslint/ban-ts-comment': 'error',
       '@typescript-eslint/no-explicit-any': 'off',
       '@typescript-eslint/no-unused-vars': ['warn', {
         argsIgnorePattern: '^_',
