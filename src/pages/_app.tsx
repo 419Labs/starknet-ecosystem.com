@@ -9,7 +9,7 @@ import dayjs from "dayjs";
 import duration from "dayjs/plugin/duration";
 import type { AppProps } from "next/app";
 import { useRouter } from "next/router";
-import { NextSeo } from "next-seo";
+import Head from "next/head";
 
 import defaultSEOConfig from "../../next-seo.config";
 import Layout from "../components/layout/Layout";
@@ -26,7 +26,27 @@ function StarknetEcosystem({ Component, pageProps }: AppProps) {
   return (
     <TranslateProvider>
       <ChakraProvider theme={customTheme}>
-        <NextSeo {...defaultSEOConfig} />
+        <Head>
+          <title>{defaultSEOConfig.title}</title>
+          <meta name="description" content={defaultSEOConfig.description} />
+          <link rel="canonical" href={defaultSEOConfig.canonical} />
+
+          {/* Open Graph tags */}
+          <meta property="og:url" content={defaultSEOConfig.openGraph.url} />
+          <meta property="og:title" content={defaultSEOConfig.openGraph.title} />
+          <meta property="og:description" content={defaultSEOConfig.openGraph.description} />
+          <meta property="og:site_name" content={defaultSEOConfig.openGraph.site_name} />
+          {defaultSEOConfig.openGraph.images?.[0] && (
+            <>
+              <meta property="og:image" content={defaultSEOConfig.openGraph.images[0].url} />
+              <meta property="og:image:alt" content={defaultSEOConfig.openGraph.images[0].alt} />
+            </>
+          )}
+
+          {/* Twitter Card tags */}
+          <meta name="twitter:card" content={defaultSEOConfig.twitter.cardType} />
+          <meta name="twitter:site" content={defaultSEOConfig.twitter.site} />
+        </Head>
         <Layout>
           <Component {...pageProps} />
           <Analytics />
