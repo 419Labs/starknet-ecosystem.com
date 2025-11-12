@@ -2992,4 +2992,20 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: false,
   },
+  {
+    id: "f5100b31-4e78-4e21-89c4-82f47927126a",
+    name: "ZKForge",
+    shortName: "ZKFG",
+    description:
+      "ZKForge is a complete privacy ecosystem powered by zkSTARK proofs to enable encrypted messaging, privacy-preserving dApps, and confidential transactions through the x402 protocol layer.",
+    tags: ["tools", "infrastructure", "Privacy"],
+    image: "zkforge.png",
+    network: {
+      website: "https://www.zkforge.io/",
+      github: "https://github.com/ZKForgeIO",
+      twitter: "https://x.com/ZKForge_io",
+    },
+    isLive: true,
+    isTestnetLive: true,
+  },
 ];
