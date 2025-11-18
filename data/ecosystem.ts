@@ -32,20 +32,17 @@ export interface ProjectItf extends Project {
 
 export const allProjects: Array<Project> = [
   {
-    id: "5931a7e3-8760-457a-a4bc-c1ffc51de175",
-    name: "Footprint Analytics",
-    shortName: "Footprint",
+    id: "b7b3b1be-7206-4739-b87a-89d2e2d2896a",
+    name: "ZKEncrypt AI",
+    shortName: "ZKE",
     description:
-      "Footprint Analytics is a data platform blending web2 and web3 data with abstractions. We help analysts, builders, and investors turn blockchain data into insights with accessible visualization tools and a powerful multi-chain API across 20+ chains for NFTs, GameFi, and DeFi. We also provide Footprint Growth Analytics to help with effective growth in GameFi and any web3 projects.",
-    tags: ["infrastructure", "tools"],
-    image: "footprint.png",
+      "ZKEncrypt AI brings Fully Homomorphic Encryption (FHE) to AI agents, enabling encrypted computation with x402 micropayments for truly private, verifiable AI on the blockchain.",
+    tags: ["infrastructure", "tools", "privacy"],
+    image: "zkencrypt.png",
     network: {
-      website: "https://www.footprint.network/",
-      github: "https://github.com/footprintanalytics",
-      twitter: "https://twitter.com/Footprint_Data",
-      medium: "",
-      discord: "https://discord.gg/3HYaR6USM7",
-      telegram: "https://t.me/joinchat/4-ocuURAr2thODFh",
+      website: "https://zk-labs.network",
+      github: "https://github.com/ZKEncrypt-AI",
+      twitter: "https://x.com/ZKEncrypt_AI",
     },
     isLive: true,
     isTestnetLive: false,
