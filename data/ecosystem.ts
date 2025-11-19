@@ -3008,4 +3008,20 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: true,
   },
+  {
+    id: "92521262-a7ef-44c7-a960-4a138db4e580",
+    name: "ZKEncrypt AI",
+    shortName: "ZKE",
+    description:
+      "ZKEncrypt AI brings Fully Homomorphic Encryption (FHE) to AI agents, enabling encrypted computation with x402 micropayments for truly private, verifiable AI on the blockchain.",
+    tags: ["infrastructure", "privacy"],
+    image: "zkencrypt.png",
+    network: {
+      website: "https://zk-labs.network",
+      github: "https://github.com/ZKEncrypt-AI",
+      twitter: "https://x.com/ZKEncrypt_AI",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
 ];
