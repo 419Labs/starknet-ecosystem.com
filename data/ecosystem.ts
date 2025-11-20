@@ -3008,4 +3008,22 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: true,
   },
-];
+  {
+id: "acfdf414-3e45-404f-88df-aa1e4ad5fa83",
+  name: "x402 HyperLayer",
+  shortName: "HyperLayer",
+  description:
+    "x402 HyperLayer is a zk-STARK accelerated settlement layer enabling multi-network micropayments, proof orchestration, and encrypted agent transactions across EVM and non-EVM chains.",
+  tags: ["infrastructure", "payments", "zk-stark", "tooling"],
+  image: "hyperlayer.png",
+  network: {
+    website: "https://x402hyperlayer.org",
+    github: "https://github.com/x402HyperLayer",
+    twitter: "https://twitter.com/x402HyperLayer",
+    medium: "",
+    discord: "",
+    telegram: "https://t.me/x402hyperlayer"
+  },
+  isLive: true,
+  isTestnetLive: true
+},
