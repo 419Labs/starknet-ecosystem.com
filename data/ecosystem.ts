@@ -3008,4 +3008,28 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: true,
   },
-];
+  {
+  "id": "0f354390-ede0-4604-8847-57ed309e6667",
+  "name": "ZPrivacy402",
+  "slug": "ZPRIVACY",
+  "description": "ZPrivacy402 is a trust-layer protocol that secures autonomous AI agent payments on Solana. Powered by the X402-SECURE risk engine, it protects transactions from prompt injection, counterfeit routing, subscription traps, and tool-chain tampering.",
+  "website": "https://zprivacy402.com",
+  "documentation": "https://zprivacy402.com/docs",
+  "twitter": "https://twitter.com/ZPrivacy402",
+  "github": "https://github.com/zprivacy402",
+  "category": [
+    "AI",
+    "Security",
+    "Payments"
+  ],
+  "ecosystem": [
+    "Solana"
+  ],
+  "logo": "zprivacy402.png",
+  "links": [
+    {
+      "label": "Dashboard",
+      "url": "https://zprivacy402.com/login"
+    },
+    {
+      "label": "Testnet Demo",
