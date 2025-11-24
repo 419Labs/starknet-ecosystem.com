@@ -3008,4 +3008,20 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: true,
   },
+  {
+    id: "811e587b-6ca6-451f-a797-b7e5011ec079",
+    name: "Sanke Wallet",
+    shortName: "SANKE",
+    description:
+      "Private Web3 browser extension for invisible interactions. Powered by Kohaku.",
+    tags: ["wallet", "privacy", "extension"],
+    image: "sanke.png",
+    network: {
+      website: "https://sanke.app",
+      github: "https://github.com/SankeWallet",
+      twitter: "https://x.com/SankeWallet",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  }
 ];
