@@ -3008,4 +3008,20 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: true,
   },
+  {
+    id: "54cce3e6-4964-4669-a4a0-26f5314ce38d",
+    name: "zkTerm",
+    shortName: "ZKTR",
+    description:
+      "A terminal for private blockchain interactions where your transactions stay anonymous, your identity stays protected", 
+    tags: ["wallet", "tools", "infrastructure", "bridge", "payments"],
+    image: "zkterm.png",
+    network: {
+      website: "https://zkterm.io/",
+      github: "https://github.com/zkterm",
+      twitter: "https://x.com/zkterm",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
 ];
