@@ -4249,7 +4249,7 @@ export const allProjects: Array<Project> = [
     isTestnetLive: true,
   },
   {
-    id: "477952e7-73d8-4570-b961-568b698740c9",
+    id: "477952e7-73d8-4570-b961-568b698740c8",
     name: "Stwo/Cairo",
     shortName: "Stwo/Cairo",
     description: "Prove Cairo programs with the blazing-fast S-Two prover, powered by the cryptographic breakthrough of Circle STARKs.",
