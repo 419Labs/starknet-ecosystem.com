@@ -44,8 +44,7 @@ const PrivacyPolicyPage: FC = () => {
           </li>
           <li>
             Starknet-ecosystem webapp is a community owned dashboard that
-            provide useful information about the starknet ecosystem in his
-            global.
+            provides useful information about the Starknet ecosystem globally.
           </li>
           <li>
             419Labs does not collect and store personal data, such as first
