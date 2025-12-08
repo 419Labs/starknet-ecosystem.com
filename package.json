@@ -48,7 +48,7 @@
     "cliui": "^8.0.1",
     "dayjs": "1.11.19",
     "ethers": "6.15.0",
-    "framer-motion": "12.23.24",
+    "framer-motion": "12.23.25",
     "jest-environment-jsdom": "30.2.0",
     "lodash": "4.17.21",
     "next": "16.0.0",
