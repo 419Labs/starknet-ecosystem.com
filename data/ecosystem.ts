@@ -32,6 +32,24 @@ export interface ProjectItf extends Project {
 
 export const allProjects: Array<Project> = [
   {
+    id: "4e31e6ed-b3cf-45e0-ae09-f6d29e520bf7",
+    name: "OnChainGM",
+    shortName: "OnChainGM",
+    description: "Your daily Web3 ritual - A smart contract that enables users to send a GM (Good Morning) transaction once every 24 hours on-chain with referral rewards.",
+    tags: ["gamefi"],
+    image: "onchaingm.png",
+    network: {
+      website: "https://onchaingm.com",
+      github: "https://github.com/OnChainGM/",
+      twitter: "https://x.com/OnChainGm",
+      medium: "",
+      discord: "",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
+  {
     id: "425430a9-5dde-46b0-837d-4058a6d61557",
     name: "Brew Master",
     shortName: "Brew Master",
