@@ -909,9 +909,9 @@ export const allProjects: Array<Project> = [
     id: "502b0dbc-5169-4db6-8796-36a968a798fd",
     name: "avnu",
     shortName: "avnu",
-    description: "\"avnu is a decentralized exchange protocol designed to offer the best execution.\\n\",",
+    description: "avnu is liquidity & trading infrastructure on Starknet. Swaps, DCA, paymaster, token lists, routing - powering wallets, apps & users.",
     tags: ["defi", "infrastructure", "tools"],
-    image: "avnu.png",
+    image: "avnu.svg",
     network: {
       website: "https://app.avnu.fi/",
       github: "https://github.com/avnu-labs/avnu-contracts-v2",
