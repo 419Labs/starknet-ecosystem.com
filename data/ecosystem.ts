@@ -431,6 +431,25 @@ export const allProjects: Array<Project> = [
     isTestnetLive: true,
   },
   {
+    id: "4c348901-0933-4e38-b842-e16df859e130",
+    name: "SBSecurity",
+    shortName: "SBSecurity",
+    description: "Smart Contract Auditing company, with extensive experience in auditing projects on Starknet, providing comprehensive security assessments to ensure the safety and reliability of decentralized applications.",
+    tags: ["security"],
+    image: "SBSecurity.png",
+    network: {
+      website: "http://sbsecurity.net/",
+      github: "https://github.com/SB-Security/audits",
+      twitter: "https://x.com/SBSecurity_",
+      medium: "",
+      discord: "",
+      telegram: "https://t.me/blckhv",
+    },
+
+    isLive: true,
+    isTestnetLive: true,
+  },
+  {
     id: "c18c7e63-43bb-4870-9c20-95554a57a7cf",
     name: "Trail of Bits",
     shortName: "Trail of Bits",
