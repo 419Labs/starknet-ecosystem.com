@@ -1,6 +1,6 @@
 import { HStack, Link } from "@chakra-ui/layout";
 import {
-  faTwitter,
+  faXTwitter,
   faTelegram,
   faDiscord,
   faMedium,
@@ -21,22 +21,21 @@ const NetworkLogos: FC<Props> = ({
   network: { website, telegram, twitter, medium, github, discord },
   justifyContent = "flex-start",
 }) => {
-  const hoverColor = "whiteAlpha.900";
   return (
     <HStack
       justifyContent={justifyContent}
       spacing={4}
-      fontSize="18px"
-      color="whiteAlpha.600"
+      fontSize="16px"
+      color="gray.500"
       onClick={(e) => e.stopPropagation()}
     >
       {website && (
         <Link
           isExternal
           href={website}
-          _hover={{
-            color: hoverColor,
-          }}
+          color="gray.500"
+          _hover={{ color: "accent.500" }}
+          transition="color 0.15s ease"
         >
           <FontAwesomeIcon icon={faGlobe} />
         </Link>
@@ -45,20 +44,20 @@ const NetworkLogos: FC<Props> = ({
         <Link
           isExternal
           href={twitter}
-          _hover={{
-            color: hoverColor,
-          }}
+          color="gray.500"
+          _hover={{ color: "accent.500" }}
+          transition="color 0.15s ease"
         >
-          <FontAwesomeIcon icon={faTwitter} />
+          <FontAwesomeIcon icon={faXTwitter} />
         </Link>
       )}
       {telegram && (
         <Link
           isExternal
           href={telegram}
-          _hover={{
-            color: hoverColor,
-          }}
+          color="gray.500"
+          _hover={{ color: "accent.500" }}
+          transition="color 0.15s ease"
         >
           <FontAwesomeIcon icon={faTelegram} />
         </Link>
@@ -67,9 +66,9 @@ const NetworkLogos: FC<Props> = ({
         <Link
           isExternal
           href={discord}
-          _hover={{
-            color: hoverColor,
-          }}
+          color="gray.500"
+          _hover={{ color: "accent.500" }}
+          transition="color 0.15s ease"
         >
           <FontAwesomeIcon icon={faDiscord} />
         </Link>
@@ -78,9 +77,9 @@ const NetworkLogos: FC<Props> = ({
         <Link
           isExternal
           href={medium}
-          _hover={{
-            color: hoverColor,
-          }}
+          color="gray.500"
+          _hover={{ color: "accent.500" }}
+          transition="color 0.15s ease"
         >
           <FontAwesomeIcon icon={faMedium} />
         </Link>
@@ -89,9 +88,9 @@ const NetworkLogos: FC<Props> = ({
         <Link
           isExternal
           href={github}
-          _hover={{
-            color: hoverColor,
-          }}
+          color="gray.500"
+          _hover={{ color: "accent.500" }}
+          transition="color 0.15s ease"
         >
           <FontAwesomeIcon icon={faGithub} />
         </Link>
@@ -99,4 +98,5 @@ const NetworkLogos: FC<Props> = ({
     </HStack>
   );
 };
+
 export default NetworkLogos;

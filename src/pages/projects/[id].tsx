@@ -1,84 +1,285 @@
-import { GridItem, SimpleGrid, Text } from "@chakra-ui/layout";
-import { Image } from "@chakra-ui/react";
+import { Box, Flex, HStack, SimpleGrid, Text, VStack } from "@chakra-ui/layout";
+import { Avatar, Icon, Image, Link as ChakraLink } from "@chakra-ui/react";
+import { faArrowLeft, faGlobe, faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
+import { faXTwitter, faDiscord, faGithub, faTelegram } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import type { GetServerSideProps, GetServerSidePropsContext } from "next";
+import Head from "next/head";
 import { useRouter } from "next/router";
 import type { FC } from "react";
-import { useEffect, useState } from "react";
 
 import type { Project } from "../../../data/ecosystem";
-import HighlightedText from "../../components/layout/HighlightedText";
 import ProjectsInfos from "../../components/project/ProjectsInfos";
 import { EcosystemApi } from "../../services/ecosystem-api.service";
 import FourOhFour from "../404";
 
-const ProjectPage: FC = () => {
+interface ProjectPageProps {
+  project: Project | null;
+}
+
+const ProjectPage: FC<ProjectPageProps> = ({ project }) => {
   const router = useRouter();
-  const { id } = router.query;
-  const [project, setProject] = useState<Project>();
-  const [error, setError] = useState<boolean>(false);
+  const currentLocale = router.locale || "en";
+  if (!project) return <FourOhFour />;
 
-  useEffect(() => {
-    if (typeof id === "string") {
-      EcosystemApi.fetchProjectById(id)
-        .then(setProject)
-        .catch(() => setError(true));
-    } else {
-      setError(true);
-    }
-  }, [id]);
+  const twitterHandle = project.network?.twitter
+    ? project.network.twitter.includes("twitter.com/")
+      ? `@${project.network.twitter.split("twitter.com/")[1]?.split("/")[0] || ""}`
+      : project.network.twitter.includes("x.com/")
+        ? `@${project.network.twitter.split("x.com/")[1]?.split("/")[0] || ""}`
+        : ""
+    : "";
 
-  if (!project && error) return <FourOhFour />;
-  if (!project) return <p>Loading</p>; // TODO loading
-
-  const getHighlighted = (): string => project.name.split(" ")[0];
-
-  const getText = (): string => {
-    const words = project.name.split(" ");
-    if (words.length === 1) return "";
-    return words.slice(1, words.length).join(" ");
-  };
+  const socialLinks = [
+    project.network?.website && { icon: faGlobe, href: project.network.website, label: "Website" },
+    project.network?.twitter && { icon: faXTwitter, href: project.network.twitter, label: "X" },
+    project.network?.github && { icon: faGithub, href: project.network.github, label: "GitHub" },
+    project.network?.discord && { icon: faDiscord, href: project.network.discord, label: "Discord" },
+    project.network?.telegram && { icon: faTelegram, href: project.network.telegram, label: "Telegram" },
+  ].filter(Boolean) as { icon: any; href: string; label: string }[];
 
   return (
-    <SimpleGrid
-      columns={{ lg: 1, xl: 2 }}
-      gap={6}
-      w="full"
-      templateAreas={{
-        base: `"banner"
-                  "title"
-                  "infos"
-                  "team"`,
-        xl: `"banner infos"
-                  "title team"`,
-      }}
-    >
-      <GridItem w="full" area="banner">
-        <Image
-          src={project.network.twitterBanner ?? project.image}
-          width="full"
-          borderRadius="lg"
-          position="relative"
-          objectFit="cover"
-          height="200px"
-        />
-      </GridItem>
-      <GridItem w="100%" area="infos">
-        <ProjectsInfos project={project} />
-      </GridItem>
-      <GridItem w="full" area="title">
-        <HighlightedText
-          fontSize="5xl"
-          highlighted={getHighlighted()}
-          text={getText()}
-        />
-        <Text mt={8} textAlign="start" color="whiteAlpha.600" fontSize="md">
-          {project.description}
-        </Text>
-      </GridItem>
-      {/* <GridItem w="full" area="team"> */}
-      {/*  <TeamInfos /> */}
-      {/* </GridItem> */}
-    </SimpleGrid>
+    <>
+    <Head>
+      <title>{project.name} | Starknet Ecosystem</title>
+      <meta name="description" content={project.description || `${project.name} on Starknet`} />
+      <meta property="og:title" content={`${project.name} | Starknet Ecosystem`} />
+      <meta property="og:description" content={project.description || `${project.name} on Starknet`} />
+      <meta property="og:type" content="website" />
+      {project.network?.twitterImage && (
+        <meta property="og:image" content={project.network.twitterImage} />
+      )}
+      <script
+        type="application/ld+json"
+        // eslint-disable-next-line react/no-danger
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Explore", item: "https://www.starknet-ecosystem.com" },
+              { "@type": "ListItem", position: 2, name: project.name, item: `https://www.starknet-ecosystem.com/projects/${project.id}` },
+            ],
+          }),
+        }}
+      />
+    </Head>
+    <Box w="full" bg="black" minH="100vh" pt={32} pb={24}>
+      <Box maxW="900px" mx="auto" px={{ base: 6, md: 12 }}>
+        {/* Back link */}
+        <ChakraLink href={`/${currentLocale}`} _hover={{ textDecoration: "none" }}>
+          <HStack
+            spacing={2}
+            color="gray.500"
+            _hover={{ color: "white" }}
+            transition="color 0.2s ease"
+            mb={10}
+          >
+            <Icon as={FontAwesomeIcon} icon={faArrowLeft} boxSize={3} />
+            <Text fontSize="13px" fontWeight="500">Back to Explore</Text>
+          </HStack>
+        </ChakraLink>
+
+        {/* Banner */}
+        <Box w="full" overflow="hidden" mb={8}>
+          <Image
+            src={project.network?.twitterBanner ?? `/logos/${project.image}`}
+            alt={`${project.name} banner`}
+            width="full"
+            objectFit="cover"
+            height="220px"
+            fallback={
+              <Box h="220px" w="full" bg="whiteAlpha.050" border="1px solid" borderColor="whiteAlpha.100" />
+            }
+          />
+        </Box>
+
+        {/* Header */}
+        <Flex
+          direction={{ base: "column", md: "row" }}
+          align={{ base: "start", md: "center" }}
+          justify="space-between"
+          gap={6}
+          mb={8}
+        >
+          <HStack spacing={4}>
+            <Avatar
+              size="xl"
+              name={project.name}
+              src={project.network?.twitterImage || `/logos/${project.image}`}
+              borderRadius="0"
+              border="1px solid"
+              borderColor="whiteAlpha.200"
+              bg="accent.500"
+            />
+            <VStack align="start" spacing={1}>
+              <HStack spacing={3}>
+                <Text
+                  fontSize="2xl"
+                  fontWeight="700"
+                  color="white"
+                  letterSpacing="-0.02em"
+                >
+                  {project.name}
+                </Text>
+                {project.isLive && (
+                  <Flex align="center" gap={2}>
+                    <Box
+                      w="6px"
+                      h="6px"
+                      borderRadius="full"
+                      bg="#22C55E"
+                      boxShadow="0 0 10px #22C55E"
+                    />
+                    <Text fontSize="10px" color="gray.500" textTransform="uppercase" letterSpacing="0.1em">
+                      Live
+                    </Text>
+                  </Flex>
+                )}
+                {!project.isLive && project.isTestnetLive && (
+                  <Text fontSize="10px" color="#FFFF00" textTransform="uppercase" letterSpacing="0.1em">
+                    Testnet
+                  </Text>
+                )}
+              </HStack>
+              {twitterHandle && (
+                <Text fontSize="sm" color="gray.500">
+                  {twitterHandle}
+                </Text>
+              )}
+            </VStack>
+          </HStack>
+
+          {/* Social links */}
+          <HStack spacing={3}>
+            {socialLinks.map((link) => (
+              <ChakraLink key={link.label} href={link.href} isExternal>
+                <Box
+                  w="40px"
+                  h="40px"
+                  border="1px solid"
+                  borderColor="whiteAlpha.200"
+                  display="flex"
+                  alignItems="center"
+                  justifyContent="center"
+                  color="gray.500"
+                  transition="all 0.2s ease"
+                  _hover={{ borderColor: "accent.500", color: "accent.500" }}
+                >
+                  <Icon as={FontAwesomeIcon} icon={link.icon} boxSize={4} />
+                </Box>
+              </ChakraLink>
+            ))}
+          </HStack>
+        </Flex>
+
+        {/* Description */}
+        <Box
+          p={6}
+          border="1px solid"
+          borderColor="whiteAlpha.100"
+          mb={8}
+        >
+          <Text fontSize="md" color="gray.400" lineHeight={1.8}>
+            {project.description}
+          </Text>
+        </Box>
+
+        {/* Info + Categories */}
+        <SimpleGrid columns={{ base: 1, lg: 2 }} gap={0}>
+          <Box
+            p={6}
+            border="1px solid"
+            borderColor="whiteAlpha.100"
+          >
+            <ProjectsInfos project={project} />
+          </Box>
+
+          {project.tags && project.tags.length > 0 && (
+            <Box
+              p={6}
+              border="1px solid"
+              borderColor="whiteAlpha.100"
+            >
+              <Text fontSize="lg" fontWeight="600" color="white" mb={4}>
+                Categories
+              </Text>
+              <HStack spacing={2} flexWrap="wrap">
+                {project.tags.map((tag) => (
+                  <Box
+                    key={tag}
+                    px={3}
+                    py={1}
+                    border="1px solid"
+                    borderColor="whiteAlpha.200"
+                  >
+                    <Text
+                      fontSize="12px"
+                      color="gray.400"
+                      fontWeight="500"
+                      textTransform="capitalize"
+                    >
+                      {tag}
+                    </Text>
+                  </Box>
+                ))}
+              </HStack>
+            </Box>
+          )}
+        </SimpleGrid>
+
+        {/* Visit CTA */}
+        {project.network?.website && (
+          <Box mt={8}>
+            <ChakraLink href={project.network.website} isExternal _hover={{ textDecoration: "none" }}>
+              <Flex
+                p={5}
+                bg="accent.500"
+                align="center"
+                justify="space-between"
+                cursor="pointer"
+                _hover={{ bg: "accent.400" }}
+                transition="background 0.2s ease"
+              >
+                <Text fontSize="15px" fontWeight="700" color="white">
+                  Visit {project.name}
+                </Text>
+                <Icon as={FontAwesomeIcon} icon={faUpRightFromSquare} color="white" boxSize={4} />
+              </Flex>
+            </ChakraLink>
+          </Box>
+        )}
+      </Box>
+    </Box>
+    </>
   );
+};
+
+export const getServerSideProps: GetServerSideProps<ProjectPageProps> = async (
+  context: GetServerSidePropsContext,
+) => {
+  const projectId = context.params?.id;
+
+  if (typeof projectId !== "string") {
+    return { notFound: true };
+  }
+
+  try {
+    const project = await EcosystemApi.fetchProjectById(projectId);
+
+    if (!project || project.isHidden) {
+      return { notFound: true };
+    }
+
+    return {
+      props: {
+        project,
+      },
+    };
+  } catch (error) {
+    console.error(`Failed to fetch project ${projectId}:`, error);
+    return { notFound: true };
+  }
 };
 
 export default ProjectPage;

@@ -1,18 +1,24 @@
-import type { DeepPartial, Theme } from "@chakra-ui/react";
-
-const Menu: DeepPartial<Theme["components"]["Menu"]> = {
+const Menu = {
   baseStyle: {
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
     list: {
-      background: "primary.700",
+      bg: "gray.900",
+      border: "1px solid",
+      borderColor: "whiteAlpha.100",
+      borderRadius: "xl",
+      boxShadow: "xl",
+      p: 2,
+      backdropFilter: "blur(20px)",
     },
     item: {
       bg: "transparent",
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-ignore
+      borderRadius: "lg",
+      color: "gray.50",
+      fontSize: "sm",
       _hover: {
-        bg: "whiteAlpha.200",
+        bg: "whiteAlpha.100",
+      },
+      _focus: {
+        bg: "whiteAlpha.100",
       },
     },
   },

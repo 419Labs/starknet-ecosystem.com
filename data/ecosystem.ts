@@ -92,8 +92,8 @@ export const allProjects: Array<Project> = [
     id: "3c2bdf31-7d16-4a0a-b27c-35fdd6ce0340",
     name: "Carmine Options",
     shortName: "Carmine Options",
-    description: "On Carmine, you can buy or sell options to hedge your risk or speculate on the price of assets.,",
-    tags: ["defi", "dao"],
+    description: "On Carmine, you can buy or sell options to hedge your risk or speculate on the price of assets.",
+    tags: ["defi"],
     image: "CarmineOptions.jpg",
     network: {
       website: "https://app.carmine.finance/",
@@ -130,8 +130,8 @@ export const allProjects: Array<Project> = [
     id: "d95046cb-7ce0-4f3f-9d1c-7214acc30bc7",
     name: "MySwap",
     shortName: "MySwap",
-    description: "mySwap is the first AMM built on Starknet.\\n\\nIt is designed with a focus on security and gas cost, powered by the Cairo programming language developed by StarkWare.,",
-    tags: ["defi", "mobile"],
+    description: "mySwap is the first AMM built on Starknet. Designed with a focus on security and gas cost, powered by the Cairo programming language developed by StarkWare.",
+    tags: ["defi"],
     image: "myswap.png",
     network: {
       website: "https://app.myswap.xyz/",
@@ -188,7 +188,7 @@ export const allProjects: Array<Project> = [
     name: "XAR",
     shortName: "XAR",
     description: "The world's first spatial social platform with AR gaming experience.",
-    tags: ["mobile"],
+    tags: ["social"],
     image: "XAR.jpg",
     network: {
       website: "https://x.ar/",
@@ -226,7 +226,7 @@ export const allProjects: Array<Project> = [
     name: "Briq",
     shortName: "Briq",
     description: "NFT building and composition protocol. Get some briqs and build the dream.,",
-    tags: ["nft", "gamefi"],
+    tags: ["gamefi"],
     image: "briq.jpg",
     network: {
       website: "https://briq.construction/",
@@ -492,7 +492,7 @@ export const allProjects: Array<Project> = [
     name: "OpenZeppelin",
     shortName: "OpenZeppelin",
     description: "OpenZeppelin Contracts written in Cairo for StarkNet,",
-    tags: ["tools", "security", "infrastructure", "nft", "defi"],
+    tags: ["tools", "security", "infrastructure", "defi"],
     image: "OpenZeppelin.png",
     network: {
       website: "https://www.openzeppelin.com/",
@@ -644,7 +644,7 @@ export const allProjects: Array<Project> = [
     name: "Layerswap",
     shortName: "Layerswap",
     description: "Layerswap is a tool for bridge StarkNet ETH to Layer2 wallets and exchanges.,",
-    tags: ["bridge", "infrastructure", "starkex"],
+    tags: ["bridge", "infrastructure"],
     image: "Layerswap.jpg",
     network: {
       website: "https://layerswap.io/",
@@ -909,7 +909,7 @@ export const allProjects: Array<Project> = [
     id: "502b0dbc-5169-4db6-8796-36a968a798fd",
     name: "avnu",
     shortName: "avnu",
-    description: "\"avnu is a decentralized exchange protocol designed to offer the best execution.\\n\",",
+    description: "Starknet's liquidity layer. Best-price swaps, DCA, gasless transactions, and market data powering 50+ wallets and dApps.",
     tags: ["defi", "infrastructure", "tools"],
     image: "avnu.png",
     network: {
@@ -1005,7 +1005,7 @@ export const allProjects: Array<Project> = [
     name: "Horus Laps / Karst",
     shortName: "Horus Laps / Karst",
     description: "A blockchain development toolset that provides utilities for building, testing, and deploying decentralized applications, enhancing developer productivity and code quality.",
-    tags: ["mobile"],
+    tags: ["tools"],
     image: "Horus.jpg",
     network: {
       website: "https://www.horuslabs.co/",
@@ -1233,7 +1233,7 @@ export const allProjects: Array<Project> = [
     name: "Starknet Foundation",
     shortName: "Starknet Foundation",
     description: "The Starknet Foundation works to achieve @Starknet's vision of a thriving, decentralized, and permissionless Ethereum Layer 2 Validity Rollup",
-    tags: ["governance"],
+    tags: ["infrastructure"],
     image: "StarknetFoundation.png",
     network: {
       website: "https://www.starknet.org/",
@@ -1290,7 +1290,7 @@ export const allProjects: Array<Project> = [
     name: "Braavos",
     shortName: "Braavos",
     description: "Braavos is a self-custody wallet, empowering you to fully control your funds. Your keys, your coins.",
-    tags: ["wallet", "mobile", "digital_id", "defi", "nft", "gamefi"],
+    tags: ["wallet", "defi", "gamefi"],
     image: "Braavos.jpg",
     network: {
       website: "https://braavos.app/",
@@ -1518,7 +1518,7 @@ export const allProjects: Array<Project> = [
     name: "Influence",
     shortName: "Influence",
     description: "Influence is an open-economy, space strategy MMO in which players own all of their content. Colonize asteroids, build infrastructure, discover technologies, engage in combat. Expand your influence across the belt.,",
-    tags: ["gamefi", "nft"],
+    tags: ["gamefi"],
     image: "influence.svg",
     network: {
       website: "https://game.influenceth.io/",
@@ -1575,7 +1575,7 @@ export const allProjects: Array<Project> = [
     name: "Starknet.id",
     shortName: "Starknet.id",
     description: "Own your identity on Starknet. Register a .stark name, link it to your wallet, and use it across the ecosystem.",
-    tags: ["digital_id", "nft", "tools"],
+    tags: ["tools", "infrastructure"],
     image: "starknetid.png",
     network: {
       website: "https://starknet.id/",
@@ -1594,7 +1594,7 @@ export const allProjects: Array<Project> = [
     name: "Snapshot",
     shortName: "Snapshot",
     description: "Decentralized Trusted voting,",
-    tags: ["dao", "governance"],
+    tags: ["tools"],
     image: "Snapshot.jpg",
     network: {
       website: "https://snapshot.org/",
@@ -1784,7 +1784,7 @@ export const allProjects: Array<Project> = [
     name: "EdgeX",
     shortName: "EdgeX",
     description: "edgeX is an Ethereum Layer-2 blockchain designed to deliver a high-performance on-chain trading infrastructure and a unified interface for DeFi.",
-    tags: ["starkex"],
+    tags: ["defi"],
     image: "EdgeX.jpg",
     network: {
       website: "https://www.edgex.exchange/",
@@ -1898,7 +1898,7 @@ export const allProjects: Array<Project> = [
     name: "Focus Tree",
     shortName: "Focus Tree",
     description: "A web3 focus app to help you spend less time on your phone by growing a virtual garden.",
-    tags: ["mobile"],
+    tags: ["social"],
     image: "FocusTree.jpg",
     network: {
       website: "https://www.focustree.app/",
@@ -2107,7 +2107,7 @@ export const allProjects: Array<Project> = [
     name: "Reddio",
     shortName: "Reddio",
     description: "Reddio is a technology company that builds infrastructure for high-performance, low-gas blockchain systems using zkRollup technology. Reddio provides a suite of tools and services for developers to build decentralized applications with massive scalability and zero gas fee for off-chain transactions. Reddio is backed by top VCs such as Paradigm and Arena Holdings.,",
-    tags: ["tools", "infrastructure", "nft", "starkex"],
+    tags: ["tools", "infrastructure"],
     image: "reddio.png",
     network: {
       website: "https://www.reddio.com/",
@@ -2126,7 +2126,7 @@ export const allProjects: Array<Project> = [
     name: "Carbonable",
     shortName: "Carbonable",
     description: "Carbonable is the next generation of environmental investing. The platform allows users to invest in tokenized real-world nature-based assets.\\n,",
-    tags: ["defi", "nft", "green finance"],
+    tags: ["defi"],
     image: "carbonable.png",
     network: {
       website: "https://app.carbonable.io/",
@@ -2297,7 +2297,7 @@ export const allProjects: Array<Project> = [
     name: "framethispeter",
     shortName: "framethispeter",
     description: "Mint any tweet and get it send to your starknet wallet as an nft, without leaving twitter.",
-    tags: ["nft"],
+    tags: ["social"],
     image: "FrameThisPeter.jpg",
     network: {
       website: "",
@@ -2373,7 +2373,7 @@ export const allProjects: Array<Project> = [
     name: "Belong",
     shortName: "Belong",
     description: "Token gating for communities and events, unites NFT memberships, content, and events into a private community with your own branding.",
-    tags: ["nft"],
+    tags: ["social"],
     image: "Belong.jpg",
     network: {
       website: "https://belong.net/",
@@ -2525,7 +2525,7 @@ export const allProjects: Array<Project> = [
     name: "Dope War",
     shortName: "Dope War",
     description: "Modular and extendable game system inspired by calculator game nostalgia.,",
-    tags: ["nft", "gamefi", "dao"],
+    tags: ["gamefi"],
     image: "DopeWar.jpg",
     network: {
       website: "https://linktr.ee/dope.wars",
@@ -2658,7 +2658,7 @@ export const allProjects: Array<Project> = [
     name: "Element Market",
     shortName: "Element Market",
     description: "The First Community-driven Aggregated Marketplace, the most gas-saving trading place for NFTs,",
-    tags: ["nft"],
+    tags: ["defi"],
     image: "Element.jpg",
     network: {
       website: "https://element.market",
@@ -2674,15 +2674,15 @@ export const allProjects: Array<Project> = [
   },
   {
     id: "8df27359-f05d-439b-8592-ca1b61cf049c",
-    name: "Ready (formely Argent)",
-    shortName: "Ready (formely Argent)",
+    name: "Ready",
+    shortName: "Ready",
     description: "Your onchain alternative to a bank. Get cashback on your spending, grow your savings, and spend globally with no fees.",
-    tags: ["wallet", "digital_id", "defi", "nft", "gamefi", "mobile"],
+    tags: ["wallet", "defi", "gamefi"],
     image: "Ready.png",
     network: {
       website: "https://www.ready.co/",
       github: "https://github.com/argentlabs/",
-      twitter: "https://twitter.com/argentHQ",
+      twitter: "https://x.com/ready_co",
       medium: "",
       discord: "https://discordapp.com/invite/GWSyrHg",
       telegram: "",
@@ -2696,7 +2696,7 @@ export const allProjects: Array<Project> = [
     name: "Bitget Wallet",
     shortName: "Bitget Wallet",
     description: "Your Web3 Crypto Wallet for effortless trading. One of the top non-custodial multi-chain crypto wallet, integrates Wallet, Swap, NFT Market, DApp and Discover in a single location, allowing users to enter the era of Web 3.0 with ease.,",
-    tags: ["wallet", "Defi", "NFT", "digital_id", "infrastructure", "payments"],
+    tags: ["wallet", "defi", "infrastructure", "payments"],
     image: "BitgetWallet.jpg",
     network: {
       website: "https://www.bitget.com/",
@@ -2851,7 +2851,7 @@ export const allProjects: Array<Project> = [
     tags: ["gamefi"],
     image: "AFK.jpg",
     network: {
-      website: "https://afk-community.xyz/app/feed",
+      website: "https://afk-community.xyz/",
       github: "https://github.com/AFK-AlignedFamKernel",
       twitter: "https://x.com/AFK_AlignedFamK",
       medium: "",
@@ -2886,7 +2886,7 @@ export const allProjects: Array<Project> = [
     name: "Carve",
     shortName: "Carve",
     description: "The first no-code tool to create on-chain NFT collections",
-    tags: ["nft"],
+    tags: ["tools"],
     image: "Carve.jpg",
     network: {
       website: "https://carve.app/",
@@ -3114,7 +3114,7 @@ export const allProjects: Array<Project> = [
     name: "POW!",
     shortName: "POW!",
     description: "POW! is a fully onchain, open-source mobile game on Starknet that gamifies blockchain education through a fun clicker experience.",
-    tags: ["mobile"],
+    tags: ["gamefi"],
     image: "POW.jpg",
     network: {
       website: "https://www.pow-game.com/",
@@ -3504,8 +3504,8 @@ export const allProjects: Array<Project> = [
       telegram: "",
     },
 
-    isLive: false,
-    isTestnetLive: false,
+    isLive: true,
+    isTestnetLive: true,
   },
   {
     id: "4d503e30-1d7e-40e9-9756-697f79432d2a",
@@ -3626,7 +3626,7 @@ export const allProjects: Array<Project> = [
     name: "Near intents",
     shortName: "Near intents",
     description: "NEAR Intents is a protocol for multichain financial products that replaces centralized exchanges.",
-    tags: ["privacy"],
+    tags: ["bridge", "infrastructure"],
     image: "NEAR.png",
     network: {
       website: "https://near-intents.org/",
@@ -3637,8 +3637,8 @@ export const allProjects: Array<Project> = [
       telegram: "https://t.me/cryptonear",
     },
 
-    isLive: false,
-    isTestnetLive: false,
+    isLive: true,
+    isTestnetLive: true,
   },
   {
     id: "2dbe72de-a62f-4eaf-a5cf-0fbb65e6c5d5",
@@ -3740,7 +3740,7 @@ export const allProjects: Array<Project> = [
     name: "Tubbly",
     shortName: "Tubbly",
     description: "We are a mobile app that rewards users for visiting spots.",
-    tags: ["mobile"],
+    tags: ["social"],
     image: "Tubbly.jpg",
     network: {
       website: "https://www.tubbly.io/",
@@ -3797,7 +3797,7 @@ export const allProjects: Array<Project> = [
     name: "Starknet Governance Hub",
     shortName: "Starknet Governance Hub",
     description: "The Starknet Governance Hub is a platform for managing and executing Starknet's decentralized governance, where STRK token holders can participate in protocol upgrades by voting or delegating their voting power to others.",
-    tags: ["governance"],
+    tags: ["tools"],
     image: "StarknetGovernance.png",
     network: {
       website: "https://governance.starknet.io/",
@@ -3816,7 +3816,7 @@ export const allProjects: Array<Project> = [
     name: "Schizodio",
     shortName: "Schizodio",
     description: "Schizodio.",
-    tags: ["nft"],
+    tags: ["gamefi"],
     image: "Schizodio.jpg",
     network: {
       website: "https://schizodio.xyz/",
@@ -3835,7 +3835,7 @@ export const allProjects: Array<Project> = [
     name: "Wolf Nation",
     shortName: "Wolf Nation",
     description: "The baddest NFT collection on Starknet. 333 NFTs. One nation.",
-    tags: ["nft"],
+    tags: ["social"],
     image: "WolfNation.jpg",
     network: {
       website: "https://element.market/collections/wolf-nation?search[toggles][0]=ALL",
@@ -3854,7 +3854,7 @@ export const allProjects: Array<Project> = [
     name: "Karat",
     shortName: "Karat",
     description: "The first generative art collection on Starknet, made with Dojo.",
-    tags: ["nft"],
+    tags: ["gamefi"],
     image: "Karat",
     network: {
       website: "https://collect-code.com/karat",
@@ -3911,7 +3911,7 @@ export const allProjects: Array<Project> = [
     name: "Everai",
     shortName: "Everai",
     description: "Everais stand as the mightiest heroes of the Shodai civilization",
-    tags: ["nft"],
+    tags: ["gamefi"],
     image: "Everai.png",
     network: {
       website: "https://opensea.io/collection/everai",
@@ -3930,7 +3930,7 @@ export const allProjects: Array<Project> = [
     name: "Bloberts",
     shortName: "Bloberts",
     description: "Lootverse mysterious Oracle and squire for your digital Realm.",
-    tags: ["nft"],
+    tags: ["gamefi"],
     image: "Bloberts.jpg",
     network: {
       website: "https://element.market/collections/blobert",
@@ -3949,7 +3949,7 @@ export const allProjects: Array<Project> = [
     name: "Starkurabu",
     shortName: "Starkurabu",
     description: "Your customizable on-chain PFP on Starknet",
-    tags: ["nft"],
+    tags: ["social"],
     image: "Starkurabu.jpg",
     network: {
       website: "https://starkurabu.com/",
@@ -3968,7 +3968,7 @@ export const allProjects: Array<Project> = [
     name: "Ducks Everywhere",
     shortName: "Ducks Everywhere",
     description: "Handcrafted PFP collection of duuucks made of Briq by OutSmth",
-    tags: ["nft"],
+    tags: ["gamefi"],
     image: "DucksEverywhere.jpg",
     network: {
       website: "https://element.market/collections/ducks-everywhere?search[toggles][0]=ALL",
@@ -4063,7 +4063,7 @@ export const allProjects: Array<Project> = [
     name: "Metacube",
     shortName: "Metacube",
     description: "Metacube is a Free2Play Massive Multiplayer Game, where the winners of ephemeral events get their assets distributed on Starknet,",
-    tags: ["gamefi", "nft", "mobile"],
+    tags: ["gamefi"],
     image: "Metacube.jpg",
     network: {
       website: "https://play.metacube.games/",
@@ -4139,7 +4139,7 @@ export const allProjects: Array<Project> = [
     name: "Dynamic",
     shortName: "Dynamic",
     description: "Your multi-chain web3 auth platform. A smart, beautiful and dynamic multi-chain wallet login flow, and powerful developer tools to match.,",
-    tags: ["wallet", "digital_id", "infrastructure", "tools"],
+    tags: ["wallet", "infrastructure", "tools"],
     image: "Dynamic.png",
     network: {
       website: "https://demo.dynamic.xyz/",

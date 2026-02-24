@@ -44,6 +44,31 @@ jspm_packages
 
 # Misc
 .DS_Store
+public/x-branding/x-rebrand-guide.md
 
 # Vercel
 .vercel/
+
+# Claude Code
+.claude/
+DESIGN.md
+.history_prompt.md
+
+# Python
+__pycache__/
+*.pyc
+
+# Build artifacts
+tsconfig.tsbuildinfo
+
+# Auto-generated sitemaps (rebuilt on every deploy)
+public/sitemap*.xml
+public/robots.txt
+
+# Lock files (project uses yarn)
+package-lock.json
+
+# Environment
+.env
+.env.*
+!.env.example

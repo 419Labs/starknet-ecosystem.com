@@ -5,18 +5,17 @@ import NextLink from "next/link";
 interface Props extends LinkProps {
   active?: boolean;
   color?: string;
-  hoverOpacity?: string;
   href: string;
   fontWeight?: string;
   fontSize?: string;
   isExternal?: boolean;
 }
+
 function Link({
   children,
   active,
   href,
   color,
-  hoverOpacity = "1",
   fontWeight,
   fontSize,
   isExternal,
@@ -25,19 +24,17 @@ function Link({
     <Box
       fontSize={fontSize}
       fontWeight={fontWeight}
-      color={color}
-      opacity={color || active ? "1" : "0.5"}
-      transition=".4s all ease"
+      color={color || (active ? "accent.600" : "text.secondary")}
+      transition="color 0.15s ease"
       _hover={{
         textDecoration: "none",
-        opacity: hoverOpacity,
+        color: active ? "accent.600" : "text.primary",
       }}
     >
       {isExternal ? (
         <ChakraLink
           _hover={{
             textDecoration: "none",
-            opacity: hoverOpacity,
           }}
           isExternal
           href={href}

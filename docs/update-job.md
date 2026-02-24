@@ -1,8 +1,7 @@
-# To update a job:
+# Starknet Jobs
 
-- select and update your Job at [`data/job.ts`](data/../../data/job.ts)
+Job listings are managed on external boards. See [add-job.md](./add-job.md) for links.
 
-To remove a job you just have to remove the payload associated to your Job.
+## Questions?
 
-As soon as your PR is merged an automatic deployment will be started.
-Don't hesitate to join and ping on the community Telegram group: https://t.me/starknet_ecosystem
+Join the community Telegram: https://t.me/starknet_ecosystem
