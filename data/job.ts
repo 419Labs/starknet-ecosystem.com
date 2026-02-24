@@ -319,7 +319,7 @@ const allJobs: Array<Job> = [
       "- Knowledge of Solidity/Vyper and their related tools\n" +
       "- High-level understanding of ZK-SNARKS & STARKS",
     createdOn: new Date("2022-05-02"),
-    applyLink: "https://boards.eu.greenhouse.io/nethermind/jobs/4010880101",
+    applyLink: "https://jobs.ashbyhq.com/nethermind",
   },
   {
     key: "13",
@@ -349,7 +349,7 @@ const allJobs: Array<Job> = [
       "- Multiple years of prior experience in traditional cybersecurity (before transitioning to the blockchain space)\n" +
       "- Experience in Python, JavaScript, and TypeScript.",
     createdOn: new Date("2022-05-02"),
-    applyLink: "https://boards.eu.greenhouse.io/nethermind/jobs/4026450101",
+    applyLink: "https://jobs.ashbyhq.com/nethermind",
   },
   {
     key: "14",
@@ -582,7 +582,7 @@ const allJobs: Array<Job> = [
       to: 300,
     },
     createdOn: new Date("2023-03-21"),
-    applyLink: "https://https://twitter.com/Fricoben",
+    applyLink: "https://twitter.com/Fricoben",
   },
   {
     key: "27",

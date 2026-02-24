@@ -1,9 +1,46 @@
-# To add a new project you have to:
+# Add a new project
 
-- Create your project on `data/ecosystem.ts` by reusing existing tags available on `data/tag.ts`
-- Your project must have a unique UUID. To easily generate a v4 UUID you can use: https://www.uuidgenerator.net/version4
-- Add your project logo into `public/logos/`
-- Create a Pull Request following the title: "✨ Introducing AwesomeProjectName". Make sure you check the linter passes by running `yarn lint`
+## Steps
 
-As soon as your PR is merged an automatic deployment will be started.
-Don't hesitate to join and ping on the community Telegram group: https://t.me/starknet_ecosystem
+1. **Generate a UUID** for your project: [uuidgenerator.net/version4](https://www.uuidgenerator.net/version4)
+
+2. **Add your logo** to `public/logos/` (PNG or JPG, square, min 200x200px)
+
+3. **Add your project** to `data/ecosystem.ts` — append a new entry to the `allProjects` array:
+
+```typescript
+{
+  id: "your-generated-uuid",
+  name: "Your Project Name",
+  shortName: "ShortName",
+  description: "A short description of what your project does.",
+  tags: ["defi"],           // use existing tags from data/tag.ts
+  image: "your-logo.png",  // filename in public/logos/
+  network: {
+    website: "https://yourproject.com",
+    github: "https://github.com/yourorg",
+    twitter: "https://x.com/yourhandle",
+    medium: "",
+    discord: "",
+    telegram: "",
+  },
+  isLive: true,             // true if live on mainnet
+  isTestnetLive: false,     // true if live on testnet
+}
+```
+
+4. **Check available tags** in `data/tag.ts` — use existing tag values (e.g. `"defi"`, `"gaming"`, `"nft"`, `"infrastructure"`, `"wallet"`, etc.)
+
+5. **Run the linter** to make sure everything is clean:
+
+```bash
+yarn lint
+```
+
+6. **Create a Pull Request** with the title: `✨ Introducing YourProjectName`
+
+Your project will go live automatically once the PR is merged.
+
+## Questions?
+
+Join the community Telegram: https://t.me/starknet_ecosystem

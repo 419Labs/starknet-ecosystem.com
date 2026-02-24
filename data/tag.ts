@@ -161,29 +161,14 @@ export const allEcosystemTags: Tag[] = [
     icon: "bridge",
   },
   {
-    value: "dao",
-    label: "Dao",
-    icon: "people-group",
-  },
-  {
     value: "defi",
     label: "DeFi",
     icon: "rocket",
   },
   {
-    value: "digital_id",
-    label: "Digital ID",
-    icon: "id-card",
-  },
-  {
     value: "gamefi",
-    label: "GameFi",
+    label: "Gaming",
     icon: "gamepad",
-  },
-  {
-    value: "governance",
-    label: "Governance",
-    icon: "magnifying-glass",
   },
   {
     value: "infrastructure",
@@ -191,28 +176,20 @@ export const allEcosystemTags: Tag[] = [
     icon: "road",
   },
   {
-    value: "mobile",
-    label: "Mobile App",
-    icon: "mobile",
-  },
-  {
-    value: "nft",
-    label: "NFT",
-    icon: "file-image",
-  },
-  // {
-  //   value: "cefi",
-  //   label: "CeFi",
-  // },
-  {
     value: "payments",
     label: "Payments",
     icon: "credit-card",
   },
-  // {
-  //   value: "social",
-  //   label: "Social",
-  // },
+  {
+    value: "security",
+    label: "Security",
+    icon: "shield-halved",
+  },
+  {
+    value: "social",
+    label: "Social",
+    icon: "users",
+  },
   {
     value: "tools",
     label: "Tools",
@@ -222,15 +199,5 @@ export const allEcosystemTags: Tag[] = [
     value: "wallet",
     label: "Wallet",
     icon: "wallet",
-  },
-  {
-    value: "starkex",
-    label: "StarkEx",
-    icon: "ellipsis-vertical",
-  },
-  {
-    value: "security",
-    label: "Security",
-    icon: "shield-halved",
   },
 ];

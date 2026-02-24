@@ -1,9 +1,11 @@
-# To add a new job you have to:
+# Starknet Jobs
 
-- Create your company on `data/company.ts` if it doesn't already exist.
-- Add your company logo into `public/logos/`
-- Create your job on `data/job.ts`. 
-- Create a Pull Request following the title: "✨ CompanyName is hiring a JobTitle"
+The Jobs page links to external job boards where Starknet ecosystem positions are listed:
 
-As soon as your PR is merged an automatic deployment will be started.
-Don't hesitate to join and ping on the community Telegram group: https://t.me/starknet_ecosystem
+- **Starknet Foundation** — [starknet.io/careers](https://www.starknet.io/careers#jobs)
+- **StarkWare** — [starkware.co/careers](https://starkware.co/careers/)
+- **Ecosystem Jobs** — [starknet.io/jobs](https://www.starknet.io/jobs/)
+
+## Questions?
+
+Join the community Telegram: https://t.me/starknet_ecosystem

@@ -2,9 +2,13 @@ import { useRouter } from "next/router";
 import type React from "react";
 import { useMemo } from "react";
 
+import de from "../../assets/locales/de";
 import en from "../../assets/locales/en";
+import es from "../../assets/locales/es";
 import fr from "../../assets/locales/fr";
 import it from "../../assets/locales/it";
+import ja from "../../assets/locales/ja";
+import ko from "../../assets/locales/ko";
 import pl from "../../assets/locales/pl";
 import pt from "../../assets/locales/pt";
 import tr from "../../assets/locales/tr";
@@ -26,12 +30,20 @@ export function TranslateProvider({
     switch (router.locale) {
       case "en":
         return en;
+      case "es":
+        return es;
       case "fr":
         return fr;
+      case "de":
+        return de;
       case "tr":
         return tr;
       case "it":
         return it;
+      case "ko":
+        return ko;
+      case "ja":
+        return ja;
       case "zh_CN":
         return zh_CN;
       case "zh_TW":

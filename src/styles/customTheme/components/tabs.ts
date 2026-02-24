@@ -1,16 +1,26 @@
-import type { DeepPartial, Theme } from "@chakra-ui/react";
-
-const Menu: DeepPartial<Theme["components"]["Tabs"]> = {
+const Tabs = {
   baseStyle: {
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
     tab: {
-      color: "whiteAlpha.600",
+      color: "text.muted",
+      fontWeight: "500",
       _focus: {
         boxShadow: "none",
       },
+      _selected: {
+        color: "accent.600",
+        borderColor: "accent.500",
+      },
+      _hover: {
+        color: "text.primary",
+      },
+    },
+    tablist: {
+      borderColor: "border.default",
+    },
+    tabpanel: {
+      px: 0,
     },
   },
 };
 
-export default Menu;
+export default Tabs;

@@ -1,60 +1,81 @@
-import type { DeepPartial, Theme } from "@chakra-ui/react";
-
-const Button: DeepPartial<Theme["components"]["Button"]> = {
+const Button = {
   baseStyle: {
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
-    outline: "none",
-    fontVariant: "none",
-    textDecoration: "none !important",
-    boxShadow: "none !important",
-
-    _dark: {
-      color: "whiteAlpha.900",
-      border: "1px solid",
-      borderColor: "primary.700",
-      bg: "transparent",
+    fontWeight: "600",
+    borderRadius: "lg",
+    transition: "all 0.2s cubic-bezier(0.16, 1, 0.3, 1)",
+  },
+  variants: {
+    solid: {
+      bg: "accent.500",
+      color: "white",
       _hover: {
-        bg: "primary.700",
-        borderColor: "primary.700",
+        bg: "accent.600",
+        transform: "translateY(-2px)",
+        boxShadow: "glow-sm",
       },
       _active: {
-        bg: "primary.700",
-        borderColor: "primary.700",
+        bg: "accent.700",
+        transform: "translateY(0)",
+      },
+    },
+    outline: {
+      bg: "transparent",
+      color: "gray.50",
+      border: "1px solid",
+      borderColor: "whiteAlpha.100",
+      _hover: {
+        bg: "whiteAlpha.50",
+        borderColor: "whiteAlpha.200",
+      },
+      _active: {
+        bg: "whiteAlpha.100",
+      },
+    },
+    ghost: {
+      bg: "transparent",
+      color: "gray.400",
+      _hover: {
+        bg: "whiteAlpha.50",
+        color: "gray.50",
+      },
+      _active: {
+        bg: "whiteAlpha.100",
+      },
+    },
+    glass: {
+      bg: "whiteAlpha.50",
+      color: "gray.50",
+      backdropFilter: "blur(20px)",
+      border: "1px solid",
+      borderColor: "whiteAlpha.100",
+      _hover: {
+        bg: "whiteAlpha.100",
+        borderColor: "whiteAlpha.200",
+      },
+    },
+    accent: {
+      bg: "accent.50",
+      color: "accent.500",
+      _hover: {
+        bg: "accent.100",
+      },
+      _active: {
+        bg: "accent.200",
+      },
+    },
+    glow: {
+      bg: "accent.500",
+      color: "white",
+      boxShadow: "glow-sm",
+      _hover: {
+        bg: "accent.600",
+        boxShadow: "glow",
+        transform: "translateY(-2px)",
       },
     },
   },
-  variants: {
-    outline: {
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-ignore
-      _dark: {
-        outline: "none",
-        bg: "primary.200",
-        borderColor: "primary.200",
-        _hover: {
-          bg: "primary.300",
-          borderColor: "primary.300",
-        },
-        _active: {
-          bg: "primary.300",
-          opacity: 0.7,
-        },
-      },
-    },
-    "solid-soft": {
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-ignore
-      _dark: {
-        border: "none",
-        bg: "white",
-        color: "primary.500",
-        "&:hover, &:active": {
-          bg: "white",
-          color: "primary.500",
-        },
-      },
-    },
+  defaultProps: {
+    variant: "outline",
   },
 };
 

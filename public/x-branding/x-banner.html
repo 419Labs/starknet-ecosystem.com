@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>X Banner - Stark Directory</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: #1a1a1a;
+      padding: 40px;
+      gap: 60px;
+    }
+    .label {
+      color: #666;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 20px;
+    }
+    .section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Banner base styles */
+    .banner {
+      width: 1500px;
+      height: 500px;
+      background: #000000;
+      position: relative;
+      overflow: hidden;
+      font-family: 'Inter', sans-serif;
+    }
+
+    /* Option 1: Build the unimaginable - Bold statement */
+    /* ADJUSTED: Content pushed right to avoid PFP overlap (PFP is ~150px from left, ~180px up from bottom) */
+    .banner-1 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .banner-1 .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .banner-1 .eyebrow-line {
+      width: 40px;
+      height: 1px;
+      background: #FF6B35;
+    }
+    .banner-1 .eyebrow-text {
+      font-size: 14px;
+      color: #FF6B35;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      font-weight: 500;
+    }
+    .banner-1 .headline {
+      font-size: 100px;
+      font-weight: 700;
+      color: white;
+      line-height: 0.95;
+      letter-spacing: -0.04em;
+    }
+    .banner-1 .headline .orange {
+      color: #FF6B35;
+    }
+    .banner-1 .glow {
+      position: absolute;
+      top: -100px;
+      right: -100px;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: #FF6B35;
+      filter: blur(200px);
+      opacity: 0.2;
+    }
+    .banner-1 .glow-left {
+      position: absolute;
+      bottom: -100px;
+      left: -100px;
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+      background: #FF6B35;
+      filter: blur(200px);
+      opacity: 0.1;
+    }
+
+    /* Option 1b: Right-aligned version */
+    .banner-1b {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+      padding-right: 100px;
+      text-align: right;
+    }
+    .banner-1b .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .banner-1b .eyebrow-line {
+      width: 40px;
+      height: 1px;
+      background: #FF6B35;
+    }
+    .banner-1b .eyebrow-text {
+      font-size: 14px;
+      color: #FF6B35;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      font-weight: 500;
+    }
+    .banner-1b .headline {
+      font-size: 100px;
+      font-weight: 700;
+      color: white;
+      line-height: 0.95;
+      letter-spacing: -0.04em;
+    }
+    .banner-1b .headline .orange {
+      color: #FF6B35;
+    }
+    .banner-1b .glow {
+      position: absolute;
+      top: -100px;
+      right: -100px;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: #FF6B35;
+      filter: blur(200px);
+      opacity: 0.2;
+    }
+
+    /* Option 2: Data-forward with stats */
+    .banner-2 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 100px;
+    }
+    .banner-2 .left {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .banner-2 .accent-bar {
+      width: 4px;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: #FF6B35;
+    }
+    .banner-2 .stat-label {
+      font-size: 14px;
+      color: #666;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+    .banner-2 .stat-number {
+      font-size: 140px;
+      font-weight: 800;
+      color: white;
+      line-height: 1;
+      letter-spacing: -0.04em;
+    }
+    .banner-2 .stat-unit {
+      color: #FF6B35;
+    }
+    .banner-2 .right {
+      text-align: right;
+    }
+    .banner-2 .tagline {
+      font-size: 32px;
+      font-weight: 600;
+      color: white;
+      letter-spacing: -0.02em;
+    }
+    .banner-2 .tagline .muted {
+      color: #666;
+    }
+    .banner-2 .url {
+      font-size: 16px;
+      color: #666;
+      margin-top: 16px;
+    }
+
+    /* Option 3: Minimal - just the name and accent */
+    .banner-3 {
+      display: flex;
+      align-items: center;
+      padding-left: 100px;
+    }
+    .banner-3 .accent-bar {
+      width: 6px;
+      height: 80px;
+      background: #FF6B35;
+      margin-right: 32px;
+    }
+    .banner-3 .name {
+      font-size: 64px;
+      font-weight: 700;
+      color: white;
+      letter-spacing: -0.03em;
+      text-transform: uppercase;
+    }
+    .banner-3 .dot {
+      color: #FF6B35;
+    }
+    .banner-3 .grid {
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 400px;
+      background:
+        linear-gradient(90deg, rgba(255,107,53,0.1) 1px, transparent 1px),
+        linear-gradient(rgba(255,107,53,0.1) 1px, transparent 1px);
+      background-size: 40px 40px;
+      opacity: 0.5;
+    }
+
+    /* Option 4: Explore Build Ship */
+    .banner-4 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 80px;
+    }
+    .banner-4 .word {
+      font-size: 72px;
+      font-weight: 700;
+      color: white;
+      letter-spacing: -0.03em;
+      text-transform: uppercase;
+    }
+    .banner-4 .word .period {
+      color: #FF6B35;
+    }
+    .banner-4 .divider {
+      width: 1px;
+      height: 60px;
+      background: #333;
+    }
+
+    /* Option 5: Screenshot style - website preview */
+    .banner-5 {
+      display: flex;
+      align-items: center;
+      padding: 0 80px;
+      gap: 60px;
+    }
+    .banner-5 .text-side {
+      flex: 1;
+    }
+    .banner-5 .headline {
+      font-size: 72px;
+      font-weight: 700;
+      color: white;
+      line-height: 0.95;
+      letter-spacing: -0.04em;
+      margin-bottom: 20px;
+    }
+    .banner-5 .headline .orange {
+      color: #FF6B35;
+    }
+    .banner-5 .subtext {
+      font-size: 18px;
+      color: #666;
+      line-height: 1.5;
+      max-width: 400px;
+    }
+    .banner-5 .preview {
+      width: 600px;
+      height: 380px;
+      background: #0a0a0a;
+      border: 1px solid #222;
+      border-radius: 8px;
+      overflow: hidden;
+      position: relative;
+    }
+    .banner-5 .browser-bar {
+      height: 32px;
+      background: #111;
+      border-bottom: 1px solid #222;
+      display: flex;
+      align-items: center;
+      padding: 0 12px;
+      gap: 8px;
+    }
+    .banner-5 .browser-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #333;
+    }
+    .banner-5 .preview-content {
+      padding: 24px;
+    }
+    .banner-5 .preview-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+    .banner-5 .preview-card {
+      height: 80px;
+      background: #111;
+      border: 1px solid #222;
+    }
+    .banner-5 .preview-card:hover {
+      border-color: #FF6B35;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="section">
+    <div class="label">Option 1: Centered (Recommended - avoids PFP overlap)</div>
+    <div class="banner banner-1">
+      <div class="glow"></div>
+      <div class="glow-left"></div>
+      <div class="eyebrow">
+        <div class="eyebrow-line"></div>
+        <span class="eyebrow-text">Starknet Ecosystem</span>
+      </div>
+      <div class="headline">
+        Build the <span class="orange">unimaginable.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Option 1b: Right-aligned (also avoids PFP)</div>
+    <div class="banner banner-1b">
+      <div class="glow"></div>
+      <div class="eyebrow">
+        <span class="eyebrow-text">Starknet Ecosystem</span>
+        <div class="eyebrow-line"></div>
+      </div>
+      <div class="headline">
+        Build the<br>
+        <span class="orange">unimaginable.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">PFP SAFE ZONE GUIDE (for reference - don't use this)</div>
+    <div class="banner" style="position: relative;">
+      <!-- PFP overlap zone indicator -->
+      <div style="position: absolute; bottom: 0; left: 0; width: 200px; height: 200px; border: 2px dashed #FF4444; background: rgba(255,68,68,0.1); display: flex; align-items: center; justify-content: center;">
+        <span style="color: #FF4444; font-size: 12px; font-family: Inter, sans-serif;">PFP ZONE<br>avoid text here</span>
+      </div>
+      <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #333; font-family: Inter, sans-serif; font-size: 14px;">
+        Safe area for text →
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Option 2: Data Statement</div>
+    <div class="banner banner-2">
+      <div class="accent-bar"></div>
+      <div class="left">
+        <div class="stat-label">Projects</div>
+        <div class="stat-number">200<span class="stat-unit">+</span></div>
+      </div>
+      <div class="right">
+        <div class="tagline">The Starknet <span class="muted">Directory</span></div>
+        <div class="url">starknet-ecosystem.com</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Option 3: Minimal Name</div>
+    <div class="banner banner-3">
+      <div class="grid"></div>
+      <div class="accent-bar"></div>
+      <div class="name">Stark Directory<span class="dot">.</span></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Option 4: Explore Build Ship</div>
+    <div class="banner banner-4">
+      <div class="word">Explore<span class="period">.</span></div>
+      <div class="divider"></div>
+      <div class="word">Build<span class="period">.</span></div>
+      <div class="divider"></div>
+      <div class="word">Ship<span class="period">.</span></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">Option 5: With Website Preview</div>
+    <div class="banner banner-5">
+      <div class="text-side">
+        <div class="headline">
+          Build the<br>
+          <span class="orange">unimaginable.</span>
+        </div>
+        <div class="subtext">
+          200+ projects building on the only blockchain that actually scales.
+        </div>
+      </div>
+      <div class="preview">
+        <div class="browser-bar">
+          <div class="browser-dot"></div>
+          <div class="browser-dot"></div>
+          <div class="browser-dot"></div>
+        </div>
+        <div class="preview-content">
+          <div class="preview-grid">
+            <div class="preview-card"></div>
+            <div class="preview-card"></div>
+            <div class="preview-card"></div>
+            <div class="preview-card"></div>
+            <div class="preview-card"></div>
+            <div class="preview-card"></div>
+            <div class="preview-card"></div>
+            <div class="preview-card"></div>
+            <div class="preview-card"></div>
+            <div class="preview-card"></div>
+            <div class="preview-card"></div>
+            <div class="preview-card"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,17 +1,22 @@
 # Translations
 
-Our audience is GLOBAL and that's why all translations are welcome and valuable to push this ecosystem forward!
+The Starknet ecosystem is global — all translations are welcome!
 
-To add a new translation:
+## Add a new language
 
-+ please take a look at https://github.com/419Labs/starknet-ecosystem.com/tree/main/src/assets/locales
-+ duplicate en.ts and rename it to your language
-+ translate all sentences and submit a PR
+1. Duplicate `src/assets/locales/en.ts` and rename it to your language code (e.g. `de.ts`, `es.ts`, `ja.ts`)
+2. Translate all strings
+3. Create a Pull Request
 
-To update a translation:
+## Update an existing translation
 
-+ select the language you want to update on https://github.com/419Labs/starknet-ecosystem.com/tree/main/src/assets/locales
-+ update the sentences and provide a PR
+1. Edit the relevant file in `src/assets/locales/` (e.g. `fr.ts`, `pt.ts`, `tr.ts`)
+2. Update the strings and create a Pull Request
 
-As soon as your PR is merged an automatic deployment will be started.
-Don't hesitate to join and ping on the community Telegram group: https://t.me/starknet_ecosystem
+Currently supported: English, French, Italian, Polish, Portuguese, Turkish, Chinese (Simplified), Chinese (Traditional).
+
+Changes go live automatically once the PR is merged.
+
+## Questions?
+
+Join the community Telegram: https://t.me/starknet_ecosystem

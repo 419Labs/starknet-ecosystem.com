@@ -1,5 +1,4 @@
 import type { Project } from "../../data/ecosystem";
-import type { Contribution } from "../models/contribution";
 
 const STARKNET_DB_BASE_URL = "https://api.starknet-db.com";
 
@@ -24,18 +23,7 @@ const fetchProjectById = (id: string): Promise<Project> =>
     return response.json();
   });
 
-const fetchContributions = (keyword: string): Promise<Contribution[]> =>
-  fetch(`${STARKNET_DB_BASE_URL}/contributions?size=100&keyword=${keyword}`)
-    .then((response: Response) => {
-      if (!response.ok) {
-        throw new Error(`${response.statusText} while fetching contributions`);
-      }
-      return response.json();
-    })
-    .then((response) => response.content);
-
 export const EcosystemApi = {
   fetchEcosystemProjects,
   fetchProjectById,
-  fetchContributions,
 };

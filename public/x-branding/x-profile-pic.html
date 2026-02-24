@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>X Profile Picture - Stark Directory</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: #1a1a1a;
+      padding: 40px;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      align-items: center;
+    }
+    .label {
+      color: #666;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    /* Option 1: Orange background, white S */
+    .pfp-1 {
+      width: 400px;
+      height: 400px;
+      background: #FF6B35;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .pfp-1 .letter {
+      font-family: 'Inter', sans-serif;
+      font-size: 240px;
+      font-weight: 800;
+      color: white;
+      line-height: 1;
+    }
+
+    /* Option 2: Black background, orange S */
+    .pfp-2 {
+      width: 400px;
+      height: 400px;
+      background: #000000;
+      border: 3px solid #FF6B35;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .pfp-2 .letter {
+      font-family: 'Inter', sans-serif;
+      font-size: 240px;
+      font-weight: 800;
+      color: #FF6B35;
+      line-height: 1;
+    }
+
+    /* Option 3: Black background, white S with orange accent */
+    .pfp-3 {
+      width: 400px;
+      height: 400px;
+      background: #000000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+    .pfp-3 .accent-bar {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 16px;
+      background: #FF6B35;
+    }
+    .pfp-3 .letter {
+      font-family: 'Inter', sans-serif;
+      font-size: 240px;
+      font-weight: 800;
+      color: white;
+      line-height: 1;
+    }
+
+    /* Option 4: Minimal - just the mark */
+    .pfp-4 {
+      width: 400px;
+      height: 400px;
+      background: #000000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+    .pfp-4 .mark {
+      width: 200px;
+      height: 200px;
+      background: #FF6B35;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .pfp-4 .letter {
+      font-family: 'Inter', sans-serif;
+      font-size: 120px;
+      font-weight: 800;
+      color: #000000;
+      line-height: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="label">Option 1: Orange BG (Recommended)</div>
+    <div class="pfp-1">
+      <span class="letter">S</span>
+    </div>
+
+    <div class="label">Option 2: Black BG, Orange Border</div>
+    <div class="pfp-2">
+      <span class="letter">S</span>
+    </div>
+
+    <div class="label">Option 3: Black BG with Accent Bar</div>
+    <div class="pfp-3">
+      <div class="accent-bar"></div>
+      <span class="letter">S</span>
+    </div>
+
+    <div class="label">Option 4: Centered Mark</div>
+    <div class="pfp-4">
+      <div class="mark">
+        <span class="letter">S</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
