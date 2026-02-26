@@ -206,7 +206,7 @@ export const allProjects: Array<Project> = [
     name: "XAR",
     shortName: "XAR",
     description: "The world's first spatial social platform with AR gaming experience.",
-    tags: ["social"],
+    tags: ["mobile"],
     image: "XAR.jpg",
     network: {
       website: "https://x.ar/",
@@ -567,7 +567,7 @@ export const allProjects: Array<Project> = [
     name: "Realms",
     shortName: "Realms",
     description: "Strategy gaming on steroids. Players & AI agents juggle war, trade & politics - chasing loot, $lords and lasting glory.",
-    tags: [],
+    tags: ["gamefi"],
     image: "Realms.png",
     network: {
       website: "https://realms.world/",
@@ -1042,7 +1042,7 @@ export const allProjects: Array<Project> = [
     name: "Horus Laps / Karst",
     shortName: "Horus Laps / Karst",
     description: "A blockchain development toolset that provides utilities for building, testing, and deploying decentralized applications, enhancing developer productivity and code quality.",
-    tags: ["tools"],
+    tags: ["mobile"],
     image: "Horus.jpg",
     network: {
       website: "https://www.horuslabs.co/",
@@ -1270,7 +1270,7 @@ export const allProjects: Array<Project> = [
     name: "Starknet Foundation",
     shortName: "Starknet Foundation",
     description: "The Starknet Foundation works to achieve @Starknet's vision of a thriving, decentralized, and permissionless Ethereum Layer 2 Validity Rollup",
-    tags: ["infrastructure"],
+    tags: ["governance"],
     image: "StarknetFoundation.png",
     network: {
       website: "https://www.starknet.org/",
@@ -1612,7 +1612,7 @@ export const allProjects: Array<Project> = [
     name: "Starknet.id",
     shortName: "Starknet.id",
     description: "Own your identity on Starknet. Register a .stark name, link it to your wallet, and use it across the ecosystem.",
-    tags: ["tools", "infrastructure"],
+    tags: ["nft"],
     image: "starknetid.png",
     network: {
       website: "https://starknet.id/",
@@ -1631,7 +1631,7 @@ export const allProjects: Array<Project> = [
     name: "Snapshot",
     shortName: "Snapshot",
     description: "Decentralized Trusted voting,",
-    tags: ["tools"],
+    tags: ["governance"],
     image: "Snapshot.jpg",
     network: {
       website: "https://snapshot.org/",
@@ -1935,7 +1935,7 @@ export const allProjects: Array<Project> = [
     name: "Focus Tree",
     shortName: "Focus Tree",
     description: "A web3 focus app to help you spend less time on your phone by growing a virtual garden.",
-    tags: ["social"],
+    tags: ["mobile"],
     image: "FocusTree.jpg",
     network: {
       website: "https://www.focustree.app/",
@@ -2334,7 +2334,7 @@ export const allProjects: Array<Project> = [
     name: "framethispeter",
     shortName: "framethispeter",
     description: "Mint any tweet and get it send to your starknet wallet as an nft, without leaving twitter.",
-    tags: ["social"],
+    tags: ["nft"],
     image: "FrameThisPeter.jpg",
     network: {
       website: "",
@@ -2410,7 +2410,7 @@ export const allProjects: Array<Project> = [
     name: "Belong",
     shortName: "Belong",
     description: "Token gating for communities and events, unites NFT memberships, content, and events into a private community with your own branding.",
-    tags: ["social"],
+    tags: ["nft"],
     image: "Belong.jpg",
     network: {
       website: "https://belong.net/",
@@ -2695,7 +2695,7 @@ export const allProjects: Array<Project> = [
     name: "Element Market",
     shortName: "Element Market",
     description: "The First Community-driven Aggregated Marketplace, the most gas-saving trading place for NFTs,",
-    tags: ["defi"],
+    tags: ["nft"],
     image: "Element.jpg",
     network: {
       website: "https://element.market",
@@ -2923,7 +2923,7 @@ export const allProjects: Array<Project> = [
     name: "Carve",
     shortName: "Carve",
     description: "The first no-code tool to create on-chain NFT collections",
-    tags: ["tools"],
+    tags: ["nft"],
     image: "Carve.jpg",
     network: {
       website: "https://carve.app/",
@@ -3151,7 +3151,7 @@ export const allProjects: Array<Project> = [
     name: "POW!",
     shortName: "POW!",
     description: "POW! is a fully onchain, open-source mobile game on Starknet that gamifies blockchain education through a fun clicker experience.",
-    tags: ["gamefi"],
+    tags: ["mobile"],
     image: "POW.jpg",
     network: {
       website: "https://www.pow-game.com/",
@@ -3777,7 +3777,7 @@ export const allProjects: Array<Project> = [
     name: "Tubbly",
     shortName: "Tubbly",
     description: "We are a mobile app that rewards users for visiting spots.",
-    tags: ["social"],
+    tags: ["mobile"],
     image: "Tubbly.jpg",
     network: {
       website: "https://www.tubbly.io/",
@@ -3834,7 +3834,7 @@ export const allProjects: Array<Project> = [
     name: "Starknet Governance Hub",
     shortName: "Starknet Governance Hub",
     description: "The Starknet Governance Hub is a platform for managing and executing Starknet's decentralized governance, where STRK token holders can participate in protocol upgrades by voting or delegating their voting power to others.",
-    tags: ["tools"],
+    tags: ["governance"],
     image: "StarknetGovernance.png",
     network: {
       website: "https://governance.starknet.io/",
@@ -3853,7 +3853,7 @@ export const allProjects: Array<Project> = [
     name: "Schizodio",
     shortName: "Schizodio",
     description: "Schizodio.",
-    tags: ["gamefi"],
+    tags: ["nft"],
     image: "Schizodio.jpg",
     network: {
       website: "https://schizodio.xyz/",
@@ -3872,7 +3872,7 @@ export const allProjects: Array<Project> = [
     name: "Wolf Nation",
     shortName: "Wolf Nation",
     description: "The baddest NFT collection on Starknet. 333 NFTs. One nation.",
-    tags: ["social"],
+    tags: ["nft"],
     image: "WolfNation.jpg",
     network: {
       website: "https://element.market/collections/wolf-nation?search[toggles][0]=ALL",
@@ -3891,7 +3891,7 @@ export const allProjects: Array<Project> = [
     name: "Karat",
     shortName: "Karat",
     description: "The first generative art collection on Starknet, made with Dojo.",
-    tags: ["gamefi"],
+    tags: ["nft"],
     image: "Karat",
     network: {
       website: "https://collect-code.com/karat",
@@ -3948,7 +3948,7 @@ export const allProjects: Array<Project> = [
     name: "Everai",
     shortName: "Everai",
     description: "Everais stand as the mightiest heroes of the Shodai civilization",
-    tags: ["gamefi"],
+    tags: ["nft"],
     image: "Everai.png",
     network: {
       website: "https://opensea.io/collection/everai",
@@ -3967,7 +3967,7 @@ export const allProjects: Array<Project> = [
     name: "Bloberts",
     shortName: "Bloberts",
     description: "Lootverse mysterious Oracle and squire for your digital Realm.",
-    tags: ["gamefi"],
+    tags: ["nft"],
     image: "Bloberts.jpg",
     network: {
       website: "https://element.market/collections/blobert",
@@ -3986,7 +3986,7 @@ export const allProjects: Array<Project> = [
     name: "Starkurabu",
     shortName: "Starkurabu",
     description: "Your customizable on-chain PFP on Starknet",
-    tags: ["social"],
+    tags: ["nft"],
     image: "Starkurabu.jpg",
     network: {
       website: "https://starkurabu.com/",
@@ -4005,7 +4005,7 @@ export const allProjects: Array<Project> = [
     name: "Ducks Everywhere",
     shortName: "Ducks Everywhere",
     description: "Handcrafted PFP collection of duuucks made of Briq by OutSmth",
-    tags: ["gamefi"],
+    tags: ["nft"],
     image: "DucksEverywhere.jpg",
     network: {
       website: "https://element.market/collections/ducks-everywhere?search[toggles][0]=ALL",
@@ -4290,7 +4290,7 @@ export const allProjects: Array<Project> = [
     name: "Stwo/Cairo",
     shortName: "Stwo/Cairo",
     description: "Prove Cairo programs with the blazing-fast S-Two prover, powered by the cryptographic breakthrough of Circle STARKs.",
-    tags: [],
+    tags: ["tools"],
     image: "StwoCairo.png",
     network: {
       website: "",
@@ -4309,7 +4309,7 @@ export const allProjects: Array<Project> = [
     name: "Karnot",
     shortName: "Karnot",
     description: "Deploy a Starknet app chain on production infrastructure in minutes. Harness the most powerful ZK technology for your applications, starting today.",
-    tags: [],
+    tags: ["infrastructure"],
     image: "Karnot.jpg",
     network: {
       website: "t.co/nPmG02X7Lf",
@@ -4328,7 +4328,7 @@ export const allProjects: Array<Project> = [
     name: "Train Protocol",
     shortName: "Train Protocol",
     description: "The TRAIN Protocol is a P2P system based on Atomic Swaps, enabling crypto asset bridging across blockchains, without third parties & open to any network.",
-    tags: [],
+    tags: ["bridge"],
     image: "TRAIN",
     network: {
       website: "https://www.train.tech/",
@@ -4347,7 +4347,7 @@ export const allProjects: Array<Project> = [
     name: "Midas",
     shortName: "Midas",
     description: "Institutional-grade assets built for the open web.",
-    tags: [],
+    tags: ["defi"],
     image: "Midas.jpg",
     network: {
       website: "https://midas.app/",
