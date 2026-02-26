@@ -1327,7 +1327,7 @@ export const allProjects: Array<Project> = [
     name: "Braavos",
     shortName: "Braavos",
     description: "Braavos is a self-custody wallet, empowering you to fully control your funds. Your keys, your coins.",
-    tags: ["wallet", "defi", "gamefi"],
+    tags: ["wallet"],
     image: "Braavos.jpg",
     network: {
       website: "https://braavos.app/",
@@ -2714,7 +2714,7 @@ export const allProjects: Array<Project> = [
     name: "Ready",
     shortName: "Ready",
     description: "Your onchain alternative to a bank. Get cashback on your spending, grow your savings, and spend globally with no fees.",
-    tags: ["wallet", "defi", "gamefi"],
+    tags: ["wallet"],
     image: "Ready.png",
     network: {
       website: "https://www.ready.co/",
@@ -2771,7 +2771,7 @@ export const allProjects: Array<Project> = [
     name: "OKX",
     shortName: "OKX",
     description: "A multi-chain, cross-chain decentralized exchange aggregator of 300+ other DEXs and approximately 15 bridges, with 200,000+ coins and more than 20 blockchains supported.,",
-    tags: ["DEX, wallet, multi-chain, cross-chain, OKX, bridge, blockchain", "wallet"],
+    tags: ["wallet", "defi", "bridge"],
     image: "OKX.jpg",
     network: {
       website: "https://www.okx.com/",
