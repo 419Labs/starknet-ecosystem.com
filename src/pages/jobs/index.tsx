@@ -118,7 +118,7 @@ const JobsPage: NextPage = () => {
     <>
     <Head>
       <title>{t.jobs?.seo_title || "Starknet Jobs | Build the Future of ZK"}</title>
-      <meta name="description" content={t.jobs?.seo_description || "Join the teams building Starknet. Core protocol, DeFi, gaming, and infrastructure roles at the Starknet Foundation, StarkWare, and 300+ ecosystem projects."} />
+      <meta name="description" content={t.jobs?.seo_description || "Join the teams building Starknet. Core protocol, DeFi, gaming, and infrastructure roles at the Starknet Foundation, StarkWare, and 200+ ecosystem projects."} />
       <meta property="og:title" content={t.jobs?.seo_title || "Starknet Jobs | Build the Future of ZK"} />
       <meta property="og:description" content={t.jobs?.seo_description || "Join the teams building Starknet. Core protocol, DeFi, gaming, and infrastructure roles."} />
       <meta property="og:type" content="website" />
