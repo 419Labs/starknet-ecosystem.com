@@ -1,5 +1,5 @@
 import { Box, Flex, Grid, HStack, Text, VStack } from "@chakra-ui/layout";
-import { Icon, Link as ChakraLink, Spinner } from "@chakra-ui/react";
+import { Icon, Link as ChakraLink } from "@chakra-ui/react";
 import Head from "next/head";
 import {
   faChartLine,
@@ -99,7 +99,16 @@ function MetricCard({
       </Text>
 
       {loading ? (
-        <Spinner size="sm" color="accent.500" />
+        <VStack align="flex-start" spacing={2} mt={1}>
+          <Box w="80%" h="24px" bg="whiteAlpha.100" borderRadius="2px" sx={{
+            animation: "skeletonPulse 1.5s ease-in-out infinite",
+            "@keyframes skeletonPulse": { "0%, 100%": { opacity: 0.4 }, "50%": { opacity: 1 } },
+          }} />
+          <Box w="50%" h="14px" bg="whiteAlpha.050" borderRadius="2px" sx={{
+            animation: "skeletonPulse 1.5s ease-in-out 0.2s infinite",
+            "@keyframes skeletonPulse": { "0%, 100%": { opacity: 0.4 }, "50%": { opacity: 1 } },
+          }} />
+        </VStack>
       ) : (
         <>
           <Text fontSize="24px" fontWeight="700" color="white" fontFamily="mono" lineHeight="1.2">
@@ -171,6 +180,8 @@ const MetricsPage: FC = () => {
   } | null>(null);
   const [btcPrice, setBtcPrice] = useState<number | null>(null);
   const [defiData, setDefiData] = useState<any>(null);
+  const [lastUpdated, setLastUpdated] = useState<Date | null>(null);
+  const [timeAgo, setTimeAgo] = useState<string>("");
 
   useEffect(() => {
     async function fetchAllData() {
@@ -236,6 +247,7 @@ const MetricsPage: FC = () => {
           fees30d: feesData?.total30d,
         });
 
+        setLastUpdated(new Date());
         setLoading(false);
       } catch (err) {
         console.error("Failed to fetch metrics:", err);
@@ -245,6 +257,20 @@ const MetricsPage: FC = () => {
 
     fetchAllData();
   }, []);
+
+  // Update "time ago" every 30s
+  useEffect(() => {
+    if (!lastUpdated) return;
+    const update = () => {
+      const seconds = Math.floor((Date.now() - lastUpdated.getTime()) / 1000);
+      if (seconds < 60) setTimeAgo("just now");
+      else if (seconds < 3600) setTimeAgo(`${Math.floor(seconds / 60)}m ago`);
+      else setTimeAgo(`${Math.floor(seconds / 3600)}h ago`);
+    };
+    update();
+    const interval = setInterval(update, 30000);
+    return () => clearInterval(interval);
+  }, [lastUpdated]);
 
   // Calculate staking TVL in USD using STRK price
   const strkPrice = strkData?.starknet?.usd || 0;
@@ -269,6 +295,11 @@ const MetricsPage: FC = () => {
               {t.metrics?.hero_eyebrow || "Live Dashboard"}
             </Text>
             <Box w="8px" h="8px" borderRadius="full" bg="#22C55E" boxShadow="0 0 10px #22C55E" />
+            {timeAgo && (
+              <Text fontSize="11px" color="gray.600">
+                Updated {timeAgo}
+              </Text>
+            )}
           </Flex>
           <Text
             as="h1"
