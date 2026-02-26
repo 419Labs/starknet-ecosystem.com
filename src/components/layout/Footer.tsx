@@ -2,6 +2,7 @@ import { Box, Flex, HStack, SimpleGrid, Text, VStack } from "@chakra-ui/layout";
 import { Icon } from "@chakra-ui/react";
 import { faGithub, faTelegram, faXTwitter } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Image from "next/image";
 
 import { useTranslate } from "../../context/TranslateProvider";
 
@@ -72,12 +73,12 @@ function Footer() {
           {/* Left side - Brand */}
           <VStack align="flex-start" spacing={6} maxW="400px">
             <HStack spacing={3}>
-              <Box
-                as="img"
-                src="/favicon-32x32.png"
+              <Image
+                src="/starknet-logo.png"
                 alt="Starknet"
-                w="40px"
-                h="40px"
+                width={40}
+                height={40}
+                quality={100}
               />
               <Text
                 fontSize="16px"

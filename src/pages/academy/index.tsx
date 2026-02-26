@@ -201,6 +201,14 @@ const AcademyPage: FC = () => {
       tag: t.academy?.starklings_tag || "Exercises",
       featured: true,
     },
+    {
+      title: t.academy?.cairo_coder_title || "Cairo Coder",
+      description: t.academy?.cairo_coder_desc || "AI-powered Cairo code generator. Use as an MCP server or integrate directly in your IDE.",
+      href: "https://www.cairo-coder.com/",
+      icon: faRobot,
+      tag: t.academy?.cairo_coder_tag || "AI",
+      featured: true,
+    },
   ];
 
   const documentation = [

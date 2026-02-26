@@ -141,8 +141,11 @@ function ProjectCard({
             name={project.name}
             src={project.network?.twitterImage || `/logos/${project.image}`}
             borderRadius="0"
-            border="1px solid"
-            borderColor="whiteAlpha.200"
+            sx={{
+              outline: "0.5px solid",
+              outlineColor: "whiteAlpha.300",
+              outlineOffset: "-0.5px",
+            }}
           />
 
           {project.isLive && (
@@ -540,7 +543,31 @@ const Home = () => {
             <Text fontSize="10px" color="gray.600" textTransform="uppercase" letterSpacing="0.2em">
               {t.common?.scroll || "Scroll"}
             </Text>
-            <Box w="1px" h="40px" bg="whiteAlpha.200" />
+            <Box
+              w="1px"
+              h="40px"
+              bg="whiteAlpha.200"
+              position="relative"
+              overflow="hidden"
+            >
+              <Box
+                position="absolute"
+                top="-12px"
+                left={0}
+                w="1px"
+                h="12px"
+                bg="accent.500"
+                sx={{
+                  animation: "scrollGlow 1.5s ease-in-out infinite",
+                  "@keyframes scrollGlow": {
+                    "0%": { top: "-12px", opacity: 0 },
+                    "20%": { opacity: 1 },
+                    "80%": { opacity: 1 },
+                    "100%": { top: "40px", opacity: 0 },
+                  },
+                }}
+              />
+            </Box>
           </VStack>
         </MotionBox>
 
