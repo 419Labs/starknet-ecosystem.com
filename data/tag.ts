@@ -171,14 +171,34 @@ export const allEcosystemTags: Tag[] = [
     icon: "gamepad",
   },
   {
+    value: "governance",
+    label: "Governance",
+    icon: "landmark",
+  },
+  {
     value: "infrastructure",
     label: "Infrastructure",
     icon: "road",
   },
   {
+    value: "mobile",
+    label: "Mobile",
+    icon: "mobile-screen-button",
+  },
+  {
+    value: "nft",
+    label: "NFT",
+    icon: "image",
+  },
+  {
     value: "payments",
     label: "Payments",
     icon: "credit-card",
+  },
+  {
+    value: "privacy",
+    label: "Privacy",
+    icon: "user-shield",
   },
   {
     value: "security",

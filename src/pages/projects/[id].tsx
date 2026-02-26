@@ -1,4 +1,4 @@
-import { Box, Flex, HStack, SimpleGrid, Text, VStack } from "@chakra-ui/layout";
+import { Box, Flex, Grid, HStack, SimpleGrid, Text, VStack } from "@chakra-ui/layout";
 import { Avatar, Icon, Image, Link as ChakraLink } from "@chakra-ui/react";
 import { faArrowLeft, faGlobe, faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { faXTwitter, faDiscord, faGithub, faTelegram } from "@fortawesome/free-brands-svg-icons";
@@ -15,9 +15,22 @@ import FourOhFour from "../404";
 
 interface ProjectPageProps {
   project: Project | null;
+  relatedProjects: Project[];
 }
 
-const ProjectPage: FC<ProjectPageProps> = ({ project }) => {
+// Broad technical buckets can overpower business-category relevance (e.g. "defi").
+// Prefer specific tags when available for "related projects".
+const GENERIC_RELATED_TAGS = new Set(["all", "infrastructure", "tools", "security"]);
+const FORCE_LOCAL_LOGO_PROJECT_IDS = new Set(["a7e1c712-84a2-4457-8610-1cab7af37b16"]);
+
+const getProjectLogoSrc = (project: Pick<Project, "id" | "image" | "network">): string => {
+  if (FORCE_LOCAL_LOGO_PROJECT_IDS.has(project.id)) {
+    return `/logos/${project.image}`;
+  }
+  return project.network?.twitterImage || `/logos/${project.image}`;
+};
+
+const ProjectPage: FC<ProjectPageProps> = ({ project, relatedProjects }) => {
   const router = useRouter();
   const currentLocale = router.locale || "en";
   if (!project) return <FourOhFour />;
@@ -106,11 +119,8 @@ const ProjectPage: FC<ProjectPageProps> = ({ project }) => {
             <Avatar
               size="xl"
               name={project.name}
-              src={project.network?.twitterImage || `/logos/${project.image}`}
+              src={getProjectLogoSrc(project)}
               borderRadius="0"
-              border="1px solid"
-              borderColor="whiteAlpha.200"
-              bg="accent.500"
             />
             <VStack align="start" spacing={1}>
               <HStack spacing={3}>
@@ -249,6 +259,50 @@ const ProjectPage: FC<ProjectPageProps> = ({ project }) => {
             </ChakraLink>
           </Box>
         )}
+
+        {/* Related Projects */}
+        {relatedProjects.length > 0 && (
+          <Box mt={16} pt={12} borderTop="1px solid" borderColor="whiteAlpha.100">
+            <Text fontSize="lg" fontWeight="700" color="white" mb={6} letterSpacing="-0.02em">
+              Related Projects
+            </Text>
+            <Grid templateColumns={{ base: "1fr", md: "repeat(2, 1fr)", lg: "repeat(3, 1fr)" }} gap={0}>
+              {relatedProjects.map((related) => (
+                <ChakraLink
+                  key={related.id}
+                  href={`/${currentLocale}/projects/${related.id}`}
+                  _hover={{ textDecoration: "none" }}
+                >
+                  <Flex
+                    p={5}
+                    border="1px solid"
+                    borderColor="whiteAlpha.100"
+                    align="center"
+                    gap={4}
+                    _hover={{ borderColor: "accent.500", bg: "whiteAlpha.025" }}
+                    transition="all 0.2s ease"
+                    cursor="pointer"
+                  >
+                    <Avatar
+                      size="md"
+                      name={related.name}
+                      src={getProjectLogoSrc(related)}
+                      borderRadius="0"
+                    />
+                    <VStack align="start" spacing={0} flex={1} minW={0}>
+                      <Text fontSize="14px" fontWeight="600" color="white" noOfLines={1}>
+                        {related.name}
+                      </Text>
+                      <Text fontSize="11px" color="gray.500" noOfLines={1}>
+                        {related.tags?.slice(0, 2).join(" · ")}
+                      </Text>
+                    </VStack>
+                  </Flex>
+                </ChakraLink>
+              ))}
+            </Grid>
+          </Box>
+        )}
       </Box>
     </Box>
     </>
@@ -271,9 +325,46 @@ export const getServerSideProps: GetServerSideProps<ProjectPageProps> = async (
       return { notFound: true };
     }
 
+    // Fetch related projects by matching tags
+    let relatedProjects: Project[] = [];
+    try {
+      const allProjects = await EcosystemApi.fetchEcosystemProjects(1000);
+      const projectTags = project.tags || [];
+      const specificTags = projectTags.filter((tag) => !GENERIC_RELATED_TAGS.has(tag));
+      const tagsToMatch = specificTags.length > 0 ? specificTags : projectTags;
+
+      relatedProjects = allProjects
+        .filter(
+          (p) =>
+            p.id !== project.id &&
+            !p.isHidden &&
+            (p.isLive || p.isTestnetLive) &&
+            p.tags?.some((tag: string) => tagsToMatch.includes(tag)),
+        )
+        .sort(
+          (a, b) => {
+            const aSharedCount = a.tags?.filter((tag) => tagsToMatch.includes(tag)).length || 0;
+            const bSharedCount = b.tags?.filter((tag) => tagsToMatch.includes(tag)).length || 0;
+
+            if (bSharedCount !== aSharedCount) {
+              return bSharedCount - aSharedCount;
+            }
+
+            return (
+              (b.socialMetrics?.twitterFollower || 0) -
+              (a.socialMetrics?.twitterFollower || 0)
+            );
+          },
+        )
+        .slice(0, 6);
+    } catch {
+      // Non-critical, continue without related projects
+    }
+
     return {
       props: {
         project,
+        relatedProjects,
       },
     };
   } catch (error) {

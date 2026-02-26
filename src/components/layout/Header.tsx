@@ -2,6 +2,7 @@ import { Box, Flex, HStack, Text } from "@chakra-ui/layout";
 import { Button, Hide, Icon, IconButton, Show, Menu, MenuButton, MenuList, MenuItem, Link as ChakraLink } from "@chakra-ui/react";
 import { faBars, faArrowRight, faChevronDown, faGlobe } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Image from "next/image";
 import { useRouter } from "next/router";
 import { useState, useEffect, useRef } from "react";
 
@@ -239,12 +240,12 @@ function Header() {
         {/* Logo */}
         <Link href={`/${locale}`}>
           <HStack spacing={3} cursor="pointer">
-            <Box
-              as="img"
-              src="/favicon-32x32.png"
+            <Image
+              src="/starknet-logo.png"
               alt="Starknet"
-              w="32px"
-              h="32px"
+              width={32}
+              height={32}
+              quality={100}
             />
             <Text
               fontSize="14px"
