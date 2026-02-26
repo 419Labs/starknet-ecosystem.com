@@ -30,10 +30,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "framer-motion";
 import Head from "next/head";
 import type { ChangeEvent } from "react";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import useSWR from "swr";
 
-import type { Project, ProjectItf } from "../../data/ecosystem";
+import type { ProjectItf } from "../../data/ecosystem";
+import { allProjects as staticProjects, type Project } from "../../data/ecosystem";
 import type { Tag } from "../../data/tag";
 import { allEcosystemTags } from "../../data/tag";
 import { useTranslate } from "../context/TranslateProvider";
@@ -296,7 +297,7 @@ const Home = () => {
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [keyword, setKeyword] = useState<string>("");
 
-  const { data: allProjects = [], isLoading: loading } = useSWR(
+  const { data: apiProjects = [], isLoading: loading } = useSWR(
     "ecosystem-projects",
     () => EcosystemApi.fetchEcosystemProjects(1000),
     {
@@ -304,6 +305,13 @@ const Home = () => {
       dedupingInterval: 300000, // 5 min dedup
     },
   );
+
+  // Merge static-only projects (e.g. strkBTC) that don't exist in the API yet
+  const allProjects = useMemo(() => {
+    const apiIds = new Set(apiProjects.map((p) => p.id));
+    const missing = staticProjects.filter((p) => !apiIds.has(p.id));
+    return [...missing, ...apiProjects];
+  }, [apiProjects]);
 
   useEffect(() => {
     const matchingProjects = allProjects
@@ -567,6 +575,7 @@ const Home = () => {
       {/* Ecosystem Highlights -Auto-scrolling carousel */}
       {!loading && allProjects.length > 0 && (() => {
         const featuredIds = [
+          "dcaeb5bb-2fcd-4ec0-af01-e0d83704cd77", // strkBTC
           "84904055-cb72-407f-996a-d7aafe287372", // Loot Survivor
           "502b0dbc-5169-4db6-8796-36a968a798fd", // avnu
           "1b1fedb8-3e97-4288-91e8-7a0c39e5be66", // Vesu
@@ -588,13 +597,15 @@ const Home = () => {
 
         // Override buggy API descriptions
         const descriptionOverrides: Record<string, string> = {
+          "dcaeb5bb-2fcd-4ec0-af01-e0d83704cd77":
+            "Shielded Bitcoin on Starknet. Private transactions and balances powered by ZK-STARKs. The privacy layer Bitcoin was missing.",
           "502b0dbc-5169-4db6-8796-36a968a798fd":
             "Starknet's liquidity layer. Best-price swaps, DCA, gasless transactions, and market data powering 50+ wallets and dApps.",
         };
 
         const featured = featuredIds
           .map((id) => {
-            const project = allProjects.find((p) => p.id === id);
+            const project = allProjects.find((p) => p.id === id) || staticProjects.find((p) => p.id === id);
             if (project && descriptionOverrides[id]) {
               return { ...project, description: descriptionOverrides[id] };
             }

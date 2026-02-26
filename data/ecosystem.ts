@@ -32,6 +32,25 @@ export interface ProjectItf extends Project {
 
 export const allProjects: Array<Project> = [
   {
+    id: "dcaeb5bb-2fcd-4ec0-af01-e0d83704cd77",
+    name: "strkBTC",
+    shortName: "strkBTC",
+    description:
+      "Starknet's shielded Bitcoin. The first wrapped BTC with built-in privacy — hold, transfer, and use Bitcoin privately on Starknet, powered by ZK-STARKs.",
+    tags: ["defi"],
+    image: "strkbtc.png",
+    network: {
+      website: "https://strkbtc.starknet.io/",
+      github: "",
+      twitter: "https://x.com/Starknet",
+      medium: "",
+      discord: "",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
+  {
     id: "4e31e6ed-b3cf-45e0-ae09-f6d29e520bf7",
     name: "OnChainGM",
     shortName: "OnChainGM",

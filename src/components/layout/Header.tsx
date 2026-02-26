@@ -214,6 +214,8 @@ function Header() {
     { href: `/${locale}/jobs`, label: t.header?.jobs || "Jobs", path: "/jobs" },
   ];
 
+  const isHomepage = pathname === "/";
+
   return (
     <Box
       position="fixed"
@@ -223,6 +225,87 @@ function Header() {
       zIndex={1000}
       transition="all 0.3s ease"
     >
+      {/* strkBTC Announcement Bar */}
+      {isHomepage && (
+        <ChakraLink
+          href="https://strkbtc.starknet.io/"
+          isExternal
+          _hover={{ textDecoration: "none" }}
+          display="block"
+        >
+          <Flex
+            w="full"
+            h={{ base: "36px", md: "40px" }}
+            align="center"
+            justify="center"
+            gap={{ base: 2, md: 3 }}
+            px={4}
+            bg="gray.900"
+            borderBottom="1px solid"
+            borderColor="accent.200"
+            _hover={{ borderColor: "accent.500" }}
+            transition="border-color 0.2s ease"
+            cursor="pointer"
+            role="group"
+          >
+            <Flex
+              align="center"
+              gap={1.5}
+              flexShrink={0}
+            >
+              <Box
+                w="6px"
+                h="6px"
+                borderRadius="full"
+                bg="accent.500"
+                boxShadow="0 0 8px rgba(255, 107, 53, 0.5)"
+              />
+              <Text
+                fontSize="10px"
+                fontWeight="700"
+                color="accent.500"
+                fontFamily="var(--font-geist-pixel-square)"
+                textTransform="uppercase"
+                letterSpacing="0.15em"
+              >
+                NEW
+              </Text>
+            </Flex>
+            <Box
+              w="1px"
+              h="14px"
+              bg="whiteAlpha.200"
+              flexShrink={0}
+              display={{ base: "none", md: "block" }}
+            />
+            <Text
+              fontSize={{ base: "12px", md: "13px" }}
+              color="gray.200"
+              fontWeight="400"
+              letterSpacing="-0.01em"
+            >
+              Bitcoin just got privacy.{" "}
+              <Text
+                as="span"
+                fontWeight="600"
+                color="white"
+              >
+                Discover strkBTC
+              </Text>
+            </Text>
+            <Icon
+              as={FontAwesomeIcon}
+              icon={faArrowRight}
+              color="accent.500"
+              boxSize={3}
+              flexShrink={0}
+              transition="transform 0.2s ease"
+              _groupHover={{ transform: "translateX(2px)" }}
+            />
+          </Flex>
+        </ChakraLink>
+      )}
+
       <Flex
         w="full"
         py={3}

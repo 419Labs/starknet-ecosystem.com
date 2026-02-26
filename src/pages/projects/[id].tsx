@@ -9,6 +9,7 @@ import { useRouter } from "next/router";
 import type { FC } from "react";
 
 import type { Project } from "../../../data/ecosystem";
+import { allProjects as staticProjects } from "../../../data/ecosystem";
 import ProjectsInfos from "../../components/project/ProjectsInfos";
 import { EcosystemApi } from "../../services/ecosystem-api.service";
 import FourOhFour from "../404";
@@ -267,17 +268,23 @@ export const getServerSideProps: GetServerSideProps<ProjectPageProps> = async (
   try {
     const project = await EcosystemApi.fetchProjectById(projectId);
 
-    if (!project || project.isHidden) {
-      return { notFound: true };
+    if (project && !project.isHidden) {
+      return { props: { project } };
     }
 
-    return {
-      props: {
-        project,
-      },
-    };
-  } catch (error) {
-    console.error(`Failed to fetch project ${projectId}:`, error);
+    // API returned null (404) — fall back to static data
+    const staticProject = staticProjects.find((p) => p.id === projectId);
+    if (staticProject && !staticProject.isHidden) {
+      return { props: { project: staticProject } };
+    }
+
+    return { notFound: true };
+  } catch {
+    // Network/server error — try static data before giving up
+    const staticProject = staticProjects.find((p) => p.id === projectId);
+    if (staticProject && !staticProject.isHidden) {
+      return { props: { project: staticProject } };
+    }
     return { notFound: true };
   }
 };

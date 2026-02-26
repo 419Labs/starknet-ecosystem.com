@@ -15,8 +15,11 @@ const fetchEcosystemProjects = (size: number): Promise<Project[]> =>
       return projects.filter((project: Project) => !project.isHidden);
     });
 
-const fetchProjectById = (id: string): Promise<Project> =>
+const fetchProjectById = (id: string): Promise<Project | null> =>
   fetch(`${STARKNET_DB_BASE_URL}/projects/${id}`).then((response: Response) => {
+    if (response.status === 404) {
+      return null;
+    }
     if (!response.ok) {
       throw new Error(`${response.statusText} while fetching project`);
     }
