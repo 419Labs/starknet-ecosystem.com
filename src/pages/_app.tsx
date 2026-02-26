@@ -28,6 +28,7 @@ dayjs.extend(duration);
 
 const COOKIE_CONSENT_KEY = "cookies-consent";
 const SITE_URL = "https://www.starknet-ecosystem.com";
+const OG_IMAGE_PATH = "/og-image.png";
 const LOCALES = ["en", "es", "zh_CN", "ko", "ja", "fr", "de", "tr", "pt", "it", "pl", "zh_TW"];
 
 const ORGANIZATION_JSONLD = {
@@ -44,7 +45,7 @@ const WEBSITE_JSONLD = {
   "@type": "WebSite",
   name: "Starknet Ecosystem",
   url: SITE_URL,
-  description: "The complete guide to the Starknet ecosystem. Explore 300+ live projects across DeFi, gaming, infrastructure, and more.",
+  description: "The complete guide to the Starknet ecosystem. Explore 200+ live projects across DeFi, gaming, infrastructure, and more.",
 };
 
 function StarknetEcosystem({ Component, pageProps }: AppProps) {
@@ -84,13 +85,13 @@ function StarknetEcosystem({ Component, pageProps }: AppProps) {
     <Head>
       <link rel="canonical" href={canonicalUrl} />
       <meta property="og:url" content={canonicalUrl} />
-      <meta property="og:image" content={`${SITE_URL}/og-image.png`} />
+      <meta property="og:image" content={OG_IMAGE_PATH} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
       <meta property="og:image:alt" content="Starknet Ecosystem — Explore, Build, Ship" />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content="@StarknetEco" />
-      <meta name="twitter:image" content={`${SITE_URL}/og-image.png`} />
+      <meta name="twitter:image" content={OG_IMAGE_PATH} />
       {LOCALES.map((loc) => (
         <link
           key={loc}

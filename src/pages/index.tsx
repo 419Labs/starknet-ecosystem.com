@@ -30,7 +30,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "framer-motion";
 import Head from "next/head";
 import type { ChangeEvent } from "react";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import useSWR from "swr";
 
 import type { Project, ProjectItf } from "../../data/ecosystem";
@@ -48,6 +48,14 @@ import {
 const MotionBox = motion.create(Box);
 const MotionText = motion.create(Text);
 const MotionFlex = motion.create(Flex);
+const FORCE_LOCAL_LOGO_PROJECT_IDS = new Set(["a7e1c712-84a2-4457-8610-1cab7af37b16"]);
+
+const getProjectLogoSrc = (project: Pick<Project, "id" | "image" | "network">): string => {
+  if (FORCE_LOCAL_LOGO_PROJECT_IDS.has(project.id)) {
+    return `/logos/${project.image}`;
+  }
+  return project.network?.twitterImage || `/logos/${project.image}`;
+};
 
 // Pill component for categories
 function Pill({
@@ -138,13 +146,8 @@ function ProjectCard({
           <Avatar
             size="lg"
             name={project.name}
-            src={project.network?.twitterImage || `/logos/${project.image}`}
+            src={getProjectLogoSrc(project)}
             borderRadius="0"
-            sx={{
-              outline: "0.5px solid",
-              outlineColor: "whiteAlpha.300",
-              outlineOffset: "-0.5px",
-            }}
           />
 
           {project.isLive && (
@@ -298,6 +301,8 @@ const Home = () => {
   const [filteredProjectsCount, setFilteredProjectsCount] = useState<number>(-1);
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [keyword, setKeyword] = useState<string>("");
+  const [searchFocused, setSearchFocused] = useState(false);
+  const searchRef = useRef<HTMLDivElement>(null);
 
   const { data: allProjects = [], isLoading: loading } = useSWR(
     "ecosystem-projects",
@@ -353,6 +358,24 @@ const Home = () => {
     setCurrentPage(1);
   }, [filter, keyword]);
 
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (searchRef.current && !searchRef.current.contains(e.target as Node)) {
+        setSearchFocused(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  const searchPreview = useMemo(() => {
+    if (!keyword.trim() || loading) return [];
+    return allProjects
+      .filter((p) => (p.isLive || p.isTestnetLive) && projectIncludesKeyword(p, keyword))
+      .sort((a, b) => getProjectRelevanceScore(b, keyword) - getProjectRelevanceScore(a, keyword))
+      .slice(0, 5);
+  }, [keyword, allProjects, loading]);
+
   const totalPages = Math.ceil(filteredProjectsCount / ITEMS_PER_PAGE);
 
   const handleChangeKeyword = (event: ChangeEvent<HTMLInputElement>) =>
@@ -363,10 +386,10 @@ const Home = () => {
   return (
     <>
     <Head>
-      <title>Starknet Ecosystem | Explore 300+ Projects Building on ZK</title>
-      <meta name="description" content="The complete guide to the Starknet ecosystem. Explore 300+ live projects across DeFi, gaming, infrastructure, and more. Powered by avnu." />
-      <meta property="og:title" content="Starknet Ecosystem | Explore 300+ Projects Building on ZK" />
-      <meta property="og:description" content="The complete guide to the Starknet ecosystem. Explore 300+ live projects across DeFi, gaming, infrastructure, and more." />
+      <title>Starknet Ecosystem | Explore 200+ Projects Building on ZK</title>
+      <meta name="description" content="The complete guide to the Starknet ecosystem. Explore 200+ live projects across DeFi, gaming, infrastructure, and more. Powered by avnu." />
+      <meta property="og:title" content="Starknet Ecosystem | Explore 200+ Projects Building on ZK" />
+      <meta property="og:description" content="The complete guide to the Starknet ecosystem. Explore 200+ live projects across DeFi, gaming, infrastructure, and more." />
       <meta property="og:type" content="website" />
     </Head>
     <Box w="full" bg="black" minH="100vh" position="relative" overflow="hidden">
@@ -690,7 +713,7 @@ const Home = () => {
                             <Avatar
                               size="sm"
                               name={project.name}
-                              src={project.network?.twitterImage || `/logos/${project.image}`}
+                              src={getProjectLogoSrc(project)}
                               borderRadius="0"
                             />
                             <VStack align="flex-start" spacing={0}>
@@ -745,28 +768,87 @@ const Home = () => {
           </VStack>
 
           {/* Search */}
-          <InputGroup maxW={{ base: "full", lg: "400px" }} size="lg">
-            <InputLeftElement pointerEvents="none" h="full">
-              <Icon as={FontAwesomeIcon} icon={faSearch} color="gray.600" />
-            </InputLeftElement>
-            <Input
-              placeholder={t.common?.search || "Search..."}
-              onChange={handleChangeKeyword}
-              bg="transparent"
-              border="1px solid"
-              borderColor="whiteAlpha.200"
-              borderRadius="0"
-              h="56px"
-              fontSize="14px"
-              color="white"
-              _placeholder={{ color: "gray.600" }}
-              _hover={{ borderColor: "whiteAlpha.400" }}
-              _focus={{
-                borderColor: "accent.500",
-                boxShadow: "none",
-              }}
-            />
-          </InputGroup>
+          <Box ref={searchRef} position="relative" maxW={{ base: "full", lg: "400px" }} w="full">
+            <InputGroup size="lg">
+              <InputLeftElement pointerEvents="none" h="full">
+                <Icon as={FontAwesomeIcon} icon={faSearch} color="gray.600" />
+              </InputLeftElement>
+              <Input
+                placeholder={t.common?.search || "Search..."}
+                onChange={handleChangeKeyword}
+                onFocus={() => setSearchFocused(true)}
+                bg="transparent"
+                border="1px solid"
+                borderColor="whiteAlpha.200"
+                borderRadius="0"
+                h="56px"
+                fontSize="14px"
+                color="white"
+                _placeholder={{ color: "gray.600" }}
+                _hover={{ borderColor: "whiteAlpha.400" }}
+                _focus={{
+                  borderColor: "accent.500",
+                  boxShadow: "none",
+                }}
+              />
+            </InputGroup>
+
+            {searchFocused && keyword.trim() && (
+              <Box
+                position="absolute"
+                top="100%"
+                left={0}
+                right={0}
+                bg="gray.900"
+                border="1px solid"
+                borderColor="whiteAlpha.200"
+                borderTop="none"
+                zIndex={20}
+                maxH="320px"
+                overflowY="auto"
+              >
+                {searchPreview.length > 0 ? (
+                  searchPreview.map((project) => (
+                    <ChakraLink
+                      key={project.id}
+                      href={`/${activeLocale}/projects/${project.id}`}
+                      _hover={{ textDecoration: "none" }}
+                    >
+                      <HStack
+                        px={4}
+                        py={3}
+                        spacing={3}
+                        _hover={{ bg: "whiteAlpha.100" }}
+                        transition="background 0.15s ease"
+                        cursor="pointer"
+                      >
+                        <Avatar
+                          size="sm"
+                          name={project.name}
+                          src={getProjectLogoSrc(project)}
+                          borderRadius="0"
+                        />
+                        <VStack align="start" spacing={0} flex={1} minW={0}>
+                          <Text fontSize="14px" fontWeight="600" color="white" noOfLines={1}>
+                            {project.name}
+                          </Text>
+                          <Text fontSize="11px" color="gray.500" noOfLines={1}>
+                            {project.tags?.slice(0, 2).join(" · ")}
+                          </Text>
+                        </VStack>
+                      </HStack>
+                    </ChakraLink>
+                  ))
+                ) : (
+                  <Box px={4} py={4}>
+                    <Text fontSize="13px" color="gray.500">
+                      {t.common?.no_projects_found || "No projects found"}
+                    </Text>
+                  </Box>
+                )}
+              </Box>
+            )}
+          </Box>
         </Flex>
 
         {/* Filters */}
