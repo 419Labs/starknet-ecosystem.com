@@ -39,6 +39,7 @@ import type { Tag } from "../../data/tag";
 import { allEcosystemTags } from "../../data/tag";
 import { useTranslate } from "../context/TranslateProvider";
 import { EcosystemApi } from "../services/ecosystem-api.service";
+import { getProjectLogoSrc } from "../services/project-logo";
 import {
   getProjectRelevanceScore,
   projectIncludesKeyword,
@@ -49,14 +50,6 @@ import {
 const MotionBox = motion.create(Box);
 const MotionText = motion.create(Text);
 const MotionFlex = motion.create(Flex);
-const FORCE_LOCAL_LOGO_PROJECT_IDS = new Set(["a7e1c712-84a2-4457-8610-1cab7af37b16"]);
-
-const getProjectLogoSrc = (project: Pick<Project, "id" | "image" | "network">): string => {
-  if (FORCE_LOCAL_LOGO_PROJECT_IDS.has(project.id)) {
-    return `/logos/${project.image}`;
-  }
-  return project.network?.twitterImage || `/logos/${project.image}`;
-};
 
 // Pill component for categories
 function Pill({
@@ -109,7 +102,6 @@ function ProjectCard({
   index: number;
   locale: string;
 }) {
-  const [isHovered, setIsHovered] = useState(false);
   const { t } = useTranslate();
 
   return (
@@ -121,24 +113,26 @@ function ProjectCard({
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4, delay: index * 0.02 }}
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
         h="280px"
         bg="transparent"
         border="1px solid"
-        borderColor={isHovered ? "accent.500" : "whiteAlpha.100"}
+        borderColor="whiteAlpha.100"
         borderRadius="0"
         p={6}
         position="relative"
         cursor="pointer"
         overflow="hidden"
         role="group"
+        _hover={{
+          borderColor: "accent.500",
+          _before: { opacity: 1 },
+        }}
         _before={{
           content: '""',
           position: "absolute",
           inset: 0,
           bg: "linear-gradient(180deg, transparent 0%, rgba(255, 107, 53, 0.03) 100%)",
-          opacity: isHovered ? 1 : 0,
+          opacity: 0,
           transition: "opacity 0.3s ease",
         }}
       >
@@ -215,9 +209,10 @@ function ProjectCard({
           right={6}
           justify="space-between"
           align="center"
-          opacity={isHovered ? 1 : 0}
-          transform={isHovered ? "translateY(0)" : "translateY(10px)"}
+          opacity={0}
+          transform="translateY(10px)"
           transition="all 0.3s ease"
+          _groupHover={{ opacity: 1, transform: "translateY(0)" }}
         >
           <HStack spacing={4}>
             {project.network?.twitter && (
@@ -287,6 +282,145 @@ function SkeletonCard() {
   );
 }
 
+// Ecosystem Highlights - Auto-scrolling carousel
+function EcosystemHighlights({
+  allProjects,
+  locale,
+  t,
+}: {
+  allProjects: Project[];
+  locale: string;
+  t: any;
+}) {
+  const featuredIds = [
+    "dcaeb5bb-2fcd-4ec0-af01-e0d83704cd77", // strkBTC
+    "84904055-cb72-407f-996a-d7aafe287372", // Loot Survivor
+    "502b0dbc-5169-4db6-8796-36a968a798fd", // avnu
+    "1b1fedb8-3e97-4288-91e8-7a0c39e5be66", // Vesu
+    "a7e1c712-84a2-4457-8610-1cab7af37b16", // Endurfi
+    "ba85310d-c82c-43c5-a42c-6479f8946b98", // Ekubo
+    "00afa40f-f1a7-4cb3-a979-13c501ae9b17", // Uncap
+    "8df27359-f05d-439b-8592-ca1b61cf049c", // Ready
+    "eb131b7d-3ab9-44d4-b3f0-ef02d08b8379", // Nostra
+    "f22a3d11-9c55-4d6f-98c3-b56230589def", // Braavos
+    "00b21789-6562-43bd-a75e-f2be48590853", // LayerAkira
+    "8563314d-f31d-4e5a-a372-915a4f11518f", // Realms
+    "5b7f1fde-5642-4bfd-ab11-8b10c7c1ae1b", // Cartridge
+    "1c57849c-ae23-400a-b9d5-6f909894ae86", // Dojo
+    "c95cdd9c-a151-4b3b-b43b-8f023e77f634", // Xverse
+    "8d0d1cc3-af7e-48ab-aa22-bef4ede008df", // Pragma
+    "071a6e9b-08f9-4f65-9da9-3e8866731439", // Extended
+    "5cec890e-fc90-48d0-b7eb-011b6a0dc13b", // Voyager
+  ];
+
+  const descriptionOverrides: Record<string, string> = {
+    "dcaeb5bb-2fcd-4ec0-af01-e0d83704cd77":
+      "Shielded Bitcoin on Starknet. Private transactions and balances powered by ZK-STARKs. The privacy layer Bitcoin was missing.",
+    "502b0dbc-5169-4db6-8796-36a968a798fd":
+      "Starknet's liquidity layer. Best-price swaps, DCA, gasless transactions, and market data powering 50+ wallets and dApps.",
+  };
+
+  const featured = featuredIds
+    .map((id) => {
+      const project = allProjects.find((p) => p.id === id) || staticProjects.find((p) => p.id === id);
+      if (project && descriptionOverrides[id]) {
+        return { ...project, description: descriptionOverrides[id] };
+      }
+      return project;
+    })
+    .filter(Boolean) as Project[];
+
+  const cardWidth = "280px";
+  const gap = "16px";
+
+  return (
+    <Box py={20} borderTop="1px solid" borderColor="whiteAlpha.100" overflow="hidden">
+      <Text
+        fontSize="11px"
+        color="gray.500"
+        textTransform="uppercase"
+        letterSpacing="0.15em"
+        mb={10}
+        textAlign="center"
+      >
+        {t.common?.powering_ecosystem || "Powering the ecosystem"}
+      </Text>
+
+      <Flex
+        overflow="hidden"
+        role="group"
+        pb="1px"
+        sx={{
+          "--gap": gap,
+          "--duration": `${featured.length * 4}s`,
+        }}
+        gap="var(--gap)"
+      >
+        {MARQUEE_GROUP_KEYS.map((groupKey) => (
+            <Flex
+              key={groupKey}
+              className="animate-marquee"
+              shrink={0}
+              gap="var(--gap)"
+              sx={{
+                willChange: "transform",
+                backfaceVisibility: "hidden",
+                "[role=group]:hover &": {
+                  animationPlayState: "paused",
+                },
+              }}
+            >
+              {featured.map((project) => (
+                <ChakraLink
+                  key={project.id}
+                  href={`/${locale}/projects/${project.id}`}
+                  _hover={{ textDecoration: "none" }}
+                  flexShrink={0}
+                  w={cardWidth}
+                >
+                  <Flex
+                    direction="column"
+                    p={6}
+                    border="1px solid"
+                    borderColor="whiteAlpha.100"
+                    _hover={{ borderColor: "accent.500", bg: "whiteAlpha.025" }}
+                    transition="border-color 0.2s ease, background 0.2s ease"
+                    h="full"
+                  >
+                    <HStack spacing={3} mb={3}>
+                      <Avatar
+                        size="sm"
+                        name={project.name}
+                        src={getProjectLogoSrc(project)}
+                        borderRadius="0"
+                      />
+                      <VStack align="flex-start" spacing={0}>
+                        <Text fontSize="14px" fontWeight="600" color="white">
+                          {project.name}
+                        </Text>
+                        <Text fontSize="11px" color="gray.600" textTransform="uppercase" letterSpacing="0.05em">
+                          {project.tags[0]}
+                        </Text>
+                      </VStack>
+                    </HStack>
+                    <Text
+                      fontSize="13px"
+                      color="gray.500"
+                      lineHeight="1.5"
+                      noOfLines={2}
+                    >
+                      {project.description}
+                    </Text>
+                  </Flex>
+                </ChakraLink>
+              ))}
+            </Flex>
+          ))}
+      </Flex>
+    </Box>
+  );
+}
+
 const ITEMS_PER_PAGE = 24;
 const MARQUEE_GROUP_KEYS = ["group-a", "group-b", "group-c", "group-d"] as const;
 const SKELETON_KEYS = Array.from({ length: ITEMS_PER_PAGE }, (_, index) => `skeleton-${index + 1}`);
@@ -298,12 +432,17 @@ const Home = () => {
   const tagAll = allEcosystemTags[0];
   const [filter, setFilter] = useState(tagAll);
   const sorter = ProjectSorting.TWITTER;
-  const [projects, setProjects] = useState<ProjectItf[]>([]);
-  const [filteredProjectsCount, setFilteredProjectsCount] = useState<number>(-1);
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [keyword, setKeyword] = useState<string>("");
+  const [debouncedKeyword, setDebouncedKeyword] = useState<string>("");
   const [searchFocused, setSearchFocused] = useState(false);
   const searchRef = useRef<HTMLDivElement>(null);
+
+  // Debounce search preview to avoid filtering 1000+ projects on every keystroke
+  useEffect(() => {
+    const timer = setTimeout(() => setDebouncedKeyword(keyword), 150);
+    return () => clearTimeout(timer);
+  }, [keyword]);
 
   const { data: apiProjects = [], isLoading: loading } = useSWR(
     "ecosystem-projects",
@@ -321,7 +460,7 @@ const Home = () => {
     return [...missing, ...apiProjects];
   }, [apiProjects]);
 
-  useEffect(() => {
+  const { projects, filteredProjectsCount } = useMemo(() => {
     const matchingProjects = allProjects
       .filter((project) => project.isLive || project.isTestnetLive)
       .filter((project: Project) => {
@@ -331,7 +470,7 @@ const Home = () => {
         );
       });
 
-    const filteredProjects = keyword.trim()
+    const sorted = keyword.trim()
       ? [...matchingProjects].sort((project1, project2) => {
           const relevanceDiff =
             getProjectRelevanceScore(project2, keyword) -
@@ -349,7 +488,7 @@ const Home = () => {
     const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
     const endIndex = startIndex + ITEMS_PER_PAGE;
 
-    const newProjects = filteredProjects.slice(startIndex, endIndex).map((project) => {
+    const paged = sorted.slice(startIndex, endIndex).map((project) => {
       const projectTags = project.tags;
       return {
         ...project,
@@ -358,13 +497,12 @@ const Home = () => {
         }),
       };
     });
-    setProjects(newProjects);
-    setFilteredProjectsCount(loading ? -1 : filteredProjects.length);
-  }, [filter, sorter, keyword, currentPage, allProjects, loading, tagAll]);
 
-  useEffect(() => {
-    setCurrentPage(1);
-  }, [filter, keyword]);
+    return {
+      projects: paged,
+      filteredProjectsCount: loading ? -1 : sorted.length,
+    };
+  }, [filter, sorter, keyword, currentPage, allProjects, loading, tagAll]);
 
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
@@ -377,17 +515,19 @@ const Home = () => {
   }, []);
 
   const searchPreview = useMemo(() => {
-    if (!keyword.trim() || loading) return [];
+    if (!debouncedKeyword.trim() || loading) return [];
     return allProjects
-      .filter((p) => (p.isLive || p.isTestnetLive) && projectIncludesKeyword(p, keyword))
-      .sort((a, b) => getProjectRelevanceScore(b, keyword) - getProjectRelevanceScore(a, keyword))
+      .filter((p) => (p.isLive || p.isTestnetLive) && projectIncludesKeyword(p, debouncedKeyword))
+      .sort((a, b) => getProjectRelevanceScore(b, debouncedKeyword) - getProjectRelevanceScore(a, debouncedKeyword))
       .slice(0, 5);
-  }, [keyword, allProjects, loading]);
+  }, [debouncedKeyword, allProjects, loading]);
 
   const totalPages = Math.ceil(filteredProjectsCount / ITEMS_PER_PAGE);
 
-  const handleChangeKeyword = (event: ChangeEvent<HTMLInputElement>) =>
+  const handleChangeKeyword = (event: ChangeEvent<HTMLInputElement>) => {
     setKeyword(event.target.value);
+    setCurrentPage(1);
+  };
 
   const liveCount = allProjects.filter((p) => p.isLive || p.isTestnetLive).length;
 
@@ -622,137 +762,10 @@ const Home = () => {
         </HStack>
       </Box>
 
-      {/* Ecosystem Highlights -Auto-scrolling carousel */}
-      {!loading && allProjects.length > 0 && (() => {
-        const featuredIds = [
-          "dcaeb5bb-2fcd-4ec0-af01-e0d83704cd77", // strkBTC
-          "84904055-cb72-407f-996a-d7aafe287372", // Loot Survivor
-          "502b0dbc-5169-4db6-8796-36a968a798fd", // avnu
-          "1b1fedb8-3e97-4288-91e8-7a0c39e5be66", // Vesu
-          "a7e1c712-84a2-4457-8610-1cab7af37b16", // Endurfi
-          "ba85310d-c82c-43c5-a42c-6479f8946b98", // Ekubo
-          "00afa40f-f1a7-4cb3-a979-13c501ae9b17", // Uncap
-          "8df27359-f05d-439b-8592-ca1b61cf049c", // Ready
-          "eb131b7d-3ab9-44d4-b3f0-ef02d08b8379", // Nostra
-          "f22a3d11-9c55-4d6f-98c3-b56230589def", // Braavos
-          "00b21789-6562-43bd-a75e-f2be48590853", // LayerAkira
-          "8563314d-f31d-4e5a-a372-915a4f11518f", // Realms
-          "5b7f1fde-5642-4bfd-ab11-8b10c7c1ae1b", // Cartridge
-          "1c57849c-ae23-400a-b9d5-6f909894ae86", // Dojo
-          "c95cdd9c-a151-4b3b-b43b-8f023e77f634", // Xverse
-          "8d0d1cc3-af7e-48ab-aa22-bef4ede008df", // Pragma
-          "071a6e9b-08f9-4f65-9da9-3e8866731439", // Extended
-          "5cec890e-fc90-48d0-b7eb-011b6a0dc13b", // Voyager
-        ];
-
-        // Override buggy API descriptions
-        const descriptionOverrides: Record<string, string> = {
-          "dcaeb5bb-2fcd-4ec0-af01-e0d83704cd77":
-            "Shielded Bitcoin on Starknet. Private transactions and balances powered by ZK-STARKs. The privacy layer Bitcoin was missing.",
-          "502b0dbc-5169-4db6-8796-36a968a798fd":
-            "Starknet's liquidity layer. Best-price swaps, DCA, gasless transactions, and market data powering 50+ wallets and dApps.",
-        };
-
-        const featured = featuredIds
-          .map((id) => {
-            const project = allProjects.find((p) => p.id === id) || staticProjects.find((p) => p.id === id);
-            if (project && descriptionOverrides[id]) {
-              return { ...project, description: descriptionOverrides[id] };
-            }
-            return project;
-          })
-          .filter(Boolean) as Project[];
-
-        const cardWidth = "280px";
-        const gap = "16px";
-
-        return (
-          <Box py={20} borderTop="1px solid" borderColor="whiteAlpha.100" overflow="hidden">
-            <Text
-              fontSize="11px"
-              color="gray.500"
-              textTransform="uppercase"
-              letterSpacing="0.15em"
-              mb={10}
-              textAlign="center"
-            >
-              {t.common?.powering_ecosystem || "Powering the ecosystem"}
-            </Text>
-
-            <Flex
-              overflow="hidden"
-              role="group"
-              pb="1px"
-              sx={{
-                "--gap": gap,
-                "--duration": `${featured.length * 4}s`,
-              }}
-              gap="var(--gap)"
-            >
-              {MARQUEE_GROUP_KEYS.map((groupKey) => (
-                  <Flex
-                    key={groupKey}
-                    className="animate-marquee"
-                    shrink={0}
-                    gap="var(--gap)"
-                    sx={{
-                      willChange: "transform",
-                      backfaceVisibility: "hidden",
-                      "[role=group]:hover &": {
-                        animationPlayState: "paused",
-                      },
-                    }}
-                  >
-                    {featured.map((project) => (
-                      <ChakraLink
-                        key={project.id}
-                        href={`/${activeLocale}/projects/${project.id}`}
-                        _hover={{ textDecoration: "none" }}
-                        flexShrink={0}
-                        w={cardWidth}
-                      >
-                        <Flex
-                          direction="column"
-                          p={6}
-                          border="1px solid"
-                          borderColor="whiteAlpha.100"
-                          _hover={{ borderColor: "accent.500", bg: "whiteAlpha.025" }}
-                          transition="border-color 0.2s ease, background 0.2s ease"
-                          h="full"
-                        >
-                          <HStack spacing={3} mb={3}>
-                            <Avatar
-                              size="sm"
-                              name={project.name}
-                              src={getProjectLogoSrc(project)}
-                              borderRadius="0"
-                            />
-                            <VStack align="flex-start" spacing={0}>
-                              <Text fontSize="14px" fontWeight="600" color="white">
-                                {project.name}
-                              </Text>
-                              <Text fontSize="11px" color="gray.600" textTransform="uppercase" letterSpacing="0.05em">
-                                {project.tags[0]}
-                              </Text>
-                            </VStack>
-                          </HStack>
-                          <Text
-                            fontSize="13px"
-                            color="gray.500"
-                            lineHeight="1.5"
-                            noOfLines={2}
-                          >
-                            {project.description}
-                          </Text>
-                        </Flex>
-                      </ChakraLink>
-                    ))}
-                  </Flex>
-                ))}
-            </Flex>
-          </Box>
-        );
-      })()}
+      {/* Ecosystem Highlights - Auto-scrolling carousel */}
+      {!loading && allProjects.length > 0 && (
+        <EcosystemHighlights allProjects={allProjects} locale={activeLocale} t={t} />
+      )}
 
       {/* Projects Section */}
       <Box id="projects" py={24} px={{ base: 6, md: 12, lg: 24 }}>
@@ -903,7 +916,7 @@ const Home = () => {
                     key={tag.value}
                     label={t.tags[tag.value] || tag.label}
                     isActive={filter.value === tag.value}
-                    onClick={() => setFilter(tag)}
+                    onClick={() => { setFilter(tag); setCurrentPage(1); }}
                   />
                 ))}
               </Flex>

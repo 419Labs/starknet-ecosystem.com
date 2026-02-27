@@ -12,6 +12,7 @@ import type { Project } from "../../../data/ecosystem";
 import { allProjects as staticProjects } from "../../../data/ecosystem";
 import ProjectsInfos from "../../components/project/ProjectsInfos";
 import { EcosystemApi } from "../../services/ecosystem-api.service";
+import { getProjectLogoSrc } from "../../services/project-logo";
 import FourOhFour from "../404";
 
 interface ProjectPageProps {
@@ -22,15 +23,6 @@ interface ProjectPageProps {
 // Broad technical buckets can overpower business-category relevance (e.g. "defi").
 // Prefer specific tags when available for "related projects".
 const GENERIC_RELATED_TAGS = new Set(["all", "infrastructure", "tools", "security"]);
-const FORCE_LOCAL_LOGO_PROJECT_IDS = new Set(["a7e1c712-84a2-4457-8610-1cab7af37b16"]);
-
-const getProjectLogoSrc = (project: Pick<Project, "id" | "image" | "network">): string => {
-  if (FORCE_LOCAL_LOGO_PROJECT_IDS.has(project.id)) {
-    return `/logos/${project.image}`;
-  }
-  return project.network?.twitterImage || `/logos/${project.image}`;
-};
-
 const ProjectPage: FC<ProjectPageProps> = ({ project, relatedProjects }) => {
   const router = useRouter();
   const currentLocale = router.locale || "en";

@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { useState, useEffect, useRef } from "react";
+import useSWR from "swr";
 
 import { useTranslate } from "../../context/TranslateProvider";
 
@@ -14,48 +15,43 @@ import Link from "./Link";
 const addProjectUrl =
   "https://github.com/419Labs/starknet-ecosystem.com/blob/main/docs/add-project.md";
 
+async function fetchStrkPrice() {
+  const res = await fetch("https://starknet.impulse.avnu.fi/v3/tokens");
+  const data = await res.json();
+  const strk = data.find((t: any) => t.symbol === "STRK");
+  if (!strk) return null;
+  return {
+    price: strk.starknet?.usd || strk.global?.usd || null,
+    change24h: strk.starknet?.usdPriceChangePercentage24h || strk.global?.usdMarketCapChangePercentage24h || null,
+  };
+}
+
 // STRK Price Ticker Component
 function StrkPriceTicker() {
   const { t } = useTranslate();
-  const [price, setPrice] = useState<number | null>(null);
-  const [change24h, setChange24h] = useState<number | null>(null);
+  const { data: priceData } = useSWR("strk-price-ticker", fetchStrkPrice, {
+    refreshInterval: 30000,
+    revalidateOnFocus: false,
+  });
+
+  const price = priceData?.price ?? null;
+  const change24h = priceData?.change24h ?? null;
+
   const [isFlashing, setIsFlashing] = useState(false);
   const [flashDirection, setFlashDirection] = useState<"up" | "down" | null>(null);
   const prevPriceRef = useRef<number | null>(null);
 
   useEffect(() => {
-    const fetchPrice = async () => {
-      if (typeof document !== "undefined" && document.visibilityState === "hidden") {
-        return;
-      }
-      try {
-        const res = await fetch("https://starknet.impulse.avnu.fi/v3/tokens");
-        const data = await res.json();
-        const strk = data.find((t: any) => t.symbol === "STRK");
-        if (strk) {
-          const newPrice = strk.starknet?.usd || strk.global?.usd;
-          const newChange = strk.starknet?.usdPriceChangePercentage24h || strk.global?.usdMarketCapChangePercentage24h;
-
-          // Check if price changed for animation
-          if (prevPriceRef.current !== null && newPrice !== prevPriceRef.current) {
-            setFlashDirection(newPrice > prevPriceRef.current ? "up" : "down");
-            setIsFlashing(true);
-            setTimeout(() => setIsFlashing(false), 500);
-          }
-
-          prevPriceRef.current = newPrice;
-          setPrice(newPrice);
-          setChange24h(newChange);
-        }
-      } catch {
-        console.error("Failed to fetch STRK price");
-      }
-    };
-
-    fetchPrice();
-    const interval = setInterval(fetchPrice, 30000); // Update every 30 seconds
-    return () => clearInterval(interval);
-  }, []);
+    if (price === null) return;
+    if (prevPriceRef.current !== null && price !== prevPriceRef.current) {
+      setFlashDirection(price > prevPriceRef.current ? "up" : "down");
+      setIsFlashing(true);
+      const timeout = setTimeout(() => setIsFlashing(false), 500);
+      prevPriceRef.current = price;
+      return () => clearTimeout(timeout);
+    }
+    prevPriceRef.current = price;
+  }, [price]);
 
   const isPositive = change24h !== null && change24h >= 0;
 
@@ -195,7 +191,7 @@ function Header() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
     };
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 

@@ -28,7 +28,7 @@ dayjs.extend(duration);
 
 const COOKIE_CONSENT_KEY = "cookies-consent";
 const SITE_URL = "https://www.starknet-ecosystem.com";
-const OG_IMAGE_PATH = "/og-image.png";
+const OG_IMAGE_PATH = `${SITE_URL}/og-image.png`;
 const LOCALES = ["en", "es", "zh_CN", "ko", "ja", "fr", "de", "tr", "pt", "it", "pl", "zh_TW"];
 
 const ORGANIZATION_JSONLD = {
