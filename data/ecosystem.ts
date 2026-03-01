@@ -144,6 +144,25 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: true,
   },
+   {
+    id: "94c55d25-e548-477b-be3c-f271bc09ae70",
+    name: "Vital Block",
+    shortName: "VBS",
+    description: "Vital Block is a Next-generation Blockchain Security Smart Contract Auditing & Team KYC Company. With Over 1,850+ Projects Secured Backed By Circle Alliance.",
+    tags: ["security"],
+    image: "vitalblock.jpg",
+    network: {
+      website: "https://vitalblock.org/",
+      github: "https://github.com/VBS-Labs",
+      twitter: "https://x.com/vb_audit",
+      medium: "",
+      discord: "",
+      telegram: "htts://t.me/vitalblock",
+    },
+
+    isLive: true,
+    isTestnetLive: true,
+  },
   {
     id: "ba85310d-c82c-43c5-a42c-6479f8946b98",
     name: "Ekubo Protocol",
