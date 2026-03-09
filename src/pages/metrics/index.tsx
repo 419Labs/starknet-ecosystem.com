@@ -193,7 +193,9 @@ async function fetchMetrics() {
   const totalBtcStaked = allValidators.reduce((acc: number, v: any) => acc + parseFloat(v.total_stake_btc || 0), 0) / 1e8;
   const totalDelegators = allValidators.reduce((acc: number, v: any) => acc + (v.delegators_count || 0), 0);
   const totalBtcDelegators = allValidators.reduce((acc: number, v: any) => acc + (v.delegators_count_btc || 0), 0);
-  const avgApy = activeVals.length > 0 ? activeVals.reduce((acc: number, v: any) => acc + (v.apy || 0), 0) / activeVals.length : 0;
+  const avgOf = (vals: any[], key: string) => vals.length > 0 ? vals.reduce((acc, v) => acc + (v[key] || 0), 0) / vals.length : 0;
+  const avgApy = avgOf(activeVals, "apy");
+  const avgBtcApy = avgOf(activeVals, "btc_apy");
 
   const starknetTvl = tvlData.find((c: any) => c.name === "Starknet");
 
@@ -207,6 +209,7 @@ async function fetchMetrics() {
       activeValidators: activeVals.length,
       totalValidators: allValidators.length,
       avgApy,
+      avgBtcApy,
     },
     btcPrice: btcToken?.global?.usd ?? btcToken?.starknet?.usd ?? null,
     defiData: {
@@ -362,8 +365,8 @@ const MetricsPage: FC = () => {
               loading={loading}
             />
             <MetricCard
-              label={t.metrics?.volume_24h || "Volume 24h"}
-              value={formatNumber(strkData?.starknet?.usdVolume24h)}
+              label={t.metrics?.trading_vol_24h || "Trading Vol 24h"}
+              value={formatNumber(strkData?.starknet?.usdTradingVolume24h)}
               subValue={t.metrics?.on_starknet || "On Starknet"}
               source="avnu"
               sourceUrl="https://starknet.impulse.avnu.fi/v3/tokens"
@@ -467,6 +470,15 @@ const MetricsPage: FC = () => {
             loading={loading}
           />
           <MetricCard
+            label={t.metrics?.strk_apy || "STRK APY"}
+            value={stakingStats ? `${stakingStats.avgApy.toFixed(2)}%` : "---"}
+            subValue={t.metrics?.validator_average || "Validator average"}
+            source="Endur.fi"
+            sourceUrl="https://dashboard.endur.fi"
+            icon={faPercent}
+            loading={loading}
+          />
+          <MetricCard
             label={t.metrics?.btc_staked || "BTC Staked"}
             value={stakingStats ? `${stakingStats.totalBtcStaked.toFixed(2)} BTC` : "---"}
             subValue={stakingStats && btcPrice ? formatNumber(stakingStats.totalBtcStaked * btcPrice) : undefined}
@@ -476,8 +488,8 @@ const MetricsPage: FC = () => {
             loading={loading}
           />
           <MetricCard
-            label={t.metrics?.avg_apy || "Avg APY"}
-            value={stakingStats ? `${stakingStats.avgApy.toFixed(2)}%` : "---"}
+            label={t.metrics?.btc_apy || "BTC APY"}
+            value={stakingStats ? `${stakingStats.avgBtcApy.toFixed(2)}%` : "---"}
             subValue={t.metrics?.validator_average || "Validator average"}
             source="Endur.fi"
             sourceUrl="https://dashboard.endur.fi"
@@ -496,18 +508,9 @@ const MetricsPage: FC = () => {
           <MetricCard
             label={t.metrics?.delegators || "Delegators"}
             value={stakingStats ? formatNumber(stakingStats.totalDelegators, "") : "---"}
-            subValue={t.metrics?.total_delegators || "Total delegators"}
+            subValue={stakingStats ? `incl. ${stakingStats.totalBtcDelegators.toLocaleString()} BTC stakers` : undefined}
             source="Endur.fi"
             sourceUrl="https://dashboard.endur.fi/validators"
-            icon={faUsers}
-            loading={loading}
-          />
-          <MetricCard
-            label={t.metrics?.btc_delegators || "BTC Delegators"}
-            value={stakingStats ? formatNumber(stakingStats.totalBtcDelegators, "") : "---"}
-            subValue={t.metrics?.btc_stakers || "BTC stakers"}
-            source="Endur.fi"
-            sourceUrl="https://dashboard.endur.fi"
             icon={faUsers}
             loading={loading}
           />
