@@ -10,19 +10,19 @@
 
 ```typescript
 {
-  id: "your-generated-uuid",
-  name: "Your Project Name",
-  shortName: "ShortName",
-  description: "A short description of what your project does.",
-  tags: ["defi"],           // use existing tags from data/tag.ts
+  id: "8f447c09-41a4-4427-900d-fbb82e90befd",
+  name: "Cypherock",
+  shortName: "Cypherock",
+  description: "Cypherock X1 is the World's safest hardware wallet with non-custodial inheritance, audited by Keylabs",
+  tags: ["wallet"],           // use existing tags from data/tag.ts
   image: "your-logo.png",  // filename in public/logos/
   network: {
     website: "https://yourproject.com",
-    github: "https://github.com/yourorg",
-    twitter: "https://x.com/yourhandle",
+    github: "https://github.com/cypherock",
+    twitter: "https://x.com/CypherockWallet",
     medium: "",
     discord: "",
-    telegram: "",
+    telegram: "https://t.me/cypherock",
   },
   isLive: true,             // true if live on mainnet
   isTestnetLive: false,     // true if live on testnet
