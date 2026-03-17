@@ -4415,6 +4415,25 @@ export const allProjects: Array<Project> = [
     isTestnetLive: false,
   },
   {
+    id: "21af3549-ce8c-41ba-a570-c98bc557268f",
+    name: "CofiBlocks",
+    shortName: "CofiBlocks",
+    description: "CofiBlocks connects Coffee producers directly with consumers, removing traditional intermediaries. Using blockchain technology, it enables transparent payments and fairer revenue for farmers. Customers buy specialty coffee with full traceability—from the farm to their cup—while supporting a more equitable coffee supply chain.",
+    tags: ["payments", "social", "tools"],
+    image: "Cofiblocks.png",
+    network: {
+      website: "https://app.cofiblocks.com",
+      github: "https://github.com/Vagabonds-Labs/cofiblocks-contracts",
+      twitter: "https://x.com/CofiBlocks",
+      medium: "",
+      discord: "",
+      telegram: "https://t.me/cofiblocks",
+    },
+
+    isLive: true,
+    isTestnetLive: false,
+  },
+  {
     id: "8f447c09-41a4-4427-900d-fbb82e90befd",
     name: "Cypherock",
     shortName: "Cypherock",
@@ -4422,7 +4441,7 @@ export const allProjects: Array<Project> = [
     tags: ["wallet"],           // use existing tags from data/tag.ts
     image: "cypherock.png",  // filename in public/logos/
     network: {
-      website: "https://yourproject.com",
+      website: "https://www.cypherock.com",
       github: "https://github.com/cypherock",
       twitter: "https://x.com/CypherockWallet",
       medium: "",
@@ -4431,7 +4450,7 @@ export const allProjects: Array<Project> = [
     },
     isLive: true,             // true if live on mainnet
     isTestnetLive: false,     // true if live on testnet
-  },
+  }
   //Projects commented out because they are missing from ecosystem-data-updated.csv
   // {
     // id: "abd25d78-ffb6-4a1d-94c0-d2f9016d6015",
