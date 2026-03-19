@@ -4411,7 +4411,6 @@ export const allProjects: Array<Project> = [
       discord: "https://discord.com/invite/Vjk6NhkxGv",
       telegram: "",
     },
-
     isLive: true,
     isTestnetLive: false,
   },
@@ -4434,6 +4433,24 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: false,
   },
+  {
+    id: "8f447c09-41a4-4427-900d-fbb82e90befd",
+    name: "Cypherock",
+    shortName: "Cypherock",
+    description: "Cypherock X1 is the World's safest hardware wallet with non-custodial inheritance, audited by Keylabs",
+    tags: ["wallet"],           // use existing tags from data/tag.ts
+    image: "cypherock.png",  // filename in public/logos/
+    network: {
+      website: "https://www.cypherock.com",
+      github: "https://github.com/cypherock",
+      twitter: "https://x.com/CypherockWallet",
+      medium: "",
+      discord: "",
+      telegram: "https://t.me/cypherock",
+    },
+    isLive: true,             // true if live on mainnet
+    isTestnetLive: false,     // true if live on testnet
+  }
   //Projects commented out because they are missing from ecosystem-data-updated.csv
   // {
     // id: "abd25d78-ffb6-4a1d-94c0-d2f9016d6015",
