@@ -6082,5 +6082,17 @@ export const allProjects: Array<Project> = [
 
     // isLive: true,
     // isTestnetLive: true,
-  // },
+ // },
+
+// isTestnetLive: true,
+// },
+},
+{
+  id: "REAL-UUID-HERE",
+  name: "Cyberscope",
+  shortName: "Cyberscope",
+  description: "Security infrastructure for Web3 builders — audits, KYC, penetration testing, and AI-driven risk analysis.",
+  tags: ["infra", "security"],
+  image: "cyberscope.png"
+}
 ];
