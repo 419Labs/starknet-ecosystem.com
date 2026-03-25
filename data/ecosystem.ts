@@ -6083,4 +6083,24 @@ export const allProjects: Array<Project> = [
     // isLive: true,
     // isTestnetLive: true,
   // },
+  {
+    id: "901477f1-a8a2-41e6-99a8-2218a64bb86b",
+    name: "StarkFi",
+    shortName: "StarkFi",
+    description:
+      "An AI-powered DeFi toolkit for Starknet — swap, stake, lend, and batch operations from your terminal or through AI agents.",
+    tags: ["defi", "tools"],
+    image: "starkfi.png",
+    network: {
+      website: "https://starkfi.app",
+      github: "https://github.com/ahmetenesdur/starkfi",
+      twitter: "https://x.com/starkfiapp",
+      medium: "",
+      discord: "",
+      telegram: "",
+    },
+
+    isLive: true,
+    isTestnetLive: false,
+  },
 ];
