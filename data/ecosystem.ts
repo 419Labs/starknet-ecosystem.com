@@ -4450,7 +4450,7 @@ export const allProjects: Array<Project> = [
     },
     isLive: true,             // true if live on mainnet
     isTestnetLive: false,     // true if live on testnet
-  }
+  },
   //Projects commented out because they are missing from ecosystem-data-updated.csv
   // {
     // id: "abd25d78-ffb6-4a1d-94c0-d2f9016d6015",
@@ -6098,6 +6098,26 @@ export const allProjects: Array<Project> = [
       medium: "",
       discord: "",
       telegram: "",
+    },
+
+    isLive: true,
+    isTestnetLive: false,
+  },
+  {
+    id: "09963325-bced-44a3-9901-209141189948",
+    name: "Brove",
+    shortName: "Brove",
+    description:
+      "Brove is infrastructure that proves real Bitcoin activity on Starknet. It converts historical Bitcoin transactions into verifiable on-chain cryptographic proofs, enabling Starknet applications to trust users' Bitcoin history — identity, BTCFi, DeFi, gaming, and more — without relying on centralized validators.",
+    tags: ["gamefi", "defi", "infrastructure"],
+    image: "Brove.png",
+    network: {
+      website: "https://brove.io",
+      github: "",
+      twitter: "https://x.com/just_brove_it",
+      medium: "",
+      discord: "https://discord.gg/zquwKxdJtH",
+      telegram: "https://t.me/+8zDHofg2uclmNWM0",
     },
 
     isLive: true,
