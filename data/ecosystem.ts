@@ -6088,11 +6088,11 @@ export const allProjects: Array<Project> = [
 // },
 },
 {
-  id: "REAL-UUID-HERE",
+  id:"b8240d18-ea5b-4529-8209-f1562061bc8a",
   name: "Cyberscope",
   shortName: "Cyberscope",
   description: "Security infrastructure for Web3 builders — audits, KYC, penetration testing, and AI-driven risk analysis.",
-  tags: ["infra", "security"],
-  image: "cyberscope.png"
+  tags: ["defi"],
+  image: "cyberscope.svg",
 }
 ];
