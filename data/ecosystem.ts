@@ -6131,7 +6131,7 @@ export const allProjects: Array<Project> = [
     tags: ["payments", "defi", "wallet"],
     image: "vasp-logo.jpeg",
     network: {
-      website: "https://vasp-sog7.onrender.com/",
+      website: "https://vasp-hb1z.onrender.com/",
       github: "https://github.com/DevTest-me/vasp-starkzap",
       twitter: "https://x.com/vertexhivetech",
       medium: "",
@@ -6149,7 +6149,7 @@ export const allProjects: Array<Project> = [
     tags: ["tools", "infrastructure"],
     image: "TokenHive-logo.jpeg",
     network: {
-      website: "https://tokenhive.onrender.com/",
+      website: "https://token-hive.onrender.com/",
       github: "https://github.com/DevTest-me/Tokenhive-starkzap",
       twitter: "https://x.com/vertexhivetech",
       medium: "",
