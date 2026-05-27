@@ -6123,4 +6123,24 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: false,
   },
+  {
+    id: "4cbf172b-9d31-468d-b163-48c1b6b93db1",
+    name: "ShapeShift",
+    shortName: "ShapeShift",
+    description:
+      "One gateway to every chain. Swap, bridge, stake, earn. Keys always stay yours.",
+    tags: ["bridge", "defi", "wallet"],
+    image: "shapeshift.png",
+    network: {
+      website: "https://app.shapeshift.com",
+      github: "https://github.com/shapeshift",
+      twitter: "https://x.com/ShapeShift",
+      medium: "",
+      discord: "https://discord.gg/shapeshift",
+      telegram: "https://t.me/shapeshiftofficial",
+    },
+
+    isLive: true,
+    isTestnetLive: false,
+  },
 ];
