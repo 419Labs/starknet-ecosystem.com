@@ -225,7 +225,7 @@ function Header() {
       {/* strkBTC Announcement Bar */}
       {isHomepage && (
         <ChakraLink
-          href="https://strkbtc.starknet.io/"
+          href="https://strk20.starknet.io/"
           isExternal
           _hover={{ textDecoration: "none" }}
           display="block"
@@ -281,13 +281,13 @@ function Header() {
               fontWeight="400"
               letterSpacing="-0.01em"
             >
-              Bitcoin just got privacy.{" "}
+              Privacy is live on Starknet.{" "}
               <Text
                 as="span"
                 fontWeight="600"
                 color="white"
               >
-                Discover strkBTC
+                Discover STRK20
               </Text>
             </Text>
             <Icon
