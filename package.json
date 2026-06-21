@@ -48,7 +48,7 @@
     "swr": "^2.4.0"
   },
   "devDependencies": {
-    "@next/eslint-plugin-next": "^16.0.7",
+    "@next/eslint-plugin-next": "^16.2.2",
     "@tailwindcss/postcss": "^4.1.18",
     "@types/node": "24.10.1",
     "@types/nprogress": "^0.2.3",
