@@ -32,6 +32,25 @@ export interface ProjectItf extends Project {
 
 export const allProjects: Array<Project> = [
   {
+    id: "4ef9cb5c-7035-47bd-909f-a55a871ff184",
+    name: "OpenChainBench",
+    shortName: "OCB",
+    description:
+      "Open-source, continuously-running benchmarks for Starknet RPC latency, L2 finality time, and block time. Live monitoring from 3 global probe regions.",
+    tags: ["infrastructure", "tools"],
+    image: "openchainbench.png",
+    network: {
+      website: "https://openchainbench.com",
+      github: "https://github.com/ChainBench/OpenChainBench",
+      twitter: "https://x.com/openchainbench",
+      medium: "",
+      discord: "",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
+  {
     id: "dcaeb5bb-2fcd-4ec0-af01-e0d83704cd77",
     name: "strkBTC",
     shortName: "strkBTC",
