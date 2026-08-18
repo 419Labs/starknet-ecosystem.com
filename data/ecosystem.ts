@@ -6143,4 +6143,23 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: false,
   },
+    {
+    id: "092cee10-c4cc-43da-98db-ec6823ae3b1b",
+    name: "Protofire",
+    shortName: "Protofire",
+    description:
+      "Protofire is a blockchain development firm delivering infrastructure, developer tooling, and smart contract engineering across 60+ networks. On Starknet, it builds and audits Cairo smart contracts and provides node and RPC infrastructure for teams shipping on ZK-STARKs.",
+    tags: ["infrastructure", "tools"],
+    image: "protofire.png",
+    network: {
+      website: "https://protofire.io",
+      github: "https://github.com/protofire",
+      twitter: "https://x.com/protofire",
+      medium: "https://medium.com/protofire-blog",
+      discord: "",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
 ];
