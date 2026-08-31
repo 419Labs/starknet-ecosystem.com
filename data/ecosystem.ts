@@ -4274,7 +4274,7 @@ export const allProjects: Array<Project> = [
     tags: ["tools"],
     image: "StarknetJS.png",
     network: {
-      website: "https://starknetjs.com/",
+      website: "https://starknet-js.com/",
       github: "https://github.com/starknet-io/starknet.js",
       twitter: "",
       medium: "",

@@ -295,7 +295,7 @@ const AcademyPage: FC = () => {
   ];
 
   const sdks = [
-    { name: "starknet.js", href: "https://www.starknetjs.com/" },
+    { name: "starknet.js", href: "https://starknet-js.com/" },
     { name: "starknet.py", href: "https://starknetpy.readthedocs.io/" },
     { name: "starknet-rs", href: "https://github.com/xJonathanLEI/starknet-rs" },
     { name: "starknet.go", href: "https://github.com/NethermindEth/starknet.go" },
