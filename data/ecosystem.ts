@@ -6143,4 +6143,24 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: false,
   },
+  {
+    id: "73480da6-a848-4257-af5f-0fdb1adaf9fd",
+    name: "EIDEX",
+    shortName: "EIDEX",
+    description:
+      "Route screener for STRK swaps. Compares live quotes from several exchange providers, including transfers on the native Starknet network, and ranks them by the amount you receive. Non-custodial, no account.",
+    tags: ["bridge", "tools"],
+    image: "Eidex.png",
+    network: {
+      website: "https://eidex.io",
+      github: "",
+      twitter: "https://x.com/eidex_official",
+      medium: "",
+      discord: "",
+      telegram: "https://t.me/eidex_official",
+    },
+
+    isLive: true,
+    isTestnetLive: false,
+  },
 ];
