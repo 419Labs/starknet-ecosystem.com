@@ -32,6 +32,25 @@ export interface ProjectItf extends Project {
 
 export const allProjects: Array<Project> = [
   {
+    id: "1e8e44f6-1cea-4686-bcde-1fd86f8a2eb0",
+    name: "Medialane",
+    shortName: "Medialane",
+    description:
+      "Creator launchpad and IP marketplace on Starknet. Tokenize intellectual property as programmable assets, launch collections, editions, tickets and memberships, and trade them with licensing terms enforced on chain.",
+    tags: ["nft"],
+    image: "medialane.png",
+    network: {
+      website: "https://starknet.medialane.io",
+      github: "https://github.com/medialane-io/medialane-starknet",
+      twitter: "https://x.com/medialane_io",
+      medium: "",
+      discord: "",
+      telegram: "https://t.me/integrityweb",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
+  {
     id: "dcaeb5bb-2fcd-4ec0-af01-e0d83704cd77",
     name: "strkBTC",
     shortName: "strkBTC",
