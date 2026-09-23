@@ -32,6 +32,25 @@ export interface ProjectItf extends Project {
 
 export const allProjects: Array<Project> = [
   {
+    id: "f38bb7d2-f4a6-46d5-bb4f-d92174515b3c",
+    name: "Launchy",
+    shortName: "Launchy",
+    description:
+      "Launch and trade tokens on Starknet with Ekubo liquidity pools, locked initial liquidity, and creator fee sharing.",
+    tags: ["defi"],
+    image: "launchy.png",
+    network: {
+      website: "https://starklaunch.fun",
+      github: "",
+      twitter: "https://x.com/StarkLaunchy",
+      medium: "",
+      discord: "",
+      telegram: "",
+    },
+    isLive: true,
+    isTestnetLive: false,
+  },
+  {
     id: "dcaeb5bb-2fcd-4ec0-af01-e0d83704cd77",
     name: "strkBTC",
     shortName: "strkBTC",
