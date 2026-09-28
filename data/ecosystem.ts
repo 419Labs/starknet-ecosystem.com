@@ -6144,3 +6144,22 @@ export const allProjects: Array<Project> = [
     isTestnetLive: false,
   },
 ];
+  {
+    id: "e117f2b1-5613-4488-9345-6d359d10807c",
+    name: "HackenProof",
+    shortName: "HackenProof",
+    description: "Expert bug bounty platform and crowdsourced security marketplace connecting projects with 82,000+ white-hat researchers for bug bounties, curated smart contract audits and penetration testing.",
+    tags: ["security"],
+    image: "HackenProof logo.png",
+    network: {
+      website: "https://hackenproof.com",
+      github: "https://github.com/hackenproof-public/portfolio",
+      twitter: "https://x.com/HackenProof",
+      medium: "",
+      discord: "https://discord.gg/NHX6yt73vh",
+      telegram: "",
+    },
+
+    isLive: true,
+    isTestnetLive: false,
+  },
