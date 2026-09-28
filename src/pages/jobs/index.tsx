@@ -112,6 +112,12 @@ const JobsPage: NextPage = () => {
       href: "https://www.starknet.io/jobs/",
       label: t.jobs?.community || "Community",
     },
+    {
+      title: t.jobs?.board_maneki_title || "Maneki",
+      description: t.jobs?.board_maneki_desc || "Aggregated Web3 job board — 2,500+ live openings from 500+ crypto companies' career pages, updated daily.",
+      href: "https://www.maneki.work/",
+      label: t.jobs?.aggregator || "Aggregator",
+    },
   ];
 
   return (
