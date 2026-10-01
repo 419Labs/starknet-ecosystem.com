@@ -6152,7 +6152,7 @@ export const allProjects: Array<Project> = [
     tags: ["defi"],
     image: "launchy.png",
     network: {
-      website: "https://starklaunch.fun",
+      website: "https://starklaunchy.fun/",
       github: "",
       twitter: "https://x.com/StarkLaunchy",
       medium: "",
