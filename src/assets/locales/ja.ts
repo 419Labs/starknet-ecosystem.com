@@ -366,7 +366,7 @@ const jaTranslate: TranslateState = {
     step_3_title: "配信",
     step_3_desc: "検証済みトークンはavnu Token APIを使用するウォレットやdAppsに自動的に表示されます。",
     why_matters_title: "なぜ重要なのか",
-    why_matters_description: "偽トークンは深刻な問題です。詐欺師は正規のプロジェクトと同じ名前・シンボルのトークンをデプロイしてユーザーを騙します。正規の検証済みトークンリストがエコシステムを守ります。Ready、Braavos、その他のStarknet上の主要dAppでトークンを見た時、それはこのシステムを通じて審査されています。",
+    why_matters_description: "偽トークンは深刻な問題です。詐欺師は正規のプロジェクトと同じ名前・シンボルのトークンをデプロイしてユーザーを騙します。正規の検証済みトークンリストがエコシステムを守ります。Ready X、Braavos、その他のStarknet上の主要dAppでトークンを見た時、それはこのシステムを通じて審査されています。",
     submit_token: "トークンを提出",
     view_on_github: "GitHubで見る",
     seo_title: "Starknet トークンディレクトリ | 信頼できるトークンデータ",

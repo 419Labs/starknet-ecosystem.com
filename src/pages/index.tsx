@@ -7,7 +7,6 @@ import {
   VStack,
 } from "@chakra-ui/layout";
 import {
-  Avatar,
   Button,
   Icon,
   Input,
@@ -39,9 +38,10 @@ import type { Tag } from "../../data/tag";
 import { allEcosystemTags } from "../../data/tag";
 import { useTranslate } from "../context/TranslateProvider";
 import { EcosystemApi } from "../services/ecosystem-api.service";
-import { getProjectLogoSrc } from "../services/project-logo";
+import { ProjectAvatar } from "../components/project/ProjectAvatar";
 import {
   getProjectRelevanceScore,
+  isListedProject,
   projectIncludesKeyword,
   ProjectSorting,
   sortBy,
@@ -138,10 +138,9 @@ function ProjectCard({
       >
         {/* Top section */}
         <Flex justify="space-between" align="flex-start" mb={6}>
-          <Avatar
+          <ProjectAvatar
             size="lg"
-            name={project.name}
-            src={getProjectLogoSrc(project)}
+            project={project}
             borderRadius="0"
           />
 
@@ -299,8 +298,7 @@ function EcosystemHighlights({
     "1b1fedb8-3e97-4288-91e8-7a0c39e5be66", // Vesu
     "a7e1c712-84a2-4457-8610-1cab7af37b16", // Endurfi
     "ba85310d-c82c-43c5-a42c-6479f8946b98", // Ekubo
-    "00afa40f-f1a7-4cb3-a979-13c501ae9b17", // Uncap
-    "8df27359-f05d-439b-8592-ca1b61cf049c", // Ready
+    "8df27359-f05d-439b-8592-ca1b61cf049c", // Ready X
     "eb131b7d-3ab9-44d4-b3f0-ef02d08b8379", // Nostra
     "f22a3d11-9c55-4d6f-98c3-b56230589def", // Braavos
     "00b21789-6562-43bd-a75e-f2be48590853", // LayerAkira
@@ -388,10 +386,9 @@ function EcosystemHighlights({
                     h="full"
                   >
                     <HStack spacing={3} mb={3}>
-                      <Avatar
+                      <ProjectAvatar
                         size="sm"
-                        name={project.name}
-                        src={getProjectLogoSrc(project)}
+                        project={project}
                         borderRadius="0"
                       />
                       <VStack align="flex-start" spacing={0}>
@@ -462,7 +459,7 @@ const Home = () => {
 
   const { projects, filteredProjectsCount } = useMemo(() => {
     const matchingProjects = allProjects
-      .filter((project) => project.isLive || project.isTestnetLive)
+      .filter(isListedProject)
       .filter((project: Project) => {
         return (
           (filter === tagAll || project.tags.indexOf(filter.value) !== -1) &&
@@ -517,7 +514,7 @@ const Home = () => {
   const searchPreview = useMemo(() => {
     if (!debouncedKeyword.trim() || loading) return [];
     return allProjects
-      .filter((p) => (p.isLive || p.isTestnetLive) && projectIncludesKeyword(p, debouncedKeyword))
+      .filter((p) => isListedProject(p) && projectIncludesKeyword(p, debouncedKeyword))
       .sort((a, b) => getProjectRelevanceScore(b, debouncedKeyword) - getProjectRelevanceScore(a, debouncedKeyword))
       .slice(0, 5);
   }, [debouncedKeyword, allProjects, loading]);
@@ -846,10 +843,9 @@ const Home = () => {
                         transition="background 0.15s ease"
                         cursor="pointer"
                       >
-                        <Avatar
+                        <ProjectAvatar
                           size="sm"
-                          name={project.name}
-                          src={getProjectLogoSrc(project)}
+                          project={project}
                           borderRadius="0"
                         />
                         <VStack align="start" spacing={0} flex={1} minW={0}>

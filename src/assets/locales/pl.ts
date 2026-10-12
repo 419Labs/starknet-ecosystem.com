@@ -365,7 +365,7 @@ const translate: TranslateState = {
     step_3_title: "Propagacja",
     step_3_desc: "Zweryfikowane tokeny automatycznie pojawiają się w portfelach i dApps korzystających z avnu Token API.",
     why_matters_title: "Dlaczego to ważne",
-    why_matters_description: "Fałszywe tokeny to prawdziwy problem. Oszuści wdrażają tokeny o tej samej nazwie i symbolu co legalne projekty, aby oszukać użytkowników. Kanoniczny, zweryfikowany katalog tokenów chroni ekosystem. Gdy widzisz token w Ready, Braavos lub dowolnej głównej dApp na Starknet, został on zweryfikowany przez ten system.",
+    why_matters_description: "Fałszywe tokeny to prawdziwy problem. Oszuści wdrażają tokeny o tej samej nazwie i symbolu co legalne projekty, aby oszukać użytkowników. Kanoniczny, zweryfikowany katalog tokenów chroni ekosystem. Gdy widzisz token w Ready X, Braavos lub dowolnej głównej dApp na Starknet, został on zweryfikowany przez ten system.",
     submit_token: "Zgłoś token",
     view_on_github: "Zobacz na GitHub",
     seo_title: "Katalog tokenów Starknet | Zaufane dane tokenów",

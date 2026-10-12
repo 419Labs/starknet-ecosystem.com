@@ -365,7 +365,7 @@ const itTranslate: TranslateState = {
     step_3_title: "Propagazione",
     step_3_desc: "I token verificati appaiono automaticamente in wallet e dApp che utilizzano l'avnu Token API.",
     why_matters_title: "Perché è importante",
-    why_matters_description: "I token falsi sono un problema reale. I truffatori distribuiscono token con lo stesso nome e simbolo di progetti legittimi per ingannare gli utenti. Un elenco di token canonico e verificato protegge l'ecosistema. Quando vedi un token in Ready, Braavos o in qualsiasi dApp principale su Starknet, è stato verificato attraverso questo sistema.",
+    why_matters_description: "I token falsi sono un problema reale. I truffatori distribuiscono token con lo stesso nome e simbolo di progetti legittimi per ingannare gli utenti. Un elenco di token canonico e verificato protegge l'ecosistema. Quando vedi un token in Ready X, Braavos o in qualsiasi dApp principale su Starknet, è stato verificato attraverso questo sistema.",
     submit_token: "Invia un token",
     view_on_github: "Vedi su GitHub",
     seo_title: "Directory token Starknet | Dati token affidabili",

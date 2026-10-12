@@ -31,6 +31,10 @@
 
 4. **Check available tags** in `data/tag.ts` — use existing tag values (e.g. `"defi"`, `"gaming"`, `"nft"`, `"infrastructure"`, `"wallet"`, etc.)
 
+   Approved removals and corrections to stale API metadata are maintained in
+   `data/project-curation.ts`, so the external API cannot restore retired listings
+   or overwrite curated product changes.
+
 5. **Run the linter** to make sure everything is clean:
 
 ```bash

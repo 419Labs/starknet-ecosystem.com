@@ -2730,14 +2730,14 @@ export const allProjects: Array<Project> = [
   },
   {
     id: "8df27359-f05d-439b-8592-ca1b61cf049c",
-    name: "Ready",
-    shortName: "Ready",
-    description: "Your onchain alternative to a bank. Get cashback on your spending, grow your savings, and spend globally with no fees.",
+    name: "Ready X",
+    shortName: "Ready X",
+    description: "A self-custody wallet for Starknet on mobile and browser. Manage assets, swap tokens, stake STRK, and connect to Starknet DeFi, games, and NFTs.",
     tags: ["wallet"],
     image: "Ready.png",
     network: {
-      website: "https://www.ready.co/",
-      github: "https://github.com/argentlabs/",
+      website: "https://www.ready.co/ready-x",
+      github: "https://github.com/argentlabs/argent-x",
       twitter: "https://x.com/ready_co",
       medium: "",
       discord: "https://discordapp.com/invite/GWSyrHg",
@@ -2967,25 +2967,6 @@ export const allProjects: Array<Project> = [
       website: "https://starknet.re7labs.xyz/",
       github: "",
       twitter: "https://x.com/Re7Labs",
-      medium: "",
-      discord: "",
-      telegram: "",
-    },
-
-    isLive: true,
-    isTestnetLive: true,
-  },
-  {
-    id: "00afa40f-f1a7-4cb3-a979-13c501ae9b17",
-    name: "Uncap",
-    shortName: "Uncap",
-    description: "BTC-backed CDP stablecoin. Deposit Bitcoin, mint USDU at your own interest rate.,",
-    tags: ["defi", "infrastructure"],
-    image: "Uncap.jpg",
-    network: {
-      website: "https://uncap.finance/",
-      github: "",
-      twitter: "https://x.com/uncapfinance",
       medium: "",
       discord: "",
       telegram: "",
@@ -6142,5 +6123,314 @@ export const allProjects: Array<Project> = [
 
     isLive: true,
     isTestnetLive: false,
+  },
+  {
+    id: "e4b20680-1b04-408d-b12d-5dea04b6a539",
+    name: "AEON",
+    shortName: "AEON",
+    description: "Crypto payment infrastructure with STRK merchant-payment support, connecting Starknet asset holders to real-world payments.",
+    tags: [
+      "payments"
+    ],
+    image: "aeon.png",
+    network: {
+      website: "https://www.aeon.xyz/",
+      github: "",
+      twitter: "https://x.com/aeon_community",
+      medium: "",
+      discord: "",
+      telegram: ""
+    },
+    isLive: true,
+    isTestnetLive: false
+  },
+  {
+    id: "96cfeb3e-d2cf-4cbe-a734-d571f7542632",
+    name: "SuperVega",
+    shortName: "SuperVega",
+    description: "An options trading platform on Starknet for trading and managing options positions.",
+    tags: [
+      "defi"
+    ],
+    image: "supervega.png",
+    network: {
+      website: "https://supervega.app/",
+      github: "",
+      twitter: "https://x.com/SuperVegaXYZ",
+      medium: "",
+      discord: "",
+      telegram: ""
+    },
+    isLive: true,
+    isTestnetLive: false
+  },
+  {
+    id: "94724110-e066-42ac-9c46-868c6aeb328a",
+    name: "Chance",
+    shortName: "Chance",
+    description: "Infrastructure for verifiable AI on Starknet, enabling applications to use provable AI computation.",
+    tags: [
+      "infrastructure",
+      "tools"
+    ],
+    image: "chance.png",
+    network: {
+      website: "https://chance.cc/",
+      github: "",
+      twitter: "",
+      medium: "",
+      discord: "",
+      telegram: ""
+    },
+    isLive: true,
+    isTestnetLive: false
+  },
+  {
+    id: "1d535d82-49eb-4e6b-baf2-20e5d8541ae8",
+    name: "OffMarket",
+    shortName: "OffMarket",
+    description: "Private prediction-market trading using Starknet privacy infrastructure with execution on Polygon.",
+    tags: [
+      "privacy",
+      "defi"
+    ],
+    image: "offmarket.png",
+    network: {
+      website: "https://offmarket.cx/",
+      github: "",
+      twitter: "https://x.com/OffMarketcx",
+      medium: "",
+      discord: "",
+      telegram: ""
+    },
+    isLive: true,
+    isTestnetLive: false
+  },
+  {
+    id: "dc4a57eb-5b07-4ca1-a553-435130eede1f",
+    name: "YieldStark",
+    shortName: "YieldStark",
+    description: "A Starknet yield application bringing privacy to DeFi strategies and asset management.",
+    tags: [
+      "defi",
+      "privacy"
+    ],
+    image: "yieldstark.png",
+    network: {
+      website: "https://app.yieldstark.xyz/",
+      github: "https://github.com/MakindeAhmed2110/YieldStark",
+      twitter: "https://x.com/YieldStark",
+      medium: "",
+      discord: "",
+      telegram: ""
+    },
+    isLive: true,
+    isTestnetLive: false
+  },
+  {
+    id: "32366ccc-4b5f-463b-a1f7-573f37b0bbe1",
+    name: "DashX Payments",
+    shortName: "DashX Payments",
+    description: "Private payment and payroll infrastructure built with Starknet, helping businesses manage confidential financial flows.",
+    tags: [
+      "payments",
+      "privacy"
+    ],
+    image: "dashx.png",
+    network: {
+      website: "https://dashx.xyz/",
+      github: "",
+      twitter: "",
+      medium: "",
+      discord: "",
+      telegram: ""
+    },
+    isLive: true,
+    isTestnetLive: false
+  },
+  {
+    id: "3d934e6e-85ee-468f-9a68-1eee25b62a05",
+    name: "Starkzap",
+    shortName: "Starkzap",
+    description: "An open-source SDK for integrating Starknet wallets, gas sponsorship, token transfers, and staking into applications.",
+    tags: [
+      "tools",
+      "infrastructure"
+    ],
+    image: "starkzap.png",
+    network: {
+      website: "https://starkzap.io/",
+      github: "https://github.com/keep-starknet-strange/starkzap",
+      twitter: "",
+      medium: "",
+      discord: "",
+      telegram: ""
+    },
+    isLive: true,
+    isTestnetLive: false
+  },
+  {
+    id: "818313ad-8a4f-4b58-922c-ae6354af47a7",
+    name: "Stargate",
+    shortName: "Stargate",
+    description: "A cross-chain liquidity transport protocol with a Starknet integration for moving supported assets between networks.",
+    tags: [
+      "bridge"
+    ],
+    image: "stargate.png",
+    network: {
+      website: "https://stargate.finance/",
+      github: "",
+      twitter: "https://x.com/StargateFinance",
+      medium: "",
+      discord: "",
+      telegram: ""
+    },
+    isLive: true,
+    isTestnetLive: false
+  },
+  {
+    id: "05b7ff4d-fea5-4b41-add9-142de3a3224f",
+    name: "Gaffer",
+    shortName: "Gaffer",
+    description: "A skill-based sports game with USDC prize pools and automated settlement on Starknet.",
+    tags: [
+      "gamefi"
+    ],
+    image: "gaffer.png",
+    network: {
+      website: "https://playgaffer.xyz/",
+      github: "",
+      twitter: "https://x.com/Play_Gaffer",
+      medium: "",
+      discord: "",
+      telegram: ""
+    },
+    isLive: true,
+    isTestnetLive: false
+  },
+  {
+    id: "812c32ca-7fe1-4223-89fd-e623bc2fa52c",
+    name: "Privily",
+    shortName: "Privily",
+    description: "A privacy-focused Starknet L3 appchain offering private cross-chain transfers and exchanges.",
+    tags: [
+      "privacy",
+      "payments"
+    ],
+    image: "privily.png",
+    network: {
+      website: "https://privily.fi/",
+      github: "",
+      twitter: "https://x.com/Privily_fi",
+      medium: "",
+      discord: "",
+      telegram: ""
+    },
+    isLive: false,
+    isTestnetLive: false
+  },
+  {
+    id: "b9c9a291-5cef-4527-9eb5-a62cd5ef8b25",
+    name: "ArcX",
+    shortName: "ArcX",
+    description: "A Starknet DeFi application that separates yield-bearing positions into principal and points exposure, including positions on Extended.",
+    tags: [
+      "defi"
+    ],
+    image: "arcx.png",
+    network: {
+      website: "https://arcx.trade/",
+      github: "",
+      twitter: "https://x.com/arcxtrade",
+      medium: "",
+      discord: "",
+      telegram: ""
+    },
+    isLive: true,
+    isTestnetLive: false
+  },
+  {
+    id: "3a05f329-987f-4383-93c9-0fae900d3337",
+    name: "Everyday",
+    shortName: "Everyday",
+    description: "A focus and habit-building app with optional financial commitments settled on Starknet.",
+    tags: [
+      "mobile"
+    ],
+    image: "everyday.png",
+    network: {
+      website: "https://www.everydayapp.xyz/",
+      github: "",
+      twitter: "https://x.com/everydaydotapp",
+      medium: "",
+      discord: "",
+      telegram: ""
+    },
+    isLive: true,
+    isTestnetLive: false
+  },
+  {
+    id: "fc4f93b0-aaba-4b9f-acde-fd1c7304e38e",
+    name: "DeFa by InvoiceMate",
+    shortName: "DeFa by InvoiceMate",
+    description: "Privacy-focused real-world asset finance on Starknet, with private mainnet access for institutions and selected community participants.",
+    tags: [
+      "defi",
+      "privacy"
+    ],
+    image: "defa.png",
+    network: {
+      website: "https://imdefa.com/",
+      github: "",
+      twitter: "https://x.com/defaprimitive",
+      medium: "",
+      discord: "",
+      telegram: ""
+    },
+    isLive: true,
+    isTestnetLive: false
+  },
+  {
+    id: "f5cda1eb-1fc1-4aff-8215-f8bafb30fb4a",
+    name: "FOMO",
+    shortName: "FOMO",
+    description: "A mobile DeFi trading app where you can trade STRK, the Starknet token.",
+    tags: [
+      "mobile",
+      "defi"
+    ],
+    image: "fomo.png",
+    network: {
+      website: "https://fomo.family/",
+      github: "",
+      twitter: "",
+      medium: "",
+      discord: "",
+      telegram: ""
+    },
+    isLive: false,
+    isTestnetLive: false
+  },
+  {
+    id: "0a9f200e-595a-4302-8919-c99005fc357b",
+    name: "Zylith",
+    shortName: "Zylith",
+    description: "A privacy-focused trading application being built for Starknet. Mainnet availability has not been verified.",
+    tags: [
+      "defi",
+      "privacy"
+    ],
+    image: "zylith.png",
+    network: {
+      website: "https://app.zylith.org/",
+      github: "https://github.com/salazarsebas/Zylith",
+      twitter: "https://x.com/ZylithFi",
+      medium: "",
+      discord: "",
+      telegram: ""
+    },
+    isLive: false,
+    isTestnetLive: false
   },
 ];
