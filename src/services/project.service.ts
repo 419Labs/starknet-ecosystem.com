@@ -1,5 +1,4 @@
 import type { Project } from "../../data/ecosystem";
-import { profileOnlyProjectIds } from "../../data/project-curation";
 
 export enum ProjectSorting {
   A_Z = "A - Z",
@@ -195,6 +194,3 @@ export const sortBy = (
     return 0;
   });
 };
-
-export const isListedProject = (project: Project): boolean =>
-  !project.isHidden && Boolean(project.isLive || project.isTestnetLive || profileOnlyProjectIds.has(project.id));

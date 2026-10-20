@@ -4,9 +4,9 @@
     {
       "name": "Uncap",
       "id": "00afa40f-f1a7-4cb3-a979-13c501ae9b17",
-      "action": "ARCHIVE / REMOVE FROM ACTIVE DIRECTORY",
+      "action": "REMOVE FROM PROJECT DATASET",
       "confidence": "High",
-      "reason": "The team explicitly announced a wind-down. Contracts remain usable, but rewards ceased and the hosted frontend was promised for a limited period. Remove featured placement and active-project promotion; retain an archival exit-information link.",
+      "reason": "The team announced a wind-down. Uncap is omitted from the proposed project dataset and featured placement. Confirm the backend sync deletion behavior before merging; no frontend suppression or archive mechanism is added.",
       "sources": [
         "https://www.linkedin.com/posts/uncap-labs_after-months-of-building-testing-iterating-activity-7434991979480031232-KGWJ",
         "https://uncap.finance/vault"
@@ -603,6 +603,8 @@
     "Privily is a Starknet L3, not a Starknet L2 mainnet app.",
     "Omnisea, Sats Terminal, NUMS, Abyss and Midgard remain pending verification and were not added.",
     "Original profile and directory layouts retained. No new labels or categories.",
-    "FOMO, Privily and Zylith use standard profiles with false L2 live flags; scope and availability are explained in descriptions."
+    "Project additions and Ready X metadata use data/ecosystem.ts and the existing main-branch backend sync. No frontend project overrides or project-specific visibility exceptions.",
+    "The standard isLive/isTestnetLive filters are unchanged. FOMO, Privily and Zylith have false L2 deployment flags and are not promoted into active listings by an exception.",
+    "Uncap is omitted from the dataset and featured placement. The maintainer must confirm that PUT /projects deletes omitted records; the frontend no longer suppresses a stale API record. No backend deletion has been executed by this PR."
   ]
 }

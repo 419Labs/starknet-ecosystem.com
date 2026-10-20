@@ -41,7 +41,6 @@ import { EcosystemApi } from "../services/ecosystem-api.service";
 import { ProjectAvatar } from "../components/project/ProjectAvatar";
 import {
   getProjectRelevanceScore,
-  isListedProject,
   projectIncludesKeyword,
   ProjectSorting,
   sortBy,
@@ -459,7 +458,7 @@ const Home = () => {
 
   const { projects, filteredProjectsCount } = useMemo(() => {
     const matchingProjects = allProjects
-      .filter(isListedProject)
+      .filter((project) => project.isLive || project.isTestnetLive)
       .filter((project: Project) => {
         return (
           (filter === tagAll || project.tags.indexOf(filter.value) !== -1) &&
@@ -514,7 +513,7 @@ const Home = () => {
   const searchPreview = useMemo(() => {
     if (!debouncedKeyword.trim() || loading) return [];
     return allProjects
-      .filter((p) => isListedProject(p) && projectIncludesKeyword(p, debouncedKeyword))
+      .filter((p) => (p.isLive || p.isTestnetLive) && projectIncludesKeyword(p, debouncedKeyword))
       .sort((a, b) => getProjectRelevanceScore(b, debouncedKeyword) - getProjectRelevanceScore(a, debouncedKeyword))
       .slice(0, 5);
   }, [debouncedKeyword, allProjects, loading]);
