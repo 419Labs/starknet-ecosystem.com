@@ -369,7 +369,7 @@ const enTranslate: TranslateState = {
     step_3_title: "Propagate",
     step_3_desc: "Verified tokens automatically appear across wallets and dApps using the avnu Token API.",
     why_matters_title: "Why This Matters",
-    why_matters_description: "Fake tokens are a real problem. Scammers deploy tokens with the same name and symbol as legitimate projects to trick users. A canonical, verified token list protects the ecosystem. When you see a token in Ready, Braavos, or any major dApp on Starknet, it's been vetted through this system.",
+    why_matters_description: "Fake tokens are a real problem. Scammers deploy tokens with the same name and symbol as legitimate projects to trick users. A canonical, verified token list protects the ecosystem. When you see a token in Ready X, Braavos, or any major dApp on Starknet, it's been vetted through this system.",
     submit_token: "Submit a token",
     view_on_github: "View on GitHub",
     seo_title: "Starknet Token Directory | Trusted Token Data",

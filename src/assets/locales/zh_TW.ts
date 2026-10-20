@@ -366,7 +366,7 @@ const zhTWTranslate: TranslateState = {
     step_3_title: "傳播",
     step_3_desc: "已驗證的代幣自動出現在使用 avnu Token API 的錢包和 dApp 中。",
     why_matters_title: "為什麼這很重要",
-    why_matters_description: "假幣是一個真實的問題。詐騙者部署與合法項目同名同符號的代幣來欺騙使用者。一個權威的、經過驗證的代幣清單保護了整個生態系統。當你在 Ready、Braavos 或 Starknet 上任何主要 dApp 中看到一個代幣時，它已經通過了這個系統的審核。",
+    why_matters_description: "假幣是一個真實的問題。詐騙者部署與合法項目同名同符號的代幣來欺騙使用者。一個權威的、經過驗證的代幣清單保護了整個生態系統。當你在 Ready X、Braavos 或 Starknet 上任何主要 dApp 中看到一個代幣時，它已經通過了這個系統的審核。",
     submit_token: "提交代幣",
     view_on_github: "在 GitHub 上查看",
     seo_title: "Starknet 代幣目錄 | 可信代幣數據",

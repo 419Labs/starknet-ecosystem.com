@@ -1,5 +1,5 @@
 import { Box, Flex, Grid, HStack, SimpleGrid, Text, VStack } from "@chakra-ui/layout";
-import { Avatar, Icon, Image, Link as ChakraLink } from "@chakra-ui/react";
+import { Icon, Image, Link as ChakraLink } from "@chakra-ui/react";
 import { faArrowLeft, faGlobe, faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { faXTwitter, faDiscord, faGithub, faTelegram } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -12,7 +12,7 @@ import type { Project } from "../../../data/ecosystem";
 import { allProjects as staticProjects } from "../../../data/ecosystem";
 import ProjectsInfos from "../../components/project/ProjectsInfos";
 import { EcosystemApi } from "../../services/ecosystem-api.service";
-import { getProjectLogoSrc } from "../../services/project-logo";
+import { ProjectAvatar } from "../../components/project/ProjectAvatar";
 import FourOhFour from "../404";
 
 interface ProjectPageProps {
@@ -109,10 +109,9 @@ const ProjectPage: FC<ProjectPageProps> = ({ project, relatedProjects }) => {
           mb={8}
         >
           <HStack spacing={4}>
-            <Avatar
+            <ProjectAvatar
               size="xl"
-              name={project.name}
-              src={getProjectLogoSrc(project)}
+              project={project}
               borderRadius="0"
             />
             <VStack align="start" spacing={1}>
@@ -276,10 +275,9 @@ const ProjectPage: FC<ProjectPageProps> = ({ project, relatedProjects }) => {
                     transition="all 0.2s ease"
                     cursor="pointer"
                   >
-                    <Avatar
+                    <ProjectAvatar
                       size="md"
-                      name={related.name}
-                      src={getProjectLogoSrc(related)}
+                      project={related}
                       borderRadius="0"
                     />
                     <VStack align="start" spacing={0} flex={1} minW={0}>

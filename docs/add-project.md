@@ -31,6 +31,12 @@
 
 4. **Check available tags** in `data/tag.ts` — use existing tag values (e.g. `"defi"`, `"gaming"`, `"nft"`, `"infrastructure"`, `"wallet"`, etc.)
 
+   Project data is synchronized to the backend API by the main-branch CI
+   workflow (`.github/workflows/main.yml` and `.github/script/src/sync-data.ts`).
+   Keep project changes in `data/ecosystem.ts`; do not override API records in
+   the frontend. For removals, confirm that the backend sync deletes the omitted
+   record, since an upsert-only sync would retain it.
+
 5. **Run the linter** to make sure everything is clean:
 
 ```bash

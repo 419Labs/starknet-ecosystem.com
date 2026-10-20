@@ -1,0 +1,610 @@
+{
+  "reviewedAt": "2026-10-12",
+  "removed": [
+    {
+      "name": "Uncap",
+      "id": "00afa40f-f1a7-4cb3-a979-13c501ae9b17",
+      "action": "REMOVE FROM PROJECT DATASET",
+      "confidence": "High",
+      "reason": "The team announced a wind-down. Uncap is omitted from the proposed project dataset and featured placement. Confirm the backend sync deletion behavior before merging; no frontend suppression or archive mechanism is added.",
+      "sources": [
+        "https://www.linkedin.com/posts/uncap-labs_after-months-of-building-testing-iterating-activity-7434991979480031232-KGWJ",
+        "https://uncap.finance/vault"
+      ]
+    }
+  ],
+  "updated": [
+    {
+      "name": "Ready X",
+      "sources": [
+        "https://www.ready.co/ready-x",
+        "https://help.wallet.ready.co/hc/en-us/articles/28313046540829-What-is-Ready-X"
+      ]
+    }
+  ],
+  "added": [
+    {
+      "id": "e4b20680-1b04-408d-b12d-5dea04b6a539",
+      "name": "AEON",
+      "shortName": "AEON",
+      "description": "Crypto payment infrastructure with STRK merchant-payment support, connecting Starknet asset holders to real-world payments.",
+      "tags": [
+        "payments"
+      ],
+      "image": "aeon.png",
+      "network": {
+        "website": "https://www.aeon.xyz/",
+        "github": "",
+        "twitter": "https://x.com/aeon_community",
+        "medium": "",
+        "discord": "",
+        "telegram": ""
+      },
+      "isLive": true,
+      "isTestnetLive": false
+    },
+    {
+      "id": "96cfeb3e-d2cf-4cbe-a734-d571f7542632",
+      "name": "SuperVega",
+      "shortName": "SuperVega",
+      "description": "An options trading platform on Starknet for trading and managing options positions.",
+      "tags": [
+        "defi"
+      ],
+      "image": "supervega.png",
+      "network": {
+        "website": "https://supervega.app/",
+        "github": "",
+        "twitter": "https://x.com/SuperVegaXYZ",
+        "medium": "",
+        "discord": "",
+        "telegram": ""
+      },
+      "isLive": true,
+      "isTestnetLive": false
+    },
+    {
+      "id": "94724110-e066-42ac-9c46-868c6aeb328a",
+      "name": "Chance",
+      "shortName": "Chance",
+      "description": "Infrastructure for verifiable AI on Starknet, enabling applications to use provable AI computation.",
+      "tags": [
+        "infrastructure",
+        "tools"
+      ],
+      "image": "chance.png",
+      "network": {
+        "website": "https://chance.cc/",
+        "github": "",
+        "twitter": "",
+        "medium": "",
+        "discord": "",
+        "telegram": ""
+      },
+      "isLive": true,
+      "isTestnetLive": false
+    },
+    {
+      "id": "1d535d82-49eb-4e6b-baf2-20e5d8541ae8",
+      "name": "OffMarket",
+      "shortName": "OffMarket",
+      "description": "Private prediction-market trading using Starknet privacy infrastructure with execution on Polygon.",
+      "tags": [
+        "privacy",
+        "defi"
+      ],
+      "image": "offmarket.png",
+      "network": {
+        "website": "https://offmarket.cx/",
+        "github": "",
+        "twitter": "https://x.com/OffMarketcx",
+        "medium": "",
+        "discord": "",
+        "telegram": ""
+      },
+      "isLive": true,
+      "isTestnetLive": false
+    },
+    {
+      "id": "dc4a57eb-5b07-4ca1-a553-435130eede1f",
+      "name": "YieldStark",
+      "shortName": "YieldStark",
+      "description": "A Starknet yield application bringing privacy to DeFi strategies and asset management.",
+      "tags": [
+        "defi",
+        "privacy"
+      ],
+      "image": "yieldstark.png",
+      "network": {
+        "website": "https://app.yieldstark.xyz/",
+        "github": "https://github.com/MakindeAhmed2110/YieldStark",
+        "twitter": "https://x.com/YieldStark",
+        "medium": "",
+        "discord": "",
+        "telegram": ""
+      },
+      "isLive": true,
+      "isTestnetLive": false
+    },
+    {
+      "id": "32366ccc-4b5f-463b-a1f7-573f37b0bbe1",
+      "name": "DashX Payments",
+      "shortName": "DashX Payments",
+      "description": "Private payment and payroll infrastructure built with Starknet, helping businesses manage confidential financial flows.",
+      "tags": [
+        "payments",
+        "privacy"
+      ],
+      "image": "dashx.png",
+      "network": {
+        "website": "https://dashx.xyz/",
+        "github": "",
+        "twitter": "",
+        "medium": "",
+        "discord": "",
+        "telegram": ""
+      },
+      "isLive": true,
+      "isTestnetLive": false
+    },
+    {
+      "id": "3d934e6e-85ee-468f-9a68-1eee25b62a05",
+      "name": "Starkzap",
+      "shortName": "Starkzap",
+      "description": "An open-source SDK for integrating Starknet wallets, gas sponsorship, token transfers, and staking into applications.",
+      "tags": [
+        "tools",
+        "infrastructure"
+      ],
+      "image": "starkzap.png",
+      "network": {
+        "website": "https://starkzap.io/",
+        "github": "https://github.com/keep-starknet-strange/starkzap",
+        "twitter": "",
+        "medium": "",
+        "discord": "",
+        "telegram": ""
+      },
+      "isLive": true,
+      "isTestnetLive": false
+    },
+    {
+      "id": "818313ad-8a4f-4b58-922c-ae6354af47a7",
+      "name": "Stargate",
+      "shortName": "Stargate",
+      "description": "A cross-chain liquidity transport protocol with a Starknet integration for moving supported assets between networks.",
+      "tags": [
+        "bridge"
+      ],
+      "image": "stargate.png",
+      "network": {
+        "website": "https://stargate.finance/",
+        "github": "",
+        "twitter": "https://x.com/StargateFinance",
+        "medium": "",
+        "discord": "",
+        "telegram": ""
+      },
+      "isLive": true,
+      "isTestnetLive": false
+    },
+    {
+      "id": "05b7ff4d-fea5-4b41-add9-142de3a3224f",
+      "name": "Gaffer",
+      "shortName": "Gaffer",
+      "description": "A skill-based sports game with USDC prize pools and automated settlement on Starknet.",
+      "tags": [
+        "gamefi"
+      ],
+      "image": "gaffer.png",
+      "network": {
+        "website": "https://playgaffer.xyz/",
+        "github": "",
+        "twitter": "https://x.com/Play_Gaffer",
+        "medium": "",
+        "discord": "",
+        "telegram": ""
+      },
+      "isLive": true,
+      "isTestnetLive": false
+    },
+    {
+      "id": "812c32ca-7fe1-4223-89fd-e623bc2fa52c",
+      "name": "Privily",
+      "shortName": "Privily",
+      "description": "A privacy-focused Starknet L3 appchain offering private cross-chain transfers and exchanges.",
+      "tags": [
+        "privacy",
+        "payments"
+      ],
+      "image": "privily.png",
+      "network": {
+        "website": "https://privily.fi/",
+        "github": "",
+        "twitter": "https://x.com/Privily_fi",
+        "medium": "",
+        "discord": "",
+        "telegram": ""
+      },
+      "isLive": false,
+      "isTestnetLive": false
+    },
+    {
+      "id": "b9c9a291-5cef-4527-9eb5-a62cd5ef8b25",
+      "name": "ArcX",
+      "shortName": "ArcX",
+      "description": "A Starknet DeFi application that separates yield-bearing positions into principal and points exposure, including positions on Extended.",
+      "tags": [
+        "defi"
+      ],
+      "image": "arcx.png",
+      "network": {
+        "website": "https://arcx.trade/",
+        "github": "",
+        "twitter": "https://x.com/arcxtrade",
+        "medium": "",
+        "discord": "",
+        "telegram": ""
+      },
+      "isLive": true,
+      "isTestnetLive": false
+    },
+    {
+      "id": "3a05f329-987f-4383-93c9-0fae900d3337",
+      "name": "Everyday",
+      "shortName": "Everyday",
+      "description": "A focus and habit-building app with optional financial commitments settled on Starknet.",
+      "tags": [
+        "mobile"
+      ],
+      "image": "everyday.png",
+      "network": {
+        "website": "https://www.everydayapp.xyz/",
+        "github": "",
+        "twitter": "https://x.com/everydaydotapp",
+        "medium": "",
+        "discord": "",
+        "telegram": ""
+      },
+      "isLive": true,
+      "isTestnetLive": false
+    },
+    {
+      "id": "fc4f93b0-aaba-4b9f-acde-fd1c7304e38e",
+      "name": "DeFa by InvoiceMate",
+      "shortName": "DeFa by InvoiceMate",
+      "description": "Privacy-focused real-world asset finance on Starknet, with private mainnet access for institutions and selected community participants.",
+      "tags": [
+        "defi",
+        "privacy"
+      ],
+      "image": "defa.png",
+      "network": {
+        "website": "https://imdefa.com/",
+        "github": "",
+        "twitter": "https://x.com/defaprimitive",
+        "medium": "",
+        "discord": "",
+        "telegram": ""
+      },
+      "isLive": true,
+      "isTestnetLive": false
+    },
+    {
+      "id": "f5cda1eb-1fc1-4aff-8215-f8bafb30fb4a",
+      "name": "FOMO",
+      "shortName": "FOMO",
+      "description": "A mobile DeFi trading app where you can trade STRK, the Starknet token.",
+      "tags": [
+        "mobile",
+        "defi"
+      ],
+      "image": "fomo.png",
+      "network": {
+        "website": "https://fomo.family/",
+        "github": "",
+        "twitter": "",
+        "medium": "",
+        "discord": "",
+        "telegram": ""
+      },
+      "isLive": false,
+      "isTestnetLive": false
+    },
+    {
+      "id": "0a9f200e-595a-4302-8919-c99005fc357b",
+      "name": "Zylith",
+      "shortName": "Zylith",
+      "description": "A privacy-focused trading application being built for Starknet. Mainnet availability has not been verified.",
+      "tags": [
+        "defi",
+        "privacy"
+      ],
+      "image": "zylith.png",
+      "network": {
+        "website": "https://app.zylith.org/",
+        "github": "https://github.com/salazarsebas/Zylith",
+        "twitter": "https://x.com/ZylithFi",
+        "medium": "",
+        "discord": "",
+        "telegram": ""
+      },
+      "isLive": false,
+      "isTestnetLive": false
+    }
+  ],
+  "evidence": [
+    {
+      "name": "AEON",
+      "category": "Payments",
+      "recommendation": "ADD: recent mainnet integration",
+      "evidence_date": "2026-09",
+      "reason": "September recap and AEON community announcement report STRK merchant-payment support.",
+      "sources": [
+        "https://starknetresearch.substack.com/p/starknet-monthly-recap-37-september",
+        "https://t.me/s/AEON_Community"
+      ],
+      "website": "",
+      "confidence": "High for ecosystem activity; transactions not independently tested"
+    },
+    {
+      "name": "SuperVega",
+      "category": "DeFi / Options",
+      "recommendation": "ADD: recent mainnet launch",
+      "evidence_date": "2026-08 / 2026-09",
+      "reason": "August launch followed by September usage updates; official app explicitly offers Starknet options.",
+      "sources": [
+        "https://starknetresearch.substack.com/p/starknet-monthly-recap-36-august",
+        "https://starknetresearch.substack.com/p/starknet-monthly-recap-37-september",
+        "https://supervega.app/trade"
+      ],
+      "website": "https://supervega.app/trade",
+      "confidence": "High for ecosystem activity; transactions not independently tested"
+    },
+    {
+      "name": "Chance",
+      "category": "AI / Infrastructure",
+      "recommendation": "ADD: recent mainnet launch",
+      "evidence_date": "2026-08 / 2026-09",
+      "reason": "August launch and September STRK20 integration; settlement proofs and escrow on Starknet.",
+      "sources": [
+        "https://starknetresearch.substack.com/p/starknet-monthly-recap-36-august",
+        "https://starknetresearch.substack.com/p/starknet-monthly-recap-37-september",
+        "https://chance.cc/"
+      ],
+      "website": "https://chance.cc/",
+      "confidence": "High for ecosystem activity; transactions not independently tested"
+    },
+    {
+      "name": "OffMarket",
+      "category": "Privacy / Prediction markets",
+      "recommendation": "ADD: recent mainnet launch",
+      "evidence_date": "2026-08 / 2026-09",
+      "reason": "Live app documents a Starknet privacy contract with Polygon Polymarket execution. Describe the cross-chain architecture.",
+      "sources": [
+        "https://starknetresearch.substack.com/p/starknet-monthly-recap-36-august",
+        "https://offmarket.cx/"
+      ],
+      "website": "https://offmarket.cx/",
+      "confidence": "High for ecosystem activity; transactions not independently tested"
+    },
+    {
+      "name": "YieldStark",
+      "category": "DeFi / Privacy",
+      "recommendation": "ADD: recent shipping activity",
+      "evidence_date": "2026-04 / 2026-09",
+      "reason": "April mainnet launch followed by September privacy features. App fetch was unavailable; confirm its final URL before publishing.",
+      "sources": [
+        "https://starknetresearch.substack.com/p/starknet-monthly-recap-32-april-2026",
+        "https://starknetresearch.substack.com/p/starknet-monthly-recap-37-september",
+        "https://github.com/MakindeAhmed2110/YieldStark"
+      ],
+      "website": "https://app.yieldstark.xyz",
+      "confidence": "Medium-high; app fetch unavailable"
+    },
+    {
+      "name": "DashX Payments",
+      "category": "Payments / Privacy",
+      "recommendation": "ADD: recent product release",
+      "evidence_date": "2026-07 / 2026-09",
+      "reason": "Official Starknet privacy article names DashX; September recap reports Private Payroll launch. Obtain canonical website and deployment details before publishing.",
+      "sources": [
+        "https://www.starknet.io/blog/push-to-private/",
+        "https://starknetresearch.substack.com/p/starknet-monthly-recap-37-september"
+      ],
+      "website": "",
+      "confidence": "High for ecosystem activity; transactions not independently tested"
+    },
+    {
+      "name": "Starkzap",
+      "category": "Developer tools / SDK",
+      "recommendation": "ADD: released infrastructure",
+      "evidence_date": "2026-02 / 2026-03",
+      "reason": "Official Starknet SDK releases cover wallets, staking, swaps, lending and confidential payments.",
+      "sources": [
+        "https://www.starknet.io/blog/starkzap/",
+        "https://www.starknet.io/blog/starkzap-v2/"
+      ],
+      "website": "",
+      "confidence": "High for ecosystem activity; transactions not independently tested"
+    },
+    {
+      "name": "Stargate",
+      "category": "Bridge",
+      "recommendation": "ADD: supported Starknet bridge",
+      "evidence_date": "2026-01 / current directory",
+      "reason": "Official integration announcement and current official bridge page establish Starknet support. LayerZero listing does not substitute for its user-facing bridge.",
+      "sources": [
+        "https://www.starknet.io/blog/connecting-starknet-to-160-ecosystems-via-layerzero/",
+        "https://www.starknet.io/bridges-and-onramps/"
+      ],
+      "website": "",
+      "confidence": "High for ecosystem activity; transactions not independently tested"
+    },
+    {
+      "name": "Gaffer",
+      "category": "Gaming / Fantasy football",
+      "recommendation": "ADD CANDIDATE: recent mainnet season",
+      "evidence_date": "2026-06 / 2026-08",
+      "reason": "June launch and August new-season release in ecosystem recaps. Use Play_Gaffer identity to avoid an unrelated Gaffer game.",
+      "sources": [
+        "https://starknetresearch.substack.com/p/starknet-monthly-recap-34-june-2026",
+        "https://starknetresearch.substack.com/p/starknet-monthly-recap-36-august"
+      ],
+      "website": "",
+      "confidence": "Medium-high; canonical game URL still needed"
+    },
+    {
+      "name": "Privily",
+      "category": "Privacy / Starknet L3",
+      "recommendation": "ADD: clearly label L3",
+      "evidence_date": "2026-04 / 2026-07",
+      "reason": "April beta and July V1 release; official app has live transfer/exchange features. Neobank and card features are still described as Soon.",
+      "sources": [
+        "https://starknetresearch.substack.com/p/starknet-monthly-recap-32-april-2026",
+        "https://starknetresearch.substack.com/p/starknet-monthly-recap-34-june-2026-ef8",
+        "https://privily.fi/"
+      ],
+      "website": "https://privily.fi/",
+      "confidence": "High for ecosystem activity; transactions not independently tested"
+    },
+    {
+      "name": "ArcX / arcxtrade",
+      "category": "DeFi / Yield",
+      "recommendation": "ADD CANDIDATE: verify exact product identity",
+      "evidence_date": "2026-06 / 2026-07",
+      "reason": "Recent recaps describe yield/points separation on Extended. Confirm naming against the older Arcx funding-arbitrage product before creating a separate entry.",
+      "sources": [
+        "https://starknetresearch.substack.com/p/starknet-monthly-recap-34-june-2026",
+        "https://starknetresearch.substack.com/p/starknet-monthly-recap-34-june-2026-ef8",
+        "https://www.starknet.io/blog/push-to-private/"
+      ],
+      "website": "",
+      "confidence": "Medium-high; identity check needed"
+    },
+    {
+      "name": "Everyday",
+      "category": "Consumer / Commitment markets",
+      "recommendation": "ADD CANDIDATE: recent mainnet app",
+      "evidence_date": "2026-07",
+      "reason": "July recap reports Screen Minimizer launch and growing activity; verify canonical app URL and mobile flow.",
+      "sources": [
+        "https://starknetresearch.substack.com/p/starknet-monthly-recap-34-june-2026-ef8"
+      ],
+      "website": "",
+      "confidence": "Medium; project app not independently exercised"
+    },
+    {
+      "name": "DeFa / InvoiceMate",
+      "category": "DeFi / RWA / Privacy",
+      "recommendation": "ADD CANDIDATE: check live feature scope",
+      "evidence_date": "2026-06 / 2026-07",
+      "reason": "June recap reports launch; July official article describes privacy work in development. Do not market every planned privacy feature as live.",
+      "sources": [
+        "https://starknetresearch.substack.com/p/starknet-monthly-recap-34-june-2026",
+        "https://www.starknet.io/blog/push-to-private/"
+      ],
+      "website": "",
+      "confidence": "Medium-high; live feature scope needs confirmation"
+    },
+    {
+      "name": "Omnisea",
+      "category": "Bridge",
+      "recommendation": "REVIEW: announcement vs current deployed routes",
+      "evidence_date": "2026-08 / current docs",
+      "reason": "August recap reports Starknet integration, but current deployment documentation did not mention Starknet. Confirm a currently available Starknet route before adding isLive=true.",
+      "sources": [
+        "https://starknetresearch.substack.com/p/starknet-monthly-recap-36-august",
+        "https://www.omnisea.io/docs/deployments/addresses/"
+      ],
+      "website": "https://www.omnisea.io/",
+      "confidence": "Medium; conflicting availability evidence"
+    },
+    {
+      "name": "Sats Terminal",
+      "category": "DeFi / Bitcoin lending",
+      "recommendation": "REVIEW: do not list public Starknet flow as live",
+      "evidence_date": "2026-07 / current product page",
+      "reason": "July integration announcement is superseded in scope by the current Vesu guide: Starknet is excluded from the public browser loan profile. Integration exists, but the public route is unavailable.",
+      "sources": [
+        "https://starknetresearch.substack.com/p/starknet-monthly-recap-34-june-2026-ef8",
+        "https://www.satsterminal.com/borrow/vesu"
+      ],
+      "website": "https://www.satsterminal.com/borrow/vesu",
+      "confidence": "High for current public-route limitation"
+    },
+    {
+      "name": "NUMS",
+      "category": "Gaming",
+      "recommendation": "REVIEW: recent launch / chain scope",
+      "evidence_date": "2026-04",
+      "reason": "April recap reports mainnet launch. Confirm whether the current game runs on Starknet L2 or its dedicated gamechain.",
+      "sources": [
+        "https://starknetresearch.substack.com/p/starknet-monthly-recap-32-april-2026"
+      ],
+      "website": "",
+      "confidence": "Medium; current gamechain scope not checked"
+    },
+    {
+      "name": "Abyss",
+      "category": "Gaming",
+      "recommendation": "REVIEW: recent launch",
+      "evidence_date": "2026-04",
+      "reason": "April recap reports a roguelite slot-machine game launch; check a current playable URL before listing.",
+      "sources": [
+        "https://starknetresearch.substack.com/p/starknet-monthly-recap-32-april-2026"
+      ],
+      "website": "",
+      "confidence": "Medium; current frontend not checked"
+    },
+    {
+      "name": "Midgard",
+      "category": "Gaming / Wagering",
+      "recommendation": "REVIEW: recent launch",
+      "evidence_date": "2026-04",
+      "reason": "April recap reports game-score wagering platform launch; verify current playable URL and usage.",
+      "sources": [
+        "https://starknetresearch.substack.com/p/starknet-monthly-recap-32-april-2026"
+      ],
+      "website": "",
+      "confidence": "Medium; current frontend not checked"
+    },
+    {
+      "name": "Zylith",
+      "category": "Privacy / Trading",
+      "recommendation": "ADD AS BUILDING; MAINNET UNVERIFIED",
+      "evidence_date": "2026-06 / 2026-07",
+      "reason": "Official articles identify an active call-auction dark-pool project, but these sources do not establish a currently usable production frontend.",
+      "sources": [
+        "https://starknetresearch.substack.com/p/starknet-monthly-recap-34-june-2026",
+        "https://www.starknet.io/blog/push-to-private/"
+      ],
+      "website": "",
+      "confidence": "High for building activity; mainnet not verified"
+    },
+    {
+      "name": "FOMO / fomo.family",
+      "category": "Trading / STRK access",
+      "recommendation": "ADD CANDIDATE: STRK trading access; Starknet network integration unverified",
+      "evidence_date": "2026-10-04",
+      "reason": "Recent reporting reproduces a STRK position card from the Fomo trading app. This supports STRK asset access, but does not identify the execution chain or establish Starknet-native deposits/withdrawals. Include as an asset-access integration if that is within directory scope; do not label as a Starknet L2 dApp without further evidence.",
+      "website": "https://fomo.family/",
+      "confidence": "Medium for STRK trading, based on secondary reporting; execution network unverified",
+      "sources": [
+        "https://www.cryptonewslive.org/article/starknet-strk-volume-jumped-minutes-after-a-740k-buy-went-public",
+        "https://apps.apple.com/us/app/fomo-never-miss-out/id6741115427",
+        "https://www.starknet.io/blog/strk-is-now-natively-accessible-on-solana-via-near-intents/"
+      ]
+    }
+  ],
+  "implementationNotes": [
+    "Only Uncap was approved for removal. Other removal candidates remain listed.",
+    "FOMO uses a standard DeFi app profile; its description states that STRK can be traded on FOMO.",
+    "Privily is a Starknet L3, not a Starknet L2 mainnet app.",
+    "Omnisea, Sats Terminal, NUMS, Abyss and Midgard remain pending verification and were not added.",
+    "Original profile and directory layouts retained. No new labels or categories.",
+    "Project additions and Ready X metadata use data/ecosystem.ts and the existing main-branch backend sync. No frontend project overrides or project-specific visibility exceptions.",
+    "The standard isLive/isTestnetLive filters are unchanged. FOMO, Privily and Zylith have false L2 deployment flags and are not promoted into active listings by an exception.",
+    "Uncap is omitted from the dataset and featured placement. The maintainer must confirm that PUT /projects deletes omitted records; the frontend no longer suppresses a stale API record. No backend deletion has been executed by this PR."
+  ]
+}

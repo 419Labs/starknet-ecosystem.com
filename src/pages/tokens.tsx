@@ -219,7 +219,7 @@ const TokensPage: FC = () => {
   ];
 
   const integrators = [
-    { name: "Ready", type: "Wallet", icon: faWallet },
+    { name: "Ready X", type: "Wallet", icon: faWallet },
     { name: "Braavos", type: "Wallet", icon: faWallet },
     { name: "Ekubo", type: "DEX", icon: faExchangeAlt },
     { name: "JediSwap", type: "DEX", icon: faExchangeAlt },
@@ -609,7 +609,7 @@ const TokensPage: FC = () => {
             <Text fontSize="lg" fontWeight="600" color="white">{t.tokens?.why_matters_title || "Why This Matters"}</Text>
           </HStack>
           <Text fontSize="14px" color="gray.400" lineHeight="1.7" mb={6}>
-            {t.tokens?.why_matters_description || "Fake tokens are a real problem. Scammers deploy tokens with the same name and symbol as legitimate projects to trick users. A canonical, verified token list protects the ecosystem. When you see a token in Ready, Braavos, or any major dApp on Starknet, it\u0027s been vetted through this system."}
+            {t.tokens?.why_matters_description || "Fake tokens are a real problem. Scammers deploy tokens with the same name and symbol as legitimate projects to trick users. A canonical, verified token list protects the ecosystem. When you see a token in Ready X, Braavos, or any major dApp on Starknet, it\u0027s been vetted through this system."}
           </Text>
           <HStack spacing={6} flexWrap="wrap">
             <ChakraLink href="https://community.avnu.fi" isExternal>

@@ -366,7 +366,7 @@ const koTranslate: TranslateState = {
     step_3_title: "전파",
     step_3_desc: "인증된 토큰은 avnu Token API를 사용하는 지갑과 dApp에 자동으로 표시됩니다.",
     why_matters_title: "왜 중요한가",
-    why_matters_description: "가짜 토큰은 실제 문제입니다. 스캐머들이 합법적인 프로젝트와 동일한 이름과 심볼의 토큰을 배포해 사용자를 속입니다. 정식 인증된 토큰 목록이 생태계를 보호합니다. Ready, Braavos 또는 Starknet의 주요 dApp에서 토큰을 볼 때, 이 시스템을 통해 검증된 것입니다.",
+    why_matters_description: "가짜 토큰은 실제 문제입니다. 스캐머들이 합법적인 프로젝트와 동일한 이름과 심볼의 토큰을 배포해 사용자를 속입니다. 정식 인증된 토큰 목록이 생태계를 보호합니다. Ready X, Braavos 또는 Starknet의 주요 dApp에서 토큰을 볼 때, 이 시스템을 통해 검증된 것입니다.",
     submit_token: "토큰 제출하기",
     view_on_github: "GitHub에서 보기",
     seo_title: "Starknet 토큰 디렉토리 | 신뢰할 수 있는 토큰 데이터",

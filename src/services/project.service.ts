@@ -24,11 +24,10 @@ const FEATURED_PROJECT_IDS = new Set([
   "4a3718a7-fcef-4a1d-b631-a97c4cd03b8c", // Opus
   "8d0d1cc3-af7e-48ab-aa22-bef4ede008df", // Pragma
   "eb80b316-cb0e-4e08-9885-f86ecf34a8e0", // Re7
-  "8df27359-f05d-439b-8592-ca1b61cf049c", // Ready
+  "8df27359-f05d-439b-8592-ca1b61cf049c", // Ready X
   "8563314d-f31d-4e5a-a372-915a4f11518f", // Realms
   "81073086-5b7a-45fe-a629-5b201c3159de", // Starknet Earn
   "0f2ecfe3-1212-4157-9176-aeeb4204294f", // Troves
-  "00afa40f-f1a7-4cb3-a979-13c501ae9b17", // Uncap
   "1b1fedb8-3e97-4288-91e8-7a0c39e5be66", // Vesu
   "5cec890e-fc90-48d0-b7eb-011b6a0dc13b", // Voyager
   "c95cdd9c-a151-4b3b-b43b-8f023e77f634", // Xverse

@@ -367,7 +367,7 @@ const trTranslate: TranslateState = {
     step_3_title: "Yay",
     step_3_desc: "Doğrulanmış tokenler, avnu Token API'sini kullanan cüzdanlar ve dApp'lerde otomatik olarak görünür.",
     why_matters_title: "Neden Önemli",
-    why_matters_description: "Sahte tokenler gerçek bir sorundur. Dolandırıcılar, kullanıcıları kandırmak için meşru projelerle aynı isim ve sembolle token dağıtır. Kanonik, doğrulanmış bir token listesi ekosistemi korur. Ready, Braavos veya Starknet'teki herhangi bir büyük dApp'te bir token gördüğünüzde, bu sistem aracılığıyla incelenmiştir.",
+    why_matters_description: "Sahte tokenler gerçek bir sorundur. Dolandırıcılar, kullanıcıları kandırmak için meşru projelerle aynı isim ve sembolle token dağıtır. Kanonik, doğrulanmış bir token listesi ekosistemi korur. Ready X, Braavos veya Starknet'teki herhangi bir büyük dApp'te bir token gördüğünüzde, bu sistem aracılığıyla incelenmiştir.",
     submit_token: "Token gönder",
     view_on_github: "GitHub'da görüntüle",
     seo_title: "Starknet Token Dizini | Güvenilir Token Verileri",
