@@ -28,10 +28,10 @@ npm run test:ci  # Run Jest tests in CI mode (no watch)
 
 ## Architecture Overview
 
-This is a Next.js 15 application showcasing the Starknet ecosystem, built with TypeScript and React 18.
+This is a Next.js 16 application showcasing the Starknet ecosystem, built with TypeScript and React 18.
 
 ### Core Stack
-- **Framework**: Next.js 15 with React 18
+- **Framework**: Next.js 16 with React 18
 - **UI Library**: Chakra UI v2
 - **Styling**: Emotion (CSS-in-JS)
 - **Language**: TypeScript with strict mode
