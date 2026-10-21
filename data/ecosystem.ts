@@ -6102,45 +6102,23 @@ export const allProjects: Array<Project> = [
 
     isLive: true,
     isTestnetLive: false,
-  },
-  {
-    id: "09963325-bced-44a3-9901-209141189948",
-    name: "Brove",
-    shortName: "Brove",
-    description:
-      "Brove is infrastructure that proves real Bitcoin activity on Starknet. It converts historical Bitcoin transactions into verifiable on-chain cryptographic proofs, enabling Starknet applications to trust users' Bitcoin history — identity, BTCFi, DeFi, gaming, and more — without relying on centralized validators.",
-    tags: ["gamefi", "defi", "infrastructure"],
-    image: "Brove.png",
+  },  {
+    id: "starkzap-one-tap-yield-2026",
+    name: "StarkZap",
+    shortName: "StarkZap",
+    description: "One-tap yield tool that swaps via Avnu and deposits into Vesu",
+    tags: ["defi"],
+    image: "starkzap.png",
     network: {
-      website: "https://brove.io",
-      github: "",
-      twitter: "https://x.com/just_brove_it",
+      website: "https://starkzap-one-tap-yield.vercel.app",
+      github: "https://github.com/jamal2000russia-del/starkzap-one-tap-yield",
+      twitter: "",
       medium: "",
-      discord: "https://discord.gg/zquwKxdJtH",
-      telegram: "https://t.me/+8zDHofg2uclmNWM0",
+      discord: "",
+      telegram: ""
     },
-
     isLive: true,
-    isTestnetLive: false,
-  },
-  {
-    id: "4cbf172b-9d31-468d-b163-48c1b6b93db1",
-    name: "ShapeShift",
-    shortName: "ShapeShift",
-    description:
-      "One gateway to every chain. Swap, bridge, stake, earn. Keys always stay yours.",
-    tags: ["bridge", "defi", "wallet"],
-    image: "shapeshift.png",
-    network: {
-      website: "https://app.shapeshift.com",
-      github: "https://github.com/shapeshift",
-      twitter: "https://x.com/ShapeShift",
-      medium: "",
-      discord: "https://discord.gg/shapeshift",
-      telegram: "https://t.me/shapeshiftofficial",
-    },
-
-    isLive: true,
-    isTestnetLive: false,
-  },
+    isTestnetLive: false
+  }
 ];
+  
