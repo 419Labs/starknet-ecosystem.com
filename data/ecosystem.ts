@@ -6143,4 +6143,24 @@ export const allProjects: Array<Project> = [
     isLive: true,
     isTestnetLive: false,
   },
+  {
+    id: "d54e79e5-1564-4d27-badb-e1050f24084e",
+    name: "Gaffer",
+    shortName: "Gaffer",
+    description:
+      "Fantasy football leagues with friends and USDC prize pools, for the Premier League and Champions League. Each league sets its own rules and prize split; entry fees lock on Starknet until the league ends and winners are paid automatically.",
+    tags: ["gamefi", "social"],
+    image: "gaffer.png",
+    network: {
+      website: "https://playgaffer.xyz",
+      github: "",
+      twitter: "https://x.com/Play_Gaffer",
+      medium: "",
+      discord: "",
+      telegram: "https://t.me/playgaffer",
+    },
+
+    isLive: true,
+    isTestnetLive: false,
+  },
 ];
